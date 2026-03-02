@@ -1,2 +1,28 @@
 1. Generate the data such that the preferences are learned over time.
 2. The RAG should be able to retrieve the most relevant information based on the current context.
+3. Store some high level summary of the previous conversations?
+4. Think of a new way to store, manage and retrieve from the memory
+
+
+
+Task 1: 
+
+1. The agent would not know the user's preferences in the beginning, so the agent would ask a lot of questions at the beginning.
+2. The preferences would be learned over time.
+3. I would have to simulate this for N recurring tasks and M preferences.
+4. At the beginning, lets go with 1 recurring task and 1 preference.
+
+
+Task 2:
+
+1. The agent should retrieve the information based on recency, relevance and importance(optional).
+2. The weight of these three factors should be tuned.
+
+
+Task 3:
+1. The high level summary should be a summary for lets say 10 days. Or it could be of a particular task.
+2. During retreival the high level summary should be looked into at first.
+
+
+Task 4:
+1. Think whether the vector store will suffice or the memory needs a structured format as well.
