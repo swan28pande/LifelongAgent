@@ -1,3 +1,6 @@
+import warnings
+# Suppress Pydantic V1 warnings for Python 3.14+
+warnings.filterwarnings("ignore", message=".*Pydantic V1 functionality.*")
 from memory_manager import MemoryManager
 
 def test_query(question):
@@ -15,5 +18,4 @@ def test_query(question):
 
 if __name__ == "__main__":
     # Test with a question about a specific activity
-    test_query("What did I do on 2026-02-15?")
-    test_query("When did I wear my fitness band for the first time?")
+    test_query("What did user prefer in the afternoon?")

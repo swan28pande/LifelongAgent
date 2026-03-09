@@ -1,4 +1,7 @@
 import os
+import warnings
+# Suppress Pydantic V1 warnings for Python 3.14+
+warnings.filterwarnings("ignore", message=".*Pydantic V1 functionality.*")
 import json
 from typing import List, Dict, Optional
 from langchain_community.vectorstores import FAISS
@@ -13,11 +16,18 @@ class MemoryManager:
         self.vector_store: Optional[FAISS] = None
         
         if os.path.exists(self.index_path):
-            self.vector_store = FAISS.load_local(
-                self.index_path, 
-                self.embeddings,
-                allow_dangerous_deserialization=True # Required for local FAISS
-            )
+            faiss_file = os.path.join(self.index_path, "index.faiss")
+            if os.path.exists(faiss_file):
+                try:
+                    self.vector_store = FAISS.load_local(
+                        self.index_path, 
+                        self.embeddings,
+                        allow_dangerous_deserialization=True # Required for local FAISS
+                    )
+                except Exception as e:
+                    print(f"Warning: Could not load local index: {e}")
+            else:
+                print(f"Index directory exists but {faiss_file} not found. Will create new index.")
 
     def load_json_data(self, filepath: str) -> Dict:
         if not os.path.exists(filepath):
@@ -28,7 +38,8 @@ class MemoryManager:
         documents = []
         for date, info in daily_data.items():
             day = info.get("day", "")
-            conversations = info.get("conversations", [])
+            # Support both 'conversations' (legacy) and 'interactions' (learning simulation)
+            conversations = info.get("conversations") or info.get("interactions", [])
             for interaction in conversations:
                 time_of_day = interaction.get("time_of_day", "Unknown")
                 turns = interaction.get("turns", [])

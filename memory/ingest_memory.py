@@ -1,8 +1,11 @@
 import os
+import warnings
+# Suppress Pydantic V1 warnings for Python 3.14+
+warnings.filterwarnings("ignore", message=".*Pydantic V1 functionality.*")
 from memory_manager import MemoryManager
 
 def main():
-    json_path = "daily_conversations.json"
+    json_path = "learning_conversations.json"
     index_path = "memory/faiss_index"
     
     print(f"Initializing Memory Manager with index at {index_path}...")
