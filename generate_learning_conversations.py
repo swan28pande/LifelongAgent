@@ -159,7 +159,7 @@ def generate_interaction(llm: ChatGoogleGenerativeAI, context: Dict, max_retries
 def main():
     parser = argparse.ArgumentParser(description="Generate learning conversations")
     parser.add_argument("--days", type=int, default=30, help="Number of days to simulate")
-    parser.add_argument("--output", type=str, default="learning_conversations.json", help="Output file")
+    parser.add_argument("--output", type=str, default="dataset_2/learning_conversations.json", help="Output file")
     args = parser.parse_args()
 
     if "GOOGLE_API_KEY" not in os.environ:

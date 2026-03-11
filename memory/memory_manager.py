@@ -12,7 +12,10 @@ class MemoryManager:
     def __init__(self, index_path: str = "memory/faiss_index"):
         self.index_path = index_path
         # Use a higher performance local embedding model
-        self.embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-base-en-v1.5")
+        self.embeddings = HuggingFaceEmbeddings(
+            model_name="nomic-ai/nomic-embed-text-v1",
+            model_kwargs={"trust_remote_code": True},
+        )
         self.vector_store: Optional[FAISS] = None
         
         if os.path.exists(self.index_path):
@@ -74,6 +77,66 @@ class MemoryManager:
         if self.vector_store is None:
             return []
         return self.vector_store.similarity_search(question, k=n_results)
+
+    def query_hybrid(self, question: str, k: int = 3, recency_weight: float = 0.3) -> List[Document]:
+        """
+        Combines semantic relevance and recency.
+        Higher recency_weight (0 to 1) prioritizes newer documents.
+        """
+        if self.vector_store is None:
+            return []
+
+        # 1. Fetch more candidates than requested (top 20 or k*4)
+        n_candidates = max(20, k * 4)
+        # similarity_search_with_score returns (doc, distance)
+        # FAISS distance is L2 (lower is better/closer)
+        docs_and_scores = self.vector_store.similarity_search_with_score(question, k=n_candidates)
+        
+        if not docs_and_scores:
+            return []
+
+        # 2. Extract dates and distances
+        from datetime import datetime
+        candidate_data = []
+        max_dist = 0
+        min_dist = float('inf')
+        
+        for doc, dist in docs_and_scores:
+            date_str = doc.metadata.get("date", "2000-01-01")
+            try:
+                date_val = datetime.strptime(date_str, "%Y-%m-%d")
+            except:
+                date_val = datetime(2000, 1, 1)
+            
+            candidate_data.append({
+                "doc": doc,
+                "dist": dist,
+                "date": date_val
+            })
+            max_dist = max(max_dist, dist)
+            min_dist = min(min_dist, dist)
+
+        # 3. Normalize Relevance (0-1, where 1 is most relevant)
+        # Avoid division by zero
+        dist_range = (max_dist - min_dist) if max_dist > min_dist else 1
+        
+        # 4. Normalize Recency (0-1, where 1 is most recent)
+        latest_date = max(c["date"] for c in candidate_data)
+        earliest_date = min(c["date"] for c in candidate_data)
+        date_range = (latest_date - earliest_date).total_seconds() or 1
+
+        for c in candidate_data:
+            # Relevance: lower distance = higher score
+            c["relevance"] = 1.0 - ((c["dist"] - min_dist) / dist_range)
+            # Recency: newer date = higher score
+            c["recency"] = (c["date"] - earliest_date).total_seconds() / date_range
+            
+            # 5. Final Combined Score
+            c["final_score"] = ((1.0 - recency_weight) * c["relevance"]) + (recency_weight * c["recency"])
+
+        # 6. Sort and return top k
+        candidate_data.sort(key=lambda x: x["final_score"], reverse=True)
+        return [c["doc"] for c in candidate_data[:k]]
 
 if __name__ == "__main__":
     # Simple test if run directly
