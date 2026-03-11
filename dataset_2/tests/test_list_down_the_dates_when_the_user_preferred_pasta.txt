@@ -1,4 +1,4 @@
-Querying dataset_2: List Down the dates when the user preferred pasta?
+Querying dataset_2 [Standard]: List Down the dates when the user preferred pasta?
 
 --- Result 1 (Date: 2026-03-04, Time: Afternoon) ---
 Date: 2026-03-04 (Wednesday)
@@ -13,3 +13,39 @@ Time of Day: Afternoon
 AI: Good afternoon! Are you thinking about lunch?
 User: Yes, I am. I feel like having pasta today.
 AI: Pasta sounds delicious! I'll make a note of that for your lunch today.
+
+==================================================
+
+Querying dataset_2 [Hybrid]: List Down the dates when the user preferred pasta?
+
+--- Result 1 (Date: 2026-03-11, Time: Evening) ---
+Date: 2026-03-11 (Wednesday)
+Time of Day: Evening
+AI: Good evening! Are you thinking about dinner yet? I was wondering if you'd like to try soup tonight.
+User: No, I was actually hoping for pizza tonight.
+AI: Pizza sounds great! I'll make a note of that for next time.
+
+--- Result 2 (Date: 2026-03-14, Time: Afternoon) ---
+Date: 2026-03-14 (Saturday)
+Time of Day: Afternoon
+AI: Good afternoon! Are you thinking about lunch?
+User: Yes, I am. I'm craving some pasta for lunch today.
+AI: Pasta sounds delicious! I'll make a note of that for your lunch preference.
+
+==================================================
+
+Querying dataset_2 [Hierarchical]: List Down the dates when the user preferred pasta?
+
+--- Result 1 (Date: 2026-03-11, Time: Evening) ---
+Date: 2026-03-11 (Wednesday)
+Time of Day: Evening
+AI: Good evening! Are you thinking about dinner yet? I was wondering if you'd like to try soup tonight.
+User: No, I was actually hoping for pizza tonight.
+AI: Pizza sounds great! I'll make a note of that for next time.
+
+--- Result 2 (Date: 2026-03-14, Time: Afternoon) ---
+Date: 2026-03-14 (Saturday)
+Time of Day: Afternoon
+AI: Good afternoon! Are you thinking about lunch?
+User: Yes, I am. I'm craving some pasta for lunch today.
+AI: Pasta sounds delicious! I'll make a note of that for your lunch preference.

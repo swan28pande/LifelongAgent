@@ -1,4 +1,4 @@
-Querying dataset_1: What did the user prefer in the afternoon of 2026-02-19?
+Querying dataset_1 [Standard]: What did the user prefer in the afternoon of 2026-02-19?
 
 --- Result 1 (Date: 2026-03-09, Time: Mid-Afternoon) ---
 Date: 2026-03-09 (Monday)
@@ -12,3 +12,39 @@ Date: 2026-03-26 (Thursday)
 Time of Day: Midday
 AI: It's almost lunchtime. Your preference for today is a burrito. Shall I go ahead and arrange for that?
 User: Yes, a burrito sounds great. Please do.
+
+==================================================
+
+Querying dataset_1 [Hybrid]: What did the user prefer in the afternoon of 2026-02-19?
+
+--- Result 1 (Date: 2026-02-19, Time: Morning) ---
+Date: 2026-02-19 (Thursday)
+Time of Day: Morning
+AI: Good morning! I've brewed your usual espresso. For your outfit, I've laid out your black t-shirt and your smartwatch. And for breakfast, would you like your oatmeal now?
+User: Thanks for the coffee and getting my outfit ready! Actually, I'm craving something different for breakfast today. Could I have pancakes instead of oatmeal?
+AI: Of course! My apologies, I'll update that preference for today. Pancakes it is! I'll get those started right away for you.
+
+--- Result 2 (Date: 2026-02-19, Time: Afternoon) ---
+Date: 2026-02-19 (Thursday)
+Time of Day: Afternoon
+AI: Just a friendly reminder that you have grocery shopping on your schedule for this afternoon. Do you need me to pull up your usual shopping list or add anything new?
+User: Oh, thanks for the reminder! Yes, please pull up the usual list. I'll review it on my way.
+AI: Consider it done. The list is ready on your device. Have a good trip to the store!
+
+==================================================
+
+Querying dataset_1 [Hierarchical]: What did the user prefer in the afternoon of 2026-02-19?
+
+--- Result 1 (Date: 2026-02-19, Time: Morning) ---
+Date: 2026-02-19 (Thursday)
+Time of Day: Morning
+AI: Good morning! I've brewed your usual espresso. For your outfit, I've laid out your black t-shirt and your smartwatch. And for breakfast, would you like your oatmeal now?
+User: Thanks for the coffee and getting my outfit ready! Actually, I'm craving something different for breakfast today. Could I have pancakes instead of oatmeal?
+AI: Of course! My apologies, I'll update that preference for today. Pancakes it is! I'll get those started right away for you.
+
+--- Result 2 (Date: 2026-02-19, Time: Afternoon) ---
+Date: 2026-02-19 (Thursday)
+Time of Day: Afternoon
+AI: Just a friendly reminder that you have grocery shopping on your schedule for this afternoon. Do you need me to pull up your usual shopping list or add anything new?
+User: Oh, thanks for the reminder! Yes, please pull up the usual list. I'll review it on my way.
+AI: Consider it done. The list is ready on your device. Have a good trip to the store!
