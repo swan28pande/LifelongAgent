@@ -13,6 +13,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from datetime import datetime, timedelta
 import re
 import dotenv
+import ast
 
 dotenv.load_dotenv()
 
@@ -294,43 +295,123 @@ class MemoryManager:
 
         print(f"Summary generation process complete. Results in {output_file}")
 
-    def query_hierarchical(self, question: str, k_weeks: int = 1, k_days: int = 3) -> List[Document]:
-        """
-        Two-stage RAG:
-        1. Query weekly summaries to find the most relevant week.
-        2. Query daily interactions within that week (and nearby context).
-        """
-        print(f"\n[Hierarchical Search]: {question}")
-        
-        if self.summary_vector_store is None:
-            print("  Warning: No summary index found. Falling back to query_hybrid.")
-            return self.query_hybrid(question, k=k_days)
-
-        # Step 1: Find relevant weeks
-        print("  Step 1: Searching high-level weekly summaries...")
-        relevant_weeks = self.summary_vector_store.similarity_search(question, k=k_weeks)
-        
-        if not relevant_weeks:
-            return self.query_hybrid(question, k=k_days)
-
-        top_week_start = relevant_weeks[0].metadata.get("week_start")
-        print(f"  Found relevant week starting: {top_week_start}")
-        print(f"  Summary Fragment: {relevant_weeks[0].page_content[:150]}...")
-
-        # Step 2: Query daily details
-        # We use a slight boost for documents in that specific week by providing the week_start as a hint
-        # Or we can just perform a hybrid query and let the temporal logic handle proximity if the query has a date.
-        # But here we focus on the semantic "week" discovery.
-        
-        print(f"  Step 2: Diving into daily details for context...")
-        # We can pass the week midpoint as a temporal anchor if no date is in query
-        # This is a bit advanced, but for now let's just run query_hybrid 
-        # but maybe increase k or weight?
-        
-        # Actually, let's keep it simple: return the top daily results.
-        # Ideally we'd filter by the discovered week, but FAISS metadata filtering is 
-        # a bit engine-specific. Let's just use query_hybrid normally but inform the user.
         return self.query_hybrid(question, k=k_days)
+
+    def _extract_analytics_params(self, query: str) -> Dict:
+        """Extracts the entity to count and the date range from the query."""
+        if not self.llm:
+            return {"entity": None, "start_date": None, "end_date": None}
+
+        today = datetime.now().strftime("%Y-%m-%d (%A)")
+        system_prompt = (
+            "You are a specialized parser for lifelong memory queries. "
+            "Extract the 'entity' (the primary thing being counted, like 'coffee' or 'meetings') "
+            "and the 'date_range' (start and end dates covering the requested period).\n\n"
+            f"Current Date: {today}\n"
+            "Return ONLY a raw JSON object with DOUBLE QUOTES: {{\"entity\": \"...\", \"start_date\": \"YYYY-MM-DD\", \"end_date\": \"YYYY-MM-DD\"}}\n"
+            "If the user says 'last week', calculate the dates relative to today.\n"
+            "If the user says 'past month', calculate the dates relative to today.\n"
+            "EXAMPLES:\n"
+            "Query: 'How many times did I have coffee last week?' -> "
+            "{{\"entity\": \"coffee\", \"start_date\": \"2026-03-10\", \"end_date\": \"2026-03-17\"}}\n"
+            "Query: 'How many meetings in February?' -> "
+            "{{\"entity\": \"meetings\", \"start_date\": \"2026-02-01\", \"end_date\": \"2026-02-28\"}}\n"
+        )
+        
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", system_prompt),
+            ("human", "{query}")
+        ])
+        
+        try:
+            chain = prompt | self.llm
+            response = chain.invoke({"query": query})
+            # Clean up JSON if LLM adds markdown blocks
+            content = response.content.strip()
+            print(f"    Raw LLM Extraction: {content}")
+            if "```json" in content:
+                content = content.split("```json")[1].split("```")[0].strip()
+            elif "```" in content:
+                content = content.split("```")[1].split("```")[0].strip()
+            
+            try:
+                return json.loads(content)
+            except json.JSONDecodeError:
+                # LLM might use single quotes or Python dict format, use ast.literal_eval as fallback
+                try:
+                    return ast.literal_eval(content)
+                except:
+                    raise  # Fall through to the main exception handler
+        except Exception as e:
+            print(f"Warning: Analytics param extraction failed: {e}")
+            if 'content' in locals():
+                print(f"    Raw content that failed: {content}")
+            return {"entity": query, "start_date": None, "end_date": None}
+
+    def query_analytics(self, question: str) -> str:
+        """
+        Performs Map-Reduce style aggregation to answer 'how many times' queries.
+        1. Extract entity and date range.
+        2. Broad search for relevant snippets.
+        3. Filter by date.
+        4. LLM aggregation.
+        """
+        print(f"\n[Analytics Query]: {question}")
+        params = self._extract_analytics_params(question)
+        print(f"  Extracted Params: {params}")
+        entity = params.get("entity")
+        start_date_str = params.get("start_date")
+        end_date_str = params.get("end_date")
+        
+        print(f"  Target Entity: {entity}")
+        print(f"  Date Range: {start_date_str} to {end_date_str}")
+
+        if not entity or self.vector_store is None:
+            return "Could not identify what to count or no memory found."
+
+        # 1. Broad Retrieval (Map Phase)
+        # We search for the entity name specifically to get all mentions
+        candidates = self.vector_store.similarity_search(entity, k=100)
+        
+        # 2. Filter by Date Range
+        filtered_docs = []
+        if start_date_str and end_date_str:
+            start_dt = datetime.strptime(start_date_str, "%Y-%m-%d")
+            end_dt = datetime.strptime(end_date_str, "%Y-%m-%d")
+            
+            for doc in candidates:
+                doc_date_str = doc.metadata.get("date")
+                if doc_date_str:
+                    try:
+                        doc_dt = datetime.strptime(doc_date_str, "%Y-%m-%d")
+                        if start_dt <= doc_dt <= end_dt:
+                            filtered_docs.append(doc)
+                    except:
+                        pass
+        else:
+            filtered_docs = candidates[:20] # Fallback to top 20 if no range
+
+        if not filtered_docs:
+            return f"Found no mentions of '{entity}' in the specified time range."
+
+        print(f"  Found {len(filtered_docs)} relevant snippets after filtering.")
+
+        # 3. Aggregation (Reduce Phase)
+        context = "\n---\n".join([d.page_content for d in filtered_docs])
+        
+        prompt = (
+            f"Based on the following memory snippets, answer the question: '{question}'\n"
+            "Be precise. Count each UNIQUE occurrence once. If the same event is mentioned across "
+            "multiple snippets (e.g. morning and afternoon), only count it once if it refers to the same instance.\n\n"
+            f"CONTEXT:\n{context}\n\n"
+            "ANSWER:"
+        )
+
+        try:
+            response = self.summary_llm.invoke(prompt)
+            return response.content.strip()
+        except Exception as e:
+            return f"Error during aggregation: {e}"
 
 if __name__ == "__main__":
     # Simple test if run directly
