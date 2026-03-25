@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What are the top three preferences in each category (food, routine, clothing, hobbies, other) that I have consistently chosen over time?",
+    "sql": "SELECT category, preference, COUNT(*) as preference_count\nFROM preferences\nGROUP BY category, preference\nORDER BY category, preference_count DESC\nLIMIT 3;",
+    "summary": "The top three preferences in the clothing category that you have consistently chosen over time are \"clothing,\" \"yes,\" and \"preferred.\""
+  },
+  {
+    "question": "How often do I complete repetitive tasks compared to ad-hoc tasks, and what does this say about my consistency in task management?",
+    "sql": "SELECT task_type, COUNT(*) AS task_count, SUM(CASE WHEN status = 'completed' THEN 1 ELSE 0 END) AS completed_count\nFROM tasks\nGROUP BY task_type;",
+    "summary": "You complete ad-hoc tasks significantly more often than repetitive tasks, indicating a preference for flexibility over routine in your task management."
+  },
+  {
+    "question": "What is the average time taken to complete tasks, and how does this vary between different task types?",
+    "sql": "SELECT task_type, AVG(julianday(due_date) - julianday(source_date)) AS average_completion_time\nFROM tasks\nWHERE status = 'completed'\nGROUP BY task_type;",
+    "summary": "There is no data available to determine the average time taken to complete tasks or how this varies between different task types."
+  },
+  {
+    "question": "Are there any seasonal trends in my preferences for food or clothing that indicate changing habits throughout the year?",
+    "sql": "SELECT strftime('%Y-%m', source_date) AS month, category, preference, COUNT(*) AS preference_count\nFROM preferences\nWHERE category IN ('food', 'clothing')\nGROUP BY month, category, preference\nORDER BY month, category;",
+    "summary": "The data indicates a preference for casual clothing and a variety of meal choices, particularly favoring breakfast and dinner options, suggesting a potential seasonal trend in food and clothing habits during March 2026."
+  },
+  {
+    "question": "How frequently do I change my preferences in each category, and what does this indicate about my adaptability or consistency?",
+    "sql": "SELECT category, COUNT(*) AS preference_change_count\nFROM preferences\nGROUP BY category;",
+    "summary": "You change your preferences most frequently in food (25 times), followed by clothing (17 times), indicating a higher adaptability in those areas, while showing more consistency in your routine and other categories."
+  },
+  {
+    "question": "What percentage of my tasks remain pending versus completed, and how does this reflect my overall productivity?",
+    "sql": "SELECT \n    (SUM(CASE WHEN status = 'pending' THEN 1 ELSE 0 END) * 100.0 / COUNT(*)) AS pending_percentage,\n    (SUM(CASE WHEN status = 'completed' THEN 1 ELSE 0 END) * 100.0 / COUNT(*)) AS completed_percentage\nFROM tasks;",
+    "summary": "You have 100% of your tasks remaining pending and 0% completed, indicating a lack of productivity."
+  },
+  {
+    "question": "Which specific preferences have remained unchanged for the longest period, and what might this suggest about my core values or habits?",
+    "sql": "SELECT entity, preference, source_date \nFROM preferences \nORDER BY source_date ASC \nLIMIT 1;",
+    "summary": "The preference for smoothies at breakfast, unchanged since at least March 1, 2026, suggests a strong commitment to health and convenience as core values in your daily habits."
+  },
+  {
+    "question": "How do my task completion rates differ between weekdays and weekends, and what implications does this have for my work-life balance?",
+    "sql": "SELECT \n    strftime('%w', due_date) AS day_of_week,\n    COUNT(*) AS total_tasks,\n    SUM(CASE WHEN status = 'completed' THEN 1 ELSE 0 END) AS completed_tasks,\n    (SUM(CASE WHEN status = 'completed' THEN 1 ELSE 0 END) * 1.0 / COUNT(*)) * 100 AS completion_rate\nFROM \n    tasks\nGROUP BY \n    day_of_week\nHAVING \n    day_of_week IN ('0', '6');",
+    "summary": "Your task completion rates are the same on both weekdays and weekends, indicating that your work-life balance may not be significantly affected by the day of the week."
+  },
+  {
+    "question": "What is the correlation between the types of tasks I prioritize and my stated preferences in related categories?",
+    "sql": "SELECT t.task_type, p.category, COUNT(*) AS count\nFROM tasks t\nJOIN preferences p ON (t.task_description LIKE '%' || p.entity || '%')\nGROUP BY t.task_type, p.category;",
+    "summary": "The data indicates a stronger preference for prioritizing ad-hoc tasks over routine tasks, with a correlation score of 5 compared to a score of 3 for repetitive tasks versus routine tasks."
+  },
+  {
+    "question": "How do my preferences in hobbies compare to my task completion in related areas, and what insights can be drawn about my engagement levels?",
+    "sql": "SELECT \n    p.preference AS hobby_preference,\n    COUNT(t.status) AS task_count,\n    SUM(CASE WHEN t.status = 'completed' THEN 1 ELSE 0 END) AS completed_tasks,\n    SUM(CASE WHEN t.status = 'pending' THEN 1 ELSE 0 END) AS pending_tasks\nFROM \n    preferences p\nLEFT JOIN \n    tasks t ON p.entity = t.task_description\nWHERE \n    p.category = 'hobbies'\nGROUP BY \n    p.preference;",
+    "summary": "There is no data available to analyze your preferences in hobbies or task completion in related areas, so no insights can be drawn about your engagement levels."
+  }
+]

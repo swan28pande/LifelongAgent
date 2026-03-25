@@ -48,7 +48,6 @@ class StructuredMemoryManager:
                 task_type TEXT, -- 'ad-hoc', 'repetitive'
                 status TEXT DEFAULT 'pending',
                 due_date TEXT,
-                priority TEXT,
                 extracted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 source_date TEXT
             )
@@ -77,7 +76,11 @@ class StructuredMemoryManager:
             "and tasks (ad-hoc or repetitive) from the conversation provided.\n\n"
             "Return a JSON object with two keys:\n"
             "1. 'preferences': A list of objects with {{'entity', 'preference', 'category'}}.\n"
-            "2. 'tasks': A list of objects with {{'description', 'type', 'due_date', 'priority'}}.\n\n"
+            "2. 'tasks': A list of objects with {{'description', 'type', 'due_date'}}.\n\n"
+            "TASK NAMES:\n"
+            "- Keep task descriptions extremely concise and normalized.\n"
+            "- Example: Instead of 'do some coding' or 'coding for today', use 'coding'.\n"
+            "- Example: Instead of 'buy some milk from the store', use 'buy milk'.\n\n"
             "TASK TYPES:\n"
             "- 'ad-hoc': One-time tasks (e.g., 'buy eggs today').\n"
             "- 'repetitive': Recurring tasks (e.g., 'exercise every Monday').\n\n"
@@ -115,8 +118,8 @@ class StructuredMemoryManager:
         # Save Tasks
         for task in data.get("tasks", []):
             cursor.execute(
-                "INSERT INTO tasks (task_description, task_type, due_date, priority, source_date) VALUES (?, ?, ?, ?, ?)",
-                (task.get("description"), task.get("type"), task.get("due_date"), task.get("priority"), date_str)
+                "INSERT INTO tasks (task_description, task_type, due_date, source_date) VALUES (?, ?, ?, ?)",
+                (task.get("description"), task.get("type"), task.get("due_date"), date_str)
             )
             
         conn.commit()
@@ -145,6 +148,90 @@ class StructuredMemoryManager:
         rows = cursor.fetchall()
         conn.close()
         return rows
+
+
+    def get_schema_info(self) -> str:
+        """Returns a string description of the SQLite schema."""
+        return (
+            "TABLE preferences:\n"
+            "- entity (TEXT): The thing the preference is about (e.g., 'coffee', 't-shirt')\n"
+            "- preference (TEXT): The specific choice (e.g., 'espresso', 'red')\n"
+            "- category (TEXT): 'food', 'routine', 'clothing', 'hobbies', 'other'\n"
+            "- source_date (TEXT): YYYY-MM-DD\n\n"
+            "TABLE tasks:\n"
+            "- task_description (TEXT): What the task is (e.g., 'coding', 'running')\n"
+            "- task_type (TEXT): 'ad-hoc' or 'repetitive'\n"
+            "- status (TEXT): 'pending', 'completed'\n"
+            "- due_date (TEXT): YYYY-MM-DD\n"
+            "- source_date (TEXT): YYYY-MM-DD"
+        )
+
+    def generate_insight_questions(self, num_questions: int = 10) -> List[str]:
+        """Generates 10 insightful questions based on the schema."""
+        if not self.llm:
+            return []
+            
+        system_prompt = (
+            "You are a data analyst for a lifelong memory system. Based on the database schema provided, "
+            f"generate {num_questions} insightful, analytical questions that would help a user understand their habits, "
+            "consistency, and patterns over time.\n\n"
+            "SCHEMA:\n{schema}\n\n"
+            "Return ONLY a JSON list of strings."
+        )
+        
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", system_prompt),
+            ("human", "Generate {num_questions} questions.")
+        ])
+        
+        try:
+            chain = prompt | self.llm | JsonOutputParser()
+            return chain.invoke({"schema": self.get_schema_info(), "num_questions": num_questions})
+        except Exception as e:
+            print(f"Error generating insight questions: {e}")
+            return []
+
+    def execute_ai_sql(self, question: str) -> Dict:
+        """Generates and executes a SQL query to answer a specific question."""
+        if not self.llm:
+            return {"error": "LLM not available"}
+
+        system_prompt = (
+            "You are a SQL expert. Given a question about a user's memory and the schema below, "
+            "generate a valid SQLite query to answer the question.\n\n"
+            "SCHEMA:\n{schema}\n\n"
+            "RETURN ONLY THE SQL QUERY. NO MARKDOWN. NO EXPLANATION."
+        )
+        
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", system_prompt),
+            ("human", "Question: {question}")
+        ])
+        
+        try:
+            chain = prompt | self.llm
+            sql_query = chain.invoke({"schema": self.get_schema_info(), "question": question}).content.strip()
+            # Clean markdown if present
+            if "```sql" in sql_query:
+                sql_query = sql_query.split("```sql")[1].split("```")[0].strip()
+            elif "```" in sql_query:
+                sql_query = sql_query.split("```")[1].split("```")[0].strip()
+
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            cursor.execute(sql_query)
+            columns = [description[0] for description in cursor.description]
+            rows = cursor.fetchall()
+            conn.close()
+            
+            return {
+                "question": question,
+                "sql": sql_query,
+                "columns": columns,
+                "results": rows
+            }
+        except Exception as e:
+            return {"question": question, "error": str(e)}
 
 if __name__ == "__main__":
     # Test initialization

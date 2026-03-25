@@ -21,7 +21,8 @@ def view_tables():
     print("\n--- EXTRACTED TASKS (Top 10) ---")
     tasks = manager.query_tasks()
     for row in tasks[:10]:
-        print(f"ID: {row[0]} | Task: {row[1]} | Type: {row[2]} | Due: {row[4]} | Priority: {row[5]} | Date: {row[7]}")
+        # row: (id, description, type, status, due, extracted_at, source_date)
+        print(f"ID: {row[0]} | Task: {row[1]} | Type: {row[2]} | Due: {row[4]} | Date: {row[6]}")
 
 if __name__ == "__main__":
     view_tables()

@@ -88,11 +88,11 @@ def parse_csv(csv_filepath: str):
                     "options": options,
                     "cycle_days": cycle_days
                 }
-            elif row['Frequency'] != "Random":
+            else:
                 tasks.append({
                     "name": task_str,
                     "frequency": row['Frequency'],
-                    "start_date": row['Start Date']
+                    "start_date": row['Start Date'] if row['Start Date'] != "Random" else "2026-03-01"
                 })
                 
     return preferences, tasks
@@ -118,6 +118,9 @@ def is_task_today(task: Dict, current_date: datetime.date) -> bool:
         return delta % 14 == 0
     if freq == "Monthly":
         return current_date.day == start_date.day
+    if freq == "Random":
+        # 30% chance of random tasks appearing
+        return random.random() < 0.3
         
     return False
 
@@ -132,8 +135,8 @@ def generate_interaction(llm: ChatGoogleGenerativeAI, context: Dict, max_retries
         "Time of day: {time_of_day}\n"
         "GUIDELINES:\n"
         "{custom_guidelines}\n"
-        "CRITICAL: The AI speaker MUST NOT know the User's actual preferences or tasks unless stated as KNOWN or CONFIDENT in the guidelines. If a preference/task is UNKNOWN, the AI MUST ask an open question without guessing (e.g. 'What would you like?'). The User speaker MUST then reply with their actual preference.\n"
-        "Generate a natural, short interaction (2-6 turns). The conversation MUST conclude logically. It MUST NOT end with the AI asking a question that the User does not answer. The User MUST state their actual preferences during the interaction.\n"
+        "CRITICAL: The AI speaker MUST NOT know the User's actual preferences or tasks unless stated as KNOWN or CONFIDENT in the guidelines. If a preference/task is UNKNOWN or TENTATIVE, the AI MUST ask an open question without guessing or verify it. The User speaker MUST then reply with their actual preference as stated in the context. The User speaker SHOULD be proactive in mentioning their preferences and tasks if the AI invites them to share or asks an open question.\n"
+        "Generate a natural, short interaction (2-6 turns). The conversation MUST conclude logically. It MUST NOT end with the AI asking a question that the User does not answer. The User MUST state their actual preferences during the interaction for any items mentioned or asked about.\n"
         "Use structured output."
     )
     
@@ -251,14 +254,17 @@ def main():
                 anchor_idx = {"Morning": 1, "Afternoon": 2, "Evening": 3}
                 
                 if interactions_count >= anchor_idx[time_of_day]:
+                    interaction_text = " ".join([turn.get("text", "") for turn in interactions[anchor_idx[time_of_day]-1].get("turns", [])]).lower()
                     p_state = preference_knowledge[pref_name]
-                    current_belief = p_state.beliefs.get(time_of_day)
                     
-                    if current_belief != actual_val:
-                        p_state.beliefs[time_of_day] = actual_val
-                        p_state.days_consistent[time_of_day] = 1
-                    else:
-                        p_state.days_consistent[time_of_day] += 1
+                    # Check if the preference value was actually mentioned in the text
+                    if actual_val.lower() in interaction_text:
+                        current_belief = p_state.beliefs.get(time_of_day)
+                        if current_belief != actual_val:
+                            p_state.beliefs[time_of_day] = actual_val
+                            p_state.days_consistent[time_of_day] = 1
+                        else:
+                            p_state.days_consistent[time_of_day] += 1
 
 
 
@@ -328,7 +334,7 @@ def main():
                     human_context += f"- The User's actual {pref_name} preference today is {actual_val}.\n"
                 
                 if custom_guidelines:
-                    custom_guidelines = "Preference Knowledge Status:\n" + custom_guidelines + "\nCRITICAL: If a preference is UNKNOWN, the AI MUST ask an open question and not guess it."
+                    custom_guidelines = "Preference Knowledge Status:\n" + custom_guidelines + "\nCRITICAL: If a preference is UNKNOWN, the AI MUST ask an open question and not guess it. You MUST ask about ALL UNKNOWN preferences for this time of day in THIS interaction."
                 else:
                     custom_guidelines = "No specific preference knowledge needed for this time."
                     
@@ -336,10 +342,11 @@ def main():
                 if time_of_day == "Morning":
                     tasks_today = [t['name'] for t in tasks_config if is_task_today(t, current_date)]
                     task_guidelines = [f"- Task '{tn}': {task_knowledge[tn].get_status(tn, day_name)}" for tn in [t['name'] for t in tasks_config]]
-                    custom_guidelines += "\n\nTask Knowledge Status:\n" + "\n".join(task_guidelines) + "\n\nIf the user mentions a recurrent task, ask 'Is this every [Day]?' to learn the frequency if unknown."
+                    custom_guidelines += "\n\nTask Knowledge Status:\n" + "\n".join(task_guidelines) + "\n\nIf the user mentions a recurrent task, ask 'Is this every [Day]?' to learn the frequency if unknown. If a task is KNOWN, mention it proactively."
                     
                     tasks_with_freq = [f"{t} ({next(tx['frequency'] for tx in tasks_config if tx['name'] == t)})" for t in tasks_today]
                     human_context += f"\nThe user actually has these tasks today: {', '.join(tasks_with_freq) if tasks_with_freq else 'None'}."
+                    human_context += "\nIf the User has a task today, the User speaker SHOULD mention it naturally."
                 
                 pref_context = {
                     "time_of_day": time_of_day,
@@ -361,14 +368,17 @@ def main():
                                 task_knowledge[t_name].confirmed = True
                                 print(f"    AI LEARNED task: {t_name}")
 
+                    interaction_text = " ".join([turn["text"] for turn in interaction.get("turns", [])]).lower()
                     for pref_name, actual_val in active_prefs:
                         p_state = preference_knowledge[pref_name]
-                        current_belief = p_state.beliefs.get(time_of_day)
-                        if current_belief != actual_val:
-                            p_state.beliefs[time_of_day] = actual_val
-                            p_state.days_consistent[time_of_day] = 1
-                        else:
-                            p_state.days_consistent[time_of_day] += 1
+                        # Only update knowledge if it was actually mentioned in the text
+                        if actual_val.lower() in interaction_text:
+                            current_belief = p_state.beliefs.get(time_of_day)
+                            if current_belief != actual_val:
+                                p_state.beliefs[time_of_day] = actual_val
+                                p_state.days_consistent[time_of_day] = 1
+                            else:
+                                p_state.days_consistent[time_of_day] += 1
                 except Exception as e:
                     if "429" in str(e): raise e
                     print(f"    Error in interaction for {time_of_day}: {e}")
