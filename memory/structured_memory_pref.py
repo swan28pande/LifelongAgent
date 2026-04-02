@@ -10,7 +10,7 @@ import dotenv
 
 dotenv.load_dotenv()
 
-class StructuredMemoryManager:
+class StructuredMemoryManagerPref:
     def __init__(self, db_path: str = "memory/lifelong_memory.db"):
         self.db_path = db_path
         os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
@@ -74,18 +74,12 @@ class StructuredMemoryManager:
         system_prompt = (
             "You are a structured memory extraction agent. Your goal is to identify user preferences "
             "and tasks (ad-hoc or repetitive) from the conversation provided.\n\n"
-            "Return a JSON object with two keys:\n"
-            "1. 'preferences': A list of objects with {{'entity', 'preference', 'category'}}.\n"
-            "2. 'tasks': A list of objects with {{'description', 'type', 'due_date'}}.\n\n"
-            "TASK NAMES:\n"
-            "- Keep task descriptions extremely concise and normalized.\n"
-            "- Example: Instead of 'do some coding' or 'coding for today', use 'coding'.\n"
-            "- Example: Instead of 'buy some milk from the store', use 'buy milk'.\n\n"
-            "TASK TYPES:\n"
-            "- 'ad-hoc': One-time tasks (e.g., 'buy eggs today').\n"
-            "- 'repetitive': Recurring tasks (e.g., 'exercise every Monday').\n\n"
-            "CATEGORIES for preferences: 'food', 'routine', 'clothing', 'hobbies', 'other'.\n\n"
-            "If no preferences or tasks are found, return empty lists."
+            "Return a JSON object with key 'preferences':\n"
+            "'preferences': A list of objects with {{'entity', 'preference', 'category'}}.\n"   
+            "Entity is the thing the preference is about (e.g., 'coffee', 't-shirt')\n"
+            "preference is the specific choice (e.g., 'espresso', 'red')\n"         
+            "category for preferences: 'food', 'routine', 'clothing', 'hobbies', 'other'.\n\n"
+            "If no preferences, return empty list."
         )
 
         prompt = ChatPromptTemplate.from_messages([
@@ -104,22 +98,36 @@ class StructuredMemoryManager:
             return None
 
     def _save_to_db(self, date_str: str, data: Dict):
-        """Persists extracted data to SQLite."""
+        """Persists extracted data to SQLite with intelligent consolidation."""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        # Save Preferences
-        for pref in data.get("preferences", []):
-            cursor.execute(
-                "INSERT INTO preferences (entity, preference, category, source_date) VALUES (?, ?, ?, ?)",
-                (pref.get("entity"), pref.get("preference"), pref.get("category"), date_str)
-            )
+        # 1. Handle Preferences Consolidation
+        raw_preferences = data.get("preferences", [])
+        if raw_preferences:
+            print(f"  ...Consolidating {len(raw_preferences)} preferences with targeted LLM context...")
             
-        # Save Tasks
+            # Fetch targeted context for LLM comparison
+            existing_prefs = self._get_relevant_context(raw_preferences)
+            
+            consolidated_prefs = self._consolidate_preferences_with_llm(raw_preferences, existing_prefs)
+            
+            for pref in consolidated_prefs:
+                # Still lowercase for database consistency
+                entity = str(pref.get("entity", "")).lower().strip()
+                preference = str(pref.get("preference", "")).lower().strip()
+                category = str(pref.get("category", "")).lower().strip()
+
+                cursor.execute(
+                    "INSERT INTO preferences (entity, preference, category, source_date) VALUES (?, ?, ?, ?)",
+                    (entity, preference, category, date_str)
+                )
+            
+        # 2. Save Tasks (Keeping previous hardcoded logic as requested)
         for task in data.get("tasks", []):
-            description = task.get("description")
-            new_due = task.get("due_date")
-            new_type = task.get("type")
+            description = str(task.get("description", "")).lower().strip()
+            new_due = str(task.get("due_date", "")).lower().strip()
+            new_type = str(task.get("type", "")).lower().strip()
             
             # Check if this task exists in the DB already to reuse the due_date and task_type
             cursor.execute(
@@ -128,7 +136,7 @@ class StructuredMemoryManager:
             )
             existing = cursor.fetchone()
             
-            # Reuse existing values if found for structural consistency
+            # Reuse existing values if found for structural consistency (already lowered)
             final_due = new_due
             final_type = new_type
             if existing:
@@ -142,6 +150,84 @@ class StructuredMemoryManager:
             
         conn.commit()
         conn.close()
+
+    def _get_relevant_context(self, raw_preferences: List[Dict]) -> List[Dict]:
+        """Fetches 5-10 most relevant historical records based on keywords in new data."""
+        keywords = set()
+        for p in raw_preferences:
+            # Extract basic keywords from entity and preference
+            if p.get("entity"): keywords.add(str(p["entity"]).lower())
+            if p.get("preference"): keywords.add(str(p["preference"]).lower())
+        
+        if not keywords:
+            return []
+
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        relevant_context = []
+        seen = set()
+        
+        # Search for each keyword
+        for word in keywords:
+            if len(word) < 3: continue # Skip tiny words like 'a', 'to'
+            
+            # Find past entries that match the keyword
+            cursor.execute(
+                "SELECT DISTINCT entity, preference, category FROM preferences "
+                "WHERE entity LIKE ? OR preference LIKE ? LIMIT 5",
+                (f"%{word}%", f"%{word}%")
+            )
+            for row in cursor.fetchall():
+                triple = (row[0], row[1], row[2])
+                if triple not in seen:
+                    relevant_context.append({"entity": row[0], "preference": row[1], "category": row[2]})
+                    seen.add(triple)
+                    
+        conn.close()
+        
+        # Limit total context to keep prompt efficient
+        return relevant_context[:15]
+
+    def _consolidate_preferences_with_llm(self, raw_preferences: List[Dict], existing_context: List[Dict]) -> List[Dict]:
+        """Uses the LLM to map raw preference extractions to existing ones semantically."""
+        if not self.llm or not raw_preferences:
+            return raw_preferences
+
+        system_prompt = (
+            "You are a memory consolidation agent. Your goal is to map new preference extractions "
+            "to our existing database schema to ensure consistency. Do not hardcode rules; "
+            "instead, look at the existing entries provided and decide if the new extraction is a synonym, sub-item, "
+            "or a specialized version of something we already track.\n\n"
+            "EXISTING PREFERENCES (Entity | Preference | Category):\n"
+            "{context}\n\n"
+            "CONSOLIDATION GUIDELINES:\n"
+            "1. If a new extraction (e.g., 'espresso') is semantically a type of an existing entity (e.g., 'coffee'), "
+            "use the existing entity as 'entity' and the new extraction as 'preference'.\n"
+            "2. If the new 'entity' (e.g., 'flip flops') is already a known 'preference' for something else (e.g., 'shoes'), "
+            "standardize the entity to the parent ('shoes') and set the preference to 'flip flops'.\n"
+            "3. For categories, use the EXISTING category if it matches the entity.\n"
+            "4. Return the results as a JSON list of objects with {{'entity', 'preference', 'category'}}.\n\n"
+            "Return the list directly or inside a 'preferences' key."
+        )
+
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", system_prompt),
+            ("human", "Consolidate the following extractions:\n{raw_json}")
+        ])
+
+        try:
+            # Format context for prompt
+            # Only include unique triples to keep prompt short
+            context_str = "\n".join([f"- {p['entity']} | {p['preference']} | {p['category']}" for p in existing_context])
+            
+            chain = prompt | self.llm | JsonOutputParser()
+            result = chain.invoke({"context": context_str, "raw_json": json.dumps(raw_preferences)})
+            
+            return result.get("preferences", result) if isinstance(result, dict) else result
+        except Exception as e:
+            print(f"Warning: Consolidation failed, using raw extractions. Error: {e}")
+            return raw_preferences
 
     def query_preferences(self, category: Optional[str] = None):
         """Query stored preferences."""
@@ -253,5 +339,5 @@ class StructuredMemoryManager:
 
 if __name__ == "__main__":
     # Test initialization
-    manager = StructuredMemoryManager()
+    manager = StructuredMemoryManagerPref()
     print("Structured Memory Manager initialized and DB created.")

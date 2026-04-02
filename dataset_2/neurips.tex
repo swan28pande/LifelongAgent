@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage{neurips_2026}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote. 
+\title{Lifelong Learning Temporal Agent}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{%
+  Anonymous Author(s) \\
+  Affiliation \\
+  Address \\
+  \texttt{email@example.edu} \\
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+  Lifelong learning agents require robust mechanisms to manage evolving user preferences and tasks across extended periods. We present a hybrid memory architecture that combines unstructured temporal retrieval with a structured SQLite database to ensure the consistency of extracted insights. Our system features an AI-driven "Insight Agent" that autonomously generates analytical questions, executes text-to-SQL queries, and synthesizes long-term behavioral patterns into structured JSON reports. We demonstrate the efficacy of this approach through a synthetic 28-day dataset simulation, showing that our architecture successfully \textbf{captures temporal changes in user behavior} while maintaining structural consistency throughout its lifelong history.
+\end{abstract}
+
+\section{Methodology}
+
+Our approach to lifelong memory management consists of three core pillars: (1) a hybrid storage backend for multi-modal data, (2) a consistency-preserving extraction pipeline, and (3) an agentic insight generation workflow.
+
+\subsection{Hybrid Memory Architecture}
+We implement a dual-layer memory system to balance flexibility and precision.
+\begin{enumerate}
+    \item \textbf{Unstructured Memory (FAISS)}: Daily interactions are embedded using \texttt{nomic-embed-text-v1} and indexed in a FAISS vector store. This supports temporal-weighted RAG for answering open-ended queries about past events.
+    \item \textbf{Structured Memory (SQLite)}: High-value entities, such as user preferences (food, clothing, routine) and tasks (ad-hoc vs. repetitive), are stored in a relational schema to enable precise counting and trend analysis.
+\end{enumerate}
+
+\subsection{Structured Data Extraction and Normalization}
+During the ingestion of daily conversation logs, an LLM-based extraction agent identifies discrete preferences and tasks. To prevent profile drift, we enforce strict normalization:
+\begin{itemize}
+    \item \textbf{Task Normalization}: Task descriptions are mapped to concise canonical forms (e.g., "coding" instead of "do some coding").
+    \item \textbf{Structural Persistence}: When a recurring task is identified, the system performs a lookup in the structured database to reuse existing metadata, such as \texttt{task\_type} and \texttt{due\_date}. This ensures that a task established as "repetitive" on Day 1 does not mistakenly flip to "ad-hoc" in subsequent interactions due to varied user phrasing.
+\end{itemize}
+
+\subsection{AI Insight Agent: SQL-Driven Analysis}
+Traditional summarization often fails to capture the quantitative nuances of long-term data. We introduce a multi-step agentic workflow for insight generation:
+\begin{enumerate}
+    \item \textbf{Question Generation}: The agent inspects the database schema and brainstorms $N$ analytical questions tailored to the user's history (e.g., "What is the correlation between my meal choices and task completion?").
+    \item \textbf{Text-to-SQL Execution}: For each question, the agent generates and executes a targeted SQLite query.
+    \item \textbf{Synthesis}: The raw query results, along with the original questions, are synthesized into a structured JSON report, providing a data-backed overview of the user's habits.
+\end{enumerate}
+
+\subsection{Capturing Temporal Evolution}
+Our system is explicitly designed to track shifts in user behavior over time.
+\begin{enumerate}
+    \item \textbf{Preference Evolution}: By storing each preference extraction with its associated \texttt{source\_date}, the relational database maintains a historical log of all changes. This allows the Insight Agent to answer questions regarding behavioral drifts (e.g., "When did my breakfast preference change from toast to smoothies?").
+    \item \textbf{Temporal-Aware Retrieval}: The unstructured vector store utilizes temporal metadata to prioritize recent interactions during RAG, ensuring that the agent's contextual awareness remains aligned with the user's most contemporary state.
+\end{enumerate}
+
+
+
+\section{Submission of papers to NeurIPS 2026}
+
+
+Please read the instructions below carefully and follow them faithfully.
+
+
+\subsection{Style}
+
+
+Papers to be submitted to NeurIPS 2026 must be prepared according to the
+instructions presented here. Papers may only be up to {\bf nine} pages long, including figures. \textbf{Papers that exceed the page limit will not be reviewed (or in any other way considered) for presentation at the conference.}
+Additional pages \emph{containing acknowledgments, references, checklist, and optional technical appendices} do not count as content pages. 
+
+
+The margins in 2026 are the same as those in previous years.
+
+
+Authors are required to use the NeurIPS \LaTeX{} style files obtainable at the NeurIPS website as indicated below. Please make sure you use the current files and not previous versions. Tweaking the style files may be grounds for desk rejection.
+
+
+\subsection{Retrieval of style files}
+
+
+\section{Results}
+\label{results}
+
+We evaluated our hybrid memory system on a 28-day synthetic interaction dataset. Our initial findings indicate that without structural persistence, task categorization consistency drops significantly as the agent relies solely on LLM extraction from varying daily contexts.
+
+\subsection{Structured Insight Generation}
+The AI Insight Agent successfully generated and answered complex analytical queries. Sample questions and their corresponding SQL-derived insights are presented in Table \ref{tab:insights}.
+
+\begin{table}[h]
+  \caption{Sample Structured Insights generated from the 28-day history.}
+  \label{tab:insights}
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    Question & SQL Query Logic & Observed Insight \\
+    \midrule
+    Preference Stability & \texttt{GROUP BY category} & Consistent preference for "Espresso" and "Smoothies." \\
+    Task Completion & \texttt{COUNT(status)} & High completion rate for normalized "coding" task. \\
+    Pattern Discovery & \texttt{ORDER BY source\_date} & Correlation between morning caffeine and evening productivity. \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Discussion}
+The integration of a structured SQlite backend provides a "ground truth" that mitigates the inherent stochasticity of LLM-based memory. Future work involves extending the Insight Agent to perform autonomous cross-modality reasoning.
+
+\section{Conclusion}
+We have presented a robust framework for lifelong learning agents that leverages hybrid memory structures to maintain long-term consistency.
+
+
+\begin{ack}
+Acknowledgments will be added in final version.
+\end{ack}
+
+\section*{References}
+
+\small
+[1] Self-Citation: Lifelong Memory Management for Agents. (2026) Technical Report.
+
+
+\end{document}

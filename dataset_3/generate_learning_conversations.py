@@ -26,27 +26,7 @@ class ConversationTurn(BaseModel):
 
 class DailyConversation(BaseModel):
     time_of_day: str = Field(description="E.g., Morning, Afternoon, Evening, Late Night")
-    context_notes: Optional[str] = Field(description="Brief notes about the context (mood, weather) of this interaction")
     turns: List[ConversationTurn] = Field(description="The turns in this specific interaction")
-
-class SystemContext:
-    """Manages environmental and user context."""
-    WEATHERS = ["Sunny", "Rainy", "Cloudy", "Windy", "Cold", "Hot"]
-    MOODS = ["Happy", "Tired", "Hurried", "Relaxed", "Stressed", "Thoughtful"]
-
-    def __init__(self):
-        self.current_weather = random.choice(self.WEATHERS)
-        self.current_mood = random.choice(self.MOODS)
-
-    def step(self):
-        """Slightly change context each day."""
-        if random.random() < 0.3:
-            self.current_weather = random.choice(self.WEATHERS)
-        if random.random() < 0.5:
-            self.current_mood = random.choice(self.MOODS)
-
-    def get_summary(self) -> str:
-        return f"Weather: {self.current_weather}, User Mood: {self.current_mood}"
 
 class ConversationThread:
     """Tracks a topic over multiple interactions or days."""
@@ -75,23 +55,9 @@ class PreferenceState:
             return f"TENTATIVE: You think they like {belief} (seen for {consistent} days), but you should verify or ask."
         return f"CONFIDENT: You are sure they like {belief}. Suggest it proactively."
 
-class TaskState:
-    """Simulates the AI's internal belief about a task's regularity."""
-    def __init__(self):
-        self.frequency: Optional[str] = None # e.g., "Weekly on Monday"
-        self.confirmed: bool = False
-
-    def get_status(self, task_name: str, day_name: str) -> str:
-        if not self.confirmed:
-            if self.frequency:
-                return f"LEARNING: You suspect this task happens {self.frequency}. Ask the user to confirm the pattern."
-            return f"UNKNOWN: You don't know if the user has '{task_name}' today. Ask if they have any tasks."
-        return f"KNOWN: You know '{task_name}' happens {self.frequency}. Mention it proactively as if you've already scheduled it or are ready for it."
-
 def parse_csv(csv_filepath: str):
-    """Parses tasks2.csv for both preferences and recurrent tasks."""
+    """Parses tasks2.csv for preferences."""
     preferences = {}
-    tasks = []
     
     with open(csv_filepath, 'r') as f:
         reader = csv.DictReader(f)
@@ -117,41 +83,8 @@ def parse_csv(csv_filepath: str):
                     "options": options,
                     "cycle_days": cycle_days
                 }
-            else:
-                tasks.append({
-                    "name": task_str,
-                    "frequency": row['Frequency'],
-                    "start_date": row['Start Date'] if row['Start Date'] != "Random" else "2026-03-01"
-                })
                 
-    return preferences, tasks
-
-def is_task_today(task: Dict, current_date: datetime.date) -> bool:
-    """Simple check if a recurrent task occurs today."""
-    try:
-        start_date = datetime.datetime.strptime(task['start_date'], "%Y-%m-%d").date()
-    except ValueError:
-        return False
-        
-    if current_date < start_date:
-        return False
-        
-    delta = (current_date - start_date).days
-    freq = task['frequency']
-    
-    if freq == "Daily":
-        return True
-    if freq == "Weekly":
-        return delta % 7 == 0
-    if freq == "Bi-weekly":
-        return delta % 14 == 0
-    if freq == "Monthly":
-        return current_date.day == start_date.day
-    if freq == "Random":
-        # 30% chance of random tasks appearing
-        return random.random() < 0.3
-        
-    return False
+    return preferences
 
 def save_data(data: Dict, filepath: str):
     """Safely saves data to the JSON file."""
@@ -160,15 +93,12 @@ def save_data(data: Dict, filepath: str):
 
 def generate_interaction(llm: ChatGoogleGenerativeAI, context: Dict, max_retries: int = 4) -> dict:
     system_prompt = (
-        "You are an AI assistant interacting with a User. You are learning their habits and schedules over time.\n"
-        "Global Context: {global_context}\n"
+        "You are an AI assistant interacting with a User. You are learning their preferences over time.\n"
         "Time of day: {time_of_day}\n"
-        "Interaction Type: {interaction_type}\n"
         "ACTIVE THREADS: {active_threads}\n"
         "GUIDELINES:\n"
         "{custom_guidelines}\n"
-        "CRITICAL: The AI speaker MUST NOT know the User's actual preferences or tasks unless stated as KNOWN or CONFIDENT in the guidelines. If a preference/task is UNKNOWN or TENTATIVE, the AI MUST ask an open question without guessing or verify it. The User speaker MUST then reply with their actual preference as stated in the context. The User speaker SHOULD be proactive in mentioning their preferences and tasks if the AI invites them to share or asks an open question.\n"
-        "If the Interaction Type is 'Small Talk', focus on natural conversation inspired by the mood, weather, or active threads. Do NOT force preference/task learning unless it fits naturally.\n"
+        "CRITICAL: The AI speaker MUST NOT know the User's actual preferences unless stated as KNOWN or CONFIDENT in the guidelines. If a preference is UNKNOWN or TENTATIVE, the AI MUST ask an open question without guessing or verify it. The User speaker MUST then reply with their actual preference as stated in the context. The User speaker SHOULD be proactive in mentioning their preferences if the AI invites them to share or asks an open question.\n"
         "Generate a natural, short interaction (2-6 turns). The conversation MUST conclude logically. It MUST NOT end with the AI asking a question that the User does not answer. The User MUST state their actual preferences during the interaction for any items mentioned or asked about.\n"
         "Use structured output."
     )
@@ -195,7 +125,7 @@ def generate_interaction(llm: ChatGoogleGenerativeAI, context: Dict, max_retries
 def main():
     parser = argparse.ArgumentParser(description="Generate learning conversations")
     parser.add_argument("--days", type=int, default=30, help="Number of days to simulate")
-    parser.add_argument("--output", type=str, default="dataset_2/learning_conversations.json", help="Output file")
+    parser.add_argument("--output", type=str, default="learning_conversations.json", help="Output file")
     args = parser.parse_args()
 
     if "GOOGLE_API_KEY" not in os.environ:
@@ -206,7 +136,7 @@ def main():
     
     # Path handling for tasks2.csv or tasks.csv
     search_paths = [
-        "dataset_2/tasks2.csv",
+        "tasks.csv",
     ]
     csv_path = None
     for p in search_paths:
@@ -223,9 +153,9 @@ def main():
         return
         
     print(f"Using configuration from: {csv_path}")
-    prefs_config, tasks_config = parse_csv(csv_path)
+    prefs_config = parse_csv(csv_path)
     
-    # Change start date to March 1st so tasks are active right away
+    # Change start date to March 1st
     base_date = datetime.date(2026, 3, 1)
     all_data = {}
     
@@ -240,10 +170,8 @@ def main():
 
     # Global AI Knowledge
     preference_knowledge: Dict[str, PreferenceState] = {name: PreferenceState() for name in prefs_config.keys()}
-    task_knowledge: Dict[str, TaskState] = {t['name']: TaskState() for t in tasks_config}
     
     # Context and Threads
-    sys_context = SystemContext()
     active_threads: List[ConversationThread] = []
 
     # Reconstruct state from existing encounters
@@ -254,16 +182,7 @@ def main():
         day_data = all_data[date_str]
         interactions = day_data.get("interactions", [])
         
-        # 1. Re-simulate Task Learning
-        tasks_today = [t['name'] for t in tasks_config if is_task_today(t, day_date)]
-        # We assume if there's any interaction on a day where a task was due, the AI "saw" it
-        if interactions:
-            for t_name in tasks_today:
-                if not task_knowledge[t_name].confirmed:
-                    task_knowledge[t_name].frequency = next(t['frequency'] for t in tasks_config if t['name'] == t_name)
-                    task_knowledge[t_name].confirmed = True
-
-        # 2. Re-simulate Preference Learning
+        # Re-simulate Preference Learning
         # Determine all relevant preferences for this day from the start_date
         # We categorise them into parts of the day
         day_prefs = {
@@ -325,8 +244,6 @@ def main():
         date_str = current_date.strftime("%Y-%m-%d")
         day_name = current_date.strftime("%A")
         
-        sys_context.step()
-        
         if date_str not in all_data:
             all_data[date_str] = {"day": day_name, "interactions": []}
             
@@ -350,15 +267,12 @@ def main():
                 if interactions_done > time_idx:
                     continue
                 
-                # Determine Interaction Type: 'Learning' or 'Small Talk'
-                is_small_talk = random.random() < 0.35
-                interaction_type = "Small Talk" if is_small_talk else "Learning"
-                
+
                 # Active threads for prompt
                 thread_texts = [f"- {t.topic}" for t in active_threads if not t.resolved]
                 active_threads_str = "\n".join(thread_texts) if thread_texts else "None"
 
-                # Preferences and Tasks logic (only if not small talk or by chance)
+                # Preferences logic
                 active_prefs = []
                 pref_time_map = {
                     "Morning": ["Coffee", "Breakfast", "T-Shirt Color", "Shoes", "Watch", "Workout Style"],
@@ -385,30 +299,18 @@ def main():
                 custom_guidelines = ""
                 human_context = ""
                 
-                if not is_small_talk:
-                    for pref_name, actual_val in active_prefs:
-                        p_state = preference_knowledge[pref_name]
-                        custom_guidelines += f"- Preference '{pref_name}' Knowledge: {p_state.get_status(time_of_day)}\n"
-                        human_context += f"- The User's actual {pref_name} preference today is {actual_val}.\n"
-                
-                    if time_of_day == "Morning":
-                        tasks_today = [t['name'] for t in tasks_config if is_task_today(t, current_date)]
-                        task_guidelines = [f"- Task '{tn}': {task_knowledge[tn].get_status(tn, day_name)}" for tn in [t['name'] for t in tasks_config]]
-                        custom_guidelines += "\nTask Knowledge Status:\n" + "\n".join(task_guidelines)
-                        
-                        tasks_with_freq = [f"{t} ({next(tx['frequency'] for tx in tasks_config if tx['name'] == t)})" for t in tasks_today]
-                        human_context += f"\nThe user actually has these tasks today: {', '.join(tasks_with_freq) if tasks_with_freq else 'None'}."
-                        human_context += "\nIf the User has a task today, the User speaker SHOULD mention it naturally."
+                for pref_name, actual_val in active_prefs:
+                    p_state = preference_knowledge[pref_name]
+                    custom_guidelines += f"- Preference '{pref_name}' Knowledge: {p_state.get_status(time_of_day)}\n"
+                    human_context += f"- The User's actual {pref_name} preference today is {actual_val}.\n"
                 
                 if custom_guidelines:
                     custom_guidelines = "Guidelines for Learning:\n" + custom_guidelines
                 else:
-                    custom_guidelines = "Focus on natural interaction."
+                    custom_guidelines = "Focus on natural interaction exploring the preferences."
 
                 pref_context = {
                     "time_of_day": time_of_day,
-                    "interaction_type": interaction_type,
-                    "global_context": sys_context.get_summary(),
                     "active_threads": active_threads_str,
                     "custom_guidelines": custom_guidelines,
                     "date": date_str,
@@ -418,9 +320,6 @@ def main():
                 
                 try:
                     interaction = generate_interaction(llm, pref_context)
-                    # Add context_notes to interaction if not present (Gemini might miss it)
-                    if "context_notes" not in interaction:
-                        interaction["context_notes"] = sys_context.get_summary()
                     
                     day_ref["interactions"].append(interaction)
                     save_data(all_data, args.output)
@@ -437,13 +336,6 @@ def main():
                             if not any(t.topic == new_topic for t in active_threads):
                                 active_threads.append(ConversationThread(new_topic))
                                 print(f"    New Thread: {new_topic}")
-
-                    if time_of_day == "Morning" and not is_small_talk:
-                        for t_name in tasks_today:
-                            if not task_knowledge[t_name].confirmed:
-                                task_knowledge[t_name].frequency = next(tx['frequency'] for tx in tasks_config if tx['name'] == t_name)
-                                task_knowledge[t_name].confirmed = True
-                                print(f"    AI LEARNED task: {t_name}")
 
                     for pref_name, actual_val in active_prefs:
                         p_state = preference_knowledge[pref_name]
