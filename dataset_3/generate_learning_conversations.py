@@ -14,7 +14,7 @@ import re
 
 dotenv.load_dotenv()
 
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 
@@ -38,22 +38,21 @@ class ConversationThread:
         self.mentions = 0
 
 class PreferenceState:
-    """Simulates the AI's internal belief about a preference per time of day."""
-    def __init__(self):
-        # time_of_day -> belief string
-        self.beliefs: Dict[str, Optional[str]] = {}
-        # time_of_day -> days_consistent count
-        self.days_consistent: Dict[str, int] = {}
+    """Simulates the AI's internal belief about a preference (now global)."""
+    def __init__(self, cycle_days: int = 7):
+        self.belief: Optional[str] = None
+        self.days_consistent: int = 0
+        self.cycle_days = cycle_days
 
-    def get_status(self, time_of_day: str) -> str:
-        belief = self.beliefs.get(time_of_day)
-        consistent = self.days_consistent.get(time_of_day, 0)
-        
-        if belief is None:
+    def get_status(self) -> str:
+        if self.cycle_days == 1:
+            return "UNKNOWN: You have no idea what the user likes today because it changes daily. You must ask."
+            
+        if self.belief is None:
             return "UNKNOWN: You have no idea what the user likes. You must ask."
-        if consistent < 3:
-            return f"TENTATIVE: You think they like {belief} (seen for {consistent} days), but you should verify or ask."
-        return f"CONFIDENT: You are sure they like {belief}. Suggest it proactively."
+        if self.days_consistent < 3:
+            return f"TENTATIVE: You think they like {self.belief} (seen for {self.days_consistent} days), but you should verify or ask."
+        return f"CONFIDENT: You are sure they like {self.belief}. Suggest it proactively."
 
 def parse_csv(csv_filepath: str):
     """Parses tasks2.csv for preferences."""
@@ -91,16 +90,16 @@ def save_data(data: Dict, filepath: str):
     with open(filepath, 'w') as f:
         json.dump(data, f, indent=2)
 
-def generate_interaction(llm: ChatGoogleGenerativeAI, context: Dict, max_retries: int = 4) -> dict:
+def generate_interaction(llm: ChatOpenAI, context: Dict, max_retries: int = 4) -> dict:
     system_prompt = (
         "You are an AI assistant interacting with a User. You are learning their preferences over time.\n"
         "Time of day: {time_of_day}\n"
         "ACTIVE THREADS: {active_threads}\n"
         "GUIDELINES:\n"
         "{custom_guidelines}\n"
-        "CRITICAL: The AI speaker MUST NOT know the User's actual preferences unless stated as KNOWN or CONFIDENT in the guidelines. If a preference is UNKNOWN or TENTATIVE, the AI MUST ask an open question without guessing or verify it. The User speaker MUST then reply with their actual preference as stated in the context. The User speaker SHOULD be proactive in mentioning their preferences if the AI invites them to share or asks an open question.\n"
-        "Generate a natural, short interaction (2-6 turns). The conversation MUST conclude logically. It MUST NOT end with the AI asking a question that the User does not answer. The User MUST state their actual preferences during the interaction for any items mentioned or asked about.\n"
-        "Use structured output."
+        "CRITICAL: The AI speaker MUST ONLY discuss the preferences mentioned in the GUIDELINES. Do not ask about other preferences in this interaction. The AI MUST NOT know the User's actual preferences unless stated as KNOWN or CONFIDENT. If UNKNOWN or TENTATIVE, ask an open question or verify.\n"
+        "The User speaker MUST reply based on the Ground Truth in the context. If the AI asks about something NOT in the context, the User must say they haven't decided or skip it.\n"
+        "Generate a natural, short interaction (2-6 turns). The conversation MUST conclude logically. Use structured output."
     )
     
     prompt = ChatPromptTemplate.from_messages([
@@ -115,9 +114,8 @@ def generate_interaction(llm: ChatGoogleGenerativeAI, context: Dict, max_retries
         time.sleep(2)
         return result.model_dump()
     except Exception as e:
-        if "429" in str(e):
+        if "429" in str(e) or "rate_limit" in str(e).lower():
             print(f"    Rate limit hit. Breaking as requested. Exact error: {str(e)}")
-            # We raise the exception so the caller can handle the stop efficiently
             raise e
         else:
             raise e
@@ -128,11 +126,11 @@ def main():
     parser.add_argument("--output", type=str, default="learning_conversations.json", help="Output file")
     args = parser.parse_args()
 
-    if "GOOGLE_API_KEY" not in os.environ:
-        print("Error: GOOGLE_API_KEY not set.")
+    if "OPENAI_API_KEY" not in os.environ:
+        print("Error: OPENAI_API_KEY not set.")
         return
 
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.7)
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
     
     # Path handling for tasks2.csv or tasks.csv
     search_paths = [
@@ -169,7 +167,10 @@ def main():
             print(f"Warning: Could not load existing data: {e}")
 
     # Global AI Knowledge
-    preference_knowledge: Dict[str, PreferenceState] = {name: PreferenceState() for name in prefs_config.keys()}
+    preference_knowledge: Dict[str, PreferenceState] = {
+        name: PreferenceState(cycle_days=cfg['cycle_days']) 
+        for name, cfg in prefs_config.items()
+    }
     
     # Context and Threads
     active_threads: List[ConversationThread] = []
@@ -215,12 +216,11 @@ def main():
                     
                     # Check if the preference value was actually mentioned in the text
                     if actual_val.lower() in interaction_text:
-                        current_belief = p_state.beliefs.get(time_of_day)
-                        if current_belief != actual_val:
-                            p_state.beliefs[time_of_day] = actual_val
-                            p_state.days_consistent[time_of_day] = 1
+                        if p_state.belief != actual_val:
+                            p_state.belief = actual_val
+                            p_state.days_consistent = 1
                         else:
-                            p_state.days_consistent[time_of_day] += 1
+                            p_state.days_consistent += 1
 
 
 
@@ -262,6 +262,18 @@ def main():
         else:
             interaction_times = day_ref.get("planned_times", ["Morning", "Afternoon", "Evening"])
 
+        # Preferences for the whole day
+        active_prefs = []
+        for pref_name, p_cfg in prefs_config.items():
+            try:
+                start_date = datetime.datetime.strptime(p_cfg['start_date'], "%Y-%m-%d").date()
+            except (ValueError, KeyError):
+                start_date = base_date
+            if current_date < start_date: continue
+            
+            actual_val = p_cfg['options'][(i // p_cfg['cycle_days']) % len(p_cfg['options'])]
+            active_prefs.append((pref_name, actual_val))
+
         try:
             for time_idx, time_of_day in enumerate(interaction_times):
                 if interactions_done > time_idx:
@@ -272,42 +284,27 @@ def main():
                 thread_texts = [f"- {t.topic}" for t in active_threads if not t.resolved]
                 active_threads_str = "\n".join(thread_texts) if thread_texts else "None"
 
-                # Preferences logic
-                active_prefs = []
-                pref_time_map = {
-                    "Morning": ["Coffee", "Breakfast", "T-Shirt Color", "Shoes", "Watch", "Workout Style"],
-                    "Afternoon": ["Lunch"],
-                    "Evening": ["Dinner"],
-                    "Late Night": []
-                }
+                # Distribute all preferences for the day across available interactions
+                # We divide the active_prefs list across the interaction_times
+                num_times = len(interaction_times)
+                prefs_per_interaction = (len(active_prefs) + num_times - 1) // num_times
                 
-                potential_prefs = pref_time_map.get(time_of_day, [])
-                for pref_name in potential_prefs:
-                    if pref_name not in prefs_config: continue
-                    p_cfg = prefs_config[pref_name]
-                    
-                    try:
-                        start_date = datetime.datetime.strptime(p_cfg['start_date'], "%Y-%m-%d").date()
-                    except (ValueError, KeyError):
-                        start_date = base_date
-                        
-                    if current_date < start_date: continue
-                    
-                    actual_val = p_cfg['options'][(i // p_cfg['cycle_days']) % len(p_cfg['options'])]
-                    active_prefs.append((pref_name, actual_val))
+                # Preferences designated for this specific interaction
+                current_interaction_prefs = active_prefs[time_idx * prefs_per_interaction : (time_idx + 1) * prefs_per_interaction]
 
                 custom_guidelines = ""
                 human_context = ""
                 
-                for pref_name, actual_val in active_prefs:
+                # Guidelines and Ground Truth only for CURRENT interaction's designated prefs
+                for pref_name, actual_val in current_interaction_prefs:
                     p_state = preference_knowledge[pref_name]
-                    custom_guidelines += f"- Preference '{pref_name}' Knowledge: {p_state.get_status(time_of_day)}\n"
-                    human_context += f"- The User's actual {pref_name} preference today is {actual_val}.\n"
+                    custom_guidelines += f"- Preference '{pref_name}' Knowledge: {p_state.get_status()}\n"
+                    human_context += f"- [GROUND TRUTH] User's actual {pref_name} preference today: {actual_val}\n"
                 
                 if custom_guidelines:
-                    custom_guidelines = "Guidelines for Learning:\n" + custom_guidelines
+                    custom_guidelines = "Guidelines for Learning (Focus on ONLY these items in this interaction):\n" + custom_guidelines
                 else:
-                    custom_guidelines = "Focus on natural interaction exploring the preferences."
+                    custom_guidelines = "Focus on natural interaction. No specific new preference targets for this session."
 
                 pref_context = {
                     "time_of_day": time_of_day,
@@ -337,15 +334,14 @@ def main():
                                 active_threads.append(ConversationThread(new_topic))
                                 print(f"    New Thread: {new_topic}")
 
-                    for pref_name, actual_val in active_prefs:
+                    for pref_name, (topic_name, actual_val) in zip([p[0] for p in current_interaction_prefs], current_interaction_prefs):
                         p_state = preference_knowledge[pref_name]
                         if actual_val.lower() in interaction_text:
-                            current_belief = p_state.beliefs.get(time_of_day)
-                            if current_belief != actual_val:
-                                p_state.beliefs[time_of_day] = actual_val
-                                p_state.days_consistent[time_of_day] = 1
+                            if p_state.belief != actual_val:
+                                p_state.belief = actual_val
+                                p_state.days_consistent = 1
                             else:
-                                p_state.days_consistent[time_of_day] += 1
+                                p_state.days_consistent += 1
                 except Exception as e:
                     if "429" in str(e): raise e
                     print(f"    Error in interaction for {time_of_day}: {e}")

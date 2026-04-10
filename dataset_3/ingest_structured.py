@@ -5,15 +5,20 @@ from typing import Dict
 
 # Add memory/ to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "memory"))
-from structured_memory_pref import StructuredMemoryManagerPref
+from structured_memory import StructuredMemoryManager
 
 def main():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     json_path = os.path.join(base_dir, "learning_conversations.json")
     db_path = os.path.join(base_dir, "lifelong_memory.db")
 
+    # Wipe existing DB for a clean migration/re-extraction
+    if os.path.exists(db_path):
+        os.remove(db_path)
+        print(f"Removed old database at {db_path} for clean re-ingestion.")
+
     print(f"Initializing Structured Memory Manager with DB at {db_path}...")
-    manager = StructuredMemoryManagerPref(db_path=db_path)
+    manager = StructuredMemoryManager(db_path=db_path)
 
     if not os.path.exists(json_path):
         print(f"Error: Could not find {json_path}")

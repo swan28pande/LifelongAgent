@@ -48,6 +48,47 @@ class MemoryManager:
         if os.path.exists(self.summary_index_path):
             self.summary_vector_store = self._load_index(self.summary_index_path)
 
+    def delete_by_date(self, date_str: str):
+        """Removes all documents for a specific date from both vector indices."""
+        # 1. Main Vector Store Cleanup
+        if self.vector_store:
+            ids_to_delete = [
+                doc_id for doc_id, doc in self.vector_store.docstore._dict.items()
+                if doc.metadata.get("date") == date_str
+            ]
+            if ids_to_delete:
+                self.vector_store.delete(ids_to_delete)
+                self.vector_store.save_local(self.index_path)
+                print(f"Deleted {len(ids_to_delete)} documents for date {date_str} from main RAG.")
+
+        # 2. Summary Vector Store Cleanup (check week_start or date)
+        if self.summary_vector_store:
+            # We also check 'date' for summaries if they have it, or 'week_start' if it's a weekly summary starting then
+            ids_to_delete = [
+                doc_id for doc_id, doc in self.summary_vector_store.docstore._dict.items()
+                if doc.metadata.get("date") == date_str or doc.metadata.get("week_start") == date_str
+            ]
+            if ids_to_delete:
+                self.summary_vector_store.delete(ids_to_delete)
+                self.summary_vector_store.save_local(self.summary_index_path)
+                print(f"Deleted {len(ids_to_delete)} documents for date {date_str} from summary RAG.")
+
+    def delete_summary_by_identifier(self, identifier: str):
+        """Removes a summary from the FAISS index by its identifier metadata."""
+        if self.summary_vector_store is None:
+            return
+
+        # Find IDs of existing docs with this identifier
+        ids_to_delete = [
+            doc_id for doc_id, doc in self.summary_vector_store.docstore._dict.items()
+            if doc.metadata.get("identifier") == identifier
+        ]
+
+        if ids_to_delete:
+            self.summary_vector_store.delete(ids_to_delete)
+            self.summary_vector_store.save_local(self.summary_index_path)
+            print(f"Deleted {len(ids_to_delete)} old version(s) of summary '{identifier}' from RAG.")
+
     def _load_index(self, path: str) -> Optional[FAISS]:
         faiss_file = os.path.join(path, "index.faiss")
         if os.path.exists(faiss_file):
@@ -294,8 +335,6 @@ class MemoryManager:
                 print(f"Error summarizing week {monday}: {e}")
 
         print(f"Summary generation process complete. Results in {output_file}")
-
-        return self.query_hybrid(question, k=k_days)
 
     def _extract_analytics_params(self, query: str) -> Dict:
         """Extracts the entity to count and the date range from the query."""
