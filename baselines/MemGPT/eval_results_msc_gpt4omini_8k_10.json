@@ -1,0 +1,89 @@
+{
+  "aggregate": {
+    "n": 10,
+    "accuracy": 0.8,
+    "rouge_l_recall": 0.8062
+  },
+  "results": [
+    {
+      "id": 0,
+      "question": "Hey, remember that time we talked about music? What was the artist you mentioned you could get into?",
+      "ground_truth": "Taylor Swift!",
+      "prediction": "Yes, you mentioned you could get into Taylor Swift! Do you still enjoy her music?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 1,
+      "question": "Hey, remember that time we talked about our jobs and expenses? What was that one thing you said you did to save money?",
+      "ground_truth": "I eat a fresh and raw diet to save on groceries.",
+      "prediction": "You mentioned that you were walking 3 miles to work every day to save money. That can definitely help cut down on transportation costs! You also offered to show me how to coupon to help save money when going back to school. That sounds like a great plan!",
+      "accuracy": 0,
+      "rouge_l_recall": 0.2727
+    },
+    {
+      "id": 2,
+      "question": "Hey, remember that time we talked about our work lives? What was that field you said you used to work in?",
+      "ground_truth": "I used to work in the human services field.",
+      "prediction": "Yes, you mentioned that you used to work in the human services field. If I recall correctly, you also work as a stunt double now. How has the transition been for you?",
+      "accuracy": 1,
+      "rouge_l_recall": 0.8889
+    },
+    {
+      "id": 3,
+      "question": "Hey, remember that time we talked about our studies and working part-time? What was the fast food place you said you're working at?",
+      "ground_truth": "Burger King!",
+      "prediction": "You mentioned you work at Burger King. How has it been going for you lately?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 4,
+      "question": "Hey, remember that time we talked about our favorite ways to relax? What was the distance you mentioned you liked to walk for a small workout?",
+      "ground_truth": "Three miles!",
+      "prediction": "Yes, you mentioned that you enjoy a three-mile walk for a small workout. It's a great way to stay active! Would you like to share more about your walking routines or anything else?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 5,
+      "question": "Hey, remember that time we talked about our pets? What kind of pet do you have?",
+      "ground_truth": "I have a cat.",
+      "prediction": "You mentioned that you have a bird who loves cheeseburgers, which sounds adorable! I don't have any pets myself, but I love hearing about them. Is there anything new or exciting with your bird lately?",
+      "accuracy": 0,
+      "rouge_l_recall": 0.5
+    },
+    {
+      "id": 6,
+      "question": "Hey, remember that time we talked about our favorite movies? What was yours?",
+      "ground_truth": "Clueless!",
+      "prediction": "Yes, I remember! My favorite movie is \"Clueless.\" It's a classic! How about you? I know you love \"Friday,\" but do you have any other favorites?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 7,
+      "question": "Hey, remember that time we talked about your pet? What kind of animal is it?",
+      "ground_truth": "It's a cow!",
+      "prediction": "Yes, I remember! You have a pet cow. You mentioned that she was sick but is now doing well after receiving treatment. How is she doing now?",
+      "accuracy": 1,
+      "rouge_l_recall": 0.5
+    },
+    {
+      "id": 8,
+      "question": "Hey, remember that time we talked about your hobbies? How old were you when you first learned to play guitar?",
+      "ground_truth": "I was three!",
+      "prediction": "I learned to play guitar when I was three years old! It seems like we both have a love for music. How's your guitar playing going?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 9,
+      "question": "Hey, remember that time we talked about our post-retirement plans? What did I tell you I wanted to learn in my free time?",
+      "ground_truth": "You mentioned you'd like to go to culinary school!",
+      "prediction": "You mentioned that after retirement, you would like to go to culinary school and that you love to cook for your grandkids. You also planned to travel more. Is there anything specific you want to focus on as you prepare for that?",
+      "accuracy": 1,
+      "rouge_l_recall": 0.9
+    }
+  ]
+}

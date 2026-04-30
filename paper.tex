@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage{neurips_2026}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote. 
+\title{Preferences Change: Rethinking Memory in Personal AI Agents}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{%
+  Anonymous Author(s) \\
+  Affiliation \\
+  Address \\
+  \texttt{email@example.edu} \\
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+Personal AI agents must maintain accurate, long-term models of their users to provide relevant and consistent assistance. Existing memory architectures treat user preferences as static facts, storing only the current state and silently overwriting prior values when preferences change. This design fails in real-world settings, where preferences evolve over time. To capture temporal patterns in preferences, we present \textbf{TemporalMem}, a hybrid memory architecture combining a FAISS vector store for conversations and hierarchical summaries with a SQL database that records every preference state with a timestamp, preserving the full temporal evolution of user behavior. An agentic workflow queries this memory to surface preference shifts and habit patterns. We evaluate TemporalMem on a synthetic long-term conversation dataset and show that it successfully tracks preference drift that existing approaches cannot recover.
+\end{abstract}
+
+
+\section{Introduction}
+
+As large language models become an integral part of everyday tasks, personal AI agents are increasingly expected to remember user routines and preferences. People have preferences for everything from clothes and food to movies. Even though these preferences may look static over a short time window, they do shift and evolve. For example, a person who prefers espresso for several months might switch to an americano, then shift back again. For a personal assistant to remain relevant, it must go beyond retrieving past conversations and understand how preferences \textit{change over time}.
+
+Current memory systems fall short of this goal. MemoryBank [1] and similar vector-based stores index conversation history but lack mechanisms to identify patterns in preferences. Systems like MemGPT [2] maintain curated user facts but overwrite them in place, discarding prior states. Summarization-based approaches [3] compress history into a fixed-size memory, making earlier preferences irrecoverable as new information accumulates.
+
+The core problem is that these systems treat preference as a single mutable value rather than a time-indexed history. When a user's breakfast preference shifts from toast to smoothies, a well-designed agent should not merely update its preference memory but also store \textit{when} the change occurred and reason about the trajectory.
+
+We address this gap with \textbf{TemporalMem}, a hybrid memory architecture designed to capture temporal changes in preferences. TemporalMem extracts preferences from conversations and stores them with timestamps in a structured relational database, from which we construct hierarchical summaries that capture temporal patterns. A FAISS vector store indexes these summaries and raw conversations to handle open-ended semantic queries. Together, these components form a lifelong memory system that treats preference evolution as a first-class concern.
+
+\noindent\textbf{Contributions.} In summary, this paper makes the following contributions:
+\begin{itemize}
+    \item A hybrid memory architecture combining a timestamped SQL preference store with a FAISS vector index, enabling temporal queries over the full history of user preferences.
+    \item A hierarchical summarization scheme (daily $\rightarrow$ weekly $\rightarrow$ monthly $\rightarrow$ lifetime) that compresses long conversation histories while preserving preference evolution.
+    \item An agentic SQL workflow that generates and executes targeted queries over the structured preference history to surface behavioral trends and preference drift.
+    \item A synthetic long-term conversation dataset with ground-truth preference changes, designed to evaluate how well personal AI agents capture temporal patterns in preferences.
+\end{itemize}
+
+
+\section{TemporalMem}
+
+TemporalMem is a hybrid memory architecture built around two storage layers and a multi-stage insight generation pipeline. Figure~\ref{fig:architecture} gives an overview. At ingestion time, daily conversation logs are processed in parallel: raw text is embedded and indexed in a FAISS vector store for semantic retrieval, while an LLM-based extraction agent identifies discrete preferences and stores them with a timestamp and metadata in a SQLite relational database. The structured layer preserves the full temporal history of every preference state. No value is overwritten or discarded. An offline insight pipeline then reads this history to generate a hierarchy of summaries and trajectories for each entity, such as food, and writes them back to the FAISS vector store for richer retrieval.
+
+\subsection{Dual-Layer Memory Storage}
+
+TemporalMem maintains two complementary stores. The \textbf{unstructured store} (FAISS) indexes raw conversation embeddings and hierarchical summaries using \texttt{nomic-embed-text-v1}. This embedder has a context window of 8,192 tokens, which can roughly accommodate 500--800 lines of conversational text, sufficiently larger than the chunks we store, enabling semantic similarity search over episodic content. The \textbf{structured store} (SQLite) holds a \texttt{preferences} table with columns \texttt{(entity, preference, source\_date)}, where \texttt{entity} is a broad category (e.g., \textit{coffee}), \texttt{preference} is the specific choice (e.g., \textit{espresso}), and \texttt{source\_date} is the date of the conversation from which the preference was extracted. Each extraction is appended as a new row rather than overwriting an existing one, so the database naturally accumulates a time-indexed log of preference states, which helps in injecting temporal information during the summarization phase.
+
+
+\subsection{Preference Extraction}
+
+During data ingestion into the SQL table, each day's conversation is passed to an LLM extraction agent, which identifies preference-bearing statements and transforms them into \texttt{(entity, preference)} pairs. Since the same entity can be referenced differently across conversations — for example, \textit{shoes}, \textit{boots}, and \textit{tennis shoes} — storing each variant under a different key would fragment the preference history. To address this, TemporalMem runs a one-time normalization step at the start of each insight generation run. During this step, all unique \texttt{(entity, preference)} pairs are extracted from the database and sent to an LLM, which maps every raw entity to a canonical form and flags noise values (vague sentiments such as \textit{``comfortable''} or \textit{``good''}) for removal. This normalization is applied after every preference extraction, ensuring that the summarization process operates on clean, consistent entity labels.
+
+
+\subsection{Hierarchical Summarization}
+
+The insight generator reads preference sequences from SQLite and constructs summaries at four temporal granularities:
+
+\begin{enumerate}
+    \item \textbf{Weekly:} For each week, preferences are assembled into a chronological sequence per entity (e.g., \texttt{[coffee] espresso(Mar 01) $\to$ latte(Mar 08)}). An LLM interprets these sequences alongside the raw conversations from which they were derived, identifying within-week patterns such as mid-week shifts or stable runs, with conversational context explaining the reasons behind them.
+    \item \textbf{Monthly:} The full month's day-by-day sequences are combined with the corresponding weekly narrative summaries and passed to the LLM. The sequences serve as ground truth for what happened; the weekly summaries provide context for interpreting dominant runs, periodic oscillations, or gradual drift across weeks.
+    \item \textbf{Yearly:} Full-year sequences and monthly narrative summaries are combined into a year-level summary. The sequences establish the multi-month preference arcs; the monthly summaries add context for understanding why major shifts occurred.
+    \item \textbf{Lifetime:} All yearly summaries are synthesized into a single cumulative summary that captures the grand narrative of the user's preference evolution to date.
+\end{enumerate}
+
+Each summary is written back to a dedicated FAISS summary index alongside its temporal metadata, allowing the agent to retrieve the appropriate summary level based on query scope.
+
+\subsection{Preference Trajectories and Routines}
+
+Beyond periodic summaries, TemporalMem generates two additional insight types. \textbf{Preference trajectories} analyze the complete history of each canonical entity (e.g., \textit{coffee}, \textit{clothing color}) to trace its evolution, identify dominant runs, detect cycles or gradual drift, and predict future states. Trajectories are updated incrementally: when new data arrives, the existing trajectory analysis is provided to the LLM alongside the updated sequence, ensuring continuity rather than recomputation from scratch. \textbf{Routine fingerprints} synthesize preferences across entities and times of day, combining signals such as morning coffee choices and clothing selections into a multi-preference behavioral profile of the user's daily rhythms.
+
+
+
+\section{Experiments}
+
+\section{Results}
+\label{results}
+
+
+
+\section{Discussion}
+
+
+\section{Related Work}
+
+\textbf{Long-term Memory: } Several lines of work address long-term memory in LLM-based agents.
+MemoryBank [1] stores conversations in a vector database alongside daily event summaries. However, the decay mechanism used to manage memory discards old preference states rather than archiving them, making it impossible to recover what a user preferred at an earlier point in time.
+MemGPT [2] treats the LLM context window as main memory and pages older content to external storage via function calls, while keeping curated user facts in an in-context working memory. However, during turns instead of updating, these curated facts are overwritten in place when they change loosing the previous facts extracted.
+Wang et al. [3] propose recursive summarization, where each new dialogue chunk is merged with the prior summary. Since the output memory is capped at 20 sentences, the compression becomes lossy as summarization process continues.
+
+\textbf{Preference Learning: } MR.Rec [4] builds RAG system combining global domain knowledge with user-specific preferences. However, the memory reflects only the user's current preference state and is updated in place, with no history of how preferences evolved over time.
+Our architecture addresses this gap by storing every preference extraction with a \texttt{source\_date} in a structured SQL database and constructing a hierarchical RAG summary that captures temporal patterns.
+
+
+\section{Conclusion}
+
+
+\begin{ack}
+Acknowledgments will be added in final version.
+\end{ack}
+
+\section*{References}
+
+\small
+
+[1] Zhong, W., Guo, L., Gao, Q., Ye, H., \& Wang, Y. (2023). MemoryBank: Enhancing Large Language Models with Long-Term Memory. \textit{arXiv preprint arXiv:2305.10250}.
+\label{zhong2023memorybank}
+
+[2] Packer, C., Wooders, S., Lin, K., Fang, V., Patil, S. G., Stoica, I., \& Gonzalez, J. E. (2024). MemGPT: Towards LLMs as Operating Systems. \textit{arXiv preprint arXiv:2310.08560}.
+\label{packer2024memgpt}
+
+[3] Wang, Q., Fu, Y., Cao, Y., Wang, S., Tian, Z., \& Ding, L. (2024). Recursively Summarizing Enables Long-Term Dialogue Memory in Large Language Models. \textit{Neurocomputing (arXiv:2308.15022)}.
+\label{wang2024recursively}
+
+[4] Huang, J., Zou, X., Xia, L., \& Li, Q. (2024). MR.Rec: Synergizing Memory and Reasoning for Personalized Recommendation Assistant with LLMs. \textit{arXiv preprint}.
+\label{huang2024mrrec}
+
+
+\end{document}

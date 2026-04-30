@@ -1,0 +1,335 @@
+{
+  "user_1": {
+    "facts": {
+      "name": "Jordan",
+      "age": 28,
+      "job": "graphic designer at a small agency",
+      "city": "Austin, Texas",
+      "lives_with": "roommate named Sam",
+      "hobby": "rock climbing",
+      "diet": "vegetarian"
+    },
+    "all_facts": [
+      {
+        "id": "city",
+        "introduced_day": 1,
+        "must_state_day": 2,
+        "fact": "Jordan lives in Austin, Texas.",
+        "keywords": [
+          "austin",
+          "texas"
+        ]
+      },
+      {
+        "id": "job",
+        "introduced_day": 1,
+        "must_state_day": 2,
+        "fact": "Jordan works as a graphic designer at a small agency.",
+        "keywords": [
+          "graphic designer",
+          "agency",
+          "design"
+        ]
+      },
+      {
+        "id": "diet",
+        "introduced_day": 1,
+        "must_state_day": 3,
+        "fact": "Jordan is vegetarian.",
+        "keywords": [
+          "vegetarian",
+          "vegan",
+          "no meat",
+          "plant"
+        ]
+      },
+      {
+        "id": "lives_with",
+        "introduced_day": 1,
+        "must_state_day": 2,
+        "fact": "Jordan lives with a roommate named Sam.",
+        "keywords": [
+          "sam",
+          "roommate"
+        ]
+      },
+      {
+        "id": "age",
+        "introduced_day": 1,
+        "must_state_day": 4,
+        "fact": "Jordan is 28 years old.",
+        "keywords": [
+          "28",
+          "twenty-eight",
+          "twenties"
+        ]
+      },
+      {
+        "id": "hobby",
+        "introduced_day": 1,
+        "must_state_day": 2,
+        "fact": "Jordan's main hobby is rock climbing.",
+        "keywords": [
+          "climbing",
+          "boulder",
+          "gym",
+          "routes"
+        ]
+      },
+      {
+        "id": "deadline",
+        "introduced_day": 1,
+        "must_state_day": 1,
+        "fact": "Jordan has a big client presentation deadline on March 10.",
+        "keywords": [
+          "presentation",
+          "deadline",
+          "march 10",
+          "client"
+        ]
+      },
+      {
+        "id": "puppy_coming",
+        "introduced_day": 3,
+        "must_state_day": 3,
+        "fact": "Jordan's roommate Sam is getting a puppy next week.",
+        "keywords": [
+          "puppy",
+          "dog",
+          "sam",
+          "getting"
+        ]
+      },
+      {
+        "id": "draft_feedback",
+        "introduced_day": 5,
+        "must_state_day": 5,
+        "fact": "Jordan received positive client feedback on a draft design.",
+        "keywords": [
+          "feedback",
+          "draft",
+          "positive",
+          "client"
+        ]
+      },
+      {
+        "id": "presentation_done",
+        "introduced_day": 7,
+        "must_state_day": 7,
+        "fact": "Jordan finished the client presentation and it went really well.",
+        "keywords": [
+          "presentation",
+          "went well",
+          "finished",
+          "done"
+        ]
+      },
+      {
+        "id": "puppy_arrived",
+        "introduced_day": 9,
+        "must_state_day": 9,
+        "fact": "Sam's puppy, a golden retriever named Mango, arrived home.",
+        "keywords": [
+          "mango",
+          "golden retriever",
+          "arrived",
+          "home"
+        ]
+      },
+      {
+        "id": "competition_considering",
+        "introduced_day": 11,
+        "must_state_day": 11,
+        "fact": "Jordan is considering signing up for a beginner climbing competition in April.",
+        "keywords": [
+          "competition",
+          "april",
+          "signing up",
+          "considering"
+        ]
+      },
+      {
+        "id": "competition_registered",
+        "introduced_day": 13,
+        "must_state_day": 13,
+        "fact": "Jordan registered for the April climbing competition.",
+        "keywords": [
+          "registered",
+          "competition",
+          "signed up"
+        ]
+      },
+      {
+        "id": "promotion_offered",
+        "introduced_day": 15,
+        "must_state_day": 15,
+        "fact": "Jordan's agency offered them a senior designer role.",
+        "keywords": [
+          "senior",
+          "promotion",
+          "offered",
+          "role"
+        ]
+      },
+      {
+        "id": "promotion_accepted",
+        "introduced_day": 17,
+        "must_state_day": 17,
+        "fact": "Jordan accepted the senior designer promotion.",
+        "keywords": [
+          "accepted",
+          "senior",
+          "promotion"
+        ]
+      },
+      {
+        "id": "trip_planning",
+        "introduced_day": 19,
+        "must_state_day": 19,
+        "fact": "Jordan is planning a weekend trip to Barton Springs with Sam and Mango.",
+        "keywords": [
+          "barton springs",
+          "trip",
+          "weekend"
+        ]
+      },
+      {
+        "id": "trip_done",
+        "introduced_day": 21,
+        "must_state_day": 21,
+        "fact": "Jordan went to Barton Springs \u2014 it was relaxing and Mango loved the water.",
+        "keywords": [
+          "barton springs",
+          "relaxing",
+          "mango",
+          "water"
+        ]
+      }
+    ],
+    "patterns": {
+      "coffee": {
+        "difficulty": "simple",
+        "description": "Strict 7-day cycle: oat milk latte for 7 days, then black coffee for 7 days, repeating.",
+        "schedule": {
+          "1": "oat milk latte",
+          "2": "oat milk latte",
+          "3": "oat milk latte",
+          "4": "oat milk latte",
+          "5": "oat milk latte",
+          "6": "oat milk latte",
+          "7": "oat milk latte",
+          "8": "black coffee",
+          "9": "black coffee",
+          "10": "black coffee",
+          "11": "black coffee",
+          "12": "black coffee",
+          "13": "black coffee",
+          "14": "black coffee",
+          "15": "oat milk latte",
+          "16": "oat milk latte",
+          "17": "oat milk latte",
+          "18": "oat milk latte",
+          "19": "oat milk latte",
+          "20": "oat milk latte",
+          "21": "oat milk latte",
+          "22": "black coffee",
+          "23": "black coffee",
+          "24": "black coffee",
+          "25": "black coffee",
+          "26": "black coffee",
+          "27": "black coffee",
+          "28": "black coffee",
+          "29": "oat milk latte",
+          "30": "oat milk latte",
+          "31": "oat milk latte",
+          "32": "oat milk latte",
+          "33": "oat milk latte",
+          "34": "oat milk latte",
+          "35": "oat milk latte"
+        }
+      },
+      "clothing": {
+        "difficulty": "mid",
+        "description": "Alternates every 3 days: fitted t-shirt for 3 days, then oversized hoodie for 3 days, repeating.",
+        "schedule": {
+          "1": "fitted t-shirt",
+          "2": "fitted t-shirt",
+          "3": "fitted t-shirt",
+          "4": "oversized hoodie",
+          "5": "oversized hoodie",
+          "6": "oversized hoodie",
+          "7": "fitted t-shirt",
+          "8": "fitted t-shirt",
+          "9": "fitted t-shirt",
+          "10": "oversized hoodie",
+          "11": "oversized hoodie",
+          "12": "oversized hoodie",
+          "13": "fitted t-shirt",
+          "14": "fitted t-shirt",
+          "15": "fitted t-shirt",
+          "16": "oversized hoodie",
+          "17": "oversized hoodie",
+          "18": "oversized hoodie",
+          "19": "fitted t-shirt",
+          "20": "fitted t-shirt",
+          "21": "fitted t-shirt",
+          "22": "oversized hoodie",
+          "23": "oversized hoodie",
+          "24": "oversized hoodie",
+          "25": "fitted t-shirt",
+          "26": "fitted t-shirt",
+          "27": "fitted t-shirt",
+          "28": "oversized hoodie",
+          "29": "oversized hoodie",
+          "30": "oversized hoodie",
+          "31": "fitted t-shirt",
+          "32": "fitted t-shirt",
+          "33": "fitted t-shirt",
+          "34": "oversized hoodie",
+          "35": "oversized hoodie"
+        }
+      },
+      "exercise": {
+        "difficulty": "difficult",
+        "description": "Day-of-week rule: Mon/Wed/Fri = morning yoga, Tue/Thu = evening run, Sat = climbing gym, Sun = rest day.",
+        "schedule": {
+          "1": "rest day",
+          "2": "morning yoga",
+          "3": "evening run",
+          "4": "morning yoga",
+          "5": "evening run",
+          "6": "morning yoga",
+          "7": "climbing gym",
+          "8": "rest day",
+          "9": "morning yoga",
+          "10": "evening run",
+          "11": "morning yoga",
+          "12": "evening run",
+          "13": "morning yoga",
+          "14": "climbing gym",
+          "15": "rest day",
+          "16": "morning yoga",
+          "17": "evening run",
+          "18": "morning yoga",
+          "19": "evening run",
+          "20": "morning yoga",
+          "21": "climbing gym",
+          "22": "rest day",
+          "23": "morning yoga",
+          "24": "evening run",
+          "25": "morning yoga",
+          "26": "evening run",
+          "27": "morning yoga",
+          "28": "climbing gym",
+          "29": "rest day",
+          "30": "morning yoga",
+          "31": "evening run",
+          "32": "morning yoga",
+          "33": "evening run",
+          "34": "morning yoga",
+          "35": "climbing gym"
+        }
+      }
+    }
+  }
+}

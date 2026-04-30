@@ -194,6 +194,26 @@ class MemoryManager:
             
         return datetime.now()
 
+    def get_conversations_by_date_range(self, start_date: str, end_date: str) -> List[Document]:
+        """Returns all conversation documents whose date falls within [start_date, end_date]."""
+        if self.vector_store is None:
+            return []
+        start_dt = datetime.strptime(start_date, "%Y-%m-%d")
+        end_dt = datetime.strptime(end_date, "%Y-%m-%d")
+        results = []
+        for doc in self.vector_store.docstore._dict.values():
+            date_str = doc.metadata.get("date")
+            if not date_str:
+                continue
+            try:
+                doc_dt = datetime.strptime(date_str, "%Y-%m-%d")
+                if start_dt <= doc_dt <= end_dt:
+                    results.append(doc)
+            except ValueError:
+                continue
+        results.sort(key=lambda d: d.metadata.get("date", ""))
+        return results
+
     def query(self, question: str, n_results: int = 3) -> List[Document]:
         if self.vector_store is None:
             return []

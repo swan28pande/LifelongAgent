@@ -1,0 +1,1335 @@
+{
+  "summary": {
+    "naive_rag": {
+      "overall": 0.15885454365531676,
+      "by_difficulty": {
+        "simple": 0.34712257703569,
+        "mid": 0.024948024948024946,
+        "difficult": 0.007168458781362007
+      },
+      "by_type": {
+        "factual": 0.17777777777777776,
+        "factual_evolving": 0.4185588672239555,
+        "recall": 0.05555555555555555,
+        "pattern_id": 0.2580943226104517,
+        "prediction": 0.2222222222222222,
+        "transition": 0.0
+      },
+      "n": 71
+    },
+    "rsum": {
+      "overall": 0.21230418289211483,
+      "by_difficulty": {
+        "simple": 0.42811428484983305,
+        "mid": 0.06043956043956044,
+        "difficult": 0.03764221738077947
+      },
+      "by_type": {
+        "factual": 0.7316239316239316,
+        "factual_evolving": 0.4366439401028808,
+        "recall": 0.09523809523809523,
+        "pattern_id": 0.30438842203548083,
+        "prediction": 0.2469135802469136,
+        "transition": 0.0
+      },
+      "n": 71
+    },
+    "memory_v2": {
+      "overall": 0.15892498691721518,
+      "by_difficulty": {
+        "simple": 0.275045988512289,
+        "mid": 0.1204433851492675,
+        "difficult": 0.04412905260373483
+      },
+      "by_type": {
+        "factual": 0.29479253689780005,
+        "factual_evolving": 0.3376985363913456,
+        "recall": 0.15729416110240482,
+        "pattern_id": 0.14019873532068652,
+        "prediction": 0.04925609042663975,
+        "transition": 0.0639031356520336
+      },
+      "n": 71
+    }
+  },
+  "records": [
+    {
+      "question": "What does Jordan do for work?",
+      "answer": "graphic designer at a small agency",
+      "difficulty": "simple",
+      "type": "factual",
+      "naive_rag": {
+        "response": "Jordan is a senior designer.",
+        "score": 0.22222222222222224
+      },
+      "rsum": {
+        "response": "Jordan works as a graphic designer at a small agency.",
+        "score": 0.7692307692307693
+      },
+      "memory_v2": {
+        "response": "Jordan is a graphic designer and recently embraced a new role as a senior designer at his agency.",
+        "score": 0.4210526315789473
+      }
+    },
+    {
+      "question": "Where does Jordan live?",
+      "answer": "Austin, Texas",
+      "difficulty": "simple",
+      "type": "factual",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Austin, Texas.",
+        "score": 1.0
+      },
+      "memory_v2": {
+        "response": "Jordan lives in Austin, Texas.",
+        "score": 0.5714285714285715
+      }
+    },
+    {
+      "question": "Who does Jordan live with?",
+      "answer": "roommate named Sam",
+      "difficulty": "simple",
+      "type": "factual",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan lives with a roommate named Sam.",
+        "score": 0.6666666666666666
+      },
+      "memory_v2": {
+        "response": "Jordan lives with his roommate, Sam. They recently welcomed a puppy named Mango into their home.",
+        "score": 0.33333333333333337
+      }
+    },
+    {
+      "question": "What is Jordan's main hobby?",
+      "answer": "rock climbing",
+      "difficulty": "simple",
+      "type": "factual",
+      "naive_rag": {
+        "response": "Climbing.",
+        "score": 0.6666666666666666
+      },
+      "rsum": {
+        "response": "Rock climbing.",
+        "score": 1.0
+      },
+      "memory_v2": {
+        "response": "Jordan's main hobby is rock climbing, which he has been doing for about four years. He also enjoys yoga and running, contributing to his active lifestyle.",
+        "score": 0.14814814814814814
+      }
+    },
+    {
+      "question": "What are Jordan's dietary preferences?",
+      "answer": "vegetarian",
+      "difficulty": "simple",
+      "type": "factual",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan enjoys vegetarian meals, particularly stir-fries and veggie tacos.",
+        "score": 0.2222222222222222
+      },
+      "memory_v2": {
+        "response": "Jordan enjoys oat milk lattes and has a preference for solid and neutral clothing colors. While his specific dietary preferences beyond coffee haven't been mentioned, his choice of oat milk suggests he may prefer plant-based options. If you'd like to share more about your dietary preferences or any specific foods you enjoy, I can help with that too!",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: city?",
+      "answer": "Jordan lives in Austin, Texas.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan lives in Austin, Texas.",
+        "score": 1.0
+      },
+      "memory_v2": {
+        "response": "Jordan lives in Austin, Texas.",
+        "score": 1.0
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: job?",
+      "answer": "Jordan works as a graphic designer at a small agency.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan is a senior designer and is experiencing a significant adjustment due to increased responsibilities.",
+        "score": 0.2
+      },
+      "rsum": {
+        "response": "Jordan works as a graphic designer at a small agency and has recently accepted a senior designer role, which comes with increased responsibilities and expectations.",
+        "score": 0.5714285714285715
+      },
+      "memory_v2": {
+        "response": "Jordan is a 28-year-old graphic designer living in Austin, Texas. He recently embraced a new role as a senior designer at his agency, which has brought a significant adjustment and increased responsibilities for him. Although it's been a learning curve, he is enjoying the challenge of his new position.",
+        "score": 0.24
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: diet?",
+      "answer": "Jordan is vegetarian.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan enjoys oat milk lattes. No other dietary information is available.",
+        "score": 0.28571428571428575
+      },
+      "rsum": {
+        "response": "Jordan enjoys black coffee brewed with a French press and loves oat milk lattes. They cook vegetarian meals, particularly stir-fries and veggie tacos.",
+        "score": 0.1739130434782609
+      },
+      "memory_v2": {
+        "response": "From what you've shared, Jordan enjoys oat milk lattes and has a busy lifestyle that includes balancing work and hobbies. While specific details about his overall diet aren't provided, he seems to appreciate creamy beverages and prefers packing sandwiches and snacks for picnics, indicating a casual approach to meals. If you have more specific dietary habits in mind, feel free to share!",
+        "score": 0.03389830508474576
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: lives with?",
+      "answer": "Jordan lives with a roommate named Sam.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan lives with a puppy named Mango.",
+        "score": 0.6666666666666666
+      },
+      "rsum": {
+        "response": "Jordan lives with a roommate named Sam.",
+        "score": 1.0
+      },
+      "memory_v2": {
+        "response": "Jordan lives with his roommate, Sam, and they recently welcomed a puppy named Mango into their home.",
+        "score": 0.5714285714285715
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: age?",
+      "answer": "Jordan is 28 years old.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan is 28 years old.",
+        "score": 1.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan is 28 years old.",
+        "score": 1.0
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: hobby?",
+      "answer": "Jordan's main hobby is rock climbing.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan's hobby is climbing.",
+        "score": 0.8
+      },
+      "rsum": {
+        "response": "Jordan's main hobby is rock climbing, which they have been doing for about four years and try to go at least once a week.",
+        "score": 0.42857142857142855
+      },
+      "memory_v2": {
+        "response": "Jordan enjoys rock climbing, which he has been doing for about four years. He also balances his busy lifestyle with hobbies like yoga and running. Additionally, he recently welcomed a puppy named Mango into his life, which adds both joy and challenges to his daily routine.",
+        "score": 0.16326530612244897
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: deadline?",
+      "answer": "Jordan has a big client presentation deadline on March 10.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan's client presentation is due on March 10, 2026.",
+        "score": 0.6666666666666666
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan had a big client presentation deadline on March 10, 2026, which he was preparing for. He mentioned that the preparation process was intense leading up to that date.",
+        "score": 0.4444444444444444
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy coming?",
+      "answer": "Jordan's roommate Sam is getting a puppy next week.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan is excited about the puppy coming and plans to help Sam train it. The puppy, named Mango, arrived and is energetic.",
+        "score": 0.30769230769230765
+      },
+      "rsum": {
+        "response": "Jordan's roommate, Sam, recently got a puppy named Mango. Jordan finds it fun to watch Mango adjust to her new home and plans to help with training using positive reinforcement techniques.",
+        "score": 0.2162162162162162
+      },
+      "memory_v2": {
+        "response": "Jordan is excited about the arrival of Sam's puppy, Mango, which he welcomed into his life in March 2026. He has been thinking about helping Sam train the puppy, as he has some experience from helping a friend with her dog. Jordan seems to be looking forward to the new dynamic that having a puppy will bring to their home, anticipating both joy and challenges.",
+        "score": 0.11940298507462686
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: draft feedback?",
+      "answer": "Jordan received positive client feedback on a draft design.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan received positive feedback on a draft design from a client.",
+        "score": 0.9411764705882353
+      },
+      "rsum": {
+        "response": "Jordan received encouraging feedback on a draft design shared during a client meeting, boosting their confidence and motivation.",
+        "score": 0.608695652173913
+      },
+      "memory_v2": {
+        "response": "Jordan received positive feedback on a draft design he shared with a client, which boosted his confidence and motivation. He mentioned feeling ready for his client presentation on March 10, and the positive feedback helped him feel good about his work. He was also tweaking the design based on the feedback he had received, indicating that he values client input and strives to improve his work.",
+        "score": 0.2424242424242424
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: presentation done?",
+      "answer": "Jordan finished the client presentation and it went really well.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan received encouraging feedback on a draft design shared during a client meeting.",
+        "score": 0.2105263157894737
+      },
+      "memory_v2": {
+        "response": "Jordan successfully completed his client presentation on March 10, 2026. He had been preparing for it for a while, and he mentioned feeling a bit stressed but was confident he was getting there. After the presentation, he celebrated its success, indicating that it went well.",
+        "score": 0.24489795918367344
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy arrived?",
+      "answer": "Sam's puppy, a golden retriever named Mango, arrived home.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan has a puppy named Mango, who is energetic and settling in well.",
+        "score": 0.3157894736842105
+      },
+      "rsum": {
+        "response": "Jordan's roommate Sam recently got a puppy named Mango, and Jordan finds it fun to watch Mango adjust to her new home.",
+        "score": 0.35714285714285715
+      },
+      "memory_v2": {
+        "response": "Jordan's roommate, Sam, welcomed a puppy named Mango into their home on March 11, 2026. Jordan has been excited about the new addition but also finds Mango to be a handful, describing him as a little tornado with a lot of energy. He plans to help Sam train the puppy and has been adjusting to having Mango around, which has brought both joy and challenges to their living situation.",
+        "score": 0.14492753623188404
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition considering?",
+      "answer": "Jordan is considering signing up for a beginner climbing competition in April.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan is preparing for a climbing competition in April and is focusing on technique and endurance during training.",
+        "score": 0.5384615384615385
+      },
+      "rsum": {
+        "response": "Jordan is preparing for a climbing competition in April, focusing on improving their technique and stamina.",
+        "score": 0.56
+      },
+      "memory_v2": {
+        "response": "Jordan is preparing for a climbing competition in April. He's been feeling a bit nervous about it, especially since he thinks the other competitors seem really skilled. To prepare, he's been focusing on his technique and endurance, trying to build his stamina. He's also been squeezing in practice sessions on the weekends, even though fitting in training time has been challenging. Overall, he's committed to preparing for the competition while balancing his busy lifestyle.",
+        "score": 0.17721518987341772
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition registered?",
+      "answer": "Jordan registered for the April climbing competition.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan is preparing for a climbing competition in April.",
+        "score": 0.7142857142857143
+      },
+      "memory_v2": {
+        "response": "Jordan is preparing for a climbing competition that is scheduled for April 2026. He has been training for it, although he's mentioned it's been a bit tough to fit in time for training due to his busy schedule.",
+        "score": 0.2380952380952381
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion offered?",
+      "answer": "Jordan's agency offered them a senior designer role.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan has accepted a job offer for a senior designer role at their agency.",
+        "score": 0.631578947368421
+      },
+      "memory_v2": {
+        "response": "Jordan recently accepted a promotion to a senior designer role at his agency. He mentioned that transitioning into this new position has been a bit of a learning curve, but he is enjoying the challenge it brings.",
+        "score": 0.25641025641025644
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion accepted?",
+      "answer": "Jordan accepted the senior designer promotion.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan has accepted a promotion to senior designer.",
+        "score": 0.8333333333333333
+      },
+      "rsum": {
+        "response": "Jordan has accepted a job offer for a senior designer role at their agency.",
+        "score": 0.47058823529411764
+      },
+      "memory_v2": {
+        "response": "Jordan accepted a promotion to a senior designer role not long ago. He mentioned that it's been a big change and that he's enjoying the challenge, although he\u2019s experiencing a bit of a learning curve with the new responsibilities.",
+        "score": 0.27777777777777773
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip planning?",
+      "answer": "Jordan is planning a weekend trip to Barton Springs with Sam and Mango.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "Jordan is planning a trip to Barton Springs and hopes to relax by the water and have a picnic.",
+        "score": 0.56
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan is planning a relaxing weekend trip to Barton Springs with his roommate Sam and their puppy Mango. He mentioned that they are hoping to relax by the water and maybe have a little picnic. For the picnic, he plans to pack sandwiches, snacks, and drinks, and he recently expressed his enjoyment of oat milk lattes, which he might include as part of his drinks.",
+        "score": 0.3235294117647059
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip done?",
+      "answer": "Jordan went to Barton Springs \u2014 it was relaxing and Mango loved the water.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan recently enjoyed a weekend trip to Barton Springs, where they relaxed by the water.",
+        "score": 0.48000000000000004
+      },
+      "memory_v2": {
+        "response": "Jordan recently planned a trip to Barton Springs with his roommate Sam and their puppy, Mango, on March 21, 2026. The trip was intended for relaxation by the water and enjoying a picnic, which included packing sandwiches, snacks, and drinks, specifically oat milk lattes that he enjoys. However, I don't have information on whether the trip has been completed or how it went. Would you like to share any updates about the trip?",
+        "score": 0.2631578947368421
+      }
+    },
+    {
+      "question": "What was Jordan's coffee preference on 2026-03-04 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan enjoys black coffee brewed with a French press and oat milk lattes.",
+        "score": 0.42857142857142855
+      },
+      "memory_v2": {
+        "response": "On March 4, 2026, Jordan enjoyed an oat milk latte at his favorite caf\u00e9.",
+        "score": 0.375
+      }
+    },
+    {
+      "question": "What was Jordan's coffee preference on 2026-03-11 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "naive_rag": {
+        "response": "Jordan preferred black coffee on 2026-03-11.",
+        "score": 0.5
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "On March 11, 2026, Jordan's coffee preference was French press. He enjoyed this method for its rich taste.",
+        "score": 0.09999999999999999
+      }
+    },
+    {
+      "question": "What was Jordan's coffee preference on 2026-03-18 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan enjoys black coffee brewed with a French press and oat milk lattes.",
+        "score": 0.42857142857142855
+      },
+      "memory_v2": {
+        "response": "On March 18, 2026, Jordan's coffee preference was not specifically mentioned in the memory. However, around that time, he had been enjoying oat milk lattes and had also mentioned a preference for black coffee earlier in March. If you're looking for a specific detail about that day, I don't have it available. Would you like to know more about his overall coffee habits?",
+        "score": 0.0967741935483871
+      }
+    },
+    {
+      "question": "Describe the pattern Jordan follows for coffee.",
+      "answer": "Strict 7-day cycle: oat milk latte for 7 days, then black coffee for 7 days, repeating.",
+      "difficulty": "simple",
+      "type": "pattern_id",
+      "naive_rag": {
+        "response": "Jordan primarily drinks black coffee at home daily to kickstart his mornings but occasionally enjoys oat milk lattes as a treat after climbing sessions.",
+        "score": 0.2564102564102564
+      },
+      "rsum": {
+        "response": "Jordan enjoys black coffee brewed with a French press for focus but also loves oat milk lattes from a cozy caf\u00e9 downtown.",
+        "score": 0.33333333333333326
+      },
+      "memory_v2": {
+        "response": "Jordan typically brews black coffee at home, which he finds simple and convenient. He enjoys starting his day with a cup to help kickstart his mornings. While he occasionally treats himself to oat milk lattes, especially after climbing sessions, his primary preference remains black coffee for its focus-enhancing qualities.",
+        "score": 0.22222222222222218
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for coffee on 2026-03-22 (Sun)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "Black coffee.",
+        "score": 1.0
+      },
+      "rsum": {
+        "response": "Oat milk latte.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Based on your preferences, it seems likely that you'll still prefer black coffee on March 22, 2026, as you've mentioned that it's your go-to choice for staying focused. However, since you also treated yourself to oat milk lattes recently, you might enjoy one of those as a special treat, especially if you're relaxing after your trip to Barton Springs.",
+        "score": 0.06666666666666667
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for coffee on 2026-03-28 (Sat)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "Black coffee.",
+        "score": 1.0
+      },
+      "rsum": {
+        "response": "Oat milk latte.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Based on your previous conversations, it seems likely that you will prefer black coffee on March 28, 2026, since you've mentioned it as your go-to choice multiple times. However, you also recently expressed a liking for oat milk lattes, so there's a chance you might enjoy one of those as well, especially if you're in the mood for something creamier. If you have any specific plans for that day, let me know, and I can help you think about the best coffee choice!",
+        "score": 0.05
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for coffee on 2026-04-04 (Sat)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "Black coffee.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Oat milk latte.",
+        "score": 1.0
+      },
+      "memory_v2": {
+        "response": "Based on Jordan's pattern, it's likely that he will prefer black coffee on April 4, 2026, as he has consistently mentioned that it's his go-to choice for staying focused. He also tends to brew it at home, keeping things simple. If he decides to treat himself, he might also enjoy an oat milk latte, which he has recently embraced.",
+        "score": 0.09836065573770492
+      }
+    },
+    {
+      "question": "When did Jordan's coffee preference switch from 'oat milk latte' to 'black coffee'?",
+      "answer": "2026-03-08",
+      "difficulty": "simple",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's coffee preference switched from oat milk lattes to black coffee on March 8, 2026. After that, he returned to enjoying oat milk lattes throughout the following weeks.",
+        "score": 0.19999999999999998
+      }
+    },
+    {
+      "question": "When did Jordan's coffee preference switch from 'black coffee' to 'oat milk latte'?",
+      "answer": "2026-03-15",
+      "difficulty": "simple",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's coffee preference switched from black coffee to oat milk lattes around early March 2026. He enjoyed black coffee on March 8 but quickly transitioned to oat milk lattes, making them his go-to choice throughout the month.",
+        "score": 0.10256410256410256
+      }
+    },
+    {
+      "question": "What was Jordan's clothing preference on 2026-03-04 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "On March 4, 2026, Jordan's clothing preference included cozy oversized hoodies and a mix of neutral colors and brighter shades. He also visited his favorite caf\u00e9 that day.",
+        "score": 0.14814814814814814
+      }
+    },
+    {
+      "question": "What was Jordan's clothing preference on 2026-03-11 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "On March 11, 2026, Jordan's clothing preference included an oversized hoodie.",
+        "score": 0.33333333333333337
+      }
+    },
+    {
+      "question": "What was Jordan's clothing preference on 2026-03-18 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "On March 18, 2026, Jordan's clothing preference included an oversized hoodie. He started his new role as a senior designer on that day, which likely influenced his choice for comfort while adjusting to the new responsibilities.",
+        "score": 0.1142857142857143
+      }
+    },
+    {
+      "question": "Describe the pattern Jordan follows for clothing.",
+      "answer": "Alternates every 3 days: fitted t-shirt for 3 days, then oversized hoodie for 3 days, repeating.",
+      "difficulty": "mid",
+      "type": "pattern_id",
+      "naive_rag": {
+        "response": "Jordan prefers solid colors and fitted t-shirts for work and workouts, often pairing them with comfortable shorts or oversized hoodies for casual wear.",
+        "score": 0.3243243243243243
+      },
+      "rsum": {
+        "response": "Jordan prefers fitted t-shirts and jeans for presentations, balancing professionalism and comfort, while wearing cozy oversized hoodies in neutral colors for everyday wear, especially at home and during yoga.",
+        "score": 0.2857142857142857
+      },
+      "memory_v2": {
+        "response": "Jordan follows a pattern of wearing solid and neutral colors for his clothing, which keeps his style simple and versatile. He prefers fitted t-shirts for work and casual outings, often opting for classic colors like black or navy. Additionally, he enjoys cozy oversized hoodies, which he wears both during yoga practice and in his everyday life. This focus on comfortable yet stylish pieces helps him maintain a practical wardrobe that suits his busy lifestyle as a graphic designer and his active hobbies.",
+        "score": 0.13333333333333333
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for clothing on 2026-03-22 (Sun)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "Fitted t-shirts and comfy shorts.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Cozy oversized hoodie in neutral colors.",
+        "score": 0.5
+      },
+      "memory_v2": {
+        "response": "Based on Jordan's pattern, it's likely that he will prefer wearing fitted t-shirts in solid or neutral colors, as he has mentioned that these are comfortable and easy to pair with other items. Given that he enjoys cozy oversized hoodies as well, he might also opt for one of those, especially if the weather is cooler. Since he's planning a trip to Barton Springs, he may also choose something casual and relaxed for the day.",
+        "score": 0.05555555555555556
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for clothing on 2026-03-28 (Sat)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "Fitted t-shirts and comfy shorts.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Fitted t-shirt and jeans.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Based on your preferences, you're likely to go for a fitted t-shirt in a solid color, perhaps paired with a cozy oversized hoodie if the weather is cool. Given that you enjoy a busy lifestyle and want to be comfortable while still looking stylish, this combination aligns perfectly with your usual choices. If you're planning any activities that day, like climbing or relaxing, this outfit will keep you feeling great!",
+        "score": 0.06060606060606061
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for clothing on 2026-04-04 (Sat)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "Fitted t-shirts and comfy shorts.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Fitted t-shirt and jeans.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Based on your preferences, it seems likely you'll continue to favor fitted t-shirts in solid colors for comfort and style, especially since you\u2019ve mentioned wearing them both in your daily life and for climbing. You also enjoy cozy oversized hoodies, particularly in neutral colors, which you might choose for a relaxing weekend. If you\u2019re planning any outings or activities on that date, those choices will likely reflect your preference for comfort while maintaining a polished look.",
+        "score": 0.05405405405405406
+      }
+    },
+    {
+      "question": "When did Jordan's clothing preference switch from 'fitted t-shirt' to 'oversized hoodie'?",
+      "answer": "2026-03-04",
+      "difficulty": "mid",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's clothing preference switched from 'fitted t-shirt' to 'oversized hoodie' around March 12, 2026. He started wearing the oversized hoodie on that day and continued to favor it afterward.",
+        "score": 0.13333333333333333
+      }
+    },
+    {
+      "question": "When did Jordan's clothing preference switch from 'oversized hoodie' to 'fitted t-shirt'?",
+      "answer": "2026-03-07",
+      "difficulty": "mid",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's clothing preference switched from \"oversized hoodie\" to \"fitted t-shirt\" during the week of March 18, 2026, when he started his new role as a senior designer. He mentioned leaning more towards fitted t-shirts for work, indicating a shift in his style.",
+        "score": 0.09523809523809523
+      }
+    },
+    {
+      "question": "When did Jordan's clothing preference switch from 'fitted t-shirt' to 'oversized hoodie'?",
+      "answer": "2026-03-10",
+      "difficulty": "mid",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's clothing preference switched from 'fitted t-shirt' to 'oversized hoodie' in the week of March 12, 2026. He started wearing the oversized hoodie on that day and continued to favor it throughout the week.",
+        "score": 0.1212121212121212
+      }
+    },
+    {
+      "question": "When did Jordan's clothing preference switch from 'oversized hoodie' to 'fitted t-shirt'?",
+      "answer": "2026-03-13",
+      "difficulty": "mid",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's clothing preference switched from 'oversized hoodie' to 'fitted t-shirt' starting around March 18, 2026, when he began wearing fitted t-shirts more frequently for work after accepting his senior designer role. Before that, he had been favoring oversized hoodies and cozy clothing.",
+        "score": 0.0909090909090909
+      }
+    },
+    {
+      "question": "When did Jordan's clothing preference switch from 'fitted t-shirt' to 'oversized hoodie'?",
+      "answer": "2026-03-16",
+      "difficulty": "mid",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's clothing preference switched from 'fitted t-shirt' to 'oversized hoodie' around March 18, 2026. He started wearing oversized hoodies on that day, while he favored fitted t-shirts leading up to it.",
+        "score": 0.1176470588235294
+      }
+    },
+    {
+      "question": "When did Jordan's clothing preference switch from 'oversized hoodie' to 'fitted t-shirt'?",
+      "answer": "2026-03-19",
+      "difficulty": "mid",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's clothing preference switched from 'oversized hoodie' to 'fitted t-shirt' around March 18, 2026, when he started his new role as a senior designer. He mentioned leaning more towards fitted t-shirts for work since then.",
+        "score": 0.10810810810810811
+      }
+    },
+    {
+      "question": "What was Jordan's exercise preference on 2026-03-04 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "On March 4, 2026, Jordan's exercise preference included enjoying running as part of his routine. He was balancing this with rock climbing and yoga as well, focusing on maintaining an active lifestyle.",
+        "score": 0.0625
+      }
+    },
+    {
+      "question": "What was Jordan's exercise preference on 2026-03-11 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "On March 11, 2026, Jordan practiced Vinyasa yoga as part of his exercise routine.",
+        "score": 0.125
+      }
+    },
+    {
+      "question": "What was Jordan's exercise preference on 2026-03-18 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "On March 18, 2026, Jordan's exercise preference included practicing Vinyasa yoga. He was also adjusting to his new role as a senior designer, which may have affected his workout routine that week.",
+        "score": 0.06060606060606061
+      }
+    },
+    {
+      "question": "Describe the pattern Jordan follows for exercise.",
+      "answer": "Day-of-week rule: Mon/Wed/Fri = morning yoga, Tue/Thu = evening run, Sat = climbing gym, Sun = rest day.",
+      "difficulty": "difficult",
+      "type": "pattern_id",
+      "naive_rag": {
+        "response": "Jordan focuses on building endurance for climbing, incorporates morning yoga for flexibility and strength, and practices climbing on weekends.",
+        "score": 0.1935483870967742
+      },
+      "rsum": {
+        "response": "Jordan practices Vinyasa yoga most mornings, goes rock climbing at least once a week, and prefers evening runs to clear their head.",
+        "score": 0.2941176470588235
+      },
+      "memory_v2": {
+        "response": "Jordan follows a balanced exercise routine that includes a mix of activities to enhance his overall fitness. He has been rock climbing for about four years, which is a significant part of his exercise regimen. In preparation for his upcoming climbing competition in April, he has been focusing on building his endurance and squeezing in practice sessions on the weekends.\n\nAdditionally, Jordan incorporates morning yoga into his routine to improve flexibility and strength, complementing his climbing training. He also enjoys running, typically wearing fitted t-shirts and comfortable shorts for his runs, which allows for good movement. This combination of climbing, yoga, and running reflects his commitment to maintaining an active and healthy lifestyle while balancing his busy work schedule.",
+        "score": 0.06504065040650407
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for exercise on 2026-03-22 (Sun)?",
+      "answer": "rest day",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "Most likely a fitted t-shirt and outdoor running.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan will most likely prefer rock climbing.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Given Jordan's pattern of balancing climbing, running, and strength training, it's likely that he will prefer to go for a climb or an outdoor run on March 22, especially since he was preparing for a climbing competition in April. After his trip to Barton Springs, he might also want to incorporate some strength training to maintain his fitness. He values outdoor activities, so a run in good weather could be appealing as well.",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for exercise on 2026-03-28 (Sat)?",
+      "answer": "climbing gym",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Jordan will most likely prefer rock climbing.",
+        "score": 0.22222222222222224
+      },
+      "memory_v2": {
+        "response": "On March 28, 2026, Jordan will likely prefer to go for a climb, as he enjoys rock climbing and has been actively training for a competition in April. He also tends to incorporate running and yoga into his exercise routine, so he might opt for one of those as well, depending on how he feels that day. Given his busy lifestyle and commitment to staying active, it's probable he'll want to engage in something that aligns with his interests.",
+        "score": 0.026315789473684213
+      }
+    },
+    {
+      "question": "Based on Jordan's pattern, what will they most likely prefer for exercise on 2026-04-04 (Sat)?",
+      "answer": "climbing gym",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "naive_rag": {
+        "response": "A fitted t-shirt and comfortable shorts for exercise.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "Rock climbing.",
+        "score": 0.5
+      },
+      "memory_v2": {
+        "response": "Based on your routine, it seems likely that you would prefer a fitted t-shirt and comfortable shorts for your exercise on April 4th. Since you're preparing for the climbing competition, you might also spend some time climbing or training that day. If it's warm enough, you might enjoy an outdoor session or a run as well! Would you like to plan something specific for that day?",
+        "score": 0.031746031746031744
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'rest day' to 'morning yoga'?",
+      "answer": "2026-03-02",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference switched from 'rest day' to 'morning yoga' around early March 2026. Specifically, he mentioned taking a rest day on March 1, and by March 2, he was already incorporating morning yoga into his routine. He continued to practice morning yoga consistently throughout March.",
+        "score": 0.1276595744680851
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-03",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's preference for morning yoga and evening runs has been consistent throughout recent weeks. He has mentioned both activities multiple times, but there isn't a specific recorded switch from one to the other; rather, he seems to incorporate both into his routine. If you're looking for a specific timeframe when he emphasized evening runs more, that would be around March 19, 2026, when he mentioned fitting in runs in the evenings more regularly.",
+        "score": 0.056338028169014086
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-04",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise routine has included both evening runs and morning yoga consistently. He mentioned evening runs several times, and he started doing morning yoga a few months ago, which he finds helpful for focusing and relaxing. There hasn't been a specific switch from one to the other, as he seems to be balancing both activities in his routine. If you're looking for a specific change in emphasis or preference, let me know, and I can help narrow it down!",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-05",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise routine seems to have included both morning yoga and evening runs consistently. He mentioned enjoying morning yoga sessions to help clear his mind and also expressed a preference for evening runs to unwind after a long day. There isn't a specific switch noted in the memory; rather, he appears to be incorporating both activities into his routine simultaneously.",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-06",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference has consistently included both evening runs and morning yoga. He has mentioned fitting in evening runs a couple of times a week to clear his head, and he also practices morning yoga regularly to help him focus. There hasn't been a specific switch from one to the other; rather, he seems to enjoy both activities as part of his routine. Would you like to know more about how he balances these exercises?",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'climbing gym'?",
+      "answer": "2026-03-07",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference shifted from focusing on morning yoga to incorporating a climbing gym on March 14, 2026. From that date, he began exploring a new climbing gym downtown while still maintaining his yoga practice.",
+        "score": 0.1111111111111111
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'climbing gym' to 'rest day'?",
+      "answer": "2026-03-08",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference switched from \"climbing gym\" to \"rest day\" on March 15, 2026. He mentioned that it was a rest day for him after a busy week of climbing practice.",
+        "score": 0.125
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'rest day' to 'morning yoga'?",
+      "answer": "2026-03-09",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference switched from 'rest day' to 'morning yoga' around early March 2026. He mentioned that he was taking a rest day on March 1, and by March 2, he was already incorporating morning yoga into his routine. He continued to practice yoga consistently thereafter, noting its benefits for focus and stress relief.",
+        "score": 0.07407407407407407
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-10",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise routine includes both morning yoga and evening runs. He has consistently mentioned enjoying morning yoga, especially for clearing his mind and staying focused. Additionally, he has mentioned fitting in evening runs a couple of times a week to unwind after a long day. There doesn't seem to be a specific switch; rather, he seems to be balancing both activities in his routine. If you're looking for a particular time or event that emphasized the shift, please clarify!",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-11",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference didn't exactly switch from 'evening run' to 'morning yoga'; rather, he has been incorporating both into his routine. He mentioned fitting in evening runs a couple of times a week to clear his head, while he also practices morning yoga consistently to help focus and relax. So, he seems to be balancing both activities rather than making a strict switch.",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-12",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference didn't switch from 'morning yoga' to 'evening run'; instead, he has been incorporating both into his routine. He has consistently practiced morning yoga to help him focus and clear his mind, while also fitting in evening runs a couple of times a week. This balance allows him to enjoy both activities without completely changing his preference.",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-13",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference has not switched from \"evening run\" to \"morning yoga\"; rather, he has been consistently incorporating both into his routine. He mentioned enjoying evening runs as a way to clear his mind after a long day, while morning yoga has been a way for him to start his day focused and relaxed. He has been fitting in both activities alongside his climbing training.",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'climbing gym'?",
+      "answer": "2026-03-14",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preferences didn't completely switch from \"morning yoga\" to \"climbing gym.\" Instead, he has been incorporating both into his routine. He has maintained his morning yoga practice for mental clarity while also exploring a new climbing gym downtown. This balance allows him to continue benefiting from yoga while also preparing for his climbing competition. If you need more specific details about his routine, just let me know!",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'climbing gym' to 'rest day'?",
+      "answer": "2026-03-15",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference switched from \"climbing gym\" to \"rest day\" on March 15, 2026. He had been focusing on climbing practice leading up to that day, but then took a rest day.",
+        "score": 0.17647058823529413
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'rest day' to 'morning yoga'?",
+      "answer": "2026-03-16",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference switched from 'rest day' to 'morning yoga' around early March 2026. He mentioned it was a rest day on March 1 and started practicing yoga regularly, stating that he found it helpful for focus and stress relief in subsequent conversations, specifically around March 6.",
+        "score": 0.08510638297872342
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-17",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's preference for morning yoga has been consistent, as he has mentioned incorporating it into his routine for several months. He also enjoys evening runs, which he has been fitting into his schedule to help clear his mind after a long day. It seems that he hasn't fully switched from morning yoga to evening runs; rather, he balances both activities in his routine.",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-18",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise routine has consistently included both evening runs and morning yoga. He has mentioned fitting in evening runs a couple of times a week to clear his head, while he also practices morning yoga to help him focus and relax. There hasn't been a specific switch from one to the other; rather, he seems to enjoy both activities and incorporates them into his schedule. If you're curious about how he balances them or if he prefers one over the other at different times, let me know!",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-19",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise preference didn't actually switch from 'morning yoga' to 'evening run'; rather, he has been incorporating both into his routine. He practices morning yoga to help clear his mind and stay focused, while also fitting in evening runs a couple of times a week to unwind after work. This way, he balances both activities rather than choosing one over the other.",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-20",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's exercise routine has included both evening runs and morning yoga consistently. However, there isn't a specific recorded date when his preference switched from evening runs to morning yoga. Instead, he seems to have maintained a balance between the two, fitting in both activities into his routine. If you have a particular timeframe in mind, I can help you analyze it further!",
+        "score": 0.0
+      }
+    },
+    {
+      "question": "When did Jordan's exercise preference switch from 'morning yoga' to 'climbing gym'?",
+      "answer": "2026-03-21",
+      "difficulty": "difficult",
+      "type": "transition",
+      "naive_rag": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "rsum": {
+        "response": "No information available.",
+        "score": 0.0
+      },
+      "memory_v2": {
+        "response": "Jordan's preference for morning yoga has been consistent, but he also started exploring a new climbing gym downtown around March 14, 2026. His focus on climbing seems to have increased as he prepares for his competition in April, but he has maintained his morning yoga routine alongside it. So, rather than a switch, it's more of an addition to his exercise preferences.",
+        "score": 0.06451612903225806
+      }
+    }
+  ]
+}

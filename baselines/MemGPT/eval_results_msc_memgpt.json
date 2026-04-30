@@ -1,0 +1,49 @@
+{
+  "aggregate": {
+    "n": 5,
+    "accuracy": 0.2,
+    "rouge_l_recall": 0.8545
+  },
+  "results": [
+    {
+      "id": 0,
+      "question": "Hey, remember that time we talked about music? What was the artist you mentioned you could get into?",
+      "ground_truth": "Taylor Swift!",
+      "prediction": "The artist I mentioned I could get into is Taylor Swift.",
+      "accuracy": 0,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 1,
+      "question": "Hey, remember that time we talked about our jobs and expenses? What was that one thing you said you did to save money?",
+      "ground_truth": "I eat a fresh and raw diet to save on groceries.",
+      "prediction": "I mentioned that I walk 3 miles to work every day to save money.",
+      "accuracy": 0,
+      "rouge_l_recall": 0.2727
+    },
+    {
+      "id": 2,
+      "question": "Hey, remember that time we talked about our work lives? What was that field you said you used to work in?",
+      "ground_truth": "I used to work in the human services field.",
+      "prediction": "I used to work in the human services field.",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 3,
+      "question": "Hey, remember that time we talked about our studies and working part-time? What was the fast food place you said you're working at?",
+      "ground_truth": "Burger King!",
+      "prediction": "You mentioned that you're working at Burger King.",
+      "accuracy": 0,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 4,
+      "question": "Hey, remember that time we talked about our favorite ways to relax? What was the distance you mentioned you liked to walk for a small workout?",
+      "ground_truth": "Three miles!",
+      "prediction": "I mentioned that I like to walk three miles for a small workout.",
+      "accuracy": 0,
+      "rouge_l_recall": 1.0
+    }
+  ]
+}

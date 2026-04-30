@@ -65,7 +65,7 @@ def main():
         "INPUTS:\n{inputs}\n\n"
         "RULES:\n"
         "1. Map synonyms to a single entity (e.g., 'espresso' and 'latte' -> entity: 'coffee').\n"
-        "2. If an entity is itself a preference for something else (e.g., 'flip flops' for 'shoes'), merge them.\n"
+        "2. If an entity is 'clothing' and preference is like 'purple t-shirt', standardize it to entity: 't-shirt color', preference: 'purple'. If entity is 't-shirt' and preference is 'red', standardize it to entity: 't-shirt color', preference: 'red'. ALWAYS prioritize a specific, unified format for clothing items.\n"
         "3. Return a JSON list of objects: {{'old_entity', 'old_preference', 'new_entity', 'new_preference', 'category'}}\n\n"
         "Return ONLY the JSON list."
     )
@@ -80,7 +80,15 @@ def main():
     
     try:
         chain = prompt | manager.llm | JsonOutputParser()
-        mapping_list = chain.invoke({"inputs": json.dumps(unique_prefs)})
+        
+        # Batch processing
+        mapping_list = []
+        batch_size = 25
+        for i in range(0, len(unique_prefs), batch_size):
+            batch = unique_prefs[i:i+batch_size]
+            print(f"Processing batch {i//batch_size + 1}/{(len(unique_prefs)+batch_size-1)//batch_size}...")
+            res = chain.invoke({"inputs": json.dumps(batch)})
+            mapping_list.extend(res)
         
         # 4. Apply updates
         updates_count = 0

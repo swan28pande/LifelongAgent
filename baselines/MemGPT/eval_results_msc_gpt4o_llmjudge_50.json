@@ -1,0 +1,409 @@
+{
+  "aggregate": {
+    "n": 50,
+    "accuracy": 0.8,
+    "rouge_l_recall": 0.8091
+  },
+  "results": [
+    {
+      "id": 0,
+      "question": "Hey, remember that time we talked about music? What was the artist you mentioned you could get into?",
+      "ground_truth": "Taylor Swift!",
+      "prediction": "You mentioned that you could get into Taylor Swift, especially her older, more country music. Do you have any favorites among her songs?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 1,
+      "question": "Hey, remember that time we talked about our jobs and expenses? What was that one thing you said you did to save money?",
+      "ground_truth": "I eat a fresh and raw diet to save on groceries.",
+      "prediction": "I remember! I mentioned that I mostly eat a fresh and raw diet, which helps me save on groceries. It's been a great way to cut costs while maintaining a healthy lifestyle. Plus, my wife and I have learned a lot about couponing, which has also been a fantastic way to save money. \n\nHow about you? Have you picked up any new tips or habits for saving money?",
+      "accuracy": 0,
+      "rouge_l_recall": 0.9091
+    },
+    {
+      "id": 2,
+      "question": "Hey, remember that time we talked about our work lives? What was that field you said you used to work in?",
+      "ground_truth": "I used to work in the human services field.",
+      "prediction": "I worked in the human services field for about a decade. It was a rewarding experience, much like sharing our stories here. It also gives me a different perspective when it comes to those true crime reads! How about you, are you still balancing your two jobs?",
+      "accuracy": 0,
+      "rouge_l_recall": 0.7778
+    },
+    {
+      "id": 3,
+      "question": "Hey, remember that time we talked about our studies and working part-time? What was the fast food place you said you're working at?",
+      "ground_truth": "Burger King!",
+      "prediction": "You mentioned that you're working part-time at Burger King. How's that going for you?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 4,
+      "question": "Hey, remember that time we talked about our favorite ways to relax? What was the distance you mentioned you liked to walk for a small workout?",
+      "ground_truth": "Three miles!",
+      "prediction": "You mentioned that a three-mile walk is key for a small workout and helps keep you feeling great! Do you still enjoy those walks?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 5,
+      "question": "Hey, remember that time we talked about our pets? What kind of pet do you have?",
+      "ground_truth": "I have a cat.",
+      "prediction": "Yes, I remember that conversation! I have a few cats that I enjoy bird watching with. What about you? How's your bird doing?",
+      "accuracy": 0,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 6,
+      "question": "Hey, remember that time we talked about our favorite movies? What was yours?",
+      "ground_truth": "Clueless!",
+      "prediction": "My favorite movie is *Clueless*! Do you still have *Friday* as your favorite, or has that changed?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 7,
+      "question": "Hey, remember that time we talked about your pet? What kind of animal is it?",
+      "ground_truth": "It's a cow!",
+      "prediction": "I don't actually have a pet myself, but I remember us talking about your pet cow. It's great to hear that she's doing better with the treatment! If you meant a different conversation or context, feel free to remind me.",
+      "accuracy": 1,
+      "rouge_l_recall": 0.75
+    },
+    {
+      "id": 8,
+      "question": "Hey, remember that time we talked about your hobbies? How old were you when you first learned to play guitar?",
+      "ground_truth": "I was three!",
+      "prediction": "I was three years old when I first learned to play the guitar, just like you! It's always fun to connect over music and share that passion. Do you have any new songs you plan to learn on your guitar?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 9,
+      "question": "Hey, remember that time we talked about our post-retirement plans? What did I tell you I wanted to learn in my free time?",
+      "ground_truth": "You mentioned you'd like to go to culinary school!",
+      "prediction": "You mentioned that you'd like to go to culinary school after retiring from gymnastics. It sounds like an exciting plan and it fits well with your love for baking!",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 10,
+      "question": "Hey, remember that time we talked about our jobs? What was it you said you did for a living?",
+      "ground_truth": "Construction, like my dad.",
+      "prediction": "I work in construction, just like my dad did. It's not music-related, but it's honest work!",
+      "accuracy": 0,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 11,
+      "question": "Hey, remember that time we talked about your dad's outdoor show? What was it called again?",
+      "ground_truth": "Jim Shockey!",
+      "prediction": "Yes, I remember! It's called Jim Shockey, and he's known for surviving in places all over the world. It sounds like you've enjoyed watching it between your studies!",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 12,
+      "question": "Hey, remember that time we talked about your concerts? What was that specific color of the hat you mentioned you later on?",
+      "ground_truth": "Yellow!",
+      "prediction": "I mentioned that I wear a yellow construction worker hat to Aerosmith concerts. It's kind of my signature look when I go to concerts!",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 13,
+      "question": "Hey, remember that time we talked about our parents? What did you tell me your dad does for a living?",
+      "ground_truth": "He's an army soldier.",
+      "prediction": "Sure, I mentioned that my dad is in the army.",
+      "accuracy": 1,
+      "rouge_l_recall": 0.2
+    },
+    {
+      "id": 14,
+      "question": "Hey, remember that time we talked about your family? What line of work was your father in?",
+      "ground_truth": "He was a manager at Home Depot.",
+      "prediction": "My father used to work for Home Depot. We used to visit him there, and the kids love going to browse and say hi to grandpa. It's a nice memory for us.",
+      "accuracy": 1,
+      "rouge_l_recall": 0.2857
+    },
+    {
+      "id": 15,
+      "question": "Hey, remember that time we talked about our childhood fears? Can you recall what used to scare you when your grandfather told stories?",
+      "ground_truth": "Yeah, he used to tell World War II stories that absolutely scared me!",
+      "prediction": "Yes, I do remember. My grandfather's stories about World War II were quite scary for me as a kid. His experiences during such intense times made a lasting impression on me. Do you still find certain things from your childhood to be unsettling?",
+      "accuracy": 1,
+      "rouge_l_recall": 0.3077
+    },
+    {
+      "id": 16,
+      "question": "Hey, remember that time we talked about our music preferences? What was that one band you said you were into apart from Metallica?",
+      "ground_truth": "Aerosmith!",
+      "prediction": "I remember you mentioning that you love Metallica and old-school rap, particularly Tupac. Let me know if there's another band or artist you want to talk about!",
+      "accuracy": 0,
+      "rouge_l_recall": 0.0
+    },
+    {
+      "id": 17,
+      "question": "Hey, remember that time we talked about our pets? What is the name of your dog again?",
+      "ground_truth": "Trooper!",
+      "prediction": "Yes, of course! My dog's name is Trooper, and he's a black lab who makes a great hiking buddy. Do you have any recent stories about Mabel that you'd like to share?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 18,
+      "question": "Hey, remember that time we talked about your sons and their peculiar interests? What's the favorite play area of your fifth son in the house?",
+      "ground_truth": "The attic!",
+      "prediction": "Oh, my fifth son loves our little hideaway in the attic. It's his own special nook where he gets to immerse himself in his world of imagination. It's filled with toys, books, and all sorts of things that spark his curiosity. He finds it to be a magical space away from his boisterous brothers!",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 19,
+      "question": "Hey, remember that time we talked about our hobbies? You mentioned you enjoy doing something outdoors on sunny days, what was it?",
+      "ground_truth": "Lawn mowing!",
+      "prediction": "Yes, I mentioned that I enjoy mowing my lawn on sunny days. It's quite a relaxing and satisfying outdoor activity for me!",
+      "accuracy": 0,
+      "rouge_l_recall": 0.5
+    },
+    {
+      "id": 20,
+      "question": "Hey, remember that time we talked about your birthday? How old did you say you were turning?",
+      "ground_truth": "I said I was turning 83.",
+      "prediction": "I mentioned that I was turning 83 in a conversation, but that was more of a fun narrative detail. In my reality, I don't age or have birthdays. How about you—any memorable birthdays or plans coming up?",
+      "accuracy": 1,
+      "rouge_l_recall": 0.8333
+    },
+    {
+      "id": 21,
+      "question": "Hey, remember that time we talked about our favorite music? What type of music did I mention I listen to all the time in my big truck?",
+      "ground_truth": "Country music!",
+      "prediction": "Of course! You mentioned that you love listening to country music in your big truck. It's your go-to genre, especially when you're line dancing in your western clothes.",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 22,
+      "question": "Hey, remember that time we talked about my job? Do you happen to recall how much I told you I make annually?",
+      "ground_truth": "About 15k.",
+      "prediction": "Yes, you mentioned before that you make about $15,000 annually, most of which you spend on weekend clubs and raves.",
+      "accuracy": 1,
+      "rouge_l_recall": 0.5
+    },
+    {
+      "id": 23,
+      "question": "Hey, remember that one time we talked about me working out on your farm? How many acres did you say your farm was again?",
+      "ground_truth": "I didn't mention the exact amount, but I did say that it was quite a few acres!",
+      "prediction": "I mentioned before that you could come run a few laps on my farm since it spans quite a few acres, though I didn't specify exactly how many acres it is. It's definitely spacious enough for a good workout! 🌾🏃‍♀️ Are you still interested in trying out some farm-style exercise?",
+      "accuracy": 1,
+      "rouge_l_recall": 0.4444
+    },
+    {
+      "id": 24,
+      "question": "Hey, remember that time we talked about our likes and our backgrounds, you had mentioned something that scares you. What was that again?",
+      "ground_truth": "Scorpions!",
+      "prediction": "Of course! I have a bit of a terror for scorpions. They're not my favorite creatures, to say the least! 🦂 What about you—is there anything you're particularly scared of?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 25,
+      "question": "Hey, remember that time we talked about our hobbies and you told me about a band you see every year? Which band was it again?",
+      "ground_truth": "The Rolling Stones!",
+      "prediction": "Yes, I remember! It's The Rolling Stones. I see them in concert every year.",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 26,
+      "question": "Hey, remember that time we talked about me possibly moving in with you? How many bedrooms did you say your house has?",
+      "ground_truth": "It has 3 bedrooms!",
+      "prediction": "Ah, yes! I remember you mentioned maybe moving in with me. My house has 3 bedrooms, and I'm the only one living here, so there's definitely room for you! It would be so nice to have some company.",
+      "accuracy": 1,
+      "rouge_l_recall": 0.75
+    },
+    {
+      "id": 27,
+      "question": "Hey, remember that time we talked about our pets during a rainy day? Where were you staying then where busy streets could be a danger to your cat?",
+      "ground_truth": "Beijing!",
+      "prediction": "Ah, yes, I recall that conversation. You mentioned that your cat had ventured out in the busy streets of Beijing during a rainy day. Do you still have all six of your cats?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 28,
+      "question": "Hey, remember that one time we talked about our hobbies? What was that one thing you like to compete in?",
+      "ground_truth": "Dog agility!",
+      "prediction": "Yes, I remember! I like to compete in dog agility classes. It's a fun way to bond with dogs and test their skills and intelligence. Do you still have an interest in art and pottery?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 29,
+      "question": "Hey, remember that time we talked about our personal interests and ambitions? What was that career you told me you were interested in pursuing?",
+      "ground_truth": "A lawyer!",
+      "prediction": "Yes, I remember! I mentioned that I want to move to the city and become a lawyer. It's something I'm really passionate about and looking forward to pursuing. Are there any new careers or interests you're considering these days?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 30,
+      "question": "Hey, remember that time we talked about our musical interests? What was the instrument you said you played last year but didn't enjoy?",
+      "ground_truth": "The violin!",
+      "prediction": "Yes, I remember our conversation about music! I mentioned playing the violin last year in band, but I didn't really enjoy it. How are you doing with your instruments, especially the trombone, alto sax, baritone, and trumpet?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 31,
+      "question": "Hey, remember that time we talked about where you're originally from? Can you remind me where that was?",
+      "ground_truth": "Yes, I originally come from Somalia.",
+      "prediction": "Sure, I'm originally from Somalia. It's a part of my journey that has shaped who I am today!",
+      "accuracy": 1,
+      "rouge_l_recall": 0.6667
+    },
+    {
+      "id": 32,
+      "question": "Hey, remember that time we talked about your studies? What was it that you majored in again?",
+      "ground_truth": "Psychology.",
+      "prediction": "Of course! I majored in Psychology, and I'm planning to start my PhD soon. I spend a lot of my free time reading psychology journals. Do you find psychology interesting too?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 33,
+      "question": "Hey, remember that time we talked about our personal life changes? What was that place you mentioned, where your audio studio was located?",
+      "ground_truth": "California!",
+      "prediction": "I mentioned that my studio was in California, but the recording artist market was really struggling last year, which is why I've been considering moving as well. It's always a challenge to keep the business thriving, especially when trends shift.",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 34,
+      "question": "Hey, remember that time we talked about your pregnancy? You mentioned hoping your girls would have a certain dietary preference. What was it again?",
+      "ground_truth": "Yes, I'm hoping they're Omnivores.",
+      "prediction": "Yes, I remember discussing my pregnancy! I mentioned hoping that my twin girls would be omnivores like me.",
+      "accuracy": 1,
+      "rouge_l_recall": 0.5714
+    },
+    {
+      "id": 35,
+      "question": "Hey, remember that time we talked about our favorite foods? What was that one food you said was your favorite?",
+      "ground_truth": "Cheeseburgers!",
+      "prediction": "My favorite food is cheeseburgers. I can never get enough of them! How about you? I remember you enjoyed Mexican food.",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 36,
+      "question": "Hey, remember that time we talked about you winning something? What was it that you won from?",
+      "ground_truth": "A Twitter contest!",
+      "prediction": "Yes, I remember mentioning something about a Twitter contest. It seems like I won something through that contest. Are you thinking of trying your luck in one?",
+      "accuracy": 0,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 37,
+      "question": "Hey, remember that time we talked about our jobs? Can you remind me what age I started working in construction?",
+      "ground_truth": "You started when you were 16.",
+      "prediction": "I couldn't find concrete details from our past conversation regarding the exact age you started working in construction. Nevertheless, if you shared this before, feel free to remind me, and I'll update my records accordingly!",
+      "accuracy": 0,
+      "rouge_l_recall": 0.5
+    },
+    {
+      "id": 38,
+      "question": "Hey, remember that time we talked about having a salad after our run? What was the type of dressing I suggested we have with it?",
+      "ground_truth": "You didn't suggest a specific type of dressing, you only asked me about my favorite dressing.",
+      "prediction": "Yes, I remember! You suggested having a salad with a lite dressing.",
+      "accuracy": 0,
+      "rouge_l_recall": 0.2353
+    },
+    {
+      "id": 39,
+      "question": "Hey, remember that time we talked about our hobbies and you mentioned yours? What was that job you wished you could get, even in jest?",
+      "ground_truth": "Hooters!",
+      "prediction": "Ah, yes! I joked about possibly getting a job at Hooters, despite being a 56-year-old woman. It was all in good fun, acknowledging that age might not make me the ideal candidate for such a position. What about you? Any fun job ideas, even if just a dream?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 40,
+      "question": "Hey, remember that time we talked about the music I like to play? What unique instrument do I use in my Scottish black metal band?",
+      "ground_truth": "Electric bagpipes!",
+      "prediction": "Yes, I remember! You play the electric bagpipes in your Scottish black metal band. It's such a unique and inventive touch, especially since you invented them yourself!",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 41,
+      "question": "Hey, remember that time we talked about the weather in our respective locations? What was the one thing you said you didn't like about the weather in Texas?",
+      "ground_truth": "The humidity!",
+      "prediction": "I couldn't find the exact conversation right now, but if memory serves, I mentioned that Texas can be horribly hot and humid at times. While I appreciate the charm of Texas, the weather can definitely be a bit challenging, particularly compared to the more temperate climate of Hawaii.",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 42,
+      "question": "Hey, remember that time we talked about our languages skills? How many languages did you say you could speak?",
+      "ground_truth": "I can speak 2 languages, Spanish and English.",
+      "prediction": "I speak English and Spanish. You mentioned that you speak three languages, including French, Spanish, and English. It's impressive to communicate in multiple languages!",
+      "accuracy": 1,
+      "rouge_l_recall": 0.75
+    },
+    {
+      "id": 43,
+      "question": "Hey, remember that time we chatted about our favorite TV shows? Can you remind me what yours was again?",
+      "ground_truth": "The Walking Dead!",
+      "prediction": "Of course! My favorite show is \"The Walking Dead.\" We both share an interest in that one! How about you, still into \"Friday\" as your favorite movie?",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 44,
+      "question": "Hey, remember that time we talked about me wanting to be a dog just like Pluto? What's the reason you gave saying why I could definitely go to Disney?",
+      "ground_truth": "Because Pluto is a dog and he is in Disney!",
+      "prediction": "I couldn't find the specific part of our conversation where we talked about that, but I do remember you had a lot of fun talking about it! Dogs can definitely go to Disney... especially if they're named Pluto. 😊 Going to Disney is always a magical experience, no matter what!",
+      "accuracy": 0,
+      "rouge_l_recall": 0.3
+    },
+    {
+      "id": 45,
+      "question": "Hey, remember that one time we talked about our jobs? What was it that you just got hired as?",
+      "ground_truth": "I got hired as a life coach!",
+      "prediction": "I just got hired as a life coach, and I'm really enjoying the job so far! It's been a rewarding experience getting to work with clients and help them achieve their goals.",
+      "accuracy": 1,
+      "rouge_l_recall": 1.0
+    },
+    {
+      "id": 46,
+      "question": "Hey, remember that time we talked about our jobs? Can you remind me what year you said you finished school?",
+      "ground_truth": "Yeah, I finished school in 1995.",
+      "prediction": "I finished school in 1995. It's been quite a while! How's your nursing school journey going so far?",
+      "accuracy": 1,
+      "rouge_l_recall": 0.8333
+    },
+    {
+      "id": 47,
+      "question": "Hey, remember that time we talked about baking cookies? Can you tell me again what my peanut butter cookie recipe was?",
+      "ground_truth": "It was 1 cup of peanut butter, 1 cup of sugar, and 1 egg. Mix and roll them, then bake for 10-12 minutes.",
+      "prediction": "I believe your peanut butter cookie recipe was: \n\n- 1 cup of peanut butter\n- 1 cup of sugar\n- 1 egg\n\nYou mix them together, roll into balls, and bake for 10-12 minutes. \n\nCorrect me if I missed any details! 😊",
+      "accuracy": 1,
+      "rouge_l_recall": 0.7917
+    },
+    {
+      "id": 48,
+      "question": "Hey, remember that time we talked about our ideal Saturdays? What was that thing you said you liked to do?",
+      "ground_truth": "Have a bottle of wine.",
+      "prediction": "I remember mentioning that my ideal Saturday involves enjoying a nice bottle of wine. It's always nice to relax after a busy week! How about you? You mentioned something about a cheeseburger and a war documentary, right?",
+      "accuracy": 1,
+      "rouge_l_recall": 0.8
+    },
+    {
+      "id": 49,
+      "question": "Hey, remember that time we talked about your dogs? How many do you have again?",
+      "ground_truth": "I have 3 dogs!",
+      "prediction": "I have three dogs! They're all friendly and enjoy going on walks, so you'd get along with them just fine.",
+      "accuracy": 1,
+      "rouge_l_recall": 0.75
+    }
+  ]
+}
