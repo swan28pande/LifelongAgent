@@ -46,22 +46,14 @@ class MemoryStore:
                 CREATE TABLE IF NOT EXISTS memories (
                     id           INTEGER PRIMARY KEY AUTOINCREMENT,
                     content      TEXT    NOT NULL,
-                    type         TEXT,
                     subject      TEXT,
                     speaker      TEXT    DEFAULT 'user',
-                    source_date  TEXT,
-                    extracted_at TEXT    DEFAULT (datetime('now'))
+                    source_date  TEXT
                 )
             """)
-            conn.execute("CREATE INDEX IF NOT EXISTS idx_type    ON memories(type)")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_subject ON memories(subject)")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_speaker ON memories(speaker)")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_date    ON memories(source_date)")
-            # Add speaker column to existing DBs that predate this change
-            try:
-                conn.execute("ALTER TABLE memories ADD COLUMN speaker TEXT DEFAULT 'user'")
-            except Exception:
-                pass
 
             # Conversations table for exact chronological retrieval
             conn.execute("""
@@ -79,24 +71,23 @@ class MemoryStore:
 
     # ── Memories (SQL) ──────────────────────────────────────────────
 
-    def add_memory(self, content: str, type: str, subject: str, source_date: str,
+    def add_memory(self, content: str, subject: str, source_date: str,
                    speaker: str = "user"):
         with self._conn() as conn:
             conn.execute(
-                "INSERT INTO memories (content, type, subject, speaker, source_date) VALUES (?,?,?,?,?)",
-                (content, type.lower().strip(), subject.lower().strip(),
+                "INSERT INTO memories (content, subject, speaker, source_date) VALUES (?,?,?,?)",
+                (content, subject.lower().strip(),
                  speaker.lower().strip(), source_date),
             )
 
     def add_memories(self, memories: List[Dict], source_date: str):
-        """Bulk insert. Each dict: {content, type, subject, speaker}."""
+        """Bulk insert. Each dict: {content, subject, speaker}."""
         with self._conn() as conn:
             conn.executemany(
-                "INSERT INTO memories (content, type, subject, speaker, source_date) VALUES (?,?,?,?,?)",
+                "INSERT INTO memories (content, subject, speaker, source_date) VALUES (?,?,?,?)",
                 [
                     (
                         m["content"],
-                        m.get("type", "general").lower().strip(),
                         m.get("subject", "").lower().strip(),
                         m.get("speaker", "user").lower().strip(),
                         source_date,
@@ -107,7 +98,6 @@ class MemoryStore:
 
     def query_memories(
         self,
-        type: Optional[str] = None,
         subject: Optional[str] = None,
         speaker: Optional[str] = None,
         start_date: Optional[str] = None,
@@ -116,8 +106,6 @@ class MemoryStore:
     ) -> List[Dict]:
         """Flexible SQL query — any combination of filters."""
         clauses, params = [], []
-        if type:
-            clauses.append("type = ?"); params.append(type.lower())
         if subject:
             clauses.append("subject = ?"); params.append(subject.lower())
         if speaker:
@@ -128,7 +116,7 @@ class MemoryStore:
             clauses.append("source_date <= ?"); params.append(end_date)
 
         where = f"WHERE {' AND '.join(clauses)}" if clauses else ""
-        sql = (f"SELECT id, content, type, subject, speaker, source_date FROM memories "
+        sql = (f"SELECT id, content, subject, speaker, source_date FROM memories "
                f"{where} ORDER BY source_date LIMIT ?")
         params.append(limit)
 
@@ -136,15 +124,18 @@ class MemoryStore:
             rows = conn.execute(sql, params).fetchall()
 
         return [
-            {"id": r[0], "content": r[1], "type": r[2],
-             "subject": r[3], "speaker": r[4], "date": r[5]}
+            {"id": r[0], "content": r[1],
+             "subject": r[2], "speaker": r[3], "date": r[4]}
             for r in rows
         ]
 
-    def get_all_types(self) -> List[str]:
+    def get_unique_preferences(self) -> List[Dict]:
+        """Returns all unique [subject, content] pairs to maintain taxonomic consistency."""
         with self._conn() as conn:
-            rows = conn.execute("SELECT DISTINCT type FROM memories ORDER BY type").fetchall()
-        return [r[0] for r in rows if r[0]]
+            rows = conn.execute(
+                "SELECT DISTINCT subject, content FROM memories ORDER BY subject, content"
+            ).fetchall()
+        return [{"subject": r[0], "content": r[1]} for r in rows]
 
     def get_all_subjects(self) -> List[str]:
         with self._conn() as conn:
@@ -167,7 +158,7 @@ class MemoryStore:
         ordered chronologically — used for temporal injection in summaries.
         """
         clauses = [
-            "type = 'preference'", "subject = ?",
+            "subject = ?",
             "source_date >= ?", "source_date <= ?",
         ]
         params = [subject.lower(), start_date, end_date]

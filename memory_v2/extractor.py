@@ -18,8 +18,7 @@ EXTRACTION_SYSTEM = """\
 You are a preference extraction agent. Extract only user preferences from the conversation.
 
 A preference is a choice or liking for a specific value within a category (domain).
-Each preference memory has four fields:
-  "type"    : always "preference"
+Each preference memory has three fields:
   "subject" : the main category the preference belongs to
   "speaker" : who this preference belongs to (usually "user")
   "content" : the CORE choice only (noun/noun-phrase).
@@ -102,9 +101,9 @@ class MemoryExtractor:
         """
         raw_text = self._format_conversations(date, conversations)
         existing_subjects = self.store.get_all_subjects()
-        # Fetch some recent preferences for context to maintain consistency
-        recent = self.store.query_memories(type="preference", limit=100)
-        existing_prefs = [f"[{m['subject']}] {m['content']}" for m in recent]
+        # Fetch unique existing preferences to maintain consistency
+        unique_prefs = self.store.get_unique_preferences()
+        existing_prefs = [f"[{m['subject']}] {m['content']}" for m in unique_prefs]
         
         extracted = self.extract_memories(raw_text, date, existing_subjects, existing_prefs)
 
@@ -195,7 +194,7 @@ class MemoryExtractor:
             memories = result.get("memories", result) if isinstance(result, dict) else result
             if not isinstance(memories, list):
                 return []
-            return [m for m in memories if isinstance(m, dict) and m.get("type") == "preference" and m.get("content")]
+            return [m for m in memories if isinstance(m, dict) and m.get("content")]
         except Exception as e:
             print(f"  Extraction error: {e}")
             return []

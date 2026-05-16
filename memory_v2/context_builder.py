@@ -151,7 +151,6 @@ class ContextBuilder:
         lines = []
         for subj in subjects or [None]:
             rows = self.store.query_memories(
-                type="preference",
                 subject=subj,
                 speaker=speaker,
                 limit=k * 3,

@@ -217,10 +217,10 @@ class LifelongAgent:
 
     # ── Inspection helpers ──────────────────────────────────────────
 
-    def show_memories(self, type: Optional[str] = None, subject: Optional[str] = None, limit: int = 20):
-        rows = self.store.query_memories(type=type, subject=subject, limit=limit)
+    def show_memories(self, subject: Optional[str] = None, limit: int = 20):
+        rows = self.store.query_memories(subject=subject, limit=limit)
         for r in rows:
-            print(f"[{r['date']}] ({r['type']}/{r['subject']}) {r['content']}")
+            print(f"[{r['date']}] ({r['subject']}) {r['content']}")
 
     def show_context(self, query: str):
         """Print the context that would be injected for a given query."""

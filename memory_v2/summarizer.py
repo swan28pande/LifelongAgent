@@ -510,7 +510,7 @@ class Summarizer:
         if cache_key in self._domain_cache:
             return self._domain_cache[cache_key]
 
-        all_prefs = self.store.query_memories(type="preference", speaker=speaker, limit=2000)
+        all_prefs = self.store.query_memories(speaker=speaker, limit=2000)
         if not all_prefs:
             return []
 
