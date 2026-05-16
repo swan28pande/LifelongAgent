@@ -121,7 +121,7 @@ def sessions_as_list(user_data: dict):
         session = user_data["sessions"][date]
         turns = [{"speaker": t["speaker"], "text": t["text"]}
                  for t in session["turns"]]
-        yield date, [{"time_of_day": "Morning", "turns": turns}]
+        yield date, [{"time_of_day": "", "turns": turns}]
 
 # ── Rsum memory builder ───────────────────────────────────────────────
 
@@ -168,16 +168,10 @@ def run():
 
     print(f"  {len(user_data['sessions'])} sessions, {len(qa_pairs)} QA pairs")
 
-    # ── Build all memories once ───────────────────────────────────────
-    print("\nBuilding Rsum memory (21 sessions)...")
-    rsum_mem = build_rsum_memory(user_data, rsum_prompts)
-    print("  Done.")
+    # ── Build only memory_v2 ──────────────────────────────────────────
 
-    print("\nBuilding Naive RAG index...")
-    naive_rag = build_naive_rag_store(user_data)
-    print("  Done.")
 
-    print("\nBuilding memory_v2 (extraction + summaries)...")
+    print("\nBuilding memory_v2 (extraction)...")
     from memory_v2 import LifelongAgent
     tmp = tempfile.mkdtemp(prefix="synth_eval_")
     try:
@@ -185,70 +179,113 @@ def run():
                               extract_model="gpt-4o-mini")
         for date, convs in sessions_as_list(user_data):
             agent.ingest(date, convs)
-        agent.build_summaries()
-        print("  Done.")
 
-        # ── Evaluate ─────────────────────────────────────────────────
-        METHODS = ["naive_rag", "rsum", "memory_v2"]
-        all_scores  = {m: [] for m in METHODS}
-        diff_scores = {m: defaultdict(list) for m in METHODS}
-        type_scores = {m: defaultdict(list) for m in METHODS}
-        records     = []
+        # Export raw extracted memories
+        all_mems = agent.store.query_memories(limit=5000)
+        with open("results/extracted_memories_agnostic.json", "w") as f:
+            json.dump(all_mems, f, indent=2)
+        print(f"\nIngestion complete. Saved {len(all_mems)} raw memories.")
 
-        print(f"\nAnswering {len(qa_pairs)} questions...")
-        for qa in tqdm(qa_pairs, desc="QA"):
-            q    = qa["question"]
-            a    = qa["answer"]
-            diff = qa["difficulty"]
-            qtype = qa["type"]
+        # Consolidate with LLM-based canonical naming
+        agent.consolidate_memories(threshold=0.85)
 
-            r_naive = naive_rag.search(q, k=5)
-            r_naive = ask(q, r_naive)
+        # Export consolidated memories
+        consolidated_mems = agent.store.query_memories(limit=5000)
+        with open("results/consolidated_memories_llm.json", "w") as f:
+            json.dump(consolidated_mems, f, indent=2)
 
-            r_rsum  = ask(q, rsum_mem[:4000])
-            r_mv2   = agent.chat(q)
+        # ── Build hierarchical summaries ──
+        print("Building hierarchical summaries...")
+        agent.build_summaries(force=True, consolidation_threshold=0.75)
+        
+        # Export ALL summaries
+        print("Exporting all summaries...")
+        all_summaries = {}
+        if agent.store._summary_store:
+            for doc in agent.store._summary_store.docstore._dict.values():
+                ident = doc.metadata.get("identifier", "unknown")
+                all_summaries[ident] = doc.page_content
+        
+        with open("results/final_summaries.json", "w") as f:
+            json.dump(all_summaries, f, indent=2)
 
-            s_naive = token_f1(r_naive, a)
-            s_rsum  = token_f1(r_rsum,  a)
-            s_mv2   = token_f1(r_mv2,   a)
+        # ── Build Baselines ──────────────────────────────────────────
+        print("\nBuilding Naive RAG store...")
+        naive_rag = build_naive_rag_store(user_data)
 
-            for method, score, resp in [
-                ("naive_rag",  s_naive, r_naive),
-                ("rsum",       s_rsum,  r_rsum),
-                ("memory_v2",  s_mv2,   r_mv2),
-            ]:
-                all_scores[method].append(score)
-                diff_scores[method][diff].append(score)
-                type_scores[method][qtype].append(score)
+        print("\nBuilding Rsum memory (recursive summary)...")
+        rsum_memory = build_rsum_memory(user_data, rsum_prompts)
+        with open("results/rsum_memory.json", "w") as f:
+            json.dump({"memory": rsum_memory}, f, indent=2)
 
-            records.append({
-                "question": q, "answer": a,
-                "difficulty": diff, "type": qtype,
-                "naive_rag":  {"response": r_naive, "score": s_naive},
-                "rsum":       {"response": r_rsum,  "score": s_rsum},
-                "memory_v2":  {"response": r_mv2,   "score": s_mv2},
+        # ── Evaluate QA ───────────────────────────────────────────────
+        print(f"\nAnswering {len(qa_pairs)} questions for all methods...")
+        all_scores  = defaultdict(list)
+        diff_scores = defaultdict(lambda: defaultdict(list))
+        type_scores = defaultdict(lambda: defaultdict(list))
+        detailed_results = []
+        
+        for qa in tqdm(qa_pairs):
+            q, a = qa["question"], qa["answer"]
+            diff, qtype = qa["difficulty"], qa["type"]
+            
+            # 1. memory_v2
+            resp_v2 = agent.chat(q)
+            s_v2 = token_f1(resp_v2, a)
+            all_scores["memory_v2"].append(s_v2)
+            diff_scores["memory_v2"][diff].append(s_v2)
+            type_scores["memory_v2"][qtype].append(s_v2)
+
+            # 2. Naive RAG
+            context_rag = naive_rag.search(q, k=5)
+            resp_rag = ask(q, context_rag)
+            s_rag = token_f1(resp_rag, a)
+            all_scores["naive_rag"].append(s_rag)
+            diff_scores["naive_rag"][diff].append(s_rag)
+            type_scores["naive_rag"][qtype].append(s_rag)
+
+            # 3. Rsum
+            resp_rsum = ask(q, rsum_memory)
+            s_rsum = token_f1(resp_rsum, a)
+            all_scores["rsum"].append(s_rsum)
+            diff_scores["rsum"][diff].append(s_rsum)
+            type_scores["rsum"][qtype].append(s_rsum)
+
+            detailed_results.append({
+                "question": q,
+                "answer": a,
+                "difficulty": diff,
+                "type": qtype,
+                "responses": {
+                    "memory_v2": {"text": resp_v2, "score": s_v2},
+                    "naive_rag": {"text": resp_rag, "score": s_rag},
+                    "rsum": {"text": resp_rsum, "score": s_rsum}
+                }
             })
 
-        # ── Print results ─────────────────────────────────────────────
+        # Generate final stats
+        stats = {}
+        for m in all_scores.keys():
+            stats[m] = {
+                "overall": float(np.mean(all_scores[m])),
+                "by_difficulty": {d: float(np.mean(diff_scores[m][d])) if diff_scores[m][d] else 0 for d in ["simple", "mid", "difficult"]},
+                "by_type": {t: float(np.mean(type_scores[m][t])) if type_scores[m][t] else 0 for t in ["factual", "factual_evolving", "recall", "pattern_id", "prediction", "transition"]}
+            }
+
+        with open("results/comparative_evaluation.json", "w") as f:
+            json.dump({
+                "timestamp": datetime.now().isoformat(),
+                "summary": stats,
+                "details": detailed_results
+            }, f, indent=2)
+
         print_results(all_scores, diff_scores, type_scores)
-
-        with open("results/synthetic_results.json", "w") as f:
-            json.dump({"summary": {
-                m: {
-                    "overall": float(np.mean(all_scores[m])),
-                    "by_difficulty": {d: float(np.mean(v)) for d, v in diff_scores[m].items()},
-                    "by_type":       {t: float(np.mean(v)) for t, v in type_scores[m].items()},
-                    "n": len(all_scores[m]),
-                } for m in METHODS
-            }, "records": records}, f, indent=2)
-        print("\nSaved → results/synthetic_results.json")
-
+        print("\nSaved detailed comparison → results/comparative_evaluation.json")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
-
 def print_results(all_scores, diff_scores, type_scores):
-    METHODS = ["naive_rag", "rsum", "memory_v2"]
+    METHODS = list(all_scores.keys())
     diffs = ["simple", "mid", "difficult"]
     types = ["factual", "factual_evolving", "recall", "pattern_id", "prediction", "transition"]
 

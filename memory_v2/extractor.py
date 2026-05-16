@@ -9,66 +9,88 @@ before being written to the store.
 
 import json
 from typing import List, Dict
-from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 
 from .store import MemoryStore
 
 EXTRACTION_SYSTEM = """\
-You are a memory extraction agent. Extract every piece of information worth remembering long-term from the conversation.
+You are a preference extraction agent. Extract only user preferences from the conversation.
 
-Each memory has four fields:
-  "type"    : preference | fact | goal | event | routine | relationship | opinion (or anything fitting)
-  "subject" : the main entity the memory is about (e.g. "coffee", "shoes", "exercise")
-  "speaker" : who this memory belongs to — use their actual name if visible (e.g. "caroline", "melanie").
-              For single-person conversations use "user".
-  "content" :
-    - preference → bare value only, noun/noun-phrase, no verbs, no speaker name, no time words
-                   e.g. subject "coffee", speaker "user" → content "espresso"
-    - all others → one complete sentence naming the speaker
-                   e.g. "Caroline wants to finish her counseling degree by next year."
+A preference is a choice or liking for a specific value within a category (domain).
+Each preference memory has four fields:
+  "type"    : always "preference"
+  "subject" : the main category the preference belongs to
+  "speaker" : who this preference belongs to (usually "user")
+  "content" : the CORE choice only (noun/noun-phrase).
 
-TEMPORAL RESOLUTION — critical:
-The conversation starts with "Date: YYYY-MM-DD". Use this date to resolve ALL relative
-time references into absolute dates before writing the content.
-  "yesterday"        → session_date - 1 day  → write the resolved date
-  "last Saturday"    → compute the actual date → write it
-  "a few days ago"   → approximate (session_date - 3 days) → write the resolved date
-  "last week"        → session_date - 7 days → write the resolved date
-  "next month"       → keep as approximate future date
+STRICT NOISE REDUCTION:
+- Extract only the PRIMARY choice.
+- DO NOT extract modifiers, ingredients, or preparation details as separate preferences.
+- INCORRECT: subject "beverage", content "vanilla" / "cinnamon on top" / "french press"
+- CORRECT: subject "beverage", content "oat milk latte" / "black coffee"
+- If a detail is mentioned (e.g., "latte with vanilla"), capture only the main item "oat milk latte".
 
-Always include the resolved absolute date in the content for events and facts with timing.
-e.g. session date 2023-05-08, "I went to a support group yesterday"
-  → content: "Caroline attended an LGBTQ support group on 2023-05-07."
+LOCATION IS NOT A PREFERENCE:
+- NEVER extract WHERE the user bought or consumed something as a separate preference entry.
+- Names like "little café nearby", "Brew & Brew", "home", "little café downtown", "on the way"
+  are LOCATIONS/CONTEXTS, not preference values.
+- INCORRECT: subject "beverage", content "little café nearby"
+- INCORRECT: subject "beverage", content "home"
+- CORRECT: subject "beverage", content "oat milk latte"  ← drink type only, one entry
+- If location context matters, it belongs inside the content of the drink preference only when
+  it genuinely changes the drink (e.g. "café latte" vs "home-brewed coffee" are the same drink).
 
-Skip small talk. Return ONLY: {{"memories": [...]}}
-"""
+ONE BEVERAGE PER DAY RULE:
+- Extract AT MOST ONE beverage preference per day — the DOMINANT or MOST SIGNIFICANT drink.
+- If both black coffee and an oat milk latte are mentioned in the same day's conversation,
+  pick whichever is described as the main/primary drink for that day.
+- Do NOT create two separate beverage preference entries for the same day.
 
-DEDUP_SYSTEM = """\
-You are a memory deduplication agent.
+SIMILAR RULES FOR ALL SUBJECTS:
+- For any subject (exercise, clothing, food, etc.), extract at most ONE primary value per day.
+- Contextual details (where, how, with whom) must NOT become separate preference entries.
 
-You will receive:
-  1. EXISTING memories already stored for this subject.
-  2. NEW memories just extracted from today's conversations.
+CONSISTENCY:
+- Look at the "EXISTING PREFERENCES" list.
+- Use the exact same "content" string if the user is referring to a choice they have made before.
+- Avoid creating near-duplicate values like "latte" vs "oat milk latte" if one is already established.
 
-Return only the new memories that add information not already captured.
-A memory is a duplicate if it says essentially the same thing as an existing one.
-A memory is an UPDATE if it contradicts an existing one — keep it.
-
-CONTENT FORMAT — return each memory exactly as received in NEW. Do not rephrase.
-  preference → content stays as a bare value (e.g. "espresso", "blue t-shirt")
-  others     → content stays as the original sentence
+TEMPORAL RESOLUTION:
+The conversation starts with "Date: YYYY-MM-DD". Use this to resolve relative time references.
 
 Return ONLY a JSON object: {{"memories": [...]}}
-Each item keeps the same {{type, subject, content}} structure.
 """
+
+# DEDUP_SYSTEM = """\
+
+# You are a memory deduplication agent.
+
+# You will receive:
+#   1. EXISTING memories already stored for this subject.
+#   2. NEW memories just extracted from today's conversations.
+
+# Return only the new memories that add information not already captured.
+# A memory is a duplicate if it says essentially the same thing as an existing one.
+# A memory is an UPDATE if it contradicts an existing one — keep it.
+
+# CONTENT FORMAT — return each memory exactly as received in NEW. Do not rephrase.
+#   preference → content stays as a bare value (e.g. "espresso", "blue t-shirt")
+#   others     → content stays as the original sentence
+
+# Return ONLY a JSON object: {{"memories": [...]}}
+# Each item keeps the same {{type, subject, content}} structure.
+# """
 
 
 class MemoryExtractor:
-    def __init__(self, store: MemoryStore, model: str = "gpt-4o-mini"):
+    def __init__(self, store: MemoryStore, model: str = "gpt-5.5", llm=None):
         self.store = store
-        self.llm = ChatOpenAI(model=model, temperature=0)
+        if llm is not None:
+            self.llm = llm
+        else:
+            from langchain_openai import ChatOpenAI
+            self.llm = ChatOpenAI(model=model, temperature=0)
 
     def extract_and_store(self, date: str, conversations: List[Dict]) -> List[Dict]:
         """
@@ -79,17 +101,24 @@ class MemoryExtractor:
         Returns the new memories that were actually stored.
         """
         raw_text = self._format_conversations(date, conversations)
-        extracted = self._extract(raw_text)
+        existing_subjects = self.store.get_all_subjects()
+        # Fetch some recent preferences for context to maintain consistency
+        recent = self.store.query_memories(type="preference", limit=100)
+        existing_prefs = [f"[{m['subject']}] {m['content']}" for m in recent]
+        
+        extracted = self.extract_memories(raw_text, date, existing_subjects, existing_prefs)
 
         if not extracted:
             return []
 
-        new_memories = self._deduplicate(extracted)
+        # Deduplicate only against memories from the SAME day to reduce noise while keeping daily tracking
+        # new_memories = self._deduplicate(extracted, date_filter=date)
+
+        new_memories = extracted
 
         if new_memories:
             self.store.add_memories(new_memories, source_date=date)
-            print(f"  [{date}] Stored {len(new_memories)} new memories "
-                  f"(extracted {len(extracted)}, deduped {len(extracted)-len(new_memories)})")
+            print(f"  [{date}] Stored {len(new_memories)} new memories (extracted {len(extracted)})")
 
         for chunk_text, chunk_idx in self._chunk_conversations(date, conversations):
             self.store.add_conversation(
@@ -102,6 +131,7 @@ class MemoryExtractor:
     # ── Private helpers ─────────────────────────────────────────────
 
     CHUNK_SIZE = 5  # turns per FAISS document
+
 
     def _format_conversations(self, date: str, conversations: List[Dict]) -> str:
         """Full session text used for memory extraction."""
@@ -142,59 +172,74 @@ class MemoryExtractor:
             yield "\n".join(lines), chunk_idx
             chunk_idx += 1
 
-    def _extract(self, raw_text: str) -> List[Dict]:
-        prompt = ChatPromptTemplate.from_messages([
-            ("system", EXTRACTION_SYSTEM),
-            ("human", "{text}"),
-        ])
+    def extract_memories(self, text: str, date: str, existing_subjects: List[str] = [], 
+                         existing_prefs: List[str] = []) -> List[Dict]:
+        """Extract memories from a conversation text."""
         try:
+            subjects_str = "\n".join(f"  - {s}" for s in existing_subjects) if existing_subjects else "  (None yet)"
+            prefs_str = "\n".join(f"  - {p}" for p in set(existing_prefs)) if existing_prefs else "  (None yet)"
+            
+            prompt = ChatPromptTemplate.from_messages([
+                ("system", EXTRACTION_SYSTEM),
+                ("user", "Date: {date}\n\nExisting Subjects:\n{existing_subjects}\n\nExisting Preferences (for consistency):\n{existing_prefs}\n\nConversation:\n{text}")
+            ])
             chain = prompt | self.llm | JsonOutputParser()
-            result = chain.invoke({"text": raw_text})
+            result = chain.invoke({
+                "text": text,
+                "date": date,
+                "existing_subjects": subjects_str,
+                "existing_prefs": prefs_str
+            })
             if result is None:
                 return []
             memories = result.get("memories", result) if isinstance(result, dict) else result
             if not isinstance(memories, list):
                 return []
-            return [m for m in memories if isinstance(m, dict) and m.get("content")]
+            return [m for m in memories if isinstance(m, dict) and m.get("type") == "preference" and m.get("content")]
         except Exception as e:
             print(f"  Extraction error: {e}")
             return []
 
-    def _deduplicate(self, extracted: List[Dict]) -> List[Dict]:
-        """Group by subject and deduplicate each group against existing DB entries."""
-        from collections import defaultdict
-        groups: Dict[str, List[Dict]] = defaultdict(list)
-        for m in extracted:
-            groups[m.get("subject", "")].append(m)
+    # def _deduplicate(self, extracted: List[Dict], date_filter: Optional[str] = None) -> List[Dict]:
+    #     """Group by subject and deduplicate each group against existing DB entries."""
+    #     from collections import defaultdict
+    #     groups: Dict[str, List[Dict]] = defaultdict(list)
+    #     for m in extracted:
+    #         groups[m.get("subject", "")].append(m)
 
-        survivors = []
-        for subject, new_batch in groups.items():
-            existing = self.store.query_memories(subject=subject, limit=50)
-            if not existing:
-                survivors.extend(new_batch)
-                continue
+    #     survivors = []
+    #     for subject, new_batch in groups.items():
+    #         existing = self.store.query_memories(
+    #             subject=subject,
+    #             start_date=date_filter,
+    #             end_date=date_filter,
+    #             limit=50
+    #         )
+    #         if not existing:
+    #             survivors.extend(new_batch)
+    #             continue
 
-            existing_text = "\n".join(
-                f"- [{e['type']}] {e['content']}" for e in existing
-            )
-            new_text = json.dumps(new_batch, ensure_ascii=False)
+    #         existing_text = "\n".join(
+    #             f"- [{e['type']}] {e['content']}" for e in existing
+    #         )
+    #         new_text = json.dumps(new_batch, ensure_ascii=False)
 
-            prompt = ChatPromptTemplate.from_messages([
-                ("system", DEDUP_SYSTEM),
-                ("human",
-                 "EXISTING:\n{existing}\n\nNEW:\n{new}\n\n"
-                 "Return only the non-duplicate new memories."),
-            ])
-            try:
-                chain = prompt | self.llm | JsonOutputParser()
-                result = chain.invoke({"existing": existing_text, "new": new_text})
-                kept = result.get("memories", result) if isinstance(result, dict) else result
-                if isinstance(kept, list):
-                    survivors.extend(kept)
-                else:
-                    survivors.extend(new_batch)
-            except Exception as e:
-                print(f"  Dedup error for subject '{subject}': {e}. Keeping all.")
-                survivors.extend(new_batch)
+    #         prompt = ChatPromptTemplate.from_messages([
+    #             ("system", DEDUP_SYSTEM),
+    #             ("human",
+    #              "EXISTING:\n{existing}\n\nNEW:\n{new}\n\n"
+    #              "Return only the non-duplicate new memories."),
+    #         ])
+    #         try:
+    #             chain = prompt | self.llm | JsonOutputParser()
+    #             result = chain.invoke({"existing": existing_text, "new": new_text})
+    #             kept = result.get("memories", result) if isinstance(result, dict) else result
+    #             if isinstance(kept, list):
+    #                 survivors.extend(kept)
+    #             else:
+    #                 survivors.extend(new_batch)
+    #         except Exception as e:
+    #             print(f"  Dedup error for subject '{subject}': {e}. Keeping all.")
+    #             survivors.extend(new_batch)
 
-        return survivors
+    #     return survivors

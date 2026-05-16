@@ -20,12 +20,16 @@ from datetime import datetime, timedelta
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 import dotenv
 
 dotenv.load_dotenv()
 
-llm     = ChatOpenAI(model="gpt-4o-mini", temperature=0.85)
-OUT_DIR = os.path.join(os.path.dirname(__file__), "eval_dataset")
+def get_llm(model_name: str, temperature: float = 0.85):
+    if "gemini" in model_name.lower():
+        return ChatGoogleGenerativeAI(model=model_name, temperature=temperature)
+    return ChatOpenAI(model=model_name, temperature=temperature)
+
 BASE    = datetime(2026, 3, 1)  # Day 1 = Sunday
 
 
@@ -70,6 +74,28 @@ DOMAIN_PATTERNS = {
                  "description": "Alternates every 3 days: fitted t-shirt for 3 days, then oversized hoodie for 3 days, repeating."},
     "exercise": {"fn": exercise_pattern, "difficulty": "difficult",
                  "description": "Day-of-week rule: Mon/Wed/Fri = morning yoga, Tue/Thu = evening run, Sat = climbing gym, Sun = rest day."},
+}
+
+# Natural-language phrasings used in QA questions instead of raw domain names.
+DOMAIN_NATURAL = {
+    "coffee": {
+        "recall":     "What was {name} drinking on {date} ({day})?",
+        "pattern_id": "Describe the pattern in what {name} chooses to drink over time.",
+        "prediction": "What will {name} most likely be drinking on {date} ({day})?",
+        "transition": "When did the choice of what {name} was drinking switch from '{prev}' to '{cur}'?",
+    },
+    "clothing": {
+        "recall":     "What was {name} wearing on {date} ({day})?",
+        "pattern_id": "Describe the pattern in how {name} chooses what to wear.",
+        "prediction": "What will {name} most likely be wearing on {date} ({day})?",
+        "transition": "When did the style {name} was wearing switch from '{prev}' to '{cur}'?",
+    },
+    "exercise": {
+        "recall":     "How was {name} working out on {date} ({day})?",
+        "pattern_id": "Describe {name}'s routine for working out.",
+        "prediction": "How will {name} most likely be working out on {date} ({day})?",
+        "transition": "When did {name}'s way of working out switch from '{prev}' to '{cur}'?",
+    },
 }
 
 # ── Evolving facts ────────────────────────────────────────────────────────────
@@ -269,6 +295,8 @@ def generate_qa(train_days: int) -> list:
         fn         = info["fn"]
         difficulty = info["difficulty"]
         desc       = info["description"]
+        phrasing   = DOMAIN_NATURAL[domain]
+        dow_names  = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
         # Recall — sample from each week
         for w_num in range(1, (train_days // 7) + 1):
@@ -277,8 +305,11 @@ def generate_qa(train_days: int) -> list:
                 continue
             qa.append({
                 "type": "recall", "difficulty": difficulty, "domain": domain,
-                "question": f"What was {name}'s {domain} preference on {date_of(sample_day)} "
-                            f"({['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][dow(sample_day)-1]})?",
+                "question": phrasing["recall"].format(
+                    name=name,
+                    date=date_of(sample_day),
+                    day=dow_names[dow(sample_day) - 1],
+                ),
                 "answer": fn(sample_day),
                 "target_day": sample_day,
             })
@@ -286,7 +317,7 @@ def generate_qa(train_days: int) -> list:
         # Pattern identification
         qa.append({
             "type": "pattern_id", "difficulty": difficulty, "domain": domain,
-            "question": f"Describe the pattern {name} follows for {domain}.",
+            "question": phrasing["pattern_id"].format(name=name),
             "answer": desc,
         })
 
@@ -294,10 +325,10 @@ def generate_qa(train_days: int) -> list:
         for predict_day in [train_days + 1, train_days + 7, train_days + 14]:
             qa.append({
                 "type": "prediction", "difficulty": difficulty, "domain": domain,
-                "question": (
-                    f"Based on {name}'s pattern, what will they most likely "
-                    f"prefer for {domain} on {date_of(predict_day)} "
-                    f"({['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][dow(predict_day)-1]})?"
+                "question": phrasing["prediction"].format(
+                    name=name,
+                    date=date_of(predict_day),
+                    day=dow_names[dow(predict_day) - 1],
                 ),
                 "answer": fn(predict_day),
                 "target_day": predict_day,
@@ -310,9 +341,8 @@ def generate_qa(train_days: int) -> list:
             if cur_val != prev_val:
                 qa.append({
                     "type": "transition", "difficulty": difficulty, "domain": domain,
-                    "question": (
-                        f"When did {name}'s {domain} preference switch from "
-                        f"'{prev_val}' to '{cur_val}'?"
+                    "question": phrasing["transition"].format(
+                        name=name, prev=prev_val, cur=cur_val,
                     ),
                     "answer": date_of(d),
                     "target_day": d,
@@ -324,8 +354,10 @@ def generate_qa(train_days: int) -> list:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def main(num_days: int = 21, dry_run: bool = False):
-    os.makedirs(OUT_DIR, exist_ok=True)
+def main(num_days: int = 21, dry_run: bool = False, model: str = "gpt-4o-mini", out_dir: str = "eval_dataset"):
+    global llm
+    llm = get_llm(model)
+    os.makedirs(out_dir, exist_ok=True)
     name = STABLE_FACTS["name"]
 
     print(f"\n{'='*55}")
@@ -413,7 +445,7 @@ def main(num_days: int = 21, dry_run: bool = False):
     for fname, obj in [("conversations", conversations),
                        ("qa_pairs", qa_pairs),
                        ("schedules", schedules)]:
-        path = os.path.join(OUT_DIR, f"{fname}.json")
+        path = os.path.join(out_dir, f"{fname}.json")
         with open(path, "w") as f:
             json.dump(obj, f, indent=2)
         print(f"\nSaved {fname} → {path}")
@@ -434,5 +466,7 @@ if __name__ == "__main__":
     p.add_argument("--num_days",  type=int,  default=5)
     p.add_argument("--dry_run",   action="store_true",
                    help="Print schedule without generating conversations")
+    p.add_argument("--model",     type=str,  default="gpt-4o-mini")
+    p.add_argument("--out_dir",   type=str,  default="eval_dataset")
     args = p.parse_args()
-    main(args.num_days, args.dry_run)
+    main(args.num_days, args.dry_run, args.model, args.out_dir)

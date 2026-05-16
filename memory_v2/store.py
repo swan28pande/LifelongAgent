@@ -8,6 +8,7 @@ Single `memories` table — no hardcoded types. The LLM assigns type/subject fre
 import os
 import sqlite3
 import json
+import numpy as np
 from datetime import datetime
 from typing import List, Dict, Optional, Tuple
 
@@ -61,6 +62,17 @@ class MemoryStore:
                 conn.execute("ALTER TABLE memories ADD COLUMN speaker TEXT DEFAULT 'user'")
             except Exception:
                 pass
+
+            # Conversations table for exact chronological retrieval
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS conversations (
+                    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+                    source_date  TEXT,
+                    speaker      TEXT    DEFAULT 'user',
+                    content      TEXT    NOT NULL
+                )
+            """)
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_conv_date ON conversations(source_date)")
 
     def _conn(self):
         return sqlite3.connect(self.db_path)
@@ -179,7 +191,17 @@ class MemoryStore:
     # ── Raw conversations (FAISS) ───────────────────────────────────
 
     def add_conversation(self, text: str, metadata: Dict):
-        """Store a raw conversation chunk in the conversation FAISS index."""
+        """Store a raw conversation chunk in the conversation FAISS index AND SQL store."""
+        # 1. SQL Store (for fast exact date retrieval)
+        source_date = metadata.get("source_date", "")
+        speaker = metadata.get("speaker", "user")
+        with self._conn() as conn:
+            conn.execute(
+                "INSERT INTO conversations (source_date, speaker, content) VALUES (?,?,?)",
+                (source_date, speaker, text)
+            )
+
+        # 2. FAISS Store (for semantic retrieval)
         doc = Document(page_content=text, metadata=metadata)
         if self._conv_store is None:
             self._conv_store = FAISS.from_documents([doc], self.embeddings)
@@ -192,13 +214,21 @@ class MemoryStore:
             return []
         return self._conv_store.similarity_search(query, k=k)
 
+    def get_conversations_by_date_range(self, start_date: str, end_date: str) -> List[Document]:
+        """Return all conversation chunks whose source_date falls in [start_date, end_date] using SQL."""
+        sql = "SELECT content, source_date, speaker FROM conversations WHERE source_date >= ? AND source_date <= ? ORDER BY source_date ASC, id ASC"
+        with self._conn() as conn:
+            rows = conn.execute(sql, (start_date, end_date)).fetchall()
+        return [Document(page_content=r[0], metadata={"source_date": r[1], "speaker": r[2]}) for r in rows]
+
     def get_recent_conversations(self, k: int = 10) -> List[Document]:
-        """Return the k most recent conversation chunks by source_date metadata."""
-        if self._conv_store is None:
-            return []
-        all_docs = list(self._conv_store.docstore._dict.values())
-        all_docs.sort(key=lambda d: d.metadata.get("source_date", ""), reverse=True)
-        return all_docs[:k]
+        """Return the k most recent conversation chunks using SQL, ordered chronologically."""
+        sql = "SELECT content, source_date, speaker FROM conversations ORDER BY source_date DESC, id DESC LIMIT ?"
+        with self._conn() as conn:
+            rows = conn.execute(sql, (k,)).fetchall()
+        # The query gets the most recent ones, but we want to return them in chronological order
+        rows.reverse()
+        return [Document(page_content=r[0], metadata={"source_date": r[1], "speaker": r[2]}) for r in rows]
 
     # ── Summaries (FAISS) ───────────────────────────────────────────
 
@@ -254,6 +284,7 @@ class MemoryStore:
             if parts:
                 return "\n\n".join(parts)
         return None
+
 
     # ── Helpers ─────────────────────────────────────────────────────
 

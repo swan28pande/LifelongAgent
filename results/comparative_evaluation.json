@@ -1,0 +1,1475 @@
+{
+  "timestamp": "2026-05-08T16:39:23.035035",
+  "summary": {
+    "memory_v2": {
+      "overall": 0.2442612607429683,
+      "by_difficulty": {
+        "simple": 0.3980680304858873,
+        "mid": 0.15897435897435896,
+        "difficult": 0.10873236670450294
+      },
+      "by_type": {
+        "factual": 0.42666666666666664,
+        "factual_evolving": 0.4793578414139332,
+        "recall": 0.0,
+        "pattern_id": 0.28943278943278944,
+        "prediction": 0.16283969728242173,
+        "transition": 0.16879561541215676
+      }
+    },
+    "naive_rag": {
+      "overall": 0.1546994539611532,
+      "by_difficulty": {
+        "simple": 0.29782287604868246,
+        "mid": 0.024813895781637715,
+        "difficult": 0.052910052910052914
+      },
+      "by_type": {
+        "factual": 0.3911111111111111,
+        "factual_evolving": 0.3356191194426489,
+        "recall": 0.0,
+        "pattern_id": 0.250384024577573,
+        "prediction": 0.0,
+        "transition": 0.09183673469387756
+      }
+    },
+    "rsum": {
+      "overall": 0.1333655406433379,
+      "by_difficulty": {
+        "simple": 0.2767898675295783,
+        "mid": 0.027149321266968326,
+        "difficult": 0.019834307992202732
+      },
+      "by_type": {
+        "factual": 0.3466666666666667,
+        "factual_evolving": 0.3218913270637409,
+        "recall": 0.0,
+        "pattern_id": 0.31282249742002066,
+        "prediction": 0.14722222222222223,
+        "transition": 0.0
+      }
+    }
+  },
+  "details": [
+    {
+      "question": "What does Jordan do for work?",
+      "answer": "graphic designer at a small agency",
+      "difficulty": "simple",
+      "type": "factual",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan is a senior designer.",
+          "score": 0.22222222222222224
+        },
+        "naive_rag": {
+          "text": "Jordan is a senior designer.",
+          "score": 0.22222222222222224
+        },
+        "rsum": {
+          "text": "Jordan is a senior designer.",
+          "score": 0.22222222222222224
+        }
+      }
+    },
+    {
+      "question": "Where does Jordan live?",
+      "answer": "Austin, Texas",
+      "difficulty": "simple",
+      "type": "factual",
+      "responses": {
+        "memory_v2": {
+          "text": "Austin.",
+          "score": 0.6666666666666666
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "Who does Jordan live with?",
+      "answer": "roommate named Sam",
+      "difficulty": "simple",
+      "type": "factual",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan lives with his roommate, Sam.",
+          "score": 0.4444444444444444
+        },
+        "naive_rag": {
+          "text": "Jordan lives with a roommate named Sam.",
+          "score": 0.6666666666666666
+        },
+        "rsum": {
+          "text": "Jordan lives with their roommate Sam.",
+          "score": 0.4444444444444444
+        }
+      }
+    },
+    {
+      "question": "What is Jordan's main hobby?",
+      "answer": "rock climbing",
+      "difficulty": "simple",
+      "type": "factual",
+      "responses": {
+        "memory_v2": {
+          "text": "Climbing.",
+          "score": 0.6666666666666666
+        },
+        "naive_rag": {
+          "text": "Climbing.",
+          "score": 0.6666666666666666
+        },
+        "rsum": {
+          "text": "Climbing.",
+          "score": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "question": "What are Jordan's dietary preferences?",
+      "answer": "vegetarian",
+      "difficulty": "simple",
+      "type": "factual",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan follows a vegetarian diet and prefers oat milk lattes, with occasional shifts to other beverages.",
+          "score": 0.13333333333333333
+        },
+        "naive_rag": {
+          "text": "Jordan follows a vegetarian diet.",
+          "score": 0.4
+        },
+        "rsum": {
+          "text": "Jordan maintains a vegetarian diet.",
+          "score": 0.4
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: city?",
+      "answer": "Jordan lives in Austin, Texas.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan lives in Austin.",
+          "score": 0.888888888888889
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Jordan is in Austin.",
+          "score": 0.6666666666666665
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: job?",
+      "answer": "Jordan works as a graphic designer at a small agency.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan is a senior designer, recently promoted in early 2026.",
+          "score": 0.23529411764705882
+        },
+        "naive_rag": {
+          "text": "Jordan is a senior designer with new responsibilities.",
+          "score": 0.26666666666666666
+        },
+        "rsum": {
+          "text": "Jordan is a senior designer navigating a busy schedule, working on a campaign redesign with a minimalist aesthetic.",
+          "score": 0.2727272727272727
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: diet?",
+      "answer": "Jordan is vegetarian.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan prefers oat milk lattes, enjoys vegetarian meals, and has been eating a lot of veggie stir-fries.",
+          "score": 0.2222222222222222
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Jordan maintains a vegetarian diet, enjoys quick and healthy veggie stir-fries, and loves oat milk lattes.",
+          "score": 0.25
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: lives with?",
+      "answer": "Jordan lives with a roommate named Sam.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan lives with his roommate, Sam, and his puppy, Mango.",
+          "score": 0.6666666666666667
+        },
+        "naive_rag": {
+          "text": "Jordan lives with a roommate named Sam.",
+          "score": 1.0
+        },
+        "rsum": {
+          "text": "Jordan lives with a roommate named Sam.",
+          "score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: age?",
+      "answer": "Jordan is 28 years old.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Age is not specified.",
+          "score": 0.22222222222222224
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Jordan is 28 years old.",
+          "score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: hobby?",
+      "answer": "Jordan's main hobby is rock climbing.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan is actively preparing for a climbing competition and integrates yoga into their exercise routine.",
+          "score": 0.3157894736842105
+        },
+        "naive_rag": {
+          "text": "Jordan enjoys climbing and goes to the climbing gym a few times a week.",
+          "score": 0.25
+        },
+        "rsum": {
+          "text": "Jordan enjoys climbing, yoga, and experimenting with flavors in their coffee.",
+          "score": 0.25
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: deadline?",
+      "answer": "Jordan has a big client presentation deadline on March 10.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's upcoming deadline is for a client presentation on March 10, 2026.",
+          "score": 0.7000000000000001
+        },
+        "naive_rag": {
+          "text": "Jordan has a client presentation deadline on March 10, 2026.",
+          "score": 0.8888888888888888
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy coming?",
+      "answer": "Jordan's roommate Sam is getting a puppy next week.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's roommate, Sam, is getting a golden retriever puppy named Mango, which has arrived and is keeping them busy and entertained.",
+          "score": 0.46153846153846156
+        },
+        "naive_rag": {
+          "text": "Jordan's roommate Sam is getting a golden retriever puppy named Charlie next week. Jordan is excited about the puppy and is helping to prepare the apartment.",
+          "score": 0.5333333333333333
+        },
+        "rsum": {
+          "text": "Jordan is adjusting to the demands of having a puppy named Mango, which their roommate Sam recently adopted.",
+          "score": 0.4166666666666667
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: draft feedback?",
+      "answer": "Jordan received positive client feedback on a draft design.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan received positive feedback on a draft design prior to the client presentation on March 10, 2026, which helped him finalize details for the presentation.",
+          "score": 0.5333333333333333
+        },
+        "naive_rag": {
+          "text": "Jordan received positive feedback on a draft design and the client liked it.",
+          "score": 0.888888888888889
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: presentation done?",
+      "answer": "Jordan finished the client presentation and it went really well.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's client presentation on March 10, 2026, went really well, and the feedback was positive.",
+          "score": 0.5714285714285714
+        },
+        "naive_rag": {
+          "text": "Jordan's presentation went really well, and the feedback was positive.",
+          "score": 0.625
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy arrived?",
+      "answer": "Sam's puppy, a golden retriever named Mango, arrived home.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's roommate Sam's puppy, Mango, arrived on March 12, 2026.",
+          "score": 0.4444444444444445
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Jordan is adjusting to the demands of having a puppy named Mango, which their roommate Sam recently adopted.",
+          "score": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition considering?",
+      "answer": "Jordan is considering signing up for a beginner climbing competition in April.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan is actively preparing for a climbing competition in April 2026.",
+          "score": 0.6666666666666666
+        },
+        "naive_rag": {
+          "text": "Jordan is preparing for a climbing competition in April and has been fitting in more practice sessions.",
+          "score": 0.5384615384615385
+        },
+        "rsum": {
+          "text": "Jordan is excited and nervous about an upcoming beginner climbing competition in April, motivated to train and build upper body strength.",
+          "score": 0.4827586206896552
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition registered?",
+      "answer": "Jordan registered for the April climbing competition.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan registered for a beginner climbing competition in April 2026.",
+          "score": 0.8
+        },
+        "naive_rag": {
+          "text": "Jordan is preparing for a climbing competition in April.",
+          "score": 0.7142857142857143
+        },
+        "rsum": {
+          "text": "Jordan is registered for a beginner climbing competition in April.",
+          "score": 0.8
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion offered?",
+      "answer": "Jordan's agency offered them a senior designer role.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan was promoted to a senior designer role early in 2026.",
+          "score": 0.47058823529411764
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion accepted?",
+      "answer": "Jordan accepted the senior designer promotion.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan was promoted to a senior designer role in early 2026.",
+          "score": 0.5333333333333333
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip planning?",
+      "answer": "Jordan is planning a weekend trip to Barton Springs with Sam and Mango.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip done?",
+      "answer": "Jordan went to Barton Springs \u2014 it was relaxing and Mango loved the water.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan is planning a trip to Barton Springs this weekend with Sam and Mango.",
+          "score": 0.4166666666666667
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-04 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-11 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-18 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "Describe the pattern in what Jordan chooses to drink over time.",
+      "answer": "Strict 7-day cycle: oat milk latte for 7 days, then black coffee for 7 days, repeating.",
+      "difficulty": "simple",
+      "type": "pattern_id",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan shows a strong preference for oat milk lattes, with occasional shifts to other beverages. This preference appears stable for several days before shifting.",
+          "score": 0.30769230769230765
+        },
+        "naive_rag": {
+          "text": "Jordan alternates between black coffee and oat milk lattes, indicating a preference for both.",
+          "score": 0.42857142857142855
+        },
+        "rsum": {
+          "text": "Jordan prefers oat milk lattes and black coffee, enjoying them for energy and as rewards after yoga sessions.",
+          "score": 0.375
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-03-22 (Sun)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Oat milk latte.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-03-28 (Sat)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Oat milk latte.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Oat milk latte.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-04-04 (Sat)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Oat milk latte.",
+          "score": 1.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Oat milk latte.",
+          "score": 1.0
+        }
+      }
+    },
+    {
+      "question": "When did the choice of what Jordan was drinking switch from 'oat milk latte' to 'black coffee'?",
+      "answer": "2026-03-08",
+      "difficulty": "simple",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "The choice switched from 'oat milk latte' to 'black coffee' on March 8, 2026.",
+          "score": 0.375
+        },
+        "naive_rag": {
+          "text": "On March 14, 2026.",
+          "score": 0.5714285714285715
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did the choice of what Jordan was drinking switch from 'black coffee' to 'oat milk latte'?",
+      "answer": "2026-03-15",
+      "difficulty": "simple",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "The choice switched from 'black coffee' to 'oat milk latte' on March 15, 2026.",
+          "score": 0.375
+        },
+        "naive_rag": {
+          "text": "On March 16, 2026.",
+          "score": 0.5714285714285715
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-04 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-11 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-18 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "Describe the pattern in how Jordan chooses what to wear.",
+      "answer": "Alternates every 3 days: fitted t-shirt for 3 days, then oversized hoodie for 3 days, repeating.",
+      "difficulty": "mid",
+      "type": "pattern_id",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan alternates between fitted t-shirts and oversized hoodies, selecting based on activities like yoga and climbing.",
+          "score": 0.3333333333333333
+        },
+        "naive_rag": {
+          "text": "Jordan prefers comfortable clothing, often opting for fitted t-shirts and oversized hoodies, balancing style with relaxation.",
+          "score": 0.3225806451612903
+        },
+        "rsum": {
+          "text": "Jordan prefers fitted t-shirts in neutral colors for comfort and often wears an oversized hoodie for warmth during various activities.",
+          "score": 0.35294117647058826
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-03-22 (Sun)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan will most likely be wearing a fitted t-shirt and comfortable pants.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Fitted t-shirt and shorts.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-03-28 (Sat)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan will most likely be wearing a fitted t-shirt and shorts.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Fitted t-shirts and shorts.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-04-04 (Sat)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan will most likely be wearing a fitted t-shirt and comfortable shorts.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Fitted t-shirts and shorts.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did the style Jordan was wearing switch from 'fitted t-shirt' to 'oversized hoodie'?",
+      "answer": "2026-03-04",
+      "difficulty": "mid",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "The style switched from 'fitted t-shirt' to 'oversized hoodie' on March 4, 2026.",
+          "score": 0.4
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did the style Jordan was wearing switch from 'oversized hoodie' to 'fitted t-shirt'?",
+      "answer": "2026-03-07",
+      "difficulty": "mid",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "The style switched from 'oversized hoodie' to 'fitted t-shirt' on March 9, 2026.",
+          "score": 0.26666666666666666
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did the style Jordan was wearing switch from 'fitted t-shirt' to 'oversized hoodie'?",
+      "answer": "2026-03-10",
+      "difficulty": "mid",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "The style switched from 'fitted t-shirt' to 'oversized hoodie' on March 4, 2026.",
+          "score": 0.26666666666666666
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did the style Jordan was wearing switch from 'oversized hoodie' to 'fitted t-shirt'?",
+      "answer": "2026-03-13",
+      "difficulty": "mid",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "The style switched from 'oversized hoodie' to 'fitted t-shirt' on March 9, 2026.",
+          "score": 0.26666666666666666
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did the style Jordan was wearing switch from 'fitted t-shirt' to 'oversized hoodie'?",
+      "answer": "2026-03-16",
+      "difficulty": "mid",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "The style switched from 'fitted t-shirt' to 'oversized hoodie' on March 4, 2026.",
+          "score": 0.26666666666666666
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did the style Jordan was wearing switch from 'oversized hoodie' to 'fitted t-shirt'?",
+      "answer": "2026-03-19",
+      "difficulty": "mid",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "The switch from 'oversized hoodie' to 'fitted t-shirt' occurred around March 9, 2026.",
+          "score": 0.26666666666666666
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-04 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-11 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-18 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "Describe Jordan's routine for working out.",
+      "answer": "Day-of-week rule: Mon/Wed/Fri = morning yoga, Tue/Thu = evening run, Sat = climbing gym, Sun = rest day.",
+      "difficulty": "difficult",
+      "type": "pattern_id",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's workout routine focuses on climbing and yoga, incorporating strength training a few times a week, especially leading up to competitions. He practices climbing at the gym a couple of times weekly and includes evening runs.",
+          "score": 0.22727272727272724
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Jordan's workout routine includes strength training three times a week and evening climbing sessions after work, along with morning Hatha yoga at home for stretching and focus.",
+          "score": 0.2105263157894737
+        }
+      }
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-03-22 (Sun)?",
+      "answer": "rest day",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan will likely be enjoying a rest day or light activity, as he mentioned enjoying downtime.",
+          "score": 0.23529411764705882
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-03-28 (Sat)?",
+      "answer": "climbing gym",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan will likely be focused on climbing and yoga, with possibly some strength training incorporated.",
+          "score": 0.125
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Jordan will most likely be strength training and climbing.",
+          "score": 0.2
+        }
+      }
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-04-04 (Sat)?",
+      "answer": "climbing gym",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan will most likely be focused on climbing workouts as he prepares for the climbing competition in April.",
+          "score": 0.10526315789473684
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "Jordan will most likely be climbing, as they have a beginner climbing competition that day.",
+          "score": 0.125
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'rest day' to 'morning yoga'?",
+      "answer": "2026-03-02",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's routine included 'morning yoga' consistently starting from March 2, 2026, while 'rest days' were mentioned primarily on March 8, 2026.",
+          "score": 0.25
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-03",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's workout routine didn't switch; he incorporates both morning yoga and evening runs into his routine.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-04",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-05",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-06",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's way of working out did not switch from 'evening run' to 'morning yoga'; both are part of his routine. He incorporates morning yoga and also does evening runs occasionally.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'climbing gym'?",
+      "answer": "2026-03-07",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'climbing gym' to 'rest day'?",
+      "answer": "2026-03-08",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "On March 8, 2026.",
+          "score": 0.8571428571428571
+        },
+        "naive_rag": {
+          "text": "On March 8, 2026.",
+          "score": 0.8571428571428571
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'rest day' to 'morning yoga'?",
+      "answer": "2026-03-09",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's focus on morning yoga was mentioned starting from March 2, 2026, while the concept of a \"rest day\" was discussed on March 8, 2026.",
+          "score": 0.15384615384615383
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-10",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan didn't switch from morning yoga to evening runs; they incorporate both into their routine.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-11",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's workout routine focused on 'evening runs' before transitioning to 'morning yoga' around early March 2026.",
+          "score": 0.21052631578947367
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-12",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-13",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'climbing gym'?",
+      "answer": "2026-03-14",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'climbing gym' to 'rest day'?",
+      "answer": "2026-03-15",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "On March 8, 2026.",
+          "score": 0.5714285714285715
+        },
+        "naive_rag": {
+          "text": "On March 8, 2026.",
+          "score": 0.5714285714285715
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'rest day' to 'morning yoga'?",
+      "answer": "2026-03-16",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-17",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's workout routine includes both morning yoga and evening runs, so there wasn't a switch; he incorporates both.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-18",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'evening run'?",
+      "answer": "2026-03-19",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'evening run' to 'morning yoga'?",
+      "answer": "2026-03-20",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "Jordan's workout routine shifted to prioritize morning yoga around March 2026, while still incorporating evening runs occasionally.",
+          "score": 0.2
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out switch from 'morning yoga' to 'climbing gym'?",
+      "answer": "2026-03-21",
+      "difficulty": "difficult",
+      "type": "transition",
+      "responses": {
+        "memory_v2": {
+          "text": "I don't know.",
+          "score": 0.0
+        },
+        "naive_rag": {
+          "text": "No information available.",
+          "score": 0.0
+        },
+        "rsum": {
+          "text": "No information available.",
+          "score": 0.0
+        }
+      }
+    }
+  ]
+}

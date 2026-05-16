@@ -2,18 +2,20 @@
 Hierarchical summarizer: weekly → monthly → yearly → lifetime.
 
 Key design:
-- Preferences get temporal sequences injected (date-ordered arrow chains).
-- All other types (facts, goals, events, ...) are grouped by type and listed.
-- Each level feeds the next, so lifetime is a true compression of everything.
-- All summaries are saved to the FAISS summary store for retrieval.
+- Weekly: raw daily conversations + per-domain preference change sequences
+  (transition-only, may have noise) → narrative with observed preferences + facts.
+- Monthly: weekly summaries + per-domain sequences → speculative patterns (analyzed independently per domain) + accumulated facts.
+- Yearly: monthly summaries → confirmed patterns (analyzed independently per domain) + all facts.
+- Lifetime (global blueprint): yearly summaries only → complete user profile with
+  confirmed patterns for every domain and a full fact sheet about the user.
+
+Each level feeds the next. Pattern reasoning is isolated by domain to prevent interference.
 """
 
-import json
 from collections import defaultdict
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
 
-from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 
@@ -39,42 +41,152 @@ def _month_bounds(month_id: str) -> Tuple[str, str]:
     return start, end_dt.strftime("%Y-%m-%d")
 
 
-def _fmt_seq(pairs: List[Tuple[str, str]]) -> str:
-    """
-    Format [(date, content), ...] as explicit run-length text.
+def _esc(s: str) -> str:
+    """Escape curly braces so LangChain won't treat them as template variables."""
+    return s.replace("{", "{{").replace("}", "}}")
 
-    Output: "First 3 days: espresso (Mar 01–Mar 03) → then 2 days: latte (Mar 04–Mar 05)"
+
+def _fmt_change_seq(pairs: List[Tuple[str, str]]) -> str:
+    """
+    Emit one entry per value transition, including the duration of the phase.
+    e.g. "oat milk latte(Sunday Mar-01-2026) [held for 7 days] → black coffee(Sunday Mar-08-2026)"
     """
     if not pairs:
         return ""
+    
+    # First, get all transitions
+    transitions = []
+    prev_val = None
+    for date, val in pairs:
+        if val != prev_val:
+            transitions.append({"date": date, "val": val})
+            prev_val = val
+            
+    if not transitions:
+        return ""
 
-    # Build runs: (value, [dates])
-    runs: List[Tuple[str, List[str]]] = []
-    for date, content in pairs:
-        if runs and runs[-1][0] == content:
-            runs[-1][1].append(date)
+    result = []
+    for i in range(len(transitions)):
+        curr = transitions[i]
+        dt = datetime.strptime(curr["date"], "%Y-%m-%d")
+        fmt_date = dt.strftime('%A %b-%d-%Y')
+        
+        if i < len(transitions) - 1:
+            next_date = transitions[i+1]["date"]
+            d1 = datetime.strptime(curr["date"], "%Y-%m-%d")
+            d2 = datetime.strptime(next_date, "%Y-%m-%d")
+            days = (d2 - d1).days
+            result.append(f"{curr['val']}({fmt_date}) [held for {days} days]")
         else:
-            runs.append((content, [date]))
+            result.append(f"{curr['val']}({fmt_date}) [current]")
+            
+    return " → ".join(result)
 
-    parts = []
-    for i, (value, dates) in enumerate(runs):
-        n = len(dates)
-        start = datetime.strptime(dates[0],  "%Y-%m-%d").strftime("%b %d")
-        end   = datetime.strptime(dates[-1], "%Y-%m-%d").strftime("%b %d")
-        date_range = start if n == 1 else f"{start}–{end}"
-        day_word   = "day" if n == 1 else "days"
-        prefix     = "First" if i == 0 else "then"
-        parts.append(f"{prefix} {n} {day_word}: {value.rstrip('.')} ({date_range})")
 
-    return " → ".join(parts)
+DOMAIN_DISCOVERY_SYSTEM = """\
+You are a memory analyst. Given a list of all preference memories (subject + value pairs),
+identify which subjects represent genuine RECURRING subjects —
+things the person chooses regularly from a consistent category over time.
+
+A recurring subject has multiple observations across different dates with a repeating
+pattern of values.
+
+Exclude subjects that are:
+- Too granular (a specific detail of a larger subject)
+- One-off or rarely mentioned (fewer than 3 observations)
+- Not a stable choice category
+
+Return ONLY a JSON object: {{"domains": ["subject1", "subject2", ...]}}
+List only the canonical recurring subjects.
+"""
+
+WEEKLY_PATTERN_SYSTEM = """\
+You are a mathematical pattern analyst. Analyze the preference transition sequence for a SINGLE subject for {speaker} during one week.
+
+1. LOG: List exactly what changed and when. 
+   Format: [Date] Value (Duration: X days)
+2. SPECULATE: Does this sequence suggest a potential N-day cycle or a calendar-based rhythm (e.g. Mon-Fri)? 
+3. PRECISION: Avoid vague terms like "usually" or "tends to". Use specific durations.
+
+Return JSON:
+{{
+  "mathematical_sequence": "The exact date-to-date sequence of values and durations",
+  "potential_cycle": "Speculate on a possible periodicity (e.g. 'Alternates every 3 days')",
+  "reasoning": "Show your calculation of the days between switches."
+}}
+"""
+
+WEEKLY_FACTS_SYSTEM = """\
+You are a facts extractor. Given raw daily conversations for a week for {speaker}, extract all factual information.
+
+Return JSON:
+{{
+  "facts": ["list of factual statements about the person"],
+  "narrative": "A short paragraph summarizing the week's events."
+}}
+"""
+
+MONTHLY_PATTERN_SYSTEM = """\
+You are a mathematical pattern analyst. Analyze the observations for a SINGLE preference subject for {speaker} across several weeks.
+
+Goal: Identify the exact repeating structure for this subject — it may be a fixed N-day alternation, a day-of-week rule, or another repeating structure.
+
+1. CONSOLIDATE: Merge the weekly transition logs into one continuous timeline.
+2. CALCULATE: Find the exact number of days the user held each preference value.
+3. DETECT PATTERN: Look for ANY repeating structure:
+   - Fixed N-day alternation (e.g. 3 days of X then 3 days of Y)
+   - Day-of-week rule (e.g. always Tue/Thu for X)
+   - Or any other observable regularity.
+4. PRECISION: State the exact START DATE. List values explicitly. Do NOT use vague terms like "usually" or "tends to".
+
+Return JSON:
+{{
+  "consolidated_timeline": "The full date-to-date sequence for the month, listing each value with its exact date range",
+  "identified_pattern": "The definitive repeating rule with start date (e.g. 'Alternates every 7 days: [Value A] from YYYY-MM-DD to YYYY-MM-DD, then [Value B]...')",
+  "frequency": "Exact description (e.g. 'Every 3 days', 'Mon/Wed/Fri', 'Every 7 days')",
+  "reasoning": "Show the calculation behind your pattern detection."
+}}
+"""
+
+MONTHLY_FACTS_SYSTEM = """\
+You are a facts extractor. Given weekly summaries for {speaker}, consolidate all factual information for the month.
+
+Return JSON:
+{{
+  "facts": ["list of consolidated factual statements"]
+}}
+"""
+
+YEARLY_CONFIRMATION_SYSTEM = """\
+You are a senior senior pattern analyst. Confirm the definitive mathematical rhythm for a SINGLE subject for {speaker} using monthly summaries.
+
+1. COMPARE: Check if the N-day cycle or calendar rhythm is consistent across all months.
+2. VALIDATE: If a month reported a "smoothed" general pattern, look back at the consolidated timelines to re-verify the exact periodicity.
+3. RULE: Define the definitive rule. 
+   Example: "Fixed 7-day alternation: [Value A] for 7 days, then [Value B] for 7 days, repeating."
+   Example: "Fixed 3-day alternation: [Value A] for 3 days, then [Value B] for 3 days, repeating."
+
+Return JSON:
+{{
+  "confirmed_rule": "The exact mathematical rhythm (including start date)",
+  "frequency": "The verified periodicity",
+  "confidence": "CONFIRMED / LIKELY / EMERGING",
+  "reasoning": "Show the calculation that proves this pattern is stable across the year."
+}}
+"""
+
 
 
 class Summarizer:
-    def __init__(self, store: MemoryStore, model: str = "gpt-4o-mini"):
+    def __init__(self, store: MemoryStore, model: str = "gpt-5.5", llm=None):
         self.store = store
-        self.llm   = ChatOpenAI(model=model, temperature=0.2)
-        # Persisted summary text (loaded lazily from FAISS store)
+        if llm is not None:
+            self.llm = llm
+        else:
+            from langchain_openai import ChatOpenAI
+            self.llm = ChatOpenAI(model=model, temperature=0.2)
         self._cache: Dict[str, str] = {}
+        self._domain_cache: Dict[str, List[str]] = {}  # speaker → discovered domains
 
     # ── Public pipeline ─────────────────────────────────────────────
 
@@ -100,38 +212,67 @@ class Summarizer:
                 self.yearly(yr, speaker=speaker, force=force)
             self.lifetime(speaker=speaker, force=force)
 
+    # ── Summary levels ───────────────────────────────────────────────
+
     def weekly(self, week_id: str, speaker: str = "user", force: bool = False) -> str:
         identifier = f"week:{week_id}:{speaker}"
         if not force and self._cached(identifier):
             return self._cached(identifier)
 
-        start, end = _week_bounds(week_id)
-        memories   = self.store.query_memories(speaker=speaker, start_date=start, end_date=end, limit=500)
-        if not memories:
+        start, end    = _week_bounds(week_id)
+        conversations = self._get_weekly_conversations(start, end)
+        if not conversations:
             return ""
 
-        temporal_block = self._preference_sequences(memories, start, end, speaker)
-        other_block    = self._non_preference_block(memories)
-
-        prompt = ChatPromptTemplate.from_messages([
-            ("system",
-             f"You are a memory analyst writing a weekly summary for {speaker}.\n\n"
-             "RULES FOR PREFERENCES:\n"
-             "- The preference sequences below are exact ground truth — do not paraphrase or omit runs.\n"
-             "- For each entity reproduce the exact run-length pattern: "
-             "'First N days: X → then M days: Y → ...'.\n\n"
-             "RULES FOR OTHER MEMORIES:\n"
-             "- Group facts, goals, events, routines naturally into the narrative.\n\n"
-             "Write a single clear paragraph that leads with the preference runs, "
-             "then weaves in the other memories."),
-            ("human",
-             f"Speaker: {speaker} | Week: {week_id}\n\n"
-             f"PREFERENCE SEQUENCES:\n{temporal_block or 'None'}\n\n"
-             f"OTHER MEMORIES:\n{other_block or 'None'}\n\n"
-             "Return JSON: {{\"title\": \"...\", \"summary\": \"single paragraph\"}}"),
+        # 1. Independent Domain Analysis
+        domains = self._get_recurring_domains(speaker)
+        domain_patterns = {}
+        
+        pattern_prompt = ChatPromptTemplate.from_messages([
+            ("system", WEEKLY_PATTERN_SYSTEM),
+            ("human", f"Subject: {{subject}}\nTimeline:\n{{transitions}}")
         ])
-        return self._run_and_save(prompt, identifier, week_id,
-                                  extra_meta={"month_id": week_id[:7], "speaker": speaker})
+        
+        for subj in sorted(domains):
+            pairs = self.store.get_preference_sequence(subj, start, end, speaker=speaker)
+            seq   = _fmt_change_seq(pairs)
+            if not seq: continue
+            
+            try:
+                print(f"    - Weekly analysis for domain: {subj}")
+                chain = pattern_prompt | self.llm | JsonOutputParser()
+                domain_patterns[subj] = chain.invoke({"speaker": speaker, "subject": subj, "transitions": seq})
+            except Exception as e:
+                print(f"      Weekly pattern error for {subj}: {e}")
+
+        # 2. Extract Facts and Narrative
+        facts_prompt = ChatPromptTemplate.from_messages([
+            ("system", WEEKLY_FACTS_SYSTEM),
+            ("human", f"Week: {week_id}\n\nCONVERSATIONS:\n{{conversations}}")
+        ])
+        
+        print(f"    - Extracting weekly facts for {week_id}")
+        try:
+            chain = facts_prompt | self.llm | JsonOutputParser()
+            facts_res = chain.invoke({"conversations": _esc(conversations), "speaker": speaker})
+        except Exception as e:
+            print(f"      Weekly facts error: {e}")
+            facts_res = {"facts": {}, "narrative": "No details found."}
+
+        # 3. Merge
+        combined = {
+            "title": f"Weekly Summary for {week_id}",
+            "summary": str({
+                "patterns": domain_patterns,
+                "facts": facts_res.get("facts", {}),
+                "narrative": facts_res.get("narrative", "")
+            })
+        }
+        
+        self.store.save_summary(identifier, combined["title"], combined["summary"], {"speaker": speaker})
+        self._cache[identifier] = combined["summary"]
+        print(f"  ✓ Summary saved: {identifier}")
+        return combined["summary"]
 
     def monthly(self, month_id: str, speaker: str = "user", force: bool = False) -> str:
         identifier = f"month:{month_id}:{speaker}"
@@ -139,72 +280,151 @@ class Summarizer:
             return self._cached(identifier)
 
         start, end = _month_bounds(month_id)
-        memories   = self.store.query_memories(speaker=speaker, start_date=start, end_date=end, limit=2000)
-        if not memories:
-            return ""
-
-        other_block = self._non_preference_block(memories)
-        weeks = self._all_weeks(start, end)
-        weekly_pref_block = self._per_week_preference_sequences(weeks, speaker)
-        weekly_narrative  = "\n\n".join(
-            f"{wk}: {self._cached(f'week:{wk}:{speaker}')}"
+        weeks      = self._all_weeks(start, end)
+        weekly_summaries = [
+            (wk, self._cached(f"week:{wk}:{speaker}"))
             for wk in weeks
             if self._cached(f"week:{wk}:{speaker}")
+        ]
+        if not weekly_summaries:
+            return ""
+
+        weekly_block = "\n\n".join(
+            f"[{wk}]\n{summary}" for wk, summary in weekly_summaries
         )
 
-        prompt = ChatPromptTemplate.from_messages([
-            ("system",
-             f"You are a memory analyst writing a monthly summary for {speaker}.\n\n"
-             "RULES FOR PREFERENCES:\n"
-             "- Per-week preference sequences are exact ground truth.\n"
-             "- Reproduce the full month week-by-week: "
-             "'Week N: First X days: espresso → then Y days: latte | Week N+1: ...'\n\n"
-             "RULES FOR OTHER MEMORIES:\n"
-             "- Weave facts, goals, and events naturally.\n\n"
-             "Write a single clear paragraph leading with per-week preference runs."),
-            ("human",
-             f"Speaker: {speaker} | Month: {month_id}\n\n"
-             f"PER-WEEK PREFERENCE SEQUENCES:\n{weekly_pref_block or 'None'}\n\n"
-             f"OTHER MEMORIES:\n{other_block or 'None'}\n\n"
-             f"WEEKLY SUMMARIES (context):\n{weekly_narrative or 'None'}\n\n"
-             "Return JSON: {{\"title\": \"...\", \"summary\": \"single paragraph\"}}"),
+        # 1. Independent Pattern Speculation per Domain
+        domains = self._get_recurring_domains(speaker)
+        pattern_speculation = {}
+        
+        pattern_prompt = ChatPromptTemplate.from_messages([
+            ("system", MONTHLY_PATTERN_SYSTEM),
+            ("human", 
+             f"Subject: {{subject}}\n"
+             f"Month: {month_id} ({start} to {end})\n\n"
+             f"WEEKLY OBSERVATIONS:\n{_esc(weekly_block)}\n\n"
+             f"TRANSITION TIMELINE:\n{{transitions}}")
         ])
-        return self._run_and_save(prompt, identifier, month_id,
-                                  extra_meta={"speaker": speaker})
+        
+        for subj in sorted(domains):
+            pairs = self.store.get_preference_sequence(subj, start, end, speaker=speaker)
+            seq   = _fmt_change_seq(pairs)
+            if not seq:
+                continue
+                
+            print(f"    - Analyzing domain: {subj}")
+            try:
+                chain = pattern_prompt | self.llm | JsonOutputParser()
+                res   = chain.invoke({"speaker": speaker, "subject": subj, "transitions": seq})
+                pattern_speculation[subj] = res
+            except Exception as e:
+                print(f"      Pattern error for {subj}: {e}")
+
+        # 2. Extract Facts
+        facts_prompt = ChatPromptTemplate.from_messages([
+            ("system", MONTHLY_FACTS_SYSTEM),
+            ("human", f"WEEKLY SUMMARIES:\n{_esc(weekly_block)}")
+        ])
+        
+        print(f"    - Extracting facts for {month_id}...")
+        try:
+            chain = facts_prompt | self.llm | JsonOutputParser()
+            facts_res = chain.invoke({"speaker": speaker})
+            print(f"    ✓ Facts extracted for {month_id}")
+        except Exception as e:
+            print(f"      Facts error: {e}")
+            facts_res = {"facts": []}
+
+        # 3. Save combined result
+        combined = {
+            "title": f"Monthly Summary for {month_id}",
+            "summary": str({
+                "patterns": pattern_speculation,
+                "facts": facts_res.get("facts", [])
+            })
+        }
+        
+        print(f"    - Saving monthly summary for {month_id}")
+        self.store.save_summary(identifier, combined["title"], combined["summary"], {"speaker": speaker})
+        self._cache[identifier] = combined["summary"]
+        print(f"  ✓ Monthly summary saved: {identifier}")
+        return combined["summary"]
 
     def yearly(self, year: str, speaker: str = "user", force: bool = False) -> str:
         identifier = f"year:{year}:{speaker}"
         if not force and self._cached(identifier):
             return self._cached(identifier)
 
-        start, end = f"{year}-01-01", f"{year}-12-31"
-        memories   = self.store.query_memories(speaker=speaker, start_date=start, end_date=end, limit=5000)
-        if not memories:
+        months = self._all_months(f"{year}-01-01", f"{year}-12-31")
+        monthly_summaries = [
+            (mo, self._cached(f"month:{mo}:{speaker}"))
+            for mo in months
+            if self._cached(f"month:{mo}:{speaker}")
+        ]
+        if not monthly_summaries:
             return ""
 
-        temporal_block = self._preference_sequences(memories, start, end, speaker)
-        other_block    = self._non_preference_block(memories)
-
-        unique_months = sorted({m["date"][:7] for m in memories if m["date"]})
-        monthly_ctx = "\n\n".join(
-            f"{mo}: {self._cached(f'month:{mo}:{speaker}')}"
-            for mo in unique_months
-            if self._cached(f"month:{mo}:{speaker}")
+        monthly_block = "\n\n".join(
+            f"[{mo}]\n{summary}" for mo, summary in monthly_summaries
         )
 
-        prompt = ChatPromptTemplate.from_messages([
-            ("system",
-             f"You are a memory analyst. Summarise {speaker}'s year. "
-             "Identify multi-month preference arcs and major life events."),
-            ("human",
-             f"Speaker: {speaker} | Year: {year}\n\n"
-             f"PREFERENCE SEQUENCES:\n{temporal_block or 'None'}\n\n"
-             f"OTHER MEMORIES:\n{other_block or 'None'}\n\n"
-             f"MONTHLY SUMMARIES:\n{monthly_ctx or 'None'}\n\n"
-             "Return JSON: {{\"title\": \"...\", \"summary\": \"single paragraph\"}}"),
+        # 1. Independent Confirmation per Domain
+        domains = self._get_recurring_domains(speaker)
+        confirmed_patterns = {}
+        
+        confirmation_prompt = ChatPromptTemplate.from_messages([
+            ("system", YEARLY_CONFIRMATION_SYSTEM),
+            ("human", 
+             f"Subject: {{subject}}\n"
+             f"Year: {year}\n\n"
+             f"MONTHLY SPECULATIONS:\n{_esc(monthly_block)}")
         ])
-        return self._run_and_save(prompt, identifier, year,
-                                  extra_meta={"speaker": speaker})
+        
+        for subj in sorted(domains):
+            print(f"    - Confirming domain: {subj}")
+            try:
+                chain = confirmation_prompt | self.llm | JsonOutputParser()
+                res   = chain.invoke({"speaker": speaker, "subject": subj})
+                confirmed_patterns[subj] = res
+            except Exception as e:
+                print(f"      Confirmation error for {subj}: {e}")
+
+        # 2. Accumulate Facts (Final Consolidation)
+        facts_prompt = ChatPromptTemplate.from_messages([
+            ("system", 
+             "Consolidate all factual info for {speaker} for the year into a clean, merged list of facts.\n\n"
+             "Return ONLY a JSON object:\n"
+             "{{\n"
+             "  \"facts\": [\n"
+             "    \"fact 1\",\n"
+             "    \"fact 2\",\n"
+             "    ...\n"
+             "  ]\n"
+             "}}"),
+            ("human", f"MONTHLY SUMMARIES:\n{_esc(monthly_block)}")
+        ])
+        
+        print(f"    - Finalizing yearly profile for {year}")
+        try:
+            chain = facts_prompt | self.llm | JsonOutputParser()
+            facts_res = chain.invoke({"speaker": speaker})
+        except Exception as e:
+            print(f"      Facts error: {e}")
+            facts_res = {}
+
+        # 3. Save combined result
+        combined = {
+            "title": f"Yearly Summary for {year}",
+            "summary": str({
+                "patterns": confirmed_patterns,
+                "facts": facts_res.get("facts", [])
+            })
+        }
+        
+        self.store.save_summary(identifier, combined["title"], combined["summary"], {"speaker": speaker})
+        self._cache[identifier] = combined["summary"]
+        print(f"  ✓ Summary saved: {identifier}")
+        return combined["summary"]
 
     def lifetime(self, speaker: str = "user", force: bool = False) -> str:
         identifier = f"lifetime:{speaker}"
@@ -215,99 +435,124 @@ class Summarizer:
         if not start:
             return ""
 
-        memories       = self.store.query_memories(speaker=speaker, limit=10000)
-        temporal_block = self._preference_sequences(memories, start, end, speaker)
-        other_block    = self._non_preference_block(memories)
-
-        years = sorted({m["date"][:4] for m in memories if m["date"]})
-        yearly_ctx = "\n\n".join(
-            f"{yr}: {self._cached(f'year:{yr}:{speaker}')}"
+        years = sorted({m[:4] for m in self._all_months(start, end)})
+        yearly_summaries = [
+            (yr, self._cached(f"year:{yr}:{speaker}"))
             for yr in years
             if self._cached(f"year:{yr}:{speaker}")
+        ]
+        if not yearly_summaries:
+            return ""
+
+        yearly_block = "\n\n".join(
+            f"[{yr}]\n{summary}" for yr, summary in yearly_summaries
         )
 
         prompt = ChatPromptTemplate.from_messages([
             ("system",
-             f"You are the ultimate memory archivist. Create a lifetime summary for {speaker} "
-             "capturing who they are: stable facts, evolving preferences, long-term goals, "
-             "and the grand narrative of their life so far. "
-             "This will be injected at the top of every future conversation."),
+             f"You are building the definitive lifetime blueprint for {speaker}. "
+             "This document is injected at the start of every future conversation "
+             "as the ground truth about this person.\n\n"
+             "Using all yearly summaries, produce a complete, structured profile:\n\n"
+             "1. USER FACTS — Everything stable and confirmed about this person:\n"
+             "   identity, age, location, job, relationships, lifestyle, diet, "
+             "hobbies, personality traits, and any major life events.\n\n"
+             "2. PREFERENCE PATTERNS — For each domain, describe the exact repeating structure observed.\n"
+             "   It may be a fixed N-day alternation, a day-of-week pattern, or another form of repetition.\n"
+             "   Include the start date and the exact rule. State values explicitly. Avoid vague phrases like 'usually' or 'tends to'.\n\n"
+             "3. LIFE NARRATIVE — Chronological milestones.\n\n"
+             "Return ONLY a JSON object: {{\"title\": \"Full Lifetime Profile\", \"summary\": \"the full structured text profile\"}}"),
             ("human",
-             f"Speaker: {speaker} | Date range: {start} to {end}\n\n"
-             f"PREFERENCE SEQUENCES:\n{temporal_block or 'None'}\n\n"
-             f"OTHER MEMORIES:\n{other_block or 'None'}\n\n"
-             f"YEARLY SUMMARIES:\n{yearly_ctx or 'None'}\n\n"
-             "Return JSON: {{\"title\": \"...\", \"summary\": \"single paragraph\"}}"),
+             f"Speaker: {speaker} | Full date range: {start} to {end}\n\n"
+             f"YEARLY SUMMARIES:\n{_esc(yearly_block)}")
         ])
         return self._run_and_save(prompt, identifier, f"lifetime:{speaker}",
                                   extra_meta={"speaker": speaker})
 
-    # ── Memory formatters ───────────────────────────────────────────
+    # ── Memory formatters ────────────────────────────────────────────
 
-    def _preference_sequences(
-        self,
-        memories: List[Dict],
-        start_date: str,
-        end_date: str,
-        speaker: Optional[str] = None,
-    ) -> str:
-        pref_subjects = sorted({
-            m["subject"] for m in memories
-            if m["type"] == "preference" and m["subject"]
-        })
+    def _get_weekly_conversations(self, start: str, end: str) -> str:
+        """Raw conversation text for the week, grouped and labelled by date."""
+        docs = self.store.get_conversations_by_date_range(start, end)
+        if not docs:
+            return ""
+        by_date: Dict[str, List[str]] = defaultdict(list)
+        for doc in docs:
+            by_date[doc.metadata.get("source_date", "")].append(doc.page_content)
         lines = []
-        for subj in pref_subjects:
+        for date in sorted(by_date):
+            dt = datetime.strptime(date, "%Y-%m-%d")
+            lines.append(f"\n--- {dt.strftime('%A, %B %d %Y')} ---")
+            lines.extend(by_date[date])
+        return "\n".join(lines)
+
+    def _preference_change_sequences(
+        self, start_date: str, end_date: str, speaker: Optional[str] = None
+    ) -> str:
+        """For each recurring domain, emit a transition-only change sequence."""
+        domains = self._get_recurring_domains(speaker)
+        lines = []
+        for subj in sorted(domains):
             pairs = self.store.get_preference_sequence(subj, start_date, end_date,
                                                        speaker=speaker)
-            if pairs:
-                lines.append(f"[{subj}] {_fmt_seq(pairs)}")
+            seq = _fmt_change_seq(pairs)
+            if seq:
+                lines.append(f"[{subj}] {seq}")
         return "\n".join(lines)
 
-    def _per_week_preference_sequences(self, weeks: List[str],
-                                       speaker: Optional[str] = None) -> str:
-        """Per-week preference sequences for monthly summaries."""
-        lines = []
-        for wk in weeks:
-            start, end = _week_bounds(wk)
-            pref_subjects = sorted(set(
-                m["subject"]
-                for m in self.store.query_memories(
-                    type="preference", speaker=speaker,
-                    start_date=start, end_date=end)
-                if m["subject"]
-            ))
-            if not pref_subjects:
-                continue
-            lines.append(f"Week {wk}:")
-            for subj in pref_subjects:
-                pairs = self.store.get_preference_sequence(subj, start, end,
-                                                           speaker=speaker)
-                if pairs:
-                    lines.append(f"  [{subj}] {_fmt_seq(pairs)}")
-        return "\n".join(lines)
+    def _get_recurring_domains(self, speaker: Optional[str] = None) -> List[str]:
+        """
+        Discover which preference subjects are genuine recurring domains by asking
+        the LLM to identify patterns from all stored preference memories.
+        Result is cached per speaker for the lifetime of this Summarizer instance.
+        """
+        cache_key = speaker or "all"
+        if cache_key in self._domain_cache:
+            return self._domain_cache[cache_key]
 
-    def _non_preference_block(self, memories: List[Dict]) -> str:
-        """Group all non-preference memories by type, list contents."""
-        groups: Dict[str, List[str]] = defaultdict(list)
-        for m in memories:
-            if m["type"] != "preference":
-                groups[m["type"] or "general"].append(m["content"])
+        all_prefs = self.store.query_memories(type="preference", speaker=speaker, limit=2000)
+        if not all_prefs:
+            return []
 
-        lines = []
-        for mtype in sorted(groups):
-            lines.append(f"[{mtype}]")
-            for content in groups[mtype]:
-                lines.append(f"  - {content}")
-        return "\n".join(lines)
+        from collections import Counter
+        counts = Counter(m["subject"] for m in all_prefs if m["subject"])
 
-    # ── Helpers ─────────────────────────────────────────────────────
+        candidates = {subj: cnt for subj, cnt in counts.items() if cnt >= 2}
+        if not candidates:
+            return []
+        if not candidates:
+            self._domain_cache[cache_key] = list(counts.keys())
+            return self._domain_cache[cache_key]
+
+        subject_summary = []
+        for subj, cnt in sorted(candidates.items(), key=lambda x: -x[1]):
+            values = list({m["content"] for m in all_prefs if m["subject"] == subj})[:5]
+            subject_summary.append(f"{subj} ({cnt} obs): {', '.join(values)}")
+
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", DOMAIN_DISCOVERY_SYSTEM),
+            ("human", "Preference subjects:\n" + "\n".join(subject_summary)),
+        ])
+        try:
+            chain  = prompt | self.llm | JsonOutputParser()
+            result = chain.invoke({})
+            domains = result.get("domains", list(candidates.keys()))
+            print(f"  Discovered recurring domains for {cache_key}: {domains}")
+        except Exception as e:
+            print(f"  Domain discovery error: {e}. Using all subjects.")
+            domains = list(candidates.keys())
+
+        self._domain_cache[cache_key] = [d.lower().strip() for d in domains]
+        return self._domain_cache[cache_key]
+
+    # ── Helpers ──────────────────────────────────────────────────────
 
     def _run_and_save(
         self, prompt, identifier: str, label: str, extra_meta: Dict = {}
     ) -> str:
         try:
-            chain  = prompt | self.llm | JsonOutputParser()
-            result = chain.invoke({})
+            chain   = prompt | self.llm | JsonOutputParser()
+            result  = chain.invoke({})
             title   = result.get("title", label)
             content = result.get("summary", "")
 
@@ -323,7 +568,6 @@ class Summarizer:
         if identifier not in self._cache:
             text = self.store.get_summary(identifier)
             if text:
-                # Strip the "[identifier] Title\n\n" prefix stored by save_summary
                 parts = text.split("\n\n", 1)
                 self._cache[identifier] = parts[1] if len(parts) > 1 else text
         return self._cache.get(identifier)
@@ -336,10 +580,9 @@ class Summarizer:
         end_dt = datetime.strptime(end, "%Y-%m-%d")
         while cur <= end_dt:
             weeks.add(_iso_week(cur.strftime("%Y-%m-%d")))
-            # Jump to next Monday (or stay if already Monday)
             days_ahead = (7 - cur.weekday()) % 7 or 7
             cur += timedelta(days=days_ahead)
-        weeks.add(_iso_week(end))  # always include end date's week
+        weeks.add(_iso_week(end))
         return sorted(weeks)
 
     @staticmethod
@@ -348,7 +591,6 @@ class Summarizer:
         end_dt = datetime.strptime(end[:7], "%Y-%m")
         while cur <= end_dt:
             months.append(cur.strftime("%Y-%m"))
-            # advance by one month
             if cur.month == 12:
                 cur = cur.replace(year=cur.year + 1, month=1)
             else:
