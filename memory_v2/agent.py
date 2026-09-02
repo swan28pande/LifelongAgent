@@ -127,26 +127,6 @@ class LifelongAgent:
         """
         return self.extractor.extract_and_store(date, conversations)
 
-    def ingest_from_json(self, filepath: str):
-        """
-        Ingest from a JSON file in the same format as learning_conversations.json:
-        {"YYYY-MM-DD": {"day": "...", "interactions": [...]}, ...}
-        """
-        with open(filepath) as f:
-            data = json.load(f)
-
-        total = 0
-        for date in sorted(data.keys()):
-            info = data[date]
-            convs = info.get("conversations") or info.get("interactions", [])
-            if not convs:
-                continue
-            print(f"Ingesting {date}...")
-            new = self.ingest(date, convs)
-            total += len(new)
-
-        print(f"\nIngestion complete. {total} new memories stored across {len(data)} days.")
-
     def consolidate_memories(self):
         """Merge fragmented subjects in the memory store using LLM-based reasoning."""
         print(f"Consolidating domains using LLM reasoning...")
