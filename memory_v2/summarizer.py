@@ -133,11 +133,12 @@ Goal: Identify the exact repeating structure for this subject — it may be a fi
 
 1. CONSOLIDATE: Merge the weekly transition logs into one continuous timeline.
 2. CALCULATE: Find the exact number of days the user held each preference value.
-3. DETECT PATTERN: Look for ANY repeating structure:
-   - Fixed N-day alternation (e.g. 3 days of X then 3 days of Y)
-   - Day-of-week rule (e.g. always Tue/Thu for X)
+3. GROUPING: Group similar values or sub-categories into their primary underlying states (e.g., grouping 'blue pens', 'black pens', and 'red pens' under a single 'pen' state, and comparing that to 'pencil') before calculating cycle lengths.
+4. DETECT PATTERN: Look for ANY repeating structure:
+   - Fixed N-day alternation (e.g. 3 days of State A then 3 days of State B, totaling a 6-day cycle)
+   - Day-of-week rule (e.g. always Tue/Thu for State A)
    - Or any other observable regularity.
-4. PRECISION: State the exact START DATE. List values explicitly. Do NOT use vague terms like "usually" or "tends to".
+5. PRECISION: State the exact START DATE. List values explicitly. Do NOT use vague terms like "usually" or "tends to".
 
 Return JSON:
 {{
@@ -160,11 +161,11 @@ Return JSON:
 YEARLY_CONFIRMATION_SYSTEM = """\
 You are a senior senior pattern analyst. Confirm the definitive mathematical rhythm for a SINGLE subject for {speaker} using monthly summaries.
 
-1. COMPARE: Check if the N-day cycle or calendar rhythm is consistent across all months.
+1. COMPARE: Check if the N-day cycle or calendar rhythm is consistent across all months. Group sub-categories/synonyms into their primary underlying states (e.g. grouping 'blue pens' and 'red pens' under a single 'pen' state vs 'pencil') before checking consistency.
 2. VALIDATE: If a month reported a "smoothed" general pattern, look back at the consolidated timelines to re-verify the exact periodicity.
 3. RULE: Define the definitive rule. 
-   Example: "Fixed 7-day alternation: [Value A] for 7 days, then [Value B] for 7 days, repeating."
-   Example: "Fixed 3-day alternation: [Value A] for 3 days, then [Value B] for 3 days, repeating."
+   Example: "Fixed 7-day alternation: [State A] for 7 days, then [State B] for 7 days, repeating."
+   Example: "Fixed 3-day alternation: [State A] for 3 days, then [State B] for 3 days, repeating."
 
 Return JSON:
 {{

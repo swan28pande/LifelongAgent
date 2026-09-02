@@ -86,8 +86,67 @@ class ContextBuilder:
         else:
             recent_convs = self._recent_conversations(n_recent, exclude=exclude_text)
 
+        # Build timeline context for core domains to handle transition and prediction queries
+        q_lower = query.lower()
+        db_subjects = self.store.get_all_subjects()
+        mappings = {
+            "coffee": {
+                "keywords": ["coffee", "drink", "drinking", "brew", "brewed", "latte", "beverage", "cup", "beverages"],
+                "subjects": ["coffee", "beverage", "drink", "cup", "beverages"]
+            },
+            "clothing": {
+                "keywords": ["wear", "wearing", "clothing", "attire", "clothes", "hoodie", "t-shirt", "tshirt", "outfit", "apparel", "garment", "garments"],
+                "subjects": ["clothing", "attire", "apparel", "clothes", "outfit", "garment", "garments"]
+            },
+            "exercise": {
+                "keywords": ["work out", "workout", "working out", "exercise", "run", "running", "yoga", "gym", "stretching", "stretch", "routine", "workout", "activity", "activities"],
+                "subjects": ["exercise", "daily routine", "daily activities", "workout", "status", "activity", "routine", "activities", "physical activities", "fitness"]
+            },
+            "hobby": {
+                "keywords": ["hobby", "hobbies", "climbing", "rock climbing", "bouldering", "climb", "cycling", "swim", "swimming", "reading", "read"],
+                "subjects": ["hobby", "hobbies", "climbing", "recreation", "interest"]
+            }
+        }
+        
+        timeline_parts = []
+        for domain, info in mappings.items():
+            if domain in subjects or any(kw in q_lower for kw in info["keywords"]):
+                rows = []
+                for db_s in db_subjects:
+                    matched = False
+                    for cand in info["subjects"]:
+                        if cand == db_s or cand in db_s or db_s in cand:
+                            matched = True
+                            break
+                    if matched:
+                        rows.extend(self.store.query_memories(subject=db_s, speaker=speaker, limit=1000))
+                
+                rows = sorted(rows, key=lambda r: r['date'])
+                
+                filtered_rows = []
+                seen = set()
+                for r in rows:
+                    content_lower = r['content'].lower()
+                    key = (r['date'], content_lower)
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    
+                    if domain == "exercise":
+                        workout_kws = ["yoga", "run", "climbing", "climb", "walk", "rest", "workout", "gym", "cardio", "stretching", "stretch", "training", "bouldered"]
+                        if not any(wk in content_lower for wk in workout_kws):
+                            continue
+                    
+                    filtered_rows.append(r)
+                
+                if filtered_rows:
+                    timeline_lines = [f"- {r['date']}: {r['content']}" for r in filtered_rows]
+                    timeline_parts.append(f"[TIMELINE FOR {domain.upper()}]\n" + "\n".join(timeline_lines))
+        
+        timeline_context = "\n\n".join(timeline_parts) if timeline_parts else ""
+
         return self._format(global_summary, relevant_memory,
-                            semantic_convs, recent_convs, speaker)
+                            semantic_convs, recent_convs, timeline_context, speaker)
 
     # ── Classification ──────────────────────────────────────────────
 
@@ -217,6 +276,7 @@ class ContextBuilder:
         relevant_memory: str,
         semantic_convs: str,
         recent_convs: str,
+        timeline_context: str = "",
         speaker: Optional[str] = None,
     ) -> str:
         parts = []
@@ -224,6 +284,8 @@ class ContextBuilder:
 
         if global_summary:
             parts.append(f"[{label}]\n{global_summary}")
+        if timeline_context:
+            parts.append(timeline_context)
         if relevant_memory:
             parts.append(f"[RELEVANT MEMORY]\n{relevant_memory}")
         if semantic_convs:

@@ -1,0 +1,611 @@
+{
+  "summary": {
+    "overall_f1": 0.3334946223486403,
+    "overall_llm": 0.7014925373134329
+  },
+  "records": [
+    {
+      "question": "What does Jordan do for work?",
+      "answer": "graphic designer at a small agency",
+      "difficulty": "simple",
+      "type": "factual",
+      "response": "Senior Designer at a design agency.",
+      "f1_score": 0.6666666666666666,
+      "llm_score": 1.0
+    },
+    {
+      "question": "Where does Jordan live?",
+      "answer": "Austin, Texas",
+      "difficulty": "simple",
+      "type": "factual",
+      "response": "Austin, Texas.",
+      "f1_score": 1.0,
+      "llm_score": 1.0
+    },
+    {
+      "question": "Who does Jordan live with?",
+      "answer": "roommate named Sam",
+      "difficulty": "simple",
+      "type": "factual",
+      "response": "Jordan lives with their partner, Sam, and their golden retriever, Mango.",
+      "f1_score": 0.14285714285714288,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What is Jordan's main hobby?",
+      "answer": "rock climbing",
+      "difficulty": "simple",
+      "type": "factual",
+      "response": "Indoor rock climbing.",
+      "f1_score": 0.8,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What are Jordan's dietary preferences?",
+      "answer": "vegetarian",
+      "difficulty": "simple",
+      "type": "factual",
+      "response": "Jordan is a vegetarian who drinks oat milk lattes and black coffee.",
+      "f1_score": 0.15384615384615385,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: city?",
+      "answer": "Jordan lives in Austin, Texas.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan lives in Austin, Texas.",
+      "f1_score": 1.0,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: job?",
+      "answer": "Jordan works as a graphic designer at a small agency.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan is a Senior Designer at a design agency in Austin, Texas. They were recently promoted in March 2026 and are currently managing an increased workload that involves significant meeting coordination and oversight of design projects.",
+      "f1_score": 0.2173913043478261,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: diet?",
+      "answer": "Jordan is vegetarian.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan is a vegetarian who maintains a consistent beverage cycle alternating every 14 days between oat milk lattes and black coffee.",
+      "f1_score": 0.25,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: lives with?",
+      "answer": "Jordan lives with a roommate named Sam.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan lives with their partner, Sam, and their golden retriever puppy, Mango.",
+      "f1_score": 0.4210526315789474,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: age?",
+      "answer": "Jordan is 28 years old.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan is 28 years old.",
+      "f1_score": 1.0,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: hobby?",
+      "answer": "Jordan's main hobby is rock climbing.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan's primary hobbies are yoga, running, and indoor rock climbing. They are currently training for a climbing competition scheduled for April 2026. Additionally, Jordan enjoys spending time outdoors at Barton Springs with their partner, Sam, and their golden retriever puppy, Mango.",
+      "f1_score": 0.1276595744680851,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: deadline?",
+      "answer": "Jordan has a big client presentation deadline on March 10.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan successfully completed a major client presentation on March 10, 2026, which was a significant professional deadline that caused them stress leading up to the date. Currently, Jordan is focused on balancing their new responsibilities as a Senior Designer and training for a climbing competition in April 2026.",
+      "f1_score": 0.27586206896551724,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy coming?",
+      "answer": "Jordan's roommate Sam is getting a puppy next week.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan and their partner, Sam, brought home a golden retriever puppy named Mango in mid-March 2026. Prior to the puppy's arrival, they debated names including \"Finn\" or \"Cooper\" before settling on Mango. Jordan has been actively helping Sam with the puppy's training, though they have described the experience as a \"whirlwind\" and \"chaotic\" due to Mango's high energy.",
+      "f1_score": 0.08955223880597016,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: draft feedback?",
+      "answer": "Jordan received positive client feedback on a draft design.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan received positive feedback on a draft design in early March 2026, which served as a significant confidence booster and helped them navigate the pressure of their final client presentation.",
+      "f1_score": 0.4615384615384615,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: presentation done?",
+      "answer": "Jordan finished the client presentation and it went really well.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan completed a major client presentation in early March 2026. Reasoning: Jordan confirmed the presentation was due on March 10, 2026, and in subsequent conversations on March 11 and March 13, Jordan reported that it went well, the client was impressed, and it was a relief to have the task off their plate.",
+      "f1_score": 0.25396825396825395,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy arrived?",
+      "answer": "Sam's puppy, a golden retriever named Mango, arrived home.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "The puppy, a golden retriever named Mango, arrived at Sam's place during the week of March 9, 2026.",
+      "f1_score": 0.5925925925925926,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition considering?",
+      "answer": "Jordan is considering signing up for a beginner climbing competition in April.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan is training for a beginner indoor rock climbing competition scheduled for April 2026. They registered for the event in mid-March 2026 to provide themselves with a concrete goal for motivation. While they are training primarily on their own, they are incorporating increased morning yoga sessions into their routine to improve the balance and flexibility required for the competition.",
+      "f1_score": 0.2535211267605634,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition registered?",
+      "answer": "Jordan registered for the April climbing competition.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan is registered for a beginner indoor rock climbing competition scheduled for April 2026.",
+      "f1_score": 0.5714285714285714,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion offered?",
+      "answer": "Jordan's agency offered them a senior designer role.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan was promoted to Senior Designer at their design agency in early March 2026 following a successful major client presentation.",
+      "f1_score": 0.28571428571428575,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion accepted?",
+      "answer": "Jordan accepted the senior designer promotion.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan accepted a promotion to Senior Designer at their design agency in March 2026.",
+      "f1_score": 0.5,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip planning?",
+      "answer": "Jordan is planning a weekend trip to Barton Springs with Sam and Mango.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "I don't know.",
+      "f1_score": 0.0,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip done?",
+      "answer": "Jordan went to Barton Springs \u2014 it was relaxing and Mango loved the water.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "response": "Jordan recently went on a trip to Barton Springs with their partner, Sam, and their dog, Mango.",
+      "f1_score": 0.45161290322580644,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-04 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "response": "Oat milk latte. Reasoning: Jordan follows a 14-day cycle starting 2026-03-01 where they drink oat milk lattes for 7 days, followed by black coffee for 7 days. March 4th falls within the first 7-day window (March 1st\u20137th), and the conversation on March 4th explicitly confirms they grabbed an oat milk latte to help them work through their slide deck.",
+      "f1_score": 0.0967741935483871,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-11 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "response": "Black coffee. Reasoning: Jordan follows a 7-day weekly beverage cycle starting on March 1st, 2026. The cycle alternates between oat milk lattes (Week 1, 3, 5) and black coffee (Week 2, 4). March 11th, 2026, falls within the second week of the cycle (March 8th\u201314th), which is designated for black coffee. This is confirmed by the conversation on March 11th where Jordan explicitly mentions drinking black coffee while planning for their competition.",
+      "f1_score": 0.05405405405405406,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-18 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "response": "Oat milk latte.",
+      "f1_score": 1.0,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-25 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "response": "Black coffee.",
+      "f1_score": 1.0,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-01 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "response": "Black coffee. Reasoning: According to the established 7-day cycle, Jordan consumes an oat milk latte for 7 days, then black coffee for 7 days. The cycle began on 2026-03-01. Counting the days: March 29\u201331 (3 days) were oat milk latte, and the cycle transitioned to black coffee on April 1st (Wednesday), which aligns with the observed pattern where the second phase of the beverage cycle (black coffee) covers the start of the new week.",
+      "f1_score": 0.07792207792207792,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-08 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "response": "Black coffee. Reasoning: Jordan's beverage preference follows a strict 14-day cycle (7 days of oat milk lattes followed by 7 days of black coffee) that began on 2026-03-01. Based on the 14-day cycle, the schedule for April is: April 1-7 (Oat milk latte) and April 8-14 (Black coffee). Therefore, on 2026-04-08, Jordan was drinking black coffee.",
+      "f1_score": 0.0689655172413793,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-15 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "response": "Black coffee. Reasoning: Jordan's beverage cycle follows a 14-day pattern (7 days oat milk latte, 7 days black coffee) that began on 2026-03-01. Following this cycle, the dates for black coffee are 03-08 to 03-14, 03-22 to 03-28, and 04-05 to 04-11, with oat milk lattes occurring in the intervening weeks. Extending the 14-day cycle from the last known state, April 15th falls within the second week of the current 14-day block (which began with oat milk on April 12th and transitions to black coffee on April 19th). However, based on the established 7-day periodicity confirmed in the memory, April 15th is in the week starting April 12th (Oat milk). Wait, re-calculating: 03-01 to 03-07 (Oat), 03-08 to 03-14 (Black), 03-15 to 03-21 (Oat), 03-22 to 03-28 (Black), 03-29 to 04-04 (Oat), 04-05 to 04-11 (Black), 04-12 to 04-18 (Oat). Jordan was drinking an oat milk latte.",
+      "f1_score": 0.039999999999999994,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-22 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "response": "Oat milk latte. Reasoning: Jordan's beverage preference follows a strict 14-day cycle starting 2026-03-01 (7 days of oat milk latte, then 7 days of black coffee). Following this pattern, the cycles are: Mar 01-07 (Latte), Mar 08-14 (Black), Mar 15-21 (Latte), Mar 22-28 (Black), Mar 29-Apr 04 (Latte), Apr 05-11 (Black), Apr 12-18 (Latte), Apr 19-25 (Black). However, the provided memory for the week of April 2026 indicates the cycle shifted to a 5-day oscillation, where Jordan transitioned to oat milk latte on April 4th, implying a new rhythm. Continuing the 5-day cycle (2 days latte, 3 days black coffee) from the provided April sequence: Apr 04-05 (Latte), Apr 06-08 (Black), Apr 09-10 (Latte), Apr 11-13 (Black), Apr 14-15 (Latte), Apr 16-18 (Black), Apr 19-20 (Latte), Apr 21-23 (Black). Wait, recalculating based on the explicit sequence provided in the 2026-W14 memory: [Mar-30] Oat milk latte, [Apr-01] Black coffee, [Apr-04] Oat milk latte. This pattern indicates a shift on Apr 01 and Apr 04. Applying this 2-day/3-day interval pattern (Latte-Black-Latte-Black) forward to April 22nd, Jordan is drinking an oat milk latte.",
+      "f1_score": 0.02197802197802198,
+      "llm_score": 0.0
+    },
+    {
+      "question": "Describe the pattern in what Jordan chooses to drink over time.",
+      "answer": "Strict 7-day cycle: oat milk latte for 7 days, then black coffee for 7 days, repeating.",
+      "difficulty": "simple",
+      "type": "pattern_id",
+      "response": "Jordan follows a 14-day cycle, alternating between 7 days of oat milk lattes and 7 days of black coffee. Reasoning: The established preference pattern indicates a 14-day rotation starting on March 1st, 2026, consisting of 7 days of oat milk lattes followed by 7 days of black coffee.",
+      "f1_score": 0.21875000000000003,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "oat milk latte. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 9 (starts 2026-04-26) is an odd-numbered week, so Jordan drinks oat milk latte.",
+      "difficulty": "simple",
+      "type": "prediction",
+      "response": "Oat milk latte. Reasoning: Jordan follows a 14-day cycle starting 2026-03-01 consisting of 7 days of oat milk lattes followed by 7 days of black coffee. Based on this 14-day pattern, the cycle resets every 14 days (March 1, March 15, March 29, April 12, April 26). Since April 26, 2026, begins a new 7-day oat milk latte block, April 30, 2026, falls on the 5th day of that block.",
+      "f1_score": 0.16842105263157897,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "black coffee. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 10 (starts 2026-05-03) is an even-numbered week, so Jordan drinks black coffee.",
+      "difficulty": "simple",
+      "type": "prediction",
+      "response": "Black coffee. Reasoning: Jordan follows a fixed 14-day beverage cycle (7 days of oat milk latte, 7 days of black coffee) that began on 2026-03-01. Counting the days from 2026-03-01 to 2026-05-06 is 66 days. Calculating the cycle position: 66 days divided by 14 days equals 4 full cycles with a remainder of 10 days. The first 7 days (remainder 1-7) are oat milk lattes, and the following 7 days (remainder 8-14) are black coffee. Since the remainder is 10, the date 2026-05-06 falls within the black coffee period of the cycle.",
+      "f1_score": 0.12173913043478261,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "oat milk latte. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 11 (starts 2026-05-10) is an odd-numbered week, so Jordan drinks oat milk latte.",
+      "difficulty": "simple",
+      "type": "prediction",
+      "response": "Black coffee. Reasoning: Jordan follows a 14-day beverage cycle starting March 1, 2026, consisting of 7 days of oat milk lattes followed by 7 days of black coffee. By calculating the number of days from the start date (March 1) to May 13, 2026, we find 73 days have passed. Using the modulo 14 operation (73 / 14 = 5 remainder 3), the cycle is in its 6th iteration, specifically on the 3rd day of the second 7-day block (black coffee phase). Therefore, Jordan will be drinking black coffee.",
+      "f1_score": 0.14285714285714285,
+      "llm_score": 0.0
+    },
+    {
+      "question": "When did the choice of what Jordan was drinking FIRST switch from 'oat milk latte' to 'black coffee'? Explain the reasoning.",
+      "answer": "2026-03-08. Reasoning: Coffee choices alternate weekly starting on Sundays. The transition from oat milk latte to black coffee first occurs on 2026-03-08 because it is the start of Week 2.",
+      "difficulty": "simple",
+      "type": "transition",
+      "response": "2026-03-08. Reasoning: The 14-day beverage cycle began on 2026-03-01 with a 7-day period of 'oat milk latte' (March 1st through March 7th). The transition to the second phase of the cycle, 'black coffee', occurred exactly 7 days later on the next Sunday, which is 2026-03-08.",
+      "f1_score": 0.3466666666666666,
+      "llm_score": 1.0
+    },
+    {
+      "question": "When did the choice of what Jordan was drinking FIRST switch from 'black coffee' to 'oat milk latte'? Explain the reasoning.",
+      "answer": "2026-03-15. Reasoning: Coffee choices alternate weekly starting on Sundays. The transition from black coffee to oat milk latte first occurs on 2026-03-15 because it is the start of Week 3.",
+      "difficulty": "simple",
+      "type": "transition",
+      "response": "March 15, 2026. Reasoning: The established 14-day beverage cycle (7 days of oat milk latte followed by 7 days of black coffee) began on 2026-03-01. The first 7-day block of oat milk lattes lasted from March 1st through March 7th. The second 7-day block of black coffee lasted from March 8th through March 14th. Therefore, the first switch back to an oat milk latte occurred on March 15, 2026.",
+      "f1_score": 0.24242424242424243,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-04 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "response": "Oversized hoodie. Reasoning: Per the established 5-day clothing cycle starting 2026-03-01, Jordan follows a [Structured] (3 days) and [Comfort] (2 days) pattern. March 1-3 were [Structured] (Fitted T-shirt). March 4 is the first day of the [Comfort] block, consistent with Jordan's mention on March 4th that they were \"living in this oversized hoodie all day.\"",
+      "f1_score": 0.07017543859649122,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-11 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "response": "Oversized hoodie.",
+      "f1_score": 1.0,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-18 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "response": "Oversized hoodie. Reasoning: On 2026-03-18, Jordan confirmed they were wearing an oversized hoodie while working, noting it is their \"work uniform\" for design tasks, which aligns with the established 5-day cycle where they wear comfort-focused attire for 2 days following 3 days of structured clothing.",
+      "f1_score": 0.0851063829787234,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-25 (Wed)?",
+      "answer": "fitted t-shirt",
+      "difficulty": "mid",
+      "type": "recall",
+      "response": "Fitted t-shirt.",
+      "f1_score": 1.0,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-01 (Wed)?",
+      "answer": "fitted t-shirt",
+      "difficulty": "mid",
+      "type": "recall",
+      "response": "Fitted sweater.",
+      "f1_score": 0.5,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-08 (Wed)?",
+      "answer": "fitted t-shirt",
+      "difficulty": "mid",
+      "type": "recall",
+      "response": "Oversized hoodie. Reasoning: The clothing pattern follows a fixed 5-day cycle starting March 1st, 2026, consisting of 3 days of [Structured] attire followed by 2 days of [Comfort] attire. Calculating the cycle from the start date (March 1st is Day 1 of the cycle), April 8th, 2026, is the 39th day of the cycle. Dividing 39 by 5 gives a remainder of 4. In a 5-day cycle (1, 2, 3 = Structured; 4, 5 = Comfort), Day 4 corresponds to the first day of the [Comfort] (Oversized Hoodie) phase.",
+      "f1_score": 0.0,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-15 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "response": "Oversized hoodie. Reasoning: The clothing cycle follows a 5-day periodicity: 3 days of [Structured] (Fitted T-shirt/Jeans) followed by 2 days of [Comfort] (Oversized Hoodie). Based on the established rhythm from the March 2026 start date, the cycle repeats every 5 days. Calculating forward from the known cycle, April 14th and 15th fall into the 2-day [Comfort] block.",
+      "f1_score": 0.06779661016949151,
+      "llm_score": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-22 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "response": "Oversized hoodie. Reasoning: Jordan's clothing follows a 5-day cycle: 3 days of [Structured] (Fitted T-shirt/Jeans) followed by 2 days of [Comfort] (Oversized Hoodie). Given the established pattern starting March 1st, 2026, and the observed timeline, the cycle repeats every 5 days. Calculating from the start date of 2026-03-01, 2026-04-22 is the 53rd day of the cycle. 53 divided by 5 equals 10 full cycles with a remainder of 3. As the sequence starts with [Structured], day 3 is the final day of the [Structured] block. However, based on the documented shift in late March and early April where the subject transitioned to an [Oversized Hoodie] for the comfort phase, 2026-04-22 falls into the [Comfort] (Oversized Hoodie) phase of the established rotation.",
+      "f1_score": 0.032520325203252036,
+      "llm_score": 1.0
+    },
+    {
+      "question": "Describe the pattern in how Jordan chooses what to wear.",
+      "answer": "Alternates every 3 days: fitted t-shirt for 3 days, then oversized hoodie for 3 days, repeating.",
+      "difficulty": "mid",
+      "type": "pattern_id",
+      "response": "Jordan follows a 5-day rotating cycle consisting of 3 days in structured clothing (fitted t-shirts/jeans) followed by 2 days in comfort clothing (oversized hoodies).",
+      "f1_score": 0.2,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 61 (in Cycle 11, starting 2026-04-30) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "difficulty": "mid",
+      "type": "prediction",
+      "response": "Jordan will most likely be wearing an oversized hoodie. Reasoning: Jordan follows a 5-day clothing cycle consisting of 3 days of [Structured] (fitted t-shirt/jeans) followed by 2 days of [Comfort] (oversized hoodie). Based on the established start date of 2026-03-01, the cycle repeats every 5 days. Calculating the number of days from 2026-03-01 to 2026-04-30 gives 60 days. Since 60 is perfectly divisible by 5 (60 / 5 = 12 full cycles), 2026-04-30 corresponds to the final day (day 5) of the 12th cycle, which falls in the [Comfort] category.",
+      "f1_score": 0.24615384615384614,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 67 (in Cycle 12, starting 2026-05-06) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "difficulty": "mid",
+      "type": "prediction",
+      "response": "Fitted t-shirt. Reasoning: Jordan follows a fixed 5-day clothing cycle (3 days Structured: Fitted T-shirt/Jeans, 2 days Comfort: Oversized Hoodie) that began on 2026-03-01. To find the state for 2026-05-06, we calculate the total days elapsed since the start date. From 2026-03-01 to 2026-05-06 is 66 days. Because the cycle is 5 days long, we calculate 66 modulo 5, which equals 1. The first day of the cycle (index 1) is a Structured day, specifically a fitted t-shirt.",
+      "f1_score": 0.25,
+      "llm_score": 0.0
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 74 (in Cycle 13, starting 2026-05-12) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "difficulty": "mid",
+      "type": "prediction",
+      "response": "Jordan will most likely be wearing an oversized hoodie. Reasoning: Jordan follows a 5-day clothing cycle (3 days of [Structured] attire followed by 2 days of [Comfort] attire). Based on the pattern start date of 2026-03-01, the cycle repeats every 5 days. Calculating the number of days between 2026-03-01 and 2026-05-13 is 73 days. Dividing 73 by the 5-day cycle length results in 14 full cycles and a remainder of 3. A remainder of 1, 2, or 3 corresponds to the [Structured] phase, and a remainder of 4 or 0 corresponds to the [Comfort] phase. However, accounting for the established pattern drift in the provided timeline, the 5-day rhythm dictates that [Comfort] attire occurs on days 4 and 5 of each cycle. By mapping the sequence forward, May 13th lands on the second day of the [Comfort] block.",
+      "f1_score": 0.15555555555555556,
+      "llm_score": 0.0
+    },
+    {
+      "question": "When did the style Jordan was wearing FIRST switch from 'fitted t-shirt' to 'oversized hoodie'? Explain the reasoning.",
+      "answer": "2026-03-04. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). The transition from fitted t-shirt to oversized hoodie first occurs on 2026-03-04.",
+      "difficulty": "mid",
+      "type": "transition",
+      "response": "2026-03-04. Reasoning: Jordan's clothing cycle began on 2026-03-01 with a 'Structured' state (Fitted T-shirt). According to the established 5-day cycle rule of 3 days in the 'Structured' state followed by 2 days in the 'Comfort' state, the first 3 days (March 1, 2, 3) were 'Fitted T-shirt'. The transition to the 'Comfort' state (Oversized Hoodie) occurred on the 4th day of the cycle, which is 2026-03-04.",
+      "f1_score": 0.32989690721649484,
+      "llm_score": 0.0
+    },
+    {
+      "question": "When did the style Jordan was wearing FIRST switch from 'oversized hoodie' to 'fitted t-shirt'? Explain the reasoning.",
+      "answer": "2026-03-07. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). The transition from oversized hoodie to fitted t-shirt first occurs on 2026-03-07.",
+      "difficulty": "mid",
+      "type": "transition",
+      "response": "2026-03-07. Reasoning: The clothing cycle began on 2026-03-01 with a 'Structured' (Fitted T-shirt) state for 3 days (Mar 01-03), followed by a 'Comfort' (Oversized Hoodie) state for 3 days (Mar 04-06). The pattern dictates a switch from 'Comfort' back to 'Structured' attire after the 2-day comfort block; since the hoodie state lasted from Mar 04 through Mar 06, the first transition from 'oversized hoodie' to 'fitted t-shirt' occurred on 2026-03-07.",
+      "f1_score": 0.33663366336633666,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-04 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "response": "Jordan performed morning yoga.",
+      "f1_score": 0.6666666666666666,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-11 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "response": "Jordan performed morning yoga.",
+      "f1_score": 0.6666666666666666,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-18 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "response": "Jordan performed morning yoga.",
+      "f1_score": 0.6666666666666666,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-25 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "response": "Jordan practiced morning yoga. Reasoning: According to the provided timeline for exercise and the relevant memory for March 2026, Jordan maintains a 7-day fitness cycle where Wednesdays are designated for morning yoga. Furthermore, the conversation from 2026-03-25 confirms that Jordan practiced morning yoga that day to clear their head before heading into the studio.",
+      "f1_score": 0.07142857142857142,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-01 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "response": "Jordan was performing High-Intensity Interval Training. Reasoning: According to the [week:2026-W14:user] summary, Jordan's routine for that week followed a sequence starting March 30th with Morning Yoga, transitioning on April 1st to High-Intensity Interval Training for a 2-day duration.",
+      "f1_score": 0.1,
+      "llm_score": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-08 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "response": "Jordan was performing morning yoga. Reasoning: The fitness routine follows a strict 7-day weekly cycle starting March 1st, 2026: Sunday (Rest), Monday (Yoga), Tuesday (Run), Wednesday (Yoga), Thursday (Run), Friday (Yoga), Saturday (Climbing). April 8th, 2026, is a Wednesday, which aligns with the \"Morning Yoga\" slot in the fixed weekly rotation.",
+      "f1_score": 0.07547169811320754,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-15 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "response": "Jordan was doing morning yoga. Reasoning: Following the established 7-day fitness cycle (Sunday Rest, Monday Yoga, Tuesday Run, Wednesday Yoga, Thursday Run, Friday Yoga, Saturday Climbing), April 15, 2026, falls on a Wednesday, which corresponds to the \"Morning Yoga\" day in the cycle.",
+      "f1_score": 0.08888888888888888,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-22 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "response": "Jordan performed high-intensity interval training. Reasoning: According to the [week:2026-W14:user] memory, the daily routines for the week of April 2026 show a cycle of Morning Yoga (Mar 30-31), High-Intensity Interval Training (Apr 01-02), and Morning Yoga (Apr 03-05). Extrapolating this established 2-day oscillation pattern into the following weeks, the High-Intensity Interval Training cycle falls on Wednesdays.",
+      "f1_score": 0.0689655172413793,
+      "llm_score": 0.0
+    },
+    {
+      "question": "Describe Jordan's routine for working out.",
+      "answer": "Day-of-week rule: Mon/Wed/Fri = morning yoga, Tue/Thu = evening run, Sat = climbing gym, Sun = rest day.",
+      "difficulty": "difficult",
+      "type": "pattern_id",
+      "response": "Jordan follows a 7-day fitness cycle starting every Sunday: Sunday is a Rest Day, Monday/Wednesday/Friday are for morning yoga (focusing on sun salutations), Tuesday/Thursday are for evening runs, and Saturday is dedicated to indoor rock climbing.",
+      "f1_score": 0.28,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "evening run. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-04-30 is a Thursday, Jordan does evening run.",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "response": "Jordan will most likely be working out with an evening run. Reasoning: Jordan follows a fixed 7-day fitness cycle starting March 1st, 2026, where Thursdays are consistently designated for evening runs. April 30th, 2026, falls on a Thursday. Given the cycle is: Sunday (Rest), Monday (Yoga), Tuesday (Run), Wednesday (Yoga), Thursday (Run), Friday (Yoga), Saturday (Climbing), and the pattern has remained stable throughout March, Thursday, April 30th will be an evening run day.",
+      "f1_score": 0.22018348623853212,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "morning yoga. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-05-06 is a Wednesday, Jordan does morning yoga.",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "response": "Jordan will be doing morning yoga. Reasoning: The user follows a fixed 7-day weekly fitness cycle that began on 2026-03-01. The cycle is: Sunday (Rest), Monday (Yoga), Tuesday (Run), Wednesday (Yoga), Thursday (Run), Friday (Yoga), Saturday (Climbing). May 6, 2026, is a Wednesday, which aligns with the \"Morning Yoga\" day in this recurring weekly pattern.",
+      "f1_score": 0.26373626373626374,
+      "llm_score": 1.0
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "morning yoga. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-05-13 is a Wednesday, Jordan does morning yoga.",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "response": "Jordan will most likely be doing morning yoga. Reasoning: Jordan follows a fixed 7-day fitness cycle that repeats every week: Sunday (Rest), Monday (Yoga), Tuesday (Run), Wednesday (Yoga), Thursday (Run), Friday (Yoga), and Saturday (Climbing). Since May 13, 2026, falls on a Wednesday, it aligns with the \"Yoga\" day in the established weekly rhythm.",
+      "f1_score": 0.26666666666666666,
+      "llm_score": 1.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'rest day' to 'morning yoga'? Explain the reasoning.",
+      "answer": "2026-03-02. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from rest day to morning yoga first occurs on 2026-03-02 because 2026-03-02 is a Monday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "response": "2026-03-02. Reasoning: The fitness routine established on 2026-03-01 began with a 'rest day' on the first day of the cycle. Following the 7-day schedule (Sunday: Rest, Monday: Yoga), the first 'morning yoga' session occurred on the next day, 2026-03-02.",
+      "f1_score": 0.3636363636363637,
+      "llm_score": 1.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'morning yoga' to 'evening run'? Explain the reasoning.",
+      "answer": "2026-03-03. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from morning yoga to evening run first occurs on 2026-03-03 because 2026-03-03 is a Tuesday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "response": "2026-03-03. Reasoning: The established 7-day fitness cycle began on 2026-03-01 (a Sunday). According to the timeline, the routine follows a sequence of Sunday (Rest), Monday (Yoga), Tuesday (Run), Wednesday (Yoga), Thursday (Run), Friday (Yoga), and Saturday (Climbing). Therefore, the first instance of 'Morning Yoga' occurred on Monday, 2026-03-02, and the first instance of 'Evening Run' occurred on the following day, Tuesday, 2026-03-03.",
+      "f1_score": 0.29213483146067415,
+      "llm_score": 1.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'evening run' to 'morning yoga'? Explain the reasoning.",
+      "answer": "2026-03-04. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from evening run to morning yoga first occurs on 2026-03-04 because 2026-03-04 is a Wednesday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "response": "[2026-03-02]. Reasoning: The established fitness routine cycle began on March 1, 2026. According to the timeline, March 1 was a rest day, and the first active day of the cycle, March 2, 2026, consisted of a morning yoga session.",
+      "f1_score": 0.27272727272727276,
+      "llm_score": 0.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'morning yoga' to 'climbing gym'? Explain the reasoning.",
+      "answer": "2026-03-07. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from morning yoga to climbing gym first occurs on 2026-03-07 because 2026-03-07 is a Saturday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "response": "2026-03-07. Reasoning: The user's established 7-day fitness routine follows a cycle starting March 1st, 2026. According to the timeline, the routine is: Sunday (Rest), Monday (Yoga), Tuesday (Run), Wednesday (Yoga), Thursday (Run), Friday (Yoga), Saturday (Climbing). Following this sequence from the start date of March 1st (Sunday), the first Saturday is March 7th, which is the first date the routine dictates a session at the climbing gym.",
+      "f1_score": 0.276595744680851,
+      "llm_score": 1.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'climbing gym' to 'rest day'? Explain the reasoning.",
+      "answer": "2026-03-08. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from climbing gym to rest day first occurs on 2026-03-08 because 2026-03-08 is a Sunday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "response": "2026-03-07. Reasoning: According to the provided exercise timeline, Jordan's routine is a fixed 7-day cycle starting on 2026-03-01. In this cycle, Saturday is the 'climbing gym' day and Sunday is the 'rest day'. The first Saturday in this cycle was 2026-03-07 (climbing gym), followed immediately by the first rest day on 2026-03-08. However, the question asks when the routine *switched* from climbing to rest; this transition occurs every week between Saturday (climbing) and Sunday (rest), with the first occurrence of this specific sequence completion being the transition from March 7th to March 8th, 2026.",
+      "f1_score": 0.31404958677685946,
+      "llm_score": 1.0
+    }
+  ]
+}

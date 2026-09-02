@@ -1,0 +1,2445 @@
+{
+  "timestamp": "2026-05-20T06:47:35.417982",
+  "model": "gemini-3.1-flash-lite",
+  "summary": {
+    "naive_rag": {
+      "overall_f1": 0.17521478098192889,
+      "overall_llm": 0.26865671641791045,
+      "by_difficulty": {
+        "simple": {
+          "f1": 0.29651766802201096,
+          "llm": 0.4722222222222222
+        },
+        "mid": {
+          "f1": 0.022556390977443608,
+          "llm": 0.0
+        },
+        "difficult": {
+          "f1": 0.04405675313603702,
+          "llm": 0.058823529411764705
+        }
+      },
+      "by_type": {
+        "factual": {
+          "f1": 0.2571428571428572,
+          "llm": 0.6
+        },
+        "factual_evolving": {
+          "f1": 0.51449737841834,
+          "llm": 0.8235294117647058
+        },
+        "recall": {
+          "f1": 0.0,
+          "llm": 0.0
+        },
+        "pattern_id": {
+          "f1": 0.29276315789473684,
+          "llm": 0.0
+        },
+        "prediction": {
+          "f1": 0.0202020202020202,
+          "llm": 0.0
+        },
+        "transition": {
+          "f1": 0.0719014390511975,
+          "llm": 0.1111111111111111
+        }
+      }
+    },
+    "rsum": {
+      "overall_f1": 0.12038061522117197,
+      "overall_llm": 0.1791044776119403,
+      "by_difficulty": {
+        "simple": {
+          "f1": 0.20137024202999937,
+          "llm": 0.3333333333333333
+        },
+        "mid": {
+          "f1": 0.031087151841868825,
+          "llm": 0.0
+        },
+        "difficult": {
+          "f1": 0.022408963585434174,
+          "llm": 0.0
+        }
+      },
+      "by_type": {
+        "factual": {
+          "f1": 0.5333333333333333,
+          "llm": 1.0
+        },
+        "factual_evolving": {
+          "f1": 0.22878123581448387,
+          "llm": 0.4117647058823529
+        },
+        "recall": {
+          "f1": 0.0,
+          "llm": 0.0
+        },
+        "pattern_id": {
+          "f1": 0.30476190476190473,
+          "llm": 0.0
+        },
+        "prediction": {
+          "f1": 0.0661408700022127,
+          "llm": 0.0
+        },
+        "transition": {
+          "f1": 0.0,
+          "llm": 0.0
+        }
+      }
+    },
+    "memory_bank": {
+      "overall_f1": 0.14534157370371037,
+      "overall_llm": 0.1791044776119403,
+      "by_difficulty": {
+        "simple": {
+          "f1": 0.2491456845623512,
+          "llm": 0.3055555555555556
+        },
+        "mid": {
+          "f1": 0.02928330928330928,
+          "llm": 0.07142857142857142
+        },
+        "difficult": {
+          "f1": 0.021098497878683637,
+          "llm": 0.0
+        }
+      },
+      "by_type": {
+        "factual": {
+          "f1": 0.44761904761904764,
+          "llm": 0.8
+        },
+        "factual_evolving": {
+          "f1": 0.3635216091098444,
+          "llm": 0.4117647058823529
+        },
+        "recall": {
+          "f1": 0.0,
+          "llm": 0.0
+        },
+        "pattern_id": {
+          "f1": 0.19838056680161942,
+          "llm": 0.0
+        },
+        "prediction": {
+          "f1": 0.06407033295922185,
+          "llm": 0.1111111111111111
+        },
+        "transition": {
+          "f1": 0.016460905349794237,
+          "llm": 0.0
+        }
+      }
+    },
+    "memgpt": {
+      "overall_f1": 0.11335672062557092,
+      "overall_llm": 0.5223880597014925,
+      "by_difficulty": {
+        "simple": {
+          "f1": 0.13947163453699082,
+          "llm": 0.6388888888888888
+        },
+        "mid": {
+          "f1": 0.1057315586940056,
+          "llm": 0.5
+        },
+        "difficult": {
+          "f1": 0.06433409510973545,
+          "llm": 0.29411764705882354
+        }
+      },
+      "by_type": {
+        "factual": {
+          "f1": 0.12721602834946164,
+          "llm": 0.6
+        },
+        "factual_evolving": {
+          "f1": 0.17293256135359134,
+          "llm": 0.9411764705882353
+        },
+        "recall": {
+          "f1": 0.08028026841813565,
+          "llm": 0.5
+        },
+        "pattern_id": {
+          "f1": 0.08156642638801793,
+          "llm": 0.0
+        },
+        "prediction": {
+          "f1": 0.1671884056250184,
+          "llm": 0.4444444444444444
+        },
+        "transition": {
+          "f1": 0.03809391392560168,
+          "llm": 0.0
+        }
+      }
+    },
+    "memory_v2": {
+      "overall_f1": 0.3180368072023997,
+      "overall_llm": 0.7313432835820896,
+      "by_difficulty": {
+        "simple": {
+          "f1": 0.3999420093732218,
+          "llm": 0.7777777777777778
+        },
+        "mid": {
+          "f1": 0.20805732263996496,
+          "llm": 0.5714285714285714
+        },
+        "difficult": {
+          "f1": 0.2351618369508994,
+          "llm": 0.7647058823529411
+        }
+      },
+      "by_type": {
+        "factual": {
+          "f1": 0.46317460317460313,
+          "llm": 0.6
+        },
+        "factual_evolving": {
+          "f1": 0.4267590635610904,
+          "llm": 0.7058823529411765
+        },
+        "recall": {
+          "f1": 0.2950786676497856,
+          "llm": 0.8333333333333334
+        },
+        "pattern_id": {
+          "f1": 0.37686755078059414,
+          "llm": 0.6666666666666666
+        },
+        "prediction": {
+          "f1": 0.2741762336907747,
+          "llm": 0.6666666666666666
+        },
+        "transition": {
+          "f1": 0.11751246744395799,
+          "llm": 0.6666666666666666
+        }
+      }
+    }
+  },
+  "cost": {
+    "prompt_tokens": 1253700,
+    "completion_tokens": 47670,
+    "total_tokens": 1301370,
+    "total_cost": 0.38493
+  },
+  "details": [
+    {
+      "question": "What does Jordan do for work?",
+      "answer": "graphic designer at a small agency",
+      "difficulty": "simple",
+      "type": "factual",
+      "predictions": {
+        "naive_rag": {
+          "response": "Senior designer.",
+          "f1_score": 0.28571428571428575,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "Senior graphic designer.",
+          "f1_score": 0.5,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "Senior designer.",
+          "f1_score": 0.28571428571428575,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Jordan, you are a senior designer. You recently transitioned into this role, which has been a bit of a whirlwind with an increased workload and more focus on emails.",
+          "f1_score": 0.06896551724137931,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan is a Senior Designer.",
+          "f1_score": 0.22222222222222224,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "Where does Jordan live?",
+      "answer": "Austin, Texas",
+      "difficulty": "simple",
+      "type": "factual",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "Austin.",
+          "f1_score": 0.6666666666666666,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our conversations, I don't have a specific city or address recorded for where you live. However, I do know that you enjoy visiting Barton Springs with Sam and your dog, Mango.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan lives in Austin, Texas.",
+          "f1_score": 0.5714285714285715,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "Who does Jordan live with?",
+      "answer": "roommate named Sam",
+      "difficulty": "simple",
+      "type": "factual",
+      "predictions": {
+        "naive_rag": {
+          "response": "Sam.",
+          "f1_score": 0.5,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "Sam.",
+          "f1_score": 0.5,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "Sam and their dog, Mango.",
+          "f1_score": 0.28571428571428575,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "You live with your roommate, Sam, in Austin.",
+          "f1_score": 0.36363636363636365,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan lives with their partner, Sam.",
+          "f1_score": 0.2222222222222222,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What is Jordan's main hobby?",
+      "answer": "rock climbing",
+      "difficulty": "simple",
+      "type": "factual",
+      "predictions": {
+        "naive_rag": {
+          "response": "Climbing and running.",
+          "f1_score": 0.5,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "Climbing.",
+          "f1_score": 0.6666666666666666,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "Climbing.",
+          "f1_score": 0.6666666666666666,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Based on our past conversations, it sounds like Jordan's main hobby is rock climbing. You've mentioned balancing your climbing practice with evening runs.",
+          "f1_score": 0.16,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Indoor rock climbing.",
+          "f1_score": 0.8,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What are Jordan's dietary preferences?",
+      "answer": "vegetarian",
+      "difficulty": "simple",
+      "type": "factual",
+      "predictions": {
+        "naive_rag": {
+          "response": "Oat milk lattes.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "Vegetarian; prefers oat milk lattes.",
+          "f1_score": 0.33333333333333337,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "Vegetarian.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Jordan is a vegetarian. Regarding beverages, they have a strong preference for oat milk lattes, which they often make at home as part of their morning ritual, though they have also been known to drink black coffee when they need to stay focused during busy work periods.",
+          "f1_score": 0.04347826086956522,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan is a vegetarian.",
+          "f1_score": 0.5,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: city?",
+      "answer": "Jordan lives in Austin, Texas.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "He lives in Austin.",
+          "f1_score": 0.6666666666666665,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our conversations, there is no specific city mentioned as Jordan's place of residence. However, Jordan has mentioned visiting **Barton Springs** with Sam and their dog, Mango, which suggests they may live in or near **Austin, Texas**, where Barton Springs is located.",
+          "f1_score": 0.21276595744680848,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan lives in Austin, Texas.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: job?",
+      "answer": "Jordan works as a graphic designer at a small agency.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan was promoted to a senior designer role at their agency.",
+          "f1_score": 0.4444444444444445,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "28-year-old senior graphic designer in Austin.",
+          "f1_score": 0.28571428571428575,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Jordan has been offered a senior designer role, which they intend to accept.",
+          "f1_score": 0.2,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan is a **senior designer** at an agency. They were recently promoted to this role (as of March 2026), which involves more oversight on creative direction and increased expectations compared to their previous position.\n\nJordan has mentioned that the new role has been a \"whirlwind,\" involving a lot of meetings and a busy calendar, and they have been working on adjusting to the new workflows and responsibilities. They use evening runs and climbing practice as ways to manage the stress and clear their head after long days at the office.",
+          "f1_score": 0.14457831325301204,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan is a 28-year-old Senior Designer based in Austin, Texas. Promoted in March 2026, they are currently managing an increased workload, frequent meetings, and coordination responsibilities. They utilize a specific, comfort-focused desk attire (oversized hoodies) to maintain their creative flow and rely on consistent morning routines\u2014including yoga and oat milk lattes\u2014to manage the professional transition.",
+          "f1_score": 0.07142857142857142,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: diet?",
+      "answer": "Jordan is vegetarian.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan is vegetarian, often eating pre-made salads or rice bowls when busy.",
+          "f1_score": 0.4,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "He is a vegetarian who prefers oat milk lattes.",
+          "f1_score": 0.36363636363636365,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "Jordan follows a consistent vegetarian diet.",
+          "f1_score": 0.5,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Based on our past conversations, here is what we know about your diet:\n\n*   **Vegetarian:** You follow a vegetarian diet, which you've noted is \"second nature\" to you. You feel that this plant-based approach helps you avoid feeling sluggish and keeps you sharp during high-stress periods.\n*   **Coffee Routine:** You are a fan of oat milk lattes. You have a ritual of making them at home to save time, especially when you are busy with work.\n*   **Convenience Habits:** During busy periods (like when you are preparing for big presentations), you tend to rely on quick, convenient options like pre-made salads or rice bowls.",
+          "f1_score": 0.04,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan is a vegetarian who maintains this diet consistently, often relying on quick pre-made salads or rice bowls during high-stress periods.",
+          "f1_score": 0.2608695652173913,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: lives with?",
+      "answer": "Jordan lives with a roommate named Sam.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan lives with Sam and their golden retriever puppy, Mango.",
+          "f1_score": 0.5333333333333333,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "He lives with his roommate, Sam, and their golden retriever, Mango.",
+          "f1_score": 0.5,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "Sam and their dog, Mango.",
+          "f1_score": 0.2,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Based on our past conversations, Jordan lives in Austin with a roommate named Sam.",
+          "f1_score": 0.631578947368421,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan lives with their partner, Sam, and their golden retriever puppy, Mango.",
+          "f1_score": 0.4705882352941177,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: age?",
+      "answer": "Jordan is 28 years old.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan is 28 years old.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "Jordan is 28 years old.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our conversation from March 4, 2026, you mentioned that you are 28 years old.",
+          "f1_score": 0.2857142857142857,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan is 28 years old.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: hobby?",
+      "answer": "Jordan's main hobby is rock climbing.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Climbing, running, and walking.",
+          "f1_score": 0.2222222222222222,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "Climbing.",
+          "f1_score": 0.2857142857142857,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "Climbing and puppy training.",
+          "f1_score": 0.2222222222222222,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Based on our conversations, you have two main hobbies:\n\n1. **Climbing:** You have been practicing climbing and even considered signing up for a program or training session related to it.\n2. **Running:** You have a regular routine of evening runs, which you find helpful for clearing your head and decompressing after a long day.\n\nYou've mentioned that these activities help you maintain a good balance, especially during busy or stressful periods.",
+          "f1_score": 0.08450704225352113,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan is an active individual whose primary hobbies include indoor rock climbing (specifically training for an April 2026 competition), yoga, running, HIIT workouts, and visiting Barton Springs with their partner, Sam, and their Golden Retriever puppy, Mango.",
+          "f1_score": 0.25641025641025644,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: deadline?",
+      "answer": "Jordan has a big client presentation deadline on March 10.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan had a client presentation on March 10th, which required intense final preparation.",
+          "f1_score": 0.4761904761904762,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Jordan completed a high-stakes client presentation on March 10, 2026.",
+          "f1_score": 0.6666666666666666,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Based on our recent conversations, you have a major client presentation deadline on March 10th, 2026. \n\nLeading up to this, you've been working intensely on the slide deck and final preparations. You mentioned that receiving positive feedback on a draft design helped ease some of the pressure, and you've been using climbing as a way to clear your head and manage the stress of the deadline.",
+          "f1_score": 0.15384615384615385,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan successfully completed a major client presentation on March 10, 2026.",
+          "f1_score": 0.631578947368421,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy coming?",
+      "answer": "Jordan's roommate Sam is getting a puppy next week.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan is helping Sam with the puppy, Mango, though she is currently focused on her climbing competition training.",
+          "f1_score": 0.31999999999999995,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Jordan is preparing for Sam's new puppy, debating between the names \"Finn\" and \"Cooper,\" and views it as a welcome stress-relieving distraction.",
+          "f1_score": 0.30769230769230765,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our recent conversations, here is what we know about the puppy:\n\n*   **Name:** Mango.\n*   **Breed:** Golden Retriever.\n*   **Owner:** Mango belongs to Sam.\n*   **Status:** Mango is \"absolute chaos in the best way\" and a \"handful,\" but very sweet. She has already chewed through one of Sam's slippers.\n*   **Your Involvement:** You have been helping Sam with puppy-proofing and assisting with the training schedule. You also plan to take Mango for recovery walks to help you relax.",
+          "f1_score": 0.07792207792207792,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan and their partner, Sam, brought home a Golden Retriever puppy named Mango during the week of March 8, 2026. Prior to the puppy's arrival, they debated between the names \"Finn\" and \"Cooper,\" and the household went through a \"nesting\" phase involving puppy gates and a mountain of chew toys. Mango is described as \"absolute chaos\" and \"a handful,\" but Jordan finds the puppy a sweet distraction and a good excuse to take breaks from design work.",
+          "f1_score": 0.14705882352941174,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: draft feedback?",
+      "answer": "Jordan received positive client feedback on a draft design.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "The client was impressed with the draft, providing a confidence boost and relief.",
+          "f1_score": 0.23529411764705882,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our past conversations, here is what we know about the feedback you received on your drafts:\n\n*   **Client Presentation (March 2026):** You received positive feedback on a draft for a big client presentation. You mentioned that this feedback was a \"confidence booster\" while you were preparing for the final execution.\n*   **Outcome:** After the presentation on March 10th, you shared that it went \"surprisingly well\" and that the clients were \"really happy with the direction\" you took on that draft, which was a huge relief for you.\n\nIt sounds like that feedback was a significant positive milestone for your work during that period!",
+          "f1_score": 0.12,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan received positive feedback on a draft design prior to a major client presentation on March 10, 2026, which significantly boosted their confidence and helped them manage the pressure of final preparations.",
+          "f1_score": 0.4444444444444445,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: presentation done?",
+      "answer": "Jordan finished the client presentation and it went really well.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "It was completed successfully and the client was impressed.",
+          "f1_score": 0.26666666666666666,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "It is due March 10th and currently being finalized.",
+          "f1_score": 0.125,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our recent conversations, here is what we know about the presentation you completed:\n\n*   **Outcome:** It went very well. The client was genuinely impressed with the direction you took, and the feedback was overwhelmingly positive.\n*   **Your Feelings:** You were quite nervous leading up to it, but felt a huge sense of relief once it was finished. You mentioned that you finally felt like you could \"let out a full breath\" after it was done.\n*   **Aftermath:** You didn't do anything major to celebrate; you mostly just \"crashed\" and kept things low-key, spending time with Sam and the new puppy, Mango. You also mentioned enjoying the comfort of an oversized hoodie the day after, which was a nice change from the business casual attire you had to wear for the presentation.",
+          "f1_score": 0.09836065573770492,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan completed a major client presentation on March 10, 2026, which was successful and resulted in positive feedback.",
+          "f1_score": 0.25,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy arrived?",
+      "answer": "Sam's puppy, a golden retriever named Mango, arrived home.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Yes, the golden retriever puppy, Mango, arrived and is settled in.",
+          "f1_score": 0.5882352941176471,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "The puppy has not arrived yet; Jordan is currently preparing for its arrival.",
+          "f1_score": 0.2,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our recent conversations, here is what we know about the puppy:\n\n*   **Name:** Mango.\n*   **Breed:** Golden Retriever.\n*   **Owner:** Mango belongs to Sam, but you have been very involved in helping out.\n*   **Status:** Mango arrived around March 13, 2026.\n*   **Personality:** You've described her as \"absolute chaos in the best way\" and \"a total handful,\" but also \"so sweet.\" She has already chewed through one of Sam's slippers.\n*   **Your Involvement:** You have been helping Sam with puppy-proofing the home and assisting with her training schedule. You also planned to take her for recovery walks to help you recharge.",
+          "f1_score": 0.16161616161616163,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "The puppy, Mango (a Golden Retriever), arrived during the week of March 8, 2026.",
+          "f1_score": 0.5263157894736842,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition considering?",
+      "answer": "Jordan is considering signing up for a beginner climbing competition in April.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan is participating in a climbing competition in April to stay motivated.",
+          "f1_score": 0.5454545454545454,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Jordan is committed to participating in an April climbing competition.",
+          "f1_score": 0.6,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our past conversations, here is what I know about your interest in a climbing competition:\n\n*   **The Goal:** You decided to sign up for a climbing competition in April 2026 to give yourself a concrete goal to stay motivated, as you had never done anything official before.\n*   **Preparation:** You have been training mostly on your own. You mentioned that you were hoping to use extra yoga sessions to help with the balance aspects of your climbing.\n*   **Routine:** You are balancing your climbing practice with evening runs, which you find helpful for clearing your head.\n*   **Mindset:** You initially found the idea intimidating, but you felt that having a target date helped make the prospect of taking on more work (and your professional goals) feel less daunting. You also mentioned that your team at work is supportive of your outside interests.\n\nIs there anything specific about your training or the competition you'd like to update me on?",
+          "f1_score": 0.1019108280254777,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan is preparing for a beginner indoor rock climbing competition in April 2026. They are training for it individually, focusing on balance and incorporating extra yoga into their routine to support their climbing performance.",
+          "f1_score": 0.37209302325581395,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition registered?",
+      "answer": "Jordan registered for the April climbing competition.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan is registered for a climbing competition in April.",
+          "f1_score": 0.8571428571428571,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Jordan is registered for an April climbing competition.",
+          "f1_score": 0.923076923076923,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Jordan has officially registered for a beginner climbing competition taking place in April 2026.\n\nHe decided to sign up for the competition to provide himself with a concrete goal for motivation. He has been balancing his training for the event with his work responsibilities (including a recent promotion to a senior designer role), often using evening runs and morning yoga to manage stress and maintain his physical conditioning.",
+          "f1_score": 0.18181818181818182,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan is registered for a beginner indoor rock climbing competition taking place in April 2026.",
+          "f1_score": 0.6,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion offered?",
+      "answer": "Jordan's agency offered them a senior designer role.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan was promoted to senior designer.",
+          "f1_score": 0.4615384615384615,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "He is a 28-year-old senior graphic designer currently navigating the increased coordination and meeting demands of his new promotion.",
+          "f1_score": 0.17391304347826086,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "Jordan has been offered a senior designer role and intends to accept it.",
+          "f1_score": 0.5555555555555556,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our past conversations, you were offered and have accepted a promotion to a senior designer role at your agency. \n\nAs of March 21, 2026, you had just completed your first week in that new role. You mentioned that it felt a bit surreal and that you were keeping things low-key to avoid crashing after the transition.",
+          "f1_score": 0.16949152542372883,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan was promoted to a Senior Designer role in March 2026. Reasoning: The user profile and historical memory confirm that Jordan successfully completed a major client presentation on March 10, 2026, which led to the promotion to Senior Designer, a role they officially accepted and began navigating throughout the rest of March 2026.",
+          "f1_score": 0.15384615384615385,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion accepted?",
+      "answer": "Jordan accepted the senior designer promotion.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Yes, Jordan accepted the senior designer promotion.",
+          "f1_score": 0.9090909090909091,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "He is a 28-year-old senior graphic designer.",
+          "f1_score": 0.3636363636363636,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Yes, Jordan accepted the senior designer role.",
+          "f1_score": 0.7272727272727272,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Based on our past conversations, you officially accepted a promotion to a senior designer role at your agency. \n\nYou mentioned on March 21, 2026, that you had just finished your first week in the new role. You described the experience as feeling \"a bit surreal\" and noted that you were keeping things low-key to avoid crashing after the transition.",
+          "f1_score": 0.14035087719298248,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan accepted the promotion to Senior Designer in March 2026 and is currently navigating the increased meeting loads and coordination responsibilities associated with the role.",
+          "f1_score": 0.4,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip planning?",
+      "answer": "Jordan is planning a weekend trip to Barton Springs with Sam and Mango.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan and Sam went to Barton Springs with Mango.",
+          "f1_score": 0.7368421052631579,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Jordan is planning a trip to Barton Springs with Sam and Mango.",
+          "f1_score": 0.9523809523809523,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Based on our conversations, here is what I know about your approach to trip planning and outings:\n\n*   **Preference for Low-Key/Relaxing Outings:** You tend to favor relaxing, nature-oriented trips, such as your recent visit to Barton Springs with Sam and your dog, Mango. You find these outings helpful for \"clearing the mental cache\" and disconnecting from the pressures of your senior designer role.\n*   **Focus on Balance:** You view these trips as a way to balance out your work week. You appreciate activities that allow you to step back and recharge, often preferring to keep things \"low-key\" rather than chaotic.\n*   **Inclusion of Loved Ones:** Your trips often involve Sam and Mango, and you enjoy the simple pleasure of watching them (especially Mango) enjoy themselves.\n*   **Spontaneity vs. Routine:** While you have a very structured daily routine (yoga, specific coffee habits, climbing gym), your trips seem to be a way to break that cycle and find a sense of peace. You don't seem to be a \"high-intensity\" planner; you prefer experiences that help you feel grounded.\n\nIs there a specific type of trip or a future plan you're thinking about that you'd like to discuss?",
+          "f1_score": 0.09729729729729729,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan prefers collaborative, restorative outings, specifically with Sam and their dog, Mango, to natural locations like Barton Springs. These trips serve as a tool for mental decompression and resetting after high-stress periods.",
+          "f1_score": 0.4,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip done?",
+      "answer": "Jordan went to Barton Springs \u2014 it was relaxing and Mango loved the water.",
+      "difficulty": "simple",
+      "type": "factual_evolving",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan went to Barton Springs with Sam and Mango; it was relaxing and peaceful.",
+          "f1_score": 0.75,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "He recently visited Barton Springs with his roommate, Sam, and their dog, Mango.",
+          "f1_score": 0.25,
+          "llm_score": 1.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan recently went on a trip to **Barton Springs** with **Sam and Mango** (their dog). \n\nBased on your conversations, here are a few details about the trip:\n*   **Timing:** The trip took place on Saturday, March 28, 2026.\n*   **Experience:** Jordan described it as \"exactly what I needed\" and \"really peaceful.\" \n*   **Mango:** The dog absolutely loved the water and was \"darting in and out\" the whole time.\n*   **Impact:** It helped Jordan \"clear the mental cache\" and transition from a busy work week in their new senior designer role.",
+          "f1_score": 0.2380952380952381,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan and Sam took a weekend trip to Barton Springs with their dog, Mango, which Jordan described as a peaceful and refreshing experience that helped them clear their head.",
+          "f1_score": 0.2702702702702703,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-04 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 4, 2026, you were drinking an oat milk latte, which you mentioned you had started making at home to save time while working on your client presentation.",
+          "f1_score": 0.19354838709677416,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Oat milk latte. Reasoning: As established in the \"TIMELINE FOR COFFEE\" and the \"RELEVANT MEMORY,\" the user's beverage cycle was in the [Oat milk latte] phase from March 1st to March 7th, 2026. This is confirmed by the March 4th conversation where Jordan explicitly mentions drinking an oat milk latte while working on slides.",
+          "f1_score": 0.12,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-11 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 11, 2026, you were drinking black coffee while planning for your upcoming climbing competition.",
+          "f1_score": 0.2222222222222222,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Black coffee.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-18 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 18, 2026, you were drinking an oat milk latte. You mentioned that you usually brew it at home as part of your morning ritual.",
+          "f1_score": 0.21428571428571425,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Oat milk latte.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-25 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 25, 2026, you were drinking a cup of black coffee. You mentioned that you've stopped adding cream to it because you've come to appreciate its simplicity.",
+          "f1_score": 0.13793103448275862,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Black coffee.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-01 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I've searched through your history, but I couldn't find any record of what you were drinking on April 1st, 2026. Would you like me to keep an eye out for that kind of detail in our future conversations?",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Oat milk latte. Reasoning: Jordan's beverage cycle follows a 7-day pattern that resets every Sunday. Since March 29, 2026, was a Sunday (the start of the cycle), Jordan consumed an \"Oat milk latte\" for the first 7 days of that cycle (March 29 through April 4). Therefore, on April 1, 2026, Jordan was drinking an oat milk latte.",
+          "f1_score": 0.1111111111111111,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-08 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I've searched through your memory, but I couldn't find any specific information about what you were drinking on April 8, 2026. If you remember what you were up to that day, I'd be happy to help you look for more details!",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Black coffee. Reasoning: Jordan's beverage cycle follows a 7-day alternation: 7 days of [Oat milk latte] followed by 7 days of [Black coffee], resetting every Sunday. Based on the provided timeline, Jordan drank black coffee from March 22\u201328 and March 29\u201331 (incorrectly listed as latte in the timeline snippet, but the 7-day rule confirms a switch to black coffee on April 5th). Following the 7-day cycle: March 29\u2013April 4 (Oat milk latte), April 5\u2013April 11 (Black coffee). Therefore, on Wednesday, April 8, Jordan was drinking black coffee.",
+          "f1_score": 0.04878048780487806,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-15 (Wed)?",
+      "answer": "oat milk latte",
+      "difficulty": "simple",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I've searched through our conversation history and archival memory, but I couldn't find any record of what you were drinking on April 15, 2026. If you remember or if it was mentioned in a conversation I haven't indexed, let me know!",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Black coffee. Reasoning: Jordan follows a 7-day beverage cycle resetting every Sunday. Based on the established pattern (March 29: Oat milk latte, March 30-April 4: Oat milk latte, April 5-11: Black coffee, April 12-18: Oat milk latte), the cycle for the week of April 12-18 is Oat milk latte. However, per the provided memory for 2026-W14, the pattern shifted to a 4-day cycle: 3 days of Oat milk latte, 1 day of Black coffee, 2 days of Oat milk latte, 1 day of Black coffee. Mapping this sequence from the start of the month (April 1: Oat milk, April 2: Black, April 3-4: Oat, April 5: Black, April 6-7: Oat, April 8: Black, April 9-10: Oat, April 11: Black, April 12-14: Oat, April 15: Black).",
+          "f1_score": 0.050420168067226885,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-22 (Wed)?",
+      "answer": "black coffee",
+      "difficulty": "simple",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I've searched through our conversation history and archival memory, but I couldn't find any mention of what you were drinking on April 22, 2026. If you remember what it was, I'd be happy to note it down for you!",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Black coffee. Reasoning: Jordan's beverage preference follows a strict 7-day cycle that resets every Sunday, alternating between [Oat milk latte] for 7 days and [Black coffee] for 7 days. According to the established March 2026 timeline and the confirmed pattern, the cycle for the week of April 20th\u201326th (which starts on Monday, April 20) follows the [Black coffee] phase, as the previous week (April 13\u201319) concluded the [Oat milk latte] phase on Sunday, April 19. Therefore, on Wednesday, April 22, Jordan is in the [Black coffee] rotation.",
+          "f1_score": 0.05128205128205127,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "Describe the pattern in what Jordan chooses to drink over time.",
+      "answer": "Strict 7-day cycle: oat milk latte for 7 days, then black coffee for 7 days, repeating.",
+      "difficulty": "simple",
+      "type": "pattern_id",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan typically drinks oat milk lattes, but has recently shifted to black coffee to maintain productivity.",
+          "f1_score": 0.3125,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "He shifted from black coffee to oat milk lattes.",
+          "f1_score": 0.39999999999999997,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Jordan transitioned from oat milk lattes to hot black coffee.",
+          "f1_score": 0.38461538461538464,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our conversations, there is a clear pattern in your drink choices:\n\n*   **Sunday Ritual:** You have a consistent habit of ordering an **oat milk latte** on Sundays. You've mentioned that you love the texture of the oat milk and that it has become your go-to way to enjoy coffee, serving as a relaxing ritual before the work week begins.\n*   **Workday Focus:** During the busy work week, you tend to switch to **black coffee**. You've noted that this is your preferred choice when you need to stay focused and power through your workload, even if it's a simpler option compared to your Sunday latte.\n\nIn short, you seem to treat the oat milk latte as a treat or ritual for downtime, while black coffee is your functional tool for productivity.",
+          "f1_score": 0.10526315789473684,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan follows a fixed 14-day cycle: 7 days of oat milk lattes followed by 7 days of black coffee, resetting every Sunday.",
+          "f1_score": 0.5405405405405405,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "oat milk latte. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 9 (starts 2026-04-26) is an odd-numbered week, so Jordan drinks oat milk latte.",
+      "difficulty": "simple",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "An oat milk latte. He has shifted his preference to them as a consistent source of comfort and focus for his workday.",
+          "f1_score": 0.13953488372093023,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Coffee. Jordan maintains a consistent morning coffee ritual to prepare for the work week.",
+          "f1_score": 0.16666666666666666,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On 2026-04-30 (Thursday), Jordan will most likely be drinking **black coffee**.\n\n**Reasoning:**\nBased on our recent conversations, Jordan has established a consistent ritual of drinking black coffee to help organize thoughts and maintain focus, particularly for work-related tasks and meetings. Jordan has explicitly stated that they have tried branching out but always return to black coffee, describing it as a grounding ritual that helps them get into the right headspace. Given that April 30, 2026, is a Thursday\u2014a workday\u2014it is highly probable that Jordan will stick to this established routine.",
+          "f1_score": 0.11111111111111112,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Black coffee. Reasoning: Jordan follows a 7-day coffee cycle: 7 days of oat milk latte followed by 7 days of black coffee, resetting every Sunday. Based on the provided timeline, March 29 and 30 were oat milk latte days (start of a cycle). Calculating the 14-day cycle forward from March 29: March 29-April 4 (Oat milk latte), April 5-11 (Black coffee), April 12-18 (Oat milk latte), April 19-25 (Black coffee), and April 26-May 2 (Oat milk latte). Wait, re-calculating the cycle: March 29 (Sun) starts an Oat milk latte week. April 5 (Sun) starts a Black coffee week. April 12 (Sun) starts an Oat milk latte week. April 19 (Sun) starts a Black coffee week. April 26 (Sun) starts an Oat milk latte week. Therefore, April 30 is an Oat milk latte day. Correction: Oat milk latte.",
+          "f1_score": 0.2162162162162162,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "black coffee. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 10 (starts 2026-05-03) is an even-numbered week, so Jordan drinks black coffee.",
+      "difficulty": "simple",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "An oat milk latte. It is Jordan's consistent go-to order and Sunday ritual.",
+          "f1_score": 0.1818181818181818,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "An oat milk latte. He prefers them as a consistent source of comfort and focus for his workday.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On 2026-05-06 (a Wednesday), Jordan will most likely be drinking **black coffee**.\n\n**Reasoning:**\nBased on your recent conversations, black coffee is your consistent, go-to beverage for maintaining focus and managing your daily routine, especially while working in your senior designer role. You have explicitly mentioned that you stick to black coffee to help you organize your thoughts and get through your workday, noting that it provides the \"kick\" you need for meetings. While you have mentioned enjoying oat milk lattes as a Sunday ritual, your weekday preference for powering through your workload is consistently black coffee.",
+          "f1_score": 0.19469026548672566,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Black coffee. Reasoning: Jordan follows a 7-day beverage cycle that resets every Sunday, alternating between 7 days of oat milk latte and 7 days of black coffee. Based on the established pattern, the cycle for the week of May 3\u20139, 2026, begins on Sunday, May 3. Since the cycle follows a 7-day rotation, and Jordan consumed oat milk lattes on March 29\u2013April 4 and April 12\u201318, and black coffee on April 5\u201311 and April 19\u201325, the sequence places the \"black coffee\" phase on the week of May 3\u20139. Therefore, Wednesday, May 6, falls within the black coffee week.",
+          "f1_score": 0.22857142857142856,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "oat milk latte. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 11 (starts 2026-05-10) is an odd-numbered week, so Jordan drinks oat milk latte.",
+      "difficulty": "simple",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "An oat milk latte. He prefers them as a consistent source of comfort and focus for his workday.",
+          "f1_score": 0.15384615384615385,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On 2026-05-13 (a Wednesday), Jordan will most likely be drinking **black coffee**.\n\n**Reasoning:**\nBased on your recent conversations, black coffee is your consistent, go-to beverage for maintaining focus and organizing your thoughts, especially during the work week. While you have mentioned enjoying oat milk lattes as a Sunday ritual, you have repeatedly confirmed that for your daily work routine\u2014particularly to power through meetings and emails in your senior designer role\u2014you stick to simple black coffee. You have noted that you prefer it hot to get the \"kick\" you need to stay productive.",
+          "f1_score": 0.2,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Black coffee. Reasoning: Jordan follows a 7-day beverage cycle, resetting every Sunday, where they drink an [Oat milk latte] for 7 days (Sunday\u2013Saturday) and [Black coffee] for 7 days (Sunday\u2013Saturday). Based on the established pattern, the cycle alternates weekly. Following the March 2026 data, the cycle for the week of May 10, 2026 (Sunday) begins a new block. Since May 10, 2026, is a Sunday, the [Oat milk latte] cycle runs from May 10 to May 16, and the [Black coffee] cycle runs from May 17 to May 23. Wait, re-calculating: The cycle resets every Sunday. March 29 was a Sunday and the start of an oat milk latte week. April 5, 12, 19, 26, May 3, and May 10 are Sundays. May 10 starts an oat milk latte week. Therefore, May 13 (Wednesday) falls within the oat milk latte week. Correcting the answer: Oat milk latte. Reasoning: The beverage cycle resets every Sunday. May 10, 2026, is a Sunday, marking the start of a 7-day [Oat milk latte] period (May 10\u2013May 16). Since May 13 falls within this 7-day window, Jordan will be drinking an oat milk latte.",
+          "f1_score": 0.2043010752688172,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "When did the choice of what Jordan was drinking FIRST switch from 'oat milk latte' to 'black coffee'? Explain the reasoning.",
+      "answer": "2026-03-08. Reasoning: Coffee choices alternate weekly starting on Sundays. The transition from oat milk latte to black coffee first occurs on 2026-03-08 because it is the start of Week 2.",
+      "difficulty": "simple",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "March 27, 2026. Jordan explicitly mentions drinking \"black coffee\" on this date, whereas all previous mentions (March 1, 3, and 20) specify an \"oat milk latte.\"",
+          "f1_score": 0.14814814814814814,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available. The context states he shifted *from* black coffee *to* oat milk lattes, not the other way around.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available. Jordan is consistently drinking oat milk lattes in the provided context.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan, the first recorded switch to 'black coffee' occurred on March 26, 2026. \n\nRegarding the reasoning:\n- **For the switch:** You described black coffee as a \"purist\" choice that provides the necessary \"kick\" to help you focus and \"clear the slate\" during busy times, particularly as you adjusted to your new senior designer role. You noted that you prefer it hot and that it helps you transition into your work mode.\n- **The inconsistency:** Interestingly, even after you established black coffee as your go-to on March 26th and 27th, you continued to drink oat milk lattes on subsequent days (March 29th and 30th). You described the oat milk latte as a \"consistent\" and \"comforting\" choice that helps you manage the workload of your new promotion, suggesting that your choice of drink currently fluctuates depending on whether you are seeking a \"purist\" focus (black coffee) or comfort and consistency (oat milk latte).",
+          "f1_score": 0.02962962962962963,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "March 8, 2026. Reasoning: The beverage pattern follows a strict 7-day cycle where the user drinks 'oat milk latte' for 7 days followed by 'black coffee' for 7 days. According to the timeline, the first cycle of 'oat milk latte' began on March 1 and lasted through March 7 (7 days). The transition to the second phase occurred on March 8, 2026, marking the first day of the 'black coffee' cycle.",
+          "f1_score": 0.09375,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "When did the choice of what Jordan was drinking FIRST switch from 'black coffee' to 'oat milk latte'? Explain the reasoning.",
+      "answer": "2026-03-15. Reasoning: Coffee choices alternate weekly starting on Sundays. The transition from black coffee to oat milk latte first occurs on 2026-03-15 because it is the start of Week 3.",
+      "difficulty": "simple",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available. The provided context only mentions Jordan drinking oat milk lattes.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available. The provided context only mentions oat milk lattes.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "The switch from 'black coffee' to 'oat milk latte' first occurred on Sunday, March 29, 2026.\n\nOn Saturday, March 28, you explicitly stated, \"No, I\u2019m a purist. Just black coffee, always.\" However, the very next day, March 29, you mentioned, \"I ended up brewing myself an oat milk latte earlier.\" \n\nRegarding the reasoning, you didn't provide a specific explanation for the change on that day, but by Monday, March 30, you noted that you had become \"pretty loyal\" to the oat milk latte because it is \"consistent\" and helps you focus while managing your workload in your new senior designer role. It seems to have become a source of comfort and consistency during your transition into that position.",
+          "f1_score": 0.03636363636363636,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "March 15, 2026. Reasoning: Based on the beverage timeline, Jordan consumed black coffee from March 8th through March 14th. The cycle reset on Sunday, March 15th, at which point the preference switched back to oat milk latte.",
+          "f1_score": 0.1621621621621622,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-04 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 4, 2026, you mentioned that you were wearing an oversized hoodie while working from home. You said it was the only thing that felt comfortable while you were stressed about your upcoming client presentation.",
+          "f1_score": 0.1111111111111111,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Oversized hoodie. Reasoning: On March 4, 2026, Jordan explicitly stated, \"I\u2019ve been living in this oversized hoodie all day\u2014it\u2019s the only thing that feels comfortable while I'm stressed.\" This aligns with the established apparel pattern for that date.",
+          "f1_score": 0.10526315789473684,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-11 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 11, 2026, you mentioned that you were wearing an oversized hoodie.",
+          "f1_score": 0.2857142857142857,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Oversized hoodie. Reasoning: The user's apparel follows a 6-day cycle starting March 16th (3 days Comfort, 3 days Studio). Before that, the timeline shows a 3-day block of \"oversized hoodie\" from March 10th to March 12th, and the user confirmed in a conversation on March 11th that they were wearing an oversized hoodie that morning.",
+          "f1_score": 0.08163265306122448,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-18 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 18, 2026, you mentioned that you were wearing your oversized hoodie while working on your design tasks.",
+          "f1_score": 0.1904761904761905,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Oversized hoodie. Reasoning: On March 18, 2026, Jordan confirmed in conversation that they were wearing their oversized hoodie while settling in for the day's design tasks, which aligns with the established 6-day apparel cycle (3 days of Oversized Hoodie followed by 3 days of Studio/Active Wear, which began on March 16).",
+          "f1_score": 0.07843137254901959,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-25 (Wed)?",
+      "answer": "fitted t-shirt",
+      "difficulty": "mid",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Casual professional attire.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 25, 2026, you mentioned that you were wearing a fitted t-shirt to the studio.",
+          "f1_score": 0.25,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Fitted t-shirt.",
+          "f1_score": 1.0,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-01 (Wed)?",
+      "answer": "fitted t-shirt",
+      "difficulty": "mid",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I'm sorry, Jordan, but I don't have any information in my records about what you were wearing on April 1st, 2026. Would you like me to look for anything else?",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Fitted sweater. Reasoning: Following the established 4-day oscillation cycle identified in the 2026-W14 summary, the transition from the \"oversized hoodie\" (worn Mar 30\u2013Apr 1) to the \"fitted sweater\" occurred on April 2nd, meaning Jordan was wearing the fitted sweater on April 1st as part of that transition phase.",
+          "f1_score": 0.04545454545454545,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-08 (Wed)?",
+      "answer": "fitted t-shirt",
+      "difficulty": "mid",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I'm sorry, Jordan, but I don't have any information in my memory about what you were wearing on April 8, 2026. Would you like me to keep track of things like that for you in the future?",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Fitted t-shirt. Reasoning: The confirmed apparel rule is a fixed 6-day cycle: 3 days of [Oversized Hoodie] followed by 3 days of [Fitted T-shirt/Jeans]. Based on the established timeline, Jordan wore an oversized hoodie on March 28, 29, and 30. Following this 6-day cycle, the sequence is: Mar 31 (Fitted), Apr 1 (Fitted), Apr 2 (Fitted), Apr 3 (Hoodie), Apr 4 (Hoodie), Apr 5 (Hoodie), Apr 6 (Fitted), Apr 7 (Fitted), Apr 8 (Fitted).",
+          "f1_score": 0.05714285714285715,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-15 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I've searched through your records, but I couldn't find any information about what you were wearing on April 15, 2026. Would you like me to keep an eye out for any future mentions of your outfits?",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Fitted t-shirt. Reasoning: Jordan's apparel follows a fixed 6-day cycle starting March 16, 2026, consisting of 3 days of \"Oversized Hoodie\" followed by 3 days of \"Fitted T-shirt/Jeans.\" Calculating the days from March 16 to April 15 (inclusive) results in 31 days. Dividing 31 by the 6-day cycle length (31 / 6 = 5 cycles with a remainder of 1) indicates that April 15 is the first day of the 6th cycle. Since the cycle begins with the \"Oversized Hoodie\" (Days 1-3) and continues with the \"Fitted T-shirt/Jeans\" (Days 4-6), a remainder of 1 corresponds to an \"Oversized Hoodie.\" However, checking the pattern transition from the end of March (Mar 30 was an oversized hoodie, the 3rd day of that cycle), the sequence continues: Mar 31 (Fitted), Apr 1 (Fitted), Apr 2 (Fitted), Apr 3 (Oversized), Apr 4 (Oversized), Apr 5 (Oversized), Apr 6 (Fitted), Apr 7 (Fitted), Apr 8 (Fitted), Apr 9 (Oversized), Apr 10 (Oversized), Apr 11 (Oversized), Apr 12 (Fitted), Apr 13 (Fitted), Apr 14 (Fitted), Apr 15 (Oversized). Re-evaluating the sequence based on the timeline, April 15 falls on the \"Oversized Hoodie\" day. Wait, applying the 6-day rule strictly: Mar 16-18 (Hoodie), Mar 19-21 (Fitted), Mar 22-24 (Hoodie), Mar 25-27 (Fitted), Mar 28-30 (Hoodie), Mar 31-Apr 2 (Fitted), Apr 3-5 (Hoodie), Apr 6-8 (Fitted), Apr 9-11 (Hoodie), Apr 12-14 (Fitted), Apr 15 (Hoodie). Correction: April 15 is an Oversized Hoodie.",
+          "f1_score": 0.01886792452830189,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-22 (Wed)?",
+      "answer": "oversized hoodie",
+      "difficulty": "mid",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I'm sorry, but I don't have any information in my memory regarding what you were wearing on April 22, 2026. Would you like me to look for something else?",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Oversized hoodie. Reasoning: The confirmed apparel rule is a 6-day cycle: 3 days of [Oversized Hoodie] followed by 3 days of [Fitted T-shirt/Jeans]. Starting from March 16, 2026, the cycle repeats. Calculating the days elapsed from March 16 to April 22, 2026: March has 31 days, so 15 days remain in March plus 22 days in April, totaling 37 days. 37 divided by 6 equals 6 full cycles with a remainder of 1 day. Since the cycle begins with the oversized hoodie, the first day of the 7th cycle (April 22) is an oversized hoodie day.",
+          "f1_score": 0.04545454545454545,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "Describe the pattern in how Jordan chooses what to wear.",
+      "answer": "Alternates every 3 days: fitted t-shirt for 3 days, then oversized hoodie for 3 days, repeating.",
+      "difficulty": "mid",
+      "type": "pattern_id",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan wears fitted t-shirts for climbing and work to minimize distractions and improve focus, while preferring oversized hoodies for comfort during relaxation and design tasks.",
+          "f1_score": 0.3157894736842105,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "He prefers a soft, oversized hoodie as a \"security blanket\" to achieve his creative flow state.",
+          "f1_score": 0.13333333333333333,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Jordan prioritizes comfort to stay grounded.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our conversations, your approach to choosing what to wear is centered on simplicity and comfort to support your productivity. You prefer \"keeping it simple\" and often opt for staples like fitted t-shirts or hoodies, especially when you're working on projects or need to stay focused. You've mentioned that you find it easier to stay productive when you aren't \"fussing\" over your outfit, and you seem to appreciate that your workplace doesn't have a strict dress code, allowing you to prioritize comfort over formal attire.",
+          "f1_score": 0.0816326530612245,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan follows a fixed 6-day cycle consisting of 3 days of [Comfort/Home Wear: Oversized Hoodie] followed by 3 days of [Studio/Active Wear: Fitted T-shirt/Jeans]. This pattern began on March 16, 2026.",
+          "f1_score": 0.3043478260869565,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 61 (in Cycle 11, starting 2026-04-30) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "difficulty": "mid",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "A soft, oversized hoodie. It is his go-to comfort attire and essential for his creative flow state.",
+          "f1_score": 0.11320754716981134,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "A comfortable, relaxed outfit (e.g., a fitted t-shirt). Jordan consistently prioritizes comfortable attire regardless of professional or personal circumstances.",
+          "f1_score": 0.1818181818181818,
+          "llm_score": 1.0
+        },
+        "memgpt": {
+          "response": "Based on your recent habits, you will most likely be wearing a fitted t-shirt and jeans on Thursday, April 30, 2026.\n\nMy reasoning is based on our recent conversations:\n1. **Professional Preference:** Since your promotion to senior designer, you have consistently mentioned that you prefer a \"fitted t-shirt and jeans\" for work. You've noted that this outfit keeps you comfortable, which helps you focus on the details of your projects.\n2. **Workplace Culture:** You mentioned that your office has a relaxed dress code where the quality of your work is prioritized over formal attire, allowing you to stick to your preferred style.\n3. **Consistency:** You have described the fitted t-shirt as a \"staple\" in your wardrobe and have expressed a clear preference for it over more formal clothing.\n\nWhile you do enjoy an oversized hoodie for lazy Sundays or high-stress deadlines at home, your standard \"work mode\" attire is definitely the fitted t-shirt and jeans.",
+          "f1_score": 0.15642458100558662,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan will be wearing an oversized hoodie. Reasoning: The apparel cycle follows a fixed 6-day oscillation of 3 days of [Oversized Hoodie] followed by 3 days of [Fitted T-shirt/Jeans]. Based on the established sequence where Jordan was in [Oversized Hoodie] on March 28\u201330 (the end of the data set), the cycle continues: March 31\u2013April 2 (Fitted T-shirt/Jeans), April 3\u20135 (Oversized Hoodie), April 6\u20138 (Fitted T-shirt/Jeans), and so on. Calculating the 6-day cycle forward from March 30, the [Oversized Hoodie] phases fall on days 1\u20133, 7\u20139, 13\u201315, 19\u201321, 25\u201327, and 31\u201333 of the following month. April 30 is the 31st day of the cycle starting from March 30, placing it within the [Oversized Hoodie] phase.",
+          "f1_score": 0.3357664233576642,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 67 (in Cycle 12, starting 2026-05-06) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "difficulty": "mid",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "A soft, oversized hoodie. He views it as a \"security blanket\" essential for his creative flow state.",
+          "f1_score": 0.07547169811320754,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Comfortable attire. Jordan consistently prefers a relaxed, comfortable dress code, including fitted t-shirts, across all provided entries.",
+          "f1_score": 0.14814814814814814,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our recent conversations, Jordan, you tend to prioritize comfort and simplicity in your daily attire. You've mentioned that you prefer wearing a \"fitted t-shirt\" for work and productivity, as it helps you stay focused without fussing over your clothes. On your lazy or rest days, you gravitate toward a \"soft, worn-in oversized hoodie.\"\n\nSince May 6, 2026, falls on a Wednesday\u2014a typical workday\u2014it is most likely that you will be wearing a **fitted t-shirt**. You've noted that your workplace doesn't have a strict dress code, and you find that this choice keeps you comfortable and productive while you work on your projects. Unless you have a specific event or a rest day planned for that Wednesday, the fitted t-shirt is your go-to staple.",
+          "f1_score": 0.19867549668874174,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Fitted t-shirt. Reasoning: Jordan follows a 6-day apparel cycle (3 days of Oversized Hoodie, 3 days of Fitted T-shirt/Jeans). Starting from the established cycle on March 16, 2026, there are 51 days between March 16 and May 6. Dividing 51 by the 6-day cycle length yields 8 full cycles and a remainder of 3 days. Since the cycle begins with 3 days of Oversized Hoodie (days 1-3), the 3rd day of the cycle is the final day of the hoodie phase. However, because the cycle is a 6-day rotation, the 4th, 5th, and 6th days are the \"Studio/Active Wear\" phase. Since 51 mod 6 = 3, and the cycle starts on March 16, May 6 corresponds to the end of the hoodie phase; however, checking the alignment of the 6-day cycle (March 16-18 Hoodie, March 19-21 Studio, etc.), May 6th falls on the 3rd day of a Studio phase (May 4-6).",
+          "f1_score": 0.2926829268292683,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 74 (in Cycle 13, starting 2026-05-12) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "difficulty": "mid",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "A soft, oversized hoodie. It is his go-to comfort attire and essential for his creative flow state.",
+          "f1_score": 0.11320754716981134,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Comfortable attire. Jordan consistently prefers a relaxed, comfortable dress code across all entries.",
+          "f1_score": 0.08,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our recent conversations, it is difficult to say with absolute certainty what you will be wearing on Wednesday, May 13, 2026, as your choice seems to depend heavily on your daily activities and mood.\n\nHowever, based on your habits, here is the most likely scenario:\n\nIf you are working or heading into the office, you will most likely be wearing a **fitted t-shirt**. You have mentioned that you prefer this for its simplicity and comfort, noting that it helps you stay productive without the distraction of a strict dress code.\n\nIf it happens to be a \"lazy\" or low-key day, you will likely be in your **favorite oversized, soft, worn-in hoodie**, which you have described as your go-to for recharging.\n\nSince May 13, 2026, falls on a Wednesday, it is most probable that you will be in your work-day staple: a fitted t-shirt. Does that sound like a typical Wednesday for you?",
+          "f1_score": 0.14364640883977903,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan will most likely be wearing an oversized hoodie. Reasoning: The apparel pattern is a fixed 6-day cycle consisting of 3 days of [Comfort/Home Wear: Oversized Hoodie] followed by 3 days of [Studio/Active Wear: Fitted T-shirt/Jeans], starting March 16, 2026. Calculating the days from March 16 to May 13: there are 58 days (15 in March + 30 in April + 13 in May). Dividing 58 by the 6-day cycle length (58 / 6 = 9 cycles with a remainder of 4). The 4th day of the cycle represents the first day of the second 3-day block, which is the start of the [Studio/Active Wear] phase. However, looking at the established sequence (Mar 16-18: Hoodie, Mar 19-21: Studio), the remainder of 4 falls on the first day of the Studio phase. Re-verifying the sequence: Day 1, 2, 3 (Hoodie); Day 4, 5, 6 (Studio). Since the remainder is 4, Jordan will be wearing a fitted t-shirt/jeans.",
+          "f1_score": 0.3157894736842105,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did the style Jordan was wearing FIRST switch from 'fitted t-shirt' to 'oversized hoodie'? Explain the reasoning.",
+      "answer": "2026-03-04. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). The transition from fitted t-shirt to oversized hoodie first occurs on 2026-03-04.",
+      "difficulty": "mid",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on our conversation history, the first time you mentioned wearing an 'oversized hoodie' was on March 28, 2026. \n\nPrior to this, on March 20, 2026, you explicitly stated that you were wearing a 'fitted t-shirt' to work because you found that being comfortable helped you focus on the details of your projects.\n\nThe shift to the 'oversized hoodie' appears to be a transition toward prioritizing comfort for relaxation and focus during your downtime and while working from your desk. You described the hoodie as a 'security blanket' and noted that it helps you stay grounded and reach a 'creative flow state' while working on design projects, whereas the fitted t-shirt was your go-to for a more active or professional-casual setting. Essentially, the hoodie became your preferred choice for managing the stress and workload of your new senior designer role.",
+          "f1_score": 0.03225806451612903,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "The style first switched from 'fitted t-shirt' to 'oversized hoodie' on March 4, 2026. Reasoning: The timeline indicates Jordan wore a 'fitted t-shirt' from March 1 through March 3, followed by an 'oversized hoodie' starting on March 4, 2026.",
+          "f1_score": 0.15789473684210528,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "When did the style Jordan was wearing FIRST switch from 'oversized hoodie' to 'fitted t-shirt'? Explain the reasoning.",
+      "answer": "2026-03-07. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). The transition from oversized hoodie to fitted t-shirt first occurs on 2026-03-07.",
+      "difficulty": "mid",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available. The context does not mention a person named Jordan.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "The first recorded instance of you switching from an 'oversized hoodie' to a 'fitted t-shirt' occurred on **March 25, 2026**.\n\n**Reasoning:**\nThis shift coincided with your transition into the new **senior designer role**. You explained that while the office environment was relaxed, you found the fitted t-shirt to be a better balance\u2014it was comfortable enough to keep you grounded and productive, but \"put-together\" enough to help you feel professional during meetings, avoiding the feeling of being a \"slob\" while navigating your new responsibilities. You noted that this style choice, along with your black coffee habit, became a consistent part of your new professional rhythm. \n\nWhile you still occasionally wear your oversized hoodie for lazy weekends or recharging at home (as noted on March 28th and 29th), the fitted t-shirt became your primary choice for studio work and daily professional life starting that week.",
+          "f1_score": 0.0303030303030303,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "March 19, 2026. Reasoning: The user's apparel cycle follows a fixed 6-day pattern (3 days of 'Oversized Hoodie' followed by 3 days of 'Studio/Active Wear'). Based on the established timeline starting March 16, 2026, the user wore the 'Oversized Hoodie' on March 16, 17, and 18. The cycle transitioned to 'Studio/Active Wear' (Fitted T-shirt/Jeans) on March 19, 2026.",
+          "f1_score": 0.07407407407407407,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-04 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On March 4, 2026, you mentioned that you forced yourself to do some morning yoga to help stretch out the tension from working on your client presentation. You noted that it helped, though you felt a bit stiff while doing it. You also mentioned that you hadn't looked at your rock climbing gear in weeks and were itching to get back to the wall once your deadline passed.",
+          "f1_score": 0.06060606060606061,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan performed morning yoga.",
+          "f1_score": 0.6666666666666666,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-11 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On Wednesday, March 11, 2026, you mentioned that you did your morning yoga to help clear your head before starting work. You also mentioned that you were planning to focus more on endurance training for an upcoming beginner climbing competition in April, though you decided to stick to desk work that day to catch up on design projects.",
+          "f1_score": 0.06779661016949151,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan performed morning yoga.",
+          "f1_score": 0.6666666666666666,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-18 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On Wednesday, March 18, 2026, you started your day with morning yoga to stretch out your back before work. You mentioned that it helped you feel centered and handle the pressures of your new senior designer role. You weren't doing any climbing training that day, though you were planning to increase your climbing gym sessions in the evenings starting the following week to prepare for your competition in April.",
+          "f1_score": 0.059701492537313446,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan practiced morning yoga. Reasoning: According to the provided timeline for exercise and the conversation on March 18, 2026, Jordan performed morning yoga to stretch out their back before starting design work.",
+          "f1_score": 0.12903225806451613,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-25 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "On Wednesday, March 25, 2026, you stuck to your morning yoga routine to help clear your head and feel grounded before heading into the studio for your senior designer role.",
+          "f1_score": 0.13333333333333333,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan did morning yoga.",
+          "f1_score": 0.6666666666666666,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-01 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I couldn't find any specific records of your workout on April 1, 2026. If you'd like, I can help you look for other dates or check if you mentioned your routine around that time in a different context.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan was doing meditation. Reasoning: Based on the provided [week:2026-W14:user] summary, the daily routine sequence for the period starting March 30, 2026, lists Yoga for the first 2 days (Mar 30\u201331) and Meditation for the following 2 days (Apr 1\u20132). Therefore, on April 1, 2026, Jordan was doing meditation.",
+          "f1_score": 0.04444444444444444,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-08 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I couldn't find any specific records of your workouts on April 8, 2026. My memory search didn't return any entries for that date. Would you like me to look for information around that time, or is there something specific you remember about that day?",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan performed active training (Yoga/Run). Reasoning: Jordan's routine is a fixed 7-day calendar-locked cycle where Monday through Friday is designated for \"Active Training\" (Yoga/Run). As April 8, 2026, falls on a Wednesday, it aligns with the \"Active Training\" portion of the weekly cycle.",
+          "f1_score": 0.0,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-15 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "I've searched through your records, but I couldn't find any specific information about your workout on April 15, 2026. If you remember what you did that day, I'd be happy to note it down for you!",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan was doing a morning yoga session. Reasoning: According to the established 7-day calendar-locked routine, Monday through Friday are dedicated to 'Active Training' (alternating Yoga/Run). Following the sequence from the end of March (March 30: Yoga, March 31: Run, April 1: Yoga, April 2: Run, April 3: Yoga), the alternating pattern continues into April. Calculating the sequence for April 2026 (starting April 1 as Yoga), the weekday schedule is: April 1 (Yoga), April 2 (Run), April 3 (Yoga), April 6 (Run), April 7 (Yoga), April 8 (Run), April 9 (Yoga), April 10 (Run), April 13 (Yoga), April 14 (Run), and April 15 (Yoga).",
+          "f1_score": 0.041237113402061855,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-22 (Wed)?",
+      "answer": "morning yoga",
+      "difficulty": "difficult",
+      "type": "recall",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Max iterations reached without final answer.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan was performing morning yoga. Reasoning: According to the established routine, Jordan follows a calendar-locked cycle where Monday through Friday is designated for \"Active Training\" (Yoga/Run). As of March 2026, the specific weekday training alternates between morning yoga and evening runs. Since April 22, 2026, is a Wednesday, it falls within the Monday-Friday active training window. Following the established pattern of alternating yoga and runs, and observing the sequence from late March/early April, the training on Wednesday, April 22, is scheduled as morning yoga.",
+          "f1_score": 0.05333333333333332,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "Describe Jordan's routine for working out.",
+      "answer": "Day-of-week rule: Mon/Wed/Fri = morning yoga, Tue/Thu = evening run, Sat = climbing gym, Sun = rest day.",
+      "difficulty": "difficult",
+      "type": "pattern_id",
+      "predictions": {
+        "naive_rag": {
+          "response": "Jordan incorporates evening runs, climbing practice, and recovery walks with Mango.",
+          "f1_score": 0.25,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "Morning yoga (sun salutations) and solo climbing sessions.",
+          "f1_score": 0.38095238095238093,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "Intense bouldering sessions and evening runs.",
+          "f1_score": 0.21052631578947364,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan\u2019s workout routine is centered around maintaining a balance between his demanding new role as a senior designer and his physical well-being. His routine primarily consists of two main activities:\n\n*   **Climbing:** This is a consistent part of his schedule and serves as his primary \"solo escape.\" He finds that climbing helps him clear his head and shift his focus from digital design work to physical problem-solving. He typically goes to the climbing gym for a few hours at a time, often on weekends or after work, and prefers wearing a fitted t-shirt to avoid feeling restricted while on the wall.\n*   **Evening Runs:** When the weather permits, Jordan incorporates evening runs into his routine. He uses these runs to reset after a long day at his desk, noting that while it can be a struggle to get started, he always feels better afterward.\n\nHe also enjoys taking recovery walks with his dog, Mango, which he finds motivating. Overall, he views these physical activities as essential for preventing burnout and staying grounded amidst his busy work schedule.",
+          "f1_score": 0.057803468208092484,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan follows a 7-day calendar-locked fitness routine: Monday through Friday consists of alternating \"Active Training\" (Yoga or Running), Saturday is reserved for the climbing gym, and Sunday is a designated rest day.",
+          "f1_score": 0.2857142857142857,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "evening run. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-04-30 is a Thursday, Jordan does evening run.",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available. The context only mentions training for an April competition, not specific workouts after it concludes.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on your recent routines, you will most likely be doing an evening run on April 30, 2026.\n\nMy reasoning is that you have established a consistent routine of balancing climbing practice with evening runs to clear your head and build endurance. You've mentioned that these runs are a key part of your schedule, especially when you are preparing for climbing competitions or dealing with high-pressure work situations. Since you prefer these runs in the evening to decompress, it is highly probable that you will stick to this habit on that Thursday.",
+          "f1_score": 0.21487603305785122,
+          "llm_score": 1.0
+        },
+        "memory_v2": {
+          "response": "Jordan will be doing an evening run. Reasoning: Jordan's fitness routine follows a strict 7-day calendar-locked cycle: Monday\u2013Friday consists of alternating \"Active Training\" (Yoga/Run), Saturday is \"Climbing Gym,\" and Sunday is a \"Rest Day.\" April 30, 2026, falls on a Thursday. Looking at the established cycle, the pattern for the last week of March (Mar 30, Mon) was Yoga, followed by Run (Mar 31, Tue), Yoga (Apr 1, Wed), and Run (Apr 2, Thu). Following this alternating sequence, the pattern for the week of April 27\u201330 is: April 27 (Mon) Yoga, April 28 (Tue) Run, April 29 (Wed) Yoga, and April 30 (Thu) Run.",
+          "f1_score": 0.30158730158730157,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "morning yoga. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-05-06 is a Wednesday, Jordan does morning yoga.",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on your recent routine, you will most likely be going for an evening run on Wednesday, May 6, 2026.\n\nMy reasoning is based on your established habit of balancing your climbing practice with evening runs. You've mentioned that these runs help you clear your head after a long day and that you prefer them in the evening because it's quieter and allows you to decompress. Since you've been training for a climbing competition and managing a busy workload, you've consistently prioritized these runs as a way to maintain your stamina and mental well-being. Additionally, you often enjoy these runs with your dog, Mango, who serves as your primary motivation.",
+          "f1_score": 0.13432835820895522,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Morning yoga. Reasoning: Jordan's fitness routine is a calendar-locked, 7-day cycle where Monday through Friday consist of alternating \"Active Training\" (Yoga/Run). May 6, 2026, is a Wednesday. Following the established pattern from March 2026 where Wednesdays are consistently \"Morning Yoga\" days (e.g., March 4, March 11, March 18, March 25), the routine dictates a morning yoga session for that date.",
+          "f1_score": 0.3146067415730337,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "morning yoga. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-05-13 is a Wednesday, Jordan does morning yoga.",
+      "difficulty": "difficult",
+      "type": "prediction",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Based on your recent habits, on Wednesday, May 13, 2026, you will most likely be **climbing at the gym** or **going for an evening run**.\n\nMy reasoning is based on your established routine:\n1. **Climbing:** You have mentioned that climbing is a consistent, regular activity for you\u2014it serves as your \"solo escape\" to clear your mind from design work. You have also expressed a specific goal to focus on endurance for climbing to compete under pressure.\n2. **Evening Runs:** You explicitly stated that evening runs are a \"nice routine\" that you intend to keep alongside your climbing practice to help clear your head after a long day.\n\nSince you view these as a \"perfect balance,\" it is highly probable that your workout on that Wednesday will involve one of these two activities.",
+          "f1_score": 0.1509433962264151,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "Jordan will be doing morning yoga. Reasoning: Jordan's fitness routine is a fixed 7-day calendar-locked cycle where Monday through Friday consists of alternating \"Active Training\" (Yoga/Run). May 13, 2026, falls on a Wednesday. Based on the established pattern of alternating Yoga and Running during the work week (e.g., March 2026: Mon-Yoga, Tue-Run, Wed-Yoga, Thu-Run, Fri-Yoga), the cycle dictates that Wednesdays are designated for morning yoga.",
+          "f1_score": 0.2580645161290323,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'rest day' to 'morning yoga'? Explain the reasoning.",
+      "answer": "2026-03-02. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from rest day to morning yoga first occurs on 2026-03-02 because 2026-03-02 is a Monday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available. The provided context does not specify when Jordan first switched to morning yoga; it only shows them already practicing it by March 9th.",
+          "f1_score": 0.07142857142857142,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "March 11, 2026. The March 1st entry describes a \"restorative Sunday\" off from workouts, while the March 11th entry is the first to mention a \"relaxed morning of yoga.\"",
+          "f1_score": 0.14814814814814814,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan first mentioned incorporating \"morning yoga\" into their routine on **March 25, 2026**.\n\nThe reasoning behind this shift was to help Jordan feel **grounded** and to **clear their head** before starting work, especially given the increased pressure and responsibilities of their new senior designer role. Jordan noted that it helps set the tone for the day and prevents them from feeling stiff after long periods of sitting at their desk.",
+          "f1_score": 0.06060606060606061,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "March 2, 2026. Reasoning: Based on the timeline for exercise, March 1, 2026, was a 'rest day'. The very next day, March 2, 2026, the activity was recorded as 'morning yoga', marking the first transition from the rest day state to the yoga state in the provided data.",
+          "f1_score": 0.13953488372093023,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'morning yoga' to 'evening run'? Explain the reasoning.",
+      "answer": "2026-03-03. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from morning yoga to evening run first occurs on 2026-03-03 because 2026-03-03 is a Tuesday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "March 3, 2026. Jordan mentions planning an evening run on this date, whereas the yoga mention does not occur until March 13.",
+          "f1_score": 0.2608695652173913,
+          "llm_score": 1.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan's transition from 'morning yoga' to 'evening run' occurred around mid-March 2026, coinciding with the increased workload and stress of starting a new senior designer role.\n\nThe reasoning behind this switch was primarily to manage the stress of the new position. Jordan found that the evening run served as a necessary ritual to \"clear the head\" and transition out of \"designer mode\" after a long day of sitting at a desk and dealing with meetings. While morning yoga had previously been a grounding way to start the day, the evening run became the preferred method to release the accumulated stress of the workday, providing a physical outlet that helped Jordan feel away from screens and work responsibilities.",
+          "f1_score": 0.0202020202020202,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "March 3, 2026. Reasoning: Based on the provided exercise timeline, Jordan followed a 'morning yoga' routine on March 2nd. On March 3rd, the routine transitioned to an 'evening run', marking the first time this specific activity occurred in the sequence.",
+          "f1_score": 0.1621621621621622,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'evening run' to 'morning yoga'? Explain the reasoning.",
+      "answer": "2026-03-04. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from evening run to morning yoga first occurs on 2026-03-04 because 2026-03-04 is a Wednesday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "March 13, 2026. Jordan mentions starting the day with yoga on this date, whereas the previous recorded activity (March 3) was an evening run.",
+          "f1_score": 0.16666666666666666,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan's transition from an evening run to morning yoga occurred between March 24, 2026, and March 25, 2026.\n\nOn March 24, Jordan mentioned still relying on an evening run to decompress after work. By March 25, Jordan had shifted to a morning yoga routine.\n\nThe reasoning for this change was to help Jordan feel \"grounded\" and to clear their head before starting the workday, specifically to manage the increased pressure and responsibilities of their new senior designer role. Jordan found that the morning yoga helped set the tone for the day, allowing them to better handle tasks like mockups and client feedback.",
+          "f1_score": 0.043478260869565216,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "March 2, 2026. Reasoning: According to the provided timeline, Jordan\u2019s fitness routine began with a rest day on March 1, followed by \"morning yoga\" on March 2, 2026. Prior to this, the timeline reflects a rest day, marking March 2 as the first recorded instance of the morning yoga routine in the current cycle.",
+          "f1_score": 0.08,
+          "llm_score": 0.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'morning yoga' to 'climbing gym'? Explain the reasoning.",
+      "answer": "2026-03-07. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from morning yoga to climbing gym first occurs on 2026-03-07 because 2026-03-07 is a Saturday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available. The context does not indicate a switch from yoga to the climbing gym; Jordan practices both.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available. Jordan consistently incorporates both yoga and climbing throughout the provided dates.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan's transition from morning yoga to the climbing gym as a primary workout routine occurred in mid-March 2026. \n\nBy March 13, 2026, you were still practicing morning yoga, noting that it helped with flexibility and mental resets. However, by March 14, 2026, you mentioned being \"locked in\" at the climbing gym and having registered for an April climbing competition.\n\nThe reasoning for this shift was twofold:\n1. **Competition Training:** You registered for an April climbing competition, which required a more intense and dedicated training schedule than yoga provided.\n2. **Mental Escape:** You found that climbing served as a necessary \"physical puzzle\" to help you stop thinking about work (design layouts and emails) after stepping into your new senior designer role. While yoga helped you center yourself, you described climbing as a more effective way to disconnect from the intensity of your professional responsibilities.",
+          "f1_score": 0.0303030303030303,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "March 7, 2026. Reasoning: Based on the provided timeline, Jordan followed a sequence of morning yoga and evening runs from March 2nd through March 6th. The first instance of \"climbing gym\" in the data occurs on March 7th, which was a Saturday, marking the first break from the weekday morning yoga/evening run routine to the calendar-locked weekend activity of climbing.",
+          "f1_score": 0.1111111111111111,
+          "llm_score": 1.0
+        }
+      }
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'climbing gym' to 'rest day'? Explain the reasoning.",
+      "answer": "2026-03-08. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from climbing gym to rest day first occurs on 2026-03-08 because 2026-03-08 is a Sunday.",
+      "difficulty": "difficult",
+      "type": "transition",
+      "predictions": {
+        "naive_rag": {
+          "response": "No information available. The provided context does not show a switch from climbing to rest days; Jordan maintains both routines throughout the dates provided.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "rsum": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memory_bank": {
+          "response": "No information available.",
+          "f1_score": 0.0,
+          "llm_score": 0.0
+        },
+        "memgpt": {
+          "response": "Jordan's first recorded switch from a 'climbing gym' workout to a 'rest day' occurred on **March 15, 2026**.\n\nThe reasoning for this shift was physical recovery; Jordan noted that their muscles needed a break after several recent climbing sessions. Additionally, this period coincided with Jordan navigating the early stages of a new senior designer role, which brought increased responsibilities and a need to balance a new, more demanding workload with their training schedule.",
+          "f1_score": 0.05970149253731343,
+          "llm_score": 0.0
+        },
+        "memory_v2": {
+          "response": "March 15, 2026. Reasoning: Based on the provided timeline, Jordan visited the climbing gym on March 14, 2026. The subsequent day, March 15, 2026, is explicitly recorded as a \"rest day\" in the timeline, marking the first transition from the climbing gym activity to a rest day following the start of their rigid routine after the March 10th presentation.",
+          "f1_score": 0.07692307692307691,
+          "llm_score": 0.0
+        }
+      }
+    }
+  ]
+}

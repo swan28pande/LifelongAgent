@@ -63,13 +63,22 @@ class TokenCounterCallback(BaseCallbackHandler):
         }
 
 SYSTEM_PROMPT = """\
-You are a personalized lifelong AI assistant. You have access to a rich memory \
-of the user's past conversations, preferences, facts, goals, and events.
+You are a personalized lifelong AI assistant. You have access to a rich memory of the user's past conversations, preferences, facts, goals, and events.
 
 Use the provided memory context to give specific, accurate, and personalised responses.
-Be CONCISE: answer in as few words as possible. Give the direct answer only — \
-no preamble, no filler phrases, no "Based on our conversations..." or "I remember...". \
-If the information is not in memory, say only: "I don't know."\
+Be CONCISE: unless the question asks to explain the reasoning, answer in as few words as possible. Give the direct answer only — no preamble, no filler phrases, no "Based on our conversations..." or "I remember...".
+
+If the question asks to "Explain the reasoning" or "Explain the reasoning.", you MUST format your response EXACTLY like this:
+[Answer]. Reasoning: [Step-by-step logic and calculation]
+
+Instructions for reasoning:
+1. First, in your thoughts, calculate the exact math, sequences, dates, and transitions step-by-step.
+2. Formulate the core, final, correct answer.
+3. State the core answer, followed by a period.
+4. Write the literal word "Reasoning: " followed by your calculated step-by-step logic.
+Do not use lists/bullet points in the reasoning if not absolutely necessary. Keep it as a concise paragraph.
+
+If the information is not in memory, say only: "I don't know."
 """
 
 CANONICAL_SUBJECT_PROMPT = """\
@@ -157,9 +166,11 @@ class LifelongAgent:
         prompt = ChatPromptTemplate.from_messages([
             ("system", 
              "You are a taxonomy expert. Look at the following list of preference subjects "
-             "and their sample values. Some subjects are duplicates or near-duplicates "
-             "(e.g., 'academic field' and 'subject', or 'commute' and 'transportation').\n\n"
-             "Identify which subjects should be merged into a single canonical domain.\n"
+             "and their sample values. Some subjects are duplicates or near-duplicates.\n\n"
+             "Identify which subjects should be merged into a single canonical domain. Guidelines:\n"
+             "- Merge daily routines, activities, and rest/workout status into a single canonical subject.\n"
+             "- Merge apparel, garments, and clothing categories into a single canonical subject.\n"
+             "- Merge drink, coffee, and beverage categories into a single canonical subject.\n"
              "Return ONLY a JSON mapping from the old subject name to the new canonical name.\n"
              "Include ALL subjects in the mapping, even if they stay the same.\n\n"
              "Example output: {{\"jazz\": \"music\", \"blues\": \"music\", \"hiking\": \"leisure\"}}"),
@@ -172,16 +183,25 @@ class LifelongAgent:
             mapping = chain.invoke({})
             
             # 3. Apply to DB
+            changes_made = False
             with self.store._conn() as conn:
                 for old, new in mapping.items():
                     old_clean = old.lower().strip()
                     new_clean = new.lower().strip()
                     if old_clean != new_clean:
+                        changes_made = True
                         print(f"  [Consolidation] Merging '{old_clean}' -> '{new_clean}'")
                         conn.execute(
                             "UPDATE memories SET subject = ? WHERE subject = ?",
                             (new_clean, old_clean)
                         )
+            
+            if not changes_made:
+                print("  [Consolidation] No merges needed. Subjects are already canonical.")
+            
+            final_subjects = self.store.get_all_subjects()
+            print(f"  [Taxonomy] Final subjects: {', '.join(final_subjects)}")
+
         except Exception as e:
             print(f"  Consolidation error: {e}")
 
@@ -213,7 +233,11 @@ class LifelongAgent:
 
         chain = prompt | self.chat_llm
         response = chain.invoke({"query": query})
-        return response.content.strip()
+        
+        if isinstance(response.content, list):
+            # Some models like Gemini might return content blocks
+            return " ".join([c.get("text", "") if isinstance(c, dict) else str(c) for c in response.content]).strip()
+        return str(response.content).strip()
 
     # ── Inspection helpers ──────────────────────────────────────────
 

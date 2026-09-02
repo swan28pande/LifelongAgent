@@ -81,7 +81,7 @@ class MemoryStore:
             )
 
     def add_memories(self, memories: List[Dict], source_date: str):
-        """Bulk insert. Each dict: {content, subject, speaker}."""
+        """Bulk insert. Each dict: {content, subject, speaker, date}."""
         with self._conn() as conn:
             conn.executemany(
                 "INSERT INTO memories (content, subject, speaker, source_date) VALUES (?,?,?,?)",
@@ -90,7 +90,7 @@ class MemoryStore:
                         m["content"],
                         m.get("subject", "").lower().strip(),
                         m.get("speaker", "user").lower().strip(),
-                        source_date,
+                        m.get("date") or source_date,
                     )
                     for m in memories
                 ],

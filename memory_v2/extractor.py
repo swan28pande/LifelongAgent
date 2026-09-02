@@ -15,48 +15,42 @@ from langchain_core.output_parsers import JsonOutputParser
 from .store import MemoryStore
 
 EXTRACTION_SYSTEM = """\
-You are a preference extraction agent. Extract only user preferences from the conversation.
+You are a preference extraction agent. Extract only user preferences and daily routine choices from the conversation.
 
-A preference is a choice or liking for a specific value within a category (domain).
-Each preference memory has three fields:
-  "subject" : the main category the preference belongs to
-  "speaker" : who this preference belongs to (usually "user")
-  "content" : the CORE choice only (noun/noun-phrase).
+A preference or daily choice is a selection or liking for a specific value within a category (domain).
+Each preference memory has four fields:
+  "subject" : the main category the preference/choice belongs to.
+  "speaker" : who this preference/choice belongs to (usually "user")
+  "content" : the CORE choice/value only (noun/noun-phrase).
+  "date"    : the date this preference/choice applies to (format YYYY-MM-DD). If the choice/activity is explicitly performed or scheduled for a day other than today (e.g. "tomorrow"), calculate and use that specific target date. Otherwise, use the conversation date.
 
-STRICT NOISE REDUCTION:
-- Extract only the PRIMARY choice.
-- DO NOT extract modifiers, ingredients, or preparation details as separate preferences.
-- INCORRECT: subject "beverage", content "vanilla" / "cinnamon on top" / "french press"
-- CORRECT: subject "beverage", content "oat milk latte" / "black coffee"
-- If a detail is mentioned (e.g., "latte with vanilla"), capture only the main item "oat milk latte".
+DAILY ROUTINES & CHOICES:
+- A preference or daily choice includes any daily routine selections, options, statuses, or recovery/rest states the user prefers or performs.
+- You MUST extract these choices for the specific day they are performed or selected.
+- If the user explicitly mentions a recovery/rest state, status, or taking a break, extract it as a choice (e.g. content "rest day" or "no work").
+- If the user is just discussing a hobby in general (e.g., "I like rock climbing") or planning a future activity (e.g., "I might climb next week"), do NOT extract it as a daily routine choice or workout status for today's date. Keep daily routine/exercise tracking strictly to what they actually did or chose on that specific date.
+- Avoid extracting redundant constituent parts, ingredients, or reasons for a choice as separate preferences. For example, if the user chooses or prefers "pepperoni pizza", extract only "pepperoni pizza", and do NOT extract a separate preference for "pepperoni" unless they explicitly declare a separate preference for it independent of pizza (e.g. "I only buy pepperoni slices for snacks").
+- ONLY extract choices, preferences, or selections performed, declared, or scheduled for a specific date. Do not extract generic future plans or hypothetical statements.
 
-LOCATION IS NOT A PREFERENCE:
-- NEVER extract WHERE the user bought or consumed something as a separate preference entry.
-- Names like "little café nearby", "Brew & Brew", "home", "little café downtown", "on the way"
-  are LOCATIONS/CONTEXTS, not preference values.
-- INCORRECT: subject "beverage", content "little café nearby"
-- INCORRECT: subject "beverage", content "home"
-- CORRECT: subject "beverage", content "oat milk latte"  ← drink type only, one entry
-- If location context matters, it belongs inside the content of the drink preference only when
-  it genuinely changes the drink (e.g. "café latte" vs "home-brewed coffee" are the same drink).
+EXAMPLES:
+- subject "operating system", content "macOS", date "2026-03-01"
+- subject "programming language", content "python", date "2026-03-01"
+- subject "music", content "jazz", date "2026-03-01"
+- subject "cuisine", content "japanese", date "2026-03-01"
+- subject "pet", content "golden retriever", date "2026-03-01"
+- subject "work shift", content "night shift", date "2026-03-01"
 
-ONE BEVERAGE PER DAY RULE:
-- Extract AT MOST ONE beverage preference per day — the DOMINANT or MOST SIGNIFICANT drink.
-- If both black coffee and an oat milk latte are mentioned in the same day's conversation,
-  pick whichever is described as the main/primary drink for that day.
-- Do NOT create two separate beverage preference entries for the same day.
+REPETITION:
+- Extract a preference even if it is already in the "EXISTING PREFERENCES" list.
+- Record every mention to track consistency and frequency.
 
-SIMILAR RULES FOR ALL SUBJECTS:
-- For any subject (exercise, clothing, food, etc.), extract at most ONE primary value per day.
-- Contextual details (where, how, with whom) must NOT become separate preference entries.
-
-CONSISTENCY:
+SUBJECT CONSISTENCY:
 - Look at the "EXISTING PREFERENCES" list.
-- Use the exact same "content" string if the user is referring to a choice they have made before.
-- Avoid creating near-duplicate values like "latte" vs "oat milk latte" if one is already established.
+- Use the exact same "subject" and "content" string if the user is referring to a choice they have made before.
 
 TEMPORAL RESOLUTION:
-The conversation starts with "Date: YYYY-MM-DD". Use this to resolve relative time references.
+- The conversation starts with "Date: YYYY-MM-DD". Use this to resolve relative time references (e.g. "tomorrow", "yesterday", "next week") to their absolute YYYY-MM-DD dates.
+- If the user refers to tomorrow's activity, calculate tomorrow's date using the conversation date and put it in the "date" field.
 
 Return ONLY a JSON object: {{"memories": [...]}}
 """
