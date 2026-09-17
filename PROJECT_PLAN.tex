@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{tabularx}       % tables that fill the text width
+\usepackage{hyperref}       % hyperlinks
+\usepackage{xcolor}         % colors
+\usepackage{microtype}      % microtypography
+\usepackage{parskip}        % blank line between paragraphs, no indent
+\usepackage{enumitem}       % list spacing control
+
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = black,
+  urlcolor   = blue!55!black,
+}
+
+% Left-aligned ragged-right column that fills remaining width.
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\title{Lifelong Assistant}
+\author{Swanand Pande}
+\date{Drafted 28 August 2026 \\ Revised 10 September 2026}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+
+A person has some preferences about activities and things around. And it is not necessary that preferences remain static. These preferences can change over time. A person liking espresso today might prefer a latte a month later. 
+
+As people start using assistants to get help in their everyday tasks, it would be important for these assistants to capture the evolving nature of preferences. This would give a better UX to the user.
+
+The project is to create an assistant that knows facts and preferences of the user. Importantly, the assistant knows the evolving nature of preferences. 
+
+\section{Scope}
+
+\begin{enumerate}[itemsep=2pt, topsep=4pt]
+  \item \textbf{Dataset 1} --- assistant/user conversations containing facts and
+        evolving preference patterns.
+  \item \textbf{Dataset 2} --- a learning-trace dataset, in which the assistant evolves
+        its understanding one day at a time.
+  \item Generate a response to a new user message.
+  \item Initiate a new conversation.
+\end{enumerate}
+
+\section{Current state}
+
+\subsection{Ground truth}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{@{}l L@{}}
+\toprule
+\textbf{Entity} & \textbf{Rule} \\
+\midrule
+\texttt{coffee}   & Fixed 7-day cycle \\
+\texttt{clothing} & Alternates every 3 days \\
+\texttt{exercise} & Day-of-week: Mon/Wed/Fri $\to$ morning yoga,
+                    Tue/Thu $\to$ evening run \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Main evaluation dataset}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{@{}l L@{}}
+\toprule
+Generator      & gpt-4o-mini \\
+Sessions       & 60 (1 session = 1 day) \\
+QA pairs       & 67 \\
+Question types & factual, factual\_evolving, recall, pattern\_identification,
+                 prediction, transition \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Things to do}
+
+\subsection{(a) Agentic approach}
+
+Do not hardcode the context. Expose the tools and let the agent decide what to call.
+
+The prior design ran a single fixed pass per query. That pass does not guarantee the
+result is adequate. The agentic version replaces the pass with a loop.
+
+At each step, the agent asks two questions:
+
+\begin{enumerate}[itemsep=2pt, topsep=4pt]
+  \item Is this new, or does it update something already known?
+  \item Is the retrieved context enough to answer the query?
+\end{enumerate}
+
+\subsubsection*{Tools}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{@{}l l L@{}}
+\toprule
+\textbf{Tool} & \textbf{Mode} & \textbf{Purpose} \\
+\midrule
+\texttt{list\_entities}        & both  & Read the live taxonomy before writing or querying \\
+\texttt{list\_preferences}     & write & Inspect what is already recorded \\
+\texttt{add\_preference}       & write & Record one dated choice \\
+\texttt{remove\_preference}    & write & Correct a duplicate or mis-filed entry \\
+\texttt{index\_conversation}   & write & Add a chunk to the RAG store \\
+\texttt{summarize\_week}       & write & Per-entity transitions plus facts \\
+\texttt{summarize\_month}      & write & Consolidate weeks into candidate rules \\
+\texttt{summarize\_year}       & write & Confirm which rules held \\
+\texttt{summarize\_lifetime}   & write & Standing profile \\
+\texttt{build\_context}        & read  & One-call assembly for a query \\
+\texttt{search\_preferences}   & read  & Exact dated timeline \\
+\texttt{search\_conversations} & read  & Verbatim retrieval \\
+\texttt{get\_summary}          & read  & Fetch one summary by level \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Summarization is deliberately split by level rather than exposed as one call, so the
+agent chooses how far up the hierarchy to roll and the evaluation can attribute cost to
+a specific level.
+
+Context assembly holds no domain knowledge: it reads the entity taxonomy out of the
+store at call time and matches the query against whatever is actually there, then
+discards any entity name the model returns that does not literally exist. The earlier
+builder carried a hand-written table of expected domains with per-domain keyword lists
+--- which works only on a dataset whose categories are known in advance, and silently
+returns nothing for anything else.
+
+\subsection{(b) Continual learning}
+
+The agent should build its understanding on the go --- one day at a time, using only
+what it has seen so far.
+
+\end{document}

@@ -81,19 +81,19 @@ Do not use lists/bullet points in the reasoning if not absolutely necessary. Kee
 If the information is not in memory, say only: "I don't know."
 """
 
-CANONICAL_SUBJECT_PROMPT = """\
+CANONICAL_ENTITY_PROMPT = """\
 You are a domain taxonomy expert.
-I have a group of similar preference subjects extracted from a user's conversations.
+I have a group of similar preference entities extracted from a user's conversations.
 I need to pick ONE canonical name for this group.
 
-Group of subjects:
-{subjects}
+Group of entities:
+{entities}
 
 Rules:
-1. Identify if these subjects are specific variations of a single, high-level recurring category.
+1. Identify if these entities are specific variations of a single, high-level recurring category.
 2. Pick the most stable and general name for that category.
-3. If the subjects are activities, group them under a high-level action category (e.g. "fitness", "hobbies").
-4. If the subjects are items or preferences, group them under their core domain.
+3. If the entities are activities, group them under a high-level action category (e.g. "fitness", "hobbies").
+4. If the entities are items or preferences, group them under their core domain.
 5. Avoid redundant words and keep it to a clean noun or noun-phrase.
 
 Return ONLY the canonical name as a plain string.
@@ -128,40 +128,40 @@ class LifelongAgent:
         return self.extractor.extract_and_store(date, conversations)
 
     def consolidate_memories(self):
-        """Merge fragmented subjects in the memory store using LLM-based reasoning."""
+        """Merge fragmented entities in the memory store using LLM-based reasoning."""
         print(f"Consolidating domains using LLM reasoning...")
-        
-        # 1. Get all subjects and sample values
-        subjects = self.store.get_all_subjects()
-        if not subjects:
+
+        # 1. Get all entities and sample values
+        entities = self.store.get_all_entities()
+        if not entities:
             return
 
-        subject_summary = []
-        for subj in subjects:
-            mems = self.store.query_memories(subject=subj, limit=5)
+        entity_summary = []
+        for ent in entities:
+            mems = self.store.query_memories(entity=ent, limit=5)
             vals = list({m["content"] for m in mems})
-            subject_summary.append(f"- {subj}: {', '.join(vals[:3])}")
+            entity_summary.append(f"- {ent}: {', '.join(vals[:3])}")
 
         # 2. Ask LLM to group them
         prompt = ChatPromptTemplate.from_messages([
-            ("system", 
-             "You are a taxonomy expert. Look at the following list of preference subjects "
-             "and their sample values. Some subjects are duplicates or near-duplicates.\n\n"
-             "Identify which subjects should be merged into a single canonical domain. Guidelines:\n"
-             "- Merge daily routines, activities, and rest/workout status into a single canonical subject.\n"
-             "- Merge apparel, garments, and clothing categories into a single canonical subject.\n"
-             "- Merge drink, coffee, and beverage categories into a single canonical subject.\n"
-             "Return ONLY a JSON mapping from the old subject name to the new canonical name.\n"
-             "Include ALL subjects in the mapping, even if they stay the same.\n\n"
+            ("system",
+             "You are a taxonomy expert. Look at the following list of preference entities "
+             "and their sample values. Some entities are duplicates or near-duplicates.\n\n"
+             "Identify which entities should be merged into a single canonical domain. Guidelines:\n"
+             "- Merge daily routines, activities, and rest/workout status into a single canonical entity.\n"
+             "- Merge apparel, garments, and clothing categories into a single canonical entity.\n"
+             "- Merge drink, coffee, and beverage categories into a single canonical entity.\n"
+             "Return ONLY a JSON mapping from the old entity name to the new canonical name.\n"
+             "Include ALL entities in the mapping, even if they stay the same.\n\n"
              "Example output: {{\"jazz\": \"music\", \"blues\": \"music\", \"hiking\": \"leisure\"}}"),
-            ("human", "SUBJECTS:\n" + "\n".join(subject_summary)),
+            ("human", "ENTITIES:\n" + "\n".join(entity_summary)),
         ])
-        
+
         try:
             from langchain_core.output_parsers import JsonOutputParser
             chain = prompt | self.chat_llm | JsonOutputParser()
             mapping = chain.invoke({})
-            
+
             # 3. Apply to DB
             changes_made = False
             with self.store._conn() as conn:
@@ -172,15 +172,15 @@ class LifelongAgent:
                         changes_made = True
                         print(f"  [Consolidation] Merging '{old_clean}' -> '{new_clean}'")
                         conn.execute(
-                            "UPDATE memories SET subject = ? WHERE subject = ?",
+                            "UPDATE memories SET entity = ? WHERE entity = ?",
                             (new_clean, old_clean)
                         )
-            
+
             if not changes_made:
-                print("  [Consolidation] No merges needed. Subjects are already canonical.")
-            
-            final_subjects = self.store.get_all_subjects()
-            print(f"  [Taxonomy] Final subjects: {', '.join(final_subjects)}")
+                print("  [Consolidation] No merges needed. Entities are already canonical.")
+
+            final_entities = self.store.get_all_entities()
+            print(f"  [Taxonomy] Final entities: {', '.join(final_entities)}")
 
         except Exception as e:
             print(f"  Consolidation error: {e}")
@@ -189,7 +189,7 @@ class LifelongAgent:
 
     def build_summaries(self, force: bool = False):
         """Build the full weekly → monthly → yearly → lifetime summary hierarchy."""
-        print("Consolidating memory subjects...")
+        print("Consolidating memory entities...")
         self.consolidate_memories()
         
         print("Building summary hierarchy...")
@@ -221,10 +221,10 @@ class LifelongAgent:
 
     # ── Inspection helpers ──────────────────────────────────────────
 
-    def show_memories(self, subject: Optional[str] = None, limit: int = 20):
-        rows = self.store.query_memories(subject=subject, limit=limit)
+    def show_memories(self, entity: Optional[str] = None, limit: int = 20):
+        rows = self.store.query_memories(entity=entity, limit=limit)
         for r in rows:
-            print(f"[{r['date']}] ({r['subject']}) {r['content']}")
+            print(f"[{r['date']}] ({r['entity']}) {r['content']}")
 
     def show_context(self, query: str):
         """Print the context that would be injected for a given query."""

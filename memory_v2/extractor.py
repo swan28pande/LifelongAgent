@@ -2,7 +2,7 @@
 LLM-based memory extractor.
 
 Takes raw conversation turns for a given date and returns a flat list of
-memories. The LLM decides what type and subject each memory belongs to —
+preference memories. The LLM decides what entity each memory belongs to —
 no hardcoded enums. Results are deduplicated against existing memories
 before being written to the store.
 """
@@ -17,9 +17,9 @@ from .store import MemoryStore
 EXTRACTION_SYSTEM = """\
 You are a preference extraction agent. Extract only user preferences and daily routine choices from the conversation.
 
-A preference or daily choice is a selection or liking for a specific value within a category (domain).
+A preference or daily choice is a selection or liking for a specific value within a category (entity).
 Each preference memory has four fields:
-  "subject" : the main category the preference/choice belongs to.
+  "entity"  : the main category the preference/choice belongs to.
   "speaker" : who this preference/choice belongs to (usually "user")
   "content" : the CORE choice/value only (noun/noun-phrase).
   "date"    : the date this preference/choice applies to (format YYYY-MM-DD). If the choice/activity is explicitly performed or scheduled for a day other than today (e.g. "tomorrow"), calculate and use that specific target date. Otherwise, use the conversation date.
@@ -33,20 +33,20 @@ DAILY ROUTINES & CHOICES:
 - ONLY extract choices, preferences, or selections performed, declared, or scheduled for a specific date. Do not extract generic future plans or hypothetical statements.
 
 EXAMPLES:
-- subject "operating system", content "macOS", date "2026-03-01"
-- subject "programming language", content "python", date "2026-03-01"
-- subject "music", content "jazz", date "2026-03-01"
-- subject "cuisine", content "japanese", date "2026-03-01"
-- subject "pet", content "golden retriever", date "2026-03-01"
-- subject "work shift", content "night shift", date "2026-03-01"
+- entity "operating system", content "macOS", date "2026-03-01"
+- entity "programming language", content "python", date "2026-03-01"
+- entity "music", content "jazz", date "2026-03-01"
+- entity "cuisine", content "japanese", date "2026-03-01"
+- entity "pet", content "golden retriever", date "2026-03-01"
+- entity "work shift", content "night shift", date "2026-03-01"
 
 REPETITION:
 - Extract a preference even if it is already in the "EXISTING PREFERENCES" list.
 - Record every mention to track consistency and frequency.
 
-SUBJECT CONSISTENCY:
+ENTITY CONSISTENCY:
 - Look at the "EXISTING PREFERENCES" list.
-- Use the exact same "subject" and "content" string if the user is referring to a choice they have made before.
+- Use the exact same "entity" and "content" string if the user is referring to a choice they have made before.
 
 TEMPORAL RESOLUTION:
 - The conversation starts with "Date: YYYY-MM-DD". Use this to resolve relative time references (e.g. "tomorrow", "yesterday", "next week") to their absolute YYYY-MM-DD dates.
@@ -60,7 +60,7 @@ Return ONLY a JSON object: {{"memories": [...]}}
 # You are a memory deduplication agent.
 
 # You will receive:
-#   1. EXISTING memories already stored for this subject.
+#   1. EXISTING memories already stored for this entity.
 #   2. NEW memories just extracted from today's conversations.
 
 # Return only the new memories that add information not already captured.
@@ -72,7 +72,7 @@ Return ONLY a JSON object: {{"memories": [...]}}
 #   others     → content stays as the original sentence
 
 # Return ONLY a JSON object: {{"memories": [...]}}
-# Each item keeps the same {{type, subject, content}} structure.
+# Each item keeps the same {{type, entity, content}} structure.
 # """
 
 
@@ -94,12 +94,12 @@ class MemoryExtractor:
         Returns the new memories that were actually stored.
         """
         raw_text = self._format_conversations(date, conversations)
-        existing_subjects = self.store.get_all_subjects()
+        existing_entities = self.store.get_all_entities()
         # Fetch unique existing preferences to maintain consistency
         unique_prefs = self.store.get_unique_preferences()
-        existing_prefs = [f"[{m['subject']}] {m['content']}" for m in unique_prefs]
-        
-        extracted = self.extract_memories(raw_text, date, existing_subjects, existing_prefs)
+        existing_prefs = [f"[{m['entity']}] {m['content']}" for m in unique_prefs]
+
+        extracted = self.extract_memories(raw_text, date, existing_entities, existing_prefs)
 
         if not extracted:
             return []
@@ -165,22 +165,22 @@ class MemoryExtractor:
             yield "\n".join(lines), chunk_idx
             chunk_idx += 1
 
-    def extract_memories(self, text: str, date: str, existing_subjects: List[str] = [], 
+    def extract_memories(self, text: str, date: str, existing_entities: List[str] = [],
                          existing_prefs: List[str] = []) -> List[Dict]:
         """Extract memories from a conversation text."""
         try:
-            subjects_str = "\n".join(f"  - {s}" for s in existing_subjects) if existing_subjects else "  (None yet)"
+            entities_str = "\n".join(f"  - {s}" for s in existing_entities) if existing_entities else "  (None yet)"
             prefs_str = "\n".join(f"  - {p}" for p in set(existing_prefs)) if existing_prefs else "  (None yet)"
-            
+
             prompt = ChatPromptTemplate.from_messages([
                 ("system", EXTRACTION_SYSTEM),
-                ("user", "Date: {date}\n\nExisting Subjects:\n{existing_subjects}\n\nExisting Preferences (for consistency):\n{existing_prefs}\n\nConversation:\n{text}")
+                ("user", "Date: {date}\n\nExisting Entities:\n{existing_entities}\n\nExisting Preferences (for consistency):\n{existing_prefs}\n\nConversation:\n{text}")
             ])
             chain = prompt | self.llm | JsonOutputParser()
             result = chain.invoke({
                 "text": text,
                 "date": date,
-                "existing_subjects": subjects_str,
+                "existing_entities": entities_str,
                 "existing_prefs": prefs_str
             })
             if result is None:
@@ -194,16 +194,16 @@ class MemoryExtractor:
             return []
 
     # def _deduplicate(self, extracted: List[Dict], date_filter: Optional[str] = None) -> List[Dict]:
-    #     """Group by subject and deduplicate each group against existing DB entries."""
+    #     """Group by entity and deduplicate each group against existing DB entries."""
     #     from collections import defaultdict
     #     groups: Dict[str, List[Dict]] = defaultdict(list)
     #     for m in extracted:
-    #         groups[m.get("subject", "")].append(m)
+    #         groups[m.get("entity", "")].append(m)
 
     #     survivors = []
-    #     for subject, new_batch in groups.items():
+    #     for entity, new_batch in groups.items():
     #         existing = self.store.query_memories(
-    #             subject=subject,
+    #             entity=entity,
     #             start_date=date_filter,
     #             end_date=date_filter,
     #             limit=50
@@ -232,7 +232,7 @@ class MemoryExtractor:
     #             else:
     #                 survivors.extend(new_batch)
     #         except Exception as e:
-    #             print(f"  Dedup error for subject '{subject}': {e}. Keeping all.")
+    #             print(f"  Dedup error for entity '{entity}': {e}. Keeping all.")
     #             survivors.extend(new_batch)
 
     #     return survivors

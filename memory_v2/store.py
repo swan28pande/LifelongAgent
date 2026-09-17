@@ -2,7 +2,7 @@
 Unified memory store: SQLite for structured memories, FAISS for raw conversations
 and hierarchical summaries.
 
-Single `memories` table — no hardcoded types. The LLM assigns type/subject freely.
+Single `memories` table — no hardcoded types. The LLM assigns entities freely.
 """
 
 import os
@@ -46,12 +46,12 @@ class MemoryStore:
                 CREATE TABLE IF NOT EXISTS memories (
                     id           INTEGER PRIMARY KEY AUTOINCREMENT,
                     content      TEXT    NOT NULL,
-                    subject      TEXT,
+                    entity       TEXT,
                     speaker      TEXT    DEFAULT 'user',
                     source_date  TEXT
                 )
             """)
-            conn.execute("CREATE INDEX IF NOT EXISTS idx_subject ON memories(subject)")
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_entity ON memories(entity)")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_speaker ON memories(speaker)")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_date    ON memories(source_date)")
 
@@ -71,24 +71,24 @@ class MemoryStore:
 
     # ── Memories (SQL) ──────────────────────────────────────────────
 
-    def add_memory(self, content: str, subject: str, source_date: str,
+    def add_memory(self, content: str, entity: str, source_date: str,
                    speaker: str = "user"):
         with self._conn() as conn:
             conn.execute(
-                "INSERT INTO memories (content, subject, speaker, source_date) VALUES (?,?,?,?)",
-                (content, subject.lower().strip(),
+                "INSERT INTO memories (content, entity, speaker, source_date) VALUES (?,?,?,?)",
+                (content, entity.lower().strip(),
                  speaker.lower().strip(), source_date),
             )
 
     def add_memories(self, memories: List[Dict], source_date: str):
-        """Bulk insert. Each dict: {content, subject, speaker, date}."""
+        """Bulk insert. Each dict: {content, entity, speaker, date}."""
         with self._conn() as conn:
             conn.executemany(
-                "INSERT INTO memories (content, subject, speaker, source_date) VALUES (?,?,?,?)",
+                "INSERT INTO memories (content, entity, speaker, source_date) VALUES (?,?,?,?)",
                 [
                     (
                         m["content"],
-                        m.get("subject", "").lower().strip(),
+                        m.get("entity", "").lower().strip(),
                         m.get("speaker", "user").lower().strip(),
                         m.get("date") or source_date,
                     )
@@ -98,7 +98,7 @@ class MemoryStore:
 
     def query_memories(
         self,
-        subject: Optional[str] = None,
+        entity: Optional[str] = None,
         speaker: Optional[str] = None,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -106,8 +106,8 @@ class MemoryStore:
     ) -> List[Dict]:
         """Flexible SQL query — any combination of filters."""
         clauses, params = [], []
-        if subject:
-            clauses.append("subject = ?"); params.append(subject.lower())
+        if entity:
+            clauses.append("entity = ?"); params.append(entity.lower())
         if speaker:
             clauses.append("speaker = ?"); params.append(speaker.lower())
         if start_date:
@@ -116,7 +116,7 @@ class MemoryStore:
             clauses.append("source_date <= ?"); params.append(end_date)
 
         where = f"WHERE {' AND '.join(clauses)}" if clauses else ""
-        sql = (f"SELECT id, content, subject, speaker, source_date FROM memories "
+        sql = (f"SELECT id, content, entity, speaker, source_date FROM memories "
                f"{where} ORDER BY source_date LIMIT ?")
         params.append(limit)
 
@@ -125,21 +125,32 @@ class MemoryStore:
 
         return [
             {"id": r[0], "content": r[1],
-             "subject": r[2], "speaker": r[3], "date": r[4]}
+             "entity": r[2], "speaker": r[3], "date": r[4]}
             for r in rows
         ]
 
+    def delete_memories(self, memory_ids: List[int]) -> int:
+        """Delete memories by id. Returns the number of rows removed."""
+        if not memory_ids:
+            return 0
+        placeholders = ",".join("?" * len(memory_ids))
+        with self._conn() as conn:
+            cur = conn.execute(
+                f"DELETE FROM memories WHERE id IN ({placeholders})", memory_ids
+            )
+            return cur.rowcount
+
     def get_unique_preferences(self) -> List[Dict]:
-        """Returns all unique [subject, content] pairs to maintain taxonomic consistency."""
+        """Returns all unique [entity, content] pairs to maintain taxonomic consistency."""
         with self._conn() as conn:
             rows = conn.execute(
-                "SELECT DISTINCT subject, content FROM memories ORDER BY subject, content"
+                "SELECT DISTINCT entity, content FROM memories ORDER BY entity, content"
             ).fetchall()
-        return [{"subject": r[0], "content": r[1]} for r in rows]
+        return [{"entity": r[0], "content": r[1]} for r in rows]
 
-    def get_all_subjects(self) -> List[str]:
+    def get_all_entities(self) -> List[str]:
         with self._conn() as conn:
-            rows = conn.execute("SELECT DISTINCT subject FROM memories ORDER BY subject").fetchall()
+            rows = conn.execute("SELECT DISTINCT entity FROM memories ORDER BY entity").fetchall()
         return [r[0] for r in rows if r[0]]
 
     def get_all_speakers(self) -> List[str]:
@@ -150,18 +161,18 @@ class MemoryStore:
         return [r[0] for r in rows if r[0]]
 
     def get_preference_sequence(
-        self, subject: str, start_date: str, end_date: str,
+        self, entity: str, start_date: str, end_date: str,
         speaker: Optional[str] = None,
     ) -> List[Tuple[str, str]]:
         """
-        Returns [(date, content), ...] for preference-type memories of a subject,
+        Returns [(date, content), ...] for preference memories of an entity,
         ordered chronologically — used for temporal injection in summaries.
         """
         clauses = [
-            "subject = ?",
+            "entity = ?",
             "source_date >= ?", "source_date <= ?",
         ]
-        params = [subject.lower(), start_date, end_date]
+        params = [entity.lower(), start_date, end_date]
         if speaker:
             clauses.append("speaker = ?")
             params.append(speaker.lower())

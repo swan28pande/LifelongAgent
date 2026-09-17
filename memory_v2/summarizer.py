@@ -84,24 +84,24 @@ def _fmt_change_seq(pairs: List[Tuple[str, str]]) -> str:
 
 
 DOMAIN_DISCOVERY_SYSTEM = """\
-You are a memory analyst. Given a list of all preference memories (subject + value pairs),
-identify which subjects represent genuine RECURRING subjects —
+You are a memory analyst. Given a list of all preference memories (entity + value pairs),
+identify which entities represent genuine RECURRING entities —
 things the person chooses regularly from a consistent category over time.
 
-A recurring subject has multiple observations across different dates with a repeating
+A recurring entity has multiple observations across different dates with a repeating
 pattern of values.
 
-Exclude subjects that are:
-- Too granular (a specific detail of a larger subject)
+Exclude entities that are:
+- Too granular (a specific detail of a larger entity)
 - One-off or rarely mentioned (fewer than 3 observations)
 - Not a stable choice category
 
-Return ONLY a JSON object: {{"domains": ["subject1", "subject2", ...]}}
-List only the canonical recurring subjects.
+Return ONLY a JSON object: {{"domains": ["entity1", "entity2", ...]}}
+List only the canonical recurring entities.
 """
 
 WEEKLY_PATTERN_SYSTEM = """\
-You are a mathematical pattern analyst. Analyze the preference transition sequence for a SINGLE subject for {speaker} during one week.
+You are a mathematical pattern analyst. Analyze the preference transition sequence for a SINGLE entity for {speaker} during one week.
 
 1. LOG: List exactly what changed and when. 
    Format: [Date] Value (Duration: X days)
@@ -127,9 +127,9 @@ Return JSON:
 """
 
 MONTHLY_PATTERN_SYSTEM = """\
-You are a mathematical pattern analyst. Analyze the observations for a SINGLE preference subject for {speaker} across several weeks.
+You are a mathematical pattern analyst. Analyze the observations for a SINGLE preference entity for {speaker} across several weeks.
 
-Goal: Identify the exact repeating structure for this subject — it may be a fixed N-day alternation, a day-of-week rule, or another repeating structure.
+Goal: Identify the exact repeating structure for this entity — it may be a fixed N-day alternation, a day-of-week rule, or another repeating structure.
 
 1. CONSOLIDATE: Merge the weekly transition logs into one continuous timeline.
 2. CALCULATE: Find the exact number of days the user held each preference value.
@@ -159,7 +159,7 @@ Return JSON:
 """
 
 YEARLY_CONFIRMATION_SYSTEM = """\
-You are a senior senior pattern analyst. Confirm the definitive mathematical rhythm for a SINGLE subject for {speaker} using monthly summaries.
+You are a senior senior pattern analyst. Confirm the definitive mathematical rhythm for a SINGLE entity for {speaker} using monthly summaries.
 
 1. COMPARE: Check if the N-day cycle or calendar rhythm is consistent across all months. Group sub-categories/synonyms into their primary underlying states (e.g. grouping 'blue pens' and 'red pens' under a single 'pen' state vs 'pencil') before checking consistency.
 2. VALIDATE: If a month reported a "smoothed" general pattern, look back at the consolidated timelines to re-verify the exact periodicity.
@@ -231,20 +231,20 @@ class Summarizer:
         
         pattern_prompt = ChatPromptTemplate.from_messages([
             ("system", WEEKLY_PATTERN_SYSTEM),
-            ("human", f"Subject: {{subject}}\nTimeline:\n{{transitions}}")
+            ("human", f"Entity: {{entity}}\nTimeline:\n{{transitions}}")
         ])
-        
-        for subj in sorted(domains):
-            pairs = self.store.get_preference_sequence(subj, start, end, speaker=speaker)
+
+        for ent in sorted(domains):
+            pairs = self.store.get_preference_sequence(ent, start, end, speaker=speaker)
             seq   = _fmt_change_seq(pairs)
             if not seq: continue
-            
+
             try:
-                print(f"    - Weekly analysis for domain: {subj}")
+                print(f"    - Weekly analysis for domain: {ent}")
                 chain = pattern_prompt | self.llm | JsonOutputParser()
-                domain_patterns[subj] = chain.invoke({"speaker": speaker, "subject": subj, "transitions": seq})
+                domain_patterns[ent] = chain.invoke({"speaker": speaker, "entity": ent, "transitions": seq})
             except Exception as e:
-                print(f"      Weekly pattern error for {subj}: {e}")
+                print(f"      Weekly pattern error for {ent}: {e}")
 
         # 2. Extract Facts and Narrative
         facts_prompt = ChatPromptTemplate.from_messages([
@@ -300,26 +300,26 @@ class Summarizer:
         
         pattern_prompt = ChatPromptTemplate.from_messages([
             ("system", MONTHLY_PATTERN_SYSTEM),
-            ("human", 
-             f"Subject: {{subject}}\n"
+            ("human",
+             f"Entity: {{entity}}\n"
              f"Month: {month_id} ({start} to {end})\n\n"
              f"WEEKLY OBSERVATIONS:\n{_esc(weekly_block)}\n\n"
              f"TRANSITION TIMELINE:\n{{transitions}}")
         ])
-        
-        for subj in sorted(domains):
-            pairs = self.store.get_preference_sequence(subj, start, end, speaker=speaker)
+
+        for ent in sorted(domains):
+            pairs = self.store.get_preference_sequence(ent, start, end, speaker=speaker)
             seq   = _fmt_change_seq(pairs)
             if not seq:
                 continue
-                
-            print(f"    - Analyzing domain: {subj}")
+
+            print(f"    - Analyzing domain: {ent}")
             try:
                 chain = pattern_prompt | self.llm | JsonOutputParser()
-                res   = chain.invoke({"speaker": speaker, "subject": subj, "transitions": seq})
-                pattern_speculation[subj] = res
+                res   = chain.invoke({"speaker": speaker, "entity": ent, "transitions": seq})
+                pattern_speculation[ent] = res
             except Exception as e:
-                print(f"      Pattern error for {subj}: {e}")
+                print(f"      Pattern error for {ent}: {e}")
 
         # 2. Extract Facts
         facts_prompt = ChatPromptTemplate.from_messages([
@@ -375,20 +375,20 @@ class Summarizer:
         
         confirmation_prompt = ChatPromptTemplate.from_messages([
             ("system", YEARLY_CONFIRMATION_SYSTEM),
-            ("human", 
-             f"Subject: {{subject}}\n"
+            ("human",
+             f"Entity: {{entity}}\n"
              f"Year: {year}\n\n"
              f"MONTHLY SPECULATIONS:\n{_esc(monthly_block)}")
         ])
-        
-        for subj in sorted(domains):
-            print(f"    - Confirming domain: {subj}")
+
+        for ent in sorted(domains):
+            print(f"    - Confirming domain: {ent}")
             try:
                 chain = confirmation_prompt | self.llm | JsonOutputParser()
-                res   = chain.invoke({"speaker": speaker, "subject": subj})
-                confirmed_patterns[subj] = res
+                res   = chain.invoke({"speaker": speaker, "entity": ent})
+                confirmed_patterns[ent] = res
             except Exception as e:
-                print(f"      Confirmation error for {subj}: {e}")
+                print(f"      Confirmation error for {ent}: {e}")
 
         # 2. Accumulate Facts (Final Consolidation)
         facts_prompt = ChatPromptTemplate.from_messages([
@@ -493,17 +493,17 @@ class Summarizer:
         """For each recurring domain, emit a transition-only change sequence."""
         domains = self._get_recurring_domains(speaker)
         lines = []
-        for subj in sorted(domains):
-            pairs = self.store.get_preference_sequence(subj, start_date, end_date,
+        for ent in sorted(domains):
+            pairs = self.store.get_preference_sequence(ent, start_date, end_date,
                                                        speaker=speaker)
             seq = _fmt_change_seq(pairs)
             if seq:
-                lines.append(f"[{subj}] {seq}")
+                lines.append(f"[{ent}] {seq}")
         return "\n".join(lines)
 
     def _get_recurring_domains(self, speaker: Optional[str] = None) -> List[str]:
         """
-        Discover which preference subjects are genuine recurring domains by asking
+        Discover which preference entities are genuine recurring domains by asking
         the LLM to identify patterns from all stored preference memories.
         Result is cached per speaker for the lifetime of this Summarizer instance.
         """
@@ -516,23 +516,23 @@ class Summarizer:
             return []
 
         from collections import Counter
-        counts = Counter(m["subject"] for m in all_prefs if m["subject"])
+        counts = Counter(m["entity"] for m in all_prefs if m["entity"])
 
-        candidates = {subj: cnt for subj, cnt in counts.items() if cnt >= 2}
+        candidates = {ent: cnt for ent, cnt in counts.items() if cnt >= 2}
         if not candidates:
             return []
         if not candidates:
             self._domain_cache[cache_key] = list(counts.keys())
             return self._domain_cache[cache_key]
 
-        subject_summary = []
-        for subj, cnt in sorted(candidates.items(), key=lambda x: -x[1]):
-            values = list({m["content"] for m in all_prefs if m["subject"] == subj})[:5]
-            subject_summary.append(f"{subj} ({cnt} obs): {', '.join(values)}")
+        entity_summary = []
+        for ent, cnt in sorted(candidates.items(), key=lambda x: -x[1]):
+            values = list({m["content"] for m in all_prefs if m["entity"] == ent})[:5]
+            entity_summary.append(f"{ent} ({cnt} obs): {', '.join(values)}")
 
         prompt = ChatPromptTemplate.from_messages([
             ("system", DOMAIN_DISCOVERY_SYSTEM),
-            ("human", "Preference subjects:\n" + "\n".join(subject_summary)),
+            ("human", "Preference entities:\n" + "\n".join(entity_summary)),
         ])
         try:
             chain  = prompt | self.llm | JsonOutputParser()
@@ -540,7 +540,7 @@ class Summarizer:
             domains = result.get("domains", list(candidates.keys()))
             print(f"  Discovered recurring domains for {cache_key}: {domains}")
         except Exception as e:
-            print(f"  Domain discovery error: {e}. Using all subjects.")
+            print(f"  Domain discovery error: {e}. Using all entities.")
             domains = list(candidates.keys())
 
         self._domain_cache[cache_key] = [d.lower().strip() for d in domains]

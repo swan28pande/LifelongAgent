@@ -140,9 +140,9 @@ async def delete_conversation(date: str):
 # ── SQL memories ─────────────────────────────────────────────────────
 
 @app.get("/api/sql/memories")
-async def get_memories(type: str = None, subject: str = None):
+async def get_memories(type: str = None, entity: str = None):
     try:
-        return agent.store.query_memories(type=type, subject=subject, limit=500)
+        return agent.store.query_memories(type=type, entity=entity, limit=500)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -150,9 +150,9 @@ async def get_memories(type: str = None, subject: str = None):
 async def get_types():
     return agent.store.get_all_types()
 
-@app.get("/api/sql/subjects")
-async def get_subjects():
-    return agent.store.get_all_subjects()
+@app.get("/api/sql/entities")
+async def get_entities():
+    return agent.store.get_all_entities()
 
 # ── RAG entries ───────────────────────────────────────────────────────
 

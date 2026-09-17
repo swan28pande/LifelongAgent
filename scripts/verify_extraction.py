@@ -93,10 +93,10 @@ def verify():
     # Check for domain force-fitting (e.g. food in beverage)
     for m in memories:
         content = m["content"].lower()
-        subject = m["subject"].lower()
+        entity = m["entity"].lower()
         if any(food in content for food in ["meal", "taco", "stir-fry", "vegetarian"]):
-            if subject == "beverage":
-                errors.append(f"FORCE-FIT ERROR: '{m['content']}' was extracted as subject 'beverage' on {m['date']}")
+            if entity == "beverage":
+                errors.append(f"FORCE-FIT ERROR: '{m['content']}' was extracted as entity 'beverage' on {m['date']}")
 
     print(f"\nScore: {successes}/{total_checks} preferences correctly identified.")
     if errors:

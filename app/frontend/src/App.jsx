@@ -244,7 +244,7 @@ export default function App() {
             <div className="data-view-header">
               <div style={{ flex: 1 }}>
                 <h2>Structured Memories</h2>
-                <p>Extracted from conversations — type and subject assigned by LLM</p>
+                <p>Extracted from conversations — type and entity assigned by LLM</p>
               </div>
               <button className="refresh-btn" onClick={refreshMemories} disabled={loading}>
                 <RefreshCw size={14} className={loading ? 'spin' : ''} /> Refresh
@@ -270,7 +270,7 @@ export default function App() {
                   <thead>
                     <tr>
                       <th>Type</th>
-                      <th>Subject</th>
+                      <th>Entity</th>
                       <th>Memory</th>
                       <th style={{ textAlign: 'right' }}>Date</th>
                     </tr>
@@ -279,7 +279,7 @@ export default function App() {
                     {filteredMemories.map((m, i) => (
                       <tr key={i}>
                         <td><span className="category-badge">{m.type}</span></td>
-                        <td className="entity-cell">{m.subject}</td>
+                        <td className="entity-cell">{m.entity}</td>
                         <td>{m.content}</td>
                         <td className="date-cell" style={{ textAlign: 'right' }}>{m.date}</td>
                       </tr>

@@ -24,7 +24,7 @@ Classify the user query and extract key metadata.
 Return ONLY JSON:
 {{
   "category": "factual" | "preference" | "goal" | "episodic" | "general",
-  "subjects":  ["entity1", ...],
+  "entities":  ["entity1", ...],
   "speaker":   "name of the person the question is about, or null if unclear",
   "target_date": "YYYY-MM-DD or null"
 }}
@@ -63,7 +63,7 @@ class ContextBuilder:
     ) -> str:
         classification = self._classify(query)
         category = classification.get("category", "general")
-        subjects = classification.get("subjects", [])
+        entities = classification.get("entities", [])
         speaker  = classification.get("speaker") or None
         target_date = classification.get("target_date") or None
 
@@ -74,7 +74,7 @@ class ContextBuilder:
                 speaker = None
 
         global_summary  = self._global_summary(speaker)
-        relevant_memory = self._relevant_memory(category, subjects, query,
+        relevant_memory = self._relevant_memory(category, entities, query,
                                                 n_relevant, speaker)
         # Always do semantic search over raw conversation chunks
         semantic_convs  = self._faiss_conversations(query, k=n_conv_search)
@@ -88,38 +88,38 @@ class ContextBuilder:
 
         # Build timeline context for core domains to handle transition and prediction queries
         q_lower = query.lower()
-        db_subjects = self.store.get_all_subjects()
+        db_entities = self.store.get_all_entities()
         mappings = {
             "coffee": {
                 "keywords": ["coffee", "drink", "drinking", "brew", "brewed", "latte", "beverage", "cup", "beverages"],
-                "subjects": ["coffee", "beverage", "drink", "cup", "beverages"]
+                "entities": ["coffee", "beverage", "drink", "cup", "beverages"]
             },
             "clothing": {
                 "keywords": ["wear", "wearing", "clothing", "attire", "clothes", "hoodie", "t-shirt", "tshirt", "outfit", "apparel", "garment", "garments"],
-                "subjects": ["clothing", "attire", "apparel", "clothes", "outfit", "garment", "garments"]
+                "entities": ["clothing", "attire", "apparel", "clothes", "outfit", "garment", "garments"]
             },
             "exercise": {
                 "keywords": ["work out", "workout", "working out", "exercise", "run", "running", "yoga", "gym", "stretching", "stretch", "routine", "workout", "activity", "activities"],
-                "subjects": ["exercise", "daily routine", "daily activities", "workout", "status", "activity", "routine", "activities", "physical activities", "fitness"]
+                "entities": ["exercise", "daily routine", "daily activities", "workout", "status", "activity", "routine", "activities", "physical activities", "fitness"]
             },
             "hobby": {
                 "keywords": ["hobby", "hobbies", "climbing", "rock climbing", "bouldering", "climb", "cycling", "swim", "swimming", "reading", "read"],
-                "subjects": ["hobby", "hobbies", "climbing", "recreation", "interest"]
+                "entities": ["hobby", "hobbies", "climbing", "recreation", "interest"]
             }
         }
-        
+
         timeline_parts = []
         for domain, info in mappings.items():
-            if domain in subjects or any(kw in q_lower for kw in info["keywords"]):
+            if domain in entities or any(kw in q_lower for kw in info["keywords"]):
                 rows = []
-                for db_s in db_subjects:
+                for db_e in db_entities:
                     matched = False
-                    for cand in info["subjects"]:
-                        if cand == db_s or cand in db_s or db_s in cand:
+                    for cand in info["entities"]:
+                        if cand == db_e or cand in db_e or db_e in cand:
                             matched = True
                             break
                     if matched:
-                        rows.extend(self.store.query_memories(subject=db_s, speaker=speaker, limit=1000))
+                        rows.extend(self.store.query_memories(entity=db_e, speaker=speaker, limit=1000))
                 
                 rows = sorted(rows, key=lambda r: r['date'])
                 
@@ -159,7 +159,7 @@ class ContextBuilder:
             chain = prompt | self.llm | JsonOutputParser()
             return chain.invoke({"query": query})
         except Exception:
-            return {"category": "general", "subjects": [], "speaker": None}
+            return {"category": "general", "entities": [], "speaker": None}
 
     # ── Memory retrieval ────────────────────────────────────────────
 
@@ -186,13 +186,13 @@ class ContextBuilder:
     def _relevant_memory(
         self,
         category: str,
-        subjects: List[str],
+        entities: List[str],
         query: str,
         k: int,
         speaker: Optional[str] = None,
     ) -> str:
         if category == "preference":
-            return self._sql_preferences(subjects, k, speaker)
+            return self._sql_preferences(entities, k, speaker)
         else:
             # factual, goal, episodic, general: search summaries only
             # (facts are never stored in SQL — they come from FAISS conv search)
@@ -205,12 +205,12 @@ class ContextBuilder:
                 ]
             return "\n\n---\n\n".join(d.page_content for d in summary_hits[:k]) if summary_hits else ""
 
-    def _sql_preferences(self, subjects: List[str], k: int,
+    def _sql_preferences(self, entities: List[str], k: int,
                           speaker: Optional[str] = None) -> str:
         lines = []
-        for subj in subjects or [None]:
+        for ent in entities or [None]:
             rows = self.store.query_memories(
-                subject=subj,
+                entity=ent,
                 speaker=speaker,
                 limit=k * 3,
             )
@@ -220,21 +220,21 @@ class ContextBuilder:
                 lines.append(f"{spk}[{date}] {r['content']}")
         return "\n".join(lines) if lines else ""
 
-    def _sql_typed(self, category: str, subjects: List[str], k: int,
+    def _sql_typed(self, category: str, entities: List[str], k: int,
                    speaker: Optional[str] = None) -> str:
         type_map = {"factual": "fact", "goal": "goal"}
         mem_type = type_map.get(category, category)
         lines = []
-        for subj in (subjects or [None]):
+        for ent in (entities or [None]):
             rows = self.store.query_memories(
-                type=mem_type, subject=subj, speaker=speaker, limit=k,
+                type=mem_type, entity=ent, speaker=speaker, limit=k,
             )
             for r in rows:
                 spk  = f"[{r['speaker']}] " if r.get("speaker") else ""
                 lines.append(f"{spk}[{r['date'] or ''}] {r['content']}")
         if not lines:
             rows = self.store.query_memories(
-                subject=subjects[0] if subjects else None,
+                entity=entities[0] if entities else None,
                 speaker=speaker, limit=k,
             )
             lines = [
