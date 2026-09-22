@@ -1,24 +1,74 @@
-import sys
-import os
-import json
-import sqlite3
-import uvicorn
-from datetime import datetime, timedelta
-from typing import List, Dict
+"""
+API for the memory inspector UI.
 
+    python3 app/backend.py                                  # newest run under results/
+    STORE=results/v3_pilot/store python3 app/backend.py     # pin a specific one
+
+With no STORE set it opens the most recently written store under results/, which is
+almost always the run you just finished. Every run is still listed on /api/status, so
+the UI can show what else is on disk.
+
+Read-only over whatever store it opens, plus a live chat endpoint. The store is opened
+lazily so the server starts instantly instead of waiting on the embedding model, and
+so an empty results/ gives a clear error in the UI rather than a crash at import time.
+"""
+
+import json
+import os
+import sys
+from typing import Dict, Optional
+
+os.environ.setdefault("KMP_DUPLICATE_LIB_OK", "TRUE")
+
+import dotenv
+import uvicorn
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import dotenv
 
 dotenv.load_dotenv()
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, PROJECT_ROOT)
-from memory_v2 import LifelongAgent
 
-app = FastAPI(title="Lifelong Agent API v2")
+from memory_v3.agent import AgenticMemoryAgent  # noqa: E402
 
+RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
+
+
+def discover_stores() -> list:
+    """Every run under results/ that has a store, newest first."""
+    found = []
+    if os.path.isdir(RESULTS_DIR):
+        for name in os.listdir(RESULTS_DIR):
+            db = os.path.join(RESULTS_DIR, name, "store", "memories.db")
+            if os.path.exists(db):
+                found.append({
+                    "run": name,
+                    "store": os.path.join(RESULTS_DIR, name, "store"),
+                    "modified": os.path.getmtime(db),
+                })
+    return sorted(found, key=lambda s: -s["modified"])
+
+
+def resolve_store() -> Optional[str]:
+    """STORE wins if set; otherwise the most recently written run."""
+    pinned = os.getenv("STORE")
+    if pinned:
+        return os.path.join(PROJECT_ROOT, pinned)
+    stores = discover_stores()
+    return stores[0]["store"] if stores else None
+
+
+STORE_DIR = resolve_store()
+DATASET = os.path.join(
+    PROJECT_ROOT, os.getenv("DATASET", "datasets/eval/conversations.json")
+)
+QA_PATH = os.path.join(PROJECT_ROOT, "datasets", "eval", "qa_pairs.json")
+LOCOMO_PATH = os.path.join(PROJECT_ROOT, "baselines", "locomo", "data", "locomo10.json")
+MODEL = os.getenv("MODEL", "gemini-3.5-flash")
+
+app = FastAPI(title="Lifelong Agent Inspector")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -26,268 +76,272 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MEMORY_DIR        = os.path.join(PROJECT_ROOT, "memory_v2", "data")
-CONVERSATIONS_PATH = os.path.join(PROJECT_ROOT, "datasets", "legacy", "dataset_3", "learning_conversations.json")
+_agent: Optional[AgenticMemoryAgent] = None
 
-agent = LifelongAgent(base_dir=MEMORY_DIR)
 
-SESSION_STATE: Dict = {"current_time_of_day": None, "simulated_today": None}
+def agent() -> AgenticMemoryAgent:
+    """Open the store on first use — loading embeddings takes ~30s."""
+    global _agent
+    if _agent is None:
+        if not STORE_DIR or not os.path.exists(os.path.join(STORE_DIR, "memories.db")):
+            raise HTTPException(
+                status_code=404,
+                detail="No store found under results/. Run scripts/run_memory_v3.py "
+                       "first, or set STORE=<path> when starting the server.",
+            )
+        _agent = AgenticMemoryAgent(base_dir=STORE_DIR, model=MODEL)
+    return _agent
 
-# ── Pydantic models ─────────────────────────────────────────────────
 
 class ChatRequest(BaseModel):
     message: str
 
-class ChatResponse(BaseModel):
-    response: str
-    context: str
 
-class ConversationStartResponse(BaseModel):
-    message: str
-    context: str
+# ── Status ──────────────────────────────────────────────────────────
 
-# ── Helpers ──────────────────────────────────────────────────────────
+@app.get("/api/status")
+def status():
+    """What this server opened, and what else is available on disk."""
+    has_store = bool(STORE_DIR) and os.path.exists(
+        os.path.join(STORE_DIR, "memories.db")
+    )
+    body = {
+        "system": "memory_v3",
+        "model": MODEL,
+        "run": os.path.basename(os.path.dirname(STORE_DIR)) if STORE_DIR else None,
+        "store": os.path.relpath(STORE_DIR, PROJECT_ROOT) if STORE_DIR else None,
+        "pinned": bool(os.getenv("STORE")),
+        "dataset": os.path.relpath(DATASET, PROJECT_ROOT),
+        "store_exists": has_store,
+        "loaded": _agent is not None,
+        "available_runs": [s["run"] for s in discover_stores()],
+    }
+    if has_store and _agent is not None:
+        start, end = _agent.store.get_date_range()
+        body.update(date_range=[start, end])
+    return body
 
-TIME_SLOTS = ["Morning", "Afternoon", "Evening", "Night"]
 
-def advance_time() -> str:
-    cur = SESSION_STATE.get("current_time_of_day")
-    if cur is None or cur not in TIME_SLOTS:
-        next_slot = "Morning"
+@app.get("/api/stats")
+def stats():
+    a = agent()
+    rows = a.store.query_memories(limit=10000)
+    start, end = a.store.get_date_range()
+
+    per_entity: Dict[str, int] = {}
+    for r in rows:
+        per_entity[r["entity"]] = per_entity.get(r["entity"], 0) + 1
+
+    n_summaries = 0
+    if a.store._summary_store:
+        n_summaries = len(a.store._summary_store.docstore._dict)
+
+    with a.store._conn() as conn:
+        n_chunks = conn.execute("SELECT COUNT(*) FROM conversations").fetchone()[0]
+
+    return {
+        "preferences": len(rows),
+        "entities": sorted(per_entity.items(), key=lambda kv: -kv[1]),
+        "chunks": n_chunks,
+        "summaries": n_summaries,
+        "date_range": [start, end],
+        "speakers": a.store.get_all_speakers(),
+    }
+
+
+# ── Dataset ─────────────────────────────────────────────────────────
+
+@app.get("/api/dataset")
+def dataset():
+    """
+    The source conversations, newest field names normalised for the UI.
+
+    Handles both dataset shapes: the eval set keyed by user with `sessions`, and the
+    legacy per-day files with `interactions`.
+    """
+    if not os.path.exists(DATASET):
+        raise HTTPException(status_code=404, detail=f"No dataset at {DATASET}")
+
+    with open(DATASET) as f:
+        raw = json.load(f)
+
+    days = []
+
+    if "user_1" in raw and "sessions" in raw["user_1"]:
+        for date, session in sorted(raw["user_1"]["sessions"].items()):
+            days.append({
+                "date": date,
+                "time_of_day": session.get("time_of_day", "All Day"),
+                "turns": session.get("turns", []),
+            })
     else:
-        idx = TIME_SLOTS.index(cur)
-        next_slot = TIME_SLOTS[(idx + 1) % len(TIME_SLOTS)]
-        if next_slot == "Morning":
-            _advance_day()
-    SESSION_STATE["current_time_of_day"] = next_slot
-    return next_slot
+        for date, info in sorted(raw.items()):
+            for block in info.get("interactions", info.get("conversations", [])):
+                days.append({
+                    "date": date,
+                    "time_of_day": block.get("time_of_day", ""),
+                    "turns": block.get("turns", []),
+                })
 
-def _advance_day():
-    today = SESSION_STATE.get("simulated_today") or _init_day()
-    dt = datetime.strptime(today, "%Y-%m-%d") + timedelta(days=1)
-    SESSION_STATE["simulated_today"] = dt.strftime("%Y-%m-%d")
+    return {"days": days, "count": len(days)}
 
-def _init_day() -> str:
-    real_today = datetime.now().strftime("%Y-%m-%d")
-    try:
-        if os.path.exists(CONVERSATIONS_PATH):
-            with open(CONVERSATIONS_PATH) as f:
-                data = json.load(f)
-            if data:
-                max_date = sorted(data.keys())[-1]
-                if real_today <= max_date:
-                    dt = datetime.strptime(max_date, "%Y-%m-%d") + timedelta(days=1)
-                    real_today = dt.strftime("%Y-%m-%d")
-    except Exception:
-        pass
-    SESSION_STATE["simulated_today"] = real_today
-    return real_today
 
-def get_today() -> str:
-    return SESSION_STATE.get("simulated_today") or _init_day()
+@app.get("/api/qa")
+def qa_pairs():
+    """The evaluation questions, plus scored results if a run produced them."""
+    if not os.path.exists(QA_PATH):
+        raise HTTPException(status_code=404, detail="No qa_pairs.json")
+    with open(QA_PATH) as f:
+        pairs = json.load(f)["user_1"]["qa_pairs"]
 
-def upsert_conversation_json(date_str: str, interaction: Dict):
-    try:
-        data = {}
-        if os.path.exists(CONVERSATIONS_PATH):
-            with open(CONVERSATIONS_PATH) as f:
-                data = json.load(f)
-
-        if date_str not in data:
-            data[date_str] = {
-                "day": datetime.strptime(date_str, "%Y-%m-%d").strftime("%A"),
-                "interactions": []
-            }
-
-        interactions = data[date_str]["interactions"]
-        if interactions and interactions[-1].get("time_of_day") == interaction["time_of_day"]:
-            interactions[-1]["turns"].extend(interaction["turns"])
-        else:
-            interactions.append(interaction)
-
-        with open(CONVERSATIONS_PATH, "w") as f:
-            json.dump(data, f, indent=2)
-    except Exception as e:
-        print(f"Error persisting conversation: {e}")
-
-# ── Conversation history ─────────────────────────────────────────────
-
-@app.get("/api/conversations")
-async def get_conversations():
-    try:
-        with open(CONVERSATIONS_PATH) as f:
+    results_path = os.path.join(os.path.dirname(STORE_DIR), "qa_results.json")
+    scored, summary = {}, None
+    if os.path.exists(results_path):
+        with open(results_path) as f:
             data = json.load(f)
-        return [
-            {"date": d, "day": data[d].get("day", ""), "interactions": data[d].get("interactions", [])}
-            for d in sorted(data.keys())
-        ]
+        summary = data.get("summary")
+        scored = {r["question"]: r for r in data.get("records", [])}
+
+    return {
+        "summary": summary,
+        "pairs": [{**p, **{k: v for k, v in scored.get(p["question"], {}).items()
+                           if k in ("response", "f1", "llm")}}
+                  for p in pairs],
+    }
+
+
+# ── Memory store ────────────────────────────────────────────────────
+
+@app.get("/api/memories")
+def memories(entity: Optional[str] = None, limit: int = 2000):
+    return agent().store.query_memories(entity=entity, limit=limit)
+
+
+@app.get("/api/entities")
+def entities():
+    return agent().store.get_all_entities()
+
+
+@app.get("/api/chunks")
+def chunks(limit: int = 200):
+    """Raw conversation chunks held in the RAG store."""
+    docs = agent().store.get_recent_conversations(k=limit)
+    return [
+        {"content": d.page_content,
+         "date": d.metadata.get("source_date", ""),
+         "speaker": d.metadata.get("speaker", "")}
+        for d in docs
+    ]
+
+
+@app.get("/api/summaries")
+def summaries():
+    a = agent()
+    if not a.store._summary_store:
+        return []
+    out = []
+    for doc in a.store._summary_store.docstore._dict.values():
+        meta = doc.metadata or {}
+        identifier = meta.get("identifier", "")
+        out.append({
+            "identifier": identifier,
+            "level": identifier.split(":")[0] if identifier else "",
+            "title": meta.get("title", ""),
+            "speaker": meta.get("speaker", ""),
+            "content": doc.page_content,
+        })
+    return sorted(out, key=lambda d: d["identifier"])
+
+
+# ── Chat ────────────────────────────────────────────────────────────
+
+@app.post("/api/chat")
+def chat(request: ChatRequest):
+    a = agent()
+    try:
+        return {"response": a.chat(request.message)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.delete("/api/conversations/{date}")
-async def delete_conversation(date: str):
-    try:
-        if os.path.exists(CONVERSATIONS_PATH):
-            with open(CONVERSATIONS_PATH) as f:
-                data = json.load(f)
-            data.pop(date, None)
-            with open(CONVERSATIONS_PATH, "w") as f:
-                json.dump(data, f, indent=2)
-        return {"status": "success", "date": date}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
-# ── SQL memories ─────────────────────────────────────────────────────
+# ── LoCoMo ─────────────────────────────────────────────────────────
 
-@app.get("/api/sql/memories")
-async def get_memories(type: str = None, entity: str = None):
-    try:
-        return agent.store.query_memories(type=type, entity=entity, limit=500)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+import re as _re
 
-@app.get("/api/sql/types")
-async def get_types():
-    return agent.store.get_all_types()
+def _locomo_results_dir() -> Optional[str]:
+    """Most recent locomo results directory."""
+    candidates = []
+    for name in os.listdir(RESULTS_DIR) if os.path.isdir(RESULTS_DIR) else []:
+        path = os.path.join(RESULTS_DIR, name, "locomo_results.json")
+        if os.path.exists(path):
+            candidates.append((os.path.getmtime(path), os.path.join(RESULTS_DIR, name)))
+    return max(candidates)[1] if candidates else None
 
-@app.get("/api/sql/entities")
-async def get_entities():
-    return agent.store.get_all_entities()
 
-# ── RAG entries ───────────────────────────────────────────────────────
+@app.get("/api/locomo/dataset")
+def locomo_dataset(conversation: Optional[int] = None):
+    """LoCoMo source conversations."""
+    if not os.path.exists(LOCOMO_PATH):
+        raise HTTPException(status_code=404, detail="locomo10.json not found")
+    with open(LOCOMO_PATH) as f:
+        convs = json.load(f)
 
-@app.get("/api/rag/entries")
-async def get_rag_entries():
-    entries = []
-    try:
-        # Summaries from FAISS summary store
-        if agent.store._summary_store:
-            for doc in agent.store._summary_store.docstore._dict.values():
-                meta = doc.metadata or {}
-                entries.append({
-                    "content": doc.page_content,
-                    "metadata": {
-                        "identifier": meta.get("identifier", ""),
-                        "title":      meta.get("title", ""),
-                        "type":       "summary",
-                    }
-                })
-
-        # Raw conversations from FAISS conv store
-        if agent.store._conv_store:
-            raw_docs = agent.store.get_recent_conversations(k=100)
-            for doc in raw_docs:
-                entries.append({
-                    "content":  doc.page_content,
-                    "metadata": {"type": "raw", "source_date": doc.metadata.get("source_date", "")},
-                })
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    return entries
-
-# ── Chat ──────────────────────────────────────────────────────────────
-
-@app.post("/api/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
-    try:
-        context = agent.ctx_builder.build(request.message)
-        response = agent.chat(request.message)
-        return ChatResponse(response=response, context=context)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-# ── Live conversation ─────────────────────────────────────────────────
-
-@app.post("/api/conversation/start", response_model=ConversationStartResponse)
-async def start_conversation():
-    try:
-        from langchain_openai import ChatOpenAI
-        from langchain_core.prompts import ChatPromptTemplate
-
-        time_of_day = advance_time()
-        date_str    = get_today()
-
-        context = agent.ctx_builder.build(
-            f"What should we talk about this {time_of_day}?", n_recent=4
+    result = []
+    for i, conv in enumerate(convs):
+        c = conv["conversation"]
+        sessions = []
+        keys = sorted(
+            (k for k in c if _re.fullmatch(r"session_\d+", k)),
+            key=lambda k: int(k.split("_")[1]),
         )
+        for key in keys:
+            date_raw = c.get(f"{key}_date_time", "")
+            turns = [
+                {"speaker": t["speaker"], "text": t.get("text", "")}
+                for t in c[key] if "text" in t
+            ]
+            sessions.append({"key": key, "date_raw": date_raw, "turns": turns})
 
-        llm = ChatOpenAI(model="gpt-4o", temperature=0.7)
-        prompt = ChatPromptTemplate.from_messages([
-            ("system",
-             "You are a warm, personalized AI companion starting a conversation. "
-             "Use the user's memory context below to open with one short, specific, "
-             "natural question relevant to this time of day. No bullet points, no lists — "
-             "just 1-2 sentences.\n\n"
-             f"Time of day: {time_of_day}\n\n"
-             f"{context}"),
-            ("human", "Start the conversation."),
-        ])
-        chain  = prompt | llm
-        result = await chain.ainvoke({})
-        opening = result.content.strip()
-
-        initial = {
-            "time_of_day": time_of_day,
-            "turns": [{"speaker": "AI", "text": opening}],
+        entry = {
+            "index": i,
+            "sample_id": conv.get("sample_id", f"conv-{i}"),
+            "speaker_a": c.get("speaker_a", ""),
+            "speaker_b": c.get("speaker_b", ""),
+            "sessions": sessions,
+            "n_questions": len(conv.get("qa", [])),
         }
-        upsert_conversation_json(date_str, initial)
+        result.append(entry)
 
-        return ConversationStartResponse(message=opening, context=context)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    if conversation is not None and 0 <= conversation < len(result):
+        return result[conversation]
+    return {"conversations": result, "count": len(result)}
 
-@app.post("/api/conversation/respond", response_model=ChatResponse)
-async def respond_conversation(request: ChatRequest):
-    try:
-        from langchain_openai import ChatOpenAI
-        from langchain_core.prompts import ChatPromptTemplate
 
-        context  = agent.ctx_builder.build(request.message)
-        llm      = ChatOpenAI(model="gpt-4o", temperature=0.7)
+@app.get("/api/locomo/qa")
+def locomo_qa():
+    """LoCoMo QA results from the most recent run."""
+    results_dir = _locomo_results_dir()
+    if not results_dir:
+        raise HTTPException(status_code=404, detail="No LoCoMo results found")
+    path = os.path.join(results_dir, "locomo_results.json")
+    with open(path) as f:
+        data = json.load(f)
+    return {
+        "run": os.path.basename(results_dir),
+        "model": data.get("model", ""),
+        "summary": data.get("summary", {}),
+        "records": data.get("records", []),
+    }
 
-        prompt = ChatPromptTemplate.from_messages([
-            ("system",
-             "You are a warm, personalized AI companion. Reply naturally and concisely "
-             "(1-2 sentences). Use the memory context when relevant but don't be robotic.\n\n"
-             f"{context}"),
-            ("human", "{message}"),
-        ])
-        chain    = prompt | llm
-        result   = await chain.ainvoke({"message": request.message})
-        ai_reply = result.content.strip()
-
-        # Sync new turn to memory (extract memories + store raw conv)
-        date_str    = get_today()
-        time_of_day = SESSION_STATE.get("current_time_of_day", "Morning")
-
-        interaction = {
-            "time_of_day": time_of_day,
-            "turns": [
-                {"speaker": "User", "text": request.message},
-                {"speaker": "AI",   "text": ai_reply},
-            ],
-        }
-        agent.ingest(date_str, [interaction])
-        upsert_conversation_json(date_str, interaction)
-
-        return ChatResponse(response=ai_reply, context=context)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-# ── Summaries ─────────────────────────────────────────────────────────
-
-@app.post("/api/summaries/build")
-async def build_summaries(force: bool = False):
-    try:
-        agent.build_summaries(force=force)
-        return {"status": "ok"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/api/summaries/lifetime")
-async def get_lifetime_summary():
-    text = agent.store.get_lifetime_summary()
-    return {"summary": text or ""}
 
 if __name__ == "__main__":
+    if STORE_DIR:
+        how = "pinned by STORE" if os.getenv("STORE") else "newest under results/"
+        print(f"store:   {os.path.relpath(STORE_DIR, PROJECT_ROOT)}  ({how})")
+        others = [s["run"] for s in discover_stores()][1:]
+        if others and not os.getenv("STORE"):
+            print(f"         also available: {', '.join(others)}")
+    else:
+        print("store:   none found under results/ — run scripts/run_memory_v3.py")
+    print(f"dataset: {os.path.relpath(DATASET, PROJECT_ROOT)}")
     uvicorn.run(app, host="0.0.0.0", port=8000)

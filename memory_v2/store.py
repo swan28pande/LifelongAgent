@@ -20,6 +20,18 @@ from langchain_core.documents import Document
 EMBED_MODEL = "nomic-ai/nomic-embed-text-v1"
 
 
+class PrefixedEmbeddings(HuggingFaceEmbeddings):
+    """nomic-embed-text-v1 requires task-specific prefixes for best retrieval."""
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        return super().embed_documents(
+            [f"search_document: {t}" for t in texts]
+        )
+
+    def embed_query(self, text: str) -> List[float]:
+        return super().embed_query(f"search_query: {text}")
+
+
 class MemoryStore:
     def __init__(self, base_dir: str):
         self.base_dir = base_dir
@@ -29,7 +41,7 @@ class MemoryStore:
         self.conv_index     = os.path.join(base_dir, "faiss_conversations")
         self.summary_index  = os.path.join(base_dir, "faiss_summaries")
 
-        self.embeddings = HuggingFaceEmbeddings(
+        self.embeddings = PrefixedEmbeddings(
             model_name=EMBED_MODEL,
             model_kwargs={"trust_remote_code": True},
         )

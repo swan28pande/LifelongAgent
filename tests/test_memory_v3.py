@@ -49,7 +49,6 @@ store_mod.HuggingFaceEmbeddings = lambda **kwargs: DeterministicFakeEmbedding(si
 
 from memory_v2.store import MemoryStore                      # noqa: E402
 from memory_v3.agent import AgenticMemoryAgent               # noqa: E402
-from memory_v3.context import DynamicContextBuilder          # noqa: E402
 from memory_v3.ingest import IngestionPipeline               # noqa: E402
 from memory_v3.tools import build_read_tools                 # noqa: E402
 
@@ -113,7 +112,7 @@ class StoreTestCase(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.mkdtemp(prefix="memv3_test_")
         self.store = MemoryStore(self.tmp)
-        self.read = {t.name: t for t in build_read_tools(self.store, None)}
+        self.read = {t.name: t for t in build_read_tools(self.store)}
 
     def tearDown(self):
         shutil.rmtree(self.tmp, ignore_errors=True)
@@ -257,47 +256,49 @@ class TestRagDatabase(StoreTestCase):
         ))
 
 
-# ── 3. Context builder ──────────────────────────────────────────────
+# ── 2b. Retrieval tools ─────────────────────────────────────────────
 
-class TestContextBuilder(StoreTestCase):
-    """'Context builder tool' — assembled at call time, no hardcoded domains."""
+class TestRetrievalTools(StoreTestCase):
+    """The agent assembles its own context, so each source must be reachable."""
 
     def _seed(self):
         for day, value in [("2026-03-01", "tram"), ("2026-03-02", "night bus")]:
             self.store.add_memory(content=value, entity="transport", source_date=day)
 
-    def _route(self, **payload):
-        return DynamicContextBuilder(self.store, ScriptedLLM(payload))
-
-    def test_builds_a_timeline_for_a_matched_entity(self):
+    def test_preferences_come_back_in_date_order(self):
+        """Counting and interval questions depend on the ordering being real."""
         self._seed()
-        ctx = self._route(entities=["transport"], needs_timeline=True,
-                          speaker=None, target_date=None).build("how do I commute?")
-        self.assertIn("TIMELINE", ctx)
-        self.assertIn("tram", ctx)
-        self.assertIn("night bus", ctx)
+        out = self.read["search_preferences"].invoke({"entity": "transport"})
+        self.assertLess(out.index("tram"), out.index("night bus"))
 
-    def test_hallucinated_entity_names_are_discarded(self):
-        """The router may invent a name; only entities really in the store survive."""
+    def test_unknown_entity_returns_the_real_names(self):
+        """
+        An empty result is indistinguishable from 'no such data', so a wrong guess
+        has to say so — otherwise the agent concludes the memory is empty and stops.
+        """
         self._seed()
-        ctx = self._route(entities=["helicopter"], needs_timeline=True,
-                          speaker=None).build("how do I commute?")
-        self.assertNotIn("TIMELINE", ctx)
+        out = self.read["search_preferences"].invoke({"entity": "helicopter"})
+        self.assertIn("No entity named", out)
+        self.assertIn("transport", out)
 
-    def test_empty_store_short_circuits_without_calling_the_llm(self):
-        llm = ScriptedLLM({"entities": ["transport"], "needs_timeline": True})
-        DynamicContextBuilder(self.store, llm).build("anything")
-        self.assertEqual(llm.calls, [], "router ran despite an empty taxonomy")
+    def test_date_window_filters(self):
+        self._seed()
+        out = self.read["search_preferences"].invoke(
+            {"entity": "transport", "start_date": "2026-03-02", "end_date": "2026-03-02"}
+        )
+        self.assertIn("night bus", out)
+        self.assertNotIn("tram", out)
 
-    def test_taxonomy_is_read_at_call_time(self):
-        """A brand-new entity is routable immediately, with no code change."""
-        self.store.add_memory(content="oolong", entity="tea", source_date="2026-03-01")
-        ctx = self._route(entities=["tea"], needs_timeline=True,
-                          speaker=None).build("what tea?")
-        self.assertIn("oolong", ctx)
+    def test_entities_are_listed_for_the_agent(self):
+        self._seed()
+        self.assertIn("transport", self.read["list_entities"].invoke({}))
+
+    def test_missing_summary_says_so(self):
+        out = self.read["get_summary"].invoke({"level": "lifetime"})
+        self.assertIn("no lifetime summary", out.lower())
 
 
-# ── 4. Live conversation: converse / flush ──────────────────────────
+# ── 3. Live conversation: converse / flush ──────────────────────────
 
 class TestConverseAndFlush(StoreTestCase):
     """Fast read path during the day, pipeline at the end of it."""
@@ -350,7 +351,7 @@ class TestConverseAndFlush(StoreTestCase):
         self.assertEqual(agent.pending_turns, 0)
 
 
-# ── 5. Domain blindness ─────────────────────────────────────────────
+# ── 4. Domain blindness ─────────────────────────────────────────────
 
 class TestNoHardcodedDomains(unittest.TestCase):
     """
@@ -363,11 +364,10 @@ class TestNoHardcodedDomains(unittest.TestCase):
               "climbing", "rest day", "clothing", "beverage", "workout")
 
     def test_no_dataset_vocabulary_reaches_the_model(self):
-        from memory_v3.context import ROUTER_SYSTEM
         from memory_v3.prompts import CHAT_SYSTEM, EXTRACT_SYSTEM
 
-        text = [EXTRACT_SYSTEM, CHAT_SYSTEM, ROUTER_SYSTEM]
-        for tool in build_read_tools(None, None):
+        text = [EXTRACT_SYSTEM, CHAT_SYSTEM]
+        for tool in build_read_tools(None):
             text.append(f"{tool.name} {tool.description}")
 
         blob = "\n".join(text).lower()
@@ -375,18 +375,29 @@ class TestNoHardcodedDomains(unittest.TestCase):
         self.assertEqual(found, [], f"dataset vocabulary leaked into prompts: {found}")
 
 
-# ── 6. Tool surface ─────────────────────────────────────────────────
+# ── 5. Tool surface ─────────────────────────────────────────────────
 
 class TestToolSurface(unittest.TestCase):
 
     def test_chat_agent_cannot_write(self):
-        names = {t.name for t in build_read_tools(None, None)}
+        names = {t.name for t in build_read_tools(None)}
         for writer in ("add_preference", "remove_preference", "index_conversation"):
             self.assertNotIn(writer, names)
-        self.assertIn("build_context", names)
+        self.assertIn("search_preferences", names)
+
+    def test_no_tool_hides_an_llm_call(self):
+        """
+        Retrieval tools are SQL and FAISS only. A tool that quietly makes its own
+        model call would put a second, less-informed decision inside what reads as a
+        lookup — and would not show up in the agent's own turn count.
+        """
+        from memory_v3 import tools as tools_mod
+        source = open(tools_mod.__file__).read()
+        for marker in ("ChatPromptTemplate", "JsonOutputParser", "self.llm", "invoke("):
+            self.assertNotIn(marker, source, f"a retrieval tool now calls the model ({marker})")
 
     def test_every_tool_is_described_for_the_model(self):
-        for tool in build_read_tools(None, None):
+        for tool in build_read_tools(None):
             with self.subTest(tool=tool.name):
                 self.assertTrue(tool.description.strip(),
                                 f"{tool.name} has no description")
@@ -395,7 +406,7 @@ class TestToolSurface(unittest.TestCase):
                                   f"{tool.name}: '{arg}' is undocumented")
 
 
-# ── 7. Live check (opt-in) ──────────────────────────────────────────
+# ── 6. Live check (opt-in) ──────────────────────────────────────────
 
 @unittest.skipUnless(os.getenv("LIVE"), "set LIVE=1 to run against a real model")
 class TestLiveIngestion(unittest.TestCase):
@@ -405,7 +416,7 @@ class TestLiveIngestion(unittest.TestCase):
         tmp = tempfile.mkdtemp(prefix="memv3_live_")
         try:
             agent = AgenticMemoryAgent(
-                base_dir=tmp, model=os.getenv("MODEL", "gemini-3.1-flash-lite")
+                base_dir=tmp, model=os.getenv("MODEL", "gemini-3.5-flash")
             )
             report = agent.ingest("2026-03-01", [{
                 "time_of_day": "Morning",

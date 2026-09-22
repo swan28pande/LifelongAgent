@@ -1,287 +1,241 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, Database, Layers, Bot, User, Calendar, Clock, Loader2, Trash2, RefreshCw } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import {
+  MessageSquare, Database, Layers, FileText, CheckSquare,
+  RefreshCw, Loader2, Send, AlertTriangle, Users, BookOpen,
+} from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000/api';
+const API = 'http://localhost:8000/api';
+
+const VIEWS = [
+  { id: 'dataset',       icon: <FileText size={16} />,      label: 'Dataset' },
+  { id: 'memories',      icon: <Database size={16} />,      label: 'Preferences' },
+  { id: 'chunks',        icon: <Layers size={16} />,        label: 'RAG Store' },
+  { id: 'summaries',     icon: <FileText size={16} />,      label: 'Summaries' },
+  { id: 'qa',            icon: <CheckSquare size={16} />,   label: 'Evaluation' },
+  { id: 'locomo',        icon: <Users size={16} />,         label: 'LoCoMo' },
+  { id: 'locomo_eval',   icon: <BookOpen size={16} />,      label: 'LoCoMo Eval' },
+  { id: 'chat',          icon: <MessageSquare size={16} />, label: 'Chat' },
+];
+
+const get = (path) =>
+  fetch(`${API}${path}`).then(async (r) => {
+    if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail || r.statusText);
+    return r.json();
+  });
 
 export default function App() {
-  const [activeView, setActiveView]       = useState('chat');
-  const [conversations, setConversations] = useState([]);
-  const [memories, setMemories]           = useState([]);
-  const [memoryTypes, setMemoryTypes]     = useState([]);
-  const [memTypeFilter, setMemTypeFilter] = useState('all');
-  const [ragEntries, setRagEntries]       = useState([]);
-  const [ragFilter, setRagFilter]         = useState('all');
-  const [loading, setLoading]             = useState(false);
-  const [isLiveChatActive, setIsLiveChatActive] = useState(false);
-  const [userInput, setUserInput]         = useState('');
-  const [isAiThinking, setIsAiThinking]   = useState(false);
-  const [lifetimeSummary, setLifetimeSummary] = useState('');
-  const scrollRef = useRef(null);
+  const [view, setView]       = useState('dataset');
+  const [status, setStatus]   = useState(null);
+  const [stats, setStats]     = useState(null);
+  const [data, setData]       = useState({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError]     = useState('');
 
-  const scrollToBottom = () => {
-    if (scrollRef.current)
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  };
+  const [entityFilter, setEntityFilter] = useState('all');
+  const [dayFilter, setDayFilter]       = useState('all');
+  const [messages, setMessages]         = useState([]);
+  const [input, setInput]               = useState('');
+  const [thinking, setThinking]         = useState(false);
+  const [locomoConv, setLocomoConv]     = useState(0);
+  const [locomoFilter, setLocomoFilter] = useState('all');
 
-  // Load conversations on mount
+  useEffect(() => { get('/status').then(setStatus).catch(() => {}); }, []);
+
+  // Each view owns one endpoint; cache so switching tabs doesn't refetch.
   useEffect(() => {
-    fetch(`${API_BASE}/conversations`).then(r => r.json()).then(setConversations).catch(console.error);
-    fetch(`${API_BASE}/summaries/lifetime`).then(r => r.json()).then(d => setLifetimeSummary(d.summary || '')).catch(() => {});
-  }, []);
+    const endpoint = {
+      dataset: '/dataset', memories: '/memories',
+      chunks: '/chunks', summaries: '/summaries', qa: '/qa',
+      locomo: '/locomo/dataset', locomo_eval: '/locomo/qa',
+    }[view];
+    if (!endpoint || data[view]) return;
 
-  useEffect(() => { setTimeout(scrollToBottom, 300); }, [activeView, conversations]);
+    setLoading(true); setError('');
+    get(endpoint)
+      .then((d) => setData((prev) => ({ ...prev, [view]: d })))
+      .catch((e) => setError(e.message))
+      .finally(() => setLoading(false));
+  }, [view]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Load SQL memories when tab opens
   useEffect(() => {
-    if (activeView === 'sql') refreshMemories();
-    if (activeView === 'rag') refreshRag();
-  }, [activeView]);
+    if (view !== 'dataset' || stats) return;
+    get('/stats').then(setStats).catch(() => {});
+  }, [view]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const refreshConversations = () =>
-    fetch(`${API_BASE}/conversations`).then(r => r.json()).then(setConversations).catch(console.error);
-
-  const refreshMemories = () => {
-    setLoading(true);
-    Promise.all([
-      fetch(`${API_BASE}/sql/memories`).then(r => r.json()),
-      fetch(`${API_BASE}/sql/types`).then(r => r.json()),
-    ]).then(([mems, types]) => {
-      setMemories(mems);
-      setMemoryTypes(['all', ...types]);
-    }).catch(console.error).finally(() => setLoading(false));
+  const reload = () => {
+    setData((prev) => ({ ...prev, [view]: undefined }));
+    setStats(null);
+    setView(view);
+    const endpoint = {
+      dataset: '/dataset', memories: '/memories',
+      chunks: '/chunks', summaries: '/summaries', qa: '/qa',
+      locomo: '/locomo/dataset', locomo_eval: '/locomo/qa',
+    }[view];
+    if (!endpoint) return;
+    setLoading(true); setError('');
+    get(endpoint)
+      .then((d) => setData((prev) => ({ ...prev, [view]: d })))
+      .catch((e) => setError(e.message))
+      .finally(() => setLoading(false));
   };
 
-  const refreshRag = () => {
-    setLoading(true);
-    fetch(`${API_BASE}/rag/entries`).then(r => r.json()).then(setRagEntries).catch(console.error).finally(() => setLoading(false));
-  };
+  const send = () => {
+    const text = input.trim();
+    if (!text || thinking) return;
+    setMessages((m) => [...m, { role: 'user', text }]);
+    setInput(''); setThinking(true);
 
-  const handleDeleteDay = (date) => {
-    if (!window.confirm(`Delete all data for ${date}?`)) return;
-    setLoading(true);
-    fetch(`${API_BASE}/conversations/${date}`, { method: 'DELETE' })
-      .then(() => { setConversations(prev => prev.filter(c => c.date !== date)); })
-      .catch(console.error).finally(() => setLoading(false));
-  };
-
-  const handleStartConversation = () => {
-    setLoading(true);
-    fetch(`${API_BASE}/conversation/start`, { method: 'POST' })
-      .then(r => r.json())
-      .then(() => { setIsLiveChatActive(true); refreshConversations(); })
-      .catch(console.error).finally(() => setLoading(false));
-  };
-
-  const handleSend = () => {
-    const msg = userInput.trim();
-    if (!msg || isAiThinking) return;
-    setUserInput('');
-
-    // Optimistic UI update
-    setConversations(prev => {
-      const updated = [...prev];
-      if (updated.length > 0) {
-        const last = { ...updated[updated.length - 1] };
-        const inters = [...last.interactions];
-        if (inters.length > 0) {
-          const lastInter = { ...inters[inters.length - 1] };
-          lastInter.turns = [...lastInter.turns, { speaker: 'User', text: msg }];
-          inters[inters.length - 1] = lastInter;
-        }
-        last.interactions = inters;
-        updated[updated.length - 1] = last;
-      }
-      return updated;
-    });
-
-    setIsAiThinking(true);
-    fetch(`${API_BASE}/conversation/respond`, {
+    fetch(`${API}/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: msg }),
+      body: JSON.stringify({ message: text }),
     })
-      .then(r => r.json())
-      .then(() => refreshConversations())
-      .catch(console.error)
-      .finally(() => setIsAiThinking(false));
+      .then((r) => r.json())
+      .then((d) => setMessages((m) => [...m, { role: 'ai', text: d.response || d.detail }]))
+      .catch((e) => setMessages((m) => [...m, { role: 'ai', text: `Error: ${e.message}` }]))
+      .finally(() => setThinking(false));
   };
 
-  // ── RAG identifier → readable label ──
-  const ragLabel = (identifier = '') => {
-    if (identifier.startsWith('week:'))     return 'weekly';
-    if (identifier.startsWith('month:'))    return 'monthly';
-    if (identifier.startsWith('year:'))     return 'yearly';
-    if (identifier === 'lifetime')          return 'lifetime';
-    if (identifier.startsWith('traj-'))     return 'trajectory';
-    return 'raw';
-  };
+  const memories = data.memories || [];
+  const entities = [...new Set(memories.map((m) => m.entity))].sort();
+  const shownMemories = entityFilter === 'all'
+    ? memories : memories.filter((m) => m.entity === entityFilter);
 
-  const filteredMemories = memTypeFilter === 'all'
-    ? memories
-    : memories.filter(m => m.type === memTypeFilter);
-
-  const filteredRag = ragFilter === 'all'
-    ? ragEntries
-    : ragEntries.filter(e => {
-        const id  = e.metadata?.identifier || '';
-        const lbl = ragLabel(id);
-        if (ragFilter === 'raw') return e.metadata?.type === 'raw';
-        return lbl === ragFilter;
-      });
+  const days = data.dataset?.days || [];
+  const dates = [...new Set(days.map((d) => d.date))];
+  const shownDays = dayFilter === 'all' ? days : days.filter((d) => d.date === dayFilter);
 
   return (
     <div className="app-shell">
-
-      {/* ── TOP BAR ── */}
       <div className="top-bar">
         <div className="top-bar-nav">
-          {[
-            { id: 'chat', icon: <MessageSquare size={16} />, label: 'Conversations' },
-            { id: 'sql',  icon: <Database size={16} />,      label: 'Memories' },
-            { id: 'rag',  icon: <Layers size={16} />,        label: 'RAG Store' },
-          ].map(({ id, icon, label }) => (
-            <button key={id} className={`nav-btn ${activeView === id ? 'active' : ''}`} onClick={() => setActiveView(id)}>
+          {VIEWS.map(({ id, icon, label }) => (
+            <button key={id}
+              className={`nav-btn ${view === id ? 'active' : ''}`}
+              onClick={() => setView(id)}>
               {icon} {label}
             </button>
           ))}
         </div>
-        <div className="dataset-badge">
+        <div className="dataset-badge" title={status?.store || ''}>
           <div className="pulse-dot" />
-          Memory v2
+          {status ? `${status.system} · ${status.run}` : 'connecting…'}
         </div>
       </div>
 
-      {/* ── MAIN ── */}
       <div className="main-content">
-
-        {/* ===== CHAT ===== */}
-        {activeView === 'chat' && (
-          <div className="chat-view fade-in">
-
-            {/* Lifetime summary banner */}
-            {lifetimeSummary && (
-              <div className="lifetime-banner">
-                <span className="lifetime-label">Global Memory</span>
-                <p>{lifetimeSummary}</p>
-              </div>
-            )}
-
-            <div className="chat-messages" ref={scrollRef}>
-              {conversations.map(dayData => {
-                const d = new Date(dayData.date + 'T00:00:00');
-                const dateLabel = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
-                return (
-                  <React.Fragment key={dayData.date}>
-                    <div className="date-divider">
-                      <div className="divider-line" />
-                      <span className="divider-label"><Calendar size={14} /> {dateLabel}</span>
-                      <button className="delete-day-btn" onClick={() => handleDeleteDay(dayData.date)} title={`Delete ${dayData.date}`}>
-                        <Trash2 size={14} />
-                      </button>
-                      <div className="divider-line" />
-                    </div>
-
-                    {dayData.interactions.map((inter, ii) => (
-                      <React.Fragment key={ii}>
-                        <div className="time-divider">
-                          <Clock size={12} /><span>{inter.time_of_day}</span>
-                        </div>
-                        {inter.turns.map((turn, ti) => {
-                          const isUser = turn.speaker === 'User';
-                          return (
-                            <div key={ti} className={`message-row ${isUser ? 'user' : 'ai'}`}>
-                              <div className={`avatar ${isUser ? 'user' : 'ai'}`}>
-                                {isUser ? <User size={18} color="#0891b2" /> : <Bot size={18} color="#6366f1" />}
-                              </div>
-                              <div className={`bubble ${isUser ? 'user' : 'ai'}`}>{turn.text}</div>
-                            </div>
-                          );
-                        })}
-                      </React.Fragment>
-                    ))}
-                  </React.Fragment>
-                );
-              })}
-
-              {!isLiveChatActive ? (
-                <div className="integrated-start-section">
-                  <div className="divider-line" />
-                  <button className="start-button mini" disabled={loading} onClick={handleStartConversation}>
-                    {loading ? <Loader2 size={16} className="spin" /> : <><MessageSquare size={16} /> Start Fresh Conversation</>}
-                  </button>
-                  <div className="divider-line" />
-                </div>
-              ) : (
-                isAiThinking && (
-                  <div className="message-row ai">
-                    <div className="avatar ai"><Bot size={18} color="#6366f1" /></div>
-                    <div className="bubble ai typing">
-                      <span className="dot" /><span className="dot" /><span className="dot" />
-                    </div>
-                  </div>
-                )
-              )}
-            </div>
-
-            {isLiveChatActive && (
-              <div className="chat-input-area sticky">
-                <input
-                  type="text"
-                  autoFocus
-                  placeholder="Continue the conversation..."
-                  value={userInput}
-                  onChange={e => setUserInput(e.target.value)}
-                  onKeyDown={e => { if (e.key === 'Enter') handleSend(); }}
-                />
-              </div>
-            )}
+        {error && (
+          <div className="empty-state">
+            <AlertTriangle size={32} />
+            <p>{error}</p>
           </div>
         )}
 
-        {/* ===== SQL MEMORIES ===== */}
-        {activeView === 'sql' && (
+        {loading && !error && (
+          <div className="empty-state">
+            <Loader2 size={32} className="spin" />
+            <p>Loading… (first call opens the store, which takes a moment)</p>
+          </div>
+        )}
+
+        {/* ===== DATASET ===== */}
+        {view === 'dataset' && !loading && !error && (
           <div className="data-view fade-in">
             <div className="data-view-header">
               <div style={{ flex: 1 }}>
-                <h2>Structured Memories</h2>
-                <p>Extracted from conversations — type and entity assigned by LLM</p>
+                <h2>Source conversations</h2>
+                <p>{days.length} sessions from {status?.dataset}</p>
               </div>
-              <button className="refresh-btn" onClick={refreshMemories} disabled={loading}>
-                <RefreshCw size={14} className={loading ? 'spin' : ''} /> Refresh
+              <button className="refresh-btn" onClick={reload}>
+                <RefreshCw size={14} /> Refresh
               </button>
             </div>
 
-            {/* Type filter pills */}
+            {stats && (
+              <div className="filter-bar">
+                <span className="bucket-pill">{stats.preferences} preferences</span>
+                <span className="bucket-pill">{stats.chunks} chunks</span>
+                <span className="bucket-pill">{stats.summaries} summaries</span>
+                <span className="bucket-pill">
+                  {stats.date_range?.[0]} → {stats.date_range?.[1]}
+                </span>
+              </div>
+            )}
+
             <div className="filter-bar">
-              {memoryTypes.map(t => (
-                <button key={t} className={`filter-pill ${memTypeFilter === t ? 'active' : ''}`} onClick={() => setMemTypeFilter(t)}>
-                  {t}
+              {['all', ...dates].map((d) => (
+                <button key={d}
+                  className={`filter-pill ${dayFilter === d ? 'active' : ''}`}
+                  onClick={() => setDayFilter(d)}>
+                  {d === 'all' ? `All ${dates.length} days` : d}
                 </button>
               ))}
             </div>
 
             <div className="data-view-body">
-              {loading ? (
-                <div className="empty-state"><Loader2 size={32} className="spin" /><p>Loading memories...</p></div>
-              ) : filteredMemories.length === 0 ? (
-                <div className="empty-state"><Database size={32} /><p>No memories found</p></div>
+              {shownDays.map((day, i) => (
+                <div key={i} className="rag-card">
+                  <div className="rag-card-header">
+                    <span className="rag-title">{day.date}</span>
+                    <span className="rag-card-meta">
+                      {day.time_of_day} · {day.turns.length} turns
+                    </span>
+                  </div>
+                  <div className="rag-card-content">
+                    {day.turns.map((t, j) => (
+                      <div key={j} style={{ marginBottom: 6 }}>
+                        <b>{t.speaker}:</b> {t.text}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ===== PREFERENCES ===== */}
+        {view === 'memories' && !loading && !error && (
+          <div className="data-view fade-in">
+            <div className="data-view-header">
+              <div style={{ flex: 1 }}>
+                <h2>Structured preferences</h2>
+                <p>{memories.length} rows · entity and value discovered by the model</p>
+              </div>
+              <button className="refresh-btn" onClick={reload}>
+                <RefreshCw size={14} /> Refresh
+              </button>
+            </div>
+
+            <div className="filter-bar">
+              {['all', ...entities].map((e) => (
+                <button key={e}
+                  className={`filter-pill ${entityFilter === e ? 'active' : ''}`}
+                  onClick={() => setEntityFilter(e)}>
+                  {e === 'all'
+                    ? `All (${memories.length})`
+                    : `${e} (${memories.filter((m) => m.entity === e).length})`}
+                </button>
+              ))}
+            </div>
+
+            <div className="data-view-body">
+              {shownMemories.length === 0 ? (
+                <div className="empty-state"><Database size={32} /><p>No preferences stored</p></div>
               ) : (
                 <table className="sql-table">
                   <thead>
                     <tr>
-                      <th>Type</th>
-                      <th>Entity</th>
-                      <th>Memory</th>
-                      <th style={{ textAlign: 'right' }}>Date</th>
+                      <th>Date</th><th>Entity</th><th>Value</th><th>Speaker</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {filteredMemories.map((m, i) => (
-                      <tr key={i}>
-                        <td><span className="category-badge">{m.type}</span></td>
-                        <td className="entity-cell">{m.entity}</td>
+                    {shownMemories.map((m) => (
+                      <tr key={m.id}>
+                        <td className="date-cell">{m.date}</td>
+                        <td><span className="category-badge">{m.entity}</span></td>
                         <td>{m.content}</td>
-                        <td className="date-cell" style={{ textAlign: 'right' }}>{m.date}</td>
+                        <td className="rag-card-meta">{m.speaker}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -292,50 +246,275 @@ export default function App() {
         )}
 
         {/* ===== RAG STORE ===== */}
-        {activeView === 'rag' && (
+        {view === 'chunks' && !loading && !error && (
           <div className="data-view fade-in">
             <div className="data-view-header">
               <div style={{ flex: 1 }}>
-                <h2>RAG Store</h2>
-                <p>Hierarchical summaries and raw conversation chunks</p>
+                <h2>RAG store</h2>
+                <p>{(data.chunks || []).length} indexed conversation chunks</p>
               </div>
-              <button className="refresh-btn" onClick={refreshRag} disabled={loading}>
-                <RefreshCw size={14} className={loading ? 'spin' : ''} /> Refresh
+              <button className="refresh-btn" onClick={reload}>
+                <RefreshCw size={14} /> Refresh
+              </button>
+            </div>
+            <div className="data-view-body">
+              <div className="rag-grid">
+                {(data.chunks || []).map((c, i) => (
+                  <div key={i} className="rag-card">
+                    <div className="rag-card-header">
+                      <span className="rag-title">{c.date}</span>
+                    </div>
+                    <div className="rag-card-content">{c.content}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ===== SUMMARIES ===== */}
+        {view === 'summaries' && !loading && !error && (
+          <div className="data-view fade-in">
+            <div className="data-view-header">
+              <div style={{ flex: 1 }}>
+                <h2>Summary hierarchy</h2>
+                <p>{(data.summaries || []).length} summaries · weekly → monthly → yearly → lifetime</p>
+              </div>
+              <button className="refresh-btn" onClick={reload}>
+                <RefreshCw size={14} /> Refresh
+              </button>
+            </div>
+            <div className="data-view-body">
+              <div className="rag-grid">
+                {(data.summaries || []).map((s, i) => (
+                  <div key={i} className="rag-card">
+                    <div className="rag-card-header">
+                      <span className="rag-title">{s.title || s.identifier}</span>
+                      <span className="category-badge">{s.level}</span>
+                    </div>
+                    <div className="rag-card-content">{s.content}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ===== EVALUATION ===== */}
+        {view === 'qa' && !loading && !error && (
+          <div className="data-view fade-in">
+            <div className="data-view-header">
+              <div style={{ flex: 1 }}>
+                <h2>Evaluation</h2>
+                <p>
+                  {data.qa?.summary
+                    ? `${data.qa.summary.n} scored · F1 ${data.qa.summary.overall_f1.toFixed(3)} · judge ${data.qa.summary.overall_llm.toFixed(3)}`
+                    : 'Questions not yet scored — run scripts/run_memory_v3.py'}
+                </p>
+              </div>
+              <button className="refresh-btn" onClick={reload}>
+                <RefreshCw size={14} /> Refresh
+              </button>
+            </div>
+
+            {data.qa?.summary?.by_type && (
+              <div className="filter-bar">
+                {Object.entries(data.qa.summary.by_type).map(([t, v]) => (
+                  <span key={t} className="bucket-pill">
+                    {t}: {v.llm.toFixed(2)} (n={v.n})
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <div className="data-view-body">
+              <table className="sql-table">
+                <thead>
+                  <tr>
+                    <th>Type</th><th>Question</th><th>Expected</th>
+                    <th>Answered</th><th>Judge</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(data.qa?.pairs || []).map((p, i) => (
+                    <tr key={i}>
+                      <td><span className="category-badge">{p.type}</span></td>
+                      <td>{p.question}</td>
+                      <td>{p.answer}</td>
+                      <td>{p.response ?? <em style={{ opacity: 0.5 }}>not run</em>}</td>
+                      <td>
+                        {p.llm === undefined ? '—'
+                          : p.llm === 1 ? '✓' : '✗'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* ===== LOCOMO DATASET ===== */}
+        {view === 'locomo' && !loading && !error && (
+          <div className="data-view fade-in">
+            <div className="data-view-header">
+              <div style={{ flex: 1 }}>
+                <h2>LoCoMo Dataset</h2>
+                <p>{(data.locomo?.conversations || []).length} conversations · multi-speaker life events</p>
+              </div>
+              <button className="refresh-btn" onClick={reload}>
+                <RefreshCw size={14} /> Refresh
               </button>
             </div>
 
             <div className="filter-bar">
-              {['all', 'weekly', 'monthly', 'yearly', 'lifetime', 'trajectory', 'raw'].map(f => (
-                <button key={f} className={`filter-pill ${ragFilter === f ? 'active' : ''}`} onClick={() => setRagFilter(f)}>
-                  {f}
+              {(data.locomo?.conversations || []).map((c) => (
+                <button key={c.index}
+                  className={`filter-pill ${locomoConv === c.index ? 'active' : ''}`}
+                  onClick={() => setLocomoConv(c.index)}>
+                  {c.sample_id} ({c.speaker_a} & {c.speaker_b})
                 </button>
               ))}
             </div>
 
-            <div className="data-view-body">
-              {loading ? (
-                <div className="empty-state"><Loader2 size={32} className="spin" style={{ color: 'var(--primary)' }} /><p>Loading RAG store...</p></div>
-              ) : filteredRag.length === 0 ? (
-                <div className="empty-state"><Layers size={32} /><p>No entries found</p></div>
-              ) : (
-                <div className="rag-grid">
-                  {filteredRag.map((entry, idx) => {
-                    const id    = entry.metadata?.identifier || '';
-                    const label = ragLabel(id);
-                    const date  = entry.metadata?.source_date || id.replace(/^(week:|month:|year:)/, '') || '';
-                    return (
-                      <div key={idx} className={`rag-card ${entry.metadata?.type === 'summary' ? 'summary-card' : ''}`}>
-                        <div className="rag-card-header">
-                          <span className="rag-date">{date}</span>
-                          {label !== 'raw' && <span className="insight-badge">{label}</span>}
-                        </div>
-                        {entry.metadata?.title && <p className="rag-title">{entry.metadata.title}</p>}
-                        <p className="rag-content">{entry.content}</p>
+            {(() => {
+              const conv = (data.locomo?.conversations || [])[locomoConv];
+              if (!conv) return null;
+              return (
+                <div className="data-view-body">
+                  <div className="filter-bar">
+                    <span className="bucket-pill">{conv.sessions.length} sessions</span>
+                    <span className="bucket-pill">{conv.n_questions} questions</span>
+                    <span className="bucket-pill">{conv.speaker_a} & {conv.speaker_b}</span>
+                  </div>
+                  {conv.sessions.map((s, i) => (
+                    <div key={i} className="rag-card">
+                      <div className="rag-card-header">
+                        <span className="rag-title">{s.key}</span>
+                        <span className="rag-card-meta">
+                          {s.date_raw} · {s.turns.length} turns
+                        </span>
                       </div>
-                    );
-                  })}
+                      <div className="rag-card-content">
+                        {s.turns.map((t, j) => (
+                          <div key={j} style={{ marginBottom: 6 }}>
+                            <b>{t.speaker}:</b> {t.text}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              );
+            })()}
+          </div>
+        )}
+
+        {/* ===== LOCOMO EVAL ===== */}
+        {view === 'locomo_eval' && !loading && !error && (
+          <div className="data-view fade-in">
+            <div className="data-view-header">
+              <div style={{ flex: 1 }}>
+                <h2>LoCoMo Evaluation</h2>
+                <p>
+                  {data.locomo_eval?.summary?.n
+                    ? `${data.locomo_eval.summary.n} scored · overall ${data.locomo_eval.summary.overall?.toFixed(3)} · ${data.locomo_eval.run}`
+                    : 'No LoCoMo results found — run scripts/run_locomo_v3.py'}
+                </p>
+              </div>
+              <button className="refresh-btn" onClick={reload}>
+                <RefreshCw size={14} /> Refresh
+              </button>
+            </div>
+
+            {data.locomo_eval?.summary?.by_category && (
+              <div className="filter-bar">
+                {Object.entries(data.locomo_eval.summary.by_category).map(([cat, v]) => (
+                  <span key={cat} className="bucket-pill">
+                    {cat}: {v.score?.toFixed(3)} (n={v.n})
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {data.locomo_eval?.records && (
+              <>
+                <div className="filter-bar">
+                  {['all', ...new Set(data.locomo_eval.records.map((r) => r.category_name))].map((f) => (
+                    <button key={f}
+                      className={`filter-pill ${locomoFilter === f ? 'active' : ''}`}
+                      onClick={() => setLocomoFilter(f)}>
+                      {f === 'all' ? `All (${data.locomo_eval.records.length})` : f}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="data-view-body">
+                  <table className="sql-table">
+                    <thead>
+                      <tr>
+                        <th>Conv</th><th>Category</th><th>Question</th>
+                        <th>Expected</th><th>Response</th><th>F1</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data.locomo_eval.records
+                        .filter((r) => locomoFilter === 'all' || r.category_name === locomoFilter)
+                        .map((r, i) => (
+                          <tr key={i} style={{
+                            background: r.score > 0.5 ? 'rgba(34,197,94,0.08)'
+                              : r.score > 0.2 ? 'rgba(234,179,8,0.08)'
+                              : 'rgba(239,68,68,0.06)',
+                          }}>
+                            <td className="date-cell">{r.sample_id}</td>
+                            <td><span className="category-badge">{r.category_name}</span></td>
+                            <td>{r.question}</td>
+                            <td>{String(r.answer)}</td>
+                            <td>{r.response}</td>
+                            <td style={{ fontVariantNumeric: 'tabular-nums' }}>
+                              {r.score?.toFixed(3)}
+                            </td>
+                          </tr>
+                        ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
+          </div>
+        )}
+
+        {/* ===== CHAT ===== */}
+        {view === 'chat' && (
+          <div className="chat-view fade-in">
+            <div className="chat-messages">
+              {messages.length === 0 && (
+                <div className="empty-state">
+                  <MessageSquare size={32} />
+                  <p>Ask the agent about the stored memory.</p>
                 </div>
               )}
+              {messages.map((m, i) => (
+                <div key={i} className={`message-row ${m.role}`}>
+                  <div className="bubble">{m.text}</div>
+                </div>
+              ))}
+              {thinking && (
+                <div className="message-row ai">
+                  <div className="bubble"><Loader2 size={14} className="spin" /> retrieving…</div>
+                </div>
+              )}
+            </div>
+            <div className="chat-input-area">
+              <input
+                value={input}
+                placeholder="Ask about a preference, a date, or a pattern…"
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && send()}
+              />
+              <button className="generate-btn" onClick={send} disabled={thinking}>
+                <Send size={14} /> Send
+              </button>
             </div>
           </div>
         )}

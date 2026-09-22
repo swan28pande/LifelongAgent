@@ -48,6 +48,12 @@ CHUNK_SIZE = 5
 # A single day should hold a handful at most; this only bounds a pathological store.
 MAX_SAME_DAY_ROWS = 50
 
+# How many distinct values to show the extractor per entity, and how many rows to
+# scan to collect them. After 60 days the whole table is ~120 tokens, so the cap is
+# insurance against a store that has grown far past that rather than a live limit.
+MAX_VALUES_SHOWN = 12
+VALUE_SCAN_LIMIT = 2000
+
 
 @dataclass
 class IngestReport:
@@ -98,18 +104,17 @@ class IngestionPipeline:
     # ── [1] Extract ─────────────────────────────────────────────────
 
     def _extract(self, date: str, transcript: str, report: IngestReport) -> List[Dict]:
-        known = self.store.get_all_entities()
         prompt = ChatPromptTemplate.from_messages([
             ("system", EXTRACT_SYSTEM),
             ("human",
-             "KNOWN ENTITIES (reuse these names when they fit):\n{known}\n\n"
+             "ALREADY RECORDED — reuse these spellings when they fit:\n{known}\n\n"
              "CONVERSATION DATE: {date}\n\n"
              "TRANSCRIPT:\n{transcript}"),
         ])
         try:
             chain = prompt | self.llm | JsonOutputParser()
             result = chain.invoke({
-                "known": "\n".join(f"- {e}" for e in known) or "(none yet)",
+                "known": self._known_block(),
                 "date": date,
                 "transcript": transcript,
             })
@@ -123,10 +128,40 @@ class IngestionPipeline:
                 "entity": str(i["entity"]).lower().strip(),
                 "content": str(i["content"]).strip(),
                 "date": str(i.get("date") or date).strip(),
+                # Only set when the transcript has more than one person in it;
+                # single-speaker ingestion leaves this to the caller's default.
+                "speaker": str(i["speaker"]).lower().strip() if i.get("speaker") else None,
             }
             for i in items
             if isinstance(i, dict) and i.get("entity") and i.get("content")
         ]
+
+    def _known_block(self) -> str:
+        """
+        The existing taxonomy, each entity followed by the values recorded under it.
+
+        Showing entity names alone keeps categories consistent but lets the values
+        drift — the same choice gets written as "yoga" one day and "morning yoga" the
+        next, and a question about when one changed to the other then finds a
+        transition that never happened. Listing the values is what makes them reusable.
+
+        Values are capped per entity: a settled entity has a handful, and one that has
+        sprouted dozens is better served by showing the common ones than by spending
+        the context on its long tail.
+        """
+        grouped: Dict[str, List[str]] = {}
+        for row in self.store.query_memories(limit=VALUE_SCAN_LIMIT):
+            grouped.setdefault(row["entity"], [])
+            if row["content"] not in grouped[row["entity"]]:
+                grouped[row["entity"]].append(row["content"])
+
+        if not grouped:
+            return "(nothing recorded yet — you are choosing the first names)"
+
+        return "\n".join(
+            f"- {entity}: {', '.join(values[:MAX_VALUES_SHOWN])}"
+            for entity, values in sorted(grouped.items())
+        )
 
     # ── [2] Dedupe ──────────────────────────────────────────────────
 
@@ -135,15 +170,17 @@ class IngestionPipeline:
         Drop exact repeats of (entity, content, date), within the batch and against
         what is stored.
 
-        Only an identical triple counts. The same value on a different date is a
+        Only an identical record counts. The same value on a different date is a
         separate observation and is always kept — frequency is what makes a cycle
-        visible, so collapsing recurrences would erase the pattern.
+        visible, so collapsing recurrences would erase the pattern. Two people can
+        also hold the same value on the same day, so the speaker is part of the key.
         """
         seen = set()
         fresh = []
 
         for item in extracted:
-            key = (item["entity"], item["content"].lower(), item["date"])
+            key = (item["entity"], item["content"].lower(), item["date"],
+                   item.get("speaker"))
             if key in seen or self._already_stored(item):
                 report.duplicates += 1
                 continue
@@ -155,6 +192,7 @@ class IngestionPipeline:
     def _already_stored(self, item: Dict) -> bool:
         rows = self.store.query_memories(
             entity=item["entity"],
+            speaker=item.get("speaker"),
             start_date=item["date"],
             end_date=item["date"],
             limit=MAX_SAME_DAY_ROWS,
@@ -176,7 +214,9 @@ class IngestionPipeline:
                     "entity": i["entity"],
                     "content": i["content"],
                     "date": i["date"],
-                    "speaker": speaker,
+                    # Extraction attributes the record when the transcript has more
+                    # than one person in it; otherwise everything is the caller's.
+                    "speaker": i.get("speaker") or speaker,
                 }
                 for i in items
             ],

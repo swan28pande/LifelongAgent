@@ -12,15 +12,18 @@ function-calling both handle scalar parameters reliably, and the agent can issue
 several calls in parallel instead of batching into one nested payload.
 """
 
+from datetime import datetime, timedelta
 from typing import List, Optional
 
 from langchain_core.tools import tool
 
 from memory_v2.store import MemoryStore
 
-from .context import DynamicContextBuilder
-
 MAX_ROWS = 200
+
+# Cap on how far `read_conversations_on` will widen around a date. A window this size
+# already spans a full week either way; anything broader is a search, not a lookup.
+MAX_WINDOW_DAYS = 7
 
 
 def _fmt_rows(rows: List[dict]) -> str:
@@ -33,32 +36,34 @@ def _fmt_rows(rows: List[dict]) -> str:
 
 
 
-def build_read_tools(store: MemoryStore, ctx_builder: DynamicContextBuilder) -> list:
-    """Tools for chat mode: assembled context plus targeted retrieval."""
-
-    @tool
-    def build_context(query: str) -> str:
-        """Assemble a full memory context for a query in one call.
-
-        Matches the query against the entities that exist in the store, then gathers
-        the profile, relevant preferences, dated timelines, summaries, and matching
-        conversations. This is the fast path — start here for most questions.
-
-        Args:
-            query: The user's question, passed through as-is.
-        """
-        ctx = ctx_builder.build(query)
-        return ctx.strip() if ctx.strip() else "(no context found for this query)"
+def build_read_tools(store: MemoryStore) -> list:
+    """Retrieval tools for the chat agent."""
 
     @tool
     def list_entities() -> str:
-        """List every preference entity (category) in the store.
+        """List what the store holds: every entity, and every speaker on record.
 
-        Use this to map a vaguely worded question onto the entity name actually used
-        in storage before calling `search_preferences`.
+        Call this first. It maps a vaguely worded question onto the entity name
+        actually used in storage, and it tells you whether filtering by speaker is
+        meaningful — with one speaker it never is, with several it is essential.
         """
         entities = store.get_all_entities()
-        return ", ".join(entities) if entities else "(store is empty — no entities yet)"
+        speakers = store.get_all_speakers()
+        if not entities and not speakers:
+            return "(store is empty)"
+
+        if len(speakers) > 1:
+            note = (
+                f"SPEAKERS ({len(speakers)} on record — filter by these when a "
+                f"question is about one of them): {', '.join(speakers)}"
+            )
+        else:
+            note = (
+                f"SPEAKERS: {', '.join(speakers) or 'none'} — only one on record, so "
+                "do not filter by speaker."
+            )
+
+        return f"ENTITIES: {', '.join(entities) or 'none'}\n{note}"
 
     @tool
     def search_preferences(
@@ -70,17 +75,44 @@ def build_read_tools(store: MemoryStore, ctx_builder: DynamicContextBuilder) -> 
     ) -> str:
         """Query the structured preference database for an exact dated timeline.
 
-        Use this over `build_context` when the answer depends on precise dates,
-        ordering, or counting — transitions, cycles, "what did I choose on X".
-        Results are ordered chronologically.
+        The precise source: use it whenever the answer depends on dates, ordering, or
+        counting — transitions, cycles, what was chosen on a given day. Results come
+        back in chronological order.
+
+        Naming an entity or speaker that does not exist returns the list of real ones
+        rather than an empty result, so a wrong guess can be corrected on the next call.
+
+        Most stores hold a single speaker. Omit `speaker` unless you have confirmed
+        from `list_entities` or an earlier result that several people are recorded —
+        filtering on the name of the person the question is about will usually match
+        nothing, because that is not how the speaker field is filled in.
 
         Args:
             entity: Restrict to a single entity/category. Omit to search all.
-            speaker: Restrict to one person. Omit for all.
+            speaker: Restrict to one recorded speaker. Omit for all.
             start_date: Earliest date to include, YYYY-MM-DD.
             end_date: Latest date to include, YYYY-MM-DD.
             limit: Maximum rows to return.
         """
+        if entity:
+            known = store.get_all_entities()
+            if entity.lower().strip() not in known:
+                available = ", ".join(known) if known else "(none yet)"
+                return (
+                    f"No entity named '{entity}'. Available entities: {available}. "
+                    "Retry with one of these, or omit `entity` to search all."
+                )
+
+        if speaker:
+            speakers = store.get_all_speakers()
+            if speaker.lower().strip() not in speakers:
+                available = ", ".join(speakers) if speakers else "(none yet)"
+                return (
+                    f"No speaker named '{speaker}'. Recorded speakers: {available}. "
+                    "Omit `speaker` to search all — the person a question is about is "
+                    "usually not stored as a separate speaker."
+                )
+
         rows = store.query_memories(
             entity=entity,
             speaker=speaker,
@@ -92,18 +124,55 @@ def build_read_tools(store: MemoryStore, ctx_builder: DynamicContextBuilder) -> 
 
     @tool
     def search_conversations(query: str, k: int = 5) -> str:
-        """Semantic search over raw conversation chunks for verbatim exchanges.
+        """Semantic search over raw conversation chunks, by meaning.
 
-        Use when the user asks what was actually said, or when a preference lookup
-        misses context that only the original wording carries.
+        Finds exchanges about a topic. It matches on wording, not on when something
+        was said, so searching for a date here will not reliably find that day — use
+        `read_conversations_on` when you know the date you want.
 
         Args:
-            query: What to search for.
+            query: What to search for, as a topic or phrase.
             k: Number of chunks to return.
         """
         docs = store.search_conversations(query, k=k)
         if not docs:
             return "(no matching conversations)"
+        return "\n\n---\n\n".join(d.page_content for d in docs)
+
+    @tool
+    def read_conversations_on(date: str, days_around: int = 0) -> str:
+        """Read the conversation from a specific date, exactly as it was said.
+
+        The right tool whenever a question names a day. Semantic search cannot find a
+        date reliably — embeddings carry meaning, not calendars — so looking a date up
+        by keyword tends to return the wrong days or nothing at all.
+
+        Widen `days_around` when a day mentions something that happened earlier: a
+        choice made on one day is often only described the morning after.
+
+        Args:
+            date: The day to read, YYYY-MM-DD.
+            days_around: Also include this many days either side. 0 reads one day.
+        """
+        try:
+            centre = datetime.strptime(date.strip(), "%Y-%m-%d")
+        except ValueError:
+            return f"'{date}' is not a date. Use YYYY-MM-DD."
+
+        window = max(0, min(days_around, MAX_WINDOW_DAYS))
+        start = (centre - timedelta(days=window)).strftime("%Y-%m-%d")
+        end = (centre + timedelta(days=window)).strftime("%Y-%m-%d")
+
+        docs = store.get_conversations_by_date_range(start, end)
+        if not docs:
+            first, last = store.get_date_range()
+            span = f"{first} to {last}" if first else "(store is empty)"
+            return (
+                f"Nothing recorded for {start}"
+                + (f" to {end}" if window else "")
+                + f". Recorded range is {span}."
+            )
+
         return "\n\n---\n\n".join(d.page_content for d in docs)
 
     @tool
@@ -124,9 +193,9 @@ def build_read_tools(store: MemoryStore, ctx_builder: DynamicContextBuilder) -> 
         return text if text else f"(no {level} summary found for {identifier or speaker})"
 
     return [
-        build_context,
         list_entities,
         search_preferences,
         search_conversations,
+        read_conversations_on,
         get_summary,
     ]

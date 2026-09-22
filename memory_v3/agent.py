@@ -3,8 +3,8 @@ AgenticMemoryAgent — the top-level interface to the v3 memory system.
 
 Writing and reading are built differently, because they are different problems:
 
-    ingest() → a fixed pipeline (extract → reconcile → write → index), two LLM
-               calls per day, same output for the same input
+    ingest() → a fixed pipeline (extract → dedupe → write → index), one LLM
+               call per day, same output for the same input
     chat()   → a tool-calling loop, because how many retrievals a question needs
                is not knowable before it is asked
 
@@ -18,7 +18,7 @@ at dinner, and it reaches the store before tomorrow begins.
 
 Usage:
     agent = AgenticMemoryAgent(base_dir="results/agentic_run/store",
-                               model="gemini-3.1-flash-lite")
+                               model="gemini-3.5-flash")
 
     # Batch: replay a recorded day
     agent.ingest("2026-03-01", [{"time_of_day": "Morning", "turns": [...]}])
@@ -35,13 +35,11 @@ from typing import Dict, List, Optional
 import dotenv
 from langchain.agents import create_agent
 from langchain_core.messages import AIMessage, HumanMessage
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 
 from memory_v2.store import MemoryStore
 from memory_v2.summarizer import Summarizer
 
-from .context import DynamicContextBuilder
 from .ingest import IngestionPipeline, IngestReport
 from .prompts import CHAT_SYSTEM
 from .tools import build_read_tools
@@ -52,19 +50,58 @@ dotenv.load_dotenv()
 DEFAULT_RECURSION_LIMIT = 60
 
 
+def _use_vertex() -> bool:
+    """
+    Vertex unless told otherwise.
+
+    Vertex authenticates with application-default credentials, so there is no API key
+    to carry. Set GOOGLE_GENAI_USE_VERTEXAI=false to fall back to the Developer API,
+    which does need GOOGLE_API_KEY.
+    """
+    return os.getenv("GOOGLE_GENAI_USE_VERTEXAI", "true").lower() not in (
+        "false", "0", "no"
+    )
+
+
+def _vertex_project() -> Optional[str]:
+    """Project from the environment, else whatever ADC was set up against."""
+    explicit = os.getenv("GOOGLE_CLOUD_PROJECT")
+    if explicit:
+        return explicit
+    try:
+        import google.auth
+
+        return google.auth.default()[1]
+    except Exception:
+        return None
+
+
 def _make_llm(model: str, temperature: float = 0.0, callbacks=None):
-    if "gemini" in model.lower():
+    if "gemini" not in model.lower():
+        return ChatOpenAI(model=model, temperature=temperature, callbacks=callbacks)
+
+    from langchain_google_genai import ChatGoogleGenerativeAI
+
+    if not _use_vertex():
         return ChatGoogleGenerativeAI(
             model=model, temperature=temperature, callbacks=callbacks
         )
-    return ChatOpenAI(model=model, temperature=temperature, callbacks=callbacks)
+
+    return ChatGoogleGenerativeAI(
+        model=model,
+        temperature=temperature,
+        callbacks=callbacks,
+        vertexai=True,
+        project=_vertex_project(),
+        location=os.getenv("GOOGLE_CLOUD_LOCATION", "global"),
+    )
 
 
 class AgenticMemoryAgent:
     def __init__(
         self,
         base_dir: str,
-        model: str = "gemini-3.1-flash-lite",
+        model: str = "gemini-3.5-flash",
         chat_model: Optional[str] = None,
         callbacks=None,
         recursion_limit: int = DEFAULT_RECURSION_LIMIT,
@@ -72,18 +109,13 @@ class AgenticMemoryAgent:
         self.store = MemoryStore(base_dir)
         self.recursion_limit = recursion_limit
 
-        # Extraction must be repeatable, so it runs cold. Replies get a little warmth.
         ingest_llm = _make_llm(model, 0.0, callbacks)
         chat_llm = _make_llm(chat_model or model, 0.3, callbacks)
 
         self.pipeline = IngestionPipeline(self.store, llm=ingest_llm)
         self.summarizer = Summarizer(self.store, llm=_make_llm(model, 0.2, callbacks))
 
-        # v2's context builder hardcodes the domains it looks for; this one reads the
-        # taxonomy out of the store at call time.
-        self.ctx_builder = DynamicContextBuilder(self.store, llm=ingest_llm)
-
-        self.read_tools = build_read_tools(self.store, self.ctx_builder)
+        self.read_tools = build_read_tools(self.store)
         self.chat_agent = create_agent(
             chat_llm, self.read_tools,
             system_prompt=CHAT_SYSTEM, name="memory_reader",

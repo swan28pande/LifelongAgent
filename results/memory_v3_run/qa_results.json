@@ -1,0 +1,662 @@
+{
+  "model": "gemini-3.1-flash-lite",
+  "summary": {
+    "n": 67,
+    "overall_f1": 0.14278984864316482,
+    "overall_llm": 0.47761194029850745,
+    "by_type": {
+      "factual": {
+        "n": 5,
+        "f1": 0.1724747474747475,
+        "llm": 0.8
+      },
+      "factual_evolving": {
+        "n": 17,
+        "f1": 0.1898785901130419,
+        "llm": 0.6470588235294118
+      },
+      "recall": {
+        "n": 24,
+        "f1": 0.046668769039799746,
+        "llm": 0.2916666666666667
+      },
+      "pattern_id": {
+        "n": 3,
+        "f1": 0.08213083213083212,
+        "llm": 0.0
+      },
+      "prediction": {
+        "n": 9,
+        "f1": 0.20543115431093759,
+        "llm": 0.5555555555555556
+      },
+      "transition": {
+        "n": 9,
+        "f1": 0.25125408307227387,
+        "llm": 0.5555555555555556
+      }
+    },
+    "by_difficulty": {
+      "simple": {
+        "n": 36,
+        "f1": 0.16705974754180758,
+        "llm": 0.6388888888888888
+      },
+      "mid": {
+        "n": 14,
+        "f1": 0.08813953733685016,
+        "llm": 0.21428571428571427
+      },
+      "difficult": {
+        "n": 17,
+        "f1": 0.13640090734535698,
+        "llm": 0.35294117647058826
+      }
+    }
+  },
+  "records": [
+    {
+      "question": "What does Jordan do for work?",
+      "answer": "graphic designer at a small agency",
+      "response": "Jordan works as a designer, specifically mentioning that they work on mockups.",
+      "type": "factual",
+      "difficulty": "simple",
+      "f1": 0.2222222222222222,
+      "llm": 1.0
+    },
+    {
+      "question": "Where does Jordan live?",
+      "answer": "Austin, Texas",
+      "response": "Jordan lives in Austin.",
+      "type": "factual",
+      "difficulty": "simple",
+      "f1": 0.3333333333333333,
+      "llm": 1.0
+    },
+    {
+      "question": "Who does Jordan live with?",
+      "answer": "roommate named Sam",
+      "response": "Jordan lives with Sam and their dog, Mango.",
+      "type": "factual",
+      "difficulty": "simple",
+      "f1": 0.18181818181818182,
+      "llm": 1.0
+    },
+    {
+      "question": "What is Jordan's main hobby?",
+      "answer": "rock climbing",
+      "response": "Jordan's main hobby is rock climbing. Reasoning: In a conversation on 2026-03-12, Jordan discusses balancing \"evening runs\" with \"climbing practice,\" describing it as a routine that helps clear their head.",
+      "type": "factual",
+      "difficulty": "simple",
+      "f1": 0.125,
+      "llm": 1.0
+    },
+    {
+      "question": "What are Jordan's dietary preferences?",
+      "answer": "vegetarian",
+      "response": "Jordan prefers black coffee, having recently transitioned away from oat milk lattes because they prefer the taste of the beans without additives.",
+      "type": "factual",
+      "difficulty": "simple",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: city?",
+      "answer": "Jordan lives in Austin, Texas.",
+      "response": "I don't know.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: job?",
+      "answer": "Jordan works as a graphic designer at a small agency.",
+      "response": "Jordan is a senior designer at an agency. They recently accepted a promotion to this role, which they have described as a \"whirlwind\" and a \"big leap\" involving a significant increase in responsibility and a heavy workload, particularly regarding emails and mockups. They have noted that their team is supportive and that they find comfort in wearing loungewear while working to maintain productivity.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.1643835616438356,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: diet?",
+      "answer": "Jordan is vegetarian.",
+      "response": "Jordan's diet is characterized by a regular intake of coffee, alternating between oat milk lattes and black coffee. There is no other specific information regarding Jordan's diet in the available records.\n\nReasoning:\n1.  **Coffee Habits:** A review of the `coffee order` preference entity shows a consistent pattern of alternating between \"oat milk latte\" and \"black coffee\" throughout March and April 2026.\n2.  **General Diet:** A search of conversations for \"diet\" or food-related terms yielded no information beyond mentions of drinking coffee, water, and occasional references to taking breaks. No other dietary preferences or habits are recorded.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.0202020202020202,
+      "llm": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: lives with?",
+      "answer": "Jordan lives with a roommate named Sam.",
+      "response": "Jordan lives with Sam and their golden retriever puppy, Mango.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.47058823529411764,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: age?",
+      "answer": "Jordan is 28 years old.",
+      "response": "Jordan is 28 years old.\n\nReasoning: In a conversation on March 4, 2026, Jordan explicitly stated, \"I\u2019m starting to feel every bit of my 28 years today,\" and the assistant confirmed, \"Being 28 is that weird transition age.\"",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.23255813953488372,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: hobby?",
+      "answer": "Jordan's main hobby is rock climbing.",
+      "response": "Jordan\u2019s hobbies include climbing and running. He views these activities as a way to clear his head and maintain a routine, often balancing his climbing practice with evening runs.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.05714285714285715,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: deadline?",
+      "answer": "Jordan has a big client presentation deadline on March 10.",
+      "response": "Jordan had a major client presentation deadline on March 10, 2026. Leading up to it, Jordan felt significant stress, describing their brain as \"a spreadsheet\" and relying on oversized hoodies and lattes to get through the work. To manage the pressure, Jordan eventually stepped away from the desk to visit a climbing gym, which helped them stop overthinking the project.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.2285714285714286,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy coming?",
+      "answer": "Jordan's roommate Sam is getting a puppy next week.",
+      "response": "Jordan\u2019s partner, Sam, brought home a golden retriever puppy named Mango around mid-March 2026. In the week leading up to the puppy's arrival (early March), Jordan expressed some anxiety about puppy-proofing and potential noise during work calls, but also viewed the puppy as a positive distraction that would force them to take necessary breaks from their desk. Since Mango's arrival, Jordan has been helping Sam with the puppy's training schedule, describing her as a \"handful\" but \"sweet.\"",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.09302325581395349,
+      "llm": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: draft feedback?",
+      "answer": "Jordan received positive client feedback on a draft design.",
+      "response": "Jordan received positive feedback on a draft design for a client presentation that took place on March 10, 2026. This feedback served as a significant confidence booster and helped alleviate pressure during the final preparation phase. Following the presentation, Jordan noted that the client was pleased with the direction taken on the draft, which provided a sense of relief.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.2647058823529412,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: presentation done?",
+      "answer": "Jordan finished the client presentation and it went really well.",
+      "response": "Jordan successfully completed a major client presentation on March 9, 2026. The client was impressed with the final draft, and Jordan felt relieved to have the project finished. Leading up to the presentation, Jordan had been working intensely from home, often wearing an oversized hoodie for comfort and relying on lattes to get through the work.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.18181818181818182,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: puppy arrived?",
+      "answer": "Sam's puppy, a golden retriever named Mango, arrived home.",
+      "response": "The puppy, a golden retriever named Mango, arrived at Sam's place around the week of March 15, 2026. Jordan was involved in the preparations, expressing concerns about puppy-proofing and potential noise during work calls, but also viewing the puppy as a good excuse to take breaks from work and training. After Mango's arrival, Jordan helped Sam with the training schedule and described the puppy as a \"handful, but in the best way possible.\"",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.1951219512195122,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition considering?",
+      "answer": "Jordan is considering signing up for a beginner climbing competition in April.",
+      "response": "Jordan is preparing for a beginner climbing competition scheduled for April 2026. They decided to register for the event to provide themselves with a concrete goal for motivation. To prepare, Jordan is balancing climbing practice with evening runs and focusing on yoga to improve their balance. They have shared their participation in the competition with their workplace, where they have received support from their team.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.2337662337662338,
+      "llm": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: competition registered?",
+      "answer": "Jordan registered for the April climbing competition.",
+      "response": "Jordan officially registered for a beginner climbing competition in April. The decision was made to provide a concrete goal for motivation, and the registration was finalized on March 16, 2026.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.37837837837837834,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion offered?",
+      "answer": "Jordan's agency offered them a senior designer role.",
+      "response": "Jordan was offered and accepted a promotion to a senior designer role at their agency in March 2026. As of March 23, 2026, Jordan was still adjusting to the new responsibilities, describing the transition as a \"whirlwind\" and noting that their calendar had become quite busy. They have been managing the workload by keeping things low-key and focusing on maintaining their routines.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.1714285714285714,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: promotion accepted?",
+      "answer": "Jordan accepted the senior designer promotion.",
+      "response": "Jordan accepted a promotion to a senior designer role at their agency in March 2026. They officially stepped into the role by the week of March 16, 2026, and spent the following week navigating new workflows and a demanding meeting schedule. Jordan has kept the celebration low-key, opting to focus on adjusting to the new responsibilities rather than taking time off.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.1791044776119403,
+      "llm": 1.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip planning?",
+      "answer": "Jordan is planning a weekend trip to Barton Springs with Sam and Mango.",
+      "response": "Jordan prefers to coordinate logistics for trips in advance, as seen with the Barton Springs outing with Sam and their dog, Mango. When planning, Jordan focuses on ensuring they are prepared for the journey to remain relaxed, particularly when traveling with a pet.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.3571428571428571,
+      "llm": 0.0
+    },
+    {
+      "question": "What do we know about Jordan regarding: trip done?",
+      "answer": "Jordan went to Barton Springs \u2014 it was relaxing and Mango loved the water.",
+      "response": "I don't know.",
+      "type": "factual_evolving",
+      "difficulty": "simple",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-04 (Wed)?",
+      "answer": "oat milk latte",
+      "response": "An oat milk latte.\n\nReasoning: According to the preference records for 2026-03-04, Jordan's coffee order for that day was an oat milk latte (ID 12).",
+      "type": "recall",
+      "difficulty": "simple",
+      "f1": 0.21428571428571425,
+      "llm": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-11 (Wed)?",
+      "answer": "black coffee",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "simple",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-18 (Wed)?",
+      "answer": "oat milk latte",
+      "response": "I don't know. Reasoning: The preference database records for \"coffee order\" are attributed to the \"user,\" not Jordan. There is no record of Jordan's specific drink for that date.",
+      "type": "recall",
+      "difficulty": "simple",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-03-25 (Wed)?",
+      "answer": "black coffee",
+      "response": "Black coffee. Reasoning: The preference database records \"black coffee\" for the user on 2026-03-25. Since the user and Jordan are the same person, this is the drink consumed on that date.",
+      "type": "recall",
+      "difficulty": "simple",
+      "f1": 0.12121212121212122,
+      "llm": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-01 (Wed)?",
+      "answer": "oat milk latte",
+      "response": "An oat milk latte.\n\nReasoning: The preference database records an entry for \"coffee order\" on 2026-04-01 for the user as \"oat milk latte\".",
+      "type": "recall",
+      "difficulty": "simple",
+      "f1": 0.23076923076923078,
+      "llm": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-08 (Wed)?",
+      "answer": "black coffee",
+      "response": "[Black coffee]. Reasoning: The preference database records \"black coffee\" for the entity \"coffee order\" on 2026-04-08. While the database labels this as \"user\", the context of the conversation logs indicates that Jordan and the user share this coffee preference tracking.",
+      "type": "recall",
+      "difficulty": "simple",
+      "f1": 0.09523809523809523,
+      "llm": 1.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-15 (Wed)?",
+      "answer": "oat milk latte",
+      "response": "I don't know. Reasoning: The preference database records for \"coffee order\" on 2026-04-15 are attributed to the \"user,\" not Jordan. There is no record of Jordan's coffee orders in the preference database, and a search of conversations does not mention what Jordan was drinking on that specific date.",
+      "type": "recall",
+      "difficulty": "simple",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan drinking on 2026-04-22 (Wed)?",
+      "answer": "black coffee",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "simple",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "Describe the pattern in what Jordan chooses to drink over time.",
+      "answer": "Strict 7-day cycle: oat milk latte for 7 days, then black coffee for 7 days, repeating.",
+      "response": "Jordan\u2019s drinking habits show a pattern of using caffeine (specifically black coffee and lattes) to manage high-stress periods, such as starting a new job, while intentionally switching to water during rest days or periods of relaxation.\n\nReasoning:\n1. **Caffeine for focus/work:** On 2026-03-24, while adjusting to a new senior designer role, Jordan noted drinking black coffee to stay focused. On 2026-04-12, Jordan mentioned sipping a latte while relaxing on a Sunday.\n2. **Water for rest:** On 2026-04-26, Jordan explicitly stated being \"done with the caffeine for now\" and opting for water instead.\n3. **Contextual shifts:** Jordan's choices correlate with workload; caffeine is used as \"fuel\" for work, while water is preferred during \"unplugged\" or \"rest\" days.",
+      "type": "pattern_id",
+      "difficulty": "simple",
+      "f1": 0.07575757575757576,
+      "llm": 0.0
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "oat milk latte. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 9 (starts 2026-04-26) is an odd-numbered week, so Jordan drinks oat milk latte.",
+      "response": "Jordan will most likely be drinking an oat milk latte on 2026-04-30.\n\nReasoning: Jordan's coffee preferences follow a cyclical pattern of alternating between an oat milk latte and black coffee, typically in week-long blocks. Looking at the most recent entries:\n*   2026-04-12 to 2026-04-18: Oat milk latte\n*   2026-04-19 to 2026-04-25: Black coffee\n*   2026-04-26 to 2026-04-29: Oat milk latte\n\nSince Jordan has been drinking an oat milk latte consistently since April 26th, it is highly probable this pattern will continue through April 30th.",
+      "type": "prediction",
+      "difficulty": "simple",
+      "f1": 0.18867924528301885,
+      "llm": 1.0
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "black coffee. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 10 (starts 2026-05-03) is an even-numbered week, so Jordan drinks black coffee.",
+      "response": "[Jordan will most likely be drinking an oat milk latte.] Reasoning: Jordan follows a consistent weekly cycle of coffee preferences, alternating between \"oat milk latte\" and \"black coffee\" in blocks of approximately one week. Based on the historical data, Jordan switched to \"oat milk latte\" on 2026-04-26 and continued this pattern through 2026-04-29 (the last recorded date). Given the established pattern of week-long blocks, Jordan is expected to continue the \"oat milk latte\" preference through the week of 2026-05-06.",
+      "type": "prediction",
+      "difficulty": "simple",
+      "f1": 0.1764705882352941,
+      "llm": 0.0
+    },
+    {
+      "question": "What will Jordan most likely be drinking on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "oat milk latte. Reasoning: Coffee choices alternate weekly starting on Sundays. Week 11 (starts 2026-05-10) is an odd-numbered week, so Jordan drinks oat milk latte.",
+      "response": "[Jordan will most likely be drinking an oat milk latte.]\n\nReasoning: Jordan's coffee preferences follow a cyclical pattern. Data from March and April shows Jordan alternates between periods of drinking black coffee and periods of drinking oat milk lattes. Specifically, Jordan switched to oat milk lattes on 2026-04-26 and continued this pattern through the last recorded entry on 2026-04-29. Given the consistency of these multi-day cycles, Jordan is most likely to be in an \"oat milk latte\" phase on 2026-05-13.",
+      "type": "prediction",
+      "difficulty": "simple",
+      "f1": 0.17142857142857143,
+      "llm": 1.0
+    },
+    {
+      "question": "When did the choice of what Jordan was drinking FIRST switch from 'oat milk latte' to 'black coffee'? Explain the reasoning.",
+      "answer": "2026-03-08. Reasoning: Coffee choices alternate weekly starting on Sundays. The transition from oat milk latte to black coffee first occurs on 2026-03-08 because it is the start of Week 2.",
+      "response": "The first switch occurred on 2026-03-08. Reasoning: The records show a consistent pattern of 'oat milk latte' from 2026-03-01 through 2026-03-07. The first entry for 'black coffee' appears on 2026-03-08.",
+      "type": "transition",
+      "difficulty": "simple",
+      "f1": 0.4000000000000001,
+      "llm": 1.0
+    },
+    {
+      "question": "When did the choice of what Jordan was drinking FIRST switch from 'black coffee' to 'oat milk latte'? Explain the reasoning.",
+      "answer": "2026-03-15. Reasoning: Coffee choices alternate weekly starting on Sundays. The transition from black coffee to oat milk latte first occurs on 2026-03-15 because it is the start of Week 3.",
+      "response": "The first switch from 'black coffee' to 'oat milk latte' occurred on March 15, 2026.\n\nReasoning:\n1.  Reviewing the chronological coffee order logs:\n    *   March 1\u20137: Oat milk latte.\n    *   March 8\u201314: Black coffee.\n    *   **March 15: Oat milk latte.**\n2.  The logs show that prior to March 15, the last entry was black coffee on March 14, and the transition to oat milk latte began on March 15.",
+      "type": "transition",
+      "difficulty": "simple",
+      "f1": 0.25000000000000006,
+      "llm": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-04 (Wed)?",
+      "answer": "oversized hoodie",
+      "response": "Jordan was wearing an oversized hoodie on 2026-03-04.\n\nReasoning: The `search_preferences` database explicitly records that on 2026-03-04, the user (Jordan) was wearing an \"oversized hoodie\" under the \"loungewear\" category.",
+      "type": "recall",
+      "difficulty": "mid",
+      "f1": 0.12903225806451613,
+      "llm": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-11 (Wed)?",
+      "answer": "oversized hoodie",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "mid",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-18 (Wed)?",
+      "answer": "oversized hoodie",
+      "response": "Jordan was wearing an oversized hoodie on 2026-03-18.\n\nReasoning: The preference database records for 2026-03-18 (id=53) explicitly list \"oversized hoodie\" under the \"loungewear\" category for that date.",
+      "type": "recall",
+      "difficulty": "mid",
+      "f1": 0.13793103448275862,
+      "llm": 1.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-03-25 (Wed)?",
+      "answer": "fitted t-shirt",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "mid",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-01 (Wed)?",
+      "answer": "fitted t-shirt",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "mid",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-08 (Wed)?",
+      "answer": "fitted t-shirt",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "mid",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-15 (Wed)?",
+      "answer": "oversized hoodie",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "mid",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What was Jordan wearing on 2026-04-22 (Wed)?",
+      "answer": "oversized hoodie",
+      "response": "Jordan was wearing an oversized hoodie on 2026-04-22. Reasoning: I searched the `loungewear` preferences for 2026-04-22 and found an entry (id=155) confirming this item.",
+      "type": "recall",
+      "difficulty": "mid",
+      "f1": 0.15384615384615385,
+      "llm": 1.0
+    },
+    {
+      "question": "Describe the pattern in how Jordan chooses what to wear.",
+      "answer": "Alternates every 3 days: fitted t-shirt for 3 days, then oversized hoodie for 3 days, repeating.",
+      "response": "Jordan\u2019s clothing choices follow a functional pattern based on their activity level and desired state of mind:\n\n*   **For Productivity and Professionalism:** Jordan prefers a \"streamlined\" look, specifically favoring fitted t-shirts. They view this as a \"uniform\" that avoids the discomfort of bulkier clothing and helps them feel more put-together and productive, even when working from home.\n*   **For Physical Activity:** Jordan avoids hoodies for exercise because they feel too heavy and restrictive once they start moving, opting for the fitted t-shirt instead.\n*   **For Relaxation:** On \"lazy\" or rest days, Jordan shifts to oversized hoodies, which they describe as their go-to for recharging.\n\nReasoning: Jordan explicitly contrasts these choices in conversations: they wear oversized hoodies for \"low-key\" rest days, but prefer fitted t-shirts for both professional work and physical activity to avoid feeling \"restricted\" or \"bulky.\" They also noted a recent shift toward a more \"streamlined\" wardrobe to align with their new professional role.",
+      "type": "pattern_id",
+      "difficulty": "mid",
+      "f1": 0.05952380952380952,
+      "llm": 0.0
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 61 (in Cycle 11, starting 2026-04-30) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "response": "[Jordan will most likely be wearing an oversized hoodie.] Reasoning: Jordan's clothing choices are recorded in the `loungewear` entity. Reviewing the data from April 2026 shows a strong pattern where Jordan frequently wears an \"oversized hoodie\" on consecutive days or alternating with a \"fitted t-shirt.\" As of the most recent entry on 2026-04-29, Jordan was wearing an oversized hoodie, and historical data indicates a high probability of continuing this preference into the following day, 2026-04-30.",
+      "type": "prediction",
+      "difficulty": "mid",
+      "f1": 0.2393162393162393,
+      "llm": 0.0
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 67 (in Cycle 12, starting 2026-05-06) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "response": "I don't know.",
+      "type": "prediction",
+      "difficulty": "mid",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "What will Jordan most likely be wearing on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "fitted t-shirt. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). Day 74 (in Cycle 13, starting 2026-05-12) falls in the first 3 days of the cycle, so Jordan wears a fitted t-shirt.",
+      "response": "[An oversized hoodie]. Reasoning: Jordan\u2019s clothing choices follow a pattern that alternates between a \"fitted t-shirt\" and an \"oversized hoodie.\" Looking at the most recent data from April 2026, Jordan has been wearing an oversized hoodie consistently for the last few days (April 27, 28, and 29). Given the cyclical nature of these choices, and the fact that 2026-05-13 is a Wednesday, the data suggests a high probability of the oversized hoodie, which Jordan frequently wears for comfort during the work week.",
+      "type": "prediction",
+      "difficulty": "mid",
+      "f1": 0.1935483870967742,
+      "llm": 0.0
+    },
+    {
+      "question": "When did the style Jordan was wearing FIRST switch from 'fitted t-shirt' to 'oversized hoodie'? Explain the reasoning.",
+      "answer": "2026-03-04. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). The transition from fitted t-shirt to oversized hoodie first occurs on 2026-03-04.",
+      "response": "The style Jordan was wearing first switched from 'fitted t-shirt' to 'oversized hoodie' between **March 31, 2026, and April 8, 2026**.\n\nReasoning:\n1.  **March 31, 2026:** Jordan explicitly stated, \"The fitted t-shirt just feels less restrictive,\" and confirmed they were wearing one for their evening run.\n2.  **April 8, 2026:** Jordan mentioned, \"I've been sticking to a fitted t-shirt lately,\" indicating the transition to the hoodie had not yet become their primary preference or habit.\n3.  **April 11, 2026:** Jordan noted, \"I\u2019ve been wearing this oversized hoodie all afternoon... It\u2019s basically my uniform for relaxing,\" and mentioned it was an \"old favorite\" they had owned for three years, showing the shift in their current daily preference.",
+      "type": "transition",
+      "difficulty": "mid",
+      "f1": 0.17687074829931973,
+      "llm": 0.0
+    },
+    {
+      "question": "When did the style Jordan was wearing FIRST switch from 'oversized hoodie' to 'fitted t-shirt'? Explain the reasoning.",
+      "answer": "2026-03-07. Reasoning: Attire alternates every 3 days in a 6-day cycle (3 days fitted t-shirt, 3 days oversized hoodie). The transition from oversized hoodie to fitted t-shirt first occurs on 2026-03-07.",
+      "response": "The style switch occurred on **March 31, 2026**.\n\nReasoning: While Jordan wore fitted t-shirts intermittently throughout March (e.g., March 1, March 27), they were still frequently wearing oversized hoodies for work and comfort (e.g., March 6). On March 31, 2026, Jordan explicitly compared the two, stating, \"Hoodies get a bit too heavy once I start moving... The fitted t-shirt just feels less restrictive.\" Following this date, Jordan's conversations reflect a shift toward the \"streamlined look\" (April 8) and a pattern of wearing the hoodie only during specific \"cozy\" or \"chilly\" work-from-home sessions (April 21, April 22), marking the transition away from the hoodie as their primary daily style.",
+      "type": "transition",
+      "difficulty": "mid",
+      "f1": 0.1438848920863309,
+      "llm": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-04 (Wed)?",
+      "answer": "morning yoga",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "difficult",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-11 (Wed)?",
+      "answer": "morning yoga",
+      "response": "On 2026-03-11, Jordan was focused on planning for an upcoming climbing competition in April. They were not working out at that time, but were instead drinking black coffee and thinking through the logistics of their training, which they intended to supplement with a new focus on yoga to improve their balance.",
+      "type": "recall",
+      "difficulty": "difficult",
+      "f1": 0.03773584905660377,
+      "llm": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-18 (Wed)?",
+      "answer": "morning yoga",
+      "response": "I don't know. Reasoning: While the records confirm that Jordan had established a routine of climbing practice and evening runs during March 2026, there is no specific entry or conversation detailing Jordan's activities on March 18, 2026.",
+      "type": "recall",
+      "difficulty": "difficult",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-03-25 (Wed)?",
+      "answer": "morning yoga",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "difficult",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-01 (Wed)?",
+      "answer": "morning yoga",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "difficult",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-08 (Wed)?",
+      "answer": "morning yoga",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "difficult",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-15 (Wed)?",
+      "answer": "morning yoga",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "difficult",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "How was Jordan working out on 2026-04-22 (Wed)?",
+      "answer": "morning yoga",
+      "response": "I don't know.",
+      "type": "recall",
+      "difficulty": "difficult",
+      "f1": 0.0,
+      "llm": 0.0
+    },
+    {
+      "question": "Describe Jordan's routine for working out.",
+      "answer": "Day-of-week rule: Mon/Wed/Fri = morning yoga, Tue/Thu = evening run, Sat = climbing gym, Sun = rest day.",
+      "response": "Jordan\u2019s routine consists of evening runs to clear his head and climbing practice. He also incorporates recovery walks with his dog, Mango.",
+      "type": "pattern_id",
+      "difficulty": "difficult",
+      "f1": 0.1111111111111111,
+      "llm": 0.0
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-04-30 (Thu)? Explain the reasoning.",
+      "answer": "evening run. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-04-30 is a Thursday, Jordan does evening run.",
+      "response": "[Evening run]. Reasoning: The user follows a consistent weekly routine: Mondays are morning yoga, Tuesdays are evening runs, Wednesdays are morning yoga, Thursdays are evening runs, Fridays are morning yoga, Saturdays are climbing/bouldering, and Sundays are rest days. 2026-04-30 is a Thursday, which consistently aligns with an evening run in the provided data.",
+      "type": "prediction",
+      "difficulty": "difficult",
+      "f1": 0.2696629213483146,
+      "llm": 1.0
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-05-06 (Wed)? Explain the reasoning.",
+      "answer": "morning yoga. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-05-06 is a Wednesday, Jordan does morning yoga.",
+      "response": "[Jordan will most likely be doing yoga on 2026-05-06.]\n\nReasoning: Jordan follows a consistent weekly routine:\n- Mondays: Morning yoga\n- Tuesdays: Evening run\n- Wednesdays: Morning yoga\n- Thursdays: Evening run\n- Fridays: Morning yoga\n- Saturdays: Climbing/Bouldering\n- Sundays: Rest day\n\n2026-05-06 is a Wednesday, which historically aligns with Jordan's \"morning yoga\" sessions.",
+      "type": "prediction",
+      "difficulty": "difficult",
+      "f1": 0.35714285714285715,
+      "llm": 1.0
+    },
+    {
+      "question": "How will Jordan most likely be working out on 2026-05-13 (Wed)? Explain the reasoning.",
+      "answer": "morning yoga. Reasoning: Jordan's exercise routine follows a strict day-of-week rule (Mon/Wed/Fri is morning yoga, Tue/Thu is evening run, Sat is climbing gym, Sun is rest day). Since 2026-05-13 is a Wednesday, Jordan does morning yoga.",
+      "response": "Jordan will most likely be doing morning yoga. Reasoning: Jordan follows a consistent weekly routine of physical activity. Looking at the established pattern from March and April 2026, Jordan consistently does morning yoga on Wednesdays (e.g., 2026-03-04, 2026-03-11, 2026-03-18, 2026-04-01, 2026-04-08, 2026-04-15, 2026-04-22, 2026-04-29). Since 2026-05-13 is a Wednesday, the pattern indicates morning yoga is the most likely activity.",
+      "type": "prediction",
+      "difficulty": "difficult",
+      "f1": 0.2526315789473684,
+      "llm": 1.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'rest day' to 'morning yoga'? Explain the reasoning.",
+      "answer": "2026-03-02. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from rest day to morning yoga first occurs on 2026-03-02 because 2026-03-02 is a Monday.",
+      "response": "The first switch from 'rest day' to 'morning yoga' occurred on 2026-03-02.\n\nReasoning: The chronological records for physical activity show a 'rest day' on 2026-03-01 (id=1), followed immediately by 'morning yoga' on 2026-03-02 (id=4).",
+      "type": "transition",
+      "difficulty": "difficult",
+      "f1": 0.4262295081967213,
+      "llm": 1.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'morning yoga' to 'evening run'? Explain the reasoning.",
+      "answer": "2026-03-03. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from morning yoga to evening run first occurs on 2026-03-03 because 2026-03-03 is a Tuesday.",
+      "response": "Jordan's workout routine shifted from evening runs to morning yoga in early April 2026.\n\nReasoning:\n1.  **Evening Runs:** Jordan was regularly doing evening runs throughout March 2026 (e.g., March 3, March 15, March 17, March 31).\n2.  **Transition:** On April 8, 2026, Jordan explicitly mentions having shifted from their previous routine of evening runs to morning yoga, noting, \"It\u2019s less about burning off steam and more about centering... It's a bit of a shift, but it works.\"\n3.  **First Mention:** The first mention of Jordan doing \"morning yoga\" appears on April 6, 2026, when they describe starting the week with it to keep the morning low-key.",
+      "type": "transition",
+      "difficulty": "difficult",
+      "f1": 0.19548872180451127,
+      "llm": 0.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'evening run' to 'morning yoga'? Explain the reasoning.",
+      "answer": "2026-03-04. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from evening run to morning yoga first occurs on 2026-03-04 because 2026-03-04 is a Wednesday.",
+      "response": "Jordan's way of working out first switched from an 'evening run' to 'morning yoga' on **2026-03-02**.\n\nReasoning: According to the preference logs, Jordan's physical activity on 2026-03-01 was a \"rest day,\" followed by \"morning yoga\" on 2026-03-02. While Jordan continued to alternate between evening runs and morning yoga throughout March and April, 2026-03-02 marks the first recorded instance of \"morning yoga\" in the dataset.",
+      "type": "transition",
+      "difficulty": "difficult",
+      "f1": 0.2857142857142857,
+      "llm": 0.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'morning yoga' to 'climbing gym'? Explain the reasoning.",
+      "answer": "2026-03-07. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from morning yoga to climbing gym first occurs on 2026-03-07 because 2026-03-07 is a Saturday.",
+      "response": "Jordan's first recorded visit to the 'climbing gym' occurred on March 7, 2026.\n\nReasoning:\n1.  **Data Review**: I examined the `physical activity` logs starting from March 1, 2026.\n2.  **Initial Pattern**: Jordan's routine consisted of 'morning yoga' and 'evening run' consistently from March 2, 2026.\n3.  **The Switch**: The first entry for 'climbing gym' appears on March 7, 2026 (id=19).\n4.  **Context**: Conversations confirm that Jordan began incorporating climbing as a new, regular routine around this time (e.g., the March 12 conversation mentions \"I\u2019m going to sign up\" and \"It\u2019s becoming a nice routine\"). While Jordan continued to practice morning yoga, the climbing gym was introduced as a new, distinct activity on March 7, 2026.",
+      "type": "transition",
+      "difficulty": "difficult",
+      "f1": 0.18309859154929578,
+      "llm": 1.0
+    },
+    {
+      "question": "When did Jordan's way of working out FIRST switch from 'climbing gym' to 'rest day'? Explain the reasoning.",
+      "answer": "2026-03-08. Reasoning: Jordan's workouts are determined by a day-of-week routine. The transition from climbing gym to rest day first occurs on 2026-03-08 because 2026-03-08 is a Sunday.",
+      "response": "The first time the activity immediately following a 'climbing gym' session was a 'rest day' was on March 8, 2026.\n\nReasoning:\n1. The records show a 'climbing gym' session on March 7, 2026 (id=19).\n2. The very next entry in the chronological list is a 'rest day' on March 8, 2026 (id=22).\n3. This pattern (climbing gym followed by rest day) repeats consistently throughout the provided data (e.g., March 14-15, March 21-22, March 28-29, April 4-5, April 11-12, April 18-19, and April 25-26).",
+      "type": "transition",
+      "difficulty": "difficult",
+      "f1": 0.2,
+      "llm": 1.0
+    }
+  ]
+}

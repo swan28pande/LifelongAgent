@@ -257,7 +257,7 @@ class TestLiveComparison(unittest.TestCase):
     def test_compare_on_real_days(self):
         from memory_v3.agent import _make_llm
 
-        model = os.getenv("MODEL", "gemini-3.1-flash-lite")
+        model = os.getenv("MODEL", "gemini-3.5-flash")
         n_days = int(os.getenv("DAYS", "5"))
 
         path = os.path.join(PROJECT_ROOT, "datasets", "eval", "conversations.json")

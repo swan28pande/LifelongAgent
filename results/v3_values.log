@@ -1,0 +1,24 @@
+<All keys matched successfully>
+Traceback (most recent call last):
+  File "/Users/swanandpande/Documents/Coding/Projects/LifelongAgent/scripts/run_memory_v3.py", line 230, in <module>
+    main()
+    ~~~~^^
+  File "/Users/swanandpande/Documents/Coding/Projects/LifelongAgent/scripts/run_memory_v3.py", line 123, in main
+    agent = AgenticMemoryAgent(base_dir=store_dir, model=args.model)
+  File "/Users/swanandpande/Documents/Coding/Projects/LifelongAgent/memory_v3/agent.py", line 75, in __init__
+    ingest_llm = _make_llm(model, 0.0, callbacks)
+  File "/Users/swanandpande/Documents/Coding/Projects/LifelongAgent/memory_v3/agent.py", line 56, in _make_llm
+    return ChatGoogleGenerativeAI(
+        model=model, temperature=temperature, callbacks=callbacks
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/langchain_google_genai/chat_models.py", line 2269, in __init__
+    super().__init__(**kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/langchain_core/load/serializable.py", line 118, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ChatGoogleGenerativeAI
+  Value error, API key required for Gemini Developer API. Provide api_key parameter or set GOOGLE_API_KEY/GEMINI_API_KEY environment variable. [type=value_error, input_value={'model': 'gemini-3.5-fla...one, 'model_kwargs': {}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error
