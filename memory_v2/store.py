@@ -59,6 +59,7 @@ class MemoryStore:
                     id           INTEGER PRIMARY KEY AUTOINCREMENT,
                     content      TEXT    NOT NULL,
                     entity       TEXT,
+                    type         TEXT    DEFAULT 'preference',
                     speaker      TEXT    DEFAULT 'user',
                     source_date  TEXT
                 )
@@ -66,6 +67,13 @@ class MemoryStore:
             conn.execute("CREATE INDEX IF NOT EXISTS idx_entity ON memories(entity)")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_speaker ON memories(speaker)")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_date    ON memories(source_date)")
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_type    ON memories(type)")
+
+            # Migrate existing DBs that lack the type column
+            try:
+                conn.execute("SELECT type FROM memories LIMIT 1")
+            except sqlite3.OperationalError:
+                conn.execute("ALTER TABLE memories ADD COLUMN type TEXT DEFAULT 'preference'")
 
             # Conversations table for exact chronological retrieval
             conn.execute("""
@@ -78,29 +86,38 @@ class MemoryStore:
             """)
             conn.execute("CREATE INDEX IF NOT EXISTS idx_conv_date ON conversations(source_date)")
 
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS summary_meta (
+                    identifier   TEXT PRIMARY KEY,
+                    built_at     TEXT NOT NULL,
+                    source_hash  TEXT NOT NULL
+                )
+            """)
+
     def _conn(self):
         return sqlite3.connect(self.db_path)
 
     # ── Memories (SQL) ──────────────────────────────────────────────
 
     def add_memory(self, content: str, entity: str, source_date: str,
-                   speaker: str = "user"):
+                   speaker: str = "user", type: str = "preference"):
         with self._conn() as conn:
             conn.execute(
-                "INSERT INTO memories (content, entity, speaker, source_date) VALUES (?,?,?,?)",
-                (content, entity.lower().strip(),
+                "INSERT INTO memories (content, entity, type, speaker, source_date) VALUES (?,?,?,?,?)",
+                (content, entity.lower().strip(), type,
                  speaker.lower().strip(), source_date),
             )
 
     def add_memories(self, memories: List[Dict], source_date: str):
-        """Bulk insert. Each dict: {content, entity, speaker, date}."""
+        """Bulk insert. Each dict: {content, entity, speaker, date, type}."""
         with self._conn() as conn:
             conn.executemany(
-                "INSERT INTO memories (content, entity, speaker, source_date) VALUES (?,?,?,?)",
+                "INSERT INTO memories (content, entity, type, speaker, source_date) VALUES (?,?,?,?,?)",
                 [
                     (
                         m["content"],
                         m.get("entity", "").lower().strip(),
+                        m.get("type", "preference"),
                         m.get("speaker", "user").lower().strip(),
                         m.get("date") or source_date,
                     )
@@ -114,6 +131,7 @@ class MemoryStore:
         speaker: Optional[str] = None,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
+        type: Optional[str] = None,
         limit: int = 100,
     ) -> List[Dict]:
         """Flexible SQL query — any combination of filters."""
@@ -126,9 +144,11 @@ class MemoryStore:
             clauses.append("source_date >= ?"); params.append(start_date)
         if end_date:
             clauses.append("source_date <= ?"); params.append(end_date)
+        if type:
+            clauses.append("type = ?"); params.append(type)
 
         where = f"WHERE {' AND '.join(clauses)}" if clauses else ""
-        sql = (f"SELECT id, content, entity, speaker, source_date FROM memories "
+        sql = (f"SELECT id, content, entity, speaker, source_date, type FROM memories "
                f"{where} ORDER BY source_date LIMIT ?")
         params.append(limit)
 
@@ -137,7 +157,7 @@ class MemoryStore:
 
         return [
             {"id": r[0], "content": r[1],
-             "entity": r[2], "speaker": r[3], "date": r[4]}
+             "entity": r[2], "speaker": r[3], "date": r[4], "type": r[5]}
             for r in rows
         ]
 
@@ -152,12 +172,16 @@ class MemoryStore:
             )
             return cur.rowcount
 
-    def get_unique_preferences(self) -> List[Dict]:
+    def get_unique_preferences(self, type: Optional[str] = None) -> List[Dict]:
         """Returns all unique [entity, content] pairs to maintain taxonomic consistency."""
+        if type:
+            sql = "SELECT DISTINCT entity, content FROM memories WHERE type = ? ORDER BY entity, content"
+            params = (type,)
+        else:
+            sql = "SELECT DISTINCT entity, content FROM memories ORDER BY entity, content"
+            params = ()
         with self._conn() as conn:
-            rows = conn.execute(
-                "SELECT DISTINCT entity, content FROM memories ORDER BY entity, content"
-            ).fetchall()
+            rows = conn.execute(sql, params).fetchall()
         return [{"entity": r[0], "content": r[1]} for r in rows]
 
     def get_all_entities(self) -> List[str]:
@@ -299,6 +323,25 @@ class MemoryStore:
                 return "\n\n".join(parts)
         return None
 
+
+    # ── Summary metadata ─────────────────────────────────────────────
+
+    def get_summary_hash(self, identifier: str) -> Optional[str]:
+        with self._conn() as conn:
+            row = conn.execute(
+                "SELECT source_hash FROM summary_meta WHERE identifier = ?",
+                (identifier,),
+            ).fetchone()
+        return row[0] if row else None
+
+    def set_summary_hash(self, identifier: str, source_hash: str):
+        now = datetime.now().isoformat()
+        with self._conn() as conn:
+            conn.execute(
+                "INSERT OR REPLACE INTO summary_meta (identifier, built_at, source_hash) "
+                "VALUES (?, ?, ?)",
+                (identifier, now, source_hash),
+            )
 
     # ── Helpers ─────────────────────────────────────────────────────
 

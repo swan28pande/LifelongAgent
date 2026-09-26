@@ -46,6 +46,7 @@ import memory_v2.store as store_mod
 
 # Must be patched before any MemoryStore is constructed.
 store_mod.HuggingFaceEmbeddings = lambda **kwargs: DeterministicFakeEmbedding(size=64)
+store_mod.PrefixedEmbeddings = lambda **kwargs: DeterministicFakeEmbedding(size=64)
 
 from memory_v2.store import MemoryStore                      # noqa: E402
 from memory_v3.agent import AgenticMemoryAgent               # noqa: E402
@@ -228,7 +229,7 @@ class TestRagDatabase(StoreTestCase):
         report = self.pipeline({"preferences": []}).run("2026-03-01", DAY)
         self.assertEqual(report.chunks_indexed, 1)
         self.assertIn("night bus",
-                      self.read["search_conversations"].invoke({"query": "bus", "k": 3}))
+                      self.read["semantic_search_conversations"].invoke({"query": "bus", "k": 3}))
 
     def test_indexing_writes_to_both_sql_and_vector_store(self):
         """Chunks must be reachable by exact date as well as by similarity."""
@@ -251,7 +252,7 @@ class TestRagDatabase(StoreTestCase):
         self.assertEqual(report.chunks_indexed, 1)
 
     def test_search_on_empty_store_is_handled(self):
-        self.assertIn("no matching", self.read["search_conversations"].invoke(
+        self.assertIn("no matching", self.read["semantic_search_conversations"].invoke(
             {"query": "anything", "k": 3}
         ))
 
@@ -268,7 +269,7 @@ class TestRetrievalTools(StoreTestCase):
     def test_preferences_come_back_in_date_order(self):
         """Counting and interval questions depend on the ordering being real."""
         self._seed()
-        out = self.read["search_preferences"].invoke({"entity": "transport"})
+        out = self.read["search_memories"].invoke({"entity": "transport"})
         self.assertLess(out.index("tram"), out.index("night bus"))
 
     def test_unknown_entity_returns_the_real_names(self):
@@ -277,13 +278,13 @@ class TestRetrievalTools(StoreTestCase):
         has to say so — otherwise the agent concludes the memory is empty and stops.
         """
         self._seed()
-        out = self.read["search_preferences"].invoke({"entity": "helicopter"})
+        out = self.read["search_memories"].invoke({"entity": "helicopter"})
         self.assertIn("No entity named", out)
         self.assertIn("transport", out)
 
     def test_date_window_filters(self):
         self._seed()
-        out = self.read["search_preferences"].invoke(
+        out = self.read["search_memories"].invoke(
             {"entity": "transport", "start_date": "2026-03-02", "end_date": "2026-03-02"}
         )
         self.assertIn("night bus", out)
@@ -334,7 +335,7 @@ class TestConverseAndFlush(StoreTestCase):
         agent.converse("I switched to the night bus.")
         agent.converse("Remind me what I'm taking?")
 
-        report = agent.flush("2026-03-01")
+        report = agent.flush("2026-03-01", update_summaries=False)   # summaries need a real LLM
 
         self.assertEqual(report.added, 1)
         self.assertEqual(agent.pending_turns, 0)
@@ -383,7 +384,7 @@ class TestToolSurface(unittest.TestCase):
         names = {t.name for t in build_read_tools(None)}
         for writer in ("add_preference", "remove_preference", "index_conversation"):
             self.assertNotIn(writer, names)
-        self.assertIn("search_preferences", names)
+        self.assertIn("search_memories", names)
 
     def test_no_tool_hides_an_llm_call(self):
         """

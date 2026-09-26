@@ -21,7 +21,7 @@ OUTPUT_PRICE_PER_M = 3.00   # $3.00 / 1M output tokens
 
 
 def run():
-    run_dir   = "results/memory_v2_run"
+    run_dir   = "results/legacy/memory_v2_run"
     store_dir = os.path.join(run_dir, "store")
 
     # Check if we should resume or start fresh

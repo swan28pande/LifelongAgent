@@ -1,16 +1,22 @@
-# React + Vite
+# Inspector frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite single-page app. It talks to the backend at `http://localhost:8000/api`
+(`API` in `src/App.jsx`), so start `app/backend.py` first.
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev      # dev server with hot reload
+npm run build    # production build into dist/
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Source
 
-## React Compiler
+| File | What it is |
+|---|---|
+| `src/App.jsx` | The whole UI. Four top-level tabs: **Benchmarks** (score cards for the synthetic eval and LoCoMo; click through to per-question results), **Datasets** (synthetic conversations and QA, LoCoMo conversations and QA results), **Store** (preferences, conversation chunks, summaries of the open store), **Chat** (talk to the open store). |
+| `src/index.css` | Styles: design tokens on `:root` (single indigo accent), tables (`.tbl`), sub-navigation (`.sub-nav`), benchmark cards (`.bench-*`), score-coloured rows (`.row-good/mid/bad`). |
+| `src/main.jsx` | React entry point. |
+| `index.html`, `vite.config.js`, `eslint.config.js` | Vite and lint config. |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The LoCoMo views handle both result formats: current (`response` and `score` on each
+record) and the older v2 format (one nested object per system).

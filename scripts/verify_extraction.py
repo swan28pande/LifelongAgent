@@ -30,7 +30,7 @@ def exercise_pattern(day):
             4: "evening run", 5: "morning yoga", 6: "climbing gym", 7: "rest day"}[d]
 
 def verify():
-    tmp_dir = "results/verify_run"
+    tmp_dir = "results/legacy/verify_run"
     if os.path.exists(tmp_dir):
         shutil.rmtree(tmp_dir)
     os.makedirs(tmp_dir)

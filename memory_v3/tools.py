@@ -28,9 +28,9 @@ MAX_WINDOW_DAYS = 7
 
 def _fmt_rows(rows: List[dict]) -> str:
     if not rows:
-        return "(no matching preferences)"
+        return "(no matching memories)"
     return "\n".join(
-        f"id={r['id']} [{r['date']}] ({r['entity']}) {r['content']} — {r['speaker']}"
+        f"id={r['id']} [{r['date']}] [{r.get('type', 'preference')}] ({r['entity']}) {r['content']} — {r['speaker']}"
         for r in rows
     )
 
@@ -66,18 +66,26 @@ def build_read_tools(store: MemoryStore) -> list:
         return f"ENTITIES: {', '.join(entities) or 'none'}\n{note}"
 
     @tool
-    def search_preferences(
+    def search_memories(
         entity: Optional[str] = None,
         speaker: Optional[str] = None,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
+        type: Optional[str] = None,
         limit: int = 100,
     ) -> str:
-        """Query the structured preference database for an exact dated timeline.
+        """Query the structured memory database for an exact dated timeline.
 
         The precise source: use it whenever the answer depends on dates, ordering, or
-        counting — transitions, cycles, what was chosen on a given day. Results come
-        back in chronological order.
+        counting — transitions, cycles, what was chosen on a given day, what facts are
+        known, or what events happened. Results come back in chronological order.
+
+        The store holds three types of memory:
+        - "preference": recurring choices within a category.
+        - "fact": stable attributes about the person.
+        - "event": one-time occurrences or milestones.
+
+        Filter by type when you know what you need. Omit type to search across all.
 
         Naming an entity or speaker that does not exist returns the list of real ones
         rather than an empty result, so a wrong guess can be corrected on the next call.
@@ -92,6 +100,7 @@ def build_read_tools(store: MemoryStore) -> list:
             speaker: Restrict to one recorded speaker. Omit for all.
             start_date: Earliest date to include, YYYY-MM-DD.
             end_date: Latest date to include, YYYY-MM-DD.
+            type: Restrict to one memory type: "preference", "fact", or "event". Omit for all.
             limit: Maximum rows to return.
         """
         if entity:
@@ -118,12 +127,13 @@ def build_read_tools(store: MemoryStore) -> list:
             speaker=speaker,
             start_date=start_date,
             end_date=end_date,
+            type=type,
             limit=min(limit, MAX_ROWS),
         )
         return _fmt_rows(rows)
 
     @tool
-    def search_conversations(query: str, k: int = 5) -> str:
+    def semantic_search_conversations(query: str, k: int = 5) -> str:
         """Semantic search over raw conversation chunks, by meaning.
 
         Finds exchanges about a topic. It matches on wording, not on when something
@@ -192,10 +202,31 @@ def build_read_tools(store: MemoryStore) -> list:
             text = store.get_summary(f"{level}:{identifier}:{speaker}")
         return text if text else f"(no {level} summary found for {identifier or speaker})"
 
+    @tool
+    def semantic_search_summaries(query: str, k: int = 3) -> str:
+        """Semantic search across all stored summaries — weekly, monthly, yearly, lifetime.
+
+        Use this when the question is about someone's background, life events, general
+        habits, or long-term patterns and you don't know which specific time period to
+        look at. It searches by meaning across every summary in the store.
+
+        Prefer this over search_conversations for broad "who/what/why" questions — summaries
+        are pre-digested overviews that cover more ground per result.
+
+        Args:
+            query: What to search for, as a topic or phrase.
+            k: Number of summaries to return.
+        """
+        docs = store.search_summaries(query, k=k)
+        if not docs:
+            return "(no matching summaries)"
+        return "\n\n---\n\n".join(d.page_content for d in docs)
+
     return [
         list_entities,
-        search_preferences,
-        search_conversations,
+        search_memories,
+        semantic_search_conversations,
+        semantic_search_summaries,
         read_conversations_on,
         get_summary,
     ]

@@ -17,7 +17,7 @@ is lost by deferring the write — a preference mentioned at breakfast is still 
 at dinner, and it reaches the store before tomorrow begins.
 
 Usage:
-    agent = AgenticMemoryAgent(base_dir="results/agentic_run/store",
+    agent = AgenticMemoryAgent(base_dir="results/synthetic/v3/store",
                                model="gemini-3.5-flash")
 
     # Batch: replay a recorded day
@@ -127,15 +127,25 @@ class AgenticMemoryAgent:
     # ── Ingestion ───────────────────────────────────────────────────
 
     def ingest(
-        self, date: str, conversations: List[Dict], speaker: str = "user"
+        self,
+        date: str,
+        conversations: List[Dict],
+        speaker: str = "user",
+        update_summaries: bool = False,
     ) -> IngestReport:
         """
         Run one day through the ingestion pipeline.
 
         conversations: [{time_of_day, turns: [{speaker, text}]}]
+        update_summaries: if True, incrementally rebuild only the summaries
+            affected by this date (the containing week, month, year, lifetime)
+            rather than requiring a separate build_summaries() call.
         Returns a report of what was extracted, written, and indexed.
         """
-        return self.pipeline.run(date, conversations, speaker=speaker)
+        report = self.pipeline.run(date, conversations, speaker=speaker)
+        if update_summaries:
+            self.summarizer.update_after_ingest(date)
+        return report
 
     def ingest_range(
         self,
@@ -170,6 +180,26 @@ class AgenticMemoryAgent:
     def chat(self, query: str, verbose: bool = False) -> str:
         """Answer a query, letting the agent retrieve whatever it needs first."""
         return self._run(query, verbose)
+
+    def chat_with_trace(self, query: str) -> dict:
+        """Answer a query and return the full tool-call trace alongside the answer."""
+        inbox = [HumanMessage(content=query)]
+        result = self.chat_agent.invoke(
+            {"messages": inbox},
+            config={"recursion_limit": self.recursion_limit},
+        )
+        messages = result["messages"]
+        tool_calls = []
+        for m in messages:
+            calls = getattr(m, "tool_calls", None)
+            if calls:
+                for c in calls:
+                    tool_calls.append({"tool": c["name"], "args": c["args"]})
+        return {
+            "answer": self._text_of(messages[-1]),
+            "tool_calls": tool_calls,
+            "num_tool_calls": len(tool_calls),
+        }
 
     # ── Live conversation (fast path / slow path) ───────────────────
 
@@ -208,6 +238,7 @@ class AgenticMemoryAgent:
         date: str,
         time_of_day: str = "All Day",
         speaker: str = "user",
+        update_summaries: bool = True,
     ) -> Optional[IngestReport]:
         """
         Ingest everything buffered since the last flush.
@@ -216,6 +247,9 @@ class AgenticMemoryAgent:
         sees the full day when deciding what was actually chosen, and it costs two LLM
         calls instead of two per turn.
 
+        update_summaries defaults to True for live use — each flush is a day boundary,
+        so the incremental update runs automatically.
+
         Returns the ingest report, or None if nothing was pending.
         """
         if not self._pending:
@@ -223,7 +257,10 @@ class AgenticMemoryAgent:
 
         turns, self._pending = self._pending, []
         return self.ingest(
-            date, [{"time_of_day": time_of_day, "turns": turns}], speaker=speaker
+            date,
+            [{"time_of_day": time_of_day, "turns": turns}],
+            speaker=speaker,
+            update_summaries=update_summaries,
         )
 
     @property

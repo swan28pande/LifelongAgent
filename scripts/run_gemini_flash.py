@@ -19,7 +19,7 @@ INPUT_PRICE_PER_M  = 0.25
 OUTPUT_PRICE_PER_M = 1.50
 
 def run():
-    run_dir   = "results/gemini_flash_run"
+    run_dir   = "results/legacy/gemini_flash_run"
     store_dir = os.path.join(run_dir, "store")
 
     # Clear existing data for a fresh run

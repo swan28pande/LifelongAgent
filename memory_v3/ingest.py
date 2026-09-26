@@ -4,16 +4,19 @@ Ingestion pipeline.
     day's turns
         │
         ▼
-    [1] extract      one LLM call  → dated (entity, content) records
+    [1] extract        one LLM call  → dated (entity, content) records
         │
         ▼
-    [2] dedupe       deterministic → drop exact repeats of (entity, content, date)
+    [2] consolidate    deterministic → normalize near-duplicate values to canonical spellings
         │
         ▼
-    [3] write        deterministic → SQL inserts
+    [3] dedupe         deterministic → drop exact repeats of (entity, content, date)
         │
         ▼
-    [4] index        deterministic → fixed-size chunks into the RAG store
+    [4] write          deterministic → SQL inserts
+        │
+        ▼
+    [5] index          deterministic → fixed-size chunks into the RAG store
 
 One LLM call per day.
 
@@ -55,6 +58,31 @@ MAX_VALUES_SHOWN = 12
 VALUE_SCAN_LIMIT = 2000
 
 
+CONSOLIDATION_THRESHOLD = 0.75
+
+
+def _char_ratio(a: str, b: str) -> float:
+    """Character-level similarity: 2 * common_len / total_len (SequenceMatcher-style)."""
+    from difflib import SequenceMatcher
+    return SequenceMatcher(None, a.lower(), b.lower()).ratio()
+
+
+def _token_jaccard(a: str, b: str) -> float:
+    """
+    Combined similarity: token-level Jaccard with subset bonus and
+    character-level fallback for typos that split tokens.
+    """
+    ta = set(a.lower().split())
+    tb = set(b.lower().split())
+    if not ta or not tb:
+        return 0.0
+    jaccard = len(ta & tb) / len(ta | tb)
+    if ta <= tb or tb <= ta:
+        jaccard = max(jaccard, 0.85)
+    char_sim = _char_ratio(a, b)
+    return max(jaccard, char_sim)
+
+
 @dataclass
 class IngestReport:
     """What the pipeline did with one day. Returned so runs can be audited."""
@@ -63,12 +91,19 @@ class IngestReport:
     extracted: int = 0
     added: int = 0
     duplicates: int = 0
+    consolidated: int = 0
     chunks_indexed: int = 0
     entities: List[str] = field(default_factory=list)
     errors: List[str] = field(default_factory=list)
+    type_counts: Dict[str, int] = field(default_factory=dict)
 
     def __str__(self) -> str:
         parts = [f"[{self.date}] extracted {self.extracted}", f"added {self.added}"]
+        if self.type_counts:
+            type_str = " ".join(f"{t}={c}" for t, c in sorted(self.type_counts.items()))
+            parts.append(f"({type_str})")
+        if self.consolidated:
+            parts.append(f"consolidated {self.consolidated}")
         if self.duplicates:
             parts.append(f"skipped {self.duplicates} duplicate")
         parts.append(f"{self.chunks_indexed} chunks")
@@ -95,7 +130,8 @@ class IngestionPipeline:
         report.extracted = len(extracted)
 
         if extracted:
-            fresh = self._dedupe(extracted, report)
+            consolidated = self._consolidate(extracted, report)
+            fresh = self._dedupe(consolidated, report)
             self._write(fresh, date, speaker, report)
 
         report.chunks_indexed = self._index(date, conversations, speaker)
@@ -122,23 +158,28 @@ class IngestionPipeline:
             report.errors.append(f"extract failed: {e}")
             return []
 
-        items = result.get("preferences", []) if isinstance(result, dict) else []
-        return [
-            {
-                "entity": str(i["entity"]).lower().strip(),
-                "content": str(i["content"]).strip(),
-                "date": str(i.get("date") or date).strip(),
-                # Only set when the transcript has more than one person in it;
-                # single-speaker ingestion leaves this to the caller's default.
-                "speaker": str(i["speaker"]).lower().strip() if i.get("speaker") else None,
-            }
-            for i in items
-            if isinstance(i, dict) and i.get("entity") and i.get("content")
-        ]
+        if not isinstance(result, dict):
+            return []
+
+        items = []
+        for memory_type in ("preferences", "facts", "events"):
+            type_label = memory_type.rstrip("s")  # preference, fact, event
+            for i in result.get(memory_type, []):
+                if not isinstance(i, dict) or not i.get("entity") or not i.get("content"):
+                    continue
+                items.append({
+                    "entity": str(i["entity"]).lower().strip(),
+                    "content": str(i["content"]).strip(),
+                    "date": str(i.get("date") or date).strip(),
+                    "type": type_label,
+                    "speaker": str(i["speaker"]).lower().strip() if i.get("speaker") else None,
+                })
+        return items
 
     def _known_block(self) -> str:
         """
-        The existing taxonomy, each entity followed by the values recorded under it.
+        The existing taxonomy, each entity followed by the values recorded under it,
+        grouped by type (preferences, facts, events).
 
         Showing entity names alone keeps categories consistent but lets the values
         drift — the same choice gets written as "yoga" one day and "morning yoga" the
@@ -149,19 +190,85 @@ class IngestionPipeline:
         sprouted dozens is better served by showing the common ones than by spending
         the context on its long tail.
         """
-        grouped: Dict[str, List[str]] = {}
+        by_type: Dict[str, Dict[str, List[str]]] = {}
         for row in self.store.query_memories(limit=VALUE_SCAN_LIMIT):
+            mem_type = row.get("type", "preference")
+            grouped = by_type.setdefault(mem_type, {})
             grouped.setdefault(row["entity"], [])
             if row["content"] not in grouped[row["entity"]]:
                 grouped[row["entity"]].append(row["content"])
 
-        if not grouped:
+        if not by_type:
             return "(nothing recorded yet — you are choosing the first names)"
 
-        return "\n".join(
-            f"- {entity}: {', '.join(values[:MAX_VALUES_SHOWN])}"
-            for entity, values in sorted(grouped.items())
-        )
+        sections = []
+        for type_label in ("preference", "fact", "event"):
+            grouped = by_type.get(type_label, {})
+            if not grouped:
+                continue
+            lines = [f"[{type_label}s]"]
+            for entity, values in sorted(grouped.items()):
+                lines.append(f"  - {entity}: {', '.join(values[:MAX_VALUES_SHOWN])}")
+            sections.append("\n".join(lines))
+
+        return "\n".join(sections)
+
+    # ── [1.5] Consolidate ────────────────────────────────────────────
+
+    def _consolidate(self, extracted: List[Dict], report: IngestReport) -> List[Dict]:
+        """
+        Normalize near-duplicate values to existing canonical spellings.
+
+        For each extracted record, if the entity already exists in the store,
+        compare the new value against all known values for that entity. If a
+        near-match is found (token Jaccard > threshold), replace the new value
+        with the existing one. This ensures "oat milk latte" and "oat latte"
+        don't look like two different choices.
+
+        Runs before dedup, so a normalized value that now exactly matches an
+        existing (entity, content, date) row is caught by the dedup step.
+        """
+        known_values = self._values_by_entity()
+        if not known_values:
+            return extracted
+
+        result = []
+        for item in extracted:
+            entity = item["entity"]
+            if entity not in known_values:
+                result.append(item)
+                continue
+
+            content = item["content"]
+            best_match, best_score = None, 0.0
+            for existing_val in known_values[entity]:
+                if content.lower() == existing_val.lower():
+                    best_match = existing_val
+                    best_score = 1.0
+                    break
+                score = _token_jaccard(content, existing_val)
+                if score > best_score:
+                    best_match = existing_val
+                    best_score = score
+
+            if best_score >= CONSOLIDATION_THRESHOLD and best_match and content != best_match:
+                item = {**item, "content": best_match}
+                report.consolidated += 1
+
+            result.append(item)
+
+        return result
+
+    def _values_by_entity(self) -> Dict[str, List[str]]:
+        """All distinct values per entity, for consolidation lookups."""
+        grouped: Dict[str, List[str]] = {}
+        for row in self.store.query_memories(limit=VALUE_SCAN_LIMIT):
+            entity = row["entity"]
+            if entity not in grouped:
+                grouped[entity] = []
+            if row["content"] not in grouped[entity]:
+                grouped[entity].append(row["content"])
+        return grouped
 
     # ── [2] Dedupe ──────────────────────────────────────────────────
 
@@ -214,8 +321,7 @@ class IngestionPipeline:
                     "entity": i["entity"],
                     "content": i["content"],
                     "date": i["date"],
-                    # Extraction attributes the record when the transcript has more
-                    # than one person in it; otherwise everything is the caller's.
+                    "type": i.get("type", "preference"),
                     "speaker": i.get("speaker") or speaker,
                 }
                 for i in items
@@ -224,6 +330,8 @@ class IngestionPipeline:
         )
         report.added = len(items)
         report.entities = sorted({i["entity"] for i in items})
+        from collections import Counter
+        report.type_counts = dict(Counter(i.get("type", "preference") for i in items))
 
     # ── [4] Index ───────────────────────────────────────────────────
 

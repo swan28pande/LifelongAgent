@@ -1,16 +1,16 @@
 """
 Run memory_v3 over the eval dataset and score the QA pairs.
 
-    python3 scripts/run_memory_v3.py                    # full 60 days, 67 questions
-    python3 scripts/run_memory_v3.py --days 10 --limit 15
-    python3 scripts/run_memory_v3.py --skip-ingest      # reuse an existing store
+    venv/bin/python benchmarks/synthetic/run_v3.py                    # full 60 days, 67 questions
+    venv/bin/python benchmarks/synthetic/run_v3.py --days 10 --limit 15
+    venv/bin/python benchmarks/synthetic/run_v3.py --skip-ingest      # reuse an existing store
 
 Three phases: ingest each day in order, build the summary hierarchy once at the end,
 then answer the questions. Scored with token-F1 and an LLM judge, broken down by
 question type and difficulty, matching what evaluate_synthetic.py reports for the
 other systems so the numbers are comparable.
 
-Everything is written to results/<run>/ as it goes, so a crash in phase 3 does not
+Everything is written to results/synthetic/<run>/ as it goes, so a crash in phase 3 does not
 cost the ingestion.
 """
 
@@ -25,7 +25,7 @@ from collections import defaultdict
 
 os.environ.setdefault("KMP_DUPLICATE_LIB_OK", "TRUE")
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, PROJECT_ROOT)
 
 import numpy as np
@@ -100,12 +100,12 @@ def main():
     ap.add_argument("--days", type=int, default=60)
     ap.add_argument("--limit", type=int, default=None, help="max questions")
     ap.add_argument("--model", default="gemini-3.5-flash")
-    ap.add_argument("--run", default="memory_v3_run")
+    ap.add_argument("--run", default="v3")
     ap.add_argument("--skip-ingest", action="store_true")
     ap.add_argument("--skip-summaries", action="store_true")
     args = ap.parse_args()
 
-    run_dir = os.path.join(PROJECT_ROOT, "results", args.run)
+    run_dir = os.path.join(PROJECT_ROOT, "results", "synthetic", args.run)
     store_dir = os.path.join(run_dir, "store")
     os.makedirs(run_dir, exist_ok=True)
 

@@ -236,7 +236,7 @@ if __name__ == "__main__":
                         help="Skip re-running baselines, load saved predictions only")
     args = parser.parse_args()
 
-    os.makedirs("results", exist_ok=True)
+    os.makedirs("results/legacy/msc", exist_ok=True)
     dialogs = load_msc_test(MSC_TEST_FILE, args.max_dialogs)
     print(f"Loaded {len(dialogs)} MSC session-5 dialogues")
 
@@ -267,7 +267,7 @@ if __name__ == "__main__":
     print(f"\nRunning memory_v2 on {len(dialogs)} dialogues...")
     mv2_preds, mv2_refs = run_memory_v2(dialogs, model=args.model, n_workers=args.workers)
 
-    with open("results/memory_v2_predictions.json", "w") as f:
+    with open("results/legacy/msc/memory_v2_predictions.json", "w") as f:
         json.dump({"predictions": mv2_preds, "references": mv2_refs}, f, indent=2)
 
     results["memory_v2 (ours)"] = metrics(mv2_preds, mv2_refs)
@@ -275,6 +275,6 @@ if __name__ == "__main__":
     # ── Print comparison ──────────────────────────────────────────────
     print_table(results)
 
-    with open("results/msc_comparison.json", "w") as f:
+    with open("results/legacy/msc/msc_comparison.json", "w") as f:
         json.dump(results, f, indent=2)
-    print("\nSaved to results/msc_comparison.json")
+    print("\nSaved to results/legacy/msc/msc_comparison.json")

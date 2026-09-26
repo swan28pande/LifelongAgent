@@ -143,7 +143,7 @@ def run_evaluation(store_path: str, qa_path: str, model: str):
 
 def evaluate_cli():
     parser = argparse.ArgumentParser(description="Evaluate memory_v2 QA performance")
-    parser.add_argument("--store_dir", type=str, default="../results/gemini_extraction_run/store", help="Path to the agent's store directory")
+    parser.add_argument("--store_dir", type=str, default="../results/legacy/gemini_extraction_run/store", help="Path to the agent's store directory")
     parser.add_argument("--qa_file", type=str, default="../datasets/eval/qa_pairs.json", help="Path to the QA pairs JSON file")
     parser.add_argument("--model", type=str, default="gemini-3.1-flash-lite", help="Model to use for chatting and judging")
     

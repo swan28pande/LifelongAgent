@@ -36,7 +36,7 @@ for line in open(os.path.join(os.path.dirname(__file__), ".env")):
 
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 MSC_TEST = "baselines/Rsum/data/msc_dialogue/session_5/test.txt"
-QA_CACHE  = "results/probing_qa_cache.json"
+QA_CACHE  = "results/legacy/probing/probing_qa_cache.json"
 
 # ── Helpers ───────────────────────────────────────────────────────────
 
@@ -107,7 +107,7 @@ def load_or_build_qa_cache(dialogs) -> dict:
         qa = generate_qa(p0, p1, i)
         cache[str(i)] = qa
 
-    os.makedirs("results", exist_ok=True)
+    os.makedirs("results/legacy/probing", exist_ok=True)
     with open(QA_CACHE, "w") as f:
         json.dump(cache, f, indent=2)
     print(f"  Cached {sum(len(v) for v in cache.values())} Q&A pairs → {QA_CACHE}")
@@ -189,7 +189,7 @@ def judge(question: str, correct_answer: str, model_response: str) -> int:
 # ── Main evaluation loop ──────────────────────────────────────────────
 
 def run(args):
-    os.makedirs("results", exist_ok=True)
+    os.makedirs("results/legacy/probing", exist_ok=True)
     dialogs = load_dialogs(MSC_TEST, args.max_dialogs)
     print(f"Loaded {len(dialogs)} dialogues")
 
@@ -265,9 +265,9 @@ def run(args):
     print(f"{'='*52}")
     print(f"\nTotal Q&A pairs evaluated: {total}")
 
-    with open("results/probing_results.json", "w") as f:
+    with open("results/legacy/probing/probing_results.json", "w") as f:
         json.dump({"summary": result_dict, "records": records}, f, indent=2)
-    print("Saved → results/probing_results.json")
+    print("Saved → results/legacy/probing/probing_results.json")
 
 
 if __name__ == "__main__":

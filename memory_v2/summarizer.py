@@ -10,8 +10,14 @@ Key design:
   confirmed patterns for every domain and a full fact sheet about the user.
 
 Each level feeds the next. Pattern reasoning is isolated by domain to prevent interference.
+
+Incremental updates: `update_after_ingest(date)` rebuilds only the summary chain
+affected by a newly ingested day — the containing week, its month, year, and lifetime.
+Each level is skipped if its source data hash hasn't changed, so re-ingesting the same
+day or ingesting a second day in the same week only rebuilds what actually changed.
 """
 
+import hashlib
 from collections import defaultdict
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
@@ -117,12 +123,13 @@ Return JSON:
 """
 
 WEEKLY_FACTS_SYSTEM = """\
-You are a facts extractor. Given raw daily conversations for a week for {speaker}, extract all factual information.
+You are a narrative writer. Given structured facts and events for a week for {speaker},
+write a short narrative paragraph summarizing the week's key happenings and any new
+information learned about the person.
 
 Return JSON:
 {{
-  "facts": ["list of factual statements about the person"],
-  "narrative": "A short paragraph summarizing the week's events."
+  "narrative": "A short paragraph summarizing the week's events and facts."
 }}
 """
 
@@ -150,11 +157,14 @@ Return JSON:
 """
 
 MONTHLY_FACTS_SYSTEM = """\
-You are a facts extractor. Given weekly summaries for {speaker}, consolidate all factual information for the month.
+You are a facts consolidator. Given structured facts and events for {speaker} for a
+month, produce a clean merged list. Deduplicate facts that say the same thing, keep
+the most recent version when a fact changed, and list events chronologically.
 
 Return JSON:
 {{
-  "facts": ["list of consolidated factual statements"]
+  "facts": ["list of consolidated factual statements"],
+  "events": ["list of key events, each with its date"]
 }}
 """
 
@@ -183,9 +193,11 @@ class Summarizer:
         self.store = store
         if llm is not None:
             self.llm = llm
-        else:
+        elif model:
             from langchain_openai import ChatOpenAI
             self.llm = ChatOpenAI(model=model, temperature=0.2)
+        else:
+            self.llm = None
         self._cache: Dict[str, str] = {}
         self._domain_cache: Dict[str, List[str]] = {}  # speaker → discovered domains
 
@@ -212,6 +224,84 @@ class Summarizer:
             for yr in years:
                 self.yearly(yr, speaker=speaker, force=force)
             self.lifetime(speaker=speaker, force=force)
+
+    def update_after_ingest(self, date: str):
+        """
+        Incremental update: rebuild only the summary chain affected by `date`.
+
+        After ingesting a day, this rebuilds the containing week, then cascades
+        upward through month → year → lifetime — but only when the source data
+        for that level has actually changed (checked via a content hash stored
+        in summary_meta). If a week's conversations and preferences haven't
+        changed since it was last summarized, the week is skipped and so is
+        everything above it.
+        """
+        speakers = self.store.get_all_speakers() or ["user"]
+        week_id = _iso_week(date)
+        month_id = date[:7]
+        year_id = date[:4]
+
+        for speaker in speakers:
+            changed = self._build_if_dirty_weekly(week_id, speaker)
+            if not changed:
+                continue
+            changed = self._build_if_dirty_monthly(month_id, speaker)
+            if not changed:
+                continue
+            changed = self._build_if_dirty_yearly(year_id, speaker)
+            if not changed:
+                continue
+            self.lifetime(speaker=speaker, force=True)
+
+    # ── Hash-based dirty checks ────────────────────────────────────
+
+    def _weekly_source_hash(self, week_id: str, speaker: str) -> str:
+        start, end = _week_bounds(week_id)
+        docs = self.store.get_conversations_by_date_range(start, end)
+        mems = self.store.query_memories(speaker=speaker, start_date=start, end_date=end, limit=5000)
+        content = "".join(d.page_content for d in docs) + "|" + str([(p["entity"], p["content"], p["date"], p.get("type", "preference")) for p in mems])
+        return hashlib.sha256(content.encode()).hexdigest()[:16]
+
+    def _monthly_source_hash(self, month_id: str, speaker: str) -> str:
+        start, end = _month_bounds(month_id)
+        weeks = self._all_weeks(start, end)
+        parts = [self._cached(f"week:{wk}:{speaker}") or "" for wk in weeks]
+        return hashlib.sha256("|".join(parts).encode()).hexdigest()[:16]
+
+    def _yearly_source_hash(self, year: str, speaker: str) -> str:
+        months = self._all_months(f"{year}-01-01", f"{year}-12-31")
+        parts = [self._cached(f"month:{mo}:{speaker}") or "" for mo in months]
+        return hashlib.sha256("|".join(parts).encode()).hexdigest()[:16]
+
+    def _build_if_dirty_weekly(self, week_id: str, speaker: str) -> bool:
+        identifier = f"week:{week_id}:{speaker}"
+        current_hash = self._weekly_source_hash(week_id, speaker)
+        stored_hash = self.store.get_summary_hash(identifier)
+        if stored_hash == current_hash:
+            return False
+        self.weekly(week_id, speaker=speaker, force=True)
+        self.store.set_summary_hash(identifier, current_hash)
+        return True
+
+    def _build_if_dirty_monthly(self, month_id: str, speaker: str) -> bool:
+        identifier = f"month:{month_id}:{speaker}"
+        current_hash = self._monthly_source_hash(month_id, speaker)
+        stored_hash = self.store.get_summary_hash(identifier)
+        if stored_hash == current_hash:
+            return False
+        self.monthly(month_id, speaker=speaker, force=True)
+        self.store.set_summary_hash(identifier, current_hash)
+        return True
+
+    def _build_if_dirty_yearly(self, year: str, speaker: str) -> bool:
+        identifier = f"year:{year}:{speaker}"
+        current_hash = self._yearly_source_hash(year, speaker)
+        stored_hash = self.store.get_summary_hash(identifier)
+        if stored_hash == current_hash:
+            return False
+        self.yearly(year, speaker=speaker, force=True)
+        self.store.set_summary_hash(identifier, current_hash)
+        return True
 
     # ── Summary levels ───────────────────────────────────────────────
 
@@ -246,26 +336,49 @@ class Summarizer:
             except Exception as e:
                 print(f"      Weekly pattern error for {ent}: {e}")
 
-        # 2. Extract Facts and Narrative
+        # 2. Pull structured facts and events from DB, generate narrative
+        facts = self.store.query_memories(
+            speaker=speaker, start_date=start, end_date=end,
+            type="fact", limit=200,
+        )
+        events = self.store.query_memories(
+            speaker=speaker, start_date=start, end_date=end,
+            type="event", limit=200,
+        )
+
+        facts_block = "\n".join(
+            f"[{f['date']}] ({f['entity']}) {f['content']}" for f in facts
+        ) if facts else "(no new facts this week)"
+        events_block = "\n".join(
+            f"[{e['date']}] ({e['entity']}) {e['content']}" for e in events
+        ) if events else "(no events this week)"
+
         facts_prompt = ChatPromptTemplate.from_messages([
             ("system", WEEKLY_FACTS_SYSTEM),
-            ("human", f"Week: {week_id}\n\nCONVERSATIONS:\n{{conversations}}")
+            ("human",
+             f"Week: {week_id}\n\n"
+             f"FACTS:\n{_esc(facts_block)}\n\n"
+             f"EVENTS:\n{_esc(events_block)}")
         ])
-        
-        print(f"    - Extracting weekly facts for {week_id}")
+
+        print(f"    - Generating weekly narrative for {week_id}")
         try:
             chain = facts_prompt | self.llm | JsonOutputParser()
-            facts_res = chain.invoke({"conversations": _esc(conversations), "speaker": speaker})
+            facts_res = chain.invoke({"speaker": speaker})
         except Exception as e:
-            print(f"      Weekly facts error: {e}")
-            facts_res = {"facts": {}, "narrative": "No details found."}
+            print(f"      Weekly narrative error: {e}")
+            facts_res = {"narrative": "No details found."}
+
+        fact_list = [f"{f['entity']}: {f['content']}" for f in facts]
+        event_list = [f"[{e['date']}] {e['content']}" for e in events]
 
         # 3. Merge
         combined = {
             "title": f"Weekly Summary for {week_id}",
             "summary": str({
                 "patterns": domain_patterns,
-                "facts": facts_res.get("facts", {}),
+                "facts": fact_list,
+                "events": event_list,
                 "narrative": facts_res.get("narrative", "")
             })
         }
@@ -321,27 +434,47 @@ class Summarizer:
             except Exception as e:
                 print(f"      Pattern error for {ent}: {e}")
 
-        # 2. Extract Facts
+        # 2. Consolidate Facts and Events from DB
+        facts = self.store.query_memories(
+            speaker=speaker, start_date=start, end_date=end,
+            type="fact", limit=500,
+        )
+        events = self.store.query_memories(
+            speaker=speaker, start_date=start, end_date=end,
+            type="event", limit=500,
+        )
+
+        facts_block = "\n".join(
+            f"[{f['date']}] ({f['entity']}) {f['content']}" for f in facts
+        ) if facts else "(no facts this month)"
+        events_block = "\n".join(
+            f"[{e['date']}] ({e['entity']}) {e['content']}" for e in events
+        ) if events else "(no events this month)"
+
         facts_prompt = ChatPromptTemplate.from_messages([
             ("system", MONTHLY_FACTS_SYSTEM),
-            ("human", f"WEEKLY SUMMARIES:\n{_esc(weekly_block)}")
+            ("human",
+             f"Month: {month_id}\n\n"
+             f"FACTS:\n{_esc(facts_block)}\n\n"
+             f"EVENTS:\n{_esc(events_block)}")
         ])
-        
-        print(f"    - Extracting facts for {month_id}...")
+
+        print(f"    - Consolidating facts for {month_id}...")
         try:
             chain = facts_prompt | self.llm | JsonOutputParser()
             facts_res = chain.invoke({"speaker": speaker})
-            print(f"    ✓ Facts extracted for {month_id}")
+            print(f"    ✓ Facts consolidated for {month_id}")
         except Exception as e:
             print(f"      Facts error: {e}")
-            facts_res = {"facts": []}
+            facts_res = {"facts": [], "events": []}
 
         # 3. Save combined result
         combined = {
             "title": f"Monthly Summary for {month_id}",
             "summary": str({
                 "patterns": pattern_speculation,
-                "facts": facts_res.get("facts", [])
+                "facts": facts_res.get("facts", []),
+                "events": facts_res.get("events", []),
             })
         }
         
@@ -390,21 +523,39 @@ class Summarizer:
             except Exception as e:
                 print(f"      Confirmation error for {ent}: {e}")
 
-        # 2. Accumulate Facts (Final Consolidation)
+        # 2. Accumulate Facts and Events (Final Consolidation)
+        facts = self.store.query_memories(
+            speaker=speaker, start_date=f"{year}-01-01", end_date=f"{year}-12-31",
+            type="fact", limit=2000,
+        )
+        events = self.store.query_memories(
+            speaker=speaker, start_date=f"{year}-01-01", end_date=f"{year}-12-31",
+            type="event", limit=2000,
+        )
+
+        facts_block = "\n".join(
+            f"[{f['date']}] ({f['entity']}) {f['content']}" for f in facts
+        ) if facts else "(no facts this year)"
+        events_block = "\n".join(
+            f"[{e['date']}] ({e['entity']}) {e['content']}" for e in events
+        ) if events else "(no events this year)"
+
         facts_prompt = ChatPromptTemplate.from_messages([
-            ("system", 
-             "Consolidate all factual info for {speaker} for the year into a clean, merged list of facts.\n\n"
+            ("system",
+             "Consolidate all facts and events for {speaker} for the year.\n"
+             "For facts: deduplicate, keep the most recent version when something changed.\n"
+             "For events: list chronologically.\n\n"
              "Return ONLY a JSON object:\n"
              "{{\n"
-             "  \"facts\": [\n"
-             "    \"fact 1\",\n"
-             "    \"fact 2\",\n"
-             "    ...\n"
-             "  ]\n"
+             "  \"facts\": [\"fact 1\", \"fact 2\", ...],\n"
+             "  \"events\": [\"[date] event description\", ...]\n"
              "}}"),
-            ("human", f"MONTHLY SUMMARIES:\n{_esc(monthly_block)}")
+            ("human",
+             f"Year: {year}\n\n"
+             f"FACTS:\n{_esc(facts_block)}\n\n"
+             f"EVENTS:\n{_esc(events_block)}")
         ])
-        
+
         print(f"    - Finalizing yearly profile for {year}")
         try:
             chain = facts_prompt | self.llm | JsonOutputParser()
@@ -418,7 +569,8 @@ class Summarizer:
             "title": f"Yearly Summary for {year}",
             "summary": str({
                 "patterns": confirmed_patterns,
-                "facts": facts_res.get("facts", [])
+                "facts": facts_res.get("facts", []),
+                "events": facts_res.get("events", []),
             })
         }
         
@@ -457,11 +609,13 @@ class Summarizer:
              "Using all yearly summaries, produce a complete, structured profile:\n\n"
              "1. USER FACTS — Everything stable and confirmed about this person:\n"
              "   identity, age, location, job, relationships, lifestyle, diet, "
-             "hobbies, personality traits, and any major life events.\n\n"
+             "hobbies, and personality traits.\n\n"
              "2. PREFERENCE PATTERNS — For each domain, describe the exact repeating structure observed.\n"
              "   It may be a fixed N-day alternation, a day-of-week pattern, or another form of repetition.\n"
              "   Include the start date and the exact rule. State values explicitly. Avoid vague phrases like 'usually' or 'tends to'.\n\n"
-             "3. LIFE NARRATIVE — Chronological milestones.\n\n"
+             "3. KEY EVENTS — Chronological milestones, decisions, and one-time occurrences\n"
+             "   (promotions, trips, arrivals, deadlines met, etc.) with their dates.\n\n"
+             "4. LIFE NARRATIVE — A brief chronological narrative tying it all together.\n\n"
              "Return ONLY a JSON object: {{\"title\": \"Full Lifetime Profile\", \"summary\": \"the full structured text profile\"}}"),
             ("human",
              f"Speaker: {speaker} | Full date range: {start} to {end}\n\n"
@@ -511,7 +665,7 @@ class Summarizer:
         if cache_key in self._domain_cache:
             return self._domain_cache[cache_key]
 
-        all_prefs = self.store.query_memories(speaker=speaker, limit=2000)
+        all_prefs = self.store.query_memories(speaker=speaker, type="preference", limit=2000)
         if not all_prefs:
             return []
 

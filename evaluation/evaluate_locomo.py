@@ -221,7 +221,7 @@ def ask_naive_rag(question: str, rag: NaiveRAG, k: int = 5) -> str:
 # ── Main evaluation ───────────────────────────────────────────────────
 
 def run(args):
-    os.makedirs("results", exist_ok=True)
+    os.makedirs("results/legacy/locomo_v2", exist_ok=True)
 
     with open(LOCOMO_PATH) as f:
         all_convs = json.load(f)
@@ -316,9 +316,9 @@ def run(args):
         }
         for m in METHODS
     }
-    with open("results/locomo_results.json", "w") as f:
+    with open("results/legacy/locomo_v2/locomo_results.json", "w") as f:
         json.dump({"summary": summary, "records": records}, f, indent=2)
-    print("\nSaved → results/locomo_results.json")
+    print("\nSaved → results/legacy/locomo_v2/locomo_results.json")
 
 
 def get_sessions_list(conv):

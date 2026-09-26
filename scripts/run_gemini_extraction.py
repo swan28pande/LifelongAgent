@@ -19,7 +19,7 @@ INPUT_PRICE_PER_M  = 2.00
 OUTPUT_PRICE_PER_M = 12.00
 
 def run():
-    run_dir   = "results/gemini_extraction_run"
+    run_dir   = "results/legacy/gemini_extraction_run"
     store_dir = os.path.join(run_dir, "store")
 
     # Clear existing data for a fresh run

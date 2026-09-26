@@ -1,11 +1,12 @@
 """
 API for the memory inspector UI.
 
-    python3 app/backend.py                                  # newest run under results/
-    STORE=results/v3_pilot/store python3 app/backend.py     # pin a specific one
+    python3 app/backend.py                                     # newest synthetic run
+    STORE=results/synthetic/v3/store python3 app/backend.py    # pin a specific store
+    LOCOMO_RUN=mem0 python3 app/backend.py                     # LoCoMo run to show
 
-With no STORE set it opens the most recently written store under results/, which is
-almost always the run you just finished. Every run is still listed on /api/status, so
+With no STORE set it opens the most recently written store under results/ (current runs
+before results/legacy/), which is almost always the run you just finished. Every run is still listed on /api/status, so
 the UI can show what else is on disk.
 
 Read-only over whatever store it opens, plus a live chat endpoint. The store is opened
@@ -37,18 +38,18 @@ RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
 
 
 def discover_stores() -> list:
-    """Every run under results/ that has a store, newest first."""
+    """Every run under results/ with a `store/` folder; current runs before legacy, newest first."""
     found = []
-    if os.path.isdir(RESULTS_DIR):
-        for name in os.listdir(RESULTS_DIR):
-            db = os.path.join(RESULTS_DIR, name, "store", "memories.db")
-            if os.path.exists(db):
-                found.append({
-                    "run": name,
-                    "store": os.path.join(RESULTS_DIR, name, "store"),
-                    "modified": os.path.getmtime(db),
-                })
-    return sorted(found, key=lambda s: -s["modified"])
+    for root, dirs, files in os.walk(RESULTS_DIR):
+        if os.path.basename(root) == "store" and "memories.db" in files:
+            run_dir = os.path.dirname(root)
+            found.append({
+                "run": os.path.relpath(run_dir, RESULTS_DIR),
+                "store": root,
+                "modified": os.path.getmtime(os.path.join(root, "memories.db")),
+            })
+            dirs.clear()
+    return sorted(found, key=lambda s: (s["run"].startswith("legacy"), -s["modified"]))
 
 
 def resolve_store() -> Optional[str]:
@@ -86,7 +87,7 @@ def agent() -> AgenticMemoryAgent:
         if not STORE_DIR or not os.path.exists(os.path.join(STORE_DIR, "memories.db")):
             raise HTTPException(
                 status_code=404,
-                detail="No store found under results/. Run scripts/run_memory_v3.py "
+                detail="No store found under results/. Run benchmarks/synthetic/run_v3.py "
                        "first, or set STORE=<path> when starting the server.",
             )
         _agent = AgenticMemoryAgent(base_dir=STORE_DIR, model=MODEL)
@@ -108,7 +109,7 @@ def status():
     body = {
         "system": "memory_v3",
         "model": MODEL,
-        "run": os.path.basename(os.path.dirname(STORE_DIR)) if STORE_DIR else None,
+        "run": os.path.relpath(os.path.dirname(STORE_DIR), RESULTS_DIR) if STORE_DIR else None,
         "store": os.path.relpath(STORE_DIR, PROJECT_ROOT) if STORE_DIR else None,
         "pinned": bool(os.getenv("STORE")),
         "dataset": os.path.relpath(DATASET, PROJECT_ROOT),
@@ -268,17 +269,15 @@ def chat(request: ChatRequest):
 
 import re as _re
 
-def _locomo_results_dir() -> Optional[str]:
-    """Most recent locomo results directory."""
-    candidates = []
-    for name in os.listdir(RESULTS_DIR) if os.path.isdir(RESULTS_DIR) else []:
-        path = os.path.join(RESULTS_DIR, name, "locomo_results.json")
-        if os.path.exists(path):
-            candidates.append((os.path.getmtime(path), os.path.join(RESULTS_DIR, name)))
-    return max(candidates)[1] if candidates else None
+def _find_locomo_results() -> Optional[str]:
+    """results/locomo/<LOCOMO_RUN>/locomo_results.json — v3_agentic unless LOCOMO_RUN is set."""
+    path = os.path.join(RESULTS_DIR, "locomo", os.getenv("LOCOMO_RUN", "v3_agentic"),
+                        "locomo_results.json")
+    return path if os.path.exists(path) else None
 
 
 @app.get("/api/locomo/dataset")
+
 def locomo_dataset(conversation: Optional[int] = None):
     """LoCoMo source conversations."""
     if not os.path.exists(LOCOMO_PATH):
@@ -320,17 +319,16 @@ def locomo_dataset(conversation: Optional[int] = None):
 @app.get("/api/locomo/qa")
 def locomo_qa():
     """LoCoMo QA results from the most recent run."""
-    results_dir = _locomo_results_dir()
-    if not results_dir:
+    path = _find_locomo_results()
+    if not path:
         raise HTTPException(status_code=404, detail="No LoCoMo results found")
-    path = os.path.join(results_dir, "locomo_results.json")
     with open(path) as f:
-        data = json.load(f)
+        raw = json.load(f)
     return {
-        "run": os.path.basename(results_dir),
-        "model": data.get("model", ""),
-        "summary": data.get("summary", {}),
-        "records": data.get("records", []),
+        "run": os.path.basename(os.path.dirname(path)),
+        "model": raw.get("model", ""),
+        "summary": raw.get("summary", {}),
+        "records": raw.get("records", []),
     }
 
 
@@ -342,6 +340,6 @@ if __name__ == "__main__":
         if others and not os.getenv("STORE"):
             print(f"         also available: {', '.join(others)}")
     else:
-        print("store:   none found under results/ — run scripts/run_memory_v3.py")
+        print("store:   none found under results/ — run benchmarks/synthetic/run_v3.py")
     print(f"dataset: {os.path.relpath(DATASET, PROJECT_ROOT)}")
     uvicorn.run(app, host="0.0.0.0", port=8000)
