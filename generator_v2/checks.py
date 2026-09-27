@@ -273,7 +273,7 @@ def compare_knobs(spec: PersonaSpec, m: dict) -> list[KnobRow]:
     rows = [KnobRow("preference_domains", str(t.preference_domains), str(m["preference_domains"]),
                     m["preference_domains"] == t.preference_domains)]
     used = set(m["rule_types"])
-    rows.append(KnobRow("rule_types", f"req {t.rule_types.required} ⊆ used ⊆ {t.rule_types.allowed}",
+    rows.append(KnobRow("rule_types", f"required {t.rule_types.required}, allowed {t.rule_types.allowed}",
                         ", ".join(m["rule_types"]),
                         set(t.rule_types.required) <= used <= set(t.rule_types.allowed)))
     lo, hi = m["shifts_per_domain"]
