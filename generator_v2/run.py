@@ -27,7 +27,7 @@ def persona_paths(user: str) -> list[Path]:
 
 def write_json(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, indent=2, default=str))
+    path.write_text(json.dumps(obj, indent=2, default=str, ensure_ascii=False))
 
 
 # ── Printouts ───────────────────────────────────────────────────────
@@ -47,7 +47,7 @@ def domain_timeline(spec: PersonaSpec, world: WorldState) -> str:
     for p in spec.preferences:
         out.append(f"\n  [{p.domain}]  ({p.noun})")
         for r in world.regimes_for(p.domain):
-            span = f"d{r.start:>3}–{r.end:<3} {d(r.start).isoformat()}→{d(r.end).isoformat()}"
+            span = f"d{r.start:>3}-{r.end:<3} {d(r.start).isoformat()}→{d(r.end).isoformat()}"
             line = f"    {r.kind:<9} {span}  {r.label}"
             if r.kind != "initial":
                 if r.visibility == "uncaused":
@@ -62,7 +62,7 @@ def domain_timeline(spec: PersonaSpec, world: WorldState) -> str:
         excs = [(day.day, day.preferences[p.domain]) for day in world.days if day.preferences[p.domain].is_exception]
         if excs:
             sample = ", ".join(f"d{n}: {x.value} ({x.exception_reason})" for n, x in excs[:3])
-            out.append(f"    exceptions: {len(excs)} — e.g. {sample}")
+            out.append(f"    exceptions: {len(excs)} - e.g. {sample}")
         for dis in (x for x in spec.distractors if x.domain == p.domain):
             flag = " [CONFOUNDER]" if dis.confounder else ""
             out.append(f"    distractor d{dis.day}: {dis.text}{flag}")
@@ -74,7 +74,7 @@ def fact_timeline(spec: PersonaSpec, world: WorldState) -> str:
     builder = qa.QABuilder(spec, world)
     stated = {s.id: s for s in world.statements}
     for f in spec.facts:
-        parts = [f"{v} (d{s}–{'end' if e == spec.num_days else e})" for v, s, e in builder._intervals(f.entity)]
+        parts = [f"{v} (d{s}-{'end' if e == spec.num_days else e})" for v, s, e in builder._intervals(f.entity)]
         sep = " → " if f.cardinality == "single" else "; "
         out.append(f"  {f.entity:<17} [{f.cardinality}] " + (sep.join(parts) if parts else "(none)"))
         for c in f.changes:
@@ -112,7 +112,7 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
     spec = load_spec(path, ladder)
     report: list[str] = []
     say = report.append
-    say(f"\n{'═' * 78}\n{spec.user_id.upper()} — {spec.name} (seed {spec.seed}, {spec.num_days} days "
+    say(f"\n{'═' * 78}\n{spec.user_id.upper()} - {spec.name} (seed {spec.seed}, {spec.num_days} days "
         f"from {spec.start_date})\n{'═' * 78}")
     errors = checks.check_spec(spec)
     world = simulator.simulate(spec) if not errors else None
@@ -131,7 +131,7 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
         say("\nFacts and events:\n" + fact_timeline(spec, world))
         say("\nQA:\n" + qa_summary(items, n_samples, spec.seed))
     if errors:
-        say(f"\n✗ {len(errors)} error(s) — nothing written:")
+        say(f"\n✗ {len(errors)} error(s) - nothing written:")
         report.extend(f"  - {e}" for e in errors)
         print("\n".join(report))
         return False
@@ -151,7 +151,7 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
         "retrospective_statements": sum(s.retrospective for s in world.statements),
         "qa": qa.qa_stats(items),
     })
-    say(f"\n✓ all checks passed — wrote {out.relative_to(config.REPO_DIR)}/")
+    say(f"\n✓ all checks passed - wrote {out.relative_to(config.REPO_DIR)}/")
     (out / "simulate_report.txt").write_text("\n".join(report) + "\n")
     print("\n".join(report))
     return True

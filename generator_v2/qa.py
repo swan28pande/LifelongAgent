@@ -40,7 +40,7 @@ CAPABILITY = {
     "abstention": "abstention",
 }
 TYPE_ORDER = list(CAPABILITY)
-NOT_KNOWN = "Not known — this was never mentioned."
+NOT_KNOWN = "Not known - this was never mentioned."
 
 
 def fmt(d: dt.date) -> str:
@@ -298,13 +298,13 @@ class QABuilder:
                 self.add(Draft("exception_vs_shift", dom,
                                f"On {fmt(day.date)}, {self.name}'s {noun} was {p.value} instead of the usual "
                                f"{p.base_value}. Was that a lasting change?",
-                               f"No — it was a one-off ({p.exception_reason}); the usual routine continued.",
+                               f"No - it was a one-off ({p.exception_reason}); the usual routine continued.",
                                "yes_no", ["no"], [day.day, after], "llm_judge", ["exception"]))
             for reg, day, old, new in sorted(self.rng.sample(positives, k), key=lambda x: x[1]):
                 self.add(Draft("exception_vs_shift", dom,
                                f"On {fmt(self.date(day))}, {self.name}'s {noun} was {new} instead of the usual "
                                f"{old}. Was that a lasting change?",
-                               f"Yes — from {self.date(reg.start).isoformat()} the routine changed to {reg.label}.",
+                               f"Yes - from {self.date(reg.start).isoformat()} the routine changed to {reg.label}.",
                                "yes_no", ["yes"], reg.mention_days[:3], "llm_judge", ["shift", reg.visibility]))
 
     def reversions(self) -> None:
@@ -316,17 +316,17 @@ class QABuilder:
             current = self.regime_at(reg.domain, self.N)
             self.add(Draft("reversion", reg.domain,
                            f"Is {self.name} still on {reg.label} for their {noun}?",
-                           f"No — that lasted from {self.date(reg.start).isoformat()} to "
+                           f"No - that lasted from {self.date(reg.start).isoformat()} to "
                            f"{self.date(reg.end).isoformat()}; then {self.name} went back to {back.label}.",
                            "yes_no", ["no"], sorted({reg.mention_days[-1], back.first_mention_day or back.start}),
                            "llm_judge", ["temporary"]))
             self.add(Draft("reversion", reg.domain,
                            f"What did {self.name}'s {noun} go back to after the period of {reg.label}?",
-                           f"{back.label} — {self.describe(back)}", "free_text", [back.label],
+                           f"{back.label} - {self.describe(back)}", "free_text", [back.label],
                            back.mention_days[:3], "llm_judge", ["temporary"]))
             self.add(Draft("reversion", reg.domain,
                            f"Is {self.name} still on {current.label} for their {noun}?",
-                           f"Yes — since {self.date(current.start).isoformat()}.", "yes_no", ["yes"],
+                           f"Yes - since {self.date(current.start).isoformat()}.", "yes_no", ["yes"],
                            current.mention_days[-3:], "llm_judge", ["control"]))
 
     # ── fact questions ──────────────────────────────────────────────
@@ -459,11 +459,11 @@ class QABuilder:
         used = set()
         for dis in self.spec.distractors:
             noun = self.noun[dis.domain]
-            answer = f"No — nothing about {self.name}'s {noun} changed because of it."
+            answer = f"No - nothing about {self.name}'s {noun} changed because of it."
             if dis.confounder:
                 near = [r for r in self.regimes(dis.domain) if abs(r.start - dis.day) <= 10 and r.kind != "initial"]
                 if near:
-                    answer = (f"No — {self.name}'s {noun} did change around then (to {near[0].label} from "
+                    answer = (f"No - {self.name}'s {noun} did change around then (to {near[0].label} from "
                               f"{self.date(near[0].start).isoformat()}), but no link to this was ever stated.")
             self.add(Draft("distractor_probe", dis.domain,
                            f"Around {self.date(dis.day).isoformat()}, {dis.text}. Did that lead to any change in {self.name}'s {noun}?",
@@ -478,7 +478,7 @@ class QABuilder:
                 self.add(Draft("distractor_probe", reg.domain,
                                f"Around {self.date(reg.cause_day).isoformat()}, {reg.cause_text}. "
                                f"Did that lead to any change in {self.name}'s {rnoun}?",
-                               f"Yes — from {self.date(reg.start).isoformat()} {self.name}'s {rnoun} changed to {reg.label}.",
+                               f"Yes - from {self.date(reg.start).isoformat()} {self.name}'s {rnoun} changed to {reg.label}.",
                                "yes_no", ["yes"], sorted({self.stated_day(self._cause_id(reg)),
                                                           reg.first_mention_day or reg.start}),
                                "llm_judge", ["control", reg.visibility]))
@@ -499,7 +499,7 @@ class QABuilder:
                 ask = ((lambda v: f"Is {v} one of {self.name}'s {uf.label}?") if uf.cardinality == "multi"
                        else (lambda v: f"Is {self.name}'s {uf.label} {v}?"))
                 self.add(Draft("other_person", "other_people", ask(fact.value),
-                               f"No — that is {p.person} ({self.name}'s {p.relation}), not {self.name}.",
+                               f"No - that is {p.person} ({self.name}'s {p.relation}), not {self.name}.",
                                "yes_no", ["no"], ev, "llm_judge", ["confusable"]))
                 if mine:
                     self.add(Draft("other_person", "other_people", ask(mine[0]), "Yes.", "yes_no", ["yes"],

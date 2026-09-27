@@ -258,7 +258,7 @@ def simulate(spec: PersonaSpec) -> WorldState:
             active_regime[(d, dom)] = reg
             base_value[(d, dom)] = rules.evaluate(reg.rule, d, dates[d], reg.anchor, ctx)
 
-    # Sampled mentions (raw rate — measured against the ladder before any forcing).
+    # Sampled mentions (raw rate - measured against the ladder before any forcing).
     r = _rng(spec, "mentions")
     mentioned: dict[tuple[int, str], str] = {}
     for d in session_days:
@@ -369,7 +369,7 @@ def simulate(spec: PersonaSpec) -> WorldState:
         for c in chains.values():
             told = [s for s in c.states if stated_on.get(s.id) is not None and stated_on[s.id] < d]
             if told and max(told, key=lambda s: s.day).status == "planned":
-                followups.append(f"open plan — {c.title}: {max(told, key=lambda s: s.day).text}")
+                followups.append(f"open plan - {c.title}: {max(told, key=lambda s: s.day).text}")
         k = min(len(followups), r.randint(2, 4))
         days.append(DayState(
             day=d, date=dates[d], weekday=dates[d].strftime("%A"), has_session=has_session[d],

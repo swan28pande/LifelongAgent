@@ -1,5 +1,5 @@
-# U3 — paraphrase. Sessions on ~75% of days, three shifts per domain (6 explicit,
-# 5 implicit, 1 uncaused), lags 0–3, two temporary shifts, one cross-domain cause
+# U3 - paraphrase. Sessions on ~75% of days, three shifts per domain (6 explicit,
+# 5 implicit, 1 uncaused), lags 0-3, two temporary shifts, one cross-domain cause
 # (job.clinic → morning drink and commute), three distractors, 5% exceptions.
 
 user_id: u3
@@ -138,7 +138,7 @@ preferences:
       - {value: "got a ride from Tom", reason: "a bad traffic day"}
     regimes:
       - start: 1
-        label: night bus Mon–Wed, rideshare Thu/Fri, no commute on weekends
+        label: night bus Mon-Wed, rideshare Thu/Fri, no commute on weekends
         rule:
           type: day_of_week
           map: {mon: night bus, tue: night bus, wed: night bus, thu: rideshare,
@@ -188,7 +188,7 @@ preferences:
         cause: {event_ref: italian, lag_days: 2, visibility: explicit}
         rule: {type: constant, value: "Italian lessons podcast"}
       - start: 603
-        label: dog training podcast Mon/Wed, true crime Tue/Thu, comedy Fri–Sun
+        label: dog training podcast Mon/Wed, true crime Tue/Thu, comedy Fri-Sun
         cause: {event_ref: pet.dash, lag_days: 3, visibility: explicit}
         rule:
           type: day_of_week

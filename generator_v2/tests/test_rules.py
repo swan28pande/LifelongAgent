@@ -30,7 +30,7 @@ def test_weekly_alternate_blocks_of_seven():
 
 def test_weekly_alternate_anchors_to_regime_start_not_dataset_start():
     rule = {"type": "weekly_alternate", "values": ["a", "b"]}
-    # Regime starting on day 12 (a Thursday): blocks run 12–18, 19–25, …
+    # Regime starting on day 12 (a Thursday): blocks run 12-18, 19-25, …
     assert ev(rule, 12, anchor=12) == "a"
     assert ev(rule, 18, anchor=12) == "a"
     assert ev(rule, 19, anchor=12) == "b"
@@ -62,7 +62,7 @@ def test_nested_week_parity_by_day_of_week():
     assert ev(rule, 2) == "A-mon"
     assert ev(rule, 9) == "B-mon"
     assert ev(rule, 16) == "A-mon"
-    # Anchored at day 5: block 1 covers 5–11, block 2 covers 12–18.
+    # Anchored at day 5: block 1 covers 5-11, block 2 covers 12-18.
     assert ev(rule, 9, anchor=5) == "A-mon"
     assert ev(rule, 16, anchor=5) == "B-mon"
 

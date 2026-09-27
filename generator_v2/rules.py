@@ -30,7 +30,7 @@ CLIMATE: dict[str, list[str]] = {
 SEASON_DEFAULT_WEATHER = {"winter": "cold", "spring": "mild", "summer": "hot", "fall": "mild"}
 
 WEEKDAY_LABEL = {"mon": "Mon", "tue": "Tue", "wed": "Wed", "thu": "Thu", "fri": "Fri", "sat": "Sat", "sun": "Sun"}
-CONDITION_LABEL = {("is_workday", "true"): "on workdays (Mon–Fri)", ("is_workday", "false"): "on weekends"}
+CONDITION_LABEL = {("is_workday", "true"): "on workdays (Mon-Fri)", ("is_workday", "false"): "on weekends"}
 
 
 @dataclass(frozen=True)
@@ -194,14 +194,14 @@ def describe(rule: "Rule | str", anchor_date: dt.date) -> str:
             f"block {i + 1}: {describe(b, anchor_date)}" for i, b in enumerate(rule.blocks)
         )
         return (f"a {len(rule.blocks)}-block rotation of {rule.block_days}-day blocks starting "
-                f"{_fmt_date(anchor_date)} — {blocks}")
+                f"{_fmt_date(anchor_date)} - {blocks}")
     if isinstance(rule, ConditionalRule):
         parts = "; ".join(
             f"{_condition_label(rule.condition, k)}: {describe(c, anchor_date)}"
             for k, c in rule.cases.items()
         )
         return {"is_workday": "split by workday vs weekend", "season": "split by season",
-                "weather": "split by weather"}[rule.condition] + f" — {parts}"
+                "weather": "split by weather"}[rule.condition] + f" - {parts}"
     raise TypeError(f"unknown rule {rule!r}")
 
 

@@ -64,7 +64,7 @@ ABSTENTION_TEMPLATES = [
 
 # ── Later phases ────────────────────────────────────────────────────
 CONVERSATION_MODEL = "gpt-4o-mini"
-CONVERSATION_MODEL_HARD = "gpt-4o"     # optional for U4–U5
+CONVERSATION_MODEL_HARD = "gpt-4o"     # optional for U4-U5
 VALIDATOR_MODEL = "gemini-2.5-flash"   # different family from the generator
 CONCURRENCY = 16
 MAX_RETRIES = 5

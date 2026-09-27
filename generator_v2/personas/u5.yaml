@@ -1,4 +1,4 @@
-# U5 — hardest user. Sessions on half the days, domains mentioned about half the time,
+# U5 - hardest user. Sessions on half the days, domains mentioned about half the time,
 # nested and conditional rules, 30 shifts (explicit/implicit/uncaused ≈ 23/50/27),
 # 4 temporary shifts, 4 cross-domain causes, 8 distractors (one deliberate confounder),
 # and facts about other people that must not be attributed to Priya. Everything Priya
@@ -54,10 +54,10 @@ facts:
       - {day: 1, op: add, value: "piano"}
       - {id: hobby.pottery, day: 60, op: add, value: "pottery", text: "started a pottery class"}
       - {id: hobby.pottery_stop, day: 170, op: remove, value: "pottery",
-         text: "quit pottery — the class ended and she lost interest"}
+         text: "quit pottery - the class ended and she lost interest"}
       - {id: hobby.trail, day: 330, op: add, value: "trail running", text: "took up trail running"}
       - {id: hobby.piano_stop, day: 420, op: remove, value: "piano",
-         text: "stopped playing piano — no time for lessons after the move"}
+         text: "stopped playing piano - no time for lessons after the move"}
 
 events:
   - chain_id: library_card
@@ -209,7 +209,7 @@ preferences:
           condition: is_workday
           cases: {true: "light rail", false: "no commute"}
       - start: 400
-        label: hybrid week — light rail Mon/Wed/Fri, home Tue/Thu
+        label: hybrid week - light rail Mon/Wed/Fri, home Tue/Thu
         rule:
           type: day_of_week
           map: {mon: light rail, tue: work from home, wed: light rail, thu: work from home,

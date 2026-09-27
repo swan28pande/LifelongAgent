@@ -123,7 +123,7 @@ def check_spec(spec: PersonaSpec) -> list[str]:
             if length < MIN_REGIME_DAYS:
                 errs.append(f"{r.id}: lasts {length} days (< {MIN_REGIME_DAYS})")
             if prev_rule is not None and r.rule == prev_rule:
-                errs.append(f"{r.id}: same rule as the regime before it — not a real shift")
+                errs.append(f"{r.id}: same rule as the regime before it - not a real shift")
             prev_rule = r.rule if not r.temporary else prev_rule
             if r.cause:
                 target = registry.get(r.cause.event_ref)
@@ -277,14 +277,14 @@ def compare_knobs(spec: PersonaSpec, m: dict) -> list[KnobRow]:
                         ", ".join(m["rule_types"]),
                         set(t.rule_types.required) <= used <= set(t.rule_types.allowed)))
     lo, hi = m["shifts_per_domain"]
-    rows.append(KnobRow("shifts_per_domain", str(t.shifts_per_domain), f"{lo}–{hi}" if lo != hi else str(lo),
+    rows.append(KnobRow("shifts_per_domain", str(t.shifts_per_domain), f"{lo}-{hi}" if lo != hi else str(lo),
                         t.shifts_per_domain.contains(lo) and t.shifts_per_domain.contains(hi)))
     mix_ok = all(abs(m["visibility_mix"][k] - t.visibility_mix[k]) <= config.VISIBILITY_MIX_TOLERANCE
                  for k in ("explicit", "implicit", "uncaused"))
     fmt = lambda d: "/".join(f"{round(d[k] * 100)}" for k in ("explicit", "implicit", "uncaused"))
     rows.append(KnobRow("visibility_mix (E/I/U %)", fmt(t.visibility_mix), fmt(m["visibility_mix"]), mix_ok))
     lags = m["lag_days"]
-    rows.append(KnobRow("lag_days", str(t.lag_days), f"{lags[0]}–{lags[1]}" if lags else "n/a",
+    rows.append(KnobRow("lag_days", str(t.lag_days), f"{lags[0]}-{lags[1]}" if lags else "n/a",
                         lags is None or (t.lag_days.contains(lags[0]) and t.lag_days.contains(lags[1]))))
     for knob in ("temporary_shifts", "fact_changes"):
         rng = getattr(t, knob)

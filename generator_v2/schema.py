@@ -37,7 +37,7 @@ class IntRange(Strict):
     def __str__(self) -> str:
         if self.max == self.min:
             return str(self.min)
-        return f"{self.min}–{self.max}" if self.max is not None else f"{self.min}+"
+        return f"{self.min}-{self.max}" if self.max is not None else f"{self.min}+"
 
 
 class RuleTypes(Strict):
