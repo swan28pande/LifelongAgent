@@ -37,6 +37,13 @@ def statement_text(spec: PersonaSpec, s) -> str:
     return text
 
 
+def known_events(world: WorldState, day: DayState) -> list[str]:
+    """Events, news about other people and distractors told in earlier sessions."""
+    return [s.text for s in world.statements
+            if s.kind in ("event_update", "other_person", "distractor")
+            and s.stated_day is not None and s.stated_day < day.day]
+
+
 def build_check(spec: PersonaSpec, world: WorldState, day: DayState) -> Check:
     nouns = {p.domain: p.noun for p in spec.preferences}
     prefs = {dom: (p.value if p.mentioned else "not mentioned", options_for(spec, world, dom))
@@ -52,6 +59,7 @@ def build_check(spec: PersonaSpec, world: WorldState, day: DayState) -> Check:
                            "instruction": ci.instruction,
                            "on_regime_day": reg.first_mention_day == day.day}
     known = [f"{e}: {', '.join(v)}" for e, v in day.known_facts.items() if v]
+    known += [f"earlier: {t}" for t in known_events(world, day)]
     return Check(prefs, statements, causes, known)
 
 

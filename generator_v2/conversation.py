@@ -14,7 +14,7 @@ from pathlib import Path
 from . import config
 from .llm import LLM
 from .schema import DayState, PersonaSpec, WorldState
-from .validator import build_check, statement_text, validate
+from .validator import build_check, known_events, statement_text, validate
 
 SYSTEM = (config.PACKAGE_DIR / "prompts" / "conversation_system.txt").read_text()
 
@@ -38,6 +38,10 @@ def writer_prompt(spec: PersonaSpec, world: WorldState, day: DayState, feedback:
              f"WHAT THE ASSISTANT ALREADY KNOWS ABOUT {spec.name.upper()}:"]
     known = [f"- {e.replace('_', ' ')}: {', '.join(v)}" for e, v in before.items() if v]
     lines += known or ["- (nothing yet — this is one of the first conversations)"]
+    earlier = known_events(world, day)
+    if earlier:
+        lines += ["", "EVENTS FROM EARLIER CONVERSATIONS (known; may be referred to, never changed):"]
+        lines += [f"- {t}" for t in earlier]
 
     lines += ["", "TODAY'S CHOICES — the user mentions each:"]
     mentioned = {d: p for d, p in day.preferences.items() if p.mentioned}
@@ -53,8 +57,12 @@ def writer_prompt(spec: PersonaSpec, world: WorldState, day: DayState, feedback:
     lines += ["", "REQUIRED UPDATES — the user states each explicitly:"]
     for s in required:
         text = statement_text(spec, s)
-        if s.retrospective:
+        if s.kind == "background_fact":
+            pass
+        elif s.retrospective:
             text += f" — happened {(day.day - s.effective_day)} day(s) ago; describe it in the past"
+        else:
+            text += " — this happened today (or is being announced today); do not place it on another day"
         lines.append(f"- {text}")
     if not required:
         lines.append("- (none)")

@@ -14,6 +14,8 @@ PREFERENCES — for each topic, what did the USER themselves choose or do today?
 
 STATEMENTS — for each id, is this information clearly stated in the conversation?
 - true only if a reader would learn this specific fact from the conversation.
+- If the statement gives a date, it is false when the conversation clearly places the
+  event on a different day (e.g. "last Sunday" when it happened today).
 
 CAUSES — for each id you are given a topic and an event.
 - event_mentioned: does the event itself come up in the conversation?
