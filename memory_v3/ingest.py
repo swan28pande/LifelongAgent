@@ -4,8 +4,8 @@ Ingestion pipeline.
     day's turns
         │
         ▼
-    [1] extract        one LLM call  → dated (entity, content) records
-        │
+    [1] extract        one LLM call  → dated (entity, content, type) records
+        │                              type is one of: preference, fact, event
         ▼
     [2] consolidate    deterministic → normalize near-duplicate values to canonical spellings
         │
@@ -13,20 +13,30 @@ Ingestion pipeline.
     [3] dedupe         deterministic → drop exact repeats of (entity, content, date)
         │
         ▼
-    [4] write          deterministic → SQL inserts
+    [4] write          deterministic → SQL inserts (with type tag)
         │
         ▼
     [5] index          deterministic → fixed-size chunks into the RAG store
 
 One LLM call per day.
 
-Deduplication is an exact match on (entity, content, date), so it is a set operation
-and a SQL lookup rather than a judgement call. It guards two cases: the same choice
-extracted twice from one transcript, and a day ingested more than once (a re-run, or
-a second flush that restates a choice already recorded earlier that day).
+The extractor produces three kinds of record from each day's conversation:
+  - preferences: recurring choices within a category (value changes over time)
+  - facts: stable attributes about the person (rarely change)
+  - events: one-time occurrences or milestones (tied to a specific date)
 
-A repeat on a *different* date is never a duplicate. Recurrence is the evidence that
-makes a pattern visible, so every occurrence is kept.
+All three share the same (entity, content, date) shape and flow through the same
+consolidation, dedup, and write steps. The `type` column distinguishes them in the
+DB so retrieval and summarization can treat them differently.
+
+Deduplication is an exact match on (entity, content, date), so it is a set operation
+and a SQL lookup rather than a judgement call. It guards two cases: the same item
+extracted twice from one transcript, and a day ingested more than once (a re-run, or
+a second flush that restates something already recorded earlier that day).
+
+A repeat on a *different* date is never a duplicate. For preferences, recurrence is
+the evidence that makes a pattern visible. For facts, it confirms the fact is still
+true as of that date. Every occurrence is kept.
 
 Summarization is not part of this. The caller drives it on a cadence, because
 rebuilding a summary for a period still in progress is wasted work and can leave prose
