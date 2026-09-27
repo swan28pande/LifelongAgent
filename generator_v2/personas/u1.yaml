@@ -1,0 +1,99 @@
+# U1 — easiest user. Exact terms, a session every day, every domain mentioned daily,
+# one explicit, zero-lag shift per domain, no exceptions or distractors.
+
+user_id: u1
+name: Leo
+seed: 101
+start_date: 2026-03-01
+num_days: 730
+
+facts:
+  - entity: job
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "account coordinator at a logistics firm"}
+      - id: job.promotion
+        day: 320
+        op: set
+        value: "account manager at the logistics firm"
+        text: "got promoted to account manager at the logistics firm, which has a stricter office dress code"
+  - entity: city
+    noun: city of residence
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "Austin, Texas"}
+      - id: city.chicago
+        day: 480
+        op: set
+        value: "Chicago, Illinois"
+        text: "moved to Chicago after transferring to the Chicago branch"
+  - entity: diet
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "vegetarian"}
+  - entity: living_situation
+    noun: living situation
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "lives with a roommate named Sam"}
+  - entity: hobbies
+    cardinality: multi
+    changes:
+      - {day: 1, op: add, value: "rock climbing"}
+      - {day: 1, op: add, value: "guitar"}
+
+events:
+  - chain_id: half_marathon
+    title: the half marathon
+    states:
+      - {day: 40, status: planned, text: "signed up for the Austin half marathon in May"}
+      - {day: 82, status: happened, text: "ran the half marathon and finished in 1:58"}
+  - chain_id: checkup
+    title: the annual check-up
+    states:
+      - {day: 205, status: happened, text: "had a check-up and the doctor advised cutting back on caffeine"}
+  - chain_id: sister_wedding
+    title: his sister's wedding
+    states:
+      - {day: 150, status: planned, text: "his sister Ana is getting married in November"}
+      - {day: 262, status: happened, text: "went to his sister Ana's wedding in San Antonio"}
+
+preferences:
+  - domain: coffee
+    noun: morning coffee
+    regimes:
+      - start: 1
+        label: alternating oat milk latte and black coffee weeks
+        rule: {type: weekly_alternate, values: ["oat milk latte", "black coffee"]}
+      - start: 205
+        label: alternating matcha latte and decaf americano weeks
+        rule: {type: weekly_alternate, values: ["matcha latte", "decaf americano"]}
+        cause: {event_ref: checkup, lag_days: 0, visibility: explicit}
+
+  - domain: clothing
+    noun: outfit
+    regimes:
+      - start: 1
+        label: 3 days fitted t-shirt, 3 days oversized hoodie
+        rule:
+          type: n_day_cycle
+          segments: [{value: "fitted t-shirt", days: 3}, {value: "oversized hoodie", days: 3}]
+      - start: 320
+        label: 5 days button-down shirt, 2 days polo shirt
+        rule:
+          type: n_day_cycle
+          segments: [{value: "button-down shirt", days: 5}, {value: "polo shirt", days: 2}]
+        cause: {event_ref: job.promotion, lag_days: 0, visibility: explicit}
+
+  - domain: lunch
+    noun: lunch
+    regimes:
+      - start: 1
+        label: alternating homemade salad and deli sandwich weeks
+        rule: {type: weekly_alternate, values: ["homemade salad", "deli sandwich"]}
+      - start: 480
+        label: 4 days meal-prep burrito bowl, 3 days ramen
+        rule:
+          type: n_day_cycle
+          segments: [{value: "meal-prep burrito bowl", days: 4}, {value: "ramen", days: 3}]
+        cause: {event_ref: city.chicago, lag_days: 0, visibility: explicit}

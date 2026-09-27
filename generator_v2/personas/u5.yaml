@@ -1,0 +1,429 @@
+# U5 — hardest user. Sessions on half the days, domains mentioned about half the time,
+# nested and conditional rules, 30 shifts (explicit/implicit/uncaused ≈ 23/50/27),
+# 4 temporary shifts, 4 cross-domain causes, 8 distractors (one deliberate confounder),
+# 3 retractions, and facts about other people that must not be attributed to Priya.
+#
+# Cross-domain causes: pet.biscuit (exercise, bedtime), knee_injury (exercise, commute),
+# city.denver (commute, dinner), job.climate (commute, bedtime).
+
+user_id: u5
+name: Priya
+seed: 505
+start_date: 2026-03-01
+num_days: 730
+
+facts:
+  - entity: job
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "backend engineer at a fintech startup"}
+      - {id: job.promotion, day: 240, op: set, value: "senior backend engineer at the fintech startup",
+         text: "got promoted to {value} after a strong review"}
+      - {id: job.climate, day: 520, op: set, value: "engineering manager at a climate-tech company",
+         cause_event: new_job.1, text: "started a new job as {value}"}
+  - entity: city
+    noun: city of residence
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "Pittsburgh, Pennsylvania"}
+      - {id: city.denver, day: 300, op: set, value: "Denver, Colorado", cause_event: relocation.1,
+         text: "moved to Denver for the office transfer"}
+  - entity: relationship
+    noun: relationship status
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "single"}
+      - {id: rel.dating, day: 150, op: set, value: "dating Arjun", text: "started dating Arjun"}
+      - {id: rel.cohabit, day: 305, op: set, value: "living with her partner Arjun",
+         text: "moved in with her partner Arjun"}
+  - entity: diet
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "pescatarian"}
+      - {id: diet.veg, day: 470, op: set, value: "vegan", text: "switched to a {value} diet"}
+    retractions:
+      - {day: 474, wrong_value: "vegan", correct_value: "vegetarian",
+         question: "What diet has Priya followed since mid-2027?", answer: "vegetarian"}
+  - entity: pets
+    cardinality: multi
+    changes:
+      - {id: pet.biscuit, day: 95, op: add, value: "golden retriever named Biscuit", text: "adopted a {value}"}
+      - {id: pet.cat, day: 600, op: add, value: "cat named Miso", text: "adopted a {value}"}
+    retractions:
+      - {day: 98, wrong_value: "golden retriever named Biscuit", correct_value: "labrador named Biscuit",
+         question: "What breed is Priya's dog Biscuit?", answer: "labrador"}
+      - {day: 603, wrong_value: "cat named Miso", correct_value: "cat named Mochi",
+         question: "What is the name of Priya's cat?", answer: "Mochi"}
+  - entity: hobbies
+    cardinality: multi
+    changes:
+      - {day: 1, op: add, value: "bouldering"}
+      - {day: 1, op: add, value: "piano"}
+      - {id: hobby.pottery, day: 60, op: add, value: "pottery", text: "started a pottery class"}
+      - {id: hobby.pottery_stop, day: 170, op: remove, value: "pottery",
+         text: "quit pottery — the class ended and she lost interest"}
+      - {id: hobby.trail, day: 330, op: add, value: "trail running", text: "took up trail running"}
+      - {id: hobby.piano_stop, day: 420, op: remove, value: "piano",
+         text: "stopped playing piano — no time for lessons after the move"}
+
+events:
+  - chain_id: library_card
+    title: the library card
+    states:
+      - {day: 120, status: happened, text: "got a library card at the Carnegie Library"}
+  - chain_id: knee_injury
+    title: her knee injury
+    states:
+      - {day: 180, status: happened, text: "tore a ligament in her knee while bouldering"}
+      - {day: 215, status: happened, text: "her physio cleared the knee for normal activity"}
+  - chain_id: concert
+    title: the synthwave concert
+    states:
+      - {day: 195, status: happened, text: "saw a live synthwave show with Arjun"}
+  - chain_id: relocation
+    title: the Denver transfer
+    states:
+      - {day: 270, status: planned, text: "her company offered a transfer to the Denver office"}
+      - {day: 296, status: happened, text: "accepted the Denver transfer"}
+  - chain_id: book_club
+    title: the book club
+    states:
+      - {day: 318, status: happened, text: "joined a neighborhood book club in Denver"}
+  - chain_id: half_marathon
+    title: the Denver half marathon
+    states:
+      - {day: 340, status: planned, text: "registered for the Denver half marathon in April"}
+      - {day: 410, status: happened, text: "ran the Denver half marathon in 2:05"}
+  - chain_id: italy_trip
+    title: the Italy trip
+    states:
+      - {day: 380, status: planned, text: "planning a trip to Italy in June with Arjun"}
+      - {day: 412, status: cancelled, text: "cancelled the Italy trip because of a work deadline"}
+  - chain_id: new_job
+    title: the engineering manager job search
+    states:
+      - {day: 500, status: planned, text: "interviewing for an engineering manager role at a climate-tech company"}
+      - {day: 515, status: happened, text: "accepted the engineering manager offer at the climate-tech company"}
+  - chain_id: hiking_club
+    title: the hiking group
+    states:
+      - {day: 553, status: happened, text: "joined a weekend hiking group"}
+  - chain_id: wisdom_teeth
+    title: her wisdom teeth surgery
+    states:
+      - {day: 555, status: happened, text: "had her wisdom teeth removed"}
+  - chain_id: ereader
+    title: the e-reader
+    states:
+      - {day: 585, status: happened, text: "bought an e-reader"}
+  - chain_id: vinyl_gift
+    title: the record player gift
+    states:
+      - {day: 605, status: happened, text: "Arjun gave her a record player as a gift"}
+  - chain_id: on_call
+    title: the product-launch on-call rotation
+    states:
+      - {day: 630, status: happened, text: "started an on-call rotation for a product launch"}
+      - {day: 659, status: happened, text: "the product launch wrapped up and the on-call rotation ended"}
+  - chain_id: sleep_app
+    title: the sleep-tracking app
+    states:
+      - {day: 695, status: happened, text: "started using a sleep-tracking app"}
+
+preferences:
+  - domain: exercise
+    noun: workout
+    exception_pool:
+      - {value: "skipped workout", reason: "worked late"}
+      - {value: "swim at the community pool", reason: "a friend invited her"}
+      - {value: "rest day", reason: "felt under the weather"}
+      - {value: "long walk", reason: "the gym was closed"}
+      - {value: "spin class", reason: "had a free trial pass"}
+    regimes:
+      - start: 1
+        label: two-week rotation of runs/swims, bouldering and yoga
+        rule:
+          type: nested
+          blocks:
+            - type: day_of_week
+              map: {mon: evening run, tue: bouldering, wed: evening run, thu: bouldering,
+                    fri: yoga class, sat: long run, sun: rest day}
+            - type: day_of_week
+              map: {mon: swim, tue: bouldering, wed: swim, thu: bouldering,
+                    fri: yoga class, sat: bike ride, sun: rest day}
+      - start: 98
+        label: dog walks on weekdays, bouldering Tue/Thu, weekend dog hike
+        cause: {event_ref: pet.biscuit, lag_days: 3, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: morning dog walk, tue: bouldering, wed: morning dog walk, thu: bouldering,
+                fri: morning dog walk, sat: long dog hike, sun: rest day}
+      - start: 181
+        end: 214
+        temporary: true
+        label: physio exercises every day
+        cause: {event_ref: knee_injury, lag_days: 1, visibility: explicit}
+        revert_reason: "her physio cleared the knee"
+        rule: {type: constant, value: "physio exercises"}
+      - start: 262
+        label: alternating weeks of dog walks and home HIIT
+        rule: {type: weekly_alternate, values: ["morning dog walk", "home HIIT workout"]}
+      - start: 335
+        label: trail runs Mon/Wed/Sat, dog walks Tue/Thu/Sun
+        cause: {event_ref: hobby.trail, lag_days: 5, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: trail run, tue: morning dog walk, wed: trail run, thu: morning dog walk,
+                fri: rest day, sat: long trail run, sun: morning dog walk}
+      - start: 560
+        label: dog walks on workdays, group hikes on weekends
+        cause: {event_ref: hiking_club, lag_days: 7, visibility: implicit}
+        rule:
+          type: conditional
+          condition: is_workday
+          cases: {true: "morning dog walk", false: "group hike"}
+
+  - domain: commute
+    noun: commute
+    exception_pool:
+      - {value: "rideshare", reason: "running late"}
+      - {value: "took a taxi", reason: "heavy rain"}
+      - {value: "walked", reason: "the weather was nice"}
+      - {value: "got a ride from a coworker", reason: "her bike had a flat tire"}
+    regimes:
+      - start: 1
+        label: bus in winter and cycling otherwise on workdays, no commute on weekends
+        rule:
+          type: conditional
+          condition: is_workday
+          cases:
+            true: {type: conditional, condition: season, cases: {winter: "bus", default: "cycling"}}
+            false: "no commute"
+      - start: 182
+        end: 214
+        temporary: true
+        label: rideshare on workdays
+        cause: {event_ref: knee_injury, lag_days: 2, visibility: implicit}
+        rule:
+          type: conditional
+          condition: is_workday
+          cases: {true: "rideshare", false: "no commute"}
+      - start: 304
+        label: light rail on workdays
+        cause: {event_ref: city.denver, lag_days: 4, visibility: explicit}
+        rule:
+          type: conditional
+          condition: is_workday
+          cases: {true: "light rail", false: "no commute"}
+      - start: 400
+        label: hybrid week — light rail Mon/Wed/Fri, home Tue/Thu
+        rule:
+          type: day_of_week
+          map: {mon: light rail, tue: work from home, wed: light rail, thu: work from home,
+                fri: light rail, sat: no commute, sun: no commute}
+      - start: 525
+        label: cycling Mon/Tue/Thu, home Wed/Fri
+        cause: {event_ref: job.climate, lag_days: 5, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: cycling, tue: cycling, wed: work from home, thu: cycling,
+                fri: work from home, sat: no commute, sun: no commute}
+      - start: 640
+        label: bus in winter and e-bike otherwise on workdays
+        rule:
+          type: conditional
+          condition: is_workday
+          cases:
+            true: {type: conditional, condition: season, cases: {winter: "bus", default: "e-bike"}}
+            false: "no commute"
+
+  - domain: dinner
+    noun: dinner
+    exception_pool:
+      - {value: "takeout burrito", reason: "too tired to cook"}
+      - {value: "skipped dinner", reason: "a late meeting ran long"}
+      - {value: "dinner at a friend's place", reason: "a friend's birthday"}
+      - {value: "cereal", reason: "got home very late"}
+    regimes:
+      - start: 1
+        label: two-week rotation of home-cooked dinners with Friday takeout
+        rule:
+          type: nested
+          blocks:
+            - type: day_of_week
+              map: {mon: stir-fry, tue: lentil soup, wed: salmon bowl, thu: pasta,
+                    fri: takeout sushi, sat: dinner with friends, sun: leftovers}
+            - type: day_of_week
+              map: {mon: fish tacos, tue: lentil soup, wed: salmon bowl, thu: curry,
+                    fri: takeout pizza, sat: dinner with friends, sun: leftovers}
+      - start: 157
+        label: weekly routine with Friday date night and Saturday cooking with Arjun
+        cause: {event_ref: rel.dating, lag_days: 7, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: salmon bowl, tue: pasta, wed: stir-fry, thu: curry,
+                fri: dinner date out, sat: cooking with Arjun, sun: leftovers}
+      - start: 307
+        label: 4 days meal-kit dinner, 3 days home-cooked curry
+        cause: {event_ref: city.denver, lag_days: 7, visibility: implicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "meal-kit dinner", days: 4}, {value: "home-cooked curry", days: 3}]
+      - start: 475
+        label: vegetarian weekly routine
+        cause: {event_ref: diet.veg, lag_days: 5, visibility: explicit}
+        rule:
+          type: day_of_week
+          map: {mon: veggie stir-fry, tue: lentil soup, wed: black bean tacos, thu: veggie curry,
+                fri: takeout pizza, sat: cooking with Arjun, sun: leftovers}
+      - start: 556
+        end: 572
+        temporary: true
+        label: soup and smoothies every day
+        cause: {event_ref: wisdom_teeth, lag_days: 1, visibility: explicit}
+        revert_reason: "her mouth healed"
+        rule: {type: constant, value: "soup and smoothies"}
+      - start: 680
+        label: alternating weeks of veggie stir-fry and black bean tacos
+        rule: {type: weekly_alternate, values: ["veggie stir-fry", "black bean tacos"]}
+
+  - domain: music
+    noun: work music
+    exception_pool:
+      - {value: "silence", reason: "needed deep focus"}
+      - {value: "true-crime podcast", reason: "a friend recommended an episode"}
+      - {value: "classical radio", reason: "her headphones broke"}
+    regimes:
+      - start: 1
+        label: lo-fi beats on workdays, jazz vinyl on weekends
+        rule:
+          type: conditional
+          condition: is_workday
+          cases: {true: "lo-fi beats", false: "jazz vinyl"}
+      - start: 110
+        label: alternating weeks of lo-fi beats and film scores
+        rule: {type: weekly_alternate, values: ["lo-fi beats", "film scores"]}
+      - start: 200
+        label: synthwave playlists every day
+        cause: {event_ref: concert, lag_days: 5, visibility: implicit}
+        rule: {type: constant, value: "synthwave playlists"}
+      - start: 345
+        label: synthwave on workdays, running playlists on weekends
+        cause: {event_ref: half_marathon, lag_days: 5, visibility: implicit}
+        rule:
+          type: conditional
+          condition: is_workday
+          cases: {true: "synthwave playlists", false: "running playlists"}
+      - start: 430
+        label: 3 days jazz vinyl, 4 days synthwave playlists
+        cause: {event_ref: hobby.piano_stop, lag_days: 10, visibility: implicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "jazz vinyl", days: 3}, {value: "synthwave playlists", days: 4}]
+      - start: 608
+        label: vinyl records every day
+        cause: {event_ref: vinyl_gift, lag_days: 3, visibility: explicit}
+        rule: {type: constant, value: "vinyl records"}
+
+  - domain: reading
+    noun: evening reading
+    exception_pool:
+      - {value: "no reading", reason: "fell asleep early"}
+      - {value: "a magazine", reason: "picked one up at the dentist"}
+      - {value: "re-read an old favorite", reason: "felt nostalgic"}
+    regimes:
+      - start: 1
+        label: 5 days sci-fi novel, 2 days history nonfiction
+        rule:
+          type: n_day_cycle
+          segments: [{value: "sci-fi novel", days: 5}, {value: "history nonfiction", days: 2}]
+      - start: 125
+        label: library thrillers every day
+        cause: {event_ref: library_card, lag_days: 5, visibility: implicit}
+        rule: {type: constant, value: "library thrillers"}
+      - start: 190
+        label: alternating weeks of library thrillers and poetry collections
+        rule: {type: weekly_alternate, values: ["library thrillers", "poetry collections"]}
+      - start: 322
+        label: 5 days book club novel, 2 days graphic novels
+        cause: {event_ref: book_club, lag_days: 4, visibility: explicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "book club novel", days: 5}, {value: "graphic novels", days: 2}]
+      - start: 455
+        label: audiobooks every day
+        rule: {type: constant, value: "audiobooks"}
+      - start: 590
+        label: alternating weeks of an e-reader fantasy series and the book club novel
+        cause: {event_ref: ereader, lag_days: 5, visibility: implicit}
+        rule: {type: weekly_alternate, values: ["e-reader fantasy series", "book club novel"]}
+
+  - domain: bedtime
+    noun: bedtime
+    exception_pool:
+      - {value: "1:30 am", reason: "stayed up for a late movie"}
+      - {value: "9:30 pm", reason: "exhausted after a long day"}
+      - {value: "2:00 am", reason: "a friend's party"}
+    regimes:
+      - start: 1
+        label: 11:30 pm on workdays, 1:00 am on weekends
+        rule:
+          type: conditional
+          condition: is_workday
+          cases: {true: "11:30 pm", false: "1:00 am"}
+      - start: 100
+        label: 10:30 pm on workdays, 11:30 pm on weekends
+        cause: {event_ref: pet.biscuit, lag_days: 5, visibility: implicit}
+        rule:
+          type: conditional
+          condition: is_workday
+          cases: {true: "10:30 pm", false: "11:30 pm"}
+      - start: 260
+        label: 11:00 pm every night
+        rule: {type: constant, value: "11:00 pm"}
+      - start: 523
+        label: 10:00 pm most weeknights, midnight Fri/Sat
+        cause: {event_ref: job.climate, lag_days: 3, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: "10:00 pm", tue: "10:00 pm", wed: "10:30 pm", thu: "10:00 pm",
+                fri: "12:00 am", sat: "12:00 am", sun: "10:30 pm"}
+      - start: 631
+        end: 658
+        temporary: true
+        label: 2:00 am every night
+        cause: {event_ref: on_call, lag_days: 1, visibility: explicit}
+        revert_reason: "the product launch wrapped up"
+        rule: {type: constant, value: "2:00 am"}
+      - start: 700
+        label: 10:30 pm every night
+        cause: {event_ref: sleep_app, lag_days: 5, visibility: implicit}
+        rule: {type: constant, value: "10:30 pm"}
+
+distractors:
+  - {day: 45, domain: exercise, text: "her coworker Dana started training for a triathlon"}
+  - {day: 130, domain: dinner, text: "a new ramen place opened on her street"}
+  - {day: 230, domain: commute, text: "the city added new bike lanes near her apartment"}
+  - {day: 285, domain: music, text: "a new jazz club opened downtown"}
+  - {day: 370, domain: commute, text: "Arjun bought a new bike"}
+  - {day: 445, domain: reading, confounder: true, text: "her favorite bookstore announced it is closing"}
+  - {day: 540, domain: bedtime, text: "the upstairs neighbors got a loud puppy"}
+  - {day: 665, domain: exercise, text: "her gym changed its opening hours"}
+
+other_people:
+  - person: Meera
+    relation: sister
+    facts:
+      - {day: 40, noun: city of residence, value: "Seattle, Washington", confusable_with: city,
+         text: "moved to Seattle for a new job", question: "Which city did Priya's sister Meera move to?"}
+      - {day: 230, noun: job, value: "data scientist at a health-tech company", confusable_with: job,
+         text: "started working as a data scientist at a health-tech company",
+         question: "What does Priya's sister Meera do for work?"}
+  - person: Dana
+    relation: coworker
+    facts:
+      - {day: 210, noun: pets, value: "beagle named Pepper", confusable_with: pets,
+         text: "adopted a beagle named Pepper", question: "What kind of dog did Priya's coworker Dana adopt?"}
+      - {day: 500, noun: diet, value: "vegan", confusable_with: diet,
+         text: "went vegan after watching a documentary",
+         question: "Which diet did Priya's coworker Dana switch to?"}
