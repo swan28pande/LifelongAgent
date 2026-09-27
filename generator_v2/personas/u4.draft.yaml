@@ -1,0 +1,310 @@
+# U4 — heavy paraphrase. Sessions on ~60% of days, four shifts per domain (6 explicit,
+# 10 implicit, 4 uncaused), lags 1–5, three temporary shifts, two cross-domain causes
+# (city.chicago → breakfast and workout; job.own_studio → outfit and music), five
+# distractors, 7% exceptions, and facts about other people.
+
+user_id: u4
+name: Daniel
+seed: 404
+start_date: 2026-03-01
+num_days: 730
+
+facts:
+  - entity: job
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "junior architect at a design firm"}
+      - {id: job.project_lead, day: 260, op: set, value: "project lead at the design firm",
+         text: "was promoted to {value}"}
+      - {id: job.own_studio, day: 600, op: set, value: "co-founder of his own architecture studio",
+         text: "left the firm and became {value}"}
+  - entity: city
+    noun: city of residence
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "Minneapolis, Minnesota"}
+      - {id: city.chicago, day: 400, op: set, value: "Chicago, Illinois", cause_event: partner_job.1,
+         text: "moved to Chicago for Leah's new job"}
+  - entity: relationship
+    noun: relationship status
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "dating Leah"}
+      - {id: rel.cohabit, day: 180, op: set, value: "living with his partner Leah",
+         text: "moved in with his partner Leah"}
+  - entity: diet
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "omnivore"}
+      - {id: diet.pesc, day: 450, op: set, value: "pescatarian", text: "switched to a {value} diet"}
+  - entity: hobbies
+    cardinality: multi
+    changes:
+      - {day: 1, op: add, value: "photography"}
+      - {day: 1, op: add, value: "cycling"}
+      - {id: hobby.climbing, day: 120, op: add, value: "rock climbing", text: "took up rock climbing"}
+      - {id: hobby.cycling_stop, day: 330, op: remove, value: "cycling",
+         text: "sold his road bike and stopped cycling"}
+      - {id: hobby.chess, day: 520, op: add, value: "chess", text: "started playing chess online"}
+
+events:
+  - chain_id: ten_k
+    title: the spring 10K
+    states:
+      - {day: 60, status: planned, text: "signed up for a spring 10K"}
+      - {day: 100, status: happened, text: "ran the 10K"}
+  - chain_id: cooking_class
+    title: the Thai cooking class
+    states:
+      - {day: 150, status: happened, text: "took a Thai cooking class"}
+  - chain_id: wrist
+    title: his wrist fracture
+    states:
+      - {day: 210, status: happened, text: "fractured his wrist climbing"}
+      - {day: 245, status: happened, text: "his cast came off and the wrist healed"}
+  - chain_id: vinyl
+    title: the record collection
+    states:
+      - {day: 300, status: happened, text: "inherited his grandfather's record collection"}
+  - chain_id: partner_job
+    title: Leah's Chicago job offer
+    states:
+      - {day: 370, status: planned, text: "Leah got a job offer in Chicago"}
+      - {day: 390, status: happened, text: "Leah accepted the Chicago job"}
+  - chain_id: covid
+    title: his COVID infection
+    states:
+      - {day: 470, status: happened, text: "caught COVID"}
+      - {day: 489, status: happened, text: "recovered from COVID"}
+  - chain_id: deadline
+    title: the design competition
+    states:
+      - {day: 540, status: happened, text: "started a huge design competition deadline at work"}
+      - {day: 575, status: happened, text: "submitted the design competition entry"}
+  - chain_id: early_meetings
+    title: the early client calls
+    states:
+      - {day: 616, status: happened, text: "started holding 7 am client calls at the studio"}
+  - chain_id: cookbook
+    title: the cookbook gift
+    states:
+      - {day: 652, status: happened, text: "got a seafood and vegetarian cookbook as a gift"}
+
+preferences:
+  - domain: breakfast
+    noun: breakfast
+    exception_pool:
+      - {value: "skipped breakfast", reason: "an early site visit"}
+      - {value: "diner breakfast", reason: "met a client"}
+      - {value: "protein bar", reason: "running late"}
+    regimes:
+      - start: 1
+        label: two-week rotation of granola or oatmeal with eggs, waffles and a weekend fry-up
+        rule:
+          type: nested
+          blocks:
+            - type: day_of_week
+              map: {mon: granola, tue: eggs on toast, wed: granola, thu: eggs on toast,
+                    fri: granola, sat: waffles, sun: bacon and eggs}
+            - type: day_of_week
+              map: {mon: oatmeal, tue: eggs on toast, wed: oatmeal, thu: eggs on toast,
+                    fri: oatmeal, sat: waffles, sun: bacon and eggs}
+      - start: 183
+        label: smoothie bowls and eggs on weekdays, weekend brunch with Leah
+        cause: {event_ref: rel.cohabit, lag_days: 3, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: smoothie bowl, tue: eggs on toast, wed: smoothie bowl, thu: eggs on toast,
+                fri: granola, sat: brunch with Leah, sun: brunch with Leah}
+      - start: 404
+        label: alternating weeks of bakery croissants and smoothie bowls
+        cause: {event_ref: city.chicago, lag_days: 4, visibility: implicit}
+        rule: {type: weekly_alternate, values: ["bakery croissant", "smoothie bowl"]}
+      - start: 460
+        label: smoothie bowls and salmon bagels on weekdays, weekend brunch with Leah
+        rule:
+          type: day_of_week
+          map: {mon: smoothie bowl, tue: smoked salmon bagel, wed: smoothie bowl, thu: smoked salmon bagel,
+                fri: bakery croissant, sat: brunch with Leah, sun: brunch with Leah}
+      - start: 620
+        label: 3 days overnight oats, 2 days smoked salmon bagel
+        cause: {event_ref: early_meetings, lag_days: 4, visibility: implicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "overnight oats", days: 3}, {value: "smoked salmon bagel", days: 2}]
+
+  - domain: workout
+    noun: workout
+    exception_pool:
+      - {value: "rest day", reason: "felt run down"}
+      - {value: "long walk", reason: "the gym was closed"}
+      - {value: "pickup basketball", reason: "friends invited him"}
+    regimes:
+      - start: 1
+        label: cycling Mon/Wed, gym Tue/Thu, long ride Sat, yoga Sun
+        rule:
+          type: day_of_week
+          map: {mon: cycling, tue: gym, wed: cycling, thu: gym,
+                fri: rest day, sat: long ride, sun: yoga}
+      - start: 123
+        label: cycling Mon/Wed, climbing gym Tue/Thu, long ride Sat, yoga Sun
+        cause: {event_ref: hobby.climbing, lag_days: 3, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: cycling, tue: climbing gym, wed: cycling, thu: climbing gym,
+                fri: rest day, sat: long ride, sun: yoga}
+      - start: 211
+        end: 244
+        temporary: true
+        label: stationary bike every day
+        cause: {event_ref: wrist, lag_days: 1, visibility: explicit}
+        revert_reason: "his wrist healed"
+        rule: {type: constant, value: "stationary bike"}
+      - start: 334
+        label: running Mon/Wed, climbing gym Tue/Thu, long run Sat, yoga Sun
+        cause: {event_ref: hobby.cycling_stop, lag_days: 4, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: running, tue: climbing gym, wed: running, thu: climbing gym,
+                fri: rest day, sat: long run, sun: yoga}
+      - start: 405
+        label: two-week rotation of runs with climbing or swimming
+        cause: {event_ref: city.chicago, lag_days: 5, visibility: explicit}
+        rule:
+          type: nested
+          blocks:
+            - type: day_of_week
+              map: {mon: lakefront run, tue: climbing gym, wed: running, thu: climbing gym,
+                    fri: rest day, sat: long run, sun: yoga}
+            - type: day_of_week
+              map: {mon: lakefront run, tue: swim, wed: running, thu: swim,
+                    fri: rest day, sat: long run, sun: rest day}
+
+  - domain: outfit
+    noun: work outfit
+    exception_pool:
+      - {value: "suit and tie", reason: "a client presentation"}
+      - {value: "hoodie and joggers", reason: "working from home"}
+      - {value: "rain jacket and jeans", reason: "stormy weather"}
+    regimes:
+      - start: 1
+        label: 4 days button-down and chinos, 3 days sweater and jeans
+        rule:
+          type: n_day_cycle
+          segments: [{value: "button-down and chinos", days: 4}, {value: "sweater and jeans", days: 3}]
+      - start: 263
+        label: blazer Mon/Wed, button-down Tue/Thu, sweater Fri, hoodie on weekends
+        cause: {event_ref: job.project_lead, lag_days: 3, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: blazer and slacks, tue: button-down and chinos, wed: blazer and slacks,
+                thu: button-down and chinos, fri: sweater and jeans, sat: hoodie and joggers,
+                sun: hoodie and joggers}
+      - start: 410
+        label: alternating weeks of flannel and jeans and button-down and chinos
+        rule: {type: weekly_alternate, values: ["flannel and jeans", "button-down and chinos"]}
+      - start: 604
+        label: black t-shirt and jeans every day
+        cause: {event_ref: job.own_studio, lag_days: 4, visibility: implicit}
+        rule: {type: constant, value: "black t-shirt and jeans"}
+      - start: 690
+        label: 5 days black t-shirt and jeans, 2 days sweater and jeans
+        rule:
+          type: n_day_cycle
+          segments: [{value: "black t-shirt and jeans", days: 5}, {value: "sweater and jeans", days: 2}]
+
+  - domain: music
+    noun: work music
+    exception_pool:
+      - {value: "silence", reason: "deep focus work"}
+      - {value: "a podcast", reason: "a friend recommended an episode"}
+      - {value: "the radio", reason: "his headphones died"}
+    regimes:
+      - start: 1
+        label: alternating weeks of indie rock and lo-fi beats
+        rule: {type: weekly_alternate, values: ["indie rock", "lo-fi beats"]}
+      - start: 303
+        label: 3 days jazz records, 4 days indie rock
+        cause: {event_ref: vinyl, lag_days: 3, visibility: explicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "jazz records", days: 3}, {value: "indie rock", days: 4}]
+      - start: 471
+        end: 488
+        temporary: true
+        label: audiobooks every day
+        cause: {event_ref: covid, lag_days: 1, visibility: implicit}
+        rule: {type: constant, value: "audiobooks"}
+      - start: 605
+        label: jazz records early in the week and weekends, ambient mid-week, indie rock Fri
+        cause: {event_ref: job.own_studio, lag_days: 5, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: jazz records, tue: jazz records, wed: ambient electronic, thu: ambient electronic,
+                fri: indie rock, sat: jazz records, sun: jazz records}
+      - start: 660
+        label: alternating weeks of ambient electronic and classical
+        rule: {type: weekly_alternate, values: ["ambient electronic", "classical"]}
+
+  - domain: dinner
+    noun: dinner
+    exception_pool:
+      - {value: "takeout pizza", reason: "too tired to cook"}
+      - {value: "dinner at his parents'", reason: "a family visit"}
+      - {value: "skipped dinner", reason: "a late meeting"}
+    regimes:
+      - start: 1
+        label: pasta Mon/Thu, tacos Tue, stir-fry Wed, burgers Fri, steak Sat, roast chicken Sun
+        rule:
+          type: day_of_week
+          map: {mon: pasta, tue: tacos, wed: stir-fry, thu: pasta,
+                fri: takeout burgers, sat: steak, sun: roast chicken}
+      - start: 153
+        label: Thai dishes Mon/Wed, otherwise the usual week
+        cause: {event_ref: cooking_class, lag_days: 3, visibility: explicit}
+        rule:
+          type: day_of_week
+          map: {mon: pad thai, tue: tacos, wed: green curry, thu: pasta,
+                fri: takeout burgers, sat: steak, sun: roast chicken}
+      - start: 452
+        label: pescatarian week — shrimp pad thai, fish tacos, tofu curry, salmon
+        cause: {event_ref: diet.pesc, lag_days: 2, visibility: explicit}
+        rule:
+          type: day_of_week
+          map: {mon: shrimp pad thai, tue: fish tacos, wed: tofu green curry, thu: pasta,
+                fri: fish and chips, sat: grilled salmon, sun: roast vegetables}
+      - start: 541
+        end: 574
+        temporary: true
+        label: delivery sushi every night
+        cause: {event_ref: deadline, lag_days: 1, visibility: implicit}
+        rule: {type: constant, value: "delivery sushi"}
+      - start: 655
+        label: 3 days grilled salmon, 4 days veggie chili
+        cause: {event_ref: cookbook, lag_days: 3, visibility: explicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "grilled salmon", days: 3}, {value: "veggie chili", days: 4}]
+
+distractors:
+  - {day: 95, domain: dinner, text: "Leah started a pottery class"}
+  - {day: 280, domain: workout, text: "a new climbing gym opened across town"}
+  - {day: 430, domain: breakfast, text: "his favorite café changed owners"}
+  - {day: 500, domain: outfit, text: "a coworker started wearing suits every day"}
+  - {day: 580, domain: music, text: "his neighbor started practicing the trumpet"}
+
+other_people:
+  - person: Leah
+    relation: partner
+    facts:
+      - {day: 390, noun: job, value: "pediatrician at a Chicago hospital", confusable_with: job,
+         text: "started a new job as a pediatrician at a Chicago hospital",
+         question: "What is Daniel's partner Leah's new job?"}
+  - person: Kwame
+    relation: brother
+    facts:
+      - {day: 90, noun: city of residence, value: "Atlanta, Georgia", confusable_with: city,
+         text: "moved to Atlanta", question: "Which city did Daniel's brother Kwame move to?"}
+      - {day: 500, noun: hobbies, value: "marathon running", confusable_with: hobbies,
+         text: "started training for his first marathon",
+         question: "What did Daniel's brother Kwame start training for?"}

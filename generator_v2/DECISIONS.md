@@ -46,3 +46,9 @@ One line per decision where the spec was ambiguous. Phase in brackets.
 - [1] `change_detection` accepts every date from the effective start to the first observation (tag `bounded`), since the memory cannot know more.
 - [1] Fact questions use the entity as `domain`; events use `events`, other people use `other_people`.
 - [1] Multi-valued sets on a date are `fact_at_time` items tagged `set`, not a separate type.
+
+## Storylines
+
+- [2] U2–U4 were drafted by hand in this session (like U1 and U5) rather than by `storyline.py` calling an LLM API, so there was no API cost. They are saved as `uN.draft.yaml` for review; `storyline.py` has not been built.
+- [2] Domains differ per user: U1 coffee/outfit/lunch, U2 breakfast/workout/evening TV, U3 morning drink/lunch/commute/podcast, U4 breakfast/workout/work outfit/music/dinner, U5 exercise/commute/dinner/music/reading/bedtime.
+- [2] Run a draft with `simulate --user uN.draft`; `--user all` only reads non-draft files.

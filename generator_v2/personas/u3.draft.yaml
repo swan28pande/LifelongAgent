@@ -1,0 +1,201 @@
+# U3 — paraphrase. Sessions on ~75% of days, three shifts per domain (6 explicit,
+# 5 implicit, 1 uncaused), lags 0–3, two temporary shifts, one cross-domain cause
+# (job.clinic → morning drink and commute), three distractors, 5% exceptions.
+
+user_id: u3
+name: Sofia
+seed: 303
+start_date: 2026-03-01
+num_days: 730
+
+facts:
+  - entity: job
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "night-shift ER nurse at a city hospital"}
+      - {id: job.clinic, day: 220, op: set, value: "day-shift nurse at an outpatient clinic",
+         text: "switched jobs to become a {value}"}
+  - entity: city
+    noun: city of residence
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "Phoenix, Arizona"}
+      - {id: city.tucson, day: 480, op: set, value: "Tucson, Arizona",
+         text: "moved to Tucson to be closer to her parents"}
+  - entity: relationship
+    noun: relationship status
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "dating Tom"}
+      - {id: rel.engaged, day: 350, op: set, value: "engaged to Tom", text: "got engaged to Tom"}
+  - entity: hobbies
+    cardinality: multi
+    changes:
+      - {day: 1, op: add, value: "salsa dancing"}
+      - {id: hobby.baking, day: 90, op: add, value: "sourdough baking", text: "started baking sourdough bread"}
+      - {id: hobby.salsa_stop, day: 300, op: remove, value: "salsa dancing",
+         text: "stopped salsa dancing after her class schedule changed"}
+  - entity: pets
+    cardinality: multi
+    changes:
+      - {id: pet.dash, day: 600, op: add, value: "rescue greyhound named Dash", text: "adopted a {value}"}
+
+events:
+  - chain_id: flu
+    title: her flu
+    states:
+      - {day: 140, status: happened, text: "came down with the flu"}
+      - {day: 155, status: happened, text: "recovered from the flu"}
+  - chain_id: podcast_rec
+    title: the podcast recommendation
+    states:
+      - {day: 260, status: happened, text: "a coworker recommended a true-crime podcast"}
+  - chain_id: italian
+    title: the Italian course
+    states:
+      - {day: 330, status: happened, text: "signed up for an online Italian course"}
+  - chain_id: wedding
+    title: the wedding
+    states:
+      - {day: 360, status: planned, text: "set a wedding date for summer 2028"}
+  - chain_id: new_car
+    title: the car purchase
+    states:
+      - {day: 400, status: happened, text: "bought a used hybrid car"}
+  - chain_id: ankle
+    title: her sprained ankle
+    states:
+      - {day: 640, status: happened, text: "sprained her ankle on a hike"}
+      - {day: 668, status: happened, text: "her ankle healed"}
+
+preferences:
+  - domain: morning_drink
+    noun: morning drink
+    exception_pool:
+      - {value: "skipped her morning drink", reason: "overslept"}
+      - {value: "free sample latte", reason: "a café promotion"}
+      - {value: "green tea", reason: "the coffee machine broke"}
+    regimes:
+      - start: 1
+        label: cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends
+        rule:
+          type: day_of_week
+          map: {mon: cold brew, tue: cold brew, wed: chai latte, thu: cold brew,
+                fri: chai latte, sat: hot chocolate, sun: hot chocolate}
+      - start: 141
+        end: 154
+        temporary: true
+        label: ginger tea every day
+        cause: {event_ref: flu, lag_days: 1, visibility: explicit}
+        revert_reason: "she recovered from the flu"
+        rule: {type: constant, value: "ginger tea"}
+      - start: 222
+        label: alternating weeks of drip coffee and matcha lattes
+        cause: {event_ref: job.clinic, lag_days: 2, visibility: explicit}
+        rule: {type: weekly_alternate, values: ["drip coffee", "matcha latte"]}
+      - start: 500
+        label: drip coffee Mon/Wed, iced americano Tue/Thu, matcha Fri, hot chocolate weekends
+        rule:
+          type: day_of_week
+          map: {mon: drip coffee, tue: iced americano, wed: drip coffee, thu: iced americano,
+                fri: matcha latte, sat: hot chocolate, sun: hot chocolate}
+
+  - domain: lunch
+    noun: lunch
+    exception_pool:
+      - {value: "skipped lunch", reason: "back-to-back appointments"}
+      - {value: "team pizza lunch", reason: "a coworker's birthday"}
+      - {value: "vending machine snacks", reason: "forgot her lunch"}
+    regimes:
+      - start: 1
+        label: 3 days cafeteria salad, 2 days packed leftovers
+        rule:
+          type: n_day_cycle
+          segments: [{value: "cafeteria salad", days: 3}, {value: "packed leftovers", days: 2}]
+      - start: 93
+        label: sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat
+        cause: {event_ref: hobby.baking, lag_days: 3, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: sourdough sandwich, tue: packed leftovers, wed: sourdough sandwich,
+                thu: packed leftovers, fri: sourdough sandwich, sat: brunch out, sun: packed leftovers}
+      - start: 352
+        label: 2 days lunch with Tom, 3 days sourdough sandwich
+        cause: {event_ref: rel.engaged, lag_days: 2, visibility: implicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "lunch with Tom", days: 2}, {value: "sourdough sandwich", days: 3}]
+      - start: 483
+        label: alternating weeks of homemade burrito bowls and sourdough sandwiches
+        cause: {event_ref: city.tucson, lag_days: 3, visibility: explicit}
+        rule: {type: weekly_alternate, values: ["homemade burrito bowl", "sourdough sandwich"]}
+
+  - domain: commute
+    noun: commute
+    exception_pool:
+      - {value: "rideshare", reason: "running late"}
+      - {value: "walked", reason: "the weather was nice"}
+      - {value: "got a ride from Tom", reason: "a bad traffic day"}
+    regimes:
+      - start: 1
+        label: night bus Mon–Wed, rideshare Thu/Fri, no commute on weekends
+        rule:
+          type: day_of_week
+          map: {mon: night bus, tue: night bus, wed: night bus, thu: rideshare,
+                fri: rideshare, sat: no commute, sun: no commute}
+      - start: 221
+        label: light rail on weekdays
+        cause: {event_ref: job.clinic, lag_days: 1, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: light rail, tue: light rail, wed: light rail, thu: light rail,
+                fri: light rail, sat: no commute, sun: no commute}
+      - start: 401
+        label: driving on weekdays
+        cause: {event_ref: new_car, lag_days: 1, visibility: explicit}
+        rule:
+          type: day_of_week
+          map: {mon: driving, tue: driving, wed: driving, thu: driving,
+                fri: driving, sat: no commute, sun: no commute}
+      - start: 641
+        end: 667
+        temporary: true
+        label: rideshare on weekdays
+        cause: {event_ref: ankle, lag_days: 1, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: rideshare, tue: rideshare, wed: rideshare, thu: rideshare,
+                fri: rideshare, sat: no commute, sun: no commute}
+
+  - domain: podcast
+    noun: podcast
+    exception_pool:
+      - {value: "music instead", reason: "wanted something upbeat"}
+      - {value: "silence", reason: "had a headache"}
+      - {value: "an audiobook", reason: "a friend lent her one"}
+    regimes:
+      - start: 1
+        label: alternating weeks of a health news podcast and a comedy podcast
+        rule: {type: weekly_alternate, values: ["health news podcast", "comedy podcast"]}
+      - start: 261
+        label: 4 days true-crime podcast, 3 days comedy podcast
+        cause: {event_ref: podcast_rec, lag_days: 1, visibility: implicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "true-crime podcast", days: 4}, {value: "comedy podcast", days: 3}]
+      - start: 332
+        label: Italian lessons podcast every day
+        cause: {event_ref: italian, lag_days: 2, visibility: explicit}
+        rule: {type: constant, value: "Italian lessons podcast"}
+      - start: 603
+        label: dog training podcast Mon/Wed, true crime Tue/Thu, comedy Fri–Sun
+        cause: {event_ref: pet.dash, lag_days: 3, visibility: explicit}
+        rule:
+          type: day_of_week
+          map: {mon: dog training podcast, tue: true-crime podcast, wed: dog training podcast,
+                thu: true-crime podcast, fri: comedy podcast, sat: comedy podcast, sun: comedy podcast}
+
+distractors:
+  - {day: 180, domain: morning_drink, text: "her roommate bought a new espresso machine"}
+  - {day: 450, domain: lunch, text: "a new sandwich shop opened near her work"}
+  - {day: 560, domain: podcast, text: "her favorite podcast host announced a book tour"}

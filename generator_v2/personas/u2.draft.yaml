@@ -1,0 +1,135 @@
+# U2 — light paraphrase. Sessions on ~90% of days, two shifts per domain (5 explicit,
+# 1 implicit), lags of 0–1 days, one temporary shift, one distractor, 2% exceptions.
+
+user_id: u2
+name: Marcus
+seed: 202
+start_date: 2026-03-01
+num_days: 730
+
+facts:
+  - entity: job
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "high school chemistry teacher"}
+      - {id: job.head, day: 250, op: set, value: "head of the science department at the same high school",
+         text: "became {value}"}
+  - entity: city
+    noun: city of residence
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "Portland, Oregon"}
+  - entity: relationship
+    noun: relationship status
+    cardinality: single
+    changes:
+      - {day: 1, op: set, value: "married to Grace"}
+  - entity: hobbies
+    cardinality: multi
+    changes:
+      - {day: 1, op: add, value: "woodworking"}
+      - {id: hobby.tennis, day: 120, op: add, value: "tennis", text: "joined a tennis club"}
+      - {id: hobby.woodworking_stop, day: 500, op: remove, value: "woodworking",
+         text: "sold his woodworking tools to free up garage space"}
+  - entity: pets
+    cardinality: multi
+    changes:
+      - {id: pet.olive, day: 330, op: add, value: "cat named Olive", text: "adopted a {value}"}
+
+events:
+  - chain_id: school_year
+    title: the new school year
+    states:
+      - {day: 170, status: happened, text: "the new school year started"}
+  - chain_id: japan_trip
+    title: the family trip to Japan
+    states:
+      - {day: 200, status: planned, text: "planning a family trip to Japan next spring"}
+      - {day: 380, status: happened, text: "went on the family trip to Japan"}
+  - chain_id: back_injury
+    title: his back injury
+    states:
+      - {day: 430, status: happened, text: "strained his lower back lifting boxes"}
+      - {day: 452, status: happened, text: "his back fully recovered"}
+  - chain_id: streaming
+    title: the new streaming service
+    states:
+      - {day: 560, status: happened, text: "signed up for a new streaming service"}
+  - chain_id: nutritionist
+    title: the nutritionist visit
+    states:
+      - {day: 600, status: happened, text: "saw a nutritionist who suggested more protein at breakfast"}
+
+preferences:
+  - domain: breakfast
+    noun: breakfast
+    exception_pool:
+      - {value: "skipped breakfast", reason: "running late"}
+      - {value: "diner breakfast", reason: "met a friend"}
+    regimes:
+      - start: 1
+        label: oatmeal most weekdays, yogurt Wed, bagel Fri, pancakes on weekends
+        rule:
+          type: day_of_week
+          map: {mon: oatmeal, tue: oatmeal, wed: yogurt parfait, thu: oatmeal,
+                fri: bagel, sat: pancakes, sun: pancakes}
+      - start: 170
+        label: alternating weeks of oatmeal and protein smoothies
+        cause: {event_ref: school_year, lag_days: 0, visibility: explicit}
+        rule: {type: weekly_alternate, values: ["oatmeal", "protein smoothie"]}
+      - start: 600
+        label: eggs and toast or smoothies on weekdays, bagel Fri, pancakes Sat
+        cause: {event_ref: nutritionist, lag_days: 0, visibility: explicit}
+        rule:
+          type: day_of_week
+          map: {mon: eggs and toast, tue: protein smoothie, wed: eggs and toast, thu: protein smoothie,
+                fri: bagel, sat: pancakes, sun: eggs and toast}
+
+  - domain: workout
+    noun: workout
+    exception_pool:
+      - {value: "rest day", reason: "felt tired"}
+      - {value: "long walk", reason: "the gym was closed"}
+    regimes:
+      - start: 1
+        label: 3-day cycle of two gym days then a run
+        rule:
+          type: n_day_cycle
+          segments: [{value: "gym weights", days: 2}, {value: "run", days: 1}]
+      - start: 121
+        label: tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun
+        cause: {event_ref: hobby.tennis, lag_days: 1, visibility: implicit}
+        rule:
+          type: day_of_week
+          map: {mon: gym weights, tue: tennis, wed: run, thu: tennis,
+                fri: gym weights, sat: tennis, sun: rest day}
+      - start: 431
+        end: 451
+        temporary: true
+        label: physical therapy stretches every day
+        cause: {event_ref: back_injury, lag_days: 1, visibility: explicit}
+        revert_reason: "his back fully recovered"
+        rule: {type: constant, value: "physical therapy stretches"}
+
+  - domain: evening_show
+    noun: evening TV show
+    exception_pool:
+      - {value: "no TV", reason: "went to bed early"}
+      - {value: "a movie", reason: "family movie night"}
+    regimes:
+      - start: 1
+        label: alternating weeks of a cooking competition show and nature documentaries
+        rule: {type: weekly_alternate, values: ["cooking competition show", "nature documentary"]}
+      - start: 251
+        label: 5 days sitcom reruns, 2 days nature documentaries
+        cause: {event_ref: job.head, lag_days: 1, visibility: explicit}
+        rule:
+          type: n_day_cycle
+          segments: [{value: "sitcom reruns", days: 5}, {value: "nature documentary", days: 2}]
+      - start: 560
+        label: alternating weeks of a sci-fi series and sitcom reruns
+        cause: {event_ref: streaming, lag_days: 0, visibility: explicit}
+        rule: {type: weekly_alternate, values: ["sci-fi series", "sitcom reruns"]}
+
+distractors:
+  - {day: 300, domain: breakfast, text: "his neighbor started a vegetable garden"}
