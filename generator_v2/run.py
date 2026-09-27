@@ -2,13 +2,14 @@
 
     python -m generator_v2.run simulate --user all      # world state + checks + QA + stats, no LLM
     python -m generator_v2.run qa --user u5             # QA only (re-simulates; deterministic)
-
-Later phases add draft-storyline, generate, validate, report and estimate-cost.
+    python -m generator_v2.run generate --user u1 --days 1-183   # conversations (Vertex AI)
+    python -m generator_v2.run fidelity --user u1       # fidelity.json + merged conversations.json
 """
 
 from __future__ import annotations
 
 import argparse
+import asyncio
 import json
 import random
 import sys
@@ -157,6 +158,33 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
     return True
 
 
+def write_fidelity(spec: PersonaSpec) -> dict:
+    from . import conversation
+    out = config.OUTPUT_DIR / spec.user_id
+    fid = conversation.fidelity(spec.user_id)
+    write_json(out / "fidelity.json", fid)
+    write_json(out / "conversations.json", conversation.merge(spec))
+    print(json.dumps({k: v for k, v in fid.items() if k != "flagged"}, indent=2))
+    if fid["flagged"]:
+        print(f"flagged sessions ({len(fid['flagged'])}): {', '.join(fid['flagged'][:20])}")
+    return fid
+
+
+def run_generate(args, ladder) -> int:
+    from . import conversation
+    spec = load_spec(config.PERSONA_DIR / f"{args.user}.yaml", ladder)
+    errors = checks.check_spec(spec)
+    world = simulator.simulate(spec)
+    errors += checks.check_world(spec, world)
+    if errors:
+        print("refusing to generate — the world state has errors:\n" + "\n".join(errors))
+        return 1
+    days = conversation.parse_days(args.days, spec.num_days)
+    asyncio.run(conversation.generate(spec, world, days, args.model, args.validator_model, args.concurrency))
+    write_fidelity(spec)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="generator_v2.run")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -164,8 +192,22 @@ def main(argv: list[str] | None = None) -> int:
         p = sub.add_parser(name)
         p.add_argument("--user", default="all")
         p.add_argument("--samples", type=int, default=20)
+    g = sub.add_parser("generate")
+    g.add_argument("--user", required=True)
+    g.add_argument("--days", help="e.g. 1-183 (default: all)")
+    g.add_argument("--model", default=config.CONVERSATION_MODEL)
+    g.add_argument("--validator-model", default=config.VALIDATOR_MODEL)
+    g.add_argument("--concurrency", type=int, default=config.CONCURRENCY)
+    f = sub.add_parser("fidelity")
+    f.add_argument("--user", default="all")
     args = parser.parse_args(argv)
     ladder = load_ladder(config.LADDER_PATH)
+    if args.command == "generate":
+        return run_generate(args, ladder)
+    if args.command == "fidelity":
+        for path in persona_paths(args.user):
+            write_fidelity(load_spec(path, ladder))
+        return 0
     ok = all([run_user(path, ladder, args.command == "simulate", args.samples)
               for path in persona_paths(args.user)])
     return 0 if ok else 1

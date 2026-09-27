@@ -62,9 +62,11 @@ ABSTENTION_TEMPLATES = [
     ("favorite_color", "What is {name}'s favorite color?"),
 ]
 
-# ── Later phases ────────────────────────────────────────────────────
-CONVERSATION_MODEL = "gpt-4o-mini"
-CONVERSATION_MODEL_HARD = "gpt-4o"     # optional for U4-U5
-VALIDATOR_MODEL = "gemini-2.5-flash"   # different family from the generator
+# ── Conversations (Vertex AI) ───────────────────────────────────────
+CONVERSATION_MODEL = "gemini-3.5-flash"
+VALIDATOR_MODEL = "gemini-3.1-pro-preview"   # a stronger model checks the writer
+WRITER_TEMPERATURE = 0.9
 CONCURRENCY = 16
 MAX_RETRIES = 5
+MIN_TURNS = 12
+MAX_TURNS = 20

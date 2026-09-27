@@ -52,3 +52,11 @@ One line per decision where the spec was ambiguous. Phase in brackets.
 - [2] U2–U4 were drafted by hand in this session (like U1 and U5) rather than by `storyline.py` calling an LLM API, so there was no API cost. They are saved as `uN.draft.yaml` for review; `storyline.py` has not been built.
 - [2] Domains differ per user: U1 coffee/outfit/lunch, U2 breakfast/workout/evening TV, U3 morning drink/lunch/commute/podcast, U4 breakfast/workout/work outfit/music/dinner, U5 exercise/commute/dinner/music/reading/bedtime.
 - [2] Run a draft with `simulate --user uN.draft`; `--user all` only reads non-draft files.
+
+## Conversations
+
+- [3] Vertex AI only: `gemini-3.5-flash` writes (temperature 0.9), `gemini-3.1-pro-preview` validates (temperature 0). Both are Gemini, so the validator is a stronger tier rather than a different family.
+- [3] The writer sees only that day's state and the facts known before it; never regime labels, rules or earlier text, so it cannot leak a pattern.
+- [3] The validator picks each topic's value from a closed option list (all values the persona can have), and the comparison with ground truth is exact, in code.
+- [3] "Inventions" are lasting facts only (new people, pets, jobs, history such as "vegetarian for three years"). Everyday details (working from home today, plans for tonight) are allowed; flagging them made retries push conversations towards bland, form-like dialogue.
+- [3] Up to 5 attempts per session; the attempt with the fewest failures is kept and flagged if it still fails. `first_try_failures` is kept for the fidelity report.

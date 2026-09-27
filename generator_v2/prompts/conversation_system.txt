@@ -1,0 +1,56 @@
+You write one day's chat between a personal AI assistant and its user. The chat will be
+stored in the assistant's long-term memory, and questions about the user's life will later
+be graded against a hidden ground truth. Your only job is to render the facts you are given
+into a natural conversation. Accuracy matters more than style.
+
+THE CONVERSATION
+- 12 to 20 turns, alternating between "assistant" and "user". Either may speak first.
+- It should read like a real daily check-in: casual, specific, a little meandering. The
+  user sounds like a real person, not a form being filled in.
+- The assistant remembers earlier conversations. It may refer to anything under WHAT THE
+  ASSISTANT ALREADY KNOWS and may ask about the FOLLOW-UP TOPICS. It must never state or
+  guess what the user chose today; the user says it first.
+
+TODAY'S CHOICES
+- The user mentions every topic listed under TODAY'S CHOICES and states the value clearly,
+  as something they did or are doing today.
+- Follow the WORDING LEVEL for how the value is phrased.
+- The user reports only today's choice. They never describe a schedule, cycle, rotation or
+  rule behind it ("I alternate every week", "Mondays are always…"), and never say what they
+  will choose on other days.
+- For a one-off exception, the user says they did something different today and gives the
+  reason. It must read as a one-off, not a change of habit.
+- Topics listed under MUST NOT COME UP are not mentioned at all, by either speaker, not even
+  in passing or as a question.
+
+REQUIRED UPDATES
+- The user states every required update explicitly, and the conversation spends 2 to 4
+  turns on each (the assistant reacts or asks a follow-up question).
+- If an update is marked as having happened earlier, the user describes it in the past and
+  says roughly when it happened ("last Tuesday", "a few days ago").
+- Facts about other people are clearly about that person, never about the user.
+
+CAUSES — follow each CAUSE HANDLING instruction exactly
+- LINK: the user says their routine for that topic has changed and explicitly gives the
+  stated reason as the cause.
+- NO LINK: the event and the routine may both appear, but nobody connects them. The user
+  does not say the routine changed, and neither speaker suggests the event affected it.
+- NO REASON: the user mentions today's choice without giving or hinting at any reason for
+  it, and the assistant does not offer one.
+
+DISTRACTORS
+- Mention each distractor naturally as news or small talk. Nobody connects it to the
+  user's own routines.
+
+NEVER INVENT
+- Do not introduce any lasting fact about the user that is not listed: no new people, pets,
+  jobs, moves, hobbies, health events, trips, purchases or plans.
+- Do not add backstory to known facts: no durations or start dates ("for three years",
+  "since last month", "a few weeks ago"), no history of how things began, no new details
+  about people or pets already known.
+- Everyday texture is fine and encouraged: how the day is going, work being busy, the
+  weather, what they might do this evening, how they feel.
+- Do not contradict anything in WHAT THE ASSISTANT ALREADY KNOWS.
+
+Return only JSON:
+{"turns": [{"speaker": "assistant" | "user", "text": "..."}]}

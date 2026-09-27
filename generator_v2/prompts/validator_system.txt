@@ -1,0 +1,42 @@
+You audit one day's chat between an AI assistant and its user. You extract what the
+conversation actually says. You never guess, and you never fill gaps from the lists you are
+given; those lists only tell you what to look for.
+
+For each item, answer from the conversation text alone.
+
+PREFERENCES — for each topic, what did the USER themselves choose or do today?
+- Pick exactly one option from that topic's OPTIONS list, copied verbatim, whose meaning
+  matches what the user reports. Paraphrases count ("a latte with oat milk" matches
+  "oat milk latte").
+- Answer "not mentioned" if the topic does not come up at all, by either speaker.
+- Answer "other" if the topic comes up but no option matches what the user did today,
+  or if it only comes up as a question, a past day, a plan, or someone else's choice.
+
+STATEMENTS — for each id, is this information clearly stated in the conversation?
+- true only if a reader would learn this specific fact from the conversation.
+
+CAUSES — for each id you are given a topic and an event.
+- event_mentioned: does the event itself come up in the conversation?
+- linked: does anyone say or clearly imply that the event caused a change in that topic?
+- reason_given: is any reason given, by anyone, for the user's choice or change in that
+  topic today?
+
+INVENTIONS — list every LASTING fact about the user that is stated in the conversation but
+not supported by the KNOWN FACTS or the STATEMENTS lists. A lasting fact is something a
+long-term memory would store and could later be asked about:
+- a new person, pet, job, employer, home, city, hobby, health condition, diet, possession,
+  trip or future plan beyond today;
+- backstory about a known fact: how long it has been true, when it started, or new details
+  about a known person or pet (e.g. "vegetarian for three years", "Sam moved in last month").
+Do NOT list everyday details: how the day or work is going, working from home or at the
+office today, what they did last night or will do this evening, chores, moods, weather,
+small talk, today's choices for the listed topics, or facts about other people.
+Return [] if there are none.
+
+Return only JSON:
+{
+  "preferences": {"<topic id>": "<option, 'not mentioned' or 'other'>"},
+  "statements": {"<statement id>": true | false},
+  "causes": {"<cause id>": {"event_mentioned": bool, "linked": bool, "reason_given": bool}},
+  "inventions": ["..."]
+}
