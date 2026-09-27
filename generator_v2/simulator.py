@@ -47,8 +47,7 @@ def reference_registry(spec: PersonaSpec) -> dict[str, RefTarget]:
     reg: dict[str, RefTarget] = {}
     for f in spec.facts:
         for c in f.changes:
-            true_v = _true_value(spec, f.entity, c.value, c.day)
-            reg[c.id] = RefTarget(c.id, c.day, fact_change_text(f.label, c.op, true_v, c.reason, c.text))
+            reg[c.id] = RefTarget(c.id, c.day, fact_change_text(f.label, c.op, c.value, c.reason, c.text))
     for e in spec.events:
         for s in e.states:
             reg[s.id] = RefTarget(s.id, s.day, s.text)
@@ -72,32 +71,8 @@ def cause_ids(spec: PersonaSpec, registry: dict[str, RefTarget]) -> set[str]:
 
 # ── Facts ───────────────────────────────────────────────────────────
 
-def retraction_order(spec: PersonaSpec) -> dict[str, str]:
-    """retraction id → id of the change it corrects (which must be stated first)."""
-    out = {}
-    for f in spec.facts:
-        for r in f.retractions:
-            candidates = [c for c in f.changes if c.value == r.wrong_value and c.day < r.day]
-            if candidates:
-                out[r.id] = max(candidates, key=lambda c: c.day).id
-    return out
-
-
-def _true_value(spec: PersonaSpec, entity: str, value: str, day: int) -> str:
-    for f in spec.facts:
-        if f.entity != entity:
-            continue
-        for r in f.retractions:
-            candidates = [c for c in f.changes if c.value == r.wrong_value and c.day < r.day]
-            if candidates:
-                target = max(candidates, key=lambda c: c.day)
-                if value == r.wrong_value and day >= target.day:
-                    return r.correct_value
-    return value
-
-
 def fact_timeline(spec: PersonaSpec) -> dict[str, list[list[str]]]:
-    """entity → per-day (index day-1) list of values that are actually true."""
+    """entity → per-day (index day-1) list of values that are true that day."""
     out = {}
     for f in spec.facts:
         by_day: dict[int, list] = {}
@@ -107,7 +82,7 @@ def fact_timeline(spec: PersonaSpec) -> dict[str, list[list[str]]]:
         per_day = []
         for d in range(1, spec.num_days + 1):
             for c in by_day.get(d, []):
-                v = _true_value(spec, f.entity, c.value, c.day)
+                v = c.value
                 if c.op == "set":
                     active = [v]
                 elif c.op == "add" and v not in active:
@@ -126,19 +101,11 @@ def build_statements(spec: PersonaSpec, registry: dict[str, RefTarget]) -> list[
     out: list[Statement] = []
     for f in spec.facts:
         for c in f.changes:
-            true_v = _true_value(spec, f.entity, c.value, c.day)
             out.append(Statement(
                 id=c.id, kind="background_fact" if c.day == 1 else "fact_change",
                 text=fact_change_text(f.label, c.op, c.value, c.reason, c.text),
-                entity=f.entity, op=c.op, true_value=true_v, stated_value=c.value,
+                entity=f.entity, op=c.op, value=c.value,
                 effective_day=c.day, is_cause=c.id in causes,
-            ))
-        for r in f.retractions:
-            out.append(Statement(
-                id=r.id, kind="retraction",
-                text=f"correction: {f.label} — it is {r.correct_value}, not {r.wrong_value} as said before",
-                entity=f.entity, op="retract", true_value=r.correct_value, stated_value=r.wrong_value,
-                effective_day=r.day,
             ))
     for e in spec.events:
         for s in e.states:
@@ -148,27 +115,20 @@ def build_statements(spec: PersonaSpec, registry: dict[str, RefTarget]) -> list[
         for i, fact in enumerate(p.facts):
             out.append(Statement(id=f"other.{p.person.lower()}.{i}", kind="other_person",
                                  text=f"{p.person} ({spec.name}'s {p.relation}): {fact.text}",
-                                 entity=fact.noun, true_value=fact.value, effective_day=fact.day))
+                                 entity=fact.noun, value=fact.value, effective_day=fact.day))
     for d in spec.distractors:
         out.append(Statement(id=d.id, kind="distractor", text=d.text, effective_day=d.day))
     return out
 
 
-def schedule_statements(statements: list[Statement], session_days: list[int],
-                        after: dict[str, str] | None = None) -> None:
-    """Move every statement to a session day on or after it takes effect, respecting caps.
-    `after` maps a statement id to one that must be stated in an earlier session."""
-    after = after or {}
-    by_id = {s.id: s for s in statements}
+def schedule_statements(statements: list[Statement], session_days: list[int]) -> None:
+    """Move every statement to a session day on or after it takes effect, respecting caps."""
     load: dict[int, int] = {}
     background_load: dict[int, int] = {}
     order = sorted(statements, key=lambda s: (s.effective_day, not s.is_cause,
                                               s.kind == "background_fact", s.id))
     for s in order:
-        earliest = s.effective_day
-        if s.id in after and by_id[after[s.id]].stated_day is not None:
-            earliest = max(earliest, by_id[after[s.id]].stated_day + 1)
-        for day in (d for d in session_days if d >= earliest):
+        for day in (d for d in session_days if d >= s.effective_day):
             if load.get(day, 0) >= config.MAX_STATEMENTS_PER_SESSION:
                 continue
             if s.kind == "background_fact" and background_load.get(day, 0) >= config.BACKGROUND_FACTS_PER_SESSION:
@@ -183,10 +143,10 @@ def schedule_statements(statements: list[Statement], session_days: list[int],
 
 
 def known_timeline(spec: PersonaSpec, statements: list[Statement]) -> dict[str, list[list[str]]]:
-    """What the user has told the assistant so far, including not-yet-corrected mistakes."""
+    """What the user has told the assistant so far (facts become known when stated)."""
     by_day: dict[int, list[Statement]] = {}
     for s in statements:
-        if s.entity and s.kind in ("background_fact", "fact_change", "retraction") and s.stated_day:
+        if s.entity and s.kind in ("background_fact", "fact_change") and s.stated_day:
             by_day.setdefault(s.stated_day, []).append(s)
     entities = [f.entity for f in spec.facts]
     active = {e: [] for e in entities}
@@ -195,13 +155,11 @@ def known_timeline(spec: PersonaSpec, statements: list[Statement]) -> dict[str, 
         for s in sorted(by_day.get(d, []), key=lambda s: (s.effective_day, s.id)):
             cur = active[s.entity]
             if s.op == "set":
-                active[s.entity] = [s.stated_value]
-            elif s.op == "add" and s.stated_value not in cur:
-                active[s.entity] = cur + [s.stated_value]
+                active[s.entity] = [s.value]
+            elif s.op == "add" and s.value not in cur:
+                active[s.entity] = cur + [s.value]
             elif s.op == "remove":
-                active[s.entity] = [x for x in cur if x not in (s.stated_value, s.true_value)]
-            elif s.op == "retract":
-                active[s.entity] = [s.true_value if x == s.stated_value else x for x in cur]
+                active[s.entity] = [x for x in cur if x != s.value]
         for e in entities:
             out[e].append(list(active[e]))
     return out
@@ -283,7 +241,7 @@ def simulate(spec: PersonaSpec) -> WorldState:
     registry = reference_registry(spec)
     truth = fact_timeline(spec)
     statements = build_statements(spec, registry)
-    schedule_statements(statements, session_days, retraction_order(spec))
+    schedule_statements(statements, session_days)
     known = known_timeline(spec, statements)
 
     regimes = resolve_regimes(spec, registry)
@@ -418,7 +376,7 @@ def simulate(spec: PersonaSpec) -> WorldState:
             preferences=prefs,
             active_facts={e: v[d - 1] for e, v in truth.items()},
             known_facts=known_today,
-            facts_to_state_today=[s for s in today if s.kind in ("background_fact", "fact_change", "retraction")],
+            facts_to_state_today=[s for s in today if s.kind in ("background_fact", "fact_change")],
             event_updates_today=[s for s in today if s.kind == "event_update"],
             other_people_today=[s for s in today if s.kind == "other_person"],
             distractors_today=[s for s in today if s.kind == "distractor"],

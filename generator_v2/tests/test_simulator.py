@@ -23,21 +23,6 @@ def test_statements_land_on_session_days_after_they_take_effect(w5):
     assert any(s.retrospective for s in w5.statements)
 
 
-def test_retraction_is_true_from_the_original_day_but_known_only_after_correction(w5):
-    biscuit = next(s for s in w5.statements if s.id == "pet.biscuit")
-    fix = next(s for s in w5.statements if s.kind == "retraction" and s.entity == "pets"
-               and s.true_value == "labrador named Biscuit")
-    assert w5.days[95 - 1].active_facts["pets"] == ["labrador named Biscuit"]
-    assert "golden retriever named Biscuit" in w5.days[biscuit.stated_day - 1].known_facts["pets"]
-    assert w5.days[fix.stated_day - 1].known_facts["pets"][0] == "labrador named Biscuit"
-
-
-def test_corrections_come_in_a_later_session_than_the_mistake(u5, w5):
-    stated = {s.id: s.stated_day for s in w5.statements}
-    for rid, target in simulator.retraction_order(u5).items():
-        assert stated[rid] > stated[target]
-
-
 def test_exceptions_in_a_domain_are_spaced_out(w5):
     from generator_v2 import config
     for dom in w5.days[0].preferences:
@@ -45,11 +30,18 @@ def test_exceptions_in_a_domain_are_spaced_out(w5):
         assert all(b - a > config.EXCEPTION_MIN_SPACING for a, b in zip(days, days[1:]))
 
 
-def test_cause_text_uses_the_corrected_value_but_the_statement_uses_what_was_said(w5):
+def test_facts_become_known_when_stated_and_are_never_wrong(w5):
     biscuit = next(s for s in w5.statements if s.id == "pet.biscuit")
-    assert biscuit.text == "adopted a golden retriever named Biscuit"
+    assert biscuit.text == "adopted a labrador named Biscuit"
+    assert w5.days[biscuit.stated_day - 2].known_facts["pets"] == []
+    seen: dict[str, set] = {}
+    for d in w5.days:
+        for entity, vals in d.active_facts.items():
+            seen.setdefault(entity, set()).update(vals)
+        for entity, known in d.known_facts.items():
+            assert set(known) <= seen[entity], (d.day, entity, known)
     exercise = next(r for r in w5.regimes if r.id == "exercise.r1")
-    assert exercise.cause_text == "adopted a labrador named Biscuit"
+    assert exercise.cause_text == biscuit.text
 
 
 def test_single_valued_facts_update_in_place(w1):

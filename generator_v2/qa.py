@@ -33,7 +33,6 @@ CAPABILITY = {
     "fact_current": "knowledge_update",
     "fact_at_time": "temporal_fact",
     "fact_history": "knowledge_update",
-    "retraction": "knowledge_update",
     "event_status": "event_tracking",
     "duration": "temporal_arithmetic",
     "distractor_probe": "causal_reasoning",
@@ -346,8 +345,8 @@ class QABuilder:
 
     def _fact_evidence(self, entity: str, value: str) -> list[int]:
         days = [s.stated_day for s in self.world.statements
-                if s.entity == entity and s.true_value == value and s.stated_day
-                and s.kind in ("background_fact", "fact_change", "retraction")]
+                if s.entity == entity and s.value == value and s.stated_day
+                and s.kind in ("background_fact", "fact_change")]
         return sorted(set(days)) or [1]
 
     def _join(self, vals: list[str]) -> str:
@@ -385,7 +384,7 @@ class QABuilder:
         k_total = config.QA_TARGETS["fact_at_time"]
         change_days = defaultdict(set)
         for f in entities:
-            change_days[f.entity] |= {c.day for c in f.changes if c.day > 1} | {r.day for r in f.retractions}
+            change_days[f.entity] |= {c.day for c in f.changes if c.day > 1}
         for i, f in enumerate(entities):
             k = k_total // len(entities) + (1 if i < k_total % len(entities) else 0)
             intervals = self._intervals(f.entity)
@@ -399,10 +398,6 @@ class QABuilder:
             for answer, _, _, _, day in self.sample(cands, k):
                 vals = day.active_facts[f.entity]
                 tags = ["set"] if f.cardinality == "multi" else []
-                for r in f.retractions:
-                    target = max((c.day for c in f.changes if c.value == r.wrong_value and c.day < r.day), default=None)
-                    if target is not None and target <= day.day < r.day:
-                        tags.append("retraction_window")
                 if not vals:
                     tags.append("empty")
                 ev = sorted({d for v in vals for d in self._fact_evidence(f.entity, v)}) or [1]
@@ -413,19 +408,6 @@ class QABuilder:
                 else:
                     q = f"What were {self.name}'s {f.label} on {day.date.isoformat()}?"
                     self.add(Draft("fact_at_time", f.entity, q, answer, "free_text", [answer], ev, "llm_judge", tags))
-
-    def retractions(self) -> None:
-        for f in self.spec.facts:
-            for r in f.retractions:
-                ev = [self.stated_day(r.id)]
-                q = r.question or f"What is correct about {self.name}'s {f.label} that was once stated as '{r.wrong_value}'?"
-                a = r.answer or r.correct_value
-                self.add(Draft("retraction", f.entity, q, a, "value", [a], ev, "llm_judge", []))
-                is_q = (f"Is {r.wrong_value} one of {self.name}'s {f.label}?" if f.cardinality == "multi"
-                        else f"Is {self.name}'s {f.label} {r.wrong_value}?")
-                self.add(Draft("retraction", f.entity, is_q,
-                               f"No — {self.name} corrected that on {self.date(r.day).isoformat()}: it is {r.correct_value}.",
-                               "yes_no", ["no"], ev, "llm_judge", ["corrected"]))
 
     def events(self) -> None:
         for e in self.spec.events:
@@ -548,7 +530,6 @@ class QABuilder:
         self.exceptions_vs_shifts()
         self.reversions()
         self.facts_questions()
-        self.retractions()
         self.events()
         self.durations()
         self.distractors()

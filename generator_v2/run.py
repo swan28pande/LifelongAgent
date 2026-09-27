@@ -81,9 +81,6 @@ def fact_timeline(spec: PersonaSpec, world: WorldState) -> str:
             st = stated[c.id]
             if c.day > 1 and st.retrospective:
                 out.append(f"{'':21}{c.id}: effective d{c.day}, stated d{st.stated_day} (retrospective)")
-        for r in f.retractions:
-            out.append(f"{'':21}retraction d{r.day} (stated d{stated[r.id].stated_day}): "
-                       f"'{r.wrong_value}' → '{r.correct_value}'")
     for e in spec.events:
         states = " → ".join(f"{s.status} d{s.day}" for s in e.states)
         out.append(f"  event {e.chain_id:<15} {states}")

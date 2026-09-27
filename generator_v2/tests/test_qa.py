@@ -93,12 +93,6 @@ def test_yes_no_types_have_positive_controls(q5):
         assert keys["yes"] > 0 and keys["no"] > 0, qtype
 
 
-def test_retraction_answers_use_corrected_values(q5):
-    answers = {q.question: q.answer for q in q5 if q.type == "retraction"}
-    assert answers["What breed is Priya's dog Biscuit?"] == "labrador"
-    assert answers["What is the name of Priya's cat?"] == "Mochi"
-
-
 def test_fact_current_reflects_latest_true_value(q1):
     cur = {q.domain: q.answer for q in q1 if q.type == "fact_current"}
     assert cur["job"] == "account manager at the logistics firm"
@@ -114,4 +108,4 @@ def test_viewpoint_and_recency(u5, q5):
 
 def test_u1_has_no_types_its_ladder_excludes(q1):
     types = {q.type for q in q1}
-    assert not types & {"exception_vs_shift", "reversion", "distractor_probe", "other_person", "retraction"}
+    assert not types & {"exception_vs_shift", "reversion", "distractor_probe", "other_person"}

@@ -11,7 +11,7 @@ from dataclasses import dataclass
 
 from . import config
 from .schema import ConditionalRule, NestedRule, PersonaSpec, Rule, WorldState
-from .simulator import raw_mention_rate, reference_registry, retraction_order
+from .simulator import raw_mention_rate, reference_registry
 
 MIN_REGIME_DAYS = 14
 SEASONS = {"winter", "spring", "summer", "fall"}
@@ -41,7 +41,7 @@ def check_spec(spec: PersonaSpec) -> list[str]:
     registry = reference_registry(spec)
     max_lag = spec.difficulty.lag_days.max if spec.difficulty and spec.difficulty.lag_days.max else 10
 
-    ids = ([c.id for f in spec.facts for c in f.changes] + [r.id for f in spec.facts for r in f.retractions]
+    ids = ([c.id for f in spec.facts for c in f.changes]
            + [s.id for e in spec.events for s in e.states] + [e.chain_id for e in spec.events]
            + [r.id for p in spec.preferences for r in p.regimes] + [d.id for d in spec.distractors])
     dupes = [i for i, n in Counter(ids).items() if n > 1]
@@ -52,7 +52,7 @@ def check_spec(spec: PersonaSpec) -> list[str]:
         if not 1 <= day <= N:
             errs.append(f"{what}: day {day} outside 1..{N}")
 
-    # Facts: ops respect cardinality, removes target active values, retractions resolve.
+    # Facts: ops respect cardinality, removes target active values.
     for f in spec.facts:
         changes = sorted(f.changes, key=lambda c: c.day)
         if f.cardinality == "single":
@@ -81,13 +81,6 @@ def check_spec(spec: PersonaSpec) -> list[str]:
                     errs.append(f"{c.id}: unknown cause_event '{c.cause_event}'")
                 elif target.day > c.day:
                     errs.append(f"{c.id}: cause_event happens after the change")
-        for r in f.retractions:
-            in_range(r.day, r.id)
-            targets = [c for c in changes if c.value == r.wrong_value and c.day < r.day]
-            if not targets:
-                errs.append(f"{r.id}: no earlier statement of '{r.wrong_value}' to retract")
-            if r.wrong_value == r.correct_value:
-                errs.append(f"{r.id}: correct value equals wrong value")
 
     for e in spec.events:
         days = [s.day for s in e.states]
@@ -195,9 +188,6 @@ def check_world(spec: PersonaSpec, world: WorldState) -> list[str]:
     for s in world.statements:
         if s.stated_day is None:
             errs.append(f"statement {s.id} (day {s.effective_day}) never reaches a session")
-    for rid, target in retraction_order(spec).items():
-        if stated.get(rid) and stated.get(target) and stated[rid] <= stated[target]:
-            errs.append(f"{rid}: correction stated on day {stated[rid]}, not after the mistake (day {stated[target]})")
 
     for dom in (p.domain for p in spec.preferences):
         days = [d.day for d in world.days if d.preferences[dom].is_exception]
@@ -272,7 +262,6 @@ def measure_knobs(spec: PersonaSpec, world: WorldState) -> dict:
         "p_session": round(len(session_days) / len(world.days), 4),
         "p_mention": round(raw_mention_rate(spec, world), 4),
         "fact_changes": sum(c.day > 1 for f in spec.facts for c in f.changes),
-        "retractions": sum(len(f.retractions) for f in spec.facts),
         "other_people": bool(spec.other_people),
         "total_shifts": len(shifts),
         "all_domain_shift_counts": dict(per_domain),
@@ -300,7 +289,7 @@ def compare_knobs(spec: PersonaSpec, m: dict) -> list[KnobRow]:
     for knob in ("temporary_shifts", "fact_changes"):
         rng = getattr(t, knob)
         rows.append(KnobRow(knob, str(rng), str(m[knob]), rng.contains(m[knob])))
-    for knob in ("cross_domain_causes", "distractors", "retractions"):
+    for knob in ("cross_domain_causes", "distractors"):
         rows.append(KnobRow(knob, str(getattr(t, knob)), str(m[knob]), m[knob] == getattr(t, knob)))
     rows.append(KnobRow("exception_rate", f"{t.exception_rate:.2f}", f"{m['exception_rate']:.3f}",
                         abs(m["exception_rate"] - t.exception_rate) <= config.EXCEPTION_RATE_TOLERANCE))

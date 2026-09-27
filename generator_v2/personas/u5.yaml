@@ -1,7 +1,8 @@
 # U5 — hardest user. Sessions on half the days, domains mentioned about half the time,
 # nested and conditional rules, 30 shifts (explicit/implicit/uncaused ≈ 23/50/27),
 # 4 temporary shifts, 4 cross-domain causes, 8 distractors (one deliberate confounder),
-# 3 retractions, and facts about other people that must not be attributed to Priya.
+# and facts about other people that must not be attributed to Priya. Everything Priya
+# says is true: facts change, but nothing she states is ever wrong or corrected.
 #
 # Cross-domain causes: pet.biscuit (exercise, bedtime), knee_injury (exercise, commute),
 # city.denver (commute, dinner), job.climate (commute, bedtime).
@@ -40,20 +41,12 @@ facts:
     cardinality: single
     changes:
       - {day: 1, op: set, value: "pescatarian"}
-      - {id: diet.veg, day: 470, op: set, value: "vegan", text: "switched to a {value} diet"}
-    retractions:
-      - {day: 474, wrong_value: "vegan", correct_value: "vegetarian",
-         question: "What diet has Priya followed since mid-2027?", answer: "vegetarian"}
+      - {id: diet.veg, day: 470, op: set, value: "vegetarian", text: "switched to a {value} diet"}
   - entity: pets
     cardinality: multi
     changes:
-      - {id: pet.biscuit, day: 95, op: add, value: "golden retriever named Biscuit", text: "adopted a {value}"}
-      - {id: pet.cat, day: 600, op: add, value: "cat named Miso", text: "adopted a {value}"}
-    retractions:
-      - {day: 98, wrong_value: "golden retriever named Biscuit", correct_value: "labrador named Biscuit",
-         question: "What breed is Priya's dog Biscuit?", answer: "labrador"}
-      - {day: 603, wrong_value: "cat named Miso", correct_value: "cat named Mochi",
-         question: "What is the name of Priya's cat?", answer: "Mochi"}
+      - {id: pet.biscuit, day: 95, op: add, value: "labrador named Biscuit", text: "adopted a {value}"}
+      - {id: pet.cat, day: 600, op: add, value: "cat named Mochi", text: "adopted a {value}"}
   - entity: hobbies
     cardinality: multi
     changes:

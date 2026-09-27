@@ -86,13 +86,6 @@ def test_unknown_event_ref_is_rejected():
     assert any("unknown event_ref" in e for e in spec_errors(m))
 
 
-def test_retraction_must_target_an_earlier_statement():
-    def m(d):
-        diet = next(f for f in d["facts"] if f["entity"] == "diet")
-        diet["retractions"][0]["wrong_value"] = "keto"
-    assert any("no earlier statement" in e for e in spec_errors(m))
-
-
 def test_conditional_rule_must_cover_every_case():
     def m(d):
         domain(d, "music")["regimes"][0]["rule"]["cases"] = {True: "lo-fi beats"}

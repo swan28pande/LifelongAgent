@@ -60,7 +60,6 @@ class Difficulty(Strict):
     p_mention: float
     p_regime_start_mention: float
     fact_changes: IntRange
-    retractions: int
     wording: str
     other_people: bool
 
@@ -146,21 +145,11 @@ class FactChange(Strict):
     text: Optional[str] = None
 
 
-class Retraction(Strict):
-    id: Optional[str] = None
-    day: int
-    wrong_value: str
-    correct_value: str
-    question: Optional[str] = None
-    answer: Optional[str] = None
-
-
 class FactEntity(Strict):
     entity: str
     noun: Optional[str] = None
     cardinality: Literal["single", "multi"]
     changes: list[FactChange]
-    retractions: list[Retraction] = []
 
     @property
     def label(self) -> str:
@@ -259,8 +248,6 @@ class PersonaSpec(Strict):
         for f in self.facts:
             for i, c in enumerate(f.changes):
                 c.id = c.id or f"{f.entity}.{i}"
-            for i, r in enumerate(f.retractions):
-                r.id = r.id or f"{f.entity}.retraction{i}"
         for e in self.events:
             for i, s in enumerate(e.states):
                 s.id = s.id or f"{e.chain_id}.{i}"
@@ -318,13 +305,12 @@ class ResolvedRegime(Strict):
 
 class Statement(Strict):
     id: str
-    kind: Literal["background_fact", "fact_change", "retraction", "event_update",
+    kind: Literal["background_fact", "fact_change", "event_update",
                   "other_person", "distractor"]
     text: str
     entity: Optional[str] = None
     op: Optional[str] = None
-    true_value: Optional[str] = None
-    stated_value: Optional[str] = None
+    value: Optional[str] = None
     effective_day: int
     stated_day: Optional[int] = None
     retrospective: bool = False
