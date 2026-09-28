@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 207,
+  "date": "2026-09-23",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Wednesday starting off in Austin? Did you manage to find a good low-caffeine option for your morning coffee today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I did. I decided to make a matcha latte this morning. It's got just enough kick to wake me up without the jitters, so it's a perfect compromise after my doctor's advice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great choice! Matcha is a fantastic alternative. How is the rest of your day shaping up at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty busy, but manageable. The weather is actually quite warm today, so my outfit is pretty casual—just a fitted t-shirt and jeans for working at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and comfortable! Sometimes a simple fitted t-shirt is the best way to go, especially when it's warm. Have you taken a break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I'm just finishing up. I had a deli sandwich from the place down the street. It was really good and gave me a nice break from the screens."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is always a solid lunch option. Glad you got a break! By the way, how are things going with planning for your sister Ana's wedding in November? Are things starting to come together?"
+    },
+    {
+      "speaker": "user",
+      "text": "They really are. Ana and her fiancé have most of the big details sorted out now. November will be here before we know it, so everyone is getting excited."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear! It must be exciting for the whole family. Have you had any time for your hobbies lately, like playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually spent about an hour playing my guitar last night. It's always a great way to unwind after a long day of logistics work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a great stress-relief. How has your roommate Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We actually caught up for a bit last night too. Anyway, I should head back to work now, but I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Leo's sister Ana asked him to help brainstorm acoustic songs for her wedding's cocktail hour."
+  ]
+}

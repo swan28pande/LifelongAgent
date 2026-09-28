@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 475,
+  "date": "2027-06-18",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Friday. How is your day going so far in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just trying to wrap up some logistics accounts before the weekend. I started my morning with a matcha latte, which was a nice change of pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great way to kick off a Friday. Are you keeping things casual at the office today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I had a client meeting earlier, so I wore a button-down shirt today instead of my usual t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, dressing up a bit! I hope the client meeting went smoothly. Did you get a chance to take a proper lunch break after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I grabbed a quick deli sandwich and ate it outside while the weather was still nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich outside sounds lovely. Do you have any big plans lined up for the weekend? Any rock climbing on the schedule?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm actually planning to go rock climbing tomorrow morning. The weather is supposed to be perfect for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! Are you going with your roommate, Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, Sam is coming along. We both need to get out of the house after a busy week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely. It's always good to unplug. Will you be practicing any guitar this weekend too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably on Sunday. I've been trying to learn a new song, so I'll definitely spend some time on that."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

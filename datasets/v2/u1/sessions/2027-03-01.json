@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 366,
+  "date": "2027-03-01",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is everything starting off for you today at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just trying to get organized for a busy week of account management. I'm dressed a bit nicer than usual today—wearing a button-down shirt instead of my usual tees."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a great way to kick off the workweek with some focus! Did you get to do any rock climbing or play some guitar over the weekend to recharge?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did play some guitar yesterday, which was really relaxing. This morning, I started my day with a decaf americano while getting some emails sorted out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a smooth, warm start. How's the weather in Austin today? Feeling like spring yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually pretty nice and sunny today! Perfect weather to sit outside for a bit. For lunch, I ended up having a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A homemade salad is perfect for a sunny day. Are you still finding plenty of great vegetarian ingredients around Austin to mix into your meals?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely, the grocery stores here have amazing fresh produce, so it's super easy to keep things vegetarian and delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. It makes meal prep so much easier. Have you and Sam done any cooking together lately, or is everyone mostly doing their own thing?"
+    },
+    {
+      "speaker": "user",
+      "text": "We mostly do our own thing during the busy workdays, but we still catch up in the evenings. He was actually listening to me practice some new chords on the guitar last night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you have a built-in audience! How is the guitar practice going? Are you working on any specific songs?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! Just practicing some acoustic covers. It's a nice way to unwind after a long day at work. I should probably get back to these client accounts, but I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

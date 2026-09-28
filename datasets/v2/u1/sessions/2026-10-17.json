@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 231,
+  "date": "2026-10-17",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Leo! How is your weekend in Austin starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, pretty relaxed so far. I started the morning with a decaf americano and have just been taking things easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a nice, smooth start to a Saturday. What's on your agenda for today? Any guitar practice or rock climbing planned?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually spent about an hour playing my guitar earlier. Right now I'm just wearing a fitted t-shirt and hanging out at the apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, cozy Saturday. Is Sam around today, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is out running some errands, so it's quiet here. I've been looking over some details for my sister Ana's wedding next month."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh right, November is coming up fast! It must be getting exciting. Have you paused for lunch yet amidst the wedding planning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just finished eating. I had a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and refreshing. Are you planning to head to the climbing gym later this afternoon, or is today strictly for resting?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely a rest day today. I did a pretty intense session on Thursday, so my muscles could use a break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking rest days is definitely key, especially after an intense climb. Do you have any other low-key plans for the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not really, just planning to read a bit and watch a movie. It's nice not to have a packed schedule."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Leo is planning to play acoustic covers at his sister Ana's wedding."
+  ]
+}

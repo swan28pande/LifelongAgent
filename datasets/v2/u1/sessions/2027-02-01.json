@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 338,
+  "date": "2027-02-01",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is everything going over in Austin today? Are you and Sam staying busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, things are good here in Austin. Sam's been busy with work, and so have I. I'm actually just getting ready for a big client meeting today, so I just threw on a button-down shirt to look a bit more professional."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt always does the trick for client meetings! How's your energy level for the big day? Did you get a good start this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a decaf americano first thing. Ever since my check-up where the doctor advised me to cut back on caffeine, I've been trying to stick to decaf. It's actually been working out pretty well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Sticking to the decaf americano is a smart move, especially if it keeps those jitters away before a big meeting. What do you have planned for lunch to power through the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I brought a homemade salad with me to the office today. It's quick and easy to eat at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds delicious and refreshing. Is it one of your go-to vegetarian recipes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely. It's fully vegetarian, packed with cucumbers, tomatoes, and some chickpeas for protein. It keeps me energized without feeling too heavy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect. It's great that you're keeping up with your vegetarian diet so consistently. How has the logistics firm been lately? Is the account manager role keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Logistics is always fast-paced, but I enjoy the challenge. It just means my weekends are strictly for winding down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Did you manage to get some downtime this weekend, maybe playing some guitar or hanging out with Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did play a bit of guitar yesterday, which was nice. Sam was out mostly, but we caught up last night. Now it's back to the Monday grind!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

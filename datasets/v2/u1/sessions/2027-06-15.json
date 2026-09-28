@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 472,
+  "date": "2027-06-15",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going over in Austin? Are you getting any rock climbing in today, or is it mostly a busy day at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's a pretty busy day at work. I did manage to start the day on a good note, though—I had a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a nice way to start the morning, especially since you've been keeping an eye on your caffeine. Hopefully your day at the firm isn't too overwhelming."
+    },
+    {
+      "speaker": "user",
+      "text": "It's manageable, just a lot of meetings. I am wearing a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid, classic choice for a day full of meetings. Have you been able to take a break for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, luckily. For lunch, I had a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Hopefully it was a satisfying lunch. Did you get a vegetarian deli sandwich?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it was a really good vegetarian one. It's helping me power through the rest of my tasks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Do you have any plans to unwind after work? Maybe some guitar practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I will play some guitar tonight. Sam is out, so I can play without disturbing anyone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect setup for some uninterrupted practice. Have fun with the guitar tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to get back to work now, but I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

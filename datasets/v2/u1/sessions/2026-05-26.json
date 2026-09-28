@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 87,
+  "date": "2026-05-26",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Tuesday. How's everything going over in Austin today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty good. It's already quite warm here today. I treated myself to an oat milk latte this morning, which really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte is always a solid choice. Did you have a busy morning with your account coordinator work, or has it been a bit slower?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty steady. I have a lot of shipments to track today. Since the weather is so warm, I dressed down a bit and went with a fitted t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a comfortable choice for a warm day. Did you get a chance to take a break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually had a homemade salad that I prepped. It was really fresh and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect for a hot day! Speaking of home, how are things going with Sam? Have you two been keeping busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, just busy with work. We've mostly been passing each other in the hallway, but we'll probably catch up over dinner tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to check in at the end of the day. Are you planning on doing any rock climbing or playing guitar tonight, or just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to play some guitar tonight. I've been wanting to practice a new song."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome! What song are you working on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some acoustic stuff. It's a nice way to unwind after a long day of tracking logistics."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

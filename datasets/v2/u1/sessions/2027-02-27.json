@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 364,
+  "date": "2027-02-27",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your weekend starting off in Austin? Did you and Sam have any big plans for today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's off to a nice, relaxed start. No huge plans, but I did decide to put on a button-down shirt today instead of my usual t-shirt, just to feel a bit more put-together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Nothing wrong with dressing up a bit on a Saturday. Did you head out somewhere nice?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I walked down the street earlier and grabbed a matcha latte. It was really nice to just sit and sip it while people-watching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a perfect, relaxing way to spend the morning. Have you been getting any rock climbing in lately, or maybe practicing some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played guitar for about an hour last night. I'm trying to learn a new acoustic fingerpicking style, which is challenging but fun."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Fingerpicking takes a lot of patience, but it's so rewarding when it clicks! Are you planning to grab some food soon, or did you already eat?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished eating. I made myself a deli sandwich for lunch. It was quick and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Simple and classic! It's good to have an easy lunch, especially after a long week. How have things been at the logistics firm? I know being an account manager can get pretty hectic."
+    },
+    {
+      "speaker": "user",
+      "text": "It has been super busy lately with some new shipping routes, so I'm definitely glad to have the weekend to completely unplug."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, you've earned the downtime. Any plans for the rest of the day, or just more relaxing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think Sam and I might watch a movie later, but otherwise, I'm just going to take it easy. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

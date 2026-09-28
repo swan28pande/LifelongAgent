@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 48,
+  "date": "2026-04-17",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Friday. How is your morning starting off over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting off pretty well. I'm just sitting here enjoying my morning oat milk latte before things get too hectic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte sounds like the perfect Friday treat. Are things pretty busy for you at the logistics firm today, or do you get a bit of a Friday lull as an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been a super busy week, so I'm keeping it as low-key as possible while I work today. I'm literally just wearing an oversized hoodie to stay comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is the ultimate work-from-home uniform. Is your roommate Sam also working from home today, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam went into the office today, so it's actually really quiet here. It's nice because I can just focus and get through my tasks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet house is great for getting into the zone. Are you planning on taking a proper break for lunch, or just powering through?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll probably eat at my desk, but I did prepare a homemade salad earlier so I don't have to spend time cooking mid-day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart planning. Keeping it healthy and vegetarian, I assume? What did you put in your homemade salad today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, kept it vegetarian. I just tossed together some cucumbers, chickpeas, and feta with a simple lemon dressing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and really refreshing. Do you have any fun plans lined up for the weekend? Maybe some rock climbing or playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely planning to hit the climbing gym tomorrow morning, and then I'll probably just relax and play some guitar in the evening. It should be a good weekend."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Training for the Austin half marathon in May"
+  ]
+}

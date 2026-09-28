@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 699,
+  "date": "2028-01-28",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Leo! How is your Friday starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Good morning! It's going well, just getting settled at my desk. I'm actually sipping on a matcha latte right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! It's great to find a warm drink to start the day. How are things looking for your Friday at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going to be a pretty busy day with client meetings. I even put on a button-down shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a great choice for client meetings! Are you hoping to wrap things up early for the weekend, or do you have a lot on your plate?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have quite a few wrap-up tasks, but I'm definitely hoping to log off at a reasonable hour tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Fingers crossed you can do that. Do you have any fun weekend plans with Sam, or maybe some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is visiting family this weekend, but I'm planning to hit the climbing gym tomorrow morning to work on some new routes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun Saturday morning. Have you had much time to play your guitar lately too?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit in the evenings to unwind. I've been practicing some fingerpicking patterns, which is a nice way to relax after a long day of screen time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds peaceful. Have you thought about what you're doing for lunch today, or will you need to grab something quick between meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually have a meal-prep burrito bowl ready in the fridge, so I'll just heat that up when I get a break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's super convenient! Is it one of your usual vegetarian recipes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's packed with black beans, corn, brown rice, and some fajita veggies. It keeps things easy and stays completely vegetarian."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

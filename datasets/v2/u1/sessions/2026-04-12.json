@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 43,
+  "date": "2026-04-12",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How's your weekend going in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just enjoying a lazy Sunday morning. I started my day with an oat milk latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a perfect Sunday morning. Did you make the oat milk latte yourself, or did you hit up a local coffee shop?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made it here at the apartment. I'm just wearing a fitted t-shirt and relaxing on the couch right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and comfortable! Are you planning to do any rock climbing or play some guitar today, or is it strictly a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might practice some guitar later, but today is mostly a rest day. I did a lot of climbing earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Rest is definitely important! How are things with Sam? Have you two been up to much this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We actually caught up yesterday. Today we're both just doing our own thing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, peaceful day. Have you thought about what you're having for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just finished eating a homemade salad for lunch actually. Kept it light and fresh."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds delicious and refreshing. Do you have any plans for the rest of the afternoon, or just more relaxing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just going to noodle around on the guitar for a bit and then maybe just relax. Keeping it very low-key today."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a balcony at their home."
+  ]
+}

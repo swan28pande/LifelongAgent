@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 336,
+  "date": "2027-01-30",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Saturday. How is your weekend starting off in Austin? Did you get any guitar practice in this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, I actually spent about an hour playing some acoustic stuff earlier. It was really relaxing. I'm just getting ready to head out now, just threw on a button-down shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, sounds like a great start. A button-down shirt makes it sound like you have some nice plans today. Where are you heading?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too crazy, just meeting up with a friend to walk around. I actually stopped by a cafe first and got a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte! That sounds delicious, and it's a great choice for keeping your caffeine intake a bit lower like your doctor suggested. Did you grab something to eat while you were out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I ended up getting a deli sandwich for lunch. It was really good, lots of fresh veggies."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Saturday afternoon meal. Are you planning on doing any rock climbing this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might go to the climbing gym tomorrow morning. My arms are still a little sore from earlier in the week, so I'm giving myself a rest day today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Probably a smart move to let your muscles recover. How has your roommate Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam's doing well! He's actually out of town this weekend visiting some family, so I have the apartment to myself, which is why it's so quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, having the place to yourself can be really peaceful. Perfect for practicing guitar without worrying about distracting anyone!"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly! I might plug in the electric guitar later tonight and play a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a blast. Enjoy the rest of your walk and your quiet evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I definitely will. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 153,
+  "date": "2026-07-31",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Leo! How is your morning going so far over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just trying to wake up and get ready for a busy day at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hear that. Did you grab a nice breakfast or coffee to help you wake up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just had some black coffee. Keeping it simple today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic and effective. What's the plan for the day? Are you dressed and ready to tackle those accounts?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, I'm already dressed. Just wearing a fitted t-shirt and some jeans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds comfortable and perfect for a Friday. Are you planning on heading out for lunch later, or making something at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to have a deli sandwich for lunch. Sam might join me if he's free."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice. Since you're vegetarian, what do you usually like to get on your deli sandwich?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually load it up with hummus, avocado, provolone, cucumber, and sprouts. It's really filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! A great way to power through the rest of your shift. Any fun weekend plans? Maybe some rock climbing or playing the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely some rock climbing tomorrow morning before it gets too hot, and probably practicing some guitar riffs on Sunday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a wonderful weekend ahead. I hope you have a productive Friday and a great lunch!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a sister named Ana who is getting married in November."
+  ]
+}

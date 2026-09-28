@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 498,
+  "date": "2027-07-11",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Sunday going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, pretty quiet so far. I started my morning with a decaf americano and have just been relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a nice, smooth start to the day. Are you planning on staying in, or do you have some plans lined up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might head out in a bit. I got dressed in a button-down shirt today, so I'm ready for whatever."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a great classic look for a Sunday. Is your roommate Sam around to join you if you do head out?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Sam has his own plans today, so he's been out since this morning. I've just been keeping it low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it. Did you end up making something at home for lunch, or did you grab a bite nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "I stayed in and had ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Was it a homemade vegetarian ramen?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I made a quick vegetarian broth and loaded it with tofu and veggies. It hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and perfect for a lazy Sunday. Have you had any time to play your guitar today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I spent about an hour practicing some songs earlier. It’s been a really nice, relaxing day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

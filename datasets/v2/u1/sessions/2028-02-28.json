@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 730,
+  "date": "2028-02-28",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Monday starting off in Chicago? Is the weather treating you okay today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty cold here in Chicago, but I'm managing. I had a decaf americano this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano is a great way to start the week. Are you working from home today, or did you head into the office at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. I put on a button-down shirt for the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classy choice! It's nice to dress up for the office. Are you planning to head out for a vegetarian lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I went out and got some ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Did they have a good vegetarian broth option? Did you go with Sam, or was it just a quick lunch near the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "They had a great veggie broth. It was just a quick solo trip though, but Sam and I should probably do a dinner run soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely, a roommate dinner night is always a good reset. Have you had any time for rock climbing or guitar lately with your busy schedule?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did manage to go rock climbing over the weekend, which was great. My guitar has been sitting in the corner for a few days, though, so I need to pick it back up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great you got some climbing in at least! Your hands are probably tired anyway. Do you have any plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not really, just going to head home after work and relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a peaceful way to end the day. Have a great evening, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

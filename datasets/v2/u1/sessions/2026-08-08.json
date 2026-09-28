@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 161,
+  "date": "2026-08-08",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your weekend starting off down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just chilling at the apartment today. I started my morning with an oat milk latte, which was perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, an oat milk latte sounds like a great way to kick off a Saturday. Did you make it at home, or did you head out to a local coffee shop?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made it here at home. I'm just wearing an oversized hoodie and hanging out, keeping things super low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, sounds incredibly cozy. An oversized hoodie is the ultimate weekend uniform. What are your plans for the rest of the day? Any rock climbing scheduled?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing today. My arms are still a bit sore from earlier this week. I think I'm just going to stay in and practice some guitar later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Guitar practice sounds like a perfect, relaxing alternative. Working on any specific songs today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm trying to learn a new acoustic fingerpicking song. It's challenging but fun. I took a break to make lunch a bit ago."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Fingerpicking takes some serious patience. What did you end up making for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I made a homemade salad with some of the veggies Sam and I got. Kept it nice and fresh."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fresh homemade salad is a great choice, especially for a warm August day. Is Sam around today, or do you have the place to yourself for your guitar session?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is out running some errands, so I have the living room to myself for a while, which is great for practicing without annoying anyone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the perfect setup! You can really focus and play as much as you want. Enjoy the quiet practice time, Leo! Let me know if you need anything else today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I will. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a sister named Ana who is getting married in November."
+  ]
+}

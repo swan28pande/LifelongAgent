@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 668,
+  "date": "2027-12-28",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Tuesday. How is everything going at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's busy, but I'm getting through it. I had a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte is a great choice, especially keeping in mind the doctor's advice about cutting back on caffeine. Are you working from home today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am working from home. I'm wearing a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Polo shirts are perfect for a comfortable work-from-home day. Have you had a chance to eat lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just finished. I had ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is great for a cold day in Chicago. Did you find a good vegetarian one?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I got one with a rich mushroom broth and tofu. It was delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect. Do you have any plans for tonight? Maybe some rock climbing or playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to do some rock climbing later. Sam might come along if he finishes his work in time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! I hope Sam can make it. Have a great climb tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

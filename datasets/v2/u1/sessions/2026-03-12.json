@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 12,
+  "date": "2026-03-12",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Thursday in Austin going? How are things at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty busy, but I'm managing. I started my morning with a black coffee to get energized, and I've been chipping away at my account coordinator tasks since then."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Black coffee is the perfect fuel for a hectic morning! Are you working from the office today, or did you decide to work from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, which is nice. I've just been lounging in an oversized hoodie while answering emails and handling shipments."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie is the absolute best for WFH days. Have you had a chance to grab some lunch yet, or are you still working through the pile?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just put together a quick deli sandwich a little while ago. I wanted something fast so I could get back to my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is an excellent choice for a quick and easy lunch. Is your roommate Sam around to keep you company, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam went into the office today, so it's been quiet around here. It's actually helped me concentrate a lot better."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet house is perfect for getting through a heavy workload. Do you have any plans to unwind once you wrap up for the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I think I'm going to head over to the rock climbing gym later this evening to get some energy out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fantastic way to stretch out and decompress after a long day at the desk. I hope you have a fun climb!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Speak to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

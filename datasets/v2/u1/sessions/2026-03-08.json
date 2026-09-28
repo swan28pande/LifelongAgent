@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 8,
+  "date": "2026-03-08",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How is your morning going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just a slow Sunday morning. I'm sitting on the porch having some black coffee right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing start to the day. Are you dressed and ready to take on the day, or just keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm dressed, but keeping it simple today. I just threw on a fitted t-shirt and some comfortable pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and casual. Do you have any plans to head out today? Maybe some rock climbing or playing some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm thinking about heading over to the climbing gym later this afternoon. But first I need to get some food in me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely, you'll need that energy. What are you thinking of having for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually about to make a quick deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A vegetarian deli sandwich is always a solid choice. What are you putting on it today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm loading it up with some hummus, smoked provolone, cucumber, and sprouts. It's my go-to lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly fresh and satisfying! I hope it hits the spot before you head out."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It definitely will. I'll probably wind down with my guitar this evening after climbing. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

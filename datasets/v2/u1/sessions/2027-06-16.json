@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 473,
+  "date": "2027-06-16",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I started my morning with a matcha latte instead of my usual heavy coffee, trying to stick to that advice from my check-up to cut back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! Matcha is a wonderful alternative. Are you working from home today, or did you head into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I headed in today. I'm just wearing a polo shirt and some chinos, so it's a casual look for the office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds comfortable and perfect for the Austin heat. How are things at the logistics firm? Keeping busy as an account manager?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a lot of shipments moving this week, so my morning was packed with client calls. I'm finally taking a breather now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You definitely earned a break. What are you having for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just picked up a deli sandwich from the place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Did you get a good vegetarian one?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's a fully vegetarian deli sandwich with avocado, hummus, and a bunch of veggies. Really fresh and hitting the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Do you have any plans after work today? Maybe some rock climbing or practicing the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll stick to the guitar tonight. My forearms are still a bit sore from rock climbing earlier this week, so a relaxed evening sounds perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible plan. Enjoy your guitar session and the rest of your lunch!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

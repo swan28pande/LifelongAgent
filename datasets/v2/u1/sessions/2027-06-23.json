@@ -1,0 +1,83 @@
+{
+  "user_id": "u1",
+  "day": 480,
+  "date": "2027-06-23",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going so far? Did you manage to squeeze in some time for rock climbing, or is it a busy workday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually been an incredibly busy and exciting day. I officially moved to Chicago after transferring to the Chicago branch. I started the morning with a decaf americano to keep my caffeine intake down like the doctor suggested, and then got right to the move."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, Leo! That is huge news! Congratulations on the transfer and the move to Chicago! How did the actual moving process go today? Are you already in your new place?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I'm currently sitting on a box in my new apartment. The drive and getting everything up the stairs was exhausting, but I made it. I wore a polo shirt today to stay comfortable but still look decent in case I ran into any new neighbors."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a smart choice for move-in day—casual but put-together. Unpacking can be such a workout. Have you had a chance to get any food yet, or are the kitchen boxes still taped up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, my lunch routine has recently changed because I moved to Chicago after transferring to the Chicago branch. Today, I had a meal-prep burrito bowl that I brought with me in a cooler so I wouldn't have to worry about finding food right away."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That was incredibly prepared of you! A meal-prep burrito bowl is perfect for a hectic day like today. Since you're vegetarian, having that ready to go must have saved you a lot of hassle while navigating a new neighborhood."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, it kept things simple and made sure I stayed on track with my vegetarian eating. I didn't have to search for a new spot on an empty stomach."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely a lifesaver. Once you're all unpacked and settled, do you think you'll start looking for local rock climbing gyms or places to play your guitar around the city?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. I'm hoping to find a good climbing gym nearby once I'm settled, and I'll probably unpack my guitar tonight just to unwind a bit after all this lifting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Unwinding with some guitar sounds like the perfect way to spend your first night in Chicago. I hope the rest of your unpacking goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. I'm excited to see what this new chapter brings."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {
+      "city.chicago": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user previously lived and worked in Austin.",
+    "invention: The user no longer lives with his roommate Sam."
+  ]
+}

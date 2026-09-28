@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 415,
+  "date": "2027-04-19",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Monday, Leo! How is your week starting out at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's off to a busy start. I decided to try something different this morning and had a matcha latte to help cut back on the caffeine, like my doctor suggested at my check-up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great choice! A matcha latte is a perfect way to ease into a lower caffeine routine. Are you feeling energized for your account manager duties today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I have an important client check-in this afternoon, so I actually put on a button-down shirt today instead of my usual t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Looking sharp! Good luck with the client check-in. Did you manage to get a decent break for lunch in between prep?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I took a quick half-hour. I kept it simple and got a vegetarian deli sandwich from the place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a deli sandwich is always a solid and reliable lunch. How have things been in Austin lately? Have you had any time to get out for rock climbing or play some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "The weather in Austin has been great. I actually did some rock climbing with Sam over the weekend, but tonight I'm just planning to relax and practice some new songs on my guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to wind down after a busy Monday. By the way, how have things been with your sister Ana since her wedding in San Antonio?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great! She and her husband are still glowing from the wedding, and we chatted on the phone yesterday. She seems really happy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's so wonderful to hear. It was such a special milestone. And how are you feeling physically? Are you still running much after completing the Austin half marathon?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been taking it a bit easy on the running, just doing short jogs here and there, but my legs feel fully recovered from the half marathon. Anyway, I should probably head into this meeting now!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

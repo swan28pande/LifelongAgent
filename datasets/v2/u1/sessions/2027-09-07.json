@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 556,
+  "date": "2027-09-07",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just got settled at my desk and ready to tackle the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Great to hear! Are you dressed up for client meetings today, or keeping it casual?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it casual today. I'm wearing a polo shirt, which is perfect for just working from my desk at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds comfortable and practical. Did you manage to grab a drink to start your morning? I know you've been mindful of caffeine since your check-up."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I did! I had a matcha latte this morning. It gives me a nice, gentle boost without going overboard on the caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart choice! How is the weather in Chicago today? Is it starting to feel like September?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually really nice in Chicago today. A little crisp in the morning, but it's warming up beautifully now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds lovely. Have you thought about what you might have for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually already grabbed something. I decided to get ramen today. I made sure to get the vegetarian broth option, of course."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, a warm bowl of ramen sounds perfect! How are things at home? Have you and Sam been up to much lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things with Sam are good. We're actually planning to do some rock climbing this evening if we both get off work at a decent hour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a fun way to wind down. I hope you get to go! Have a productive afternoon, Leo."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

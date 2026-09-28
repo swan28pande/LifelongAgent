@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 465,
+  "date": "2027-06-08",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just started my workday. I'm sitting here with a decaf americano to kick things off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a solid start to the morning. Are you heading into the office today or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, but I still wanted to look a bit presentable for some video calls, so I put on a polo shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is perfect for video calls—comfortable but professional. What's on the menu for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually already have my lunch prepped. I made a homemade salad this morning, so I'll just grab that from the fridge when it's time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and easy! Speaking of working from home, have you had any time to play your guitar lately between meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have, actually. I've been practicing a fingerpicking song in the evenings. It's a nice way to wind down after a long day of logistics calls."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds really relaxing. Does your roommate Sam mind the practice, or is he used to it by now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, Sam doesn't mind at all. He usually has his headphones on anyway, or he's out. We actually might go rock climbing later tonight if our schedules align."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! Rock climbing is always a fun way to break up the week. I hope you guys manage to go."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I hope so too. I should get back to these emails now, but I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

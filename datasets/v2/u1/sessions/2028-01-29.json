@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 700,
+  "date": "2028-01-29",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your morning starting out in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting off pretty well. It's a nice, quiet morning so far. I just finished making a matcha latte to start the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, especially since your doctor suggested cutting back on the heavier caffeine at your check-up. Are you keeping things relaxed today, or do you have some plans lined up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do have a quick video call with a prospective client for the logistics firm in a bit, so I actually put on a button-down shirt today to look presentable. It's a Saturday, but sometimes you have to make time for these things."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, the dedication of an account manager! I hope the call is quick and goes smoothly. What are you thinking for lunch once you're done?"
+    },
+    {
+      "speaker": "user",
+      "text": "It should be a short meeting. After that, I'm planning to just heat up a meal-prep burrito bowl for lunch before I head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and convenient. A meal-prep burrito bowl is always a solid, healthy lunch. Do you have any plans to get some rock climbing in later, or maybe play some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely climbing! I'm planning to hit the gym this afternoon to work on a tricky route I've been trying to solve."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! I hope you manage to send it today. Is your roommate Sam joining you for the session, or are you going on your own?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually tagging along today. He wanted to try out some of the new bouldering routes they set up this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Saturday afternoon. Have a blast climbing with Sam, and I hope the client call goes well!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

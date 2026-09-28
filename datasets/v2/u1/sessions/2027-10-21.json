@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 600,
+  "date": "2027-10-21",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Leo! How is your Thursday starting off in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, a pretty quiet morning so far. I'm just sitting here drinking a matcha latte and getting ready for the workday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great start to the day. Are you working from home today or heading into the logistics office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm heading into the office today. I actually just put on a button-down shirt and I'm about to pack up my bag."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Looking sharp! Do you have any big client meetings or presentations on the schedule today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not really, just the usual account management tasks and a couple of internal syncs. It should be a pretty steady day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds manageable. Did you end up packing a lunch to take with you, or are you planning to grab something nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually have a meal-prep burrito bowl in the fridge that I'm going to take with me. It's super easy to just heat up at the office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a meal-prep burrito bowl is such a convenient and delicious option. Is it a vegetarian one? I remember you stick to a vegetarian diet."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely! It's got black beans, rice, fajita veggies, and some guac. Completely vegetarian and super filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds amazing and perfect for keeping your energy up. How have things been with your roommate Sam lately? Any plans to climb or play guitar this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is good, we've both been pretty busy. No climbing tonight, but I might play some guitar later to unwind after work."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

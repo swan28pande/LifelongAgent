@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 514,
+  "date": "2027-07-27",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How's your Tuesday starting out in Chicago? Busy day at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty busy today. I'm actually dressed a bit more formally than usual—I'm wearing a polo shirt today because I have a video call with a major client in an hour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the classic polo shirt look—perfect balance of professional and comfortable for a video call. Did you manage to grab a coffee to help you prep for it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, remembering what the doctor said at my check-up, I decided to skip the heavy espresso and went with a matcha latte instead. It gave me a nice, steady energy boost."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great alternative! A matcha latte is perfect for that sustained focus without the jitters. How's everything else going? Have you and Sam had any time for rock climbing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually went climbing last Sunday! My forearms are still feeling it. For lunch just now, I wanted something warm and easy, so I had some ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen is the ultimate comfort food, especially after a tough climbing session. Is Sam still climbing with you regularly?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, he is. We try to keep each other motivated. Though he's been super busy with his own work projects lately, so we're mostly just hanging out at the apartment in the evenings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. It's nice to just unwind at home. Are you still playing much guitar these days, or has work been taking up too much energy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I still play a bit in the evenings to decompress. It's a nice way to shut off my brain after dealing with client logistics all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely. It sounds like you've got a solid routine for balancing everything. Good luck with that client call!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll let you know how the call goes. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Looking forward to hearing about it. Have a good one, Leo!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

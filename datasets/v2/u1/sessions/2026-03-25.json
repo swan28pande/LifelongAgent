@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 25,
+  "date": "2026-03-25",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Wednesday. How is your day going over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It's actually really warm in Austin today, so I'm wearing a fitted t-shirt to stay cool at the office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fitted t-shirt sounds perfect for a warm Texas day! Did you need a strong drink to kickstart your morning at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. I had a cup of black coffee first thing this morning to get me through the early emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Black coffee is always a solid way to power through. Are you having a busy day with your accounts?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty steady, but I just stepped away to eat. I'm actually having a deli sandwich right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a classic lunch. I hope it's a good one! Do you have any fun plans for after work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, it's really good! As for tonight, I'm thinking about going rock climbing if I can finish up on time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. Is your roommate Sam going to join you for rock climbing, or are you going solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is busy tonight, so I'll probably just go solo. But we did talk about playing some music later, so I might get to practice some guitar when I get home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Wednesday evening. Guitar jams are always a great way to end the day."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm looking forward to it. Just need to power through the rest of the afternoon first!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

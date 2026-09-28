@@ -1,0 +1,1175 @@
+[
+  {
+    "id": "u4_q0002",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "breakfast",
+    "difficulty_user": 4,
+    "question": "What was Daniel's breakfast on Friday, 2026-12-11?",
+    "answer": "granola",
+    "answer_type": "value",
+    "accept": [
+      "granola"
+    ],
+    "evidence_days": [
+      244,
+      272,
+      279
+    ],
+    "recency_distance_days": 452,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred"
+    ]
+  },
+  {
+    "id": "u4_q0013",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "breakfast",
+    "difficulty_user": 4,
+    "question": "What was Daniel's breakfast on Monday, 2027-05-31?",
+    "answer": "smoothie bowl",
+    "answer_type": "value",
+    "accept": [
+      "smoothie bowl"
+    ],
+    "evidence_days": [
+      457
+    ],
+    "recency_distance_days": 274,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "boundary"
+    ]
+  },
+  {
+    "id": "u4_q0045",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "workout",
+    "difficulty_user": 4,
+    "question": "What was Daniel's workout on Friday, 2027-04-09?",
+    "answer": "rest day",
+    "answer_type": "value",
+    "accept": [
+      "rest day"
+    ],
+    "evidence_days": [
+      419,
+      433,
+      489
+    ],
+    "recency_distance_days": 242,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred",
+      "boundary"
+    ]
+  },
+  {
+    "id": "u4_q0067",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "outfit",
+    "difficulty_user": 4,
+    "question": "What was Daniel's work outfit on Monday, 2028-01-24?",
+    "answer": "sweater and jeans",
+    "answer_type": "value",
+    "accept": [
+      "sweater and jeans"
+    ],
+    "evidence_days": [
+      696,
+      702
+    ],
+    "recency_distance_days": 29,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred",
+      "no_session",
+      "boundary"
+    ]
+  },
+  {
+    "id": "u4_q0070",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "music",
+    "difficulty_user": 4,
+    "question": "What was Daniel's work music on Saturday, 2026-11-14?",
+    "answer": "indie rock",
+    "answer_type": "value",
+    "accept": [
+      "indie rock"
+    ],
+    "evidence_days": [
+      253,
+      268,
+      270
+    ],
+    "recency_distance_days": 461,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred",
+      "no_session"
+    ]
+  },
+  {
+    "id": "u4_q0100",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "dinner",
+    "difficulty_user": 4,
+    "question": "What was Daniel's dinner on Saturday, 2026-12-12?",
+    "answer": "steak",
+    "answer_type": "value",
+    "accept": [
+      "steak"
+    ],
+    "evidence_days": [
+      287
+    ],
+    "recency_distance_days": 444,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u4_q0106",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "dinner",
+    "difficulty_user": 4,
+    "question": "What was Daniel's dinner on Friday, 2027-10-29?",
+    "answer": "skipped dinner",
+    "answer_type": "value",
+    "accept": [
+      "skipped dinner"
+    ],
+    "evidence_days": [
+      608
+    ],
+    "recency_distance_days": 123,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "exception"
+    ]
+  },
+  {
+    "id": "u4_q0114",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "breakfast",
+    "difficulty_user": 4,
+    "question": "What is Daniel's current breakfast routine?",
+    "answer": "a 5-day cycle starting Wed 2027-11-10: overnight oats for 3 days, then smoked salmon bagel for 2 days, repeating (since 2027-11-10)",
+    "answer_type": "free_text",
+    "accept": [
+      "3 days overnight oats, 2 days smoked salmon bagel"
+    ],
+    "evidence_days": [
+      620,
+      621,
+      726,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0115",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "workout",
+    "difficulty_user": 4,
+    "question": "What is Daniel's current workout routine?",
+    "answer": "a 2-block rotation of 7-day blocks starting Fri 2027-04-09 - block 1: by day of week: lakefront run on Mon; climbing gym on Tue/Thu; running on Wed; rest day on Fri; long run on Sat; yoga on Sun | block 2: by day of week: lakefront run on Mon; swim on Tue/Thu; running on Wed; rest day on Fri/Sun; long run on Sat (since 2027-04-09)",
+    "answer_type": "free_text",
+    "accept": [
+      "two-week rotation of runs with climbing or swimming"
+    ],
+    "evidence_days": [
+      414,
+      418,
+      724,
+      725
+    ],
+    "recency_distance_days": 6,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0117",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "music",
+    "difficulty_user": 4,
+    "question": "What is Daniel's current work music routine?",
+    "answer": "alternates week by week: ambient electronic, then classical, repeating (7-day blocks starting Mon 2027-12-20) (since 2027-12-20)",
+    "answer_type": "free_text",
+    "accept": [
+      "alternating weeks of ambient electronic and classical"
+    ],
+    "evidence_days": [
+      661,
+      662,
+      725,
+      726
+    ],
+    "recency_distance_days": 5,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0128",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "dinner",
+    "difficulty_user": 4,
+    "question": "What was Daniel's dinner routine in October 2027?",
+    "answer": "by day of week: shrimp pad thai on Mon; fish tacos on Tue; tofu green curry on Wed; pasta on Thu; fish and chips on Fri; grilled salmon on Sat; roast vegetables on Sun",
+    "answer_type": "free_text",
+    "accept": [
+      "pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon"
+    ],
+    "evidence_days": [
+      575,
+      578,
+      580
+    ],
+    "recency_distance_days": 151,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "reversion"
+    ]
+  },
+  {
+    "id": "u4_q0138",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "outfit",
+    "difficulty_user": 4,
+    "question": "What was Daniel's work outfit routine in July 2027?",
+    "answer": "alternates week by week: flannel and jeans, then button-down and chinos, repeating (7-day blocks starting Wed 2027-04-14)",
+    "answer_type": "free_text",
+    "accept": [
+      "alternating weeks of flannel and jeans and button-down and chinos"
+    ],
+    "evidence_days": [
+      410,
+      414,
+      416
+    ],
+    "recency_distance_days": 315,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0143",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "workout",
+    "difficulty_user": 4,
+    "question": "What was Daniel's workout routine around 2026-10-13?",
+    "answer": "stationary bike every day",
+    "answer_type": "free_text",
+    "accept": [
+      "stationary bike every day"
+    ],
+    "evidence_days": [
+      211,
+      214,
+      222
+    ],
+    "recency_distance_days": 509,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "temporary"
+    ]
+  },
+  {
+    "id": "u4_q0157",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "breakfast",
+    "difficulty_user": 4,
+    "question": "What will Daniel's breakfast most likely be on Monday, 2028-03-13? Explain the reasoning.",
+    "answer": "smoked salmon bagel. Reasoning: since 2027-11-10 the routine has been a 5-day cycle starting Wed 2027-11-10: overnight oats for 3 days, then smoked salmon bagel for 2 days, repeating. It is day 5 of the 5-day cycle, so smoked salmon bagel.",
+    "answer_type": "value",
+    "accept": [
+      "smoked salmon bagel"
+    ],
+    "evidence_days": [
+      724,
+      726,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_14d"
+    ]
+  },
+  {
+    "id": "u4_q0165",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "workout",
+    "difficulty_user": 4,
+    "question": "What will Daniel's workout most likely be on Sunday, 2028-04-16? Explain the reasoning.",
+    "answer": "rest day. Reasoning: since 2027-04-09 the routine has been a 2-block rotation of 7-day blocks starting Fri 2027-04-09 - block 1: by day of week: lakefront run on Mon; climbing gym on Tue/Thu; running on Wed; rest day on Fri; long run on Sat; yoga on Sun | block 2: by day of week: lakefront run on Mon; swim on Tue/Thu; running on Wed; rest day on Fri/Sun; long run on Sat. It falls in block 2 of the rotation; 2028-04-16 is a Sunday, so rest day.",
+    "answer_type": "value",
+    "accept": [
+      "rest day"
+    ],
+    "evidence_days": [
+      721,
+      724,
+      725
+    ],
+    "recency_distance_days": 6,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_48d"
+    ]
+  },
+  {
+    "id": "u4_q0175",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "outfit",
+    "difficulty_user": 4,
+    "question": "What will Daniel's work outfit most likely be on Wednesday, 2028-03-22? Explain the reasoning.",
+    "answer": "black t-shirt and jeans. Reasoning: since 2028-01-19 the routine has been a 7-day cycle starting Wed 2028-01-19: black t-shirt and jeans for 5 days, then sweater and jeans for 2 days, repeating. It is day 1 of the 7-day cycle, so black t-shirt and jeans.",
+    "answer_type": "value",
+    "accept": [
+      "black t-shirt and jeans"
+    ],
+    "evidence_days": [
+      721,
+      726,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_23d"
+    ]
+  },
+  {
+    "id": "u4_q0188",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "music",
+    "difficulty_user": 4,
+    "question": "What will Daniel's work music most likely be on Saturday, 2028-04-08? Explain the reasoning.",
+    "answer": "classical. Reasoning: since 2027-12-20 the routine has been alternates week by week: ambient electronic, then classical, repeating (7-day blocks starting Mon 2027-12-20). 2028-04-08 is in 7-day block 16 since the anchor (block index 15 mod 2 = 1), so classical.",
+    "answer_type": "value",
+    "accept": [
+      "classical"
+    ],
+    "evidence_days": [
+      724,
+      725,
+      726
+    ],
+    "recency_distance_days": 5,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_40d"
+    ]
+  },
+  {
+    "id": "u4_q0204",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "breakfast",
+    "difficulty_user": 4,
+    "question": "When did Daniel's breakfast routine change from the bacon and eggs / eggs on toast / granola / oatmeal / waffles routine to the brunch with Leah / eggs on toast / granola / smoothie bowl routine?",
+    "answer": "2026-08-30",
+    "answer_type": "date",
+    "accept": [
+      "2026-08-30"
+    ],
+    "evidence_days": [
+      179,
+      183
+    ],
+    "recency_distance_days": 548,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "implicit"
+    ]
+  },
+  {
+    "id": "u4_q0216",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "outfit",
+    "difficulty_user": 4,
+    "question": "When did Daniel's work outfit routine change from black t-shirt and jeans to the black t-shirt and jeans / sweater and jeans routine?",
+    "answer": "2028-01-19 (first observed 2028-01-20)",
+    "answer_type": "date",
+    "accept": [
+      "2028-01-19",
+      "2028-01-20"
+    ],
+    "evidence_days": [
+      689,
+      691
+    ],
+    "recency_distance_days": 40,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "uncaused",
+      "bounded"
+    ]
+  },
+  {
+    "id": "u4_q0219",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "music",
+    "difficulty_user": 4,
+    "question": "When did Daniel's work music routine change from audiobooks to the indie rock / jazz records routine?",
+    "answer": "2027-07-02",
+    "answer_type": "date",
+    "accept": [
+      "2027-07-02"
+    ],
+    "evidence_days": [
+      484,
+      489
+    ],
+    "recency_distance_days": 242,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "reversion",
+      "uncaused"
+    ]
+  },
+  {
+    "id": "u4_q0224",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "dinner",
+    "difficulty_user": 4,
+    "question": "When did Daniel's dinner routine change from the fish and chips / fish tacos / grilled salmon / pasta etc. routine to delivery sushi?",
+    "answer": "2027-08-23 (first observed 2027-08-24)",
+    "answer_type": "date",
+    "accept": [
+      "2027-08-23",
+      "2027-08-24"
+    ],
+    "evidence_days": [
+      537,
+      542
+    ],
+    "recency_distance_days": 189,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "temporary",
+      "implicit",
+      "bounded"
+    ]
+  },
+  {
+    "id": "u4_q0230",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "breakfast",
+    "difficulty_user": 4,
+    "question": "Why did Daniel's breakfast routine change around 2027-11-10?",
+    "answer": "started holding 7 am client calls at the studio",
+    "answer_type": "free_text",
+    "accept": [
+      "started holding 7 am client calls at the studio"
+    ],
+    "evidence_days": [
+      616,
+      620
+    ],
+    "recency_distance_days": 111,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "implicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0236",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "outfit",
+    "difficulty_user": 4,
+    "question": "Why did Daniel's work outfit routine change around 2027-04-14?",
+    "answer": "No reason was stated.",
+    "answer_type": "abstain",
+    "accept": [
+      "no reason was stated"
+    ],
+    "evidence_days": [
+      410
+    ],
+    "recency_distance_days": 321,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "uncaused",
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0238",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "outfit",
+    "difficulty_user": 4,
+    "question": "Why did Daniel's work outfit routine change around 2028-01-19?",
+    "answer": "No reason was stated.",
+    "answer_type": "abstain",
+    "accept": [
+      "no reason was stated"
+    ],
+    "evidence_days": [
+      691
+    ],
+    "recency_distance_days": 40,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "uncaused",
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0239",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "music",
+    "difficulty_user": 4,
+    "question": "Why did Daniel's work music routine change around 2026-12-28?",
+    "answer": "inherited his grandfather's record collection",
+    "answer_type": "free_text",
+    "accept": [
+      "inherited his grandfather's record collection"
+    ],
+    "evidence_days": [
+      301,
+      303
+    ],
+    "recency_distance_days": 428,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "explicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0245",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "dinner",
+    "difficulty_user": 4,
+    "question": "Why did Daniel's dinner routine change around 2027-08-23?",
+    "answer": "started a huge design competition deadline at work",
+    "answer_type": "free_text",
+    "accept": [
+      "started a huge design competition deadline at work"
+    ],
+    "evidence_days": [
+      542
+    ],
+    "recency_distance_days": 189,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "implicit",
+      "temporary"
+    ]
+  },
+  {
+    "id": "u4_q0256",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "outfit",
+    "difficulty_user": 4,
+    "question": "On Thursday, 2027-11-25, Daniel's work outfit was rain jacket and jeans instead of the usual black t-shirt and jeans. Was that a lasting change?",
+    "answer": "No - it was a one-off (stormy weather); the usual routine continued.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      635,
+      638
+    ],
+    "recency_distance_days": 93,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "exception"
+    ]
+  },
+  {
+    "id": "u4_q0262",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "music",
+    "difficulty_user": 4,
+    "question": "On Wednesday, 2027-10-27, Daniel's work music was ambient electronic instead of the usual jazz records. Was that a lasting change?",
+    "answer": "Yes - from 2027-10-26 the routine changed to jazz records early in the week and weekends, ambient mid-week, indie rock Fri.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      605,
+      606,
+      608
+    ],
+    "recency_distance_days": 123,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "implicit"
+    ]
+  },
+  {
+    "id": "u4_q0265",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "dinner",
+    "difficulty_user": 4,
+    "question": "On Monday, 2026-08-10, Daniel's dinner was pad thai instead of the usual pasta. Was that a lasting change?",
+    "answer": "Yes - from 2026-07-31 the routine changed to Thai dishes Mon/Wed, otherwise the usual week.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      154,
+      160,
+      162
+    ],
+    "recency_distance_days": 569,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "explicit"
+    ]
+  },
+  {
+    "id": "u4_q0267",
+    "type": "reversion",
+    "capability": "temporal_change",
+    "domain": "workout",
+    "difficulty_user": 4,
+    "question": "Is Daniel's workout still stationary bike?",
+    "answer": "No - that lasted from 2026-09-27 to 2026-10-30; then Daniel went back to cycling Mon/Wed, climbing gym Tue/Thu, long ride Sat, yoga Sun.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      244,
+      246
+    ],
+    "recency_distance_days": 485,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "temporary"
+    ]
+  },
+  {
+    "id": "u4_q0271",
+    "type": "reversion",
+    "capability": "temporal_change",
+    "domain": "music",
+    "difficulty_user": 4,
+    "question": "What did Daniel's work music go back to after the period of audiobooks?",
+    "answer": "3 days jazz records, 4 days indie rock - a 7-day cycle starting Mon 2026-12-28: jazz records for 3 days, then indie rock for 4 days, repeating",
+    "answer_type": "free_text",
+    "accept": [
+      "3 days jazz records, 4 days indie rock"
+    ],
+    "evidence_days": [
+      489,
+      490,
+      493
+    ],
+    "recency_distance_days": 238,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "temporary"
+    ]
+  },
+  {
+    "id": "u4_q0278",
+    "type": "fact_current",
+    "capability": "knowledge_update",
+    "domain": "relationship",
+    "difficulty_user": 4,
+    "question": "What is Daniel's current relationship status?",
+    "answer": "living with his partner Leah",
+    "answer_type": "value",
+    "accept": [
+      "living with his partner Leah",
+      "living with his partner Leah"
+    ],
+    "evidence_days": [
+      183
+    ],
+    "recency_distance_days": 548,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u4_q0280",
+    "type": "fact_current",
+    "capability": "knowledge_update",
+    "domain": "hobbies",
+    "difficulty_user": 4,
+    "question": "What are Daniel's current hobbies?",
+    "answer": "photography, rock climbing, chess",
+    "answer_type": "free_text",
+    "accept": [
+      "photography, rock climbing, chess"
+    ],
+    "evidence_days": [
+      1,
+      120,
+      522
+    ],
+    "recency_distance_days": 209,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set"
+    ]
+  },
+  {
+    "id": "u4_q0293",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "city",
+    "difficulty_user": 4,
+    "question": "What was Daniel's city of residence on 2026-07-02?",
+    "answer": "Minneapolis, Minnesota",
+    "answer_type": "value",
+    "accept": [
+      "Minneapolis, Minnesota",
+      "Minneapolis"
+    ],
+    "evidence_days": [
+      1
+    ],
+    "recency_distance_days": 730,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u4_q0304",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "relationship",
+    "difficulty_user": 4,
+    "question": "What was Daniel's relationship status on 2026-03-28?",
+    "answer": "dating Leah",
+    "answer_type": "value",
+    "accept": [
+      "dating Leah",
+      "dating Leah"
+    ],
+    "evidence_days": [
+      2
+    ],
+    "recency_distance_days": 729,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u4_q0316",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "hobbies",
+    "difficulty_user": 4,
+    "question": "What were Daniel's hobbies on 2026-12-27?",
+    "answer": "photography, cycling, rock climbing",
+    "answer_type": "free_text",
+    "accept": [
+      "photography, cycling, rock climbing"
+    ],
+    "evidence_days": [
+      1,
+      2,
+      120,
+      330
+    ],
+    "recency_distance_days": 401,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set"
+    ]
+  },
+  {
+    "id": "u4_q0320",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "hobbies",
+    "difficulty_user": 4,
+    "question": "What were Daniel's hobbies on 2026-04-18?",
+    "answer": "photography, cycling",
+    "answer_type": "free_text",
+    "accept": [
+      "photography, cycling"
+    ],
+    "evidence_days": [
+      1,
+      2,
+      330
+    ],
+    "recency_distance_days": 401,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set"
+    ]
+  },
+  {
+    "id": "u4_q0323",
+    "type": "fact_history",
+    "capability": "knowledge_update",
+    "domain": "relationship",
+    "difficulty_user": 4,
+    "question": "How has Daniel's relationship status changed over time?",
+    "answer": "dating Leah (2026-03-01 to 2026-08-26); living with his partner Leah (2026-08-27 to now)",
+    "answer_type": "free_text",
+    "accept": [
+      "living with his partner Leah"
+    ],
+    "evidence_days": [
+      2,
+      183
+    ],
+    "recency_distance_days": 548,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "single"
+    ]
+  },
+  {
+    "id": "u4_q0325",
+    "type": "fact_history",
+    "capability": "knowledge_update",
+    "domain": "hobbies",
+    "difficulty_user": 4,
+    "question": "How have Daniel's hobbies changed over time?",
+    "answer": "cycling (2026-03-01 to 2027-01-23); photography (2026-03-01 to now); rock climbing (2026-06-28 to now); chess (2027-08-02 to now)",
+    "answer_type": "free_text",
+    "accept": [
+      "chess"
+    ],
+    "evidence_days": [
+      1,
+      2,
+      120,
+      330,
+      522
+    ],
+    "recency_distance_days": 209,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "multi"
+    ]
+  },
+  {
+    "id": "u4_q0333",
+    "type": "event_status",
+    "capability": "event_tracking",
+    "domain": "events",
+    "difficulty_user": 4,
+    "question": "What was the status of Leah's Chicago job offer on 2027-03-15?",
+    "answer": "Leah got a job offer in Chicago (planned)",
+    "answer_type": "free_text",
+    "accept": [
+      "Leah got a job offer in Chicago"
+    ],
+    "evidence_days": [
+      371
+    ],
+    "recency_distance_days": 360,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "at_time",
+      "planned"
+    ]
+  },
+  {
+    "id": "u4_q0339",
+    "type": "event_status",
+    "capability": "event_tracking",
+    "domain": "events",
+    "difficulty_user": 4,
+    "question": "What happened with the cookbook gift?",
+    "answer": "got a seafood and vegetarian cookbook as a gift (happened, 2027-12-12)",
+    "answer_type": "free_text",
+    "accept": [
+      "got a seafood and vegetarian cookbook as a gift"
+    ],
+    "evidence_days": [
+      652
+    ],
+    "recency_distance_days": 79,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "happened"
+    ]
+  },
+  {
+    "id": "u4_q0344",
+    "type": "duration",
+    "capability": "temporal_arithmetic",
+    "domain": "music",
+    "difficulty_user": 4,
+    "question": "How long did Daniel's work music stay the indie rock / jazz records routine?",
+    "answer": "168 days (2026-12-28 to 2027-06-13)",
+    "answer_type": "free_text",
+    "accept": [
+      "168"
+    ],
+    "evidence_days": [
+      303,
+      470
+    ],
+    "recency_distance_days": 261,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u4_q0353",
+    "type": "duration",
+    "capability": "temporal_arithmetic",
+    "domain": "dinner",
+    "difficulty_user": 4,
+    "question": "How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?",
+    "answer": "152 days (2026-03-01 to 2026-07-30)",
+    "answer_type": "free_text",
+    "accept": [
+      "152"
+    ],
+    "evidence_days": [
+      1,
+      151
+    ],
+    "recency_distance_days": 580,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "initial"
+    ]
+  },
+  {
+    "id": "u4_q0365",
+    "type": "distractor_probe",
+    "capability": "causal_reasoning",
+    "domain": "breakfast",
+    "difficulty_user": 4,
+    "question": "Around 2027-11-06, started holding 7 am client calls at the studio. Did that lead to any change in Daniel's breakfast?",
+    "answer": "Yes - from 2027-11-10 Daniel's breakfast changed to 3 days overnight oats, 2 days smoked salmon bagel.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      616,
+      620
+    ],
+    "recency_distance_days": 111,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "implicit"
+    ]
+  },
+  {
+    "id": "u4_q0366",
+    "type": "distractor_probe",
+    "capability": "causal_reasoning",
+    "domain": "outfit",
+    "difficulty_user": 4,
+    "question": "Around 2027-07-13, a coworker started wearing suits every day. Did that lead to any change in Daniel's work outfit?",
+    "answer": "No - nothing about Daniel's work outfit changed because of it.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      502
+    ],
+    "recency_distance_days": 229,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u4_q0376",
+    "type": "other_person",
+    "capability": "entity_disambiguation",
+    "domain": "other_people",
+    "difficulty_user": 4,
+    "question": "What did Daniel's brother Kwame start training for?",
+    "answer": "marathon running",
+    "answer_type": "value",
+    "accept": [
+      "marathon running"
+    ],
+    "evidence_days": [
+      502
+    ],
+    "recency_distance_days": 229,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "brother"
+    ]
+  },
+  {
+    "id": "u4_q0377",
+    "type": "other_person",
+    "capability": "entity_disambiguation",
+    "domain": "other_people",
+    "difficulty_user": 4,
+    "question": "Is marathon running one of Daniel's hobbies?",
+    "answer": "No - that is Kwame (Daniel's brother), not Daniel.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      502
+    ],
+    "recency_distance_days": 229,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "confusable"
+    ]
+  },
+  {
+    "id": "u4_q0383",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 4,
+    "question": "What is Daniel's favorite movie?",
+    "answer": "Not known - this was never mentioned.",
+    "answer_type": "abstain",
+    "accept": [
+      "not known"
+    ],
+    "evidence_days": [],
+    "recency_distance_days": 1,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "favorite_movie"
+    ]
+  },
+  {
+    "id": "u4_q0386",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 4,
+    "question": "Do you know Daniel's city of residence?",
+    "answer": "Chicago, Illinois",
+    "answer_type": "value",
+    "accept": [
+      "Chicago, Illinois"
+    ],
+    "evidence_days": [
+      400
+    ],
+    "recency_distance_days": 331,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "city"
+    ]
+  },
+  {
+    "id": "u4_q0387",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 4,
+    "question": "Do you know Daniel's diet?",
+    "answer": "pescatarian",
+    "answer_type": "value",
+    "accept": [
+      "pescatarian"
+    ],
+    "evidence_days": [
+      450
+    ],
+    "recency_distance_days": 281,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "diet"
+    ]
+  }
+]

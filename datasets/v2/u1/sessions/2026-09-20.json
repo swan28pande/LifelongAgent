@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 204,
+  "date": "2026-09-20",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your day starting out down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. Just having a lazy morning at the apartment. I'm currently wearing an oversized hoodie and relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds incredibly comfortable for a lazy Sunday. Have you had anything to drink or eat yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I just finished a cup of black coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic choice to kick off the day. Are you planning to get any tasks done today, or maybe helping Ana out with any wedding plans for November?"
+    },
+    {
+      "speaker": "user",
+      "text": "No wedding planning tasks for me today, thankfully. Ana seems to have everything completely under control for November, so I'm just taking it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! It must be a relief that she's so organized. Have you thought about what you're doing for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just had a deli sandwich for lunch a little while ago."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and simple. How are things going at the logistics firm? Has your work as an account coordinator been keeping you busy lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty busy, but I'm managing. I'm really glad to have the weekend to just unplug from logistics for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, downtime is so important. Do you think you'll do some rock climbing or play some guitar later, or is it strictly a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might pick up my guitar for a bit later, but otherwise it's definitely a rest day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

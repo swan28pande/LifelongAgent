@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 689,
+  "date": "2028-01-18",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going in Chicago? How are things with you and Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good. Chicago is pretty cold today, but Sam and I are doing well. I had a decaf americano earlier this morning while getting started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a cozy start to the morning. How is everything going at the logistics firm today? Are you busy with your accounts?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a bit busy, but manageable. I'm working from home today, wearing a polo shirt, and just caught up on some emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Comfortable work-from-home attire is the best! A polo shirt is perfect for that. Have you had any time for your hobbies lately, like rock climbing or playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually practiced some guitar yesterday evening, which was nice. I haven't been rock climbing in a bit, but I might go later this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great you found some time for the guitar. What are you thinking of having for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually already ate. I had some ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen is such a comforting meal, especially in this freezing weather! Did you order it from somewhere nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I got it from a noodle place just a couple blocks away. It hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome. By the way, have you talked to your sister Ana since her wedding in San Antonio? How is she doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did talk to her recently. She's doing really well and settling into married life."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is so wonderful to hear. Well, I hope the rest of your workday goes smoothly, Leo! Let me know if you need anything else."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll let you know. Have a good one!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

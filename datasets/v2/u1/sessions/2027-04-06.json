@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 402,
+  "date": "2027-04-06",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going so far? How are things down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Austin is great, starting to get a bit warm already. I'm having a good day. I actually started my morning with a matcha latte instead of my usual drip coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte! That sounds like a delicious way to follow your doctor's advice about cutting back on caffeine. How did you like it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was really good! It gave me a nice, steady energy boost for my morning client calls at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Were those calls video meetings, or did you get to keep it casual today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They were on video, but we keep it pretty relaxed. I just wore a polo shirt today, so nothing too formal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is perfect for a warm Austin day. By the way, how is your roommate Sam doing? Have you two had any time to get out for some rock climbing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing well! We haven't been rock climbing in a bit because our schedules have been so busy, but we're hoping to go soon. I actually just finished eating a deli sandwich for lunch a few minutes ago."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A deli sandwich is always a solid, quick lunch. Did you make it yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I made a quick vegetarian one at the apartment. It was perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and convenient. Do you have any plans to relax this evening? Maybe play some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "That's the plan! I'm definitely going to spend some time with my guitar tonight to unwind after work."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 205,
+  "date": "2026-09-21",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Monday starting off in Austin? I hope you're having a good day so far."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty busy morning already. I actually just got back from an appointment. I had a check-up and the doctor advised cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I see. It's always good to get those annual check-ups out of the way, but being told to cut back on caffeine can be a tough adjustment! How are you feeling about making that change?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is definitely going to be a challenge, but I'm taking it seriously. Because of the doctor's advice, I've recently changed my morning coffee routine. Instead of my usual cup, today I had a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte is a really great alternative! It still gives you a little bit of green tea energy but is much gentler on the system. Does your roommate Sam drink matcha as well, or are you on your own with that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is strictly a heavy drip coffee drinker, so I'm completely on my own with the matcha! Since I was heading to the doctor's office first thing, I wanted to wear something simple and comfortable today, so I just put on a fitted t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fitted t-shirt is a classic choice, and perfect for the warm Austin weather anyway. Did you head straight to your logistics job after the appointment, or did you get a chance to eat?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went straight to the office, but I did manage to take a quick break a little while ago to grab some food. I had a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Since you eat a vegetarian diet, what did you end up getting in your deli sandwich today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I got one with hummus, avocado, and roasted red peppers. It was really good and kept things quick, which was perfect because work at the firm has been pretty hectic today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and very filling! Hopefully, things quiet down for you at the firm this afternoon. Do you have any plans to unwind tonight, maybe doing some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar tonight. My fingers are actually a bit sore from rock climbing yesterday, so a quiet evening of music at home sounds like the perfect way to relax."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {
+      "checkup.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

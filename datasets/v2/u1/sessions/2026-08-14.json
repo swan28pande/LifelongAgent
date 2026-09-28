@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 167,
+  "date": "2026-08-14",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Friday. How is your morning going at the logistics firm? Keeping busy as an account coordinator today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty busy today. Lots of shipments to coordinate before the weekend. I'm keeping it comfortable though, wearing an oversized hoodie while I work from my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds like the perfect uniform for a busy Friday. Did you manage to get some caffeine in you to kickstart the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely. I just had a black coffee first thing this morning. It did the trick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Simple and classic! Did you have time to grab a proper lunch, or are you powering through the midday rush?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished eating a deli sandwich a little while ago. It was a really good vegetarian option from a spot down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, Austin has some great spots for that. Is Sam around today, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is out running some errands, so it's pretty quiet here right now. Perfect for getting some work done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a productive Friday. Do you have any plans to play your guitar or do some rock climbing later to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might play some guitar this evening once I log off. No climbing today, my arms are still a bit sore from earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Rest days are important! Speaking of food, do you and Sam ever cook vegetarian meals together, or do you mostly do your own thing?"
+    },
+    {
+      "speaker": "user",
+      "text": "We mostly do our own thing since our schedules are different, but occasionally we'll make a big batch of something to share."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great roommate dynamic. I hope you have a relaxing evening and a wonderful weekend ahead!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a sister named Ana who is getting married in November."
+  ]
+}

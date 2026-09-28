@@ -1,0 +1,90 @@
+{
+  "user_id": "u1",
+  "day": 154,
+  "date": "2026-08-01",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Saturday. How is your morning starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just having a lazy morning. I'm sitting here in my oversized hoodie, drinking some black coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Saturday setup. Is it already too hot outside, or are you just keeping the AC high?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, the AC is definitely blasting. Sam always turns it down super low overnight, so it's freezing in the living room when I wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, roommate thermostat wars are classic. How have things been going with Sam lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Pretty good! We've both been busy, but we are planning to watch a movie together later tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, that sounds fun. Have you gotten any rock climbing in this week, or is it more of a rest day today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely a rest day today. My forearms are still incredibly sore from climbing on Thursday. I'm just taking it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Rest is definitely important. Any big plans for lunch, or are you keeping it simple today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple today. I actually just made a deli sandwich for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a classic Saturday choice. Did you put anything special on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some vegetarian turkey, cheese, lettuce, and mustard. It hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and easy. Do you think you'll play some guitar later on today, or just stick to relaxing before the movie?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll probably do a bit of guitar practice this afternoon. I'm trying to learn a new fingerpicking song, so I want to noodle around with that for an hour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. Let me know how the fingerpicking practice goes, and enjoy the movie tonight with Sam!"
+    },
+    {
+      "speaker": "user",
+      "text": "Will do! Thanks, talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Leo has a sister named Ana who is getting married in November."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 444,
+  "date": "2027-05-18",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday starting out? Is it a busy day ahead at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's looking like a pretty active day. I'm just getting ready to head out, wearing a simple polo shirt today since it's already getting warm here in Austin."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid choice for a warm Austin day. Have you had your morning caffeine yet, or are you still keeping an eye on that like the doctor suggested?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am keeping an eye on it! I actually went with a matcha latte this morning. It gives me a bit of energy but it's much more gentle than coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great alternative! Matcha lattes are delicious and definitely easier on the system. Have you thought about what you're doing for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually packed a deli sandwich to eat at my desk so I can power through some of my work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick desk lunch can be super efficient. Is it a vegetarian deli sandwich?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh absolutely, it's a fully vegetarian deli sandwich with hummus and roasted veggies. Sam and I bought the ingredients over the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly tasty and fresh. How have things been going with your accounts at the logistics firm lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "They've been busy but manageable. Being an account manager keeps me on my toes, but I've got a good handle on my accounts right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Do you have any relaxing plans for this evening once you finish up, like rock climbing or playing some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think tonight will just be a quiet evening practicing some guitar. I might plan a rock climbing session later in the week, but today I just want to relax."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

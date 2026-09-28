@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 561,
+  "date": "2027-09-12",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How has your weekend been? Did you manage to get any rock climbing in, or are you having a relaxing couple of days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! My weekend has been pretty good. I didn't go climbing this time, just keeping it low-key. Actually, I even dressed up a little bit today and put on a button-down shirt just to feel a bit more put together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A button-down shirt is a great way to elevate a casual Sunday. Do you have any plans today, or are you just enjoying the vibes?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it pretty simple. I had a matcha latte this morning, and now I'm actually heading out to get some ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte sounds perfect, especially since your doctor suggested cutting back on caffeine during your last check-up. Is the ramen place a vegetarian-friendly spot?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, the matcha latte is a lot gentler on my system. And yes, the place I'm going has an amazing vegetarian ramen with a rich mushroom broth, so it's perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! Mushroom broth ramen is the best. It's always great when places have solid vegetarian options. Are you meeting up with Sam, or is this a solo lunch run?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a solo run today, Sam is busy. It's nice to just walk around Chicago and clear my head before the workweek starts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet. How have things been at the logistics firm lately? Are you preparing for a busy week as an account manager, or is it looking manageable?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's looking pretty manageable, thankfully. There's always some client stuff to juggle, but nothing overwhelming right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good to hear! Hopefully, it stays that way. Have you had any time to play your guitar this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually practiced for about an hour yesterday. Just messing around with some acoustic stuff. It was a nice way to unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, balanced weekend. Enjoy your ramen, Leo! Let me know if you need anything else today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Will do. Have a good rest of your Sunday!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

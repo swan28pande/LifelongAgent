@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 80,
+  "date": "2026-05-19",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just sitting at my desk right now, sipping on some black coffee to keep me awake."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, black coffee is the best way to power through a busy Tuesday. How's the workload at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually a bit hectic with some shipping delays we're trying to resolve, but I'm managing. I decided to dress super casual today since I don't have any client meetings—just wearing a fitted t-shirt and jeans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a fitted t-shirt is perfect for a relaxed but productive day. Speaking of relaxing, have you had a chance to play your guitar lately, or maybe do some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually got to practice some guitar last night! It was a nice way to unwind. Sam was out, so I had the whole living room to myself to just play."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. It's always nice when you get the place to yourself for a bit. How is Sam doing, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, just busy with work as usual."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear that! Are you taking a proper lunch break today, or eating at your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just got back from grabbing a deli sandwich from a spot down the street. I'm eating it right now while checking my emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a deli sandwich sounds perfect. Glad you found a good lunch spot nearby."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, it's a great spot. Anyway, I should get back to these emails and sorting out those shipping logistics!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user is training for the Austin half marathon this month."
+  ]
+}

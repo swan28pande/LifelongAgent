@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 554,
+  "date": "2027-09-05",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Leo! How is your Sunday going so far in Chicago? Did you get up to much this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty relaxed Sunday. I got dressed in a button-down shirt because I was thinking of heading out to meet a friend, and I started my day with a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a great way to ease into the morning, especially keeping your doctor's advice in mind about cutting back on caffeine. How did you like it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was actually really good! I don't even miss the caffeine that much anymore."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Are you still planning on heading out, or are you staying in? Have you and Sam got any roommate plans today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No plans with Sam today, he's busy with his own stuff. I did end up going out for a bit though, and I just had some ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a Sunday lunch! Did you go to that vegetarian-friendly spot downtown?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, they have an amazing vegetarian broth. It was super filling and delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds perfect. Are you planning on doing any rock climbing or playing some guitar later this afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to practice some guitar later. My fingers are a bit sore for rock climbing today, so a quiet afternoon of music sounds just right."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Music is a great way to unwind. Are you working on any particular song right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just trying to master a few classic acoustic tracks. It's a nice challenge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. I hope you have a wonderful and relaxing rest of your Sunday!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u1",
+  "day": 378,
+  "date": "2027-03-13",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Saturday going? Are you planning to practice some guitar today, or maybe do some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. No guitar practice yet, but I'm actually dressed up a bit today—wearing a button-down shirt. Sam and I are planning to head out in a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a button-down shirt! A bit fancier than usual for a Saturday. What are you and Sam up to?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are just running some errands. I started the day with a matcha latte instead of my usual heavy coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte is a great choice! Nice way to stick to that advice about cutting back on caffeine. How did you like it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I really liked it! It's a solid alternative. I might make it a regular thing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. Did you and Sam grab lunch while you were out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we did. I had a deli sandwich from a spot down the street. They have some really good vegetarian options."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich sounds perfect for a busy Saturday. Are you still planning to squeeze in some rock climbing later?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm meeting a friend at the climbing gym in Austin in a couple of hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great climb! Let me know how it goes when you get back."
+    },
+    {
+      "speaker": "user",
+      "text": "Will do! Catch you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: lunch should be 'deli sandwich', conversation gives 'other'",
+    "invention: owns an acoustic guitar"
+  ]
+}

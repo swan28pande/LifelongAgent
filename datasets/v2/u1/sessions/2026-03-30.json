@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 30,
+  "date": "2026-03-30",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your day starting off at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty busy already, but I'm managing. I started my day with an oat milk latte, so that's keeping me going."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte is always a great way to kickstart a busy Monday. Are you heading into the office today or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, so I'm keeping it super comfortable. I'm just wearing an oversized hoodie right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy! It's nice to have those work-from-home days where comfort is the priority. Have you thought about what you're doing for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished eating a homemade salad. It was quick and fresh."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Did you try out a new vegetarian recipe for it, or stick to a classic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a classic vegetarian one with cucumbers, tomatoes, and a homemade vinaigrette. Simple but good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and healthy. Do you have any plans to get out of the house later, maybe for some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably not climbing today. My hands are actually a bit sore from the weekend, so I think I'll just stay in and practice some guitar this evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing some guitar sounds like a perfect, relaxing way to wind down after a long day of coordinating accounts."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it definitely is. It's the perfect way to clear my head. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

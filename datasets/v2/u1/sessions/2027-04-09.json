@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 405,
+  "date": "2027-04-09",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Friday. How is your day going in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm wearing a button-down shirt today since I have some client video calls, so I wanted to look a bit more professional."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Client calls are always important! How is everything going at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a busy day, but I'm managing. I actually just had a deli sandwich for lunch while finishing up some account manager tasks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad you got a chance to eat. How have things been with your roommate, Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, thanks for asking. We've both been pretty busy lately, but we caught up a bit yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. Did you manage to get a drink to start your morning today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I had a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Do you have any plans to play guitar or go rock climbing this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely planning to play some guitar tonight to unwind. And I might hit the climbing gym on Sunday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a really nice balance of relaxing and staying active. Are you fully recovered from the Austin half marathon by now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely! That 1:58 finish feels like a while ago now, and my legs are completely back to normal."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

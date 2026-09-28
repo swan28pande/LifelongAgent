@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 452,
+  "date": "2027-05-26",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just getting settled at my desk. I'm wearing a polo shirt today because it's already getting pretty warm here in Austin."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Austin definitely heats up quickly this time of year! Did you head into the office at the logistics firm today, or are you working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. It's been a busy morning with my accounts, but I did manage to grab a drink on the way in. I got a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to stick to the doctor's advice about cutting back on caffeine! How is the decaf americano treating you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually really good! I still get that espresso flavor without any of the jitters, so I'm happy with it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. What are you planning for lunch today? Are you heading out with coworkers or did you bring something?"
+    },
+    {
+      "speaker": "user",
+      "text": "I brought a homemade salad today. It's nice and fresh, which is perfect for a warm day like this."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds delicious and perfect for the heat. How have things been with your roommate Sam lately? Have you two had any time to hang out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things are good! Sam and I actually hung out yesterday evening. I played some guitar while he was working on some design stuff."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, relaxing evening. Do you have any plans to go rock climbing later this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm thinking of hitting the climbing gym tomorrow after work. Today I'm just going to head straight home and relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a great plan. Have a smooth afternoon at the office, and let me know if you need anything else today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Will do, thanks! Chat later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

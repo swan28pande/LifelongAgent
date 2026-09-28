@@ -1,0 +1,92 @@
+{
+  "user_id": "u1",
+  "day": 40,
+  "date": "2026-04-09",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Thursday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Started the morning off with a nice, hot black coffee while checking my emails. Just trying to wake up fully."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a simple black coffee is exactly what you need to kickstart the day. Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a lot of shipments to coordinate today, so it's a bit hectic. I wanted to be as comfortable as possible, so I'm wearing my favorite oversized hoodie today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie is the ultimate comfort wear for a busy workday. Have you had a chance to take a breather and grab some lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I took a quick break to eat a deli sandwich. It was quick and hit the spot, so now I'm ready to power through the rest of the afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a deli sandwich is a great, easy lunch. Aside from the busy work day, is there anything else going on with you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I made a big decision today and signed up for the Austin half marathon in May."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, that's huge news! Congratulations on taking the plunge. What made you decide to sign up today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I've been thinking about doing one for a while, and since it's happening right here in Austin next month, I figured there's no better time. I finally just went ahead and committed today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. May will be here before you know it. Do you have a training plan ready, or are you just going to ease into it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to look up some training guides tonight. Since I already do a lot of active stuff, I think I have a decent baseline, but I definitely need a structured plan for the mileage."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, a good plan makes a world of difference. How's everything else going? Have you been getting much rock climbing or guitar playing in lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went climbing with Sam earlier this week, which was a blast. I might have to balance the climbing sessions with my running schedule now, but I'll make it work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a fun challenge to balance them both! I'm sure you'll do great. Let me know if you need any help looking up training routes around Austin."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll definitely keep that in mind as I start mapping out my runs. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {
+      "half_marathon.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Sam is not a runner"
+  ]
+}

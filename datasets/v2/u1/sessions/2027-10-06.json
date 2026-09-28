@@ -1,0 +1,84 @@
+{
+  "user_id": "u1",
+  "day": 585,
+  "date": "2027-10-06",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just getting started on my work for the day here in Chicago. The weather is a bit chilly today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Chicago in October can definitely get brisk! Have you had a chance to grab a warm drink this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Is that helping you follow the doctor's advice about cutting back on caffeine?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. The matcha latte has been a great alternative for that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. What's on your agenda at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Lots of video calls with clients today, so I decided to dress up a little bit. I'm wearing a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid choice for client meetings. Keeps it professional but comfortable! What are you planning for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have a meal-prep burrito bowl ready to go in the fridge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a meal-prep burrito bowl sounds delicious. Did you make it yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I made a big batch of them. Since I'm vegetarian, I loaded it up with black beans, corn, rice, and peppers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, satisfying lunch to power you through your afternoon calls."
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely is. Well, I should probably get to these emails. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great day, Leo! Good luck with the client calls."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

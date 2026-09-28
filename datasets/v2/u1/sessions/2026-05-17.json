@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 78,
+  "date": "2026-05-17",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your morning going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just having a slow start to the day. I brewed some black coffee and I've just been relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A slow Sunday morning is perfect. Are you planning to head out later, or is it a stay-at-home kind of day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely a stay-at-home day. I'm just wearing an oversized hoodie and don't really plan on changing out of it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds incredibly cozy. Is Sam around to hang out, or are you getting some solo time?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam actually went out to buy some groceries. I've just been playing some guitar, and I actually just finished eating a deli sandwich for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A deli sandwich is a classic lunch. I assume it was a vegetarian one?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh yeah, completely vegetarian. I used some great plant-based slices and spicy mustard."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Are you planning to hit the rock climbing gym later, or are you just going to beat the Austin heat indoors?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll skip climbing today and just stay inside. Austin is already getting way too hot to do much."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good call, staying in the AC is definitely the move today. Enjoy the rest of your relaxing Sunday!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

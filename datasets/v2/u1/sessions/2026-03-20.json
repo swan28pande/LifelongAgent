@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 20,
+  "date": "2026-03-20",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Friday. How is your morning starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just got my morning coffee—having an oat milk latte to jumpstart the day before checking in on some logistics shipments."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte is a solid way to kick off the day! Are you working from home today, or heading into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, so keeping it pretty comfortable. I just threw on a fitted t-shirt and some casual pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fitted t-shirt is perfect for a relaxed Friday at home. Have you thought about what you're having for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually prepped a homemade salad earlier, so I'll just grab that from the fridge when it's time to take a break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds like a perfect, refreshing lunch. Do you have any fun plans lined up for the weekend? Maybe some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I'm planning to go rock climbing tomorrow. My roommate Sam might join me if he's free."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great weekend plan. How has Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing well! We've both been busy, but it's nice to catch up when we're both home in the evenings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to have a good roommate dynamic. Have you gotten any time to play your guitar this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "I played a little bit of guitar last night actually. It's a really nice way to unwind after a long day of logistics work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a wonderful way to decompress. I hope the rest of your workday goes smoothly and that you have a fantastic time climbing this weekend!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Ready to wrap up this week and get the weekend started."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 542,
+  "date": "2027-08-24",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Tuesday starting out in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just getting settled at my desk, wearing a comfortable polo shirt today since it's a bit warm, and catching up on emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt sounds perfect for a warm Chicago day. Did you grab a coffee to jumpstart the morning, keeping in mind the doctor's advice about cutting back on caffeine?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I opted for a matcha latte this morning. It gives me a nice, gentle energy boost without the jitteriness of regular coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart swap! Matcha lattes are great for that steady focus. How are things looking today for your role as an account manager at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's quite busy today. We have a few client shipments to coordinate, but I'm keeping on top of it. It's the usual Tuesday rush."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad you're managing to stay on top of the rush. Are you planning to take a proper break for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished eating. I went out and grabbed some vegetarian ramen from a spot down the street. It was super filling and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, vegetarian ramen is the absolute best, especially when you need a hearty lunch on a busy workday. By the way, how are things with your roommate Sam lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We actually spent some time yesterday jamming in the living room. I was playing my guitar and we were just hanging out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a really nice, relaxing way to spend an evening. Have you had any time to get out to the climbing gym lately, or has work kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't gone this week yet, but I'm planning to do some rock climbing tomorrow evening to blow off some steam. For tonight, I think I'll just head home and relax."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

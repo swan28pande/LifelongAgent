@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 135,
+  "date": "2026-07-13",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Leo! How is your Monday starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going alright. Just trying to wake up. I'm sitting here drinking some black coffee before I head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Black coffee is always a reliable way to kickstart the week. How is the weather over in Austin today? Is it getting super hot already?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it's absolutely scorching today. I'm trying to stay as cool as possible, so I just threw on a fitted t-shirt and some light pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the right call for an Austin summer! A fitted t-shirt is perfect for staying comfortable. Are you heading into the logistics office today, or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm heading into the office. It's going to be a busy one, so I already packed a deli sandwich for my lunch so I don't have to go out in the midday heat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move packing a deli sandwich. Did you make it vegetarian-friendly?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, totally vegetarian! I put some hummus, sliced avocado, cheese, and plenty of veggies on it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and very refreshing. Do you have any plans for after work today, maybe some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to practice some guitar tonight. My roommate Sam has some people coming over, so I might just chill in my room and play."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a really nice way to wind down. What kind of songs have you been working on lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mainly some acoustic fingerpicking stuff. It's a nice, quiet way to destress after coordinating accounts all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Acoustic fingerpicking can be so therapeutic. I hope you have a smooth day at work and enjoy your practice session tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

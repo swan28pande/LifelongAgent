@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 369,
+  "date": "2027-03-04",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Thursday. How is everything going over in Austin today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good. Just getting ready for a busy day at the logistics firm. I've got a couple of big client video calls later, so I actually put on a button-down shirt today instead of my usual t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt sounds like a great call for client meetings. I hope they go smoothly! Did you manage to grab a coffee to jumpstart the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Keeping the doctor's advice in mind, I went with a decaf americano this morning. It's actually a pretty good substitute once you get used to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic to hear. Sticking to the doctor's recommendation for less caffeine is tough, but a decaf americano is a solid choice. Have you thought about what you're doing for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm trying to eat healthy today, so I just finished packing a homemade salad to bring to the office. It's got lots of greens, chickpeas, and a vinaigrette I made last night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, a homemade salad sounds refreshing and perfect for keeping your energy up during those afternoon meetings. Vegetarian lunches like that are always a great option."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's easy, cheap, and keeps me feeling light so I don't crash after lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. By the way, how is your roommate Sam doing? Have you two been up to much lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We've both been pretty busy with work, but we're hoping to head out to the climbing gym or maybe some outdoor spots near Austin this weekend if the weather holds up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a blast! Rock climbing is always a great way to unwind after a hectic week. I hope the Austin weather behaves for you guys."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Me too. I'm going to head out the door now, but I'll catch up with you later tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

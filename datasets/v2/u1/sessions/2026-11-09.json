@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 254,
+  "date": "2026-11-09",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is your week starting off over at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's off to a busy start, but I'm keeping comfortable. I dressed pretty casual today, just wearing a fitted t-shirt, and I'm currently sipping on a decaf americano to help me get through all these morning emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, sticking to the decaf americano! Your doctor would definitely approve. Are you matching that healthy energy with lunch today, or are you planning to order in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I did manage to prepare ahead of time. I brought a homemade salad today, so I'm eating that at my desk right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great choice, especially on a busy Monday. Speaking of big events, we're officially in November now! How are things coming along with your sister Ana's wedding?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it's getting so close! There is definitely a lot of last-minute coordination happening, but Ana is doing great and we are all really excited for the big day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It must be a very exciting time for your family! Have you been able to find some downtime to play your guitar and unwind amidst all the buzz?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yeah. I actually spent about half an hour playing my guitar last night. It's a nice way to clear my head after a long day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Music is perfect for that. Have you had any chance to go rock climbing lately, or has that been on the back burner?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went rock climbing this past Saturday. It was a really good session, though my forearms are still feeling a bit sore today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sore forearms are the classic sign of a solid session! I'm glad you're still making time for your hobbies. I hope the rest of your Monday goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: His sister Ana's wedding will take place just outside of Austin."
+  ]
+}

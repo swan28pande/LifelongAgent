@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 29,
+  "date": "2026-03-29",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your weekend going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just having a nice, slow morning. I'm sitting on the couch sipping on an oat milk latte right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Sunday morning. Is Sam joining you, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam went out early to run some errands, so I've got the apartment to myself for a bit. I'm just hanging out in an oversized hoodie, enjoying the quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a quiet apartment is exactly what you need. Are you planning to practice some guitar today, or maybe head out for some rock climbing later?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played guitar for about an hour earlier. I might go climbing later this afternoon if I get the energy, but right now I'm just enjoying being lazy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing wrong with a lazy Sunday! Have you figured out what you're doing for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished eating a homemade salad. Keeping it pretty simple today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds fresh and delicious! It's always nice to have a light, healthy meal. Are you able to fully relax today, or are you thinking about your work as an account coordinator for tomorrow?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have a few emails I should probably check for my account coordinator role, but I'm trying to leave that until this evening so I can actually enjoy my weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a smart boundary to set. Work will still be there tomorrow, so enjoy your afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I definitely will. I think I'm going to queue up a movie now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 375,
+  "date": "2027-03-10",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Wednesday going at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy morning, but I'm finally taking a break. I'm having a deli sandwich for lunch right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich sounds like a great lunch break. Did you manage to grab a warm drink this morning to get you through the start of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I made myself a matcha latte this morning. I've been trying to stick to that instead of heavy coffee since my check-up, and it's actually really nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, a matcha latte is a great alternative. It definitely helps with keeping the caffeine levels down like the doctor recommended."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm also a bit dressed up today—well, for me at least. I'm wearing a polo shirt because we have some clients visiting the office this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid choice for client meetings. Keeps it professional but still comfortable. How have things been at home with Sam? Have you two had any time to catch up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam has been working late hours, so we've mostly just been passing each other in the kitchen. But we're hoping to catch up this weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get to catch up soon! Did you manage to get any rock climbing in this week, or has it been too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went climbing on Monday night for a couple of hours. It was nice to get on the wall and stretch out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to decompress. Have you had any time for your guitar lately too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a little bit of practicing some chords yesterday evening, nothing too intense. Anyway, I should probably finish up this deli sandwich and get back to work before the clients arrive."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great afternoon, Leo! Good luck with the client meeting."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

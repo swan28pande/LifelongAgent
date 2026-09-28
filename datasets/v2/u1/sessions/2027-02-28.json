@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 365,
+  "date": "2027-02-28",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Leo! Happy Sunday. How has your weekend been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a really nice, relaxing weekend. I actually put on a button-down shirt today even though I'm just hanging out, just felt like dressing up a tiny bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing wrong with looking sharp on a Sunday! Are you heading out anywhere around Austin today, or just enjoying a quiet day at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly staying in. I did run out earlier to grab a matcha latte from a cafe nearby. Ever since my annual check-up where the doctor advised me to cut back on caffeine, I've been trying to swap out my usual coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart transition. How are you liking the matcha latte? Does it give you a decent energy boost without the coffee jitters?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it actually does! It's a much smoother energy boost, and I've really grown to like the taste. It fits perfectly into my morning routine now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful to hear. It's great when a healthy swap turns out to be genuinely enjoyable. Have you had any time for your hobbies this weekend, like playing guitar or rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I practiced some guitar yesterday afternoon, just working on a new song. Today has been very low-key, though. For lunch, I ended up just making a quick homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds like a perfect, light Sunday meal. Did you put anything special in it, or was it a 'clean out the fridge' kind of salad?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! Spinach, some leftover veggies, and a simple vinaigrette. My roommate Sam actually saw it and got jealous, so I might have to make enough to share next time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, Sam knows a good meal when they see one! It sounds like a great roommate moment. Are you and Sam planning on hitting the climbing gym together anytime soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "We talked about going on Wednesday. It's tough to coordinate schedules sometimes, especially since my work as an account manager at the logistics firm has been pretty hectic lately, but we're going to try to make it happen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you both get to go; climbing is such a great way to relieve some of that weekday work stress. I hope the rest of your Sunday is just as relaxing!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I'm just going to read a bit and ease into the evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 450,
+  "date": "2027-05-24",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is your day starting off in Austin? Are you busy with client accounts at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's a pretty busy Monday. I'm actually wearing a button-down shirt today because I have an important client meeting in a little bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt definitely means business! I hope the meeting goes well. Did you get a chance to grab some coffee to fuel up beforehand?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I stopped by the local cafe and ordered a decaf americano. Trying to be good and keep my caffeine intake down like the doctor suggested."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. Sticking to a decaf americano is a great way to respect that check-up advice and still enjoy the ritual. Have you had a chance to eat anything yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm actually eating a homemade salad right now before the meeting starts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a perfect, light lunch to keep you sharp for your presentation. Did you make it this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I prepped it last night, actually. Just some spinach, chickpeas, cucumbers, and vinaigrette. Simple and quick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and healthy. How is Sam doing? Did they have a busy start to the week as well?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam's doing well, just busy with work stuff too. We've both been pretty focused today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet. Well, I hope you have a great evening after the meeting wraps up. Are you planning to do any rock climbing or play some guitar later to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just play some guitar tonight. My hands are a bit tired for climbing, so some music will be a nice way to relax. I'll catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

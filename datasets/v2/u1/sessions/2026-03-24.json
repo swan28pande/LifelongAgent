@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 24,
+  "date": "2026-03-24",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. It's actually a bit chilly and overcast today, so I'm just wearing an oversized hoodie and trying to stay warm while I get some work done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds incredibly comfortable for a gloomy day! Did you at least have a warm drink to help you wake up this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I brewed some black coffee first thing. I really needed that caffeine kick today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a strong cup of black coffee on a slow morning. Is your roommate Sam around today, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam actually went out to run some errands and grab some groceries, so I've had the apartment to myself for the last few hours. It's been really nice and quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet workspace is always a plus. Have you managed to take a break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just finished eating a quick deli sandwich at my desk while wrapping up some logistics paperwork."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and easy! What did you put on your deli sandwich today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some cheese, lettuce, tomato, pickles, and a bit of spicy mustard. Simple but really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect quick lunch. Do you have any plans for after work today? Maybe some rock climbing or playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to play some guitar tonight. My hands are still a bit sore from climbing earlier this week, so a relaxed evening at home sounds ideal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. I hope the rest of your afternoon goes smoothly, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

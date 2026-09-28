@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 485,
+  "date": "2027-06-28",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your morning in Chicago starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just getting settled at my desk. I actually had a matcha latte this morning instead of my usual coffee, trying to follow the doctor's advice about cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great choice! Matcha has a nice, steady energy boost without the coffee jitters. How is everything going at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty busy, as always for an account manager on a Monday. I have a couple of important client video calls later, so I decided to wear a button-down shirt today to look a bit more professional."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move, a button-down shirt always makes a great impression on Zoom. Have you had a chance to grab some lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I went out and got some ramen from a place near the office. It was exactly what I needed to power through the afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Did you manage to find a good vegetarian ramen option there?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they have a fantastic vegetarian broth made with shiitake mushrooms. It's really flavorful."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Do you have any plans for the evening after work? Maybe some guitar practice or rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I'm heading over to the climbing gym tonight. My roommate Sam wants to try out some new bouldering routes with me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome, hope you and Sam have a great session! How has Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing well, just keeping busy. It'll be good for both of us to get active after sitting at our desks all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely! Have fun climbing, and good luck with the rest of your client calls today."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

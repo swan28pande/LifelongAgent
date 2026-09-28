@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 60,
+  "date": "2026-04-29",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Wednesday. How is your day starting out over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It's a bit breezy today, so I'm just wearing an oversized hoodie and staying cozy inside while I get some work done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds like the perfect outfit for a cozy work-from-home setup. Did you pair that with a warm drink this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I made myself an oat milk latte to jumpstart the morning. It definitely hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! How are things looking on the work front today? Is it busy at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, being an account coordinator keeps me pretty busy, especially mid-week. I've got a lot of tracking updates and client emails to plow through today, but it's nothing I can't handle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You've got this. Make sure you take a good break for lunch to recharge. Do you have any plans for food?"
+    },
+    {
+      "speaker": "user",
+      "text": "For sure. I actually prepared a homemade salad earlier, so I'll just grab that from the fridge in a bit. Nice and easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great choice—perfectly fits your vegetarian lifestyle too. Is your roommate Sam around to join you for lunch, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam actually went out for the day, so I have the apartment all to myself. It's nice and quiet, which is great for focusing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a quiet house is exactly what you need to power through a busy queue. Do you have any fun plans to unwind after you wrap up work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll probably just practice some guitar this evening. No rock climbing today, just some quiet time relaxing at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing some music sounds like a wonderful way to transition from work mode to relaxation mode. Enjoy your homemade salad and have a great evening, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

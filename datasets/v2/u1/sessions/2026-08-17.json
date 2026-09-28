@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 170,
+  "date": "2026-08-17",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Monday starting out in Austin? Getting ready for a busy week at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's pretty busy already. I'm just gearing up for the day. I actually just finished my morning coffee, an oat milk latte, so I'm finally feeling awake."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte is the perfect way to kick off a Monday. Are you heading into the office today, or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Working from the office today. I'm keeping it comfortable though, just wearing a fitted t-shirt and some jeans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and casual! How are things looking on the account coordinator front today? Lots of shipments to track?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a lot of accounts transitioning this week, so my inbox is already flooded. I'll be glued to my desk for most of the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oof, sounds like a demanding morning. Hopefully you'll get a chance to take a proper break for lunch. Any plans for what you're eating today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Fortunately, I prepped ahead of time. I brought a homemade salad to eat at my desk, so I don't have to worry about going out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move! A homemade salad is perfect when you're busy. Is it one of your usual vegetarian creations?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, exactly! Just a simple mix of greens, chickpeas, cucumbers, and a tahini dressing. It's super refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious. I hope it gives you the energy boost you need to tackle the rest of those logistics accounts this afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think it definitely will. I'm ready to dive back in and get these sorted out."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a sister named Ana who is getting married in November."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 656,
+  "date": "2027-12-16",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Thursday going? Staying warm over there in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It is pretty cold today, but I'm staying warm inside. I actually dressed up a bit and put on a button-down shirt today since I have some client calls for my job at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, nice! A button-down shirt always helps set a professional tone for those client presentations. Did you get a chance to grab some coffee before the calls started?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, but I'm still trying to watch my caffeine intake like the doctor suggested at my check-up, so I had a matcha latte this morning instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great alternative! A matcha latte still gives you a nice, steady energy boost. Did you manage to get a good lunch break in between those client meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I had a quick break. I ate a meal-prep burrito bowl that I made earlier this week. It's one of my favorite vegetarian meals to prep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A meal-prep burrito bowl sounds perfect and super convenient for a busy day. Did your roommate Sam get in on the meal prepping too, or was that just for you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just for me this time, though Sam did help me eat some of the leftovers yesterday. Sam's been pretty busy with work lately too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a busy week all around. Have you had any time to unwind with your guitar or maybe head out for some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went rock climbing with some friends on Tuesday night, which was great. Tonight I'm planning to just relax and practice some new songs on my guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to spend a Thursday evening. I hope those client presentations go smoothly this afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to head back to my desk now, but I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

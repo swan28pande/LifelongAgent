@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 507,
+  "date": "2027-07-20",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going in Chicago? Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually a pretty relaxed day so far. I didn't even have to dress up much—just wearing a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A polo shirt sounds perfect for a relaxed Tuesday. Did you manage to get a good start to your morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I did. I grabbed a decaf americano on my way in, keeping up with the doctor's suggestion to watch my caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for you for sticking with the decaf americano! How has the rest of your day been? Have you had a chance to grab some lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just got back from getting lunch. I had some ramen, which was exactly what I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen sounds delicious, especially for a midday break. Are you planning on doing any rock climbing or playing guitar after work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll skip climbing today and just practice some guitar at home tonight. My roommate Sam has some friends over later, so I'll probably just hang out in my room and play."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, relaxing way to spend the evening. What kind of songs have you been working on lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some fingerpicking patterns and a few acoustic tracks. It's a good way to unwind after a day of managing accounts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely sounds like a great way to decompress. I hope you have a wonderful evening practicing! Let me know if you need anything else today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think I'm all set for now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: lunch should be 'ramen', conversation gives 'other'"
+  ]
+}

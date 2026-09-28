@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 513,
+  "date": "2027-07-26",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Monday starting off in Chicago? Is your roommate Sam doing well?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Chicago is actually having some great weather today. Sam is doing well, just busy. My morning has been good, I started my day with a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, especially since your doctor advised you to cut back on caffeine at your check-up. Did it give you a good start to the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did, it was the perfect balance. I also dressed up a bit more than usual today and wore a button-down shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a classic look! Do you have a big meeting today at the logistics firm, or did you just feel like dressing up?"
+    },
+    {
+      "speaker": "user",
+      "text": "No big meetings, just wanted to feel a bit more put-together for my account manager tasks today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, sometimes dressing up puts you in a great headspace. How is the vegetarian meal planning going this week? What did you have for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I didn't have time to prep anything last night, so I actually went out and got ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen is always fantastic on a Monday. Did you find a place with a good vegetarian broth option?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, there's a spot near the office that makes a really rich mushroom broth, so it was perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Do you have any plans to head to the rock climbing gym or play some guitar tonight, or are you just going to relax?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to wind down at home and play some guitar tonight. It's been a busy day, so a quiet evening sounds great."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

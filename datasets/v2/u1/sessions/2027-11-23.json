@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 633,
+  "date": "2027-11-23",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Tuesday. How is your day going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just getting through some work. I started the morning with a decaf americano to get moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, sticking to the doctor's advice on the caffeine! How is everything at the logistics firm today? Are you busy with your accounts?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's a bit busy, but I'm keeping comfortable. I just threw on a polo shirt today since I don't have any external client meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a good, relaxed Tuesday setup. Did you manage to step away for a proper lunch break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I went down the street and grabbed some ramen for lunch. It was exactly what I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen sounds amazing on a chilly November day in Chicago. Did you get a vegetarian option?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, a delicious veggie broth version. It definitely hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect. Do you have any plans after you wrap up work today? Heading to the climbing gym, or maybe doing some guitar practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably just some guitar practice tonight. My fingers are a bit sore for rock climbing today, so a quiet evening at the apartment sounds better."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, relaxing way to spend the evening. Is Sam around tonight, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually out with some friends, so I'll have the living room to myself to practice. It's been nice getting back to normal routines after traveling for Ana's wedding."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

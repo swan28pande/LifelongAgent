@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 502,
+  "date": "2027-07-15",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Thursday going so far? Busy day at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's pretty busy already. I'm trying to stay focused, so I started my morning with a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, low-caffeine way to kick off the day, especially since the doctor mentioned cutting back. Are you dressed up for a big meeting today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, trying to stick to that advice. And yes, actually, I am! I put on a button-down shirt this morning because I have a presentation with a new client in an hour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the presentation! A button-down shirt always does the trick for client meetings. Did you manage to pack a lunch today, or are you ordering in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I actually brought a meal-prep burrito bowl with me today, so I don't have to worry about finding food between meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice work on the meal prep! A meal-prep burrito bowl is such an easy, delicious vegetarian lunch. How are things going with your accounts lately? Are you still managing that big regional client?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they've been keeping me on my toes, but things are running smoothly. It's just a lot of coordinating with shipping times."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Sounds like you've got a handle on it. Have you had any time to unwind lately? Any plans to go rock climbing this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went climbing with Sam on Tuesday evening. It was a great workout, though my forearms are still a bit sore today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oof, I can imagine. Sounds like a good soreness, though. Have you been playing any guitar lately to relax, or are your fingers too tired from climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, my fingers are fine! I actually practiced a bit last night. It's a nice way to decompress after a long day of logistics."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

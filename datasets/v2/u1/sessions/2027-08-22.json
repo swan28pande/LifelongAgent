@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 540,
+  "date": "2027-08-22",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your weekend in Chicago going so far? Did you get any rock climbing in, or are you having a relaxing day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! My weekend is going great. No rock climbing today, just a quiet morning at home. I started my day with a decaf americano while reading a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very peaceful Sunday morning. What else do you have planned for today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually meeting up with Sam in a bit. I just threw on a button-down shirt and I'm about to head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt on a Sunday, looking sharp! Where are you and Sam heading?"
+    },
+    {
+      "speaker": "user",
+      "text": "We went to a spot nearby and I just had some ramen. It was really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a Sunday lunch! I assume you got a vegetarian version?"
+    },
+    {
+      "speaker": "user",
+      "text": "Of course, a nice vegetarian mushroom broth. I always stick to vegetarian options. It's become one of my favorite spots."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. Have you had any time to play your guitar this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I practiced for about an hour yesterday evening. It's a nice way to unwind after a busy week at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a great creative outlet. I hope the rest of your Sunday with Sam is just as relaxing before the work week starts again tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think we're going to just hang out and take it easy. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

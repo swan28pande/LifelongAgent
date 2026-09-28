@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 359,
+  "date": "2027-02-22",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is your week starting off at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting off pretty busy. I decided to change up my morning routine today and got a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte sounds like a great choice! Especially since your doctor suggested cutting back on caffeine at your last check-up. How did you like it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was actually really good! Nice and steady energy. I needed it because I had to put on a button-down shirt today for a big client presentation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, dressing up a bit! I hope the presentation went well. Did you get a chance to take a proper lunch break amidst the busy schedule?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, it went really well. And yeah, I managed to grab a deli sandwich for lunch and eat it away from my desk, which was nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a win. Eating away from your desk makes a big difference. Since you're vegetarian, what did you get on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a roasted veggie one with hummus and provolone. It definitely hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, that sounds delicious! Do you have any plans to unwind tonight after such a busy start to the work week? Maybe some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually thinking about heading to the climbing gym for a little bit to stretch out. My shoulders are pretty tight from sitting at my desk all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Climbing sounds like the perfect way to stretch and clear your head. Have a blast at the gym, and I hope the rest of your Monday goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll catch up with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Leo has been trying to practice guitar for at least fifteen minutes a day."
+  ]
+}

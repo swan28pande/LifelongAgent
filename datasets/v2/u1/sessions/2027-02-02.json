@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 339,
+  "date": "2027-02-02",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Tuesday going in Austin? Are you having a busy day at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's pretty busy today. I'm trying to stay comfortable, so I'm just wearing a polo shirt today. I also just finished my morning coffee, which was a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a great choice, especially since your doctor suggested cutting back on caffeine at your last check-up. How is that transition going for you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually going surprisingly well! I don't miss the jitters at all. I've got a lot of account management work to plow through today, so I'm just having a quick homemade salad for lunch at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is perfect for a quick, healthy lunch! Being vegetarian, do you have a go-to recipe you like to prep, or do you mix it up every time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually just throw together whatever fresh greens and veggies we have in the fridge. My roommate Sam actually bought some great cucumbers and spinach yesterday, so I used some of those."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you and Sam share the fridge space so well. How is Sam doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing well, thanks! Still busy with work, but we've been managing to keep the apartment in one piece. We actually watched a movie together last night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, relaxing evening. Do you think you'll get any time for rock climbing or playing guitar later today, or is it strictly a work day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might try to practice a few chords on the guitar tonight to unwind. Rock climbing will have to wait until the weekend, though, since my schedule is so packed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A little guitar practice is a perfect way to decompress after a long day of logistics work. I hope the rest of your account manager duties go smoothly this afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to dive back into these emails now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 535,
+  "date": "2027-08-17",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just getting settled at my desk. I'm wearing a polo shirt today because we have a casual client meeting later, so I wanted to look decent but stay comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a great choice for that. Did you grab something to drink on your way into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I stopped by the coffee shop nearby and got a decaf americano. I'm really trying to stick to the doctor's advice from my last check-up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for you! Sticking to the decaf americano is a great move. How is everything else going at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy as usual for an account manager, but definitely manageable. I actually just got back from a quick lunch break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh nice! What did you have for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went to the noodle place down the street and got ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen is always a great lunch choice. Did you manage to find a vegetarian option there?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they have a really flavorful mushroom broth version, which is perfect for my vegetarian diet. It's one of my favorite spots in the neighborhood."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Do you have any plans for after work? Maybe some rock climbing or practicing the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually heading to the climbing gym with Sam after work. I want to try and send a route that's been giving me trouble. Then I'll probably just wind down and play my guitar for a bit tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a blast climbing with Sam, and good luck with that route! I'll chat with you tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

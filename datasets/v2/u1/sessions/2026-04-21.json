@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 52,
+  "date": "2026-04-21",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going okay, just a bit busy at the logistics firm today. I started my day with a simple black coffee while clearing out my inbox."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, black coffee sounds like a strong start! Are things pretty hectic at work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we've got a lot of shipments to coordinate. I'm keeping it cozy today, though. I'm just wearing an oversized hoodie to stay comfortable at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a cozy oversized hoodie is the perfect uniform for a busy desk day. Have you had a chance to grab some lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I just finished eating a deli sandwich. Kept it quick so I could get back to these emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Simple and fast! Did you get a vegetarian one from that spot near your office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, a nice vegetarian deli sandwich with avocado and sprouts. It hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious. Do you have any plans to unwind after work today? Maybe some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to head to the climbing gym for a bit. Sam said they might join me, but they might have to work late too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to shake off the workday stress. Hopefully Sam can make it! What climb are you working on right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "There's this V4 boulder problem with a really tricky start that I've been projecting. I'm hoping to finally send it tonight if my hands hold up."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Training for the Austin half marathon in May"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 626,
+  "date": "2027-11-16",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going back in Chicago after your trip to San Antonio for Ana's wedding?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. It's been a busy day getting back into the swing of things. I started my day with a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte is a great choice. Did you have a lot of emails to catch up on at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, my inbox was pretty full. Today I am wearing a polo shirt, which keeps things comfortable while I work through it all."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid, comfortable choice. How are things with your roommate, Sam? Did he have a good week while you were away?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Sam is doing great. We had a nice chat last night. For lunch today, I actually had ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Did you find a good vegetarian ramen nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, there's a spot just a few blocks away that makes an amazing vegetarian broth. It was delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect. Do you think you'll have some time for rock climbing or playing the guitar later this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm planning to play some guitar tonight. I haven't practiced in a bit, so I'm looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the practice session! It's a great way to unwind after a busy day."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

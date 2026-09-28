@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 1,
+  "date": "2026-03-01",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! It's great to connect with you. How is your Sunday starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I'm just sitting on the porch enjoying an oat milk latte. The weather here in Austin, Texas is beautiful today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte on the porch sounds like a perfect Sunday morning. Austin, Texas has some great weather this time of year, doesn't it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really does. It's actually warm enough that I'm just wearing a fitted t-shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comfortable. Do you have any plans for the rest of the day, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually heading out in a bit to do some rock climbing, which is one of my main hobbies."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, rock climbing is fantastic! Do you usually climb at an indoor gym, or do you prefer heading to some outdoor spots?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do a bit of both! Today I'm going to an indoor gym because it's convenient, but I love outdoor spots too when I get the chance."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Indoor gyms are great for a focused session. Are you planning to grab a quick bite to eat before you head out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm actually making a homemade salad right now. Since I'm vegetarian, I like to prep my own meals so I know exactly what's in them."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great way to fuel up. Being vegetarian, what are your favorite ingredients to throw in to make it filling before a climb?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually put in a lot of chickpeas, pumpkin seeds, and avocado. It keeps me going! Anyway, I should finish eating and get going, but it was great chatting with you."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {
+      "city.0": true,
+      "diet.0": true,
+      "hobbies.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

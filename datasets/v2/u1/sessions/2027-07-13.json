@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 500,
+  "date": "2027-07-13",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Leo! How is your Tuesday going so far in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just a bit busy at the logistics firm today. I'm currently wearing a polo shirt and trying to stay cool because it's getting quite warm out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt sounds like a smart and comfortable choice for a warm workday. Did you manage to grab something to drink this morning to help you power through the busy schedule?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I went with a matcha latte this morning. I'm still trying to be mindful of my caffeine intake like the doctor advised during my check-up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a wonderful alternative! It's great that you're keeping up with that advice. Did you have something good for lunch today too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I had ramen for lunch. There's a spot nearby that makes a really rich vegetarian broth, so it was perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a good vegetarian ramen is hard to beat! It sounds like you're having a really solid day. Do you have any plans for the evening once you're off work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to head home and practice guitar for a bit. Sam is out tonight, so I'll have the place to myself to play without worrying about making too much noise."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect opportunity for some uninterrupted guitar practice. How has Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam's been great, just super busy with work and social plans. It'll actually be nice to have a quiet apartment to unwind in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I completely understand—sometimes a little quiet time to yourself is exactly what you need after a busy day. Have a wonderful evening playing guitar, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

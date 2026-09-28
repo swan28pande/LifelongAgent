@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 433,
+  "date": "2027-05-07",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Friday. How is your day going over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Work is a bit busy at the logistics firm, but I'm getting through it. I put on a button-down shirt today to feel a bit more professional for some client calls."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a button-down shirt always helps set a focused mood! How are you holding up energy-wise? Did you get a good start to the morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I actually had a matcha latte this morning instead of my usual heavy coffee. It gave me a nice, steady boost."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart choice, especially since your doctor suggested cutting back on caffeine at your last check-up. Did you find a good spot for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. For lunch, I had a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh nice! Was it a vegetarian one? I know you've got some great vegetarian options around Austin."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it was a fully loaded vegetarian deli sandwich. It was delicious and definitely kept me going for the afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Do you have any plans for the weekend? Maybe heading out for some rock climbing or spending some time playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm thinking about doing some rock climbing tomorrow if the weather holds up, and definitely want to get some guitar practice in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great mix of things. Is your roommate Sam joining you for any of those weekend plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Sam has some other plans this weekend, but we'll probably hang out tonight and just relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a solid Friday night. I hope you have a wonderful weekend, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you next week."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,226 @@
+
+══════════════════════════════════════════════════════════════════════════════
+U4 - Daniel (seed 404, 730 days from 2026-03-01)
+══════════════════════════════════════════════════════════════════════════════
+
+Difficulty knobs (measured vs ladder):
+  knob                      ladder                 measured               ok
+  preference_domains        5                      5                      ✓
+  rule_types                required ['nested']... constant, day_of_week, n_day_cycle, nest ✓
+  shifts_per_domain         4                      4                      ✓
+  visibility_mix (E/I/U %)  30/50/20               30/50/20               ✓
+  lag_days                  1-5                    1-5                    ✓
+  temporary_shifts          3                      3                      ✓
+  fact_changes              8                      8                      ✓
+  cross_domain_causes       2                      2                      ✓
+  distractors               5                      5                      ✓
+  exception_rate            0.07                   0.070                  ✓
+  p_session                 0.60                   0.599                  ✓
+  p_mention                 0.65                   0.650                  ✓
+  other_people              True                   True                   ✓
+
+Preference timeline:
+  [breakfast]  (breakfast)
+    initial   d  1-182 2026-03-01→2026-08-29  two-week rotation of granola or oatmeal with eggs, waffles and a weekend fry-up
+              observed 68×, first d1
+    shift     d183-403 2026-08-30→2027-04-07  smoothie bowls and eggs on weekdays, weekend brunch with Leah
+              cause → implicit, lag 3: moved in with his partner Leah (d180)
+              observed 84×, first d183
+    shift     d404-459 2027-04-08→2027-06-02  alternating weeks of bakery croissants and smoothie bowls
+              cause → implicit, lag 4: moved to Chicago for Leah's new job (d400)
+              observed 24×, first d405
+    shift     d460-619 2027-06-03→2027-11-09  smoothie bowls and salmon bagels on weekdays, weekend brunch with Leah
+              cause → uncaused
+              observed 48×, first d460
+    shift     d620-730 2027-11-10→2028-02-28  3 days overnight oats, 2 days smoked salmon bagel
+              cause → implicit, lag 4: started holding 7 am client calls at the studio (d616)
+              observed 40×, first d620
+    exceptions: 39 - e.g. d14: diner breakfast (met a client), d30: diner breakfast (met a client), d58: diner breakfast (met a client)
+    distractor d430: his favorite café changed owners
+
+  [workout]  (workout)
+    initial   d  1-122 2026-03-01→2026-06-30  cycling Mon/Wed, gym Tue/Thu, long ride Sat, yoga Sun
+              observed 53×, first d3
+    shift     d123-210 2026-07-01→2026-09-26  cycling Mon/Wed, climbing gym Tue/Thu, long ride Sat, yoga Sun
+              cause → implicit, lag 3: took up rock climbing (d120)
+              observed 32×, first d123
+    temporary d211-244 2026-09-27→2026-10-30  stationary bike every day
+              cause → explicit, lag 1: fractured his wrist climbing (d210)
+              observed 12×, first d211
+    reversion d245-333 2026-10-31→2027-01-27  cycling Mon/Wed, climbing gym Tue/Thu, long ride Sat, yoga Sun
+              cause → explicit: his wrist healed
+              observed 31×, first d246
+    shift     d334-404 2027-01-28→2027-04-08  running Mon/Wed, climbing gym Tue/Thu, long run Sat, yoga Sun
+              cause → implicit, lag 4: sold his road bike and stopped cycling (d330)
+              observed 23×, first d334
+    shift     d405-730 2027-04-09→2028-02-28  two-week rotation of runs with climbing or swimming
+              cause → explicit, lag 5: moved to Chicago for Leah's new job (d400)
+              observed 112×, first d414
+    exceptions: 30 - e.g. d1: pickup basketball (friends invited him), d5: long walk (the gym was closed), d23: long walk (the gym was closed)
+    distractor d280: a new climbing gym opened across town
+
+  [outfit]  (work outfit)
+    initial   d  1-262 2026-03-01→2026-11-17  4 days button-down and chinos, 3 days sweater and jeans
+              observed 92×, first d3
+    shift     d263-409 2026-11-18→2027-04-13  blazer Mon/Wed, button-down Tue/Thu, sweater Fri, hoodie on weekends
+              cause → implicit, lag 3: was promoted to project lead at the design firm (d260)
+              observed 55×, first d263
+    shift     d410-603 2027-04-14→2027-10-24  alternating weeks of flannel and jeans and button-down and chinos
+              cause → uncaused
+              observed 71×, first d410
+    shift     d604-689 2027-10-25→2028-01-18  black t-shirt and jeans every day
+              cause → implicit, lag 4: left the firm and became co-founder of his own architecture studio (d600)
+              observed 32×, first d605
+    shift     d690-730 2028-01-19→2028-02-28  5 days black t-shirt and jeans, 2 days sweater and jeans
+              cause → uncaused
+              observed 12×, first d691
+    exceptions: 27 - e.g. d2: hoodie and joggers (working from home), d10: hoodie and joggers (working from home), d21: suit and tie (a client presentation)
+    distractor d500: a coworker started wearing suits every day
+
+  [music]  (work music)
+    initial   d  1-302 2026-03-01→2026-12-27  alternating weeks of indie rock and lo-fi beats
+              observed 111×, first d1
+    shift     d303-470 2026-12-28→2027-06-13  3 days jazz records, 4 days indie rock
+              cause → explicit, lag 3: inherited his grandfather's record collection (d300)
+              observed 54×, first d303
+    temporary d471-488 2027-06-14→2027-07-01  audiobooks every day
+              cause → implicit, lag 1: caught COVID (d470)
+              observed 7×, first d472
+    reversion d489-604 2027-07-02→2027-10-25  3 days jazz records, 4 days indie rock
+              cause → uncaused
+              observed 49×, first d489
+    shift     d605-659 2027-10-26→2027-12-19  jazz records early in the week and weekends, ambient mid-week, indie rock Fri
+              cause → implicit, lag 5: left the firm and became co-founder of his own architecture studio (d600)
+              observed 17×, first d605
+    shift     d660-730 2027-12-20→2028-02-28  alternating weeks of ambient electronic and classical
+              cause → uncaused
+              observed 25×, first d661
+    exceptions: 28 - e.g. d31: silence (deep focus work), d35: a podcast (a friend recommended an episode), d44: silence (deep focus work)
+    distractor d580: his neighbor started practicing the trumpet
+
+  [dinner]  (dinner)
+    initial   d  1-152 2026-03-01→2026-07-30  pasta Mon/Thu, tacos Tue, stir-fry Wed, burgers Fri, steak Sat, roast chicken Sun
+              observed 68×, first d1
+    shift     d153-451 2026-07-31→2027-05-25  Thai dishes Mon/Wed, otherwise the usual week
+              cause → explicit, lag 3: took a Thai cooking class (d150)
+              observed 102×, first d154
+    shift     d452-540 2027-05-26→2027-08-22  pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon
+              cause → explicit, lag 2: switched to a pescatarian diet (d450)
+              observed 27×, first d454
+    temporary d541-574 2027-08-23→2027-09-25  delivery sushi every night
+              cause → implicit, lag 1: started a huge design competition deadline at work (d540)
+              observed 10×, first d542
+    reversion d575-654 2027-09-26→2027-12-14  pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon
+              cause → uncaused
+              observed 35×, first d575
+    shift     d655-730 2027-12-15→2028-02-28  3 days grilled salmon, 4 days veggie chili
+              cause → explicit, lag 3: got a seafood and vegetarian cookbook as a gift (d652)
+              observed 28×, first d657
+    exceptions: 29 - e.g. d7: skipped dinner (a late meeting), d45: takeout pizza (too tired to cook), d79: dinner at his parents' (a family visit)
+    distractor d95: Leah started a pottery class
+
+Facts and events:
+  job               [single] junior architect at a design firm (d1-259) → project lead at the design firm (d260-599) → co-founder of his own architecture studio (d600-end)
+                     job.project_lead: effective d260, stated d261 (retrospective)
+  city              [single] Minneapolis, Minnesota (d1-399) → Chicago, Illinois (d400-end)
+  relationship      [single] dating Leah (d1-179) → living with his partner Leah (d180-end)
+                     rel.cohabit: effective d180, stated d183 (retrospective)
+  diet              [single] omnivore (d1-449) → pescatarian (d450-end)
+  hobbies           [multi] cycling (d1-329); photography (d1-end); rock climbing (d120-end); chess (d520-end)
+                     hobby.chess: effective d520, stated d522 (retrospective)
+  event ten_k           planned d60 → happened d100
+  event cooking_class   happened d150
+  event wrist           happened d210 → happened d245
+  event vinyl           happened d300
+  event partner_job     planned d370 → happened d390
+  event covid           happened d470 → happened d489
+  event deadline        happened d540 → happened d575
+  event early_meetings  happened d616
+  event cookbook        happened d652
+  other: Leah (partner) d390: started a new job as a pediatrician at a Chicago hospital
+  other: Kwame (brother) d90: moved to Atlanta
+  other: Kwame (brother) d500: started training for his first marathon
+
+QA:
+  total 50
+  recall               7
+  pattern_current      3
+  pattern_at_time      3
+  prediction           4
+  change_detection     4
+  attribution          5
+  exception_vs_shift   3
+  reversion            2
+  fact_current         2
+  fact_at_time         4
+  fact_history         2
+  event_status         2
+  duration             2
+  distractor_probe     2
+  other_person         2
+  abstention           3
+  highest top-answer shares: 
+
+  20 random QA items:
+  • (recall/dinner)
+    Q: What was Daniel's dinner on Saturday, 2026-12-12?
+    A: steak
+  • (attribution/dinner) [implicit, temporary]
+    Q: Why did Daniel's dinner routine change around 2027-08-23?
+    A: started a huge design competition deadline at work
+  • (recall/breakfast) [inferred]
+    Q: What was Daniel's breakfast on Friday, 2026-12-11?
+    A: granola
+  • (fact_at_time/city)
+    Q: What was Daniel's city of residence on 2026-07-02?
+    A: Minneapolis, Minnesota
+  • (abstention/abstention) [control, diet]
+    Q: Do you know Daniel's diet?
+    A: pescatarian
+  • (distractor_probe/breakfast) [control, implicit]
+    Q: Around 2027-11-06, started holding 7 am client calls at the studio. Did that lead to any change in Daniel's breakfast?
+    A: Yes - from 2027-11-10 Daniel's breakfast changed to 3 days overnight oats, 2 days smoked salmon bagel.
+  • (fact_history/hobbies) [multi]
+    Q: How have Daniel's hobbies changed over time?
+    A: cycling (2026-03-01 to 2027-01-23); photography (2026-03-01 to now); rock climbing (2026-06-28 to now); chess (2027-08-02 to now)
+  • (recall/dinner) [exception]
+    Q: What was Daniel's dinner on Friday, 2027-10-29?
+    A: skipped dinner
+  • (attribution/breakfast) [implicit, shift]
+    Q: Why did Daniel's breakfast routine change around 2027-11-10?
+    A: started holding 7 am client calls at the studio
+  • (pattern_current/workout) [shift]
+    Q: What is Daniel's current workout routine?
+    A: a 2-block rotation of 7-day blocks starting Fri 2027-04-09 - block 1: by day of week: lakefront run on Mon; climbing gym on Tue/Thu; running on Wed; rest day on Fri; long run on Sat; yoga on Sun | block 2: by day of week: lakefront run on Mon; swim on Tue/Thu; running on Wed; rest day on Fri/Sun; long run on Sat (since 2027-04-09)
+  • (abstention/abstention) [control, city]
+    Q: Do you know Daniel's city of residence?
+    A: Chicago, Illinois
+  • (duration/dinner) [initial]
+    Q: How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?
+    A: 152 days (2026-03-01 to 2026-07-30)
+  • (recall/breakfast) [boundary]
+    Q: What was Daniel's breakfast on Monday, 2027-05-31?
+    A: smoothie bowl
+  • (reversion/music) [temporary]
+    Q: What did Daniel's work music go back to after the period of audiobooks?
+    A: 3 days jazz records, 4 days indie rock - a 7-day cycle starting Mon 2026-12-28: jazz records for 3 days, then indie rock for 4 days, repeating
+  • (other_person/other_people) [brother]
+    Q: What did Daniel's brother Kwame start training for?
+    A: marathon running
+  • (fact_at_time/relationship)
+    Q: What was Daniel's relationship status on 2026-03-28?
+    A: dating Leah
+  • (abstention/abstention) [favorite_movie]
+    Q: What is Daniel's favorite movie?
+    A: Not known - this was never mentioned.
+  • (pattern_at_time/outfit) [shift]
+    Q: What was Daniel's work outfit routine in July 2027?
+    A: alternates week by week: flannel and jeans, then button-down and chinos, repeating (7-day blocks starting Wed 2027-04-14)
+  • (fact_current/hobbies) [set]
+    Q: What are Daniel's current hobbies?
+    A: photography, rock climbing, chess
+  • (distractor_probe/outfit)
+    Q: Around 2027-07-13, a coworker started wearing suits every day. Did that lead to any change in Daniel's work outfit?
+    A: No - nothing about Daniel's work outfit changed because of it.
+
+✓ all checks passed - wrote datasets/v2/u4/

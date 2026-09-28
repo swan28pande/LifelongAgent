@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 379,
+  "date": "2027-03-14",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Sunday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, very relaxed. I actually decided to have a matcha latte this morning and just take things easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great start to the day. Are you planning to head out later, or is it a cozy day at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly a cozy day at home. I'm just wearing a button-down shirt and some comfortable pants, doing some light organizing around the place."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classy but comfortable, I like it! A button-down shirt is perfect for a productive Sunday. Have you had a chance to grab some lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I actually just finished eating. For lunch, I made a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Is it one of your usual vegetarian recipes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's a vegetarian one. I tossed in some chickpeas, cucumbers, and a lemon vinaigrette. It was really refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and healthy. How is your roommate Sam doing? Are they joining you for any of the Sunday cleaning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! They are actually out running some errands right now, so I have the whole apartment to myself for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet apartment is always nice. Maybe a good opportunity to practice some guitar without any distractions?"
+    },
+    {
+      "speaker": "user",
+      "text": "That's exactly what I was thinking. I'm going to tune up my guitar and play for a while before the evening starts."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 76,
+  "date": "2026-05-15",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Friday. How is your morning starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just sitting here with my oat milk latte, trying to wake up before work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte sounds like a perfect start to a Friday. Are you working from home today, or heading into the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. I'm keeping it super comfortable and wearing an oversized hoodie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, there's nothing better than working in an oversized hoodie on a Friday. Speaking of working from home, is your roommate Sam around today, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually out for the day, so I have the whole apartment to myself. It's really quiet, which is nice for getting things done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very peaceful setup. Have you been able to take a break or get some lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished eating a homemade salad. I wanted something light so I don't get too sleepy this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great choice to keep your energy up. Are you planning on doing any rock climbing this weekend, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to keep it low-key this weekend and just stay home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing wrong with a relaxing weekend at home. Do you think you'll spend some time playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm definitely planning to play some guitar tonight. It's a nice way to unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Friday evening. I hope you have a great rest of your day and a wonderful weekend, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Have a good one."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user is training for a half marathon taking place this month."
+  ]
+}

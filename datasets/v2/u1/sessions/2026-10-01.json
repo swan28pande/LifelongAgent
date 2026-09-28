@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 215,
+  "date": "2026-10-01",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Thursday starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going okay. I'm just sitting here in an oversized hoodie, trying to get some work done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds cozy! Perfect for a productive morning. Have you had any coffee to help you wake up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, I made myself a decaf americano. Trying to stick to the doctor's advice on cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good job keeping up with that! How is work going at the logistics firm? Is it a busy week for an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. We've got a lot of shipments moving through Austin right now, so I've been on the phone all day. I barely had time to quickly throw together a homemade salad for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great choice! Glad you got a quick break. Have you had any time for rock climbing or playing guitar this week to decompress?"
+    },
+    {
+      "speaker": "user",
+      "text": "No rock climbing lately, but I did play my guitar for a bit last night while Sam was out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, practicing is always a good way to relax. And how are things going with your sister Ana's wedding plans for November?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's getting close, so she's a bit stressed with the final details, but everything is coming together. I'm really looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's going to be a wonderful celebration. I hope she's able to enjoy the lead-up to it!"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, me too. I'm hoping to help her out with a few things this weekend if I can."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's very kind of you. Well, I hope the rest of your work day goes smoothly! Let me know if you need help with anything else."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll probably just focus on these emails and try to wrap up early."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Ana's wedding will be held in Austin."
+  ]
+}

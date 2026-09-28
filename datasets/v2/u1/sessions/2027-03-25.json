@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 390,
+  "date": "2027-03-25",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Thursday going so far? How are things over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm actually trying to stay on track with what the doctor said at my check-up about cutting back on caffeine, so I had a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great choice! Matcha is a fantastic alternative. Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's a bit of a hectic day. I have an important client meeting this afternoon, so I actually dressed up a bit and wore a button-down shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Very professional! I hope the meeting goes smoothly. Did you manage to get a decent break to eat something?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, luckily. I just grabbed a quick deli sandwich from the cafe downstairs and ate at my desk while reviewing my notes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad you got some fuel in! How are things at home? Have you and Sam been up to much lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam has been super busy with work, so we've mostly just been passing each other in the kitchen. We did catch up a bit yesterday evening though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's tough when schedules don't align, but glad you got a bit of catch-up time. Have you had any time for your hobbies lately, like rock climbing or playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually practiced some guitar last night before winding down for bed, which was nice. I haven't been climbing in a bit, but I'm hoping to get back on the wall this weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid plan. A little guitar time is perfect for destressing, and hopefully you get to climb this weekend! Good luck with your client meeting today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll let you know how it goes."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

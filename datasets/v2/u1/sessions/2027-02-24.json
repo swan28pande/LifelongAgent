@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 361,
+  "date": "2027-02-24",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Wednesday going in Austin so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just settled in at my desk at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Great to hear. Did you manage to grab a morning drink on your way in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually decided to get a matcha latte this morning. Trying to keep that caffeine in check like the doctor suggested at my annual check-up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and mindful choice! What's the vibe at the office today? Are you dressed up for any client meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "No big meetings today, so I went pretty casual. I'm just wearing a polo shirt and some chinos."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and comfortable. Have you had a chance to think about what you'll have for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished eating a deli sandwich that I picked up from a spot nearby."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Hopefully it was a satisfying break. How has work been? Are things busy with your accounts at the firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a bit hectic with some shipping delays we're routing, but nothing I can't handle. Keeps the day moving fast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Are you planning to unwind with any rock climbing or guitar practice after work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar tonight. My roommate Sam is hosting some friends, so I'll probably just hang out in my room and practice a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing way to spend the evening. Hope you have a great rest of your day, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

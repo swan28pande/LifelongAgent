@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 430,
+  "date": "2027-05-04",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going over in Austin? Keeping busy at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty busy today, lots of account management tasks to handle. I'm keeping it comfortable though, just wearing a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid choice for a busy office day. Did you manage to grab a morning drink to power through, keeping your doctor's advice to cut back on caffeine in mind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually had a matcha latte this morning. It has a bit of caffeine to wake me up but is much gentler than coffee, so it felt like a good choice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect compromise, and matcha is delicious. Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I just finished up. I had a deli sandwich from the little market down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Being vegetarian, did they have a good option for your deli sandwich, or did you have to customize it?"
+    },
+    {
+      "speaker": "user",
+      "text": "They actually have a really great marinated veggie and hummus one on fresh sourdough, so no customization needed. Austin is pretty awesome for vegetarian options like that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a great city for vegetarian food. Are you planning on doing any rock climbing with Sam after work today, or is it a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing today, Sam has some other things going on. I think I'm just going to head straight home after work and practice some guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very relaxing evening. It must be nice to have some quiet downtime, especially now that you don't have all that intense half marathon training taking up your free time."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I'm definitely enjoying the slower pace and not having to run miles and miles after work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You definitely earned the rest! Well, have a wonderful evening with your guitar, Leo. Let me know if you need anything else today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

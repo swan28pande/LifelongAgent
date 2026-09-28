@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 425,
+  "date": "2027-04-29",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Thursday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just a bit busy. I'm actually wearing a button-down shirt today because I have a couple of client video calls later this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, dressing up a bit for the clients! I hope those calls go smoothly. Did you have a chance to get some coffee to start your morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I had a decaf americano this morning before heading into work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a solid start. Are you planning to head out for a bite later, or did you bring something to the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I brought a homemade salad today, so I'm just going to eat at my desk while I prep for these meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds refreshing and convenient. Are you still sticking with your vegetarian diet these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am. I'm still eating vegetarian and it's been feeling really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. How have things been at home? How is your roommate Sam doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We've both been pretty busy lately, but we caught up for a bit last night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's nice that you two get to catch up even with busy schedules. Have you had any time for rock climbing or playing your guitar lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much during the week, but I'm hoping to get some rock climbing in this weekend if my schedule clears up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get to enjoy some climbing this weekend! Good luck with your client calls this afternoon."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

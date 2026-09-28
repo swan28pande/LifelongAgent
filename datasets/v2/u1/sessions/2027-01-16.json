@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 322,
+  "date": "2027-01-16",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Leo! Happy Saturday. How is your weekend starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well so far. I'm just sitting here enjoying a matcha latte and listening to some music."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a relaxing way to start the morning. Do you have any plans for today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm heading out in a bit to meet some friends. I actually just put on a button-down shirt and am getting ready to head out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A button-down shirt is a classic choice. Are you meeting up with Sam, or is your roommate busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually doing his own thing today, so I'm just meeting up with some friends."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it, hope you have a great time catching up! Are you planning to grab some lunch while you're out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I think I'm going to grab a deli sandwich from that place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is always a solid lunch choice. Since you're vegetarian, do they have a good veggie option there?"
+    },
+    {
+      "speaker": "user",
+      "text": "They do! They make a really great roasted vegetable one. I get it all the time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. Are you planning to squeeze in any rock climbing or guitar practice later this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll do some climbing tomorrow, and maybe play some guitar tonight. It's been a busy week at work, so I'm looking forward to unwinding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect balance. It's great to have some downtime after a busy week. Have a wonderful time catching up with your friends!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

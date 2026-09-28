@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 460,
+  "date": "2027-06-03",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Thursday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just sitting at my desk with a matcha latte, trying to get through some morning emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, especially since you've been mindful of your caffeine intake. How is everything going at the logistics firm today? Is it a busy Thursday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, being an account manager at the logistics firm keeps me pretty busy, but today is actually manageable. I'm just handling some routine shipments."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. Hopefully, you'll have some energy left over after work. Any plans to do some rock climbing or play the guitar later?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I might head to the climbing gym tonight if my roommate Sam is up for it. Oh, by the way, I'm wearing a button-down shirt today instead of my usual t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt! Looking sharp! Do you have a big presentation today, or did you just feel like dressing up a bit?"
+    },
+    {
+      "speaker": "user",
+      "text": "No big meetings today, actually. I just felt like wearing something a little more professional for a change."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Well, it's always nice to change things up. Since you're dressed up, are you planning a nice lunch today? Keeping it vegetarian, of course!"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely keeping it vegetarian. I actually just ordered a deli sandwich from the place down the block to eat at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a classic workday lunch. How is the weather over in Austin today? Is the summer heat starting to set in?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is definitely getting warm here in Austin, but the office AC is keeping me comfortable. I'm just looking forward to the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you! I hope the rest of your workday goes by quickly and you have a great evening climbing."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Catch you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

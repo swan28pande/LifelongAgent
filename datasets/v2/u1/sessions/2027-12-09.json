@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 649,
+  "date": "2027-12-09",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Thursday going? How's everything over in Chicago today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty cold here today, but I'm surviving. Just got into the office at the logistics firm. I'm actually wearing a button-down shirt today instead of my usual casual wear because we have a client coming in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the classic button-down shirt look! Very professional. I'm sure you'll crush the client meeting. Did you at least get a good cup of coffee to power you through the morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I stopped by the local cafe and got a decaf americano. Ever since my check-up where the doctor advised cutting back on caffeine, I've been trying to stick to decaf, and it honestly hits the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, sticking to the decaf americano is a great move. It's not easy to cut back, so props to you! What do you have planned for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I brought a meal-prep burrito bowl from home. It's vegetarian, super filling, and saves me from having to go out in the freezing Chicago wind during my break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A meal-prep burrito bowl sounds perfect for a cold day, and keeping it vegetarian is always a great bonus. Are you planning to unwind with some rock climbing or guitar after work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm actually planning to head to the climbing gym for a bit this evening. I need to stretch out after sitting at my desk all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Is Sam going with you tonight, or are you flying solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is busy tonight, so I'll just be going by myself to work on some bouldering routes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Bouldering is a great way to clear your head. Hopefully, you'll have some time to play your guitar later this week too."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, I actually practiced for about an hour last night, so I'm feeling pretty good about my progress."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Sam likes to cook vegetarian"
+  ]
+}

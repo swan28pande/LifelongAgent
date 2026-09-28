@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 403,
+  "date": "2027-04-07",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going so far? Are you getting any rock climbing in today, or is it a busy day at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty busy today, so no climbing. I did dress down a bit for the office though—just wearing a polo shirt today. How are things with you?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt sounds like a comfortable choice for a busy office day! Did you manage to grab a good coffee to kickstart your morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I did! I had a matcha latte this morning. I'm still trying to follow the doctor's advice from my check-up to cut back on caffeine, so this seemed like a good choice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great alternative, and definitely gentler on the system. How is the rest of your day shaping up in Austin? Have you had a chance to grab lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just got back to my desk. I ended up getting a deli sandwich for lunch. It was really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! I know you eat vegetarian, so hopefully they had some great veggie options for that deli sandwich. Did you get it from one of your usual spots?"
+    },
+    {
+      "speaker": "user",
+      "text": "They did, they have this amazing roasted veggie and hummus setup. Austin has some really great vegetarian spots, so it's never too hard to find something delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Austin really is a haven for vegetarian food! How are things at home? Have you and Sam had any time to hang out lately, or has it been quiet?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a bit quiet, but Sam and I actually watched a movie together last night. It was nice to just wind down and relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound relaxing. Have you had any time to play your guitar recently, or have you been too busy with work and everything else?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually practiced for about thirty minutes yesterday evening. I'm just trying to keep my fingers in shape, even when work gets hectic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It's great you're keeping up with the guitar. I hope the rest of your afternoon goes smoothly. Let me know if you need help with anything else today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

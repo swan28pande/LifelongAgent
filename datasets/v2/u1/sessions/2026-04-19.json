@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 50,
+  "date": "2026-04-19",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How's your morning starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Pretty good, just relaxing. I'm sitting on the porch with a black coffee right now, just enjoying the quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a perfect Sunday morning. Are you planning on heading out for some rock climbing today, or is it more of a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I think it's a rest day. My arms are still pretty sore from climbing a few days ago. I'm just wearing a casual fitted t-shirt and shorts, probably just going to hang around the apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A rest day is definitely deserved! How's Sam doing? Is he around today or does he have his own Sunday plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually out hiking with some friends today, so I have the place to myself for a bit. It's nice to have some quiet time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound peaceful. A quiet apartment is a great excuse to pick up the guitar. Have you been playing much lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually practiced some fingerpicking patterns yesterday. I might do some more of that after lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! What are you thinking of making or getting for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple and just making a deli sandwich at home. I've got some good sourdough bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic. Sourdough makes any deli sandwich so much better. Do you have any plans for the evening, or just continuing the low-key vibe?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just keeping it low-key. Maybe watch a movie later. It's nice to have a slow Sunday before the work week starts again."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: training for the Austin half marathon in May"
+  ]
+}

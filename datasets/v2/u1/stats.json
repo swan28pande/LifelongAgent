@@ -1,0 +1,361 @@
+{
+  "user_id": "u1",
+  "knobs": {
+    "preference_domains": {
+      "ladder": "3",
+      "measured": "3",
+      "ok": true
+    },
+    "rule_types": {
+      "ladder": "required [], allowed ['weekly_alternate', 'n_day_cycle', 'constant']",
+      "measured": "n_day_cycle, weekly_alternate",
+      "ok": true
+    },
+    "shifts_per_domain": {
+      "ladder": "1",
+      "measured": "1",
+      "ok": true
+    },
+    "visibility_mix (E/I/U %)": {
+      "ladder": "100/0/0",
+      "measured": "100/0/0",
+      "ok": true
+    },
+    "lag_days": {
+      "ladder": "0",
+      "measured": "0-0",
+      "ok": true
+    },
+    "temporary_shifts": {
+      "ladder": "0",
+      "measured": "0",
+      "ok": true
+    },
+    "fact_changes": {
+      "ladder": "2",
+      "measured": "2",
+      "ok": true
+    },
+    "cross_domain_causes": {
+      "ladder": "0",
+      "measured": "0",
+      "ok": true
+    },
+    "distractors": {
+      "ladder": "0",
+      "measured": "0",
+      "ok": true
+    },
+    "exception_rate": {
+      "ladder": "0.00",
+      "measured": "0.000",
+      "ok": true
+    },
+    "p_session": {
+      "ladder": "1.00",
+      "measured": "1.000",
+      "ok": true
+    },
+    "p_mention": {
+      "ladder": "1.00",
+      "measured": "1.000",
+      "ok": true
+    },
+    "other_people": {
+      "ladder": "False",
+      "measured": "False",
+      "ok": true
+    }
+  },
+  "sessions": 730,
+  "mentions_total": 2190,
+  "mention_reasons": {
+    "sampled": 2190
+  },
+  "retrospective_statements": 0,
+  "qa": {
+    "total": 50,
+    "by_type": {
+      "recall": 10,
+      "pattern_current": 3,
+      "pattern_at_time": 4,
+      "prediction": 6,
+      "change_detection": 3,
+      "attribution": 3,
+      "fact_current": 3,
+      "fact_at_time": 6,
+      "fact_history": 2,
+      "event_status": 3,
+      "duration": 3,
+      "abstention": 4
+    },
+    "by_capability": {
+      "episodic_recall": 10,
+      "pattern_abstraction": 7,
+      "pattern_extrapolation": 6,
+      "temporal_change": 3,
+      "causal_reasoning": 3,
+      "knowledge_update": 5,
+      "temporal_fact": 6,
+      "event_tracking": 3,
+      "temporal_arithmetic": 3,
+      "abstention": 4
+    },
+    "by_grading": {
+      "exact": 24,
+      "llm_judge": 23,
+      "date_exact": 3
+    },
+    "tags": {
+      "boundary": 5,
+      "shift": 12,
+      "initial": 4,
+      "horizon_52d": 1,
+      "horizon_30d": 1,
+      "horizon_43d": 1,
+      "horizon_5d": 1,
+      "horizon_14d": 1,
+      "horizon_38d": 1,
+      "explicit": 6,
+      "set": 1,
+      "single": 2,
+      "happened": 2,
+      "at_time": 1,
+      "planned": 1,
+      "favorite_movie": 1,
+      "shoe_size": 1,
+      "control": 2,
+      "living_situation": 1,
+      "job": 1
+    },
+    "answer_distribution": {
+      "abstention/abstention": {
+        "n": 4,
+        "top_answer": "not known",
+        "top_share": 0.5,
+        "entropy_bits": 1.5,
+        "distinct": 3
+      },
+      "attribution/clothing": {
+        "n": 1,
+        "top_answer": "got promoted to account manager at the logistics firm, which has a stricter office dress code",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "attribution/coffee": {
+        "n": 1,
+        "top_answer": "had a check-up and the doctor advised cutting back on caffeine",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "attribution/lunch": {
+        "n": 1,
+        "top_answer": "moved to chicago after transferring to the chicago branch",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/clothing": {
+        "n": 1,
+        "top_answer": "2027-01-14",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/coffee": {
+        "n": 1,
+        "top_answer": "2026-09-21",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/lunch": {
+        "n": 1,
+        "top_answer": "2027-06-23",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "duration/clothing": {
+        "n": 1,
+        "top_answer": "319",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "duration/coffee": {
+        "n": 1,
+        "top_answer": "526",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "duration/lunch": {
+        "n": 1,
+        "top_answer": "479",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "event_status/events": {
+        "n": 3,
+        "top_answer": "ran the half marathon and finished in 1:58",
+        "top_share": 0.333,
+        "entropy_bits": 1.585,
+        "distinct": 3
+      },
+      "fact_at_time/city": {
+        "n": 3,
+        "top_answer": "austin, texas",
+        "top_share": 0.667,
+        "entropy_bits": 0.918,
+        "distinct": 2
+      },
+      "fact_at_time/job": {
+        "n": 3,
+        "top_answer": "account manager at the logistics firm",
+        "top_share": 0.667,
+        "entropy_bits": 0.918,
+        "distinct": 2
+      },
+      "fact_current/diet": {
+        "n": 1,
+        "top_answer": "vegetarian",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_current/hobbies": {
+        "n": 1,
+        "top_answer": "rock climbing, guitar",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_current/job": {
+        "n": 1,
+        "top_answer": "account manager at the logistics firm",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_history/city": {
+        "n": 1,
+        "top_answer": "chicago, illinois",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_history/job": {
+        "n": 1,
+        "top_answer": "account manager at the logistics firm",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/clothing": {
+        "n": 2,
+        "top_answer": "3 days fitted t-shirt, 3 days oversized hoodie",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "pattern_at_time/coffee": {
+        "n": 1,
+        "top_answer": "alternating oat milk latte and black coffee weeks",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/lunch": {
+        "n": 1,
+        "top_answer": "4 days meal-prep burrito bowl, 3 days ramen",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/clothing": {
+        "n": 1,
+        "top_answer": "5 days button-down shirt, 2 days polo shirt",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/coffee": {
+        "n": 1,
+        "top_answer": "alternating matcha latte and decaf americano weeks",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/lunch": {
+        "n": 1,
+        "top_answer": "4 days meal-prep burrito bowl, 3 days ramen",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "prediction/clothing": {
+        "n": 2,
+        "top_answer": "polo shirt",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "prediction/coffee": {
+        "n": 2,
+        "top_answer": "matcha latte",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "prediction/lunch": {
+        "n": 2,
+        "top_answer": "ramen",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "recall/clothing": {
+        "n": 3,
+        "top_answer": "oversized hoodie",
+        "top_share": 0.333,
+        "entropy_bits": 1.585,
+        "distinct": 3
+      },
+      "recall/coffee": {
+        "n": 3,
+        "top_answer": "oat milk latte",
+        "top_share": 0.333,
+        "entropy_bits": 1.585,
+        "distinct": 3
+      },
+      "recall/lunch": {
+        "n": 4,
+        "top_answer": "ramen",
+        "top_share": 0.25,
+        "entropy_bits": 2.0,
+        "distinct": 4
+      }
+    }
+  },
+  "qa_pool": {
+    "total": 390,
+    "by_type": {
+      "recall": 204,
+      "pattern_current": 3,
+      "pattern_at_time": 6,
+      "prediction": 102,
+      "change_detection": 3,
+      "attribution": 3,
+      "fact_current": 5,
+      "fact_at_time": 40,
+      "fact_history": 2,
+      "event_status": 5,
+      "duration": 6,
+      "abstention": 11
+    }
+  }
+}

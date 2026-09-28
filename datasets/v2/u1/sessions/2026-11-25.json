@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 270,
+  "date": "2026-11-25",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just working from home today. I'm wearing an oversized hoodie and keeping it cozy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Working from home in an oversized hoodie sounds like the perfect way to spend a chilly late November day. Did you start your morning with a warm drink?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I did. I had a decaf americano this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds delicious. How has work been at the logistics firm? Busy week before Thanksgiving?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it's been absolute chaos as an account coordinator with the holiday rush, but I'm getting through it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! The holiday season must make logistics wild. Are you taking any breaks to step away from the desk today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did just take a break to eat. I had a homemade salad for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds like a healthy and refreshing lunch break. Did you manage to make it vegetarian-friendly as usual?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, always vegetarian for me. Just some greens, chickpeas, and a vinaigrette."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and fueling! Do you have any plans to unwind after work? Maybe some rock climbing or playing the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I might practice some guitar later this evening. Sam is going to be out, so I can make as much noise as I want."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect timing then! Enjoy the solo jam session. Let me know if you need any help with anything else today, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Will do. Have a good one!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

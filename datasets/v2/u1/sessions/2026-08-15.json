@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 168,
+  "date": "2026-08-15",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Saturday. How's your weekend starting off down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just relaxing at home. I started the day with a black coffee and I'm just taking it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, nothing beats a quiet Saturday morning. Are you planning on heading out to climb or play some guitar today, or is it a pure lazy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, it's mostly a lazy day. I'm just wearing an oversized hoodie and hanging out on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds incredibly comfortable! Is Sam around, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is out running some errands, so I've got the apartment to myself for a bit. It's nice and quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound peaceful. Have you thought about what you're doing for lunch, or are you just grazing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just made myself a deli sandwich. Kept it simple but it hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Simple is best! Did you find some good vegetarian deli slices for it? I know Austin has some great specialty grocery spots."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I found some really good plant-based turkey slices at the local store here. They're surprisingly realistic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh nice! It's always a win when you find veggie options that actually taste good. Are you planning to do anything later, or are you staying in that cozy hoodie all day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might pick up my guitar later and practice a bit, but honestly, I don't see myself changing out of this oversized hoodie anytime soon. It's just too comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all. Saturdays are made for peak comfort. Enjoy the quiet afternoon and your guitar practice!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I definitely will. Have a good rest of your day!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Has a friend or acquaintance named Ana who is getting married in November"
+  ]
+}

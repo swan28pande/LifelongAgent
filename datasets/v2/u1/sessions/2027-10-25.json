@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 604,
+  "date": "2027-10-25",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Monday starting off over in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just getting some work done. I'm wearing a button-down shirt today, which feels nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a classic look! Are you working from home today, or did you head into the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. I started my morning with a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a great way to start the day. How is the workload looking for you so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty busy, but manageable. I actually just got back from my midday break; I had ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a Monday lunch. Did you go to that spot down the street from your office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly. It was really good and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome. By the way, I wanted to ask—how did everything go with your sister Ana's wedding in San Antonio?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, the wedding was beautiful! It was so good to see Ana and the family, and San Antonio was a lot of fun to visit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that! Are you planning to unwind with some rock climbing or maybe play a little guitar tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just play some guitar tonight and relax. Sam is out, so I'll have the place to myself for a bit."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

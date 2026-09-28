@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 262,
+  "date": "2026-11-17",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is everything going in Austin today? I know November is a big month for your family with Ana's wedding coming up. How are the preparations going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, I just got back because I went to my sister Ana's wedding in San Antonio. It happened today, we did a small Tuesday morning ceremony and it was absolutely beautiful."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow, today! Congratulations to Ana and your whole family. How was the ceremony in San Antonio? Did everything go smoothly?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was perfect, really intimate and sweet. I'm pretty exhausted from the travel and the emotional high, though. Today I'm just keeping it super casual and wearing an oversized hoodie while I catch up on some work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds like the perfect uniform for a post-wedding recovery day. Are you working from your place with Sam today, or heading into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just working from our apartment today. I needed a bit of a gentle start, so I made myself a matcha latte this morning to get focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, especially since you've been mindful of cutting back on caffeine after your check-up. Did it give you the right amount of energy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it was just the right amount of kick without making me jittery. For lunch, I ended up making a quick deli sandwich with some smoked provolone and avocado."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That deli sandwich sounds delicious and easy to throw together. Did you get to play any guitar or do any climbing lately, or has it been all wedding prep?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly wedding prep, honestly! I haven't touched my guitar in a few days, but I'm hoping to get back to climbing sometime later this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, weddings are a lot of work even as a guest. I hope you get to unwind with some climbing soon. Have a relaxing rest of your Tuesday!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely going to take it easy tonight. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {
+      "sister_wedding.1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

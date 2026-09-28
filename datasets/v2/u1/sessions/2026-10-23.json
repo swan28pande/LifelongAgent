@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 237,
+  "date": "2026-10-23",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Friday. How is your morning in Austin starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well. I'm just sitting here waking up with my morning drink. I decided on a matcha latte today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte sounds like a nice, refreshing start. Are you working from home today, or did you head into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. It's pretty relaxed here on Fridays, so I just wore a fitted t-shirt and jeans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Casual Fridays are the best, especially at a logistics firm where things can get pretty hectic. Have you had a chance to grab some lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just got back from a quick break. I had a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and simple. Are you planning on doing any rock climbing or playing guitar this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely want to get some guitar practice in. My sister Ana's wedding is next month, so I've been playing a lot of music lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. I'm sure she'll love having that personal touch for her big day. Is your roommate Sam going to the wedding too?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Sam has other plans that weekend, but he's been super supportive while I practice at the apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Roommates who don't mind practice sessions are a major plus. Do you have any big plans for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just relaxing. It's been a long week of coordinating accounts, so I'm looking forward to a quiet evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

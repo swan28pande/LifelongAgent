@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 577,
+  "date": "2027-09-28",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How's your Tuesday going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just a bit busy. The weather is getting a little cooler here today. I'm actually wearing a polo shirt because the office is slightly warmer than usual, but it feels like autumn is definitely on the way."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the classic transitional weather! How are things at the logistics firm? Keeping busy with your accounts?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, definitely. We've got a lot of end-of-quarter shipments to coordinate, so my job as an account manager has been keeping me on my toes. But I managed to step out for a quick lunch today. I had some ramen, which was perfect for a slightly breezy day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Did you find a good vegetarian ramen spot near the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! There's a place just a couple of blocks away that makes an amazing spicy veggie broth. I usually get it with extra tofu."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice. And how is your roommate Sam doing? Have you guys been up to anything fun lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great. We actually watched a movie last night, but otherwise we've both just been busy with work. Oh, and I'm still trying to watch my caffeine intake like the doctor recommended after my check-up, so my morning coffee today was a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for you! How are you finding the transition to decaf? Do you feel like you have enough energy for rock climbing and your other activities?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, the decaf americano actually tastes really good, so I don't feel like I'm missing out on the ritual. And my energy levels have been pretty stable! I've still got plenty of energy for climbing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome to hear. It's great when a health change turns out to be easier than expected. Any climbing plans for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not tonight, I think I'm just going to relax at home and maybe play some guitar. Just a quiet Tuesday evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

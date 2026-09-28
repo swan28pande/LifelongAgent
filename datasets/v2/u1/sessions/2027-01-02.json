@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 308,
+  "date": "2027-01-02",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your weekend in Austin starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I just finished drinking a matcha latte. Just trying to ease into the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A matcha latte sounds like a great choice, especially since your doctor suggested cutting back on caffeine. What are your plans for the rest of this Saturday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly, trying to keep the caffeine low. I'm actually about to head out to the climbing gym in a bit. I've already got my climbing gear ready and I'm just wearing a simple fitted t-shirt and shorts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fitted t-shirt is perfect for rock climbing. Keep it light and movable! Are you going with Sam or meeting up with other climbers?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just going solo today to work on some bouldering projects. Sam is actually busy cleaning up the kitchen. Before I head out, I'm going to pack a deli sandwich to eat later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a classic, easy lunch to pack. Since you're vegetarian, what do you usually put on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually do hummus, sliced cucumbers, tomatoes, and some provolone cheese. It's quick and holds up well in my bag."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and refreshing! Have you been playing much guitar lately, or has climbing been taking up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played for about an hour yesterday evening. Just practicing some fingerpicking patterns. It's a nice way to unwind after work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to relax. I hope you have an awesome time bouldering today! Let me know how the climbing session goes."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later tonight. Have a good one!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 712,
+  "date": "2028-02-10",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Thursday starting out? How are things going at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, things are pretty busy today in my role as an account manager. I'm just getting ready for the day and wearing a button-down shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is always a sharp look. Did you get a chance to have some coffee or breakfast before tackling your to-do list?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, I had a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the morning. What are you planning to do for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually brought a meal-prep burrito bowl today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A meal-prep burrito bowl is always a great choice! How are things going with your roommate, Sam? Have you two been keeping busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We caught up for a bit yesterday evening and just hung out around the apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, relaxing Wednesday evening. Have you had any time to get out for rock climbing or play your guitar lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went rock climbing on Tuesday after work, which was really fun. I haven't played much guitar this week, but I'm hoping to find some time this weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting a climbing session in is awesome! I hope you get plenty of guitar time over the weekend, too. Have a fantastic day at work!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

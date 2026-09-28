@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 367,
+  "date": "2027-03-02",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just getting some work done at my desk. I decided to look a little more put-together today, so I'm wearing a polo shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a great choice! Comfortable but professional. Did you get a morning coffee to start your day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I went with a decaf americano this morning to keep cutting back on caffeine like my doctor suggested."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great commitment to your health. How did you like the decaf americano? And what did you end up doing for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was actually really good! For lunch, I kept it healthy too and had a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds perfect. Being vegetarian, do you have a go-to recipe you like to make, or do you just mix it up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually just mix up whatever fresh veggies and greens we have in the fridge. My roommate Sam actually bought some great spinach yesterday, so I used that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! It's great when a roommate's grocery run works out like that. Have you had any time for rock climbing recently, or has work at the logistics firm been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went to the climbing gym here in Austin on Sunday! It was a great session, though my forearms are still a little sore."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sunday climbing sounds like a perfect weekend wrap-up. Are you planning to rest tonight, or maybe play some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely going to keep it low-key tonight. I'll probably just practice a few chords on the guitar and then head to bed early."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

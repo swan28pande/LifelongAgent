@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 571,
+  "date": "2027-09-22",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Leo! How is your Wednesday starting off? Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's pretty busy, but I'm managing. I decided to have a matcha latte this morning to kick things off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, especially keeping in mind your doctor's advice about caffeine. Are you working from the office today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am in the office today. I wanted to look decent for a client call later, so I threw on a polo shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is perfect for a business-casual day. How is your roommate Sam doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing really well, thanks for asking! We actually spent some time in the kitchen yesterday getting food ready for the week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a smart move. Did you end up bringing something from that session for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I brought a meal-prep burrito bowl today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Since you're vegetarian, what did you load it up with?"
+    },
+    {
+      "speaker": "user",
+      "text": "I put in plenty of black beans, brown rice, roasted peppers, and a good scoop of guacamole. It's really filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect lunch to power you through the rest of your shift. Do you have any plans to hit the climbing gym or play some guitar tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll probably just practice some guitar tonight. I'm a bit tired from the busy week at work, so a quiet evening at home sounds best."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A relaxing evening of music is a great way to unwind. I hope the rest of your client calls go smoothly today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

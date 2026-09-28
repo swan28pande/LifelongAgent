@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 583,
+  "date": "2027-10-04",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Leo! How is your Monday starting off in Chicago? Are you getting ready for a busy week at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's looking like a pretty busy week. I'm just getting dressed now. I decided to wear a button-down shirt today since I have a couple of client calls later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a great choice for client meetings. Did you get any time to relax over the weekend, or were you busy with rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually skipped the rock climbing this weekend and spent some time playing guitar instead. I did need a bit of a boost this morning, though, so I made a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte is a great option, especially since your doctor suggested cutting back on caffeine at your check-up. How is the guitar practice going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! The matcha latte definitely helps me stay focused without the jitters. I've been working on some classical fingerpicking pieces."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Fingerpicking can be challenging but very rewarding. Are you planning to take a break for lunch soon between your meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just had a quick break and ate some ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen is such a comforting lunch! Did you get it from that vegetarian-friendly spot nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I did! Their vegetarian broth is amazing. It was perfect for a chilly fall day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. Did Sam get to join you, or did you eat solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam was out running errands, so I just ate by myself. I'm hoping to get back to rock climbing on Wednesday if my schedule allows, but tonight will just be more guitar practice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Well, I hope the client calls go well this afternoon and that you enjoy your practice session tonight!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

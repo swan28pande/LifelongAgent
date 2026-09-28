@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 33,
+  "date": "2026-04-02",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Thursday going so far down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I started the morning on a good note with an oat milk latte, so I'm feeling nice and energized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect start. Are things busy at your logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, it's a bit of a slow day for an account coordinator, which is a nice change of pace. I'm just keeping it super casual today, wearing a fitted t-shirt and working from my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always great when you can dress comfortably for a relaxed work day. Have you had a chance to grab lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just finished eating a homemade salad. I wanted something fresh and easy to put together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fresh homemade salad is a great midday meal. Do you have any plans to hit the climbing gym later, or maybe play some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually thinking of going rock climbing this evening. I need to stretch out after sitting at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Climbing is the perfect way to unwind. Is your roommate Sam going with you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not today, Sam has some other things going on. So I'll probably just go solo and meet up with some of the regulars there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great time at the gym! Let me know if you need any help with anything else today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Will do. Catch you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

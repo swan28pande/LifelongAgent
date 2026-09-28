@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 675,
+  "date": "2028-01-04",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Tuesday starting out in Chicago? How are things going at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are pretty busy at the office today. I'm wearing a polo shirt today because we don't have any external client meetings, so I wanted to keep it a bit casual."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a great choice for a day like that—comfortable but still put-together. Did you grab a morning coffee to help you power through the busy morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I got a decaf americano on my way in. I'm still keeping the doctor's advice from my check-up in mind about cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's excellent. It's not easy to make the switch, but a decaf americano is a perfect way to keep the routine. Are you managing to get a decent break for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just got back from lunch. I had ramen today, which was perfect since it's freezing outside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is absolutely ideal for a cold Chicago day. Did you find a vegetarian option nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, there's a noodle place right around the corner from the firm that makes a fantastic vegetarian broth. It hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! It's great to have a go-to spot so close to work. How is the rest of your afternoon looking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some standard account manager tasks, checking in on shipments and answering emails. It should go by pretty fast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope it flies by for you! Do you have any plans for this evening, like maybe some guitar or rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think I'm going to do some rock climbing tonight with Sam, and then probably just relax at home."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

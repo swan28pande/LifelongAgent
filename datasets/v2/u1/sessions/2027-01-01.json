@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 307,
+  "date": "2027-01-01",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy New Year, Leo! How is your day starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Happy New Year! It's starting out really nice and relaxed. I'm just lounging around in a fitted t-shirt right now, enjoying the quiet morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to start 2027. Did you have any coffee to wake you up, or are you still keeping an eye on the caffeine like your doctor recommended?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am! I had a matcha latte this morning instead of my usual heavy coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a solid choice! A matcha latte still gives you a gentle boost. What are your plans for the rest of this New Year's Day? Any rock climbing or guitar playing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to head to the rock climbing gym later if it's open, but first I need to get some food."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Fueling up is important. What are you having for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple with a deli sandwich today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic deli sandwich is always a great lunch. I assume it's a vegetarian one?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, loaded with veggies and some cheese."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Delicious! How is Sam doing? Are they joining you for the climb later?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Sam is actually visiting family for the holidays, so I've got the apartment to myself. I'll probably just practice some guitar when I get back from the gym."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet afternoon of climbing and guitar sounds like a wonderful way to kick off the year. Have a great rest of your day, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Appreciate it. Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

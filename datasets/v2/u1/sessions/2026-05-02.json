@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 63,
+  "date": "2026-05-02",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Leo! How's your weekend starting out in Austin? Doing any rock climbing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Austin is pretty warm today, so I'm staying inside for now. I started my morning with an oat milk latte, which was great. No climbing today, maybe tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte sounds like a perfect start to a relaxed Saturday. Are you just hanging out at the apartment, or do you have some plans later?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just relaxing. I threw on a fitted t-shirt and I'm helping Sam tidy up the living room a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and casual. It's always good to get some cleaning done. Do you and Sam have any plans for lunch, or are you on your own for that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just made a homemade salad for lunch. It was nice and refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great choice, especially when it's warm out. What did you put in it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some mixed greens, cucumbers, tomatoes, and a simple vinaigrette. Kept it light."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and healthy. Do you think you'll get some guitar practice in later this afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, definitely. I want to practice some acoustic stuff later once Sam finishes working on his laptop."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to wind down. Let me know if you need help finding any tabs or chords!"
+    },
+    {
+      "speaker": "user",
+      "text": "Will do, thanks! I'm going to get back to helping Sam now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user is training for the Austin half marathon."
+  ]
+}

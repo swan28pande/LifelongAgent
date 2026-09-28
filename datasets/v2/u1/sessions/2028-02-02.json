@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 704,
+  "date": "2028-02-02",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going so far? Keeping warm in Chicago today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty freezing outside, but I'm staying warm indoors. I'm actually just wearing a polo shirt today since the heating in our apartment is working a little too well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, better too warm than too cold! Are you working from home today, or did you have to head into the logistics office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. I started the morning with a decaf americano to get into the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice choice! Glad to hear you're sticking to the lower caffeine routine. Did you pair that coffee with a good lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I just finished eating a meal-prep burrito bowl that I made."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and super convenient. Is it one of your go-to vegetarian recipes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's fully vegetarian, packed with black beans, brown rice, and fajita veggies. Sam actually helped me chop all the peppers when we prepped them."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Teamwork makes the dream work! How has Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam's doing great, just really busy with some projects. We've both been trying to find time to wind down in the evenings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine. Have you been able to unwind with some guitar practice recently, or maybe some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did some rock climbing yesterday evening, which was a great workout. Tonight I think I'll just sit on the couch and play some acoustic guitar to relax."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

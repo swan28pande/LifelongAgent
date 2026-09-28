@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 576,
+  "date": "2027-09-27",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Monday starting off in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, just getting settled at my desk. I am wearing a button-down shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is always a sharp choice. Do you have any big meetings today as an account manager?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I have a check-in with one of our major shipping clients later. Before heading in, I got a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice. A decaf americano is a great morning pick-me-up. What are your plans for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going to be a busy afternoon, but I'm planning to eat ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen is delicious. Since you're vegetarian, is it easy to find good veggie ramen options near the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! There's a noodle shop nearby that has a fantastic vegetarian broth, so I go there quite a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's perfect. Do you have any plans to unwind tonight, maybe some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just play some guitar tonight. Sam is having some friends over, so I'll probably just hang out in my room."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing guitar sounds like a relaxing way to spend the evening. How has your running been going lately? Have you done any big runs since the Austin half marathon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not really, I've just been doing casual runs around the neighborhood. Nothing intense like the training for the half marathon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Casual runs are a great way to stay active without all the pressure of training. I hope your client meeting goes well today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

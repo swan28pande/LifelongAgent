@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 329,
+  "date": "2027-01-23",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your weekend starting off in Austin? Are you and Sam up to anything fun today, or maybe hitting the climbing gym?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Just a quiet morning so far. I'm actually dressed up a bit in a button-down shirt because I have a quick Zoom call with a prospective client for the logistics firm later. Just finished my morning coffee—had a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a decaf americano sounds like a great choice, especially keeping that doctor's advice in mind! A Zoom call on a Saturday, though? Is it normal for an account manager to have weekend client calls, or is this a special case?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty rare, but this client is in a completely different timezone and this was the only time that worked for both of us. It shouldn't take more than half an hour, luckily."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it. Hopefully it goes smoothly and quickly so you can enjoy the rest of your Saturday! Do you have any plans for lunch after you wrap up the call?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm keeping it simple today. I made a homemade salad earlier, so I'll just grab that from the fridge once the call is done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a homemade salad is perfect for a quick, healthy lunch. Are you putting anything specific in it today? Did you manage to sneak some good vegetarian toppings in there?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I put in some cucumbers, cherry tomatoes, feta, and chickpeas for some protein. It's really refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and filling! Is Sam around today, or are you having the place to yourself for the afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam actually went out to visit some family for the day, so I've got the apartment to myself. It's nice and quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like the perfect opportunity to practice some guitar without worrying about distracting anyone! Have you been working on any new songs lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I've been trying to learn a new acoustic fingerpicking song. I'll probably spend an hour or two on that this afternoon once my call is finished and I've eaten. It should be a nice, relaxing way to spend the rest of the day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

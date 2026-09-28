@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 451,
+  "date": "2027-05-25",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Tuesday. How is your day starting off in Austin? How are things going with your roommate, Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good. Sam and I actually had a quiet morning. I'm just sitting at my desk now with a decaf americano, getting ready for the workday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a decaf americano! I remember your doctor suggested cutting back on caffeine at your last check-up, so that sounds like a great choice. Are you working from home today, or heading into the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. I have a few client video calls later, so I put on a polo shirt to look a bit presentable, even if I'm just in my living room."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is perfect for Zoom calls—professional but comfortable. Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I actually just finished eating a homemade salad. It was really fresh and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds delicious and perfect for keeping things vegetarian. Did you make enough to share with Sam, or is he on his own for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, Sam is definitely on his own today; he had some leftover takeout. We usually do our own thing for lunch since our work schedules are so different."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. Do you two have any plans to head to the climbing gym later, or are you taking a break from rock climbing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing today, my muscles are still a bit tired. I think I'm just going to unwind by playing my guitar for a bit after I finish up with my last client call."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing the guitar sounds like a wonderful way to relax after a busy day of account management. I hope the rest of your client calls go smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

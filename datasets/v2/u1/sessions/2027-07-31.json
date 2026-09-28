@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 518,
+  "date": "2027-07-31",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Saturday in Chicago going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just relaxing at home. I actually just got dressed in a button-down shirt and I'm trying to plan out the rest of my day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt on a Saturday, nice! Have you had your morning coffee yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have. I drank a matcha latte earlier today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte sounds like a great start to the day. Are you planning to head out for lunch, or do you have something at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm staying in for lunch. I'm going to eat a meal-prep burrito bowl."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A meal-prep burrito bowl is always a solid, easy lunch. Since it's the weekend, have you had any time for your hobbies? Have you been climbing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually went rock climbing on Thursday. It was a good session."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome. How is your roommate, Sam, doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! He's actually busy working on some projects today, so it's pretty quiet around here."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds peaceful. Have you had a chance to pick up your guitar recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit yesterday evening, just practicing some basic chords. It's been a nice way to unwind after work at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a great way to decompress. I hope you have a wonderfully relaxing weekend, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

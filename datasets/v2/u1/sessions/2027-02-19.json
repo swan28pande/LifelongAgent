@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 356,
+  "date": "2027-02-19",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Leo! How is your morning going in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I'm just waking up and having a decaf americano before I start work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Great choice. It's good to see you keeping up with the doctor's advice about cutting back on caffeine. What's the plan for the day? Are you dressing up at all?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit. I have some client video calls today for my account manager role, so I'm wearing a button-down shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds professional. Are you planning to go out for lunch today, or do you have something prepared?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made a homemade salad this morning, so I'll be eating that at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is always a great choice, especially keeping with your vegetarian diet. Have you found any new vegetarian recipes you like lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been experimenting with some roasted chickpea bowls, which have been really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, roasted chickpeas are delicious. Austin has so many great spots for vegetarian ingredients too. Are you planning on doing any rock climbing or playing guitar this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar tonight. My roommate Sam and I went climbing on Tuesday, so my arms could use a break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense! Guitar is a nice way to relax after a busy week. I hope the client calls go smoothly today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Have a great weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

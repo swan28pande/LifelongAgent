@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 271,
+  "date": "2026-11-26",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Thursday. How is your morning going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. Just relaxing at home in a comfortable fitted t-shirt, enjoying a quiet start to the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy morning. Have you had your morning coffee yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm sipping on a decaf americano right now. I'm still keeping my caffeine low like my doctor recommended at my check-up, and it actually tastes really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you're sticking to it, and finding a decaf option you enjoy makes a big difference. How's everything else? Have you had any time for rock climbing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit! Sam and I went to the climbing gym a couple of days ago. It was a tough session, so my arms are still recovering."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the post-climbing forearm soreness is real! Maybe some guitar practice today instead, to give those arms a different kind of workout?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, I'm planning to play some acoustic guitar later. Right now though, I'm about to eat a homemade salad for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds nice and refreshing. What did you put in it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some spinach, cucumbers, pumpkin seeds, and a light dressing. Staying vegetarian and keeping it simple today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and healthy. I also wanted to ask, how was your sister Ana's wedding in San Antonio? I know that was coming up this month."
+    },
+    {
+      "speaker": "user",
+      "text": "It was amazing! Everything went perfectly, and it was so great to celebrate with everyone. It's nice to be back home, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear it was a wonderful wedding! Are things busy for you today as an account coordinator at the logistics firm, or is it a bit slower?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually a pretty slow day, luckily. I'm just wrapping up some emails and then I'll be done for the afternoon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: clothing should be 'fitted t-shirt', conversation gives 'other'"
+  ]
+}

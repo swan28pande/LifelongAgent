@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 3,
+  "date": "2026-03-03",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going down in Austin, Texas?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just got settled at my desk. I started my day with a great oat milk latte, and since it's warm today, I'm just wearing a simple fitted t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte sounds like the perfect start, and a fitted t-shirt is great for that warm Austin weather! How is everything at the logistics firm today? Keeping busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely keeping busy! Things are always moving fast here. I actually just finished eating my lunch, which was a quick homemade salad I prepped last night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A homemade salad is a great healthy lunch to power you through the rest of your shift. How are things going with your roommate, Sam? Have you two been up to much?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We've just been keeping up with our usual routines, nothing too crazy. We did cook some dinner together the other night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds nice. It's always great to catch up over a meal. Have you had any time to get out for some rock climbing lately, or has work been taking up most of your energy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to go climbing over the weekend! It felt good to stretch and get some exercise. My arms are still a little sore, but it was worth it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I bet! Climbing is such a great workout. Glad you got to go. How's the weather in Austin today? Is it nice enough to hang out outside later?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's really beautiful today. Sunny and warm. I might sit out on the balcony for a bit after work just to soak up some of the sun."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to unwind. Are you planning on practicing any guitar this evening too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've been trying to practice a new song, so I'll probably spend a little time on that tonight. It's a nice way to end the day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

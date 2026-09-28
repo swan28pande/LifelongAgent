@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 591,
+  "date": "2027-10-12",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Leo! How is your Tuesday going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just got settled at my desk. I started my day with a decaf americano while checking my morning emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a smooth start to the workday. How are things at the logistics firm today? Busy as usual?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, account managing is always a bit hectic, but I'm getting through it. I'm wearing a comfortable polo shirt today since it's a bit of a casual vibe in the office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is perfect for a casual but professional office day. Are you getting a break for lunch soon, or are you eating at your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just got back from a quick lunch break. I went out and had some ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is great, especially when you need a warm, comforting break. Did you manage to find a good vegetarian ramen option nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, there's a place just a block from the office that makes an amazing vegetarian ramen with a rich mushroom broth. I go there quite a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Mushroom broth makes such a difference. How is everything else going? Have you done any rock climbing lately, or played much guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I played some guitar yesterday evening, actually. Sam was out, so I had the place to myself to practice some new chords without bothering anyone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to have a quiet house for some uninterrupted practice. How is Sam doing these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, just busy with work. Anyway, I should probably get back to these logistics spreadsheets. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds good, Leo. Good luck with the spreadsheets and have a great rest of your day!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}
