@@ -60,3 +60,8 @@ One line per decision where the spec was ambiguous. Phase in brackets.
 - [3] The validator picks each topic's value from a closed option list (all values the persona can have), and the comparison with ground truth is exact, in code.
 - [3] "Inventions" are lasting facts only (new people, pets, jobs, history such as "vegetarian for three years"). Everyday details (working from home today, plans for tonight) are allowed; flagging them made retries push conversations towards bland, form-like dialogue.
 - [3] Up to 5 attempts per session; the attempt with the fewest failures is kept and flagged if it still fails. `first_try_failures` is kept for the fidelity report.
+
+## Curated questions
+
+- [3] Each user ships 50 curated questions (`qa_pairs.json`); the full generated pool (~390) is kept as `qa_pool.json`. Curation gives every type the user has at least one question, weights harder types (attribution, change detection, patterns) up, and within a type spreads the picks over answer types, answers, topics and tags, so yes/no and abstention stay balanced.
+- [3] Questions name a routine by the items it involves ("the fitted t-shirt / oversized hoodie routine"), never by its rule, so a change or duration question cannot give away a pattern question's answer.

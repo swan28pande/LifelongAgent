@@ -109,3 +109,34 @@ def test_viewpoint_and_recency(u5, q5):
 def test_u1_has_no_types_its_ladder_excludes(q1):
     types = {q.type for q in q1}
     assert not types & {"exception_vs_shift", "reversion", "distractor_probe", "other_person"}
+
+
+@pytest.fixture(scope="module")
+def c1(u1, q1):
+    return qa.curate(q1, 50, u1.seed)
+
+
+@pytest.fixture(scope="module")
+def c5(u5, q5):
+    return qa.curate(q5, 50, u5.seed)
+
+
+def test_curated_set_is_50_deterministic_and_from_the_pool(u5, q5, c5, c1):
+    assert len(c1) == 50 and len(c5) == 50
+    assert [q.id for q in qa.curate(q5, 50, u5.seed)] == [q.id for q in c5]
+    assert {q.id for q in c5} <= {q.id for q in q5}
+
+
+def test_curated_set_covers_every_type_the_user_has(q1, c1, q5, c5):
+    for pool, cur in ((q1, c1), (q5, c5)):
+        assert {q.type for q in cur} == {q.type for q in pool}
+        assert qa.guard_errors(cur) == []
+
+
+def test_curated_yes_no_and_abstention_are_balanced(c5):
+    for qtype in ("exception_vs_shift", "distractor_probe", "reversion", "other_person"):
+        keys = Counter(q.accept[0] for q in c5 if q.type == qtype and q.answer_type == "yes_no")
+        if sum(keys.values()) >= 2:
+            assert keys["yes"] and keys["no"], (qtype, keys)
+    abst = Counter(q.answer_type for q in c5 if q.type == "abstention")
+    assert abst["abstain"] and len(abst) > 1

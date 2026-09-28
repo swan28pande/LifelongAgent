@@ -123,8 +123,9 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
         m = checks.measure_knobs(spec, world)
         rows = checks.compare_knobs(spec, m)
         errors += checks.knob_errors(rows)
-    items = qa.build_qa(spec, world) if world else []
-    errors += qa.guard_errors(items)
+    pool = qa.build_qa(spec, world) if world else []
+    items = qa.curate(pool, config.QA_CURATED, spec.seed)
+    errors += qa.guard_errors(pool) + qa.guard_errors(items)
     if rows:
         say("\nDifficulty knobs (measured vs ladder):\n" + knobs_table(rows))
     if world:
@@ -141,6 +142,7 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
     if write_world:
         write_json(out / "world_state.json", world.model_dump(mode="json"))
     write_json(out / "qa_pairs.json", [q.model_dump() for q in items])
+    write_json(out / "qa_pool.json", [q.model_dump() for q in pool])
     session_days = [d for d in world.days if d.has_session]
     write_json(out / "stats.json", {
         "user_id": spec.user_id,
@@ -151,6 +153,7 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
                                         if p.mention_reason)),
         "retrospective_statements": sum(s.retrospective for s in world.statements),
         "qa": qa.qa_stats(items),
+        "qa_pool": {"total": len(pool), "by_type": dict(Counter(q.type for q in pool))},
     })
     say(f"\n✓ all checks passed - wrote {out.relative_to(config.REPO_DIR)}/")
     (out / "simulate_report.txt").write_text("\n".join(report) + "\n")

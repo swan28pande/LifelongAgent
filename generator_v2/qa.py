@@ -113,6 +113,18 @@ class QABuilder:
         i = regs.index(reg)
         return regs[i - 1] if i > 0 else None
 
+    def items(self, reg: ResolvedRegime) -> str:
+        """Names a routine by what it involves, never by its rule, so questions don't leak patterns."""
+        vals = sorted(rules.values_of(reg.rule))
+        if len(vals) == 1:
+            return vals[0]
+        shown = " / ".join(vals) if len(vals) <= 5 else " / ".join(vals[:4]) + " etc."
+        return f"the {shown} routine"
+
+    def change_number(self, reg: ResolvedRegime) -> str:
+        n = [r.id for r in self.regimes(reg.domain)].index(reg.id)
+        return {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"}.get(n, f"{n}th")
+
     def describe(self, reg: ResolvedRegime) -> str:
         return rules.describe(reg.rule, self.date(reg.anchor))
 
@@ -250,7 +262,9 @@ class QABuilder:
             accept = [self.date(d).isoformat() for d in range(reg.start, first + 1)]
             tags = [reg.kind, reg.visibility] + (["bounded"] if first > reg.start else [])
             self.add(Draft("change_detection", reg.domain,
-                           f"When did {self.name}'s {noun} routine change from {prev.label} to {reg.label}?",
+                           (f"When did {self.name}'s {noun} routine change from {self.items(prev)} to {self.items(reg)}?"
+                            if self.items(prev) != self.items(reg) else
+                            f"When did {self.name}'s {noun} routine change for the {self.change_number(reg)} time?"),
                            f"{self.date(reg.start).isoformat()}"
                            + (f" (first observed {self.date(first).isoformat()})" if first > reg.start else ""),
                            "date", accept, sorted({prev.mention_days[-1], first}), "date_exact", tags))
@@ -258,7 +272,7 @@ class QABuilder:
             if reg.kind == "reversion":
                 if reg.revert_reason:
                     self.add(Draft("attribution", reg.domain,
-                                   f"Why did {self.name}'s {noun} go back to {reg.label} around {self.date(reg.start).isoformat()}?",
+                                   f"Why did {self.name}'s {noun} go back to {self.items(reg)} around {self.date(reg.start).isoformat()}?",
                                    reg.revert_reason, "free_text", [reg.revert_reason], [first], "llm_judge",
                                    ["reversion", "explicit"]))
                 continue
@@ -315,17 +329,17 @@ class QABuilder:
             back = next(r for r in self.regimes(reg.domain) if r.start == reg.end + 1)
             current = self.regime_at(reg.domain, self.N)
             self.add(Draft("reversion", reg.domain,
-                           f"Is {self.name} still on {reg.label} for their {noun}?",
+                           f"Is {self.name}'s {noun} still {self.items(reg)}?",
                            f"No - that lasted from {self.date(reg.start).isoformat()} to "
                            f"{self.date(reg.end).isoformat()}; then {self.name} went back to {back.label}.",
                            "yes_no", ["no"], sorted({reg.mention_days[-1], back.first_mention_day or back.start}),
                            "llm_judge", ["temporary"]))
             self.add(Draft("reversion", reg.domain,
-                           f"What did {self.name}'s {noun} go back to after the period of {reg.label}?",
+                           f"What did {self.name}'s {noun} go back to after the period of {self.items(reg)}?",
                            f"{back.label} - {self.describe(back)}", "free_text", [back.label],
                            back.mention_days[:3], "llm_judge", ["temporary"]))
             self.add(Draft("reversion", reg.domain,
-                           f"Is {self.name} still on {current.label} for their {noun}?",
+                           f"Is {self.name}'s {noun} still {self.items(current)}?",
                            f"Yes - since {self.date(current.start).isoformat()}.", "yes_no", ["yes"],
                            current.mention_days[-3:], "llm_judge", ["control"]))
 
@@ -432,10 +446,10 @@ class QABuilder:
             noun = self.noun[reg.domain]
             n = reg.end - reg.start + 1
             if reg.end < self.N:
-                q = f"How long did {self.name} keep {reg.label} as their {noun} routine?"
+                q = f"How long did {self.name}'s {noun} stay {self.items(reg)}?"
                 a = f"{n} days ({self.date(reg.start).isoformat()} to {self.date(reg.end).isoformat()})"
             else:
-                q = f"As of {self.date(self.N).isoformat()}, how long had {self.name} had {reg.label} as their {noun} routine?"
+                q = f"As of {self.date(self.N).isoformat()}, how long had {self.name}'s {noun} been {self.items(reg)}?"
                 a = f"{n} days (since {self.date(reg.start).isoformat()})"
             cands.append(Draft("duration", reg.domain, q, a, "free_text", [str(n)],
                                sorted({reg.first_mention_day or reg.start, reg.mention_days[-1]}),
@@ -558,6 +572,41 @@ class QABuilder:
 
 def build_qa(spec: PersonaSpec, world: WorldState) -> list[QAItem]:
     return QABuilder(spec, world).build()
+
+
+# ── Curation ────────────────────────────────────────────────────────
+
+def _pick_diverse(pool: list[QAItem], k: int, rng: random.Random) -> list[QAItem]:
+    """Greedy pick that spreads the choice over answer types, answers, domains and tags."""
+    pool = list(pool)
+    rng.shuffle(pool)
+    chosen: list[QAItem] = []
+    seen = {name: Counter() for name in ("atype", "answer", "domain", "tags")}
+    keys = lambda q: {"atype": q.answer_type, "answer": q.accept[0].lower() if q.accept else q.answer,
+                      "domain": q.domain, "tags": tuple(sorted(q.tags))}
+    while pool and len(chosen) < k:
+        best = min(pool, key=lambda q: tuple(seen[n][v] for n, v in keys(q).items()))
+        pool.remove(best)
+        chosen.append(best)
+        for n, v in keys(best).items():
+            seen[n][v] += 1
+    return chosen
+
+
+def curate(items: list[QAItem], n: int, seed: int) -> list[QAItem]:
+    """A small, balanced subset: every type the user has, weighted towards the harder ones."""
+    rng = random.Random(f"{seed}:curate")
+    by_type: dict[str, list[QAItem]] = defaultdict(list)
+    for q in items:
+        by_type[q.type].append(q)
+    present = [t for t in TYPE_ORDER if by_type[t]]
+    quota = {t: 0 for t in present}
+    for _ in range(min(n, len(items))):
+        open_ = [t for t in present if quota[t] < len(by_type[t])]
+        t = max(open_, key=lambda t: (config.CURATED_WEIGHTS.get(t, 1) / (quota[t] + 1), -TYPE_ORDER.index(t)))
+        quota[t] += 1
+    picked = {q.id for t in present for q in _pick_diverse(by_type[t], quota[t], rng)}
+    return [q for q in items if q.id in picked]
 
 
 # ── Answer-distribution guard ───────────────────────────────────────

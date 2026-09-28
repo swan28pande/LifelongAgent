@@ -31,7 +31,15 @@ EXCEPTION_RATE_TOLERANCE = 0.02
 VISIBILITY_MIX_TOLERANCE = 0.10
 
 # ── QA ──────────────────────────────────────────────────────────────
-QA_TOTAL_TARGET = 390            # recall and prediction fill up to this total
+QA_TOTAL_TARGET = 390            # size of the generated pool (qa_pool.json)
+QA_CURATED = 50                  # questions shipped per user (qa_pairs.json)
+# Relative share of each type in the curated set; types a user lacks give up their share.
+CURATED_WEIGHTS = {
+    "recall": 7, "prediction": 4, "pattern_current": 3, "pattern_at_time": 3,
+    "change_detection": 4, "attribution": 5, "exception_vs_shift": 3, "reversion": 2,
+    "fact_current": 2, "fact_at_time": 4, "fact_history": 2, "event_status": 2,
+    "duration": 2, "distractor_probe": 2, "other_person": 2, "abstention": 3,
+}
 FILLER_SPLIT = {"recall": 2, "prediction": 1}
 QA_MIN_FILLER = {"recall": 60, "prediction": 30}
 QA_MAX_FILLER = {"recall": 220, "prediction": 110}
