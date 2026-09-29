@@ -49,7 +49,7 @@ from typing import Dict, List
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
-from memory_v2.store import MemoryStore
+from .store import MemoryStore
 
 from .prompts import EXTRACT_SYSTEM
 

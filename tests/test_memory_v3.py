@@ -31,7 +31,7 @@ import warnings
 # the process. Must be set before faiss is imported.
 os.environ.setdefault("KMP_DUPLICATE_LIB_OK", "TRUE")
 
-# memory_v2's store leaves its sqlite connections to be garbage-collected, which is
+# The store leaves its sqlite connections to be garbage-collected, which is
 # harmless but drowns the test output.
 warnings.filterwarnings("ignore", category=ResourceWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -42,13 +42,13 @@ from langchain_core.embeddings import DeterministicFakeEmbedding
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.runnables import Runnable
 
-import memory_v2.store as store_mod
+import memory_v3.store as store_mod
 
 # Must be patched before any MemoryStore is constructed.
 store_mod.HuggingFaceEmbeddings = lambda **kwargs: DeterministicFakeEmbedding(size=64)
 store_mod.PrefixedEmbeddings = lambda **kwargs: DeterministicFakeEmbedding(size=64)
 
-from memory_v2.store import MemoryStore                      # noqa: E402
+from memory_v3.store import MemoryStore                      # noqa: E402
 from memory_v3.agent import AgenticMemoryAgent               # noqa: E402
 from memory_v3.ingest import IngestionPipeline               # noqa: E402
 from memory_v3.tools import build_read_tools                 # noqa: E402

@@ -31,7 +31,7 @@ from benchmarks.locomo.common import (ANSWER_SYSTEM, RESULTS_ROOT, append_trace,
                                       load_dataset, make_record, print_report,
                                       save_results, select_questions, summarize,
                                       text_of)
-from memory_v2.store import MemoryStore
+from memory_v3.store import MemoryStore
 from memory_v3.agent import _make_llm
 
 MAX_PREFERENCE_ROWS = 500

@@ -28,7 +28,7 @@ def answer_from_context(llm, q: Question, context: str, meta: dict | None = None
 @lru_cache(maxsize=1)
 def embeddings():
     """One copy of the shared embedding model per process."""
-    from memory_v2.store import PrefixedEmbeddings
+    from memory_v3.store import PrefixedEmbeddings
     return PrefixedEmbeddings(model_name=config.EMBED_MODEL, model_kwargs={"trust_remote_code": True})
 
 

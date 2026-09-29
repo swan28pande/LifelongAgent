@@ -37,8 +37,8 @@ from langchain.agents import create_agent
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_openai import ChatOpenAI
 
-from memory_v2.store import MemoryStore
-from memory_v2.summarizer import Summarizer
+from .store import MemoryStore
+from .summarizer import Summarizer
 
 from .ingest import IngestionPipeline, IngestReport
 from .prompts import CHAT_SYSTEM

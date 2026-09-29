@@ -17,7 +17,7 @@ from typing import List, Optional
 
 from langchain_core.tools import tool
 
-from memory_v2.store import MemoryStore
+from .store import MemoryStore
 
 MAX_ROWS = 200
 
