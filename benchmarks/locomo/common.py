@@ -19,7 +19,7 @@ import numpy as np
 from nltk.stem import PorterStemmer
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-LOCOMO_PATH = os.path.join(PROJECT_ROOT, "baselines", "locomo", "data", "locomo10.json")
+LOCOMO_PATH = os.path.join(PROJECT_ROOT, "experiments", "data", "locomo10.json")
 RESULTS_ROOT = os.path.join(PROJECT_ROOT, "results", "locomo")
 
 CATEGORY_NAMES = {1: "multi-hop", 2: "temporal", 3: "commonsense",

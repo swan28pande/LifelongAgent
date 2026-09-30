@@ -1,7 +1,7 @@
 # Datasets
 
 The synthetic preference-evolution dataset used by `benchmarks/synthetic/`. LoCoMo is
-not here; it lives with its source repo in `baselines/locomo/data/locomo10.json`.
+not here; it lives in `experiments/data/locomo10.json`.
 
 | Folder | What it is |
 |---|---|

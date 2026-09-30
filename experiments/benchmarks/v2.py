@@ -1,14 +1,14 @@
-"""The generator_v2 synthetic users (datasets/v2/<user>/): one instance per user, 50 curated questions."""
+"""The generator_v2 synthetic users (experiments/data/synthetic_v2/<user>/): one instance per user, 50 curated questions."""
 
 import datetime as dt
 import json
 
-from ..config import ROOT
+from ..config import DATA_DIR
 from ..core.types import Instance, Question, Session, Turn
 
 
 def load(users: list[str] | None = None) -> list[Instance]:
-    base = ROOT / "datasets" / "v2"
+    base = DATA_DIR / "synthetic_v2"
     users = users or sorted(p.name for p in base.iterdir() if (p / "conversations.json").exists())
     out = []
     for user in users:

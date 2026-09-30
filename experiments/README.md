@@ -40,9 +40,9 @@ methods registered the same way.
 
 | Benchmark | Loader | Instances | Questions | Notes |
 |---|---|---|---|---|
-| `v2` (ours) | `benchmarks/v2.py` | one per user (u1–u5) | 50 curated per user | headline results; needs `generator_v2 generate` first |
+| `v2` (ours) | `benchmarks/v2.py` | one per user (u1–u5) | 50 curated per user | headline results; data in `data/synthetic_v2/` |
 | `locomo` | `benchmarks/locomo.py` | 10 conversations | 1,540 (categories 1–4) | category 5 excluded; reports judge accuracy and paper F1 |
-| `longmemeval` | `benchmarks/longmemeval.py` | one per question | 500, or `--sample N` stratified | cleaned LongMemEval-S; auto-downloads to `data/` |
+| `longmemeval` | `benchmarks/longmemeval.py` | one per question | 500, or `--sample N` stratified | cleaned LongMemEval-S; in `data/` |
 
 ## Protocol (held equal across methods)
 
@@ -69,7 +69,7 @@ experiments/
   core/                types, method interface, runner, grading
   benchmarks/          loaders → Instance(sessions, questions)
   methods/             one file per method, registered in methods/__init__.py
-  data/                downloaded benchmark files (not in git)
+  data/                benchmark datasets (locomo, longmemeval, synthetic_v2)
 results/experiments/<benchmark>/<method>/<run>/
   stores/  ingest.jsonl  answers.jsonl  grades.jsonl  usage.json  summary.json
 ```

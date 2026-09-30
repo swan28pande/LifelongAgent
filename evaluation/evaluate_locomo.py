@@ -1,7 +1,7 @@
 """
 Evaluate memory_v2 on LoComo and compare against baselines.
 
-Dataset: baselines/locomo/data/locomo10.json
+Dataset: experiments/data/locomo10.json
   - 10 conversations, up to 35 sessions each, real timestamps
   - 1,986 pre-annotated QA pairs (single-hop, multi-hop, temporal, commonsense, adversarial)
 
@@ -48,7 +48,7 @@ for line in open(os.path.join(os.path.dirname(__file__), ".env")):
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 ps = PorterStemmer()
 
-LOCOMO_PATH = "baselines/locomo/data/locomo10.json"
+LOCOMO_PATH = "experiments/data/locomo10.json"
 RSUM_PROMPTS = "baselines/Rsum/prompt.json"
 
 CATEGORY_NAMES = {1: "multi-hop", 2: "temporal", 3: "commonsense", 4: "single-hop", 5: "adversarial"}

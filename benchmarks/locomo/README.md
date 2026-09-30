@@ -2,7 +2,7 @@
 
 [LoCoMo](https://arxiv.org/abs/2402.17753) (Maharana et al., 2024): 10 long conversations
 between two people, ~19 sessions each over several months, with ~200 questions per
-conversation. Data: `baselines/locomo/data/locomo10.json`.
+conversation. Data: `experiments/data/locomo10.json`.
 
 Question categories: 1 multi-hop, 2 temporal, 3 commonsense, 4 single-hop, 5
 adversarial (the correct answer is to decline, because the question has a false premise).

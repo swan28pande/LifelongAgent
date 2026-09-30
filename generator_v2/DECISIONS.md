@@ -9,7 +9,7 @@ One line per decision where the spec was ambiguous. Phase in brackets.
 - [1] The 60% guard is kept strict. `exception_vs_shift`, `distractor_probe`, `reversion`, `other_person` and `abstention` all include positive or answerable controls, so "no" / "not known" is never the constant answer.
 - [1] Exceptions are placed by the simulator from a per-domain `exception_pool` (explicit `exceptions:` are still honoured). Rate = exceptions / (session days × domains).
 - [1] `do_not_mention` means "the user changes behaviour and gives no reason; do not invent one". There is no hidden-cause visibility.
-- [1] Outputs in `datasets/v2/` are not committed (about 2 MB per user); regenerate them with `simulate`.
+- [1] Outputs land in `experiments/data/synthetic_v2/`; regenerate them with `simulate`.
 
 ## Spec and schema
 
