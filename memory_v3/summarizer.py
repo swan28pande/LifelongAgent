@@ -26,6 +26,10 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 
 from .store import MemoryStore
+from .prompts import (
+    DOMAIN_DISCOVERY_SYSTEM, LIFETIME_SYSTEM, MONTHLY_FACTS_SYSTEM, MONTHLY_PATTERN_SYSTEM,
+    WEEKLY_FACTS_SYSTEM, WEEKLY_PATTERN_SYSTEM, YEARLY_CONFIRMATION_SYSTEM, YEARLY_FACTS_SYSTEM,
+)
 
 
 def _iso_week(date_str: str) -> str:
@@ -87,105 +91,6 @@ def _fmt_change_seq(pairs: List[Tuple[str, str]]) -> str:
             result.append(f"{curr['val']}({fmt_date}) [current]")
             
     return " → ".join(result)
-
-
-DOMAIN_DISCOVERY_SYSTEM = """\
-You are a memory analyst. Given a list of all preference memories (entity + value pairs),
-identify which entities represent genuine RECURRING entities —
-things the person chooses regularly from a consistent category over time.
-
-A recurring entity has multiple observations across different dates with a repeating
-pattern of values.
-
-Exclude entities that are:
-- Too granular (a specific detail of a larger entity)
-- One-off or rarely mentioned (fewer than 3 observations)
-- Not a stable choice category
-
-Return ONLY a JSON object: {{"domains": ["entity1", "entity2", ...]}}
-List only the canonical recurring entities.
-"""
-
-WEEKLY_PATTERN_SYSTEM = """\
-You are a mathematical pattern analyst. Analyze the preference transition sequence for a SINGLE entity for {speaker} during one week.
-
-1. LOG: List exactly what changed and when. 
-   Format: [Date] Value (Duration: X days)
-2. SPECULATE: Does this sequence suggest a potential N-day cycle or a calendar-based rhythm (e.g. Mon-Fri)? 
-3. PRECISION: Avoid vague terms like "usually" or "tends to". Use specific durations.
-
-Return JSON:
-{{
-  "mathematical_sequence": "The exact date-to-date sequence of values and durations",
-  "potential_cycle": "Speculate on a possible periodicity (e.g. 'Alternates every 3 days')",
-  "reasoning": "Show your calculation of the days between switches."
-}}
-"""
-
-WEEKLY_FACTS_SYSTEM = """\
-You are a narrative writer. Given structured facts and events for a week for {speaker},
-write a short narrative paragraph summarizing the week's key happenings and any new
-information learned about the person.
-
-Return JSON:
-{{
-  "narrative": "A short paragraph summarizing the week's events and facts."
-}}
-"""
-
-MONTHLY_PATTERN_SYSTEM = """\
-You are a mathematical pattern analyst. Analyze the observations for a SINGLE preference entity for {speaker} across several weeks.
-
-Goal: Identify the exact repeating structure for this entity — it may be a fixed N-day alternation, a day-of-week rule, or another repeating structure.
-
-1. CONSOLIDATE: Merge the weekly transition logs into one continuous timeline.
-2. CALCULATE: Find the exact number of days the user held each preference value.
-3. GROUPING: Group similar values or sub-categories into their primary underlying states (e.g., grouping 'blue pens', 'black pens', and 'red pens' under a single 'pen' state, and comparing that to 'pencil') before calculating cycle lengths.
-4. DETECT PATTERN: Look for ANY repeating structure:
-   - Fixed N-day alternation (e.g. 3 days of State A then 3 days of State B, totaling a 6-day cycle)
-   - Day-of-week rule (e.g. always Tue/Thu for State A)
-   - Or any other observable regularity.
-5. PRECISION: State the exact START DATE. List values explicitly. Do NOT use vague terms like "usually" or "tends to".
-
-Return JSON:
-{{
-  "consolidated_timeline": "The full date-to-date sequence for the month, listing each value with its exact date range",
-  "identified_pattern": "The definitive repeating rule with start date (e.g. 'Alternates every 7 days: [Value A] from YYYY-MM-DD to YYYY-MM-DD, then [Value B]...')",
-  "frequency": "Exact description (e.g. 'Every 3 days', 'Mon/Wed/Fri', 'Every 7 days')",
-  "reasoning": "Show the calculation behind your pattern detection."
-}}
-"""
-
-MONTHLY_FACTS_SYSTEM = """\
-You are a facts consolidator. Given structured facts and events for {speaker} for a
-month, produce a clean merged list. Deduplicate facts that say the same thing, keep
-the most recent version when a fact changed, and list events chronologically.
-
-Return JSON:
-{{
-  "facts": ["list of consolidated factual statements"],
-  "events": ["list of key events, each with its date"]
-}}
-"""
-
-YEARLY_CONFIRMATION_SYSTEM = """\
-You are a senior senior pattern analyst. Confirm the definitive mathematical rhythm for a SINGLE entity for {speaker} using monthly summaries.
-
-1. COMPARE: Check if the N-day cycle or calendar rhythm is consistent across all months. Group sub-categories/synonyms into their primary underlying states (e.g. grouping 'blue pens' and 'red pens' under a single 'pen' state vs 'pencil') before checking consistency.
-2. VALIDATE: If a month reported a "smoothed" general pattern, look back at the consolidated timelines to re-verify the exact periodicity.
-3. RULE: Define the definitive rule. 
-   Example: "Fixed 7-day alternation: [State A] for 7 days, then [State B] for 7 days, repeating."
-   Example: "Fixed 3-day alternation: [State A] for 3 days, then [State B] for 3 days, repeating."
-
-Return JSON:
-{{
-  "confirmed_rule": "The exact mathematical rhythm (including start date)",
-  "frequency": "The verified periodicity",
-  "confidence": "CONFIRMED / LIKELY / EMERGING",
-  "reasoning": "Show the calculation that proves this pattern is stable across the year."
-}}
-"""
-
 
 
 class Summarizer:
@@ -541,15 +446,7 @@ class Summarizer:
         ) if events else "(no events this year)"
 
         facts_prompt = ChatPromptTemplate.from_messages([
-            ("system",
-             "Consolidate all facts and events for {speaker} for the year.\n"
-             "For facts: deduplicate, keep the most recent version when something changed.\n"
-             "For events: list chronologically.\n\n"
-             "Return ONLY a JSON object:\n"
-             "{{\n"
-             "  \"facts\": [\"fact 1\", \"fact 2\", ...],\n"
-             "  \"events\": [\"[date] event description\", ...]\n"
-             "}}"),
+            ("system", YEARLY_FACTS_SYSTEM),
             ("human",
              f"Year: {year}\n\n"
              f"FACTS:\n{_esc(facts_block)}\n\n"
@@ -602,27 +499,13 @@ class Summarizer:
         )
 
         prompt = ChatPromptTemplate.from_messages([
-            ("system",
-             f"You are building the definitive lifetime blueprint for {speaker}. "
-             "This document is injected at the start of every future conversation "
-             "as the ground truth about this person.\n\n"
-             "Using all yearly summaries, produce a complete, structured profile:\n\n"
-             "1. USER FACTS — Everything stable and confirmed about this person:\n"
-             "   identity, age, location, job, relationships, lifestyle, diet, "
-             "hobbies, and personality traits.\n\n"
-             "2. PREFERENCE PATTERNS — For each domain, describe the exact repeating structure observed.\n"
-             "   It may be a fixed N-day alternation, a day-of-week pattern, or another form of repetition.\n"
-             "   Include the start date and the exact rule. State values explicitly. Avoid vague phrases like 'usually' or 'tends to'.\n\n"
-             "3. KEY EVENTS — Chronological milestones, decisions, and one-time occurrences\n"
-             "   (promotions, trips, arrivals, deadlines met, etc.) with their dates.\n\n"
-             "4. LIFE NARRATIVE — A brief chronological narrative tying it all together.\n\n"
-             "Return ONLY a JSON object: {{\"title\": \"Full Lifetime Profile\", \"summary\": \"the full structured text profile\"}}"),
+            ("system", LIFETIME_SYSTEM),
             ("human",
              f"Speaker: {speaker} | Full date range: {start} to {end}\n\n"
              f"YEARLY SUMMARIES:\n{_esc(yearly_block)}")
         ])
         return self._run_and_save(prompt, identifier, f"lifetime:{speaker}",
-                                  extra_meta={"speaker": speaker})
+                                  extra_meta={"speaker": speaker}, variables={"speaker": speaker})
 
     # ── Memory formatters ────────────────────────────────────────────
 
@@ -703,11 +586,12 @@ class Summarizer:
     # ── Helpers ──────────────────────────────────────────────────────
 
     def _run_and_save(
-        self, prompt, identifier: str, label: str, extra_meta: Dict = {}
+        self, prompt, identifier: str, label: str, extra_meta: Dict = {},
+        variables: Optional[Dict] = None,
     ) -> str:
         try:
             chain   = prompt | self.llm | JsonOutputParser()
-            result  = chain.invoke({})
+            result  = chain.invoke(variables or {})
             title   = result.get("title", label)
             content = result.get("summary", "")
 

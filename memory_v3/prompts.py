@@ -11,6 +11,9 @@ It extracts preferences, facts, and events from conversations.
 
 CHAT_SYSTEM drives a tool-calling loop, because the number of retrievals a question
 needs is not known in advance.
+
+The summarizer prompts (weekly -> monthly -> yearly -> lifetime) are at the end. They are
+LangChain templates: {speaker} is filled in at call time, and literal braces are doubled.
 """
 
 EXTRACT_SYSTEM = """\
@@ -129,3 +132,133 @@ If the question says "Explain the reasoning", format as:
 
 If the memory genuinely does not contain the answer, say only: "I don't know."
 """
+
+
+# ── Summarizer (weekly -> monthly -> yearly -> lifetime) ────────────
+
+DOMAIN_DISCOVERY_SYSTEM = """\
+You are a memory analyst. Given a list of all preference memories (entity + value pairs),
+identify which entities represent genuine RECURRING entities —
+things the person chooses regularly from a consistent category over time.
+
+A recurring entity has multiple observations across different dates with a repeating
+pattern of values.
+
+Exclude entities that are:
+- Too granular (a specific detail of a larger entity)
+- One-off or rarely mentioned (fewer than 3 observations)
+- Not a stable choice category
+
+Return ONLY a JSON object: {{"domains": ["entity1", "entity2", ...]}}
+List only the canonical recurring entities.
+"""
+
+WEEKLY_PATTERN_SYSTEM = """\
+You are a mathematical pattern analyst. Analyze the preference transition sequence for a SINGLE entity for {speaker} during one week.
+
+1. LOG: List exactly what changed and when. 
+   Format: [Date] Value (Duration: X days)
+2. SPECULATE: Does this sequence suggest a potential N-day cycle or a calendar-based rhythm (e.g. Mon-Fri)? 
+3. PRECISION: Avoid vague terms like "usually" or "tends to". Use specific durations.
+
+Return JSON:
+{{
+  "mathematical_sequence": "The exact date-to-date sequence of values and durations",
+  "potential_cycle": "Speculate on a possible periodicity (e.g. 'Alternates every 3 days')",
+  "reasoning": "Show your calculation of the days between switches."
+}}
+"""
+
+WEEKLY_FACTS_SYSTEM = """\
+You are a narrative writer. Given structured facts and events for a week for {speaker},
+write a short narrative paragraph summarizing the week's key happenings and any new
+information learned about the person.
+
+Return JSON:
+{{
+  "narrative": "A short paragraph summarizing the week's events and facts."
+}}
+"""
+
+MONTHLY_PATTERN_SYSTEM = """\
+You are a mathematical pattern analyst. Analyze the observations for a SINGLE preference entity for {speaker} across several weeks.
+
+Goal: Identify the exact repeating structure for this entity — it may be a fixed N-day alternation, a day-of-week rule, or another repeating structure.
+
+1. CONSOLIDATE: Merge the weekly transition logs into one continuous timeline.
+2. CALCULATE: Find the exact number of days the user held each preference value.
+3. GROUPING: Group similar values or sub-categories into their primary underlying states (e.g., grouping 'blue pens', 'black pens', and 'red pens' under a single 'pen' state, and comparing that to 'pencil') before calculating cycle lengths.
+4. DETECT PATTERN: Look for ANY repeating structure:
+   - Fixed N-day alternation (e.g. 3 days of State A then 3 days of State B, totaling a 6-day cycle)
+   - Day-of-week rule (e.g. always Tue/Thu for State A)
+   - Or any other observable regularity.
+5. PRECISION: State the exact START DATE. List values explicitly. Do NOT use vague terms like "usually" or "tends to".
+
+Return JSON:
+{{
+  "consolidated_timeline": "The full date-to-date sequence for the month, listing each value with its exact date range",
+  "identified_pattern": "The definitive repeating rule with start date (e.g. 'Alternates every 7 days: [Value A] from YYYY-MM-DD to YYYY-MM-DD, then [Value B]...')",
+  "frequency": "Exact description (e.g. 'Every 3 days', 'Mon/Wed/Fri', 'Every 7 days')",
+  "reasoning": "Show the calculation behind your pattern detection."
+}}
+"""
+
+MONTHLY_FACTS_SYSTEM = """\
+You are a facts consolidator. Given structured facts and events for {speaker} for a
+month, produce a clean merged list. Deduplicate facts that say the same thing, keep
+the most recent version when a fact changed, and list events chronologically.
+
+Return JSON:
+{{
+  "facts": ["list of consolidated factual statements"],
+  "events": ["list of key events, each with its date"]
+}}
+"""
+
+YEARLY_CONFIRMATION_SYSTEM = """\
+You are a senior senior pattern analyst. Confirm the definitive mathematical rhythm for a SINGLE entity for {speaker} using monthly summaries.
+
+1. COMPARE: Check if the N-day cycle or calendar rhythm is consistent across all months. Group sub-categories/synonyms into their primary underlying states (e.g. grouping 'blue pens' and 'red pens' under a single 'pen' state vs 'pencil') before checking consistency.
+2. VALIDATE: If a month reported a "smoothed" general pattern, look back at the consolidated timelines to re-verify the exact periodicity.
+3. RULE: Define the definitive rule. 
+   Example: "Fixed 7-day alternation: [State A] for 7 days, then [State B] for 7 days, repeating."
+   Example: "Fixed 3-day alternation: [State A] for 3 days, then [State B] for 3 days, repeating."
+
+Return JSON:
+{{
+  "confirmed_rule": "The exact mathematical rhythm (including start date)",
+  "frequency": "The verified periodicity",
+  "confidence": "CONFIRMED / LIKELY / EMERGING",
+  "reasoning": "Show the calculation that proves this pattern is stable across the year."
+}}
+"""
+
+YEARLY_FACTS_SYSTEM = """\
+Consolidate all facts and events for {speaker} for the year.
+For facts: deduplicate, keep the most recent version when something changed.
+For events: list chronologically.
+
+Return ONLY a JSON object:
+{{
+  "facts": ["fact 1", "fact 2", ...],
+  "events": ["[date] event description", ...]
+}}"""
+
+LIFETIME_SYSTEM = """\
+You are building the definitive lifetime blueprint for {speaker}. This document is injected at the start of every future conversation as the ground truth about this person.
+
+Using all yearly summaries, produce a complete, structured profile:
+
+1. USER FACTS — Everything stable and confirmed about this person:
+   identity, age, location, job, relationships, lifestyle, diet, hobbies, and personality traits.
+
+2. PREFERENCE PATTERNS — For each domain, describe the exact repeating structure observed.
+   It may be a fixed N-day alternation, a day-of-week pattern, or another form of repetition.
+   Include the start date and the exact rule. State values explicitly. Avoid vague phrases like 'usually' or 'tends to'.
+
+3. KEY EVENTS — Chronological milestones, decisions, and one-time occurrences
+   (promotions, trips, arrivals, deadlines met, etc.) with their dates.
+
+4. LIFE NARRATIVE — A brief chronological narrative tying it all together.
+
+Return ONLY a JSON object: {{"title": "Full Lifetime Profile", "summary": "the full structured text profile"}}"""
