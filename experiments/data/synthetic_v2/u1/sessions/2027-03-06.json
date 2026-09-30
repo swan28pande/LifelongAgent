@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 371,
+  "date": "2027-03-06",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your weekend starting off in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I'm just relaxing at home. I'm having a decaf americano right now and listening to some music."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a nice, peaceful start to the day. Have you been able to spend much time playing your guitar lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played for about an hour yesterday evening. Today I'm wearing a button-down shirt, and I'll probably head out in a bit to run some errands."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a great choice. Are you planning to stay close to your neighborhood for those errands?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, just sticking nearby. I just finished eating lunch actually—I had a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a perfect midday meal. Did you add some of your favorite vegetarian ingredients to it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, I put in some chickpeas, cucumbers, and a simple vinaigrette. It was really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and refreshing. Is your roommate Sam around today, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is out running some errands of his own, so it's pretty quiet here right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to have a quiet house now and then. How have things been going at your job as an account manager at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things have been busy but good. We've had a lot of shipments to coordinate lately, so I'm glad to have the weekend to just unwind."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

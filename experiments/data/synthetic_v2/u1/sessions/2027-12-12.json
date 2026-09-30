@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 652,
+  "date": "2027-12-12",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your morning going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. Just relaxing at home. I actually just finished drinking a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a nice, peaceful start to the day. Do you have any plans for the rest of this Sunday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Sam and I are planning to head out in a bit. I just threw on a button-down shirt and we're going to grab some food."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A button-down shirt is a great classic look. Where are you guys thinking of going for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're going to a noodle spot down the street. I'm definitely getting ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a chilly December day! I assume you're getting a vegetarian option?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, they have a really good spicy tofu broth version that I love. It's one of my favorite lunch spots in the neighborhood."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Are you planning to do any rock climbing or play some guitar later today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar this evening. I've been practicing a new song. My fingers need a break from climbing anyway; my grip is pretty tired from earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Guitar sounds like a perfect way to wind down the weekend. How is everything else going? Is work at the logistics firm keeping you busy lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, things have been pretty hectic as an account manager at the logistics firm with the holiday shipping rush, so I'm really glad to just have a quiet Sunday to recharge."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

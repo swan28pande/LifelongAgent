@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 222,
+  "date": "2026-10-08",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Thursday. How is your day going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It's a bit breezy today, so I'm just keeping it cozy. I'm wearing an oversized hoodie while I get some work done from home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds like the perfect choice for a breezy fall day. Did you start your morning with a warm drink too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I made myself a matcha latte this morning. It's really nice and cozy without being too heavy on the caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to stick to that lower-caffeine goal your doctor mentioned! How has work at the logistics firm been today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty busy, but I managed to step away for a quick lunch. I just put together a quick deli sandwich to eat at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic deli sandwich is always a solid, quick option. Has your roommate Sam been keeping busy too, or have you guys had any time to catch up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam's been good, really busy with work too. We actually managed to jam on our guitars for a little bit yesterday evening, which was a nice break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. By the way, with October already here, your sister Ana's wedding is coming up next month! How are things looking for that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's getting so close! Everything is mostly sorted out now, and she's just finalizing the last few details. I'm really looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's going to be a wonderful celebration. Do you have any plans for the rest of your evening, maybe heading to the climbing gym?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably not tonight, I think I'm just going to relax at home and maybe practice some guitar. It's been a long week already!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

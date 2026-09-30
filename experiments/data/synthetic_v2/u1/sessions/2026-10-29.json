@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 243,
+  "date": "2026-10-29",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Thursday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It's actually a bit warm today, so I'm just wearing a fitted t-shirt and jeans while working from home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds comfortable. How are things looking at the logistics firm today? Keeping busy as an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a lot of shipments to track today, so it's a bit hectic. I started the morning with a decaf americano to keep me focused without getting too jittery."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart choice! It's great you're sticking to the decaf since your check-up. How is the energy level holding up?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually really good. For lunch, I just had a quick homemade salad, which was nice and light so I don't feel sluggish this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is perfect for a busy workday. Do you have any plans to unwind after you finish up with work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think Sam and I might head to the climbing gym for a bit of rock climbing later. It's a good way to clear my head after staring at logistics spreadsheets all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to transition into the evening. Have you had any time for your guitar lately, or is life mostly focused on climbing and wedding prep?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've played a little bit of guitar in the evenings, but yeah, things are getting busy with Ana's wedding coming up in November. It's hard to believe it's next month already!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I know, November is right around the corner! It must be an exciting time for your family."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. Well, I should probably get back to these client emails. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: He plans to play a song at his sister Ana's wedding."
+  ]
+}

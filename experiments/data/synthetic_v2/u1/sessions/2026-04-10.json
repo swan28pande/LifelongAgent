@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 41,
+  "date": "2026-04-10",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Friday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. Just starting my morning with some black coffee to wake myself up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A hot cup of black coffee is the perfect way to kick off the day. Are you heading into the office today, or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, which is nice. I'm just hanging out in an oversized hoodie so I'm very comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the ultimate work-from-home setup. Do you have any weekend plans with your roommate Sam, or maybe some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually busy this weekend, so I have the place to myself. But I do plan on doing some rock climbing tomorrow morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Having the apartment to yourself can be nice for some peace and quiet! Good luck with the climbing tomorrow. Have you been working on any challenging routes lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, there's this one tricky route I've been trying to project. Hopefully tomorrow is the day I finally send it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get it! How is the actual work day treating you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty quiet, fortunately. I actually just finished making a deli sandwich for lunch, so I'm taking a quick break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a deli sandwich is a solid choice for a quick lunch. Do you think you'll have some time to play your guitar later to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm planning on spending some time with my guitar this evening once I log off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing start to your weekend. Enjoy the music and your climbing session tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Have a good weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: training for the Austin half marathon"
+  ]
+}

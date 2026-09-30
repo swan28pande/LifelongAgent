@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 385,
+  "date": "2027-03-20",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Saturday. How's your weekend in Austin starting out? Doing anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting out pretty relaxed. I'm just hanging out at home. I actually just finished my morning coffee. I had a decaf americano today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, sticking to the doctor's advice about cutting back on caffeine! That's great. How are you liking the decaf americano compared to regular coffee?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually not bad at all! It still gives me that warm morning routine feeling without the jitters."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a big win. Are you planning on heading out for some rock climbing or doing any guitar practice later today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam and I might do some climbing later, but right now I'm just taking it easy. I did dress up a tiny bit though, wearing a button-down shirt today just to feel a bit more put-together even if I'm just at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing wrong with a sharp button-down shirt to start the weekend! It definitely sets a nice, productive vibe. Have you thought about what you're having for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! Since I'm keeping things healthy and vegetarian, I just made myself a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh nice! What kind of ingredients did you put in your homemade salad?"
+    },
+    {
+      "speaker": "user",
+      "text": "I tossed in some mixed greens, cucumbers, tomatoes, feta cheese, and a light vinaigrette. Simple but really refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and perfect for a Saturday lunch. Austin weather usually pairs well with a fresh salad too. Are you planning on meeting up with anyone else this weekend, or is it mostly a low-key couple of days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly low-key. Just recovering from a busy week at the logistics firm. It's nice to just unwind and not have too many strict plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I completely understand. Sounds like a well-deserved break after a hectic week as an account manager. Enjoy the rest of your homemade salad and have a great time if you and Sam head out to climb later!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "format: every turn needs speaker 'assistant' or 'user' and non-empty text"
+  ]
+}

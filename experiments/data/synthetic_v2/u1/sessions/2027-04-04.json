@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 400,
+  "date": "2027-04-04",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How is your weekend in Austin going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well, thanks. I'm actually dressed up a little bit today, wearing a button-down shirt. Sam and I are about to head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A button-down shirt is a great Sunday look. Are you and Sam heading out to grab some food?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we are going to grab some lunch. I think I'm going to get a deli sandwich today. There is a great spot nearby with some really good vegetarian options."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich sounds perfect for a relaxing Sunday. Did you start your morning with a nice coffee to kick off the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a decaf americano. Ever since my annual check-up where the doctor advised cutting back on caffeine, I've been keeping it caffeine-free when I can."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to follow your doctor's advice while still enjoying a good coffee! By the way, how has it been finding vegetarian options around Austin lately? Is it still pretty easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, Austin is amazing for a vegetarian diet. Almost every restaurant has great options, so it's incredibly easy to eat well here."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic to hear. Austin really does have a great food scene. Have you done any rock climbing or played any guitar this weekend, or are you just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing or guitar today. I'm just taking a rest day. My body is still pretty happy with that 1:58 half marathon finish from a while back, so I don't mind a quiet Sunday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You definitely earned the rest! Finishing that half marathon in 1:58 was a huge accomplishment. Enjoy the lazy Sunday and your lunch!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to get that deli sandwich now. Have a great rest of your day!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: lunch should be 'deli sandwich', conversation gives 'other'"
+  ]
+}

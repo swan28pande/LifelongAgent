@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 673,
+  "date": "2028-01-02",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Sunday, Leo! How is your day starting off in Chicago? Is the winter weather keeping you indoors today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually pretty chilly today, but I'm dressed warm. I've got a button-down shirt on and I'm just relaxing around the apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt sounds like a nice, classic Sunday look! Did you end up making some coffee to warm up, or are you still keeping an eye on that caffeine intake like your doctor suggested?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely keeping that in mind. Today I made a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte is a great alternative! It gives a much smoother energy boost too. Are you planning to cook something at home today, or grab some food later?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just ordered some food. I'm having ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is absolute perfection for a cold Chicago day. Is it a vegetarian-friendly place? I know you always find the best veggie spots around town."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, this place has an amazing vegetarian broth option, so it works out perfectly. It's one of my favorite spots in the city."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. How have things been at the logistics firm lately? I imagine the end of the year and the start of January can be pretty hectic for an account manager."
+    },
+    {
+      "speaker": "user",
+      "text": "It's been incredibly busy with end-of-year shipments, but things are finally starting to settle down a bit this week. I'm glad to have a quiet Sunday to just recharge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! You definitely deserve a relaxing day. Do you think you'll get a chance to play some guitar or do any rock climbing later, or is it strictly a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll probably just stick to playing some guitar here at the apartment. Sam is out for the afternoon, so I can practice without bothering anyone."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

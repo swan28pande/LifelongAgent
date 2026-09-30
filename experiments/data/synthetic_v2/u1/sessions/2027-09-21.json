@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 570,
+  "date": "2027-09-21",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Tuesday going in Chicago? Did you get a chance to do any rock climbing yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! No climbing yesterday, it was a pretty busy day at the logistics firm. But my Tuesday is starting off well. I just finished my morning coffee, which was a matcha latte today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice! That definitely helps with the doctor's advice from your check-up to cut back on caffeine. How is the work day looking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, trying to keep the caffeine in check! Work is busy but manageable. I actually dressed up a bit more than usual today, wearing a polo shirt instead of my usual t-shirt for some client video calls."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Very professional! A polo shirt is perfect for client calls. What are you planning to do for lunch today to power through the rest of your meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually having ramen for lunch. There's a great spot nearby that makes an incredible vegetarian broth, so it fits my diet perfectly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, vegetarian ramen sounds delicious! Is Sam joining you for lunch, or are they busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is working from their office today, so I'm just grabbing it on my own. We did hang out yesterday evening though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice that you two got to catch up. Did you end up playing any guitar last night, or was it a quiet evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually did play a bit! I practiced some chord transitions while Sam was reading. It was a nice, relaxing way to wind down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful evening. I hope the rest of your client calls go smoothly today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to my next meeting now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

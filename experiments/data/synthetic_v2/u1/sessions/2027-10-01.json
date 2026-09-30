@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 580,
+  "date": "2027-10-01",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Leo! How is your Friday starting out over in Chicago? Do you have a busy day ahead at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's a pretty busy morning. I'm actually dressed up a bit more than usual because we have some clients visiting the office today, so I'm wearing a button-down shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a great choice for client visits. How did you kickstart your morning? Did you manage to stick to the doctor's advice about cutting back on caffeine?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I stopped by the café and ordered a decaf americano. It actually hit the spot and gave me that morning ritual feel without the jitters."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is awesome! A decaf americano is a perfect way to keep the ritual going. Have you figured out what you are doing for lunch today, or will you be eating out with the clients?"
+    },
+    {
+      "speaker": "user",
+      "text": "The clients have their own lunch plans, so I'm just going to eat what I brought. I have a meal-prep burrito bowl ready to go in the office fridge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A meal-prep burrito bowl sounds delicious and super convenient for a busy Friday. Being an account manager there must keep you pretty occupied, especially right before the weekend. How are your accounts looking?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're in good shape! I'm just finalizing a few shipments and finishing up some weekly reports. I'm definitely looking forward to clocking out later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Do you have any fun plans lined up for the weekend? Maybe some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! Sam and I are planning to go rock climbing tomorrow morning, and then I'll probably just spend Sunday relaxing and practicing some new songs on my guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect balance of being active and unwinding. I hope you have a smooth rest of your client day and a fantastic weekend in Chicago!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you next week!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

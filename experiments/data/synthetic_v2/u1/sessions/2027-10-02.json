@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 581,
+  "date": "2027-10-02",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Saturday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just a relaxing morning here in Chicago. I started the day with a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Keeping up with the doctor's advice on cutting back caffeine from your check-up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly. It's actually not too bad. I don't miss the caffeine as much as I thought I would."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear! Are you planning to do some rock climbing or play some guitar today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might practice some guitar later, but right now I'm actually dressed up a bit. I decided to wear a button-down shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a button-down shirt! Are you heading out somewhere special, or just feeling fancy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just felt like looking a bit sharp today, even if I'm mostly staying in. Sam and I might watch a movie later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a nice, laid-back Saturday. What are you thinking of doing for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished eating. I had a meal-prep burrito bowl."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, a meal-prep burrito bowl sounds delicious and convenient! Still sticking to the vegetarian diet, I assume?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely, it was fully vegetarian, packed with black beans, rice, and guac. It's one of my favorite things to prep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds amazing. By the way, how have things been at the logistics firm? I know being an account manager can get pretty hectic."
+    },
+    {
+      "speaker": "user",
+      "text": "It's been busy, but having the weekend to unwind is perfect. I really needed this break."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

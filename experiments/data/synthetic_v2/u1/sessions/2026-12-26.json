@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 301,
+  "date": "2026-12-26",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Saturday. How is your weekend starting off in Austin? Doing anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just a relaxed morning. I just threw on a fitted t-shirt and am lounging around the apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a laid-back Saturday is the best. The Austin weather must be perfect for a fitted t-shirt today. Have you had your morning coffee yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I walked down to the local spot and got a decaf americano. Trying to stick to that doctor's advice about cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for you, staying on track with that decaf americano! Your doctor would be proud. What's the plan for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished eating a homemade salad. Trying to keep things light and healthy today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds delicious and refreshing. Are you planning on heading to the rock climbing gym later, or maybe practicing some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to skip climbing today and just spend some time playing my guitar. My fingers are a bit sore anyway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect afternoon. How are things going with your roommate Sam? Is he around today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually visiting family for the holidays, so I have the place to myself. It's nice and quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, some quiet time can be so nice. How have things been at the logistics firm lately? I imagine the post-holiday shipping rush might be keeping you busy."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, as an account coordinator, the weeks leading up to Christmas were absolute chaos, but it's finally starting to slow down a bit now. I'm definitely enjoying the breather."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

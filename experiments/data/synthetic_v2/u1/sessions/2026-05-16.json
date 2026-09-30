@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 77,
+  "date": "2026-05-16",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Saturday. How is your weekend starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It is starting out really nicely. I've just been relaxing. I started my morning with an oat milk latte and have just been taking it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Saturday morning. Are you hanging out with Sam today, or do you have any big plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually out running some errands for most of the day, so I have the place to myself. I'm just wearing an oversized hoodie and hanging out on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie is the ultimate comfort wear for a lazy Saturday. Are you planning on getting any guitar practice in, or maybe heading out for some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I will probably play some guitar later this afternoon, but definitely no rock climbing today. I need to give my arms a rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is probably a smart move! Rest days are important. Have you thought about what to do for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished eating. I made a homemade salad for lunch, keeping it light."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A fresh homemade salad is perfect for a warm Austin day. Did you put anything special in it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some mixed greens, tomatoes, cucumbers, and a simple vinaigrette. Kept it pretty basic but it hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Simple is often the best. It sounds like you are really getting a chance to recharge after the work week. How have things been at the logistics firm lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Being an account coordinator is always a bit hectic, but I managed to wrap up everything before the weekend, so I can truly unplug today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a great feeling. I'm glad you can fully disconnect and enjoy your weekend. Let me know if you need anything else today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm just going to go tune my guitar now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: training for the Austin half marathon"
+  ]
+}

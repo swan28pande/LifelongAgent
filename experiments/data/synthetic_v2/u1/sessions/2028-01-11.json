@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 682,
+  "date": "2028-01-11",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Tuesday starting out in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just working from home today. I put on a polo shirt and I'm tackling some emails for my account manager role."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a solid start. How are things going at the logistics firm lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been busy, but manageable. I had a matcha latte this morning while getting organized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great morning ritual. Have you been able to find some time for your hobbies lately, like rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually went rock climbing over the weekend which was a blast. Today for lunch I had ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for winter. Did you manage to find a good vegetarian option?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I got a really delicious vegetarian ramen from a spot down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. How is your roommate, Sam, doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We've just been hanging out and catching up on some shows."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Have you had any time to play your guitar lately too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have! I've been playing a bit in the evenings after work, which has been really relaxing."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

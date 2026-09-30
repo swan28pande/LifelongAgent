@@ -1,0 +1,83 @@
+{
+  "user_id": "u1",
+  "day": 160,
+  "date": "2026-08-07",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Leo! How is your day starting off in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just sitting here in an oversized hoodie sipping on an oat milk latte, trying to wake up before my first meeting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie and an oat milk latte sounds like the perfect cozy Friday morning. Are you planning on doing any rock climbing this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I'm planning to head to the climbing gym tomorrow morning. I need to practice some route-reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds awesome, route-reading is such a fun challenge. Is Sam going with you, or are you flying solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually resting a sore shoulder, so I'll be going solo this time. But we're hanging out tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, hope Sam's shoulder heals up quickly! Do you have any fun plans for tonight, or just a chill night in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably just a movie and some dinner. Speaking of dinner, I'm already thinking about food. I actually made a homemade salad for lunch today, so at least that's ready to go."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great lunch choice, especially when it's already prepared and waiting for you. What kind did you make?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a simple Mediterranean one with chickpeas, cucumbers, and feta. Super refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and perfect for a warm August day in Austin. Have you had any time to play your guitar lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did play a bit yesterday evening! Just practicing some fingerpicking patterns. It's a nice way to unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. Well, I hope you have a smooth workday and a great climb tomorrow! Let me know if you need anything else today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a sister named Ana.",
+    "invention: The user is planning to go rock climbing tomorrow morning."
+  ]
+}

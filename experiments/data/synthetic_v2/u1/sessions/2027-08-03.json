@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 521,
+  "date": "2027-08-03",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just wrapping up some emails for my job as an account manager at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear it's going well. Did you get a chance to do some rock climbing or play some guitar yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "I didn't climb yesterday, but I did play a bit of guitar last night. Today is a busy workday, so I kept things simple. I threw on a polo shirt and headed to the office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid, classic choice for a busy office day. Did you manage to grab a coffee to start the morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I got a decaf americano this morning. Still trying to keep that caffeine intake down like the doctor suggested at my check-up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you're sticking to the doctor's advice with the decaf americano! It's not always easy to make that switch. How about lunch? Did you find something good and vegetarian today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I had ramen for lunch! There's a great spot near the office that makes a delicious vegetarian broth version."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, vegetarian ramen sounds perfect, especially if they have a really rich broth. Do you have any plans for this evening, or is it a relaxing night in with Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a relaxing night in. Sam and I might just watch a movie or hang out. I might practice a few chords on the guitar later too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very chill way to spend a Tuesday evening. Do you have any rock climbing sessions planned for later this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm hoping to hit the climbing gym on Thursday after work to get some activity in."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Sam is not into heights"
+  ]
+}

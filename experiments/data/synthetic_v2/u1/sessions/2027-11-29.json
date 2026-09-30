@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 639,
+  "date": "2027-11-29",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is everything back in Chicago? I hope you've had a chance to rest after your sister Ana's wedding in San Antonio."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, Chicago is pretty cold today, but I'm settling back in. The wedding was wonderful, but it's back to reality now. I'm actually at the office today, wearing a button-down shirt instead of my usual casual wear because of some client meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt always makes a great impression! Are these clients for your account manager role at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, exactly. I have a big presentation with one of our major logistics accounts this afternoon. To get ready for the day, I grabbed a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a nice way to start a busy Monday. How are you feeling about the big presentation?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm feeling prepared, just a bit nervous. I decided to take a proper break for lunch to clear my head, so I'm actually eating some ramen right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a cold Chicago day. Did your roommate Sam manage to join you, or are you eating solo today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a solo lunch today; Sam has a busy day at his own job. But we're planning to go rock climbing together tomorrow evening to blow off some steam."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. Have you been climbing a lot lately, or has the wedding trip taken up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "The trip to San Antonio definitely kept me busy, so it's nice to get back into the routine. I even managed to practice my guitar a bit yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It sounds like you're balancing everything well. Good luck with the client presentation this afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to finish up this ramen and head back to the office now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 590,
+  "date": "2027-10-11",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is everything going in Chicago today? How is your roommate Sam doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good here, just a bit chilly today. Sam is doing great, he is actually out of town for a few days. I'm just starting my workday. I went to the local cafe and grabbed a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A decaf americano sounds like a solid way to ease into a Monday, especially keeping that caffeine in check. How is your morning at the logistics firm looking?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is pretty busy already. I have a lot of client emails to catch up on. I'm sitting at my desk wearing a button-down shirt and trying to get organized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt always helps set a productive tone for the week! Have you thought about what you are doing for lunch today? Are you trying any new vegetarian spots near the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just got back from lunch. I went to a noodle place nearby and had ramen. They have a great vegetarian option."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a chilly Chicago day, and it's awesome that they have a good vegetarian broth. Do you have any plans for rock climbing or playing guitar after work, or is it a quiet evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I will play some guitar tonight. My fingers need a break from rock climbing anyway after a heavy session last week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing way to wind down. What have you been practicing on the guitar lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been working on a fingerstyle arrangement of an old acoustic song. It's challenging but coming along."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Fingerstyle takes a lot of patience, but it is so rewarding when it clicks. I hope the rest of your Monday goes smoothly, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

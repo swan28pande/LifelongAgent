@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 458,
+  "date": "2027-06-01",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Tuesday. How is your day starting out in Austin? Did you get a chance to play any guitar or do any rock climbing yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yesterday was pretty busy so I didn't get to climb or play guitar, but today is starting off a bit calmer. I actually just finished my morning coffee, which was a matcha latte today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great way to start the morning, especially since you've been mindful of caffeine lately. Are you working from home today or heading into the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm heading into the office today. I'm actually already dressed and ready to go. I decided on a casual look today, just a polo shirt and some chinos."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid choice for a warm Austin day! How are things going at the logistics firm? Any big client accounts you're managing this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things are actually pretty steady right now. We've got a few new accounts we're onboarding, but nothing too overwhelming. I'm hoping to have a relatively quiet day so I can catch up on some administrative work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a manageable pace. It's always nice to have a breather to catch up on admin tasks. Do you have any lunch plans today, or are you eating at your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just grab a quick lunch. I'm planning on having a deli sandwich from the place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is always a reliable and quick option. Do they have some good vegetarian options there?"
+    },
+    {
+      "speaker": "user",
+      "text": "They do! They make a really great roasted veggie and hummus deli sandwich that I love. It's super filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and perfect for keeping your energy up. Speaking of energy, how have you been feeling since the Austin half marathon last month? Have you fully recovered from that 1:58 run?"
+    },
+    {
+      "speaker": "user",
+      "text": "I feel completely recovered now! My legs were sore for a few days, but now I'm back to normal. Sam and I were actually talking about going rock climbing again this weekend to get back into the routine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome to hear! I'm glad you're fully recovered and ready to hit the climbing gym with Sam. Have a great day at the office, Leo, and enjoy your lunch!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

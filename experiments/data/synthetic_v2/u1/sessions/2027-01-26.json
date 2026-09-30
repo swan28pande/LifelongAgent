@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 332,
+  "date": "2027-01-26",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday starting out over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. It's a bit warmer today, so I'm just wearing a polo shirt and some chinos for work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt sounds perfect for a milder winter day. Did you grab a coffee on your way to the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I decided to go with a matcha latte today. I'm trying to keep that doctor's advice in mind about cutting back on the heavy caffeine, and it actually hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great alternative! A matcha latte still gives you a nice, smooth energy boost without the coffee jitters. How are things going with Sam lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam's doing great, just really busy with some projects. Speaking of food, I just finished eating a deli sandwich for lunch at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! What kind of vegetarian deli sandwich did you find? I'm always curious about good meatless options."
+    },
+    {
+      "speaker": "user",
+      "text": "It was a loaded veggie one with hummus, cucumber, avocado, and sprouts on sourdough. Really fresh and filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and healthy. Are things pretty hectic with your accounts today, or do you have a bit of a breather?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a little busy handling some client shipments, but nothing I can't manage. I'm hoping to wrap up on time today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get to escape on time! Any fun plans for this evening once you're off the clock?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm planning to head to the climbing gym for a quick session, and then maybe just unwind with my guitar at home."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

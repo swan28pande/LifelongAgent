@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 456,
+  "date": "2027-05-30",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How is your weekend going down in Austin? Are you getting some guitar practice in, or maybe heading out for some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a really nice, relaxing Sunday so far. I was actually just practicing some fingerpicking on the guitar earlier. Right now I'm just sitting here with my morning coffee, a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a great companion for a relaxing morning of music. Do you have any big plans for the rest of the day, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually heading out in a little bit to meet up with some friends. I just got dressed and put on a button-down shirt. We're going to walk around town and enjoy the weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! A button-down shirt is a great choice for a Sunday afternoon out. Are you guys planning on grabbing some lunch while you're out walking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we are. I think I'm going to get a deli sandwich from a local spot we like."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You can't go wrong with a good deli sandwich. I hope it's delicious! How have things been at the logistics firm lately? Is work keeping you pretty busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "It has been very busy. As an account manager, I've had a lot of clients needing extra attention lately, so my weekdays have been pretty packed. This weekend has been a much-needed break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! It's really important to have these quiet weekends to recharge when work gets that intense. Is your roommate Sam joining you and your friends today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Sam is actually running some errands and doing his own thing today, so it's just me meeting up with the group."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it. Hopefully he gets through his to-do list. Have you had any chance to get some rock climbing in recently, or has work kept you too busy for the gym?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went climbing a couple of evenings ago, which was super fun, but today is definitely a rest day. I should probably head out now so I'm not late to meet everyone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Of course! Have a great time walking around, enjoy your deli sandwich, and have a wonderful rest of your Sunday!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

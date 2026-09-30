@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 73,
+  "date": "2026-05-12",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Tuesday. How is your morning starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well so far. I just finished my morning coffee, an oat milk latte, and now I'm getting ready to dive into some work emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a great start. An oat milk latte is always a solid choice. How are things looking today for your role as an account coordinator at the logistics firm? Busy day ahead?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a few shipments coming in that need some extra tracking, so it'll be a bit hectic. I decided to dress comfortable today, so I just threw on a fitted t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, comfort is key when you've got a busy day of coordination ahead. Have you had a chance to plan out what you're doing for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually already made a homemade salad, so I'll just grab that from the fridge when it's time for a break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A homemade salad is a perfect light lunch for a busy workday. Have you been able to find any free time lately for your hobbies, like rock climbing or playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went rock climbing yesterday evening! It was a great workout, though my arms are definitely feeling a bit sore today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I bet! Rock climbing is no joke. Did your roommate Sam join you this time, or did you go solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam didn't come with me this time, they had some other things to take care of. But we caught up later last night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good to hear. And how about the guitar? Have you had a chance to practice any new chords or songs lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did play a little bit of guitar over the weekend. Just practicing some basic chord transitions, keeping it low-key."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

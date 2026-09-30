@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 603,
+  "date": "2027-10-24",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How is your day going over in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just a quiet day. I'm actually wearing a button-down shirt today because Sam and I have a few friends coming over later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A button-down shirt is a great choice for hosting. Did you start your morning with a coffee, or did you stick to the lower caffeine advice from your check-up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went with a matcha latte today. It still gives me a little bit of energy but it's much gentler than my usual drip coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart substitute! A matcha latte sounds perfect for a cozy Sunday. Have you figured out lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished eating. I had ramen for lunch, with a really good vegetarian broth. It totally hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, ramen is amazing on a Sunday afternoon. Did you get any rock climbing in yesterday, or is this a fully relaxed weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Fully relaxed. No rock climbing this weekend, but I did spend some time playing my guitar yesterday evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds peaceful. Are you practicing anything specific on the guitar right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some fingerpicking patterns I've been trying to smooth out. It's a nice way to disconnect from work brain."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely. How is work looking for this week? Are things busy for you at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's looking pretty packed. Being an account manager there keeps me on my toes, and tomorrow is full of client catch-ups, so I'm glad I have today to just chill."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Well, I hope the client meetings go smoothly tomorrow. Enjoy the rest of your relaxing Sunday and the get-together with Sam and your friends!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

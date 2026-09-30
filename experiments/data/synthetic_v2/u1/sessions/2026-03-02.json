@@ -1,0 +1,91 @@
+{
+  "user_id": "u1",
+  "day": 2,
+  "date": "2026-03-02",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your day starting off in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I started the morning with an oat milk latte and threw on a fitted t-shirt for the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a comfortable and caffeinated start. Are you working today, or do you have a free day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working. I am an account coordinator at a logistics firm, so I have a lot of emails to catch up on today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An account coordinator at a logistics firm sounds like a busy role, especially on a Monday. How do you like managing the accounts there?"
+    },
+    {
+      "speaker": "user",
+      "text": "It keeps me on my toes, but I enjoy it. I actually just took a quick break to eat a homemade salad I prepped."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A homemade salad is a perfect healthy lunch. Speaking of being at home, how are things going there? Still enjoying your space?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, things are good! Oh, I don't think I told you, but I live with a roommate named Sam."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I didn't know that! How is it living with Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's great, we get along really well and share the space easily."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, having a good roommate makes such a difference. Have you had any time for rock climbing lately, or any other hobbies?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't climbed in a couple of weeks, but I have been playing guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I didn't know you played guitar! What kind of music do you like to play on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I play a bit of everything, mostly just practicing chords and trying out different songs when I have some downtime."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {
+      "job.0": true,
+      "living_situation.0": true,
+      "hobbies.1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Leo recently started his job.",
+    "invention: Leo's job has a relaxed dress code.",
+    "invention: Leo's team at work is supportive.",
+    "invention: Leo recently changed his living situation.",
+    "invention: Leo recently picked up guitar as a new hobby.",
+    "invention: Leo is learning to play acoustic folk songs on the guitar."
+  ]
+}

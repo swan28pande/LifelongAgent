@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 389,
+  "date": "2027-03-24",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, pretty busy at the logistics firm today. I'm actually dressed up a bit more than usual today, wearing a polo shirt for a couple of client video calls."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A polo shirt is a great choice for looking professional but staying comfortable. Did you manage to get a good start to your morning before the meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I had a matcha latte this morning to keep my caffeine intake a bit lower, especially since the doctor recommended cutting back during my check-up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart adjustment. How are you liking the matcha latte compared to your usual coffee?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually really good, and I don't get that mid-morning crash. I just finished up lunch too, had a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice. What kind of deli sandwich did you get? I know you keep things vegetarian."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it was a roasted veggie and hummus deli sandwich on sourdough. Really tasty and filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Do you have any plans to unwind after work? Maybe some rock climbing or playing the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to play some guitar tonight. Sam is out for the evening, so I'll have the place to myself to practice some new chords."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, quiet evening. Have you been doing any running lately, or are you taking a break after finishing the half marathon?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm still running, but just short, easy jogs around the neighborhood. No intense training right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's good to keep up the habit without all the race pressure. I hope you have a relaxing evening with your guitar practice!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

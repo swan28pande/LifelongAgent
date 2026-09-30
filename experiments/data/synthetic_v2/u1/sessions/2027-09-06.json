@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 555,
+  "date": "2027-09-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is your week starting off in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Chicago is actually having some nice weather today. I had a matcha latte this morning to get energized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte! That sounds like a nice morning ritual, especially with your doctor's advice about cutting back on caffeine. How did you like it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was really good, actually. Nice and smooth. After that, I got ready for work and put on a button-down shirt since I have some video calls later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt always looks sharp for calls. How are things looking at the logistics firm today? Are you super busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a lot of shipments to coordinate today. I barely had time for a break, so I just grabbed some ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen is great for a quick, comforting lunch. Did you get a good vegetarian option?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! There's a spot nearby with a really rich mushroom broth that is fantastic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. Did you get a chance to do any rock climbing over the weekend, or maybe practice your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did both. My roommate Sam and I went to the climbing gym on Saturday morning. We did some bouldering for a couple of hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always great when you and Sam can get a climbing session in! Did you play some guitar after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I played a little bit of guitar yesterday evening just to unwind before the work week started up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing way to spend a Sunday evening. I hope the rest of your video calls go smoothly today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to get back to my afternoon tasks now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

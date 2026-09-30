@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 112,
+  "date": "2026-06-20",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your weekend starting out down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting out pretty good. Austin is already getting warm, but I'm just relaxing inside. I started my day with some black coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a simple black coffee to get things going. Do you have any plans to head out for some rock climbing today, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely keeping it low-key today. I'm actually wearing an oversized hoodie and just enjoying the air conditioning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie is the ultimate lounge wear. Is your roommate Sam around, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam went out to run some errands for the afternoon, so I've got the apartment to myself. It's nice and quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully peaceful afternoon. Have you thought about what you want to do for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just put together a quick deli sandwich a little while ago. It hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A deli sandwich is a great, easy weekend lunch. Did you load it up with veggies?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, lots of tomatoes, lettuce, pickles, and some cheese. Kept it simple and vegetarian."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and fresh. Are you thinking of picking up your guitar later, or is it strictly a relaxation day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll probably practice some guitar later this evening. After a busy week at the logistics firm, I really just need a slow day like this."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

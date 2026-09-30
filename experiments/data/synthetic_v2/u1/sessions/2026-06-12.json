@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 104,
+  "date": "2026-06-12",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Friday. How is your morning going down in Austin? Are things pretty hectic at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, my workload as an account coordinator is pretty heavy today, but I'm managing. I treated myself to an oat milk latte this morning, which definitely helped me get focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte is a great way to power through a busy Friday morning. Are you dressed comfortably for the office, or are you working from home today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, thankfully. It's getting pretty warm outside, so I'm just keeping it simple in a fitted t-shirt and some comfortable shorts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fitted t-shirt sounds perfect for staying cool while tackling your accounts. Have you managed to take a break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just finished eating, actually. I made a quick homemade salad to keep things light and healthy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a wonderful, refreshing option on a warm day. Do you have any relaxing plans lined up for this evening, maybe some guitar practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely. I'm planning to spend some time on my guitar tonight. I've been trying to learn a new song, so I'll probably practice that for a while."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. Have you been able to get any rock climbing in lately, or has work kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went rock climbing earlier this week, which was great, but this weekend I think I'm just going to take it easy and relax at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense. After a busy week of managing logistics, you definitely deserve some downtime. I hope the rest of your workday goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm just looking forward to wrapping up these last few tasks and starting the weekend."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user is planning to go rock climbing tomorrow morning with Sam."
+  ]
+}

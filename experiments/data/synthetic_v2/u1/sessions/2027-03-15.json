@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 380,
+  "date": "2027-03-15",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your day starting out over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, thanks. Just got to my desk. I started my morning with a decaf americano today, trying to stick to that doctor's advice about cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you're keeping up with the caffeine reduction! How is work at the logistics firm looking today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Pretty busy! I have an important video call with a client in an hour, so I actually put on a nice button-down shirt today instead of my usual casual tees."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt always makes a great impression for those client calls. Have you thought about what you're doing for lunch to keep your energy up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually prepared ahead of time and brought a homemade salad today. Just need to grab it from the fridge when it's time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice prep! I assume you kept it vegetarian as usual? What did you put in it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely vegetarian. It's got spinach, cucumber, chickpeas, and some vinaigrette. Very refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and healthy. How is your roommate, Sam, doing? Have you two had any time for rock climbing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is good! He's been working late a lot. We haven't climbed in about a week, but we're hoping to hit the climbing gym this Thursday evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you two make it there! It's always a good stress reliever. Are you still finding some time for your guitar too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I usually play for thirty minutes before bed to wind down. Anyway, I should probably go prep my notes for this client meeting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the meeting, Leo! Have a productive day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

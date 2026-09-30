@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 512,
+  "date": "2027-07-25",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your weekend in Chicago going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just having a relaxing morning. I actually just finished drinking a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a great way to start a quiet Sunday, especially keeping in mind your doctor's advice about cutting back on caffeine! Are you planning to do any rock climbing today, or is it more of a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's more of a rest day today. I did a lot of climbing earlier this week, so my arms need a break. Plus, I'm getting dressed up a bit because I'm meeting some friends later. I just put on a nice button-down shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt sounds sharp! It's always nice to dress up a little for friends, even on a casual Sunday. What are you and your friends planning to do? Are you heading out for a meal?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we are going to grab some food. I've been craving ramen, so we're heading to a spot downtown that has a really great vegetarian broth."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds delicious! It can be tricky to find a really rich vegetarian ramen broth, so a spot that does it well is always a gem. Is this a place you've been to before?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I've been there once before. It's really close to where Sam and I live, so it's super convenient. I'm looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's perfect, especially since it's so close to home. Have you had some time to practice your guitar lately, or has work at the logistics firm kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Work has been pretty steady, but as an account manager, things can get a bit hectic toward the end of the month. I did manage to practice a new song on my guitar last night, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you found some time for music despite a busy work schedule! What song are you working on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just an acoustic cover of an old indie song I like. It's a nice way to unwind after a long day of logistics emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely sounds like a peaceful way to transition into the weekend. I hope you have a fantastic time meeting up with your friends and enjoying that ramen today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm sure it'll be great. I'll catch up with you later tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

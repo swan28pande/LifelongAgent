@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 420,
+  "date": "2027-04-24",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Saturday going so far in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I started the day with a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice! Is that helping you cut back on caffeine like your doctor recommended?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, it still gives me a little boost but without the jitters. After that, I went rock climbing for a bit. I wore a button-down shirt today because I had to meet up with some friends right after and wanted to look a bit presentable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, a button-down shirt is perfect for transitioning from the gym to hanging out. How was the climbing session?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was really fun! I managed to clean a route I'd been stuck on. After that, I grabbed a deli sandwich for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job on the climb! And a deli sandwich is a classic post-workout meal. Since you're vegetarian, what did you get on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I got a roasted veggie and hummus deli sandwich on sourdough. It was delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds amazing! Are you and your roommate Sam planning anything else for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually out running some errands today, so I have some quiet time. I think I'm going to spend the evening practicing my guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing some guitar sounds like a perfect way to spend a Saturday evening. Are you working on any specific songs?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I've been practicing some fingerstyle folk songs. It's nice to just zone out and play."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u1",
+  "day": 653,
+  "date": "2027-12-13",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Monday starting off in Chicago? Staying warm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's definitely chilly today. I started my morning with a matcha latte to keep me warm and help with cutting back on caffeine like my doctor suggested."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, and a perfect way to follow that advice. Are you working from home today, or heading into the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm heading into the office today. I put on a button-down shirt because I have a couple of client meetings later this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A button-down shirt always looks sharp for client meetings. Have you figured out what you're doing for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I'm planning to get some ramen from the place down the street. They have a great vegetarian option."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a cold Monday! How have things been at home? Is your roommate Sam doing well?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, thanks for asking! We actually caught up yesterday evening while I was practicing some new chords on my guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a really nice, relaxing evening. Have you been getting any rock climbing in lately as well?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went climbing over the weekend, which was awesome. It's nice to stay active since I'm not training for the Austin half marathon anymore."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, it's good to keep moving even without a race on the calendar! Speaking of family and big events, how are things with your sister Ana now that her wedding in San Antonio has wrapped up?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is doing really well! The wedding was so much fun, and it's nice for her to finally relax after all that planning."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Hopes to go rock climbing on Wednesday.",
+    "invention: His sister Ana's wedding took place last month."
+  ]
+}

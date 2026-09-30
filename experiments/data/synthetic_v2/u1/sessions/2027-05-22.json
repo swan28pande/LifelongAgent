@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 448,
+  "date": "2027-05-22",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your weekend starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. Just relaxing at home in Austin. I decided to change things up a bit and had a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a nice choice, especially keeping in mind the doctor's advice about caffeine! Are you planning on doing any rock climbing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, definitely trying to stick to that. I might climb later, but first I have to run a quick errand. I actually put on a button-down shirt today because I have to meet a client."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the life of an account manager at the logistics firm! Is it a quick meeting?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, just dropping off some paperwork. After that, I'm grabbing a deli sandwich for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and simple. Is Sam joining you, or are you on your own for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam has other plans today, so I'll just grab it to go."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it. By the way, how are you feeling these days? Have you fully recovered from the Austin half marathon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely. Finishing in 1:58 felt amazing, and my legs feel completely back to normal now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. What are your plans for the rest of the evening after rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably just wind down and play some guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a great way to spend a Saturday. Have a good time with your meeting and lunch!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

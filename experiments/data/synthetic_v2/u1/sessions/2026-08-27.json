@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 180,
+  "date": "2026-08-27",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Thursday going so far in Austin? Did you get any climbing in this morning, or is it more of a quiet workday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! No climbing today, my arms are still a bit sore from my last session. It's a pretty quiet morning actually. Just sitting here in my oversized hoodie, trying to wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cozy hoodie day is the best. Did you at least get a good cup of coffee to help with the waking up process?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh yeah, definitely. I just brewed some black coffee. Keeping it simple today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, nothing beats a classic black coffee. How are things at the logistics firm? Is the workload manageable this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's not too bad. As an account coordinator, some days are absolute chaos with shipments, but today has been pretty smooth. Sam and I actually had a quiet evening yesterday too, which helped."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear it's a smoother day! Have you had a chance to pick up your guitar lately, or has work been taking up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a bit last night! Just practicing some basic chord transitions. It's a nice way to unwind after a long day of logistics planning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect evening routine. It's great to have that creative outlet. Are you planning on doing anything special for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too fancy. I just made myself a quick deli sandwich. Since I'm vegetarian, I used some plant-based slices and some good mustard."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and quick! A perfect lunch for a cozy hoodie day. Are you planning on staying in tonight, or maybe catching up on some more guitar practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably just staying in and relaxing. Might strum a bit more, but mostly just taking it easy. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a sister named Ana who is getting married in November."
+  ]
+}

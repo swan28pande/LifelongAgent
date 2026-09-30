@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 37,
+  "date": "2026-04-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is everything going down in Austin today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Not too bad, just getting the week started. I had a cup of black coffee earlier to wake myself up, and now I'm just getting into some work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Black coffee is definitely a solid way to kickstart a Monday! How are things at the logistics firm? Is it a busy week for an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it's pretty busy already. Lots of shipments to track. I'm keeping it comfortable today though, just wearing a fitted t-shirt while I work from my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, comfort is key for a busy desk day. Are you planning on hitting the rock climbing gym later to blow off some steam, or maybe playing some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll head to the climbing gym tonight. It's been a while. For lunch, I just took a quick break and grabbed a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich sounds perfect for a quick workday lunch. Did you get it from a spot nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, there's a little place just a couple blocks away. I usually just walk over. Sam actually recommended it to me a while back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Sam has good taste. How have things been with your roommate lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Good! We've both been pretty busy, but we managed to catch up yesterday evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. It's always nice when roommates get along so well. Hope the rest of your workday goes smoothly and you have a great climb tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Speak to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

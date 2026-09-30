@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 101,
+  "date": "2026-06-09",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday starting out down in Austin? Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty busy today, typical Tuesday chaos for an account coordinator. I'm keeping it cozy while working from my desk today, wearing an oversized hoodie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds incredibly comfortable for a busy workday. Did you at least get a chance to grab a nice breakfast or coffee to help you power through?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I made myself an oat milk latte this morning, which definitely helped wake me up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, an oat milk latte is the perfect morning fuel. Is your roommate Sam around today, or do you have the place to yourself while you work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually out at the office today, so it's quiet here. I just took a quick break to eat a homemade salad for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds like a great, healthy lunch choice, especially keeping with your vegetarian meals. Did you throw anything special in it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some mixed greens, cucumbers, tomatoes, and a simple vinaigrette. It was really refreshing, especially since it's already getting so warm here in Austin."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound refreshing! How are the rest of your account coordinator tasks looking for the afternoon? Hopefully, things are starting to wind down a bit."
+    },
+    {
+      "speaker": "user",
+      "text": "They are, thankfully. I've got a couple of shipping schedules to finalize, but the heaviest part of the day is behind me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a relief! Do you think you'll have some energy left later to unwind with some rock climbing, or maybe just relax with your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll probably just stick to playing some guitar tonight. My fingers are a bit tired for climbing today. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

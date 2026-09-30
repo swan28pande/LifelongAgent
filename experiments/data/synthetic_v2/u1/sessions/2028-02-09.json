@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 711,
+  "date": "2028-02-09",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How's your Wednesday starting out in Chicago? Do you have a busy day ahead at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting out pretty well, actually. I decided to make a matcha latte this morning to get going."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a matcha latte sounds like a great choice, especially since your doctor suggested cutting back on caffeine. How is that working out for you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually going really well. I feel like my energy is much more stable. I'm just getting ready for some client calls now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Are you dressed up for the video calls today, or keeping it comfortable?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just keeping it simple with a polo shirt today. It's comfortable enough for working at my desk but still looks fine on camera."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect balance. Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I actually just finished eating. I had a meal-prep burrito bowl that I made earlier."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and convenient! Do you and Sam usually prep your meals together, or do you do your own thing?"
+    },
+    {
+      "speaker": "user",
+      "text": "We mostly do our own thing since our schedules are so different, but we occasionally share ingredients."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. Do you have any plans to head to the climbing gym later, or are you taking it easy tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to head to the rock climbing gym for a couple of hours after work to clear my head."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to unwind. Have a great climb, and I hope the rest of your client calls go smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

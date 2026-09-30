@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 461,
+  "date": "2027-06-04",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Friday. How are things going at the logistics firm today? Ready for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are pretty busy today, to be honest. I actually wore a button-down shirt to the office today because we have some big client meetings this afternoon, so I had to look a bit sharper than usual."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, client meetings! Best of luck with those, I'm sure the button-down shirt looks great. Since you had a busy morning preparing, did you get a chance to grab some caffeine, or are you still keeping your doctor's advice in mind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am! I've been being careful, so I had a matcha latte this morning instead of my usual heavy coffee. It gave me a nice, steady energy boost for the meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart choice! A matcha latte is perfect for that focused, jitter-free energy. Have you managed to take a break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I just finished up. I grabbed a deli sandwich from the spot around the corner—completely vegetarian, of course, but super filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A good deli sandwich is always a solid lunch choice on a hectic day. How have things been at home? How is your roommate, Sam, doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing really well, thanks for asking! We're actually planning to hang out and watch some movies this weekend since we've both been so busy lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. By the way, how is your guitar playing coming along? Have you had much time for that or rock climbing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't done much rock climbing this week, but I've been playing my guitar almost every night. It's a really nice way to decompress after work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. There's nothing quite like getting lost in some music after a long day of account managing. Well, I hope those afternoon client meetings go smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to prep the final slides now. Have a great weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

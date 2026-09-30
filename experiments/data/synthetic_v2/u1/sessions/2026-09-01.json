@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 185,
+  "date": "2026-09-01",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Tuesday. How is your day starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, thanks. Doing a bit of remote work from the living room today. I'm keeping it super comfortable and just wearing an oversized hoodie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Cozy! An oversized hoodie is the perfect remote work uniform. Have you fueled up with some caffeine yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh absolutely. I made myself an oat milk latte earlier to get the brain moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect choice. How are things going around the apartment? Is Sam keeping busy too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Sam's good! He's working a lot lately, but we managed to catch up yesterday evening and watch a movie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. And how about your own work? Are things chaotic at the logistics firm, or is your account coordinator role keeping a steady pace today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually a bit hectic with some end-of-summer shipping rushes, but I'm managing. I actually just stepped away from my desk to eat lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Breaks are essential on busy days! What are you having?"
+    },
+    {
+      "speaker": "user",
+      "text": "I put together a quick homemade salad. Trying to keep it light so I don't get that afternoon slump."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great way to stay energized. Do you have any plans to unwind after work? Maybe some rock climbing or strumming the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just practice some guitar tonight. My fingers are a bit sore for climbing today. And I need to text Ana about some wedding details for November anyway!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

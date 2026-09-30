@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 55,
+  "date": "2026-04-24",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Friday. How is your day starting out in Austin? Are you getting some training runs in for the Austin half marathon today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Training is going well, actually. I decided to head out early this morning before the Texas heat got too bad. I just threw on a fitted t-shirt and my running shorts and hit the trail."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start a Friday! Getting it done before the sun gets too intense is definitely the way to go there. How did the run feel?"
+    },
+    {
+      "speaker": "user",
+      "text": "It felt really strong. I had a lot of energy, probably because I had a cup of black coffee right before I walked out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, simple and effective. Did you have a busy morning at the logistics firm after that, or has it been a relatively quiet Friday?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty busy, actually. Lots of shipping coordinates to update before the weekend. I barely had time to stop for lunch, so I just grabbed a deli sandwich from the place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the Friday rush is real. A deli sandwich is a solid, quick option when you're in a pinch. Hopefully you can wind down a bit now that the afternoon is here?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, things are finally starting to quiet down. Sam and I were talking about maybe heading to the climbing gym later this evening to loosen up after sitting at my desk all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Climbing sounds like the perfect way to stretch out and shake off the desk fatigue. Are you working on any specific routes at the gym lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "There's this one V4 overhang that's been giving me trouble. I'm hoping to finally top it out today if my arms aren't too tired from running."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with that V4! Focus on those foot holds and you've got this. Do you have any relaxed plans for the rest of the weekend, or is it mostly climbing and running?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! After climbing, I'll probably just hang out at the apartment and play some guitar. No big plans, just taking it easy."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

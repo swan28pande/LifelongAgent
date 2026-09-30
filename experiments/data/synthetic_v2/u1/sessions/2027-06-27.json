@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 484,
+  "date": "2027-06-27",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your day going over in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just having a quiet morning. I started my day with a decaf americano to keep things low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! It sounds like you're sticking to the doctor's advice on cutting back on caffeine. How are you feeling with the decaf?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually feeling pretty good, not missing the extra caffeine as much as I thought. I just got dressed and put on a button-down shirt because I'm heading out to meet a friend in a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a great Sunday look. Are you heading out to get some lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly. I actually just got back from grabbing some lunch. I had a really nice vegetarian ramen at a spot nearby."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a Sunday lunch. It's great that they had a good vegetarian option. Did Sam join you, or are they busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Sam had other plans today, so I just went solo. Sam and I did hang out yesterday and watch some TV though, which was nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing weekend. How have things been at the logistics firm lately? Ready for the upcoming week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things have been busy as usual in my role as an account manager, but I feel pretty caught up, so I'm not stressing about Monday too much."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the best way to head into a new week. Do you have any plans for the rest of your evening? Maybe some guitar practice or rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to play some guitar and take it easy for the rest of the night. No climbing today."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

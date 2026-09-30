@@ -1,0 +1,402 @@
+{
+  "user_id": "u2",
+  "knobs": {
+    "preference_domains": {
+      "ladder": "3",
+      "measured": "3",
+      "ok": true
+    },
+    "rule_types": {
+      "ladder": "required ['day_of_week'], allowed ['weekly_alternate', 'n_day_cycle', 'day_of_week', 'constant']",
+      "measured": "constant, day_of_week, n_day_cycle, weekly_alternate",
+      "ok": true
+    },
+    "shifts_per_domain": {
+      "ladder": "2",
+      "measured": "2",
+      "ok": true
+    },
+    "visibility_mix (E/I/U %)": {
+      "ladder": "80/20/0",
+      "measured": "83/17/0",
+      "ok": true
+    },
+    "lag_days": {
+      "ladder": "0-1",
+      "measured": "0-1",
+      "ok": true
+    },
+    "temporary_shifts": {
+      "ladder": "1",
+      "measured": "1",
+      "ok": true
+    },
+    "fact_changes": {
+      "ladder": "4",
+      "measured": "4",
+      "ok": true
+    },
+    "cross_domain_causes": {
+      "ladder": "0",
+      "measured": "0",
+      "ok": true
+    },
+    "distractors": {
+      "ladder": "1",
+      "measured": "1",
+      "ok": true
+    },
+    "exception_rate": {
+      "ladder": "0.02",
+      "measured": "0.020",
+      "ok": true
+    },
+    "p_session": {
+      "ladder": "0.90",
+      "measured": "0.900",
+      "ok": true
+    },
+    "p_mention": {
+      "ladder": "0.90",
+      "measured": "0.906",
+      "ok": true
+    },
+    "other_people": {
+      "ladder": "False",
+      "measured": "False",
+      "ok": true
+    }
+  },
+  "sessions": 657,
+  "mentions_total": 1789,
+  "mention_reasons": {
+    "exception": 3,
+    "sampled": 1785,
+    "regime_start": 1
+  },
+  "retrospective_statements": 0,
+  "qa": {
+    "total": 50,
+    "by_type": {
+      "recall": 8,
+      "pattern_current": 3,
+      "pattern_at_time": 3,
+      "prediction": 4,
+      "change_detection": 4,
+      "attribution": 6,
+      "exception_vs_shift": 3,
+      "reversion": 2,
+      "fact_current": 2,
+      "fact_at_time": 4,
+      "fact_history": 2,
+      "event_status": 2,
+      "duration": 2,
+      "distractor_probe": 2,
+      "abstention": 3
+    },
+    "by_capability": {
+      "episodic_recall": 8,
+      "pattern_abstraction": 6,
+      "pattern_extrapolation": 4,
+      "temporal_change": 6,
+      "causal_reasoning": 8,
+      "exception_handling": 3,
+      "knowledge_update": 4,
+      "temporal_fact": 4,
+      "event_tracking": 2,
+      "temporal_arithmetic": 2,
+      "abstention": 3
+    },
+    "by_grading": {
+      "exact": 15,
+      "llm_judge": 31,
+      "date_exact": 4
+    },
+    "tags": {
+      "inferred": 5,
+      "no_session": 2,
+      "exception": 2,
+      "boundary": 3,
+      "shift": 14,
+      "reversion": 3,
+      "initial": 2,
+      "horizon_23d": 1,
+      "horizon_36d": 1,
+      "horizon_15d": 1,
+      "horizon_52d": 1,
+      "explicit": 10,
+      "implicit": 3,
+      "temporary": 2,
+      "control": 4,
+      "set": 3,
+      "empty": 1,
+      "single": 1,
+      "multi": 1,
+      "at_time": 1,
+      "happened": 2,
+      "allergy": 1,
+      "job": 1,
+      "relationship": 1
+    },
+    "answer_distribution": {
+      "abstention/abstention": {
+        "n": 3,
+        "top_answer": "not known",
+        "top_share": 0.333,
+        "entropy_bits": 1.585,
+        "distinct": 3
+      },
+      "attribution/breakfast": {
+        "n": 2,
+        "top_answer": "the new school year started",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "attribution/evening_show": {
+        "n": 2,
+        "top_answer": "became head of the science department at the same high school",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "attribution/workout": {
+        "n": 2,
+        "top_answer": "joined a tennis club",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "change_detection/breakfast": {
+        "n": 1,
+        "top_answer": "2027-10-21",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/evening_show": {
+        "n": 1,
+        "top_answer": "2026-11-06",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/workout": {
+        "n": 2,
+        "top_answer": "2026-06-29",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "distractor_probe/breakfast": {
+        "n": 2,
+        "top_answer": "no",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "duration/breakfast": {
+        "n": 1,
+        "top_answer": "430",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "duration/evening_show": {
+        "n": 1,
+        "top_answer": "250",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "event_status/events": {
+        "n": 2,
+        "top_answer": "strained his lower back lifting boxes",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "exception_vs_shift/breakfast": {
+        "n": 1,
+        "top_answer": "yes",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "exception_vs_shift/evening_show": {
+        "n": 1,
+        "top_answer": "no",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "exception_vs_shift/workout": {
+        "n": 1,
+        "top_answer": "yes",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_at_time/hobbies": {
+        "n": 1,
+        "top_answer": "woodworking, tennis",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_at_time/job": {
+        "n": 2,
+        "top_answer": "high school chemistry teacher",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "fact_at_time/pets": {
+        "n": 1,
+        "top_answer": "none",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_current/hobbies": {
+        "n": 1,
+        "top_answer": "tennis",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_current/relationship": {
+        "n": 1,
+        "top_answer": "married to grace",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_history/job": {
+        "n": 1,
+        "top_answer": "head of the science department at the same high school",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_history/pets": {
+        "n": 1,
+        "top_answer": "cat named olive",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/breakfast": {
+        "n": 1,
+        "top_answer": "eggs and toast or smoothies on weekdays, bagel fri, pancakes sat",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/evening_show": {
+        "n": 1,
+        "top_answer": "alternating weeks of a cooking competition show and nature documentaries",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/workout": {
+        "n": 1,
+        "top_answer": "tennis tue/thu/sat, gym mon/fri, run wed, rest sun",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/breakfast": {
+        "n": 1,
+        "top_answer": "eggs and toast or smoothies on weekdays, bagel fri, pancakes sat",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/evening_show": {
+        "n": 1,
+        "top_answer": "alternating weeks of a sci-fi series and sitcom reruns",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/workout": {
+        "n": 1,
+        "top_answer": "tennis tue/thu/sat, gym mon/fri, run wed, rest sun",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "prediction/breakfast": {
+        "n": 2,
+        "top_answer": "eggs and toast",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "prediction/evening_show": {
+        "n": 1,
+        "top_answer": "sitcom reruns",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "prediction/workout": {
+        "n": 1,
+        "top_answer": "tennis",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "recall/breakfast": {
+        "n": 3,
+        "top_answer": "protein smoothie",
+        "top_share": 0.333,
+        "entropy_bits": 1.585,
+        "distinct": 3
+      },
+      "recall/evening_show": {
+        "n": 2,
+        "top_answer": "sitcom reruns",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "recall/workout": {
+        "n": 3,
+        "top_answer": "gym weights",
+        "top_share": 0.333,
+        "entropy_bits": 1.585,
+        "distinct": 3
+      },
+      "reversion/workout": {
+        "n": 2,
+        "top_answer": "tennis tue/thu/sat, gym mon/fri, run wed, rest sun",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      }
+    }
+  },
+  "qa_pool": {
+    "total": 389,
+    "by_type": {
+      "recall": 182,
+      "pattern_current": 3,
+      "pattern_at_time": 10,
+      "prediction": 91,
+      "change_detection": 7,
+      "attribution": 6,
+      "exception_vs_shift": 10,
+      "reversion": 3,
+      "fact_current": 5,
+      "fact_at_time": 40,
+      "fact_history": 3,
+      "event_status": 7,
+      "duration": 9,
+      "distractor_probe": 2,
+      "abstention": 11
+    }
+  }
+}

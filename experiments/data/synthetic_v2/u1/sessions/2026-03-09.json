@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 9,
+  "date": "2026-03-09",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is the morning starting out for you down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going okay, just trying to wake up. I'm sitting here sipping some black coffee and getting ready to face the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing like a good cup of black coffee to get a Monday moving. Are you heading into the logistics office today, or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Working from home today, thankfully. I dressed pretty casually because of it—just wearing a fitted t-shirt and some comfortable pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, the classic work-from-home uniform. Sounds comfy! Do you have a busy lineup of account coordinator tasks today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, a few client calls later, but I'm hoping to keep my head down and power through. I'll probably just take a quick break to eat a deli sandwich I made for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a perfect quick WFH lunch. Did you load it up with some good vegetarian stuff?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, plenty of roasted veggies, hummus, and cheese. It's my go-to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious. Did you manage to get any climbing in over the weekend to recharge before the workweek?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I went to the climbing gym on Saturday and worked on a tricky boulder problem. My forearms are still a bit sore today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh nice, those boulder problems can really wear you out! Did you get any time to play your guitar too, or was it a purely active weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a bit last night. Just noodling around with some acoustic songs in the living room while Sam was out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a peaceful way to wind down a Sunday evening. I hope those client calls go smoothly for you today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to get back to it. Catch you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

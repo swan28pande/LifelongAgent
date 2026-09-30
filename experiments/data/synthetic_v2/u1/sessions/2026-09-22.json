@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 206,
+  "date": "2026-09-22",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday starting out in Austin? Hope you're having a good morning."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just trying to stay on top of things today. I actually started my morning with a matcha latte instead of my usual coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte! That sounds like a great way to stick to that advice from your check-up about cutting back on caffeine. How did you like it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was actually really good, surprisingly refreshing! Since the weather is still pretty warm, I just paired it with a simple fitted t-shirt and some casual pants for the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, keeping it comfortable. How are things looking at the logistics firm today? Is your workload as an account coordinator keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's definitely busy. We have a lot of shipments to track today, so I've been glued to my desk. I barely had time to think about food, but I managed to grab a deli sandwich for lunch a little while ago."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is always a solid, quick option when work gets hectic. I hope you got a few minutes to actually relax while eating it! How are things at home? Have you and your roommate Sam been up to much lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've both been pretty busy, but we did catch up a bit yesterday evening. Just the usual roommate stuff, keeping the place clean and sharing some music recommendations."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds nice and low-key. By the way, with November getting closer, how are things going with your sister Ana's wedding preparations? Everything on track?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, things are moving right along! Ana is busy finalizing all the little details, but she seems really happy and excited. It's going to be a great event."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear, it's going to be here before you know it! Do you have any plans to unwind after work today? Maybe some rock climbing or playing the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely planning to play some guitar tonight to decompress after all the logistics tracking. It's the perfect way to end the day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Leo might help coordinate transportation for out-of-town guests for his sister's wedding."
+  ]
+}

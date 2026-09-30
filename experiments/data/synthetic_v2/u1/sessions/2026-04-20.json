@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 51,
+  "date": "2026-04-20",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is your morning starting out in Austin? Did you get any climbing in over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! My morning is going alright, pretty quiet. I didn't actually make it out climbing, but I did play some guitar yesterday. Just kicked off today with a black coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a bit of guitar is a great way to ease into the week. A simple black coffee is always a solid start too. Are you heading into the logistics office today, or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. Kept it super casual and just threw on a fitted t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Working from home in a fitted t-shirt sounds like the perfect way to handle a Monday. How is the workload looking for you as an account coordinator today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually surprisingly manageable today, not too chaotic yet. Sam is also working from our living room today, so it's a bit of a co-working vibe."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, it's always nice when you and Sam can share the workspace and keep each other company. Have you taken a break for lunch yet, or are you still powering through?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just took a break a little bit ago. I made myself a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a classic quick lunch. Did you put anything interesting on it, or keep it simple?"
+    },
+    {
+      "speaker": "user",
+      "text": "Kept it pretty simple with some cheese, lettuce, tomato, and spicy mustard. Hit the spot though!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Can't go wrong with that combo, especially the spicy mustard. Do you have any plans to get some rock climbing in later this week, or maybe some more guitar practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm hoping to head to the climbing gym on Wednesday evening if work stays this calm. For tonight, I'll probably just stick to practicing a few new chords on the guitar."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

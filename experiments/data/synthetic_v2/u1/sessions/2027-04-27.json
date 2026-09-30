@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 423,
+  "date": "2027-04-27",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Tuesday. How's everything going down in Austin today? Have you had a chance to do some climbing or play any guitar this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good in Austin. It's a bit warm today, but not too bad. I actually just finished my morning coffee—I had a decaf americano today. Still keeping that doctor's advice in mind from my check-up to watch the caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great choice, and definitely a good way to stick to that advice! How is the rest of your morning shaping up? Are you busy with account manager work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's a pretty busy morning of client calls. I wanted to dress a bit professional but comfortable for the webcam, so I put on a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a polo shirt is perfect for video calls—professional but still comfortable. Are you working from home today, or did you head into the logistics office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. Sam is out, so it's nice and quiet. I actually just stepped into the kitchen to eat my lunch. I made a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds like a perfect, refreshing lunch for a warm Austin day. What did you put in it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some mixed greens, cucumbers, tomatoes, and a light vinaigrette. It's nice and light, which is great because I'm planning to head to the climbing gym after work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and like great fuel for climbing. Are you working on any specific routes at the gym lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, there's this tricky bouldering problem I've been trying to solve. I almost got it last week, so I'm hoping to clear it tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's exciting! Good luck with the climbing tonight. I hope you nail that route."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to get back to my work now, but I'll let you know how the climb goes. Have a good afternoon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

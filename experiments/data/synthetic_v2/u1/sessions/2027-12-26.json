@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 666,
+  "date": "2027-12-26",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Hope you had a wonderful Christmas yesterday. How is your Sunday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just a quiet post-holiday Sunday. I started the day with a decaf americano, still trying to stick to that doctor's advice about cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! Good job sticking to that advice. Are you just relaxing at home today, or do you have any plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both. I'm actually wearing a button-down shirt today because I have a video call later with some family who couldn't make it to Ana's wedding last month, but otherwise I'm just taking it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that sounds like a nice way to catch up with everyone! Have you had a chance to eat yet, or are you still figuring out your meals?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished lunch. I made some vegetarian ramen here at the apartment. Sam and I bought some really good broth last week, so I used that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen sounds perfect for a chilly December day in Chicago. Did Sam join you for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Sam went out to run some errands this afternoon. But we did catch up this morning over some tea."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice. Have you had any time to practice your guitar or do any rock climbing this weekend, or has it been strictly holiday downtime?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just guitar yesterday, played a few holiday tunes. I'm planning to go climbing tomorrow evening after work to get moving again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a solid plan to ease back into your routine. I hope the video call with your family goes well!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

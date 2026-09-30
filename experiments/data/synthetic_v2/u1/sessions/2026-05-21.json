@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 82,
+  "date": "2026-05-21",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Thursday going? I know you've been preparing for the Austin half marathon this month—how are things going with that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, I ran the half marathon and finished in 1:58 today! I'm absolutely exhausted but so happy I did it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, congratulations, Leo! Finishing in 1:58 is an incredible achievement. How are you feeling physically after pushing through those 13.1 miles?"
+    },
+    {
+      "speaker": "user",
+      "text": "My legs are definitely feeling like jelly, but the adrenaline is still keeping me going. Once I got home, I immediately showered and changed into an oversized hoodie to stay warm and comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds like the perfect post-race uniform. You've definitely earned some comfort today. Did you manage to get some caffeine in you before or after the run?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just had a black coffee this morning before the race to give myself a quick kick, but I've been sticking to water since then to rehydrate."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. Rehydration is key. Have you been able to refuel with a solid meal yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I was starving! I had a deli sandwich for lunch, which really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a well-deserved lunch. Did Sam get to watch you cross the finish line, or are you planning to celebrate later?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Sam actually came out to cheer me on near the end, which was a huge boost. I think I'm just going to relax at home and maybe play some guitar later this evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, low-key way to spend the rest of your afternoon in Austin. You've earned a relaxing night of music."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm still riding the high of that 1:58 finish time, so I'll probably just take it easy and rest up."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {
+      "half_marathon.1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

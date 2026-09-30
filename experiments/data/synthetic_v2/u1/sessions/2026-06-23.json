@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 115,
+  "date": "2026-06-23",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Tuesday. How has your day been going so far in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty good day. I started things off with an oat milk latte this morning, which really hit the spot. It's warm today, so I just threw on a fitted t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a comfortable and classic start to the day. How are things looking at the logistics firm? Busy day for an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been a bit quieter than usual, which is a nice change of pace. I had time to eat a homemade salad for lunch today instead of rushing through it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds delicious and refreshing. Glad you got a bit of a breather today! How is your roommate, Sam, doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We were just catching up in the kitchen yesterday. Everything is good on that front."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome to hear. Have you had any time for rock climbing lately, or has it been too hot for outdoor climbs?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've mostly been sticking to the indoor gym lately to escape the Texas heat, but I did get a good climbing session in a couple of days ago."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move staying indoors! Have you been playing much guitar lately, or is that on the back burner for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually practiced for about half an hour last night. Just running through some chords and trying to keep my fingers in shape."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! It's always nice to find some time to play. I hope the rest of your evening is just as relaxing."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I'm just planning on winding down now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user and their roommate Sam usually try to go rock climbing together."
+  ]
+}

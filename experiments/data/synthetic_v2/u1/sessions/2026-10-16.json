@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 230,
+  "date": "2026-10-16",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Friday. How is your day going down in Austin? Did you get a chance to do any rock climbing this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, my Friday is going well. Work as an account coordinator has been pretty hectic, but I did manage to hit the climbing gym on Wednesday. Today is a bit more relaxed, and since the Austin weather is still warm, I just threw on a fitted t-shirt and jeans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A fitted t-shirt is perfect for those warm Austin days. Did you start your morning with a coffee, or are you still watching the caffeine like your doctor suggested?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm still being careful! I had a decaf americano this morning. It actually hit the spot without making me jittery."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, a decaf americano is a solid choice to keep the habit going without the caffeine hit. What did you end up doing for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made a homemade salad. I wanted something fresh and light today, so it was perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds delicious and healthy. It's great that you're keeping up with your vegetarian meals. Since we're heading into mid-October, how are the plans coming along for your sister Ana's wedding next month?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're coming together! Ana is getting everything finalized, and I'm just getting my suit ready. I can't believe it's already next month."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really sneaks up on you! Are you planning to play any guitar this weekend, or maybe hang out with Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably both! Sam and I might catch a movie tomorrow, but tonight I'm definitely going to spend some quiet time playing my guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to wind down after a busy week. I hope you have a great, relaxing evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

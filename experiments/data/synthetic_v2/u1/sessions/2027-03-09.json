@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 374,
+  "date": "2027-03-09",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Tuesday. How's your day going so far at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It is busy as usual, but I started my morning with a matcha latte so I've got some good energy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great start. What's the vibe at the office today? Are you dressed up for client meetings or keeping it casual?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both today. I'm wearing a polo shirt, which is perfect for being presentable but comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a perfect choice for that balance. Did you get a chance to step out for a break, or have you been glued to your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "I managed to take a quick break to eat a deli sandwich that I brought from home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice. I assume it was a delicious vegetarian deli sandwich, keeping up with your usual diet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, exactly! It was a vegetarian deli sandwich with lots of roasted veggies and hummus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious! How have things been at home? Have you and your roommate Sam been up to much lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things with Sam are good. We've actually been planning to jam together tonight, so I'll probably get some guitar practice in later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun evening plan! Playing guitar is a great way to wind down after a busy day of account management."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's the perfect way to relax before the rest of the workweek."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

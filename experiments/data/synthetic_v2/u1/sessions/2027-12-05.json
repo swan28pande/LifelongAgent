@@ -1,0 +1,78 @@
+{
+  "user_id": "u1",
+  "day": 645,
+  "date": "2027-12-05",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How's your morning starting off in Chicago? Did you and Sam get up to anything fun, or are you having a relaxing start?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's a pretty quiet morning here. Sam is actually still asleep, but I've been up for a bit. I decided to make myself a matcha latte today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, especially since your doctor suggested cutting back on the heavy caffeine at your check-up. Are you planning on doing any rock climbing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing today, actually. I'm just taking it easy. I did put on a button-down shirt though, since I'm planning to meet up with a friend later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a button-down shirt is a great choice for a Sunday meetup. How have things been at the logistics firm lately? Still busy as an account manager?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, the logistics firm is always busy, but keeping up with all the accounts is going well. It's nice to have the weekend to step away from it all."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely, a weekend break is well-deserved. Have you had any time to practice your guitar lately, or have things been too busy since you got back from your sister Ana's wedding in San Antonio?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a bit of guitar yesterday evening! It was nice to just sit and play. And yeah, Ana's wedding was so beautiful, it's nice to be back into a normal routine now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds really peaceful. Playing guitar is such a great way to unwind. Are you thinking about what to have for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I just finished eating. I ended up having ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a chilly December day! Did you make it at home or find a good spot nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just made a quick batch at home. It was super cozy. I think I'm going to head out for my meetup now!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a wonderful time meeting up with your friend, Leo! Enjoy the rest of your Sunday."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Ana's wedding was last month"
+  ]
+}

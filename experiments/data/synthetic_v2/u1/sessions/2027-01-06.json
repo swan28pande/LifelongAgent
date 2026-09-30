@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 312,
+  "date": "2027-01-06",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just working from home today. I'm wearing an oversized hoodie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds like the perfect cozy work-from-home wear. How are things at the logistics firm today? Staying busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a lot of shipments coming through Austin this week, so my inbox is a bit flooded. But I'm taking a quick break to eat a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a great lunch option. Since you're vegetarian, what did you put in it today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I threw in some chickpeas, cucumbers, cherry tomatoes, and a simple vinaigrette."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and super fresh! Did you have your morning coffee to help you power through the morning rush?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I had a decaf americano this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A decaf americano is a great choice. Have you been able to get any rock climbing in lately, or has work kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't gone yet this week, but I might head to the climbing gym later this evening if I finish up my work on time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind after a busy day. Are you planning to go with your roommate Sam, or are you heading out solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually busy tonight, so I'll probably just go solo and work on some bouldering routes. Or I might just stay home and play some guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Both options sound great! I hope you have a relaxing evening, whatever you choose."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

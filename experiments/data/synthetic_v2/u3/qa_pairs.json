@@ -1,0 +1,1165 @@
+[
+  {
+    "id": "u3_q0013",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "What was Sofia's morning drink on Friday, 2026-07-17?",
+    "answer": "chai latte",
+    "answer_type": "value",
+    "accept": [
+      "chai latte"
+    ],
+    "evidence_days": [
+      139
+    ],
+    "recency_distance_days": 592,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "boundary"
+    ]
+  },
+  {
+    "id": "u3_q0020",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "What was Sofia's morning drink on Sunday, 2026-04-19?",
+    "answer": "hot chocolate",
+    "answer_type": "value",
+    "accept": [
+      "hot chocolate"
+    ],
+    "evidence_days": [
+      50
+    ],
+    "recency_distance_days": 681,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u3_q0049",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "lunch",
+    "difficulty_user": 3,
+    "question": "What was Sofia's lunch on Wednesday, 2026-05-27?",
+    "answer": "cafeteria salad",
+    "answer_type": "value",
+    "accept": [
+      "cafeteria salad"
+    ],
+    "evidence_days": [
+      81,
+      82,
+      87
+    ],
+    "recency_distance_days": 644,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred",
+      "no_session",
+      "boundary"
+    ]
+  },
+  {
+    "id": "u3_q0052",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "lunch",
+    "difficulty_user": 3,
+    "question": "What was Sofia's lunch on Tuesday, 2028-02-01?",
+    "answer": "sourdough sandwich",
+    "answer_type": "value",
+    "accept": [
+      "sourdough sandwich"
+    ],
+    "evidence_days": [
+      701,
+      704,
+      705
+    ],
+    "recency_distance_days": 26,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred"
+    ]
+  },
+  {
+    "id": "u3_q0084",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "What was Sofia's commute on Monday, 2026-03-02?",
+    "answer": "night bus",
+    "answer_type": "value",
+    "accept": [
+      "night bus"
+    ],
+    "evidence_days": [
+      23,
+      58,
+      65
+    ],
+    "recency_distance_days": 666,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred",
+      "no_session"
+    ]
+  },
+  {
+    "id": "u3_q0085",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "What was Sofia's commute on Saturday, 2027-09-25?",
+    "answer": "got a ride from Tom",
+    "answer_type": "value",
+    "accept": [
+      "got a ride from Tom"
+    ],
+    "evidence_days": [
+      574
+    ],
+    "recency_distance_days": 157,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "exception"
+    ]
+  },
+  {
+    "id": "u3_q0129",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "podcast",
+    "difficulty_user": 3,
+    "question": "What was Sofia's podcast on Monday, 2027-10-25?",
+    "answer": "dog training podcast",
+    "answer_type": "value",
+    "accept": [
+      "dog training podcast"
+    ],
+    "evidence_days": [
+      604
+    ],
+    "recency_distance_days": 127,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "boundary"
+    ]
+  },
+  {
+    "id": "u3_q0131",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "podcast",
+    "difficulty_user": 3,
+    "question": "What was Sofia's podcast on Friday, 2027-08-20?",
+    "answer": "Italian lessons podcast",
+    "answer_type": "value",
+    "accept": [
+      "Italian lessons podcast"
+    ],
+    "evidence_days": [
+      538
+    ],
+    "recency_distance_days": 193,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u3_q0150",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "What is Sofia's current morning drink routine?",
+    "answer": "by day of week: drip coffee on Mon/Wed; iced americano on Tue/Thu; matcha latte on Fri; hot chocolate on Sat/Sun (since 2027-07-13)",
+    "answer_type": "free_text",
+    "accept": [
+      "drip coffee Mon/Wed, iced americano Tue/Thu, matcha Fri, hot chocolate weekends"
+    ],
+    "evidence_days": [
+      501,
+      503,
+      728,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u3_q0151",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "lunch",
+    "difficulty_user": 3,
+    "question": "What is Sofia's current lunch routine?",
+    "answer": "alternates week by week: homemade burrito bowl, then sourdough sandwich, repeating (7-day blocks starting Sat 2027-06-26) (since 2027-06-26)",
+    "answer_type": "free_text",
+    "accept": [
+      "alternating weeks of homemade burrito bowls and sourdough sandwiches"
+    ],
+    "evidence_days": [
+      483,
+      488,
+      728,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u3_q0152",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "What is Sofia's current commute routine?",
+    "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun (since 2027-12-28)",
+    "answer_type": "free_text",
+    "accept": [
+      "driving on weekdays"
+    ],
+    "evidence_days": [
+      668,
+      669,
+      726,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "reversion"
+    ]
+  },
+  {
+    "id": "u3_q0158",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "What was Sofia's commute routine in January 2028?",
+    "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+    "answer_type": "free_text",
+    "accept": [
+      "driving on weekdays"
+    ],
+    "evidence_days": [
+      668,
+      669,
+      670
+    ],
+    "recency_distance_days": 61,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "reversion"
+    ]
+  },
+  {
+    "id": "u3_q0166",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "What was Sofia's morning drink routine in May 2027?",
+    "answer": "alternates week by week: drip coffee, then matcha latte, repeating (7-day blocks starting Thu 2026-10-08)",
+    "answer_type": "free_text",
+    "accept": [
+      "alternating weeks of drip coffee and matcha lattes"
+    ],
+    "evidence_days": [
+      222,
+      226,
+      227
+    ],
+    "recency_distance_days": 504,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u3_q0168",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "podcast",
+    "difficulty_user": 3,
+    "question": "What was Sofia's podcast routine in June 2026?",
+    "answer": "alternates week by week: health news podcast, then comedy podcast, repeating (7-day blocks starting Sun 2026-03-01)",
+    "answer_type": "free_text",
+    "accept": [
+      "alternating weeks of a health news podcast and a comedy podcast"
+    ],
+    "evidence_days": [
+      4,
+      5,
+      7
+    ],
+    "recency_distance_days": 724,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "initial"
+    ]
+  },
+  {
+    "id": "u3_q0177",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "What will Sofia's morning drink most likely be on Friday, 2028-03-17? Explain the reasoning.",
+    "answer": "matcha latte. Reasoning: since 2027-07-13 the routine has been by day of week: drip coffee on Mon/Wed; iced americano on Tue/Thu; matcha latte on Fri; hot chocolate on Sat/Sun. 2028-03-17 is a Friday, so matcha latte.",
+    "answer_type": "value",
+    "accept": [
+      "matcha latte"
+    ],
+    "evidence_days": [
+      723,
+      728,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_18d"
+    ]
+  },
+  {
+    "id": "u3_q0195",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "lunch",
+    "difficulty_user": 3,
+    "question": "What will Sofia's lunch most likely be on Wednesday, 2028-03-29? Explain the reasoning.",
+    "answer": "sourdough sandwich. Reasoning: since 2027-06-26 the routine has been alternates week by week: homemade burrito bowl, then sourdough sandwich, repeating (7-day blocks starting Sat 2027-06-26). 2028-03-29 is in 7-day block 40 since the anchor (block index 39 mod 2 = 1), so sourdough sandwich.",
+    "answer_type": "value",
+    "accept": [
+      "sourdough sandwich"
+    ],
+    "evidence_days": [
+      726,
+      728,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_30d"
+    ]
+  },
+  {
+    "id": "u3_q0223",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "What will Sofia's commute most likely be on Sunday, 2028-03-12? Explain the reasoning.",
+    "answer": "no commute. Reasoning: since 2027-12-28 the routine has been by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun. 2028-03-12 is a Sunday, so no commute.",
+    "answer_type": "value",
+    "accept": [
+      "no commute"
+    ],
+    "evidence_days": [
+      725,
+      726,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_13d"
+    ]
+  },
+  {
+    "id": "u3_q0242",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "podcast",
+    "difficulty_user": 3,
+    "question": "What will Sofia's podcast most likely be on Sunday, 2028-03-26? Explain the reasoning.",
+    "answer": "comedy podcast. Reasoning: since 2027-10-24 the routine has been by day of week: dog training podcast on Mon/Wed; true-crime podcast on Tue/Thu; comedy podcast on Fri/Sat/Sun. 2028-03-26 is a Sunday, so comedy podcast.",
+    "answer_type": "value",
+    "accept": [
+      "comedy podcast"
+    ],
+    "evidence_days": [
+      725,
+      726,
+      728
+    ],
+    "recency_distance_days": 3,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_27d"
+    ]
+  },
+  {
+    "id": "u3_q0250",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "When did Sofia's morning drink routine change from the drip coffee / matcha latte routine to the drip coffee / hot chocolate / iced americano / matcha latte routine?",
+    "answer": "2027-07-13 (first observed 2027-07-14)",
+    "answer_type": "date",
+    "accept": [
+      "2027-07-13",
+      "2027-07-14"
+    ],
+    "evidence_days": [
+      499,
+      501
+    ],
+    "recency_distance_days": 230,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "uncaused",
+      "bounded"
+    ]
+  },
+  {
+    "id": "u3_q0253",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "lunch",
+    "difficulty_user": 3,
+    "question": "When did Sofia's lunch routine change from the lunch with Tom / sourdough sandwich routine to the homemade burrito bowl / sourdough sandwich routine?",
+    "answer": "2027-06-26",
+    "answer_type": "date",
+    "accept": [
+      "2027-06-26"
+    ],
+    "evidence_days": [
+      479,
+      483
+    ],
+    "recency_distance_days": 248,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "explicit"
+    ]
+  },
+  {
+    "id": "u3_q0254",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "When did Sofia's commute routine change from the night bus / no commute / rideshare routine to the light rail / no commute routine?",
+    "answer": "2026-10-07",
+    "answer_type": "date",
+    "accept": [
+      "2026-10-07"
+    ],
+    "evidence_days": [
+      218,
+      221
+    ],
+    "recency_distance_days": 510,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "implicit"
+    ]
+  },
+  {
+    "id": "u3_q0260",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "podcast",
+    "difficulty_user": 3,
+    "question": "When did Sofia's podcast routine change from Italian lessons podcast to the comedy podcast / dog training podcast / true-crime podcast routine?",
+    "answer": "2027-10-24 (first observed 2027-10-25)",
+    "answer_type": "date",
+    "accept": [
+      "2027-10-24",
+      "2027-10-25"
+    ],
+    "evidence_days": [
+      601,
+      604
+    ],
+    "recency_distance_days": 127,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "explicit",
+      "bounded"
+    ]
+  },
+  {
+    "id": "u3_q0261",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "Why did Sofia's morning drink routine change around 2026-07-19?",
+    "answer": "came down with the flu",
+    "answer_type": "free_text",
+    "accept": [
+      "came down with the flu"
+    ],
+    "evidence_days": [
+      141
+    ],
+    "recency_distance_days": 590,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "explicit",
+      "temporary"
+    ]
+  },
+  {
+    "id": "u3_q0263",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "Why did Sofia's morning drink routine change around 2027-07-13?",
+    "answer": "No reason was stated.",
+    "answer_type": "abstain",
+    "accept": [
+      "no reason was stated"
+    ],
+    "evidence_days": [
+      501
+    ],
+    "recency_distance_days": 230,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "uncaused",
+      "shift"
+    ]
+  },
+  {
+    "id": "u3_q0265",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "lunch",
+    "difficulty_user": 3,
+    "question": "Why did Sofia's lunch routine change around 2027-02-15?",
+    "answer": "got engaged to Tom",
+    "answer_type": "free_text",
+    "accept": [
+      "got engaged to Tom"
+    ],
+    "evidence_days": [
+      350,
+      353
+    ],
+    "recency_distance_days": 378,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "implicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u3_q0267",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "Why did Sofia's commute routine change around 2026-10-07?",
+    "answer": "switched jobs to become a day-shift nurse at an outpatient clinic",
+    "answer_type": "free_text",
+    "accept": [
+      "switched jobs to become a day-shift nurse at an outpatient clinic"
+    ],
+    "evidence_days": [
+      220,
+      221
+    ],
+    "recency_distance_days": 510,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "implicit",
+      "shift",
+      "cross_domain"
+    ]
+  },
+  {
+    "id": "u3_q0269",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "Why did Sofia's commute routine change around 2027-12-01?",
+    "answer": "sprained her ankle on a hike",
+    "answer_type": "free_text",
+    "accept": [
+      "sprained her ankle on a hike"
+    ],
+    "evidence_days": [
+      641
+    ],
+    "recency_distance_days": 90,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "implicit",
+      "temporary"
+    ]
+  },
+  {
+    "id": "u3_q0272",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "podcast",
+    "difficulty_user": 3,
+    "question": "Why did Sofia's podcast routine change around 2027-10-24?",
+    "answer": "adopted a rescue greyhound named Dash",
+    "answer_type": "free_text",
+    "accept": [
+      "adopted a rescue greyhound named Dash"
+    ],
+    "evidence_days": [
+      600,
+      604
+    ],
+    "recency_distance_days": 127,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "explicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u3_q0275",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "On Thursday, 2026-10-08, Sofia's morning drink was drip coffee instead of the usual cold brew. Was that a lasting change?",
+    "answer": "Yes - from 2026-10-08 the routine changed to alternating weeks of drip coffee and matcha lattes.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      222,
+      226,
+      227
+    ],
+    "recency_distance_days": 504,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "explicit"
+    ]
+  },
+  {
+    "id": "u3_q0285",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "On Wednesday, 2026-10-07, Sofia's commute was light rail instead of the usual night bus. Was that a lasting change?",
+    "answer": "Yes - from 2026-10-07 the routine changed to light rail on weekdays.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      221,
+      222,
+      224
+    ],
+    "recency_distance_days": 507,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "implicit"
+    ]
+  },
+  {
+    "id": "u3_q0287",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "podcast",
+    "difficulty_user": 3,
+    "question": "On Saturday, 2027-03-13, Sofia's podcast was an audiobook instead of the usual Italian lessons podcast. Was that a lasting change?",
+    "answer": "No - it was a one-off (a friend lent her one); the usual routine continued.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      378,
+      379
+    ],
+    "recency_distance_days": 352,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "exception"
+    ]
+  },
+  {
+    "id": "u3_q0294",
+    "type": "reversion",
+    "capability": "temporal_change",
+    "domain": "morning_drink",
+    "difficulty_user": 3,
+    "question": "What did Sofia's morning drink go back to after the period of ginger tea?",
+    "answer": "cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends - by day of week: cold brew on Mon/Tue/Thu; chai latte on Wed/Fri; hot chocolate on Sat/Sun",
+    "answer_type": "free_text",
+    "accept": [
+      "cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends"
+    ],
+    "evidence_days": [
+      155,
+      156,
+      157
+    ],
+    "recency_distance_days": 574,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "temporary"
+    ]
+  },
+  {
+    "id": "u3_q0296",
+    "type": "reversion",
+    "capability": "temporal_change",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "Is Sofia's commute still the no commute / rideshare routine?",
+    "answer": "No - that lasted from 2027-12-01 to 2027-12-27; then Sofia went back to driving on weekdays.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      667,
+      668
+    ],
+    "recency_distance_days": 63,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "temporary"
+    ]
+  },
+  {
+    "id": "u3_q0299",
+    "type": "fact_current",
+    "capability": "knowledge_update",
+    "domain": "job",
+    "difficulty_user": 3,
+    "question": "What is Sofia's current job?",
+    "answer": "day-shift nurse at an outpatient clinic",
+    "answer_type": "value",
+    "accept": [
+      "day-shift nurse at an outpatient clinic",
+      "day-shift nurse at an outpatient clinic"
+    ],
+    "evidence_days": [
+      220
+    ],
+    "recency_distance_days": 511,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u3_q0302",
+    "type": "fact_current",
+    "capability": "knowledge_update",
+    "domain": "hobbies",
+    "difficulty_user": 3,
+    "question": "What are Sofia's current hobbies?",
+    "answer": "sourdough baking",
+    "answer_type": "free_text",
+    "accept": [
+      "sourdough baking"
+    ],
+    "evidence_days": [
+      90
+    ],
+    "recency_distance_days": 641,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set"
+    ]
+  },
+  {
+    "id": "u3_q0308",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "job",
+    "difficulty_user": 3,
+    "question": "What was Sofia's job on 2026-10-03?",
+    "answer": "night-shift ER nurse at a city hospital",
+    "answer_type": "value",
+    "accept": [
+      "night-shift ER nurse at a city hospital",
+      "night-shift ER nurse at a city hospital"
+    ],
+    "evidence_days": [
+      1
+    ],
+    "recency_distance_days": 730,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u3_q0324",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "relationship",
+    "difficulty_user": 3,
+    "question": "What was Sofia's relationship status on 2026-11-04?",
+    "answer": "dating Tom",
+    "answer_type": "value",
+    "accept": [
+      "dating Tom",
+      "dating Tom"
+    ],
+    "evidence_days": [
+      3
+    ],
+    "recency_distance_days": 728,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u3_q0333",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "hobbies",
+    "difficulty_user": 3,
+    "question": "What were Sofia's hobbies on 2027-07-28?",
+    "answer": "sourdough baking",
+    "answer_type": "free_text",
+    "accept": [
+      "sourdough baking"
+    ],
+    "evidence_days": [
+      90
+    ],
+    "recency_distance_days": 641,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set"
+    ]
+  },
+  {
+    "id": "u3_q0338",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "pets",
+    "difficulty_user": 3,
+    "question": "What were Sofia's pets on 2027-10-23?",
+    "answer": "rescue greyhound named Dash",
+    "answer_type": "free_text",
+    "accept": [
+      "rescue greyhound named Dash"
+    ],
+    "evidence_days": [
+      600
+    ],
+    "recency_distance_days": 131,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set"
+    ]
+  },
+  {
+    "id": "u3_q0345",
+    "type": "fact_history",
+    "capability": "knowledge_update",
+    "domain": "city",
+    "difficulty_user": 3,
+    "question": "How has Sofia's city of residence changed over time?",
+    "answer": "Phoenix, Arizona (2026-03-01 to 2027-06-22); Tucson, Arizona (2027-06-23 to now)",
+    "answer_type": "free_text",
+    "accept": [
+      "Tucson, Arizona"
+    ],
+    "evidence_days": [
+      1,
+      483
+    ],
+    "recency_distance_days": 248,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "single"
+    ]
+  },
+  {
+    "id": "u3_q0347",
+    "type": "fact_history",
+    "capability": "knowledge_update",
+    "domain": "hobbies",
+    "difficulty_user": 3,
+    "question": "How have Sofia's hobbies changed over time?",
+    "answer": "salsa dancing (2026-03-01 to 2026-12-24); sourdough baking (2026-05-29 to now)",
+    "answer_type": "free_text",
+    "accept": [
+      "sourdough baking"
+    ],
+    "evidence_days": [
+      1,
+      90,
+      300
+    ],
+    "recency_distance_days": 431,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "multi"
+    ]
+  },
+  {
+    "id": "u3_q0350",
+    "type": "event_status",
+    "capability": "event_tracking",
+    "domain": "events",
+    "difficulty_user": 3,
+    "question": "What was the status of her flu on 2026-07-25?",
+    "answer": "came down with the flu (happened)",
+    "answer_type": "free_text",
+    "accept": [
+      "came down with the flu"
+    ],
+    "evidence_days": [
+      141
+    ],
+    "recency_distance_days": 590,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "at_time",
+      "happened"
+    ]
+  },
+  {
+    "id": "u3_q0352",
+    "type": "event_status",
+    "capability": "event_tracking",
+    "domain": "events",
+    "difficulty_user": 3,
+    "question": "What happened with the Italian course?",
+    "answer": "signed up for an online Italian course (happened, 2027-01-24)",
+    "answer_type": "free_text",
+    "accept": [
+      "signed up for an online Italian course"
+    ],
+    "evidence_days": [
+      330
+    ],
+    "recency_distance_days": 401,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "happened"
+    ]
+  },
+  {
+    "id": "u3_q0371",
+    "type": "duration",
+    "capability": "temporal_arithmetic",
+    "domain": "commute",
+    "difficulty_user": 3,
+    "question": "How long did Sofia's commute stay the night bus / no commute / rideshare routine?",
+    "answer": "220 days (2026-03-01 to 2026-10-06)",
+    "answer_type": "free_text",
+    "accept": [
+      "220"
+    ],
+    "evidence_days": [
+      1,
+      218
+    ],
+    "recency_distance_days": 513,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "initial"
+    ]
+  },
+  {
+    "id": "u3_q0372",
+    "type": "duration",
+    "capability": "temporal_arithmetic",
+    "domain": "lunch",
+    "difficulty_user": 3,
+    "question": "As of 2028-02-28, how long had Sofia's lunch been the homemade burrito bowl / sourdough sandwich routine?",
+    "answer": "248 days (since 2027-06-26)",
+    "answer_type": "free_text",
+    "accept": [
+      "248"
+    ],
+    "evidence_days": [
+      483,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u3_q0376",
+    "type": "distractor_probe",
+    "capability": "causal_reasoning",
+    "domain": "lunch",
+    "difficulty_user": 3,
+    "question": "Around 2026-05-29, started baking sourdough bread. Did that lead to any change in Sofia's lunch?",
+    "answer": "Yes - from 2026-06-01 Sofia's lunch changed to sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      90,
+      93
+    ],
+    "recency_distance_days": 638,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "implicit"
+    ]
+  },
+  {
+    "id": "u3_q0377",
+    "type": "distractor_probe",
+    "capability": "causal_reasoning",
+    "domain": "podcast",
+    "difficulty_user": 3,
+    "question": "Around 2027-09-11, her favorite podcast host announced a book tour. Did that lead to any change in Sofia's podcast?",
+    "answer": "No - nothing about Sofia's podcast changed because of it.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      562
+    ],
+    "recency_distance_days": 169,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u3_q0380",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 3,
+    "question": "What is Sofia's shoe size?",
+    "answer": "Not known - this was never mentioned.",
+    "answer_type": "abstain",
+    "accept": [
+      "not known"
+    ],
+    "evidence_days": [],
+    "recency_distance_days": 1,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shoe_size"
+    ]
+  },
+  {
+    "id": "u3_q0387",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 3,
+    "question": "Do you know Sofia's job?",
+    "answer": "day-shift nurse at an outpatient clinic",
+    "answer_type": "value",
+    "accept": [
+      "day-shift nurse at an outpatient clinic"
+    ],
+    "evidence_days": [
+      220
+    ],
+    "recency_distance_days": 511,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "job"
+    ]
+  },
+  {
+    "id": "u3_q0388",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 3,
+    "question": "Does Sofia have any hobbies, and if so what?",
+    "answer": "sourdough baking",
+    "answer_type": "value",
+    "accept": [
+      "sourdough baking"
+    ],
+    "evidence_days": [
+      90
+    ],
+    "recency_distance_days": 641,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "hobbies"
+    ]
+  }
+]

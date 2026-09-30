@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 617,
+  "date": "2027-11-07",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your weekend in Chicago going so far? Are you having a relaxing day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just a quiet Sunday. I actually just got dressed, wearing a button-down shirt today because Sam and I are planning to head out in a bit to run some errands."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is a nice, sharp choice for running errands! Have you had a chance to get some coffee or kickstart your morning yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a matcha latte earlier today while I was listening to some music. It was really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Matcha is always a great choice. Did you make it at home or grab it from a local spot?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made it at home. It's a nice little ritual. I also already ate; I had ramen for lunch today and it was really comforting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen sounds perfect for a cool November day in Chicago. Since you're vegetarian, did you make a veggie version at home or find a good spot that does a meatless broth?"
+    },
+    {
+      "speaker": "user",
+      "text": "I ordered it from a place down the street that does an amazing vegetarian broth. It's hard to find good vegetarian ramen sometimes, but this place always nails it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, a reliable vegetarian spot is a gem! How are things going with your job as an account manager at the logistics firm lately? Busy heading into the end of the year?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, things have been pretty hectic at the logistics firm. Being an account manager keeps me on my toes, especially with the holiday rush starting to ramp up. I'm trying to enjoy my Sunday before the workweek hits."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! The holiday season must be intense for logistics. I hope you get to relax this evening. By the way, how was your sister Ana's wedding in San Antonio? I know that was coming up recently!"
+    },
+    {
+      "speaker": "user",
+      "text": "It was absolutely beautiful! Everyone had a great time, and it was so good to see Ana so happy. It's nice to be back home now and getting back into my usual routine."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

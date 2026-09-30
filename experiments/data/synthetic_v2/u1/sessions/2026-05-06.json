@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 67,
+  "date": "2026-05-06",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just busy with logistics stuff. I started my day with a black coffee while checking emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Black coffee is always a solid way to jumpstart a busy morning. Are things crazy at work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a lot of shipments to coordinate today. I'm just wearing a fitted t-shirt to stay comfortable while I work from home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Comfort is key! A fitted t-shirt is perfect for a busy day. Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I just grabbed a deli sandwich for a quick bite so I could get back to my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and quick! Was it a vegetarian deli sandwich?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, a veggie deli sandwich. Simple but good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds tasty. Hopefully, you get a break from the spreadsheets later. Do you have any plans to play guitar or go rock climbing after work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar tonight to unwind. My hands are too tired for rock climbing today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing guitar is a perfect way to relax. Are you practicing anything specific, or just jamming?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just jamming and messing around with some chords. It's a nice escape from the screen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, it's great to have a screen-free hobby. Have a good evening jamming, and let me know if you need anything else!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Will do. Catch you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: training for the Austin half marathon"
+  ]
+}

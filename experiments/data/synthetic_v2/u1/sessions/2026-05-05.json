@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 66,
+  "date": "2026-05-05",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just trying to wake up. I'm sitting here with a black coffee, getting ready to look at some logistics spreadsheets."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the classic black coffee to kickstart the day. Are you heading into the office today or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from the apartment today. I'm keeping it super casual and wearing an oversized hoodie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comfortable. Is Sam around today, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is out running some errands, so it's nice and quiet here. I actually just took a break to make myself a deli sandwich for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A deli sandwich is a solid lunch choice. Have you been getting any rock climbing in lately, or has work been too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went climbing a couple of days ago! It was a great session, but my forearms are still a bit sore."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh nice! Are you still working on that same route, or trying something new?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, still trying to project that same V4. I think I'm going to take it easy tonight and play some guitar instead of training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing guitar sounds like a perfect way to relax and let those muscles recover. Do you have any specific songs you're practicing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just messing around with some acoustic fingerpicking stuff. It's a nice way to unwind after looking at spreadsheets all day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: training for the Austin half marathon this month"
+  ]
+}

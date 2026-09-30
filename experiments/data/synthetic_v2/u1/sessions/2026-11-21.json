@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 266,
+  "date": "2026-11-21",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Leo! How is your Saturday going in Austin? Are you planning to do some rock climbing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Saturday is going well. I actually decided to skip rock climbing today and just relax. I'm wearing a comfortable fitted t-shirt and just hanging out at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, relaxing start to the weekend. Sometimes you just need a break. Have you had your morning coffee yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a matcha latte this morning. I've been trying to keep the doctor's advice in mind about cutting back on caffeine, so that felt like a good choice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great choice, and matcha is delicious! How is your roommate Sam doing? Are they around today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is good, they went out to run some errands. We might play some guitar together later tonight, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds fun! Do you guys have a specific song you're practicing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not really, we just like to jam and see where it goes. It's a nice way to unwind after a busy week at the logistics firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Jamming is the best way to do it. Are you planning to make something special for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "For lunch today, I actually just put together a quick deli sandwich. Since I'm vegetarian, I used some plant-based slices and some fresh greens."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic deli sandwich is always a solid lunch choice. How was Ana's wedding in San Antonio, by the way? I know that was recently."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it was beautiful! It was so nice to see my sister Ana get married. San Antonio was lovely, but it's good to be back home in Austin."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear it went well! It sounds like you have a very peaceful Saturday set up. Anything else planned for this afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much, just reading and taking it easy. It's the perfect kind of weekend."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has been rock climbing and playing guitar for years"
+  ]
+}

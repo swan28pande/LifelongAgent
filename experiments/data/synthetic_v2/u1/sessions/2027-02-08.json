@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 345,
+  "date": "2027-02-08",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How has your Monday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy one, but not too bad. I started the day with a matcha latte which was really nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great start. Did you have a lot of meetings at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, quite a few. I'm wearing a button-down shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always good to feel polished! Did you manage to step away and grab some food at all?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did manage to get a quick break. I had a deli sandwich for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad you got a chance to eat! How is everything else going? Have you had any time for rock climbing or playing guitar lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually practiced some guitar yesterday, which was nice. And Sam and I are planning to go rock climbing later this evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to unwind after a busy Monday. Are you working on any specific routes at the climbing gym?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, there's a V4 project I've been trying to clean up. Hopefully I can make some progress on it tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the V4! Let me know how it goes. How are things otherwise? How is Sam doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, thanks for asking. I should probably get back to winding down the workday now, but I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

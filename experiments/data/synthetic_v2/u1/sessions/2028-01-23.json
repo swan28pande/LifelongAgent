@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 694,
+  "date": "2028-01-23",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How's everything going over in chilly Chicago today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It is pretty freezing here today. I'm just having a quiet morning. I started my day with a decaf americano, still trying to keep my caffeine intake down like the doctor suggested."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for you for sticking with the doctor's advice! How are you finding the decaf americano compared to your usual brew?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually not bad at all! It still gives me that warm morning ritual. I even dressed up a little bit today and put on a button-down shirt, just to feel a bit more productive."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt on a Sunday! I love that. Are you heading out, or just enjoying a stylish day at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just staying in, actually. I decided to make some ramen for lunch. I made a really nice vegetarian broth for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, homemade vegetarian ramen sounds absolutely perfect for a cold Chicago Sunday. Did you end up playing any guitar today as part of your quiet morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I spent about an hour practicing some fingerpicking patterns. It's nice to have the time to just sit and play without feeling rushed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. Have you gotten any rock climbing in this weekend, or is it strictly a rest-and-recharge kind of day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went climbing on Friday evening with Sam, so today is definitely a rest day. My forearms are still a bit sore from trying a new route."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a well-deserved rest day indeed. It sounds like you've had a really balanced weekend."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Just going to take it easy tonight before another busy week at the logistics firm."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: lunch should be 'ramen', conversation gives 'other'"
+  ]
+}

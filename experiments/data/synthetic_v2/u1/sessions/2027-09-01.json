@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 550,
+  "date": "2027-09-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Leo! How is your Wednesday starting off in Chicago? How are things with you and Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good here. Sam and I actually cleaned up the apartment last night, so it's feeling nice and organized. I'm just getting ready for work now, throwing on a polo shirt and heading out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, there's nothing better than a clean apartment to start the day. A polo shirt sounds perfect for a comfortable Wednesday at the logistics firm. Did you grab a coffee on your way?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I stopped by my usual spot and grabbed a decaf americano this morning. Still trying to keep that caffeine intake down like the doctor suggested at my check-up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for you! Sticking to a decaf americano is a great way to do that without giving up the morning ritual. How is the rest of your day looking? Do you have lunch plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going to be a busy one with client calls. For lunch, I brought a meal-prep burrito bowl that I made earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A meal-prep burrito bowl sounds delicious and incredibly convenient for a busy day of client calls. Plus, it's a great vegetarian option. Are you planning to do any climbing or guitar playing after work to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I think I'm going to head to the climbing gym for a bit of rock climbing before going home. It really helps me destress after a long day of account managing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Rock climbing is such a great mental break. Is Sam going to join you at the gym tonight, or are you flying solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Sam has other plans tonight, so I'll just be going solo. It'll be nice to just focus on the routes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to spend your evening. I hope you have a productive day at the logistics firm and a great climb later!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I should get going now, but I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

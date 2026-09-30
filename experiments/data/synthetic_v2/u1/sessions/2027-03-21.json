@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 386,
+  "date": "2027-03-21",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Sunday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just having a relaxed morning. I started things off with a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, peaceful start to your day. What else do you have planned for today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not too much. I just got dressed in a button-down shirt and I'm going to run a few errands in a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and casual. Are you planning on grabbing some food while you're out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just got a deli sandwich for lunch. It was perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! How are things going with your job as an account manager at the logistics firm? Has it been busy lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty busy, but I'm managing. I'm really glad to have a quiet Sunday to recharge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely. Have you had any time for rock climbing or playing guitar this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did some rock climbing yesterday, and I might play some guitar later tonight. Sam and I are just hanging out today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a great balance. How have things been since your sister Ana's wedding in San Antonio?"
+    },
+    {
+      "speaker": "user",
+      "text": "They've been great! It was a beautiful ceremony, and we're all still really happy for her."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

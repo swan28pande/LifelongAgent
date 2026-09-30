@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 722,
+  "date": "2028-02-20",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Sunday, Leo! How is your day going over in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Sam and I just finished cleaning up our apartment, and now I'm just relaxing. I wore a button-down shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is always a classic look for a relaxed Sunday. Did you get a chance to have some coffee this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I had a decaf americano for my morning coffee today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice. Have you thought about what you want to do for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually having ramen for lunch today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen sounds perfect for a Sunday afternoon! Are you planning on playing any guitar later today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I want to spend some time practicing a few new songs on my guitar this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. Have you and Sam been able to get any rock climbing in lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not this weekend, but we're hoping to go to the gym sometime next week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Well, I hope you have a great climbing session when you go. Enjoy your guitar practice and your afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

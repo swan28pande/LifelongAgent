@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 520,
+  "date": "2027-08-02",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is everything going in Chicago? Did you get any rock climbing or guitar practice in over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, I actually did some rock climbing on Saturday, which was awesome. Today is off to a quiet start, though. For my morning coffee, I had a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a great choice, especially keeping that doctor's check-up advice in mind. How is the workday looking at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty busy, actually. I have a few client calls lined up, so I dressed up a bit more than usual and put on a button-down shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing like a button-down shirt to get into that professional client-facing mindset. Are you going to be able to take a proper break for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Fortunately, yes. I just got back from grabbing lunch. I went to a spot nearby and had ramen. I made sure to get the vegetarian broth, of course."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a busy workday. It's so comforting. Did Sam end up joining you, or did you eat at your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam was actually busy with his own work, so I just ate at my desk while catching up on some emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it. Sometimes a quiet desk lunch is just what you need to recharge. By the way, have you been doing any running lately, or are you taking a break after finishing the Austin half marathon in 1:58?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been doing some light jogging around the neighborhood, but nothing too intense. I'm definitely enjoying a slower pace without a strict training schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, it's nice to just run for fun without the pressure. Do you think you'll get some guitar playing in tonight to wind down?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, that's the plan. I want to practice a new song I started learning last week. It'll be a nice way to end the day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

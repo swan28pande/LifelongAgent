@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 431,
+  "date": "2027-05-05",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How's your Wednesday going? Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, actually. Pretty manageable today. I'm just sitting at my desk in a comfortable polo shirt, sipping on a matcha latte. How are you?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm doing great, thanks for asking! A matcha latte sounds like a nice choice, especially since the doctor suggested cutting back on caffeine. Are you finding it's a good alternative?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It gives me a steady lift without the jitters, so it's working out great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. I was also wondering, how have things been at home? Is your roommate Sam doing well?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Sam is doing great. We managed to catch up a bit yesterday. We're trying to coordinate our grocery shopping a bit better since I'm keeping to my vegetarian diet and we eat pretty different things."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, coordinating groceries can definitely be a puzzle. Speaking of food, what did you end up having for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "For lunch, I just had a deli sandwich. It was quick and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and simple! Perfect for a workday lunch. Are you planning on doing any rock climbing or playing your guitar this evening to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I might play some guitar tonight. My fingers are still a bit sore from rock climbing earlier this week, so a quiet evening of music sounds perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing way to spend a Wednesday evening. Do you have a specific song you're practicing right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just working on some acoustic fingerpicking stuff, nothing too crazy. It's a nice way to clear my head after a day of managing accounts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. Well, I hope you have a wonderful rest of your Wednesday and enjoy the guitar session later!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

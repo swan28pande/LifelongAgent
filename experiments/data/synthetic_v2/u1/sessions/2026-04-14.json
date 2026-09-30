@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 45,
+  "date": "2026-04-14",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going in Austin? Are you getting some good training in for the Austin half marathon in May?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Training is going pretty well, thanks. Today's been a busy one at the logistics firm, just catching my breath. I started my day with an oat milk latte to get me through the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte sounds like a great way to kickstart a busy day as an account coordinator. How is everything else going at work?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's steady, lots of tracking shipments. I decided to keep things simple for lunch today and had a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is perfect for a quick, healthy lunch! Keeps you on track with your vegetarian diet too. Did you prep that last night?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually prepped it this morning before heading out. I was running a bit late, so I just threw on a fitted t-shirt and rushed out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic fitted t-shirt is always a solid, easy choice when you're in a rush. Did you get to the office on time?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, just barely! My roommate Sam was actually still asleep when I left, so at least I didn't have to fight for bathroom time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a huge win when you're in a rush! How is Sam doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Doing great, thanks! Just busy with their own schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear that. Are you planning on doing any rock climbing or playing some guitar after work today to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar tonight. My fingers are a bit sore from my last climbing session anyway!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing way to spend your evening. Good luck with the rest of your workday!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Chat tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Sam is not a runner"
+  ]
+}

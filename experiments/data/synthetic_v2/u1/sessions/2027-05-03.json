@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 429,
+  "date": "2027-05-03",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your week starting off in Austin? Did you get up to much over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just trying to get into the swing of things. I started my day with a matcha latte this morning to help me wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A matcha latte sounds like a great way to kick off the workweek. Are you heading into the logistics office today or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually in the office today. I decided to wear a button-down shirt and headed in early to prep for some client meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt is always a classic choice for office days. Hopefully those morning meetings went smoothly. Did you manage to get a decent break for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, they went pretty well, thanks. I actually just got back to my desk. For lunch, I had a deli sandwich from the place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a perfect quick lunch option. Did you find a good vegetarian one there? And how are things with your roommate, Sam? Have you both been busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they have a really good hummus and roasted veggie one! Sam is doing well, we actually both had a pretty quiet weekend at the apartment. He was mostly catching up on some reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very peaceful weekend. Did you manage to fit in any rock climbing or guitar practice, or did you just take it easy too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went rock climbing on Saturday morning, which felt great. My hands were a bit tired after that, so I didn't play much guitar, but I might practice a bit this evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Bouldering is definitely a workout for the hands! It makes sense to take a break from the guitar after that. Well, I hope the rest of your Monday flies by."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

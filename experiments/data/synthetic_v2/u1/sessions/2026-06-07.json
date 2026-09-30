@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 99,
+  "date": "2026-06-07",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Sunday. How is your day going in Austin? Did you get a chance to do some rock climbing this morning, or are you having a more relaxing weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually a pretty chill Sunday. No climbing today, just taking it easy at home. I'm just sitting out on the patio in my fitted t-shirt, enjoying the warm weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to spend a Sunday. Did you grab a coffee to go with that patio relaxation?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I made myself an oat milk latte. It turned out really good today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! An oat milk latte on the patio is hard to beat. Is your roommate Sam joining you, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam's out running some errands, so I've got some quiet time. I might practice some guitar in a bit, but first I should probably think about what to eat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An empty house is great for practicing guitar! Have you decided on what you're having for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just finished making a homemade salad. It's light and refreshing for a hot day like this."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is perfect for an Austin afternoon. Do you have any big plans for the rest of the day, or just more relaxing before the work week starts?"
+    },
+    {
+      "speaker": "user",
+      "text": "No big plans at all. Just the guitar practice, maybe some reading, and getting prepped for my account coordinator work tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a wonderful, low-key Sunday to recharge. I hope the guitar practice goes well and you have a smooth start to your week tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Catch you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 81,
+  "date": "2026-05-20",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Wednesday. How's everything going over in Austin today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just getting my day started. I had a black coffee a little while ago and now I'm going through my morning emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Black coffee is always a great way to kickstart the morning. Are you working from home today, or heading into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. It's already getting pretty warm outside, so I'm just wearing a simple fitted t-shirt to stay cool."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds comfortable and perfect for the Austin heat! Do you have any plans to head out for rock climbing after you finish up your work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm hoping to! I have a few logistics accounts to sort out first, but if I get through them quickly, I'll definitely head over to the gym."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Fingers crossed you get through everything quickly then! What are you planning for lunch today to keep your energy up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just took a quick break and ate a deli sandwich. It was quick to throw together and did the trick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and easy. Did your roommate Sam grab lunch with you, or are they busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam had to run some errands today, so I was on my own for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Gotcha. Have you had any time to practice your guitar lately, or has work been taking up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played for about fifteen minutes yesterday evening just to unwind. It was nice to get a little practice in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. Even a short session can be a great way to decompress. I hope the rest of your workday goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

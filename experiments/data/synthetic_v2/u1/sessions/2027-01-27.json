@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 333,
+  "date": "2027-01-27",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just getting settled at my desk. I actually had a matcha latte this morning instead of my usual coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious, and it's a great choice since you've been mindful of your doctor's advice about caffeine! How is everything going at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy, but I'm keeping up. I dressed a bit more casually today and wore a polo shirt, which makes sitting at my desk a lot more comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid choice for a comfortable office day. Do you have any plans to unwind after work, maybe some rock climbing or playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually planning to meet up with some friends at the climbing gym later this evening. I need to get some movement in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have fun at the climbing gym! It's a great way to stay active. Did you manage to get a decent lunch break today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I just finished eating a deli sandwich at my desk while catching up on some emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice. Was it a vegetarian deli sandwich from one of your favorite spots in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it was! A loaded veggie and hummus one from a deli down the street. Sam actually recommended it to me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sam always has the best local recommendations. It's great that you found a good spot! Since we were talking about staying active, are you planning on training for another race, or just sticking to climbing for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just sticking to climbing and some casual runs for now. I'm still really happy with how that half marathon went, but I'm enjoying a more relaxed routine lately."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

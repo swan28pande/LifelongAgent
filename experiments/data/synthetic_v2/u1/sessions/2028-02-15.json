@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 717,
+  "date": "2028-02-15",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going? Are you staying warm in Chicago today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty chilly, but I'm staying warm inside. I started my morning with a decaf americano to get the day going."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a great choice, especially with the doctor's advice to cut back on caffeine. Are you working from home today, or did you head into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. I have a few video calls later, so I just threw on a polo shirt to look decent on camera."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is perfect for staying comfortable while keeping it professional. Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually just finished eating some ramen for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Ramen is such a perfect meal for a cold February day. Did you get a chance to catch up with Sam today, or has it been a quiet house?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty quiet. Sam is out doing some errands, so I've just been focusing on my account manager duties."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope the logistics work isn't too overwhelming today. Do you have any plans to unwind tonight, maybe some rock climbing or guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar tonight. My fingers are a bit sore from climbing earlier this week anyway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing way to spend the evening. Have you been practicing any specific songs lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just working on some acoustic covers. It's a nice change of pace after a busy workday."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 323,
+  "date": "2027-01-17",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your weekend going so far in Austin? Doing anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just a relaxing Sunday. I'm actually dressed up a tiny bit today, wearing a button-down shirt even though I'm just hanging out at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt on a Sunday morning! Are you heading out somewhere nice, or just feeling fancy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, a bit of both. I just felt like putting on something nice to feel productive. I started my day with a matcha latte instead of my usual heavy coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice choice with the matcha latte! Is that part of keeping up with the doctor's advice to cut back on caffeine?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm trying to be mindful of that, and the matcha latte gives me just enough of a gentle boost without the jitters. For lunch today, I'm keeping it healthy too and making a homemade salad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and very refreshing. What are you putting in your homemade salad?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm doing a mix of spinach, cucumbers, cherry tomatoes, and some chickpeas for protein, topped with a lemon vinaigrette. It's quick and keeps things light."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, healthy Sunday lunch. Do you have any plans for the rest of the afternoon? Maybe some guitar practice or hitting the climbing gym?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar after lunch, and then my roommate Sam and I are planning to head over to the rock climbing gym later this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome, say hi to Sam for me! How have your climbing sessions been going lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Will do! They've been great, I'm finally starting to make progress on some tougher routes. Anyway, I should get started on that lunch. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,277 @@
+
+══════════════════════════════════════════════════════════════════════════════
+U5 - Priya (seed 505, 730 days from 2026-03-01)
+══════════════════════════════════════════════════════════════════════════════
+
+Difficulty knobs (measured vs ladder):
+  knob                      ladder                 measured               ok
+  preference_domains        6                      6                      ✓
+  rule_types                required ['nested',... conditional, constant, day_of_week, n_da ✓
+  shifts_per_domain         5-6                    5                      ✓
+  visibility_mix (E/I/U %)  20/50/30               23/50/27               ✓
+  lag_days                  1-10                   1-10                   ✓
+  temporary_shifts          4+                     4                      ✓
+  fact_changes              10+                    12                     ✓
+  cross_domain_causes       4                      4                      ✓
+  distractors               8                      8                      ✓
+  exception_rate            0.10                   0.100                  ✓
+  p_session                 0.50                   0.484                  ✓
+  p_mention                 0.55                   0.554                  ✓
+  other_people              True                   True                   ✓
+
+Preference timeline:
+  [exercise]  (workout)
+    initial   d  1-97  2026-03-01→2026-06-05  two-week rotation of runs/swims, bouldering and yoga
+              observed 22×, first d1
+    shift     d 98-180 2026-06-06→2026-08-27  dog walks on weekdays, bouldering Tue/Thu, weekend dog hike
+              cause → implicit, lag 3: adopted a labrador named Biscuit (d95)
+              observed 16×, first d98
+    temporary d181-214 2026-08-28→2026-09-30  physio exercises every day
+              cause → explicit, lag 1: tore a ligament in her knee while bouldering (d180)
+              observed 7×, first d181
+    reversion d215-261 2026-10-01→2026-11-16  dog walks on weekdays, bouldering Tue/Thu, weekend dog hike
+              cause → explicit: her physio cleared the knee
+              observed 14×, first d215
+    shift     d262-334 2026-11-17→2027-01-28  alternating weeks of dog walks and home HIIT
+              cause → uncaused
+              observed 17×, first d262
+    shift     d335-559 2027-01-29→2027-09-10  trail runs Mon/Wed/Sat, dog walks Tue/Thu/Sun
+              cause → implicit, lag 5: took up trail running (d330)
+              observed 55×, first d337
+    shift     d560-730 2027-09-11→2028-02-28  dog walks on workdays, group hikes on weekends
+              cause → implicit, lag 7: joined a weekend hiking group (d553)
+              observed 49×, first d560
+    exceptions: 28 - e.g. d81: swim at the community pool (a friend invited her), d93: skipped workout (worked late), d139: long walk (the gym was closed)
+    distractor d45: her coworker Dana started training for a triathlon
+    distractor d665: her gym changed its opening hours
+
+  [commute]  (commute)
+    initial   d  1-181 2026-03-01→2026-08-28  bus in winter and cycling otherwise on workdays, no commute on weekends
+              observed 40×, first d7
+    temporary d182-214 2026-08-29→2026-09-30  rideshare on workdays
+              cause → implicit, lag 2: tore a ligament in her knee while bouldering (d180)
+              observed 7×, first d184
+    reversion d215-303 2026-10-01→2026-12-28  bus in winter and cycling otherwise on workdays, no commute on weekends
+              cause → uncaused
+              observed 21×, first d215
+    shift     d304-399 2026-12-29→2027-04-03  light rail on workdays
+              cause → explicit, lag 4: moved to Denver for the office transfer (d300)
+              observed 25×, first d304
+    shift     d400-524 2027-04-04→2027-08-06  hybrid week - light rail Mon/Wed/Fri, home Tue/Thu
+              cause → uncaused
+              observed 29×, first d402
+    shift     d525-639 2027-08-07→2027-11-29  cycling Mon/Tue/Thu, home Wed/Fri
+              cause → implicit, lag 5: started a new job as engineering manager at a climate-tech company (d520)
+              observed 32×, first d527
+    shift     d640-730 2027-11-30→2028-02-28  bus in winter and e-bike otherwise on workdays
+              cause → uncaused
+              observed 17×, first d641
+    exceptions: 42 - e.g. d29: walked (the weather was nice), d35: took a taxi (heavy rain), d40: got a ride from a coworker (her bike had a flat tire)
+    distractor d230: the city added new bike lanes near her apartment
+    distractor d370: Arjun bought a new bike
+
+  [dinner]  (dinner)
+    initial   d  1-156 2026-03-01→2026-08-03  two-week rotation of home-cooked dinners with Friday takeout
+              observed 37×, first d1
+    shift     d157-306 2026-08-04→2026-12-31  weekly routine with Friday date night and Saturday cooking with Arjun
+              cause → implicit, lag 7: started dating Arjun (d150)
+              observed 32×, first d158
+    shift     d307-474 2027-01-01→2027-06-17  4 days meal-kit dinner, 3 days home-cooked curry
+              cause → implicit, lag 7: moved to Denver for the office transfer (d300)
+              observed 43×, first d311
+    shift     d475-555 2027-06-18→2027-09-06  vegetarian weekly routine
+              cause → explicit, lag 5: switched to a vegetarian diet (d470)
+              observed 15×, first d476
+    temporary d556-572 2027-09-07→2027-09-23  soup and smoothies every day
+              cause → explicit, lag 1: had her wisdom teeth removed (d555)
+              observed 6×, first d560
+    reversion d573-679 2027-09-24→2028-01-08  vegetarian weekly routine
+              cause → explicit: her mouth healed
+              observed 27×, first d573
+    shift     d680-730 2028-01-09→2028-02-28  alternating weeks of veggie stir-fry and black bean tacos
+              cause → uncaused
+              observed 18×, first d680
+    exceptions: 38 - e.g. d13: takeout burrito (too tired to cook), d49: skipped dinner (a late meeting ran long), d54: takeout burrito (too tired to cook)
+    distractor d130: a new ramen place opened on her street
+
+  [music]  (work music)
+    initial   d  1-109 2026-03-01→2026-06-17  lo-fi beats on workdays, jazz vinyl on weekends
+              observed 23×, first d1
+    shift     d110-199 2026-06-18→2026-09-15  alternating weeks of lo-fi beats and film scores
+              cause → uncaused
+              observed 23×, first d114
+    shift     d200-344 2026-09-16→2027-02-07  synthwave playlists every day
+              cause → implicit, lag 5: saw a live synthwave show with Arjun (d195)
+              observed 35×, first d203
+    shift     d345-429 2027-02-08→2027-05-03  synthwave on workdays, running playlists on weekends
+              cause → implicit, lag 5: registered for the Denver half marathon in April (d340)
+              observed 25×, first d345
+    shift     d430-607 2027-05-04→2027-10-28  3 days jazz vinyl, 4 days synthwave playlists
+              cause → implicit, lag 10: stopped playing piano - no time for lessons after the move (d420)
+              observed 38×, first d434
+    shift     d608-730 2027-10-29→2028-02-28  vinyl records every day
+              cause → explicit, lag 3: Arjun gave her a record player as a gift (d605)
+              observed 24×, first d608
+    exceptions: 31 - e.g. d4: silence (needed deep focus), d15: classical radio (her headphones broke), d29: true-crime podcast (a friend recommended an episode)
+    distractor d285: a new jazz club opened downtown
+
+  [reading]  (evening reading)
+    initial   d  1-124 2026-03-01→2026-07-02  5 days sci-fi novel, 2 days history nonfiction
+              observed 27×, first d4
+    shift     d125-189 2026-07-03→2026-09-05  library thrillers every day
+              cause → implicit, lag 5: got a library card at the Carnegie Library (d120)
+              observed 18×, first d125
+    shift     d190-321 2026-09-06→2027-01-15  alternating weeks of library thrillers and poetry collections
+              cause → uncaused
+              observed 26×, first d192
+    shift     d322-454 2027-01-16→2027-05-28  5 days book club novel, 2 days graphic novels
+              cause → explicit, lag 4: joined a neighborhood book club in Denver (d318)
+              observed 33×, first d324
+    shift     d455-589 2027-05-29→2027-10-10  audiobooks every day
+              cause → uncaused
+              observed 43×, first d456
+    shift     d590-730 2027-10-11→2028-02-28  alternating weeks of an e-reader fantasy series and the book club novel
+              cause → implicit, lag 5: bought an e-reader (d585)
+              observed 43×, first d592
+    exceptions: 34 - e.g. d48: a magazine (picked one up at the dentist), d82: a magazine (picked one up at the dentist), d94: re-read an old favorite (felt nostalgic)
+    distractor d445: her favorite bookstore announced it is closing [CONFOUNDER]
+
+  [bedtime]  (bedtime)
+    initial   d  1-99  2026-03-01→2026-06-07  11:30 pm on workdays, 1:00 am on weekends
+              observed 28×, first d1
+    shift     d100-259 2026-06-08→2026-11-14  10:30 pm on workdays, 11:30 pm on weekends
+              cause → implicit, lag 5: adopted a labrador named Biscuit (d95)
+              observed 38×, first d100
+    shift     d260-522 2026-11-15→2027-08-04  11:00 pm every night
+              cause → uncaused
+              observed 63×, first d262
+    shift     d523-630 2027-08-05→2027-11-20  10:00 pm most weeknights, midnight Fri/Sat
+              cause → implicit, lag 3: started a new job as engineering manager at a climate-tech company (d520)
+              observed 28×, first d527
+    temporary d631-658 2027-11-21→2027-12-18  2:00 am every night
+              cause → explicit, lag 1: started an on-call rotation for a product launch (d630)
+              observed 8×, first d637
+    reversion d659-699 2027-12-19→2028-01-28  10:00 pm most weeknights, midnight Fri/Sat
+              cause → explicit: the product launch wrapped up
+              observed 9×, first d665
+    shift     d700-730 2028-01-29→2028-02-28  10:30 pm every night
+              cause → implicit, lag 5: started using a sleep-tracking app (d695)
+              observed 7×, first d701
+    exceptions: 39 - e.g. d25: 2:00 am (a friend's party), d29: 2:00 am (a friend's party), d44: 9:30 pm (exhausted after a long day)
+    distractor d540: the upstairs neighbors got a loud puppy
+
+Facts and events:
+  job               [single] backend engineer at a fintech startup (d1-239) → senior backend engineer at the fintech startup (d240-519) → engineering manager at a climate-tech company (d520-end)
+  city              [single] Pittsburgh, Pennsylvania (d1-299) → Denver, Colorado (d300-end)
+                     city.denver: effective d300, stated d301 (retrospective)
+  relationship      [single] single (d1-149) → dating Arjun (d150-304) → living with her partner Arjun (d305-end)
+                     rel.cohabit: effective d305, stated d306 (retrospective)
+  diet              [single] pescatarian (d1-469) → vegetarian (d470-end)
+                     diet.veg: effective d470, stated d476 (retrospective)
+  pets              [multi] labrador named Biscuit (d95-end); cat named Mochi (d600-end)
+                     pet.biscuit: effective d95, stated d97 (retrospective)
+  hobbies           [multi] bouldering (d1-end); piano (d1-419); pottery (d60-169); trail running (d330-end)
+                     hobby.pottery: effective d60, stated d68 (retrospective)
+                     hobby.trail: effective d330, stated d331 (retrospective)
+  event library_card    happened d120
+  event knee_injury     happened d180 → happened d215
+  event concert         happened d195
+  event relocation      planned d270 → happened d296
+  event book_club       happened d318
+  event half_marathon   planned d340 → happened d410
+  event italy_trip      planned d380 → cancelled d412
+  event new_job         planned d500 → happened d515
+  event hiking_club     happened d553
+  event wisdom_teeth    happened d555
+  event ereader         happened d585
+  event vinyl_gift      happened d605
+  event on_call         happened d630 → happened d659
+  event sleep_app       happened d695
+  other: Meera (sister) d40: moved to Seattle for a new job
+  other: Meera (sister) d230: started working as a data scientist at a health-tech company
+  other: Dana (coworker) d210: adopted a beagle named Pepper
+  other: Dana (coworker) d500: went vegan after watching a documentary
+
+QA:
+  total 50
+  recall               7
+  pattern_current      3
+  pattern_at_time      3
+  prediction           4
+  change_detection     4
+  attribution          5
+  exception_vs_shift   3
+  reversion            2
+  fact_current         2
+  fact_at_time         4
+  fact_history         2
+  event_status         2
+  duration             2
+  distractor_probe     2
+  other_person         2
+  abstention           3
+  highest top-answer shares: 
+
+  20 random QA items:
+  • (pattern_current/bedtime) [shift]
+    Q: What is Priya's current bedtime routine?
+    A: 10:30 pm every day (since 2028-01-29)
+  • (prediction/reading) [horizon_59d]
+    Q: What will Priya's evening reading most likely be on Thursday, 2028-04-27? Explain the reasoning.
+    A: e-reader fantasy series. Reasoning: since 2027-10-11 the routine has been alternates week by week: e-reader fantasy series, then book club novel, repeating (7-day blocks starting Mon 2027-10-11). 2028-04-27 is in 7-day block 29 since the anchor (block index 28 mod 2 = 0), so e-reader fantasy series.
+  • (change_detection/dinner) [temporary, explicit, bounded]
+    Q: When did Priya's dinner routine change from the black bean tacos / cooking with Arjun / leftovers / lentil soup etc. routine to soup and smoothies?
+    A: 2027-09-07 (first observed 2027-09-11)
+  • (change_detection/exercise) [temporary, explicit]
+    Q: When did Priya's workout routine change from the bouldering / long dog hike / morning dog walk / rest day routine to physio exercises?
+    A: 2026-08-28
+  • (attribution/exercise) [implicit, shift]
+    Q: Why did Priya's workout routine change around 2027-01-29?
+    A: took up trail running
+  • (distractor_probe/exercise)
+    Q: Around 2027-12-25, her gym changed its opening hours. Did that lead to any change in Priya's workout?
+    A: No - nothing about Priya's workout changed because of it.
+  • (reversion/bedtime) [temporary]
+    Q: What did Priya's bedtime go back to after the period of 2:00 am?
+    A: 10:00 pm most weeknights, midnight Fri/Sat - by day of week: 10:00 pm on Mon/Tue/Thu; 10:30 pm on Wed/Sun; 12:00 am on Fri/Sat
+  • (change_detection/commute) [temporary, implicit, bounded]
+    Q: When did Priya's commute routine change from the bus / cycling / no commute routine to the no commute / rideshare routine?
+    A: 2026-08-29 (first observed 2026-08-31)
+  • (fact_at_time/relationship)
+    Q: What was Priya's relationship status on 2026-09-12?
+    A: dating Arjun
+  • (duration/job) [fact]
+    Q: How long was Priya's job senior backend engineer at the fintech startup?
+    A: 280 days (2026-10-26 to 2027-08-01)
+  • (attribution/dinner) [uncaused, shift]
+    Q: Why did Priya's dinner routine change around 2028-01-09?
+    A: No reason was stated.
+  • (recall/dinner) [inferred, boundary]
+    Q: What was Priya's dinner on Tuesday, 2028-01-11?
+    A: veggie stir-fry
+  • (exception_vs_shift/commute) [shift, uncaused]
+    Q: On Wednesday, 2027-12-01, Priya's commute was bus instead of the usual work from home. Was that a lasting change?
+    A: Yes - from 2027-11-30 the routine changed to bus in winter and e-bike otherwise on workdays.
+  • (attribution/bedtime) [implicit, shift, cross_domain]
+    Q: Why did Priya's bedtime routine change around 2026-06-08?
+    A: adopted a labrador named Biscuit
+  • (event_status/events) [happened]
+    Q: What happened with the engineering manager job search?
+    A: accepted the engineering manager offer at the climate-tech company (happened, 2027-07-28)
+  • (recall/bedtime) [boundary]
+    Q: What was Priya's bedtime on Monday, 2026-06-08?
+    A: 10:30 pm
+  • (other_person/other_people) [control]
+    Q: Is labrador named Biscuit one of Priya's pets?
+    A: Yes.
+  • (reversion/dinner) [control]
+    Q: Is Priya's dinner still the black bean tacos / veggie stir-fry routine?
+    A: Yes - since 2028-01-09.
+  • (prediction/commute) [horizon_26d]
+    Q: What will Priya's commute most likely be on Saturday, 2028-03-25? Explain the reasoning.
+    A: no commute. Reasoning: since 2027-11-30 the routine has been split by workday vs weekend - on workdays (Mon-Fri): split by season - in winter: bus; otherwise: e-bike; on weekends: no commute. 2028-03-25 is a weekend day; so it is no commute.
+  • (fact_history/pets) [multi]
+    Q: How have Priya's pets changed over time?
+    A: labrador named Biscuit (2026-06-03 to now); cat named Mochi (2027-10-21 to now)
+
+✓ all checks passed - wrote datasets/v2/u5/

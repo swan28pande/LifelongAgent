@@ -1,0 +1,465 @@
+{
+  "user_id": "u4",
+  "knobs": {
+    "preference_domains": {
+      "ladder": "5",
+      "measured": "5",
+      "ok": true
+    },
+    "rule_types": {
+      "ladder": "required ['nested'], allowed ['weekly_alternate', 'n_day_cycle', 'day_of_week', 'nested', 'constant']",
+      "measured": "constant, day_of_week, n_day_cycle, nested, weekly_alternate",
+      "ok": true
+    },
+    "shifts_per_domain": {
+      "ladder": "4",
+      "measured": "4",
+      "ok": true
+    },
+    "visibility_mix (E/I/U %)": {
+      "ladder": "30/50/20",
+      "measured": "30/50/20",
+      "ok": true
+    },
+    "lag_days": {
+      "ladder": "1-5",
+      "measured": "1-5",
+      "ok": true
+    },
+    "temporary_shifts": {
+      "ladder": "3",
+      "measured": "3",
+      "ok": true
+    },
+    "fact_changes": {
+      "ladder": "8",
+      "measured": "8",
+      "ok": true
+    },
+    "cross_domain_causes": {
+      "ladder": "2",
+      "measured": "2",
+      "ok": true
+    },
+    "distractors": {
+      "ladder": "5",
+      "measured": "5",
+      "ok": true
+    },
+    "exception_rate": {
+      "ladder": "0.07",
+      "measured": "0.070",
+      "ok": true
+    },
+    "p_session": {
+      "ladder": "0.60",
+      "measured": "0.599",
+      "ok": true
+    },
+    "p_mention": {
+      "ladder": "0.65",
+      "measured": "0.650",
+      "ok": true
+    },
+    "other_people": {
+      "ladder": "True",
+      "measured": "True",
+      "ok": true
+    }
+  },
+  "sessions": 437,
+  "mentions_total": 1475,
+  "mention_reasons": {
+    "sampled": 1421,
+    "exception": 45,
+    "regime_start": 9
+  },
+  "retrospective_statements": 11,
+  "qa": {
+    "total": 50,
+    "by_type": {
+      "recall": 7,
+      "pattern_current": 3,
+      "pattern_at_time": 3,
+      "prediction": 4,
+      "change_detection": 4,
+      "attribution": 5,
+      "exception_vs_shift": 3,
+      "reversion": 2,
+      "fact_current": 2,
+      "fact_at_time": 4,
+      "fact_history": 2,
+      "event_status": 2,
+      "duration": 2,
+      "distractor_probe": 2,
+      "other_person": 2,
+      "abstention": 3
+    },
+    "by_capability": {
+      "episodic_recall": 7,
+      "pattern_abstraction": 6,
+      "pattern_extrapolation": 4,
+      "temporal_change": 6,
+      "causal_reasoning": 7,
+      "exception_handling": 3,
+      "knowledge_update": 4,
+      "temporal_fact": 4,
+      "event_tracking": 2,
+      "temporal_arithmetic": 2,
+      "entity_disambiguation": 2,
+      "abstention": 3
+    },
+    "by_grading": {
+      "exact": 14,
+      "llm_judge": 32,
+      "date_exact": 4
+    },
+    "tags": {
+      "inferred": 4,
+      "boundary": 3,
+      "no_session": 2,
+      "exception": 2,
+      "shift": 13,
+      "reversion": 2,
+      "temporary": 5,
+      "horizon_14d": 1,
+      "horizon_48d": 1,
+      "horizon_23d": 1,
+      "horizon_40d": 1,
+      "implicit": 6,
+      "uncaused": 4,
+      "bounded": 2,
+      "explicit": 2,
+      "set": 3,
+      "single": 1,
+      "multi": 1,
+      "at_time": 1,
+      "planned": 1,
+      "happened": 1,
+      "initial": 1,
+      "control": 3,
+      "brother": 1,
+      "confusable": 1,
+      "favorite_movie": 1,
+      "city": 1,
+      "diet": 1
+    },
+    "answer_distribution": {
+      "abstention/abstention": {
+        "n": 3,
+        "top_answer": "not known",
+        "top_share": 0.333,
+        "entropy_bits": 1.585,
+        "distinct": 3
+      },
+      "attribution/breakfast": {
+        "n": 1,
+        "top_answer": "started holding 7 am client calls at the studio",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "attribution/dinner": {
+        "n": 1,
+        "top_answer": "started a huge design competition deadline at work",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "attribution/music": {
+        "n": 1,
+        "top_answer": "inherited his grandfather's record collection",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "attribution/outfit": {
+        "n": 2,
+        "top_answer": "no reason was stated",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/breakfast": {
+        "n": 1,
+        "top_answer": "2026-08-30",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/dinner": {
+        "n": 1,
+        "top_answer": "2027-08-23",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/music": {
+        "n": 1,
+        "top_answer": "2027-07-02",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "change_detection/outfit": {
+        "n": 1,
+        "top_answer": "2028-01-19",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "distractor_probe/breakfast": {
+        "n": 1,
+        "top_answer": "yes",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "distractor_probe/outfit": {
+        "n": 1,
+        "top_answer": "no",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "duration/dinner": {
+        "n": 1,
+        "top_answer": "152",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "duration/music": {
+        "n": 1,
+        "top_answer": "168",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "event_status/events": {
+        "n": 2,
+        "top_answer": "leah got a job offer in chicago",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "exception_vs_shift/dinner": {
+        "n": 1,
+        "top_answer": "yes",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "exception_vs_shift/music": {
+        "n": 1,
+        "top_answer": "yes",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "exception_vs_shift/outfit": {
+        "n": 1,
+        "top_answer": "no",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_at_time/city": {
+        "n": 1,
+        "top_answer": "minneapolis, minnesota",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_at_time/hobbies": {
+        "n": 2,
+        "top_answer": "photography, cycling, rock climbing",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "fact_at_time/relationship": {
+        "n": 1,
+        "top_answer": "dating leah",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_current/hobbies": {
+        "n": 1,
+        "top_answer": "photography, rock climbing, chess",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_current/relationship": {
+        "n": 1,
+        "top_answer": "living with his partner leah",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_history/hobbies": {
+        "n": 1,
+        "top_answer": "chess",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "fact_history/relationship": {
+        "n": 1,
+        "top_answer": "living with his partner leah",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "other_person/other_people": {
+        "n": 2,
+        "top_answer": "marathon running",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "pattern_at_time/dinner": {
+        "n": 1,
+        "top_answer": "pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/outfit": {
+        "n": 1,
+        "top_answer": "alternating weeks of flannel and jeans and button-down and chinos",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/workout": {
+        "n": 1,
+        "top_answer": "stationary bike every day",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/breakfast": {
+        "n": 1,
+        "top_answer": "3 days overnight oats, 2 days smoked salmon bagel",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/music": {
+        "n": 1,
+        "top_answer": "alternating weeks of ambient electronic and classical",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_current/workout": {
+        "n": 1,
+        "top_answer": "two-week rotation of runs with climbing or swimming",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "prediction/breakfast": {
+        "n": 1,
+        "top_answer": "smoked salmon bagel",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "prediction/music": {
+        "n": 1,
+        "top_answer": "classical",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "prediction/outfit": {
+        "n": 1,
+        "top_answer": "black t-shirt and jeans",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "prediction/workout": {
+        "n": 1,
+        "top_answer": "rest day",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "recall/breakfast": {
+        "n": 2,
+        "top_answer": "granola",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "recall/dinner": {
+        "n": 2,
+        "top_answer": "steak",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
+      "recall/music": {
+        "n": 1,
+        "top_answer": "indie rock",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "recall/outfit": {
+        "n": 1,
+        "top_answer": "sweater and jeans",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "recall/workout": {
+        "n": 1,
+        "top_answer": "rest day",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "reversion/music": {
+        "n": 1,
+        "top_answer": "3 days jazz records, 4 days indie rock",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "reversion/workout": {
+        "n": 1,
+        "top_answer": "no",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      }
+    }
+  },
+  "qa_pool": {
+    "total": 390,
+    "by_type": {
+      "recall": 114,
+      "pattern_current": 5,
+      "pattern_at_time": 28,
+      "prediction": 57,
+      "change_detection": 23,
+      "attribution": 20,
+      "exception_vs_shift": 20,
+      "reversion": 9,
+      "fact_current": 5,
+      "fact_at_time": 40,
+      "fact_history": 5,
+      "event_status": 14,
+      "duration": 20,
+      "distractor_probe": 10,
+      "other_person": 9,
+      "abstention": 11
+    }
+  }
+}

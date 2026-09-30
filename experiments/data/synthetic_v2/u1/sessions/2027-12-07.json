@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 647,
+  "date": "2027-12-07",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty cold today, but I'm staying warm. I just finished my morning coffee—had a decaf americano today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sticking to the decaf americano! Your doctor would be proud. Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's a busy day for me as an account manager. We have a couple of client video calls later, so I dressed up a bit in a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a great choice for client calls—professional but comfortable. Have you had a chance to break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished lunch. I had some ramen, which was perfect for this weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen is absolutely the best on a freezing December day. Did you get a good vegetarian option?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I got a vegetarian one with a really good mushroom broth from a spot nearby."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. Are you planning to do any rock climbing or practice your guitar later to unwind after those client calls?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just practice guitar tonight. My arms are a bit tired for rock climbing, so a quiet evening playing some music sounds perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A relaxing evening of guitar sounds like a great way to wind down. By the way, how is Ana doing after the wedding in San Antonio last month?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well! She and her husband are still settling back into their normal routine, but they're very happy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. Well, good luck with the client calls this afternoon, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 335,
+  "date": "2027-01-29",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Friday. How is your day starting off in Austin? Winding down a busy week at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it has been a busy week, but things are finally slowing down. I'm currently drinking a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great way to start the morning. What's on your agenda for the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just have some administrative tasks to wrap up. I am wearing a button-down shirt today, so I'm feeling ready to get things done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear you're feeling productive! Are you planning to head out for lunch, or are you eating at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I stayed in and had a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and easy! Do you have any plans for the weekend? Maybe some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, Sam and I are planning to go rock climbing tomorrow morning. It's been a little while since we went."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun weekend activity! Are you going to your usual climbing gym?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we are heading to our usual spot. They recently reset some of the walls, so we want to try the new routes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a wall reset is always exciting. Good luck with the new routes! Will you be practicing any guitar this weekend too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll probably practice some guitar on Sunday, but tomorrow is all about climbing."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

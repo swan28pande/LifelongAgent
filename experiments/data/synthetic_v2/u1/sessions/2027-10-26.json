@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 605,
+  "date": "2027-10-26",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Tuesday. How is everything going over in Chicago today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good, just pretty busy here at the logistics firm. I dressed a bit more comfortably today, just wearing a polo shirt since I don't have any client meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt sounds like the perfect middle ground for a busy office day. Did you manage to get a smooth start to your morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I stopped by my usual spot and grabbed a decaf americano to get the day going."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Keeping up with the doctor's advice to cut back on the caffeine, I see. How are you liking the decaf americano so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, it's really good! I don't even miss the extra caffeine. It paired perfectly with a chilly morning. Speaking of food, I actually just got back from grabbing lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh nice! What did you end up getting for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went to a spot nearby and got some vegetarian ramen. It was super filling and perfect for today's weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and absolutely perfect for a cool October day. Are you planning on doing anything to unwind after work, maybe some guitar or rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm actually planning to go rock climbing later this evening. It's been a minute, so I'm looking forward to hitting the gym."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to shake off the workday stress. Is Sam joining you, or are you climbing solo tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam has other plans tonight, so I'm just heading out solo. I think I need the focus anyway to work on a few tougher routes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Makes sense, sometimes a solo climbing session is exactly what you need to focus. I hope you have a great climb and a relaxing evening afterwards!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

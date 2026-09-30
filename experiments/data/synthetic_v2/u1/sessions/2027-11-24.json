@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 634,
+  "date": "2027-11-24",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Wednesday. How are things going back in Chicago after your trip to San Antonio for Ana's wedding?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's good to be back, though Chicago is definitely a lot colder than Texas right now. I'm just getting back into my usual work routine today. I actually threw on a polo shirt and decided to work from my home office today to ease back into things."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is perfect for a work-from-home day—comfortable but still professional for any calls. How is the workload at the logistics firm looking today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty busy, but I'm managing. To help me focus without getting too jittery, I started my morning with a decaf americano today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to stick to your doctor's advice about cutting back on caffeine! How is your roommate, Sam, doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We actually spent some time catching up yesterday. I've got to run to the kitchen in a minute because I have a meal-prep burrito bowl waiting for me for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A meal-prep burrito bowl sounds delicious and perfect for a vegetarian lunch. Do you make those in batches ahead of time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! It makes my busy days as an account manager so much easier when I don't have to think about what to cook."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, saving that decision-making energy is key. Have you had any time to get back to rock climbing or playing your guitar since you got back?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went rock climbing yesterday evening to stretch out after all that wedding travel. It felt great to get back on the wall."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to decompress and get moving again. I hope the rest of your workday goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to go heat up my lunch now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

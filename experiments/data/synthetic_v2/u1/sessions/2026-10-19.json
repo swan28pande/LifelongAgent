@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 233,
+  "date": "2026-10-19",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is your week starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going alright, just trying to ease into the day. I'm actually wearing an oversized hoodie because the draft in my room is making me freeze."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie is the absolute best for a chilly Monday morning. Are you working from home today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I am. I just finished making a matcha latte to drink while I go through my emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte sounds delicious! That's a great way to stick to cutting back on caffeine like your doctor advised. Speaking of big events, how are things going with your sister Ana's wedding? It's coming up in November, right?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it is! She is mostly finalizing the catering and music playlists right now. It's getting so close, and she is really excited."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is so exciting! It must be wonderful to watch all the details come together. Have you managed to take a break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just had a deli sandwich a few minutes ago. It was quick and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a deli sandwich is a classic, easy lunch. Is your roommate Sam around today, or are you having a quiet day to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually working from the dining table today, so we're both just quietly doing our own work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to have a quiet co-working vibe at home. Do you think you'll get some rock climbing or guitar practice in after work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely some guitar practice. I want to try learning a new song tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great plan. I hope you have a relaxing evening with your guitar, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Speak soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user is taking a trip for his sister's wedding."
+  ]
+}

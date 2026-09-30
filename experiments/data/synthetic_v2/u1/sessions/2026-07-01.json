@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 123,
+  "date": "2026-07-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Wednesday starting off in Austin? Is it already scorching down there?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's already pretty warm. I'm just waking up slowly with a hot cup of black coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a simple morning brew to get going. Do you have a busy day ahead at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's looking like a moderate day. I just got dressed in a comfortable fitted t-shirt, ready to tackle some emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and casual. Are you planning on making something at home for lunch today, or heading out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just put together a quick vegetarian deli sandwich to eat at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is always a classic, easy lunch choice. How are things going with your role as an account coordinator lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! A lot of tracking shipments and talking to clients, but I'm getting the hang of the workflow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear you're settling in nicely. How have things been at the apartment with your roommate Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things with Sam are great. We've just been keeping the place cool and hanging out in the evenings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a good setup, especially with the Texas summer heat. Are you planning on staying inside tonight too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'll probably just play some guitar and relax indoors where the AC is running."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

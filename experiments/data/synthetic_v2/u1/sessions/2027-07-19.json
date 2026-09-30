@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 506,
+  "date": "2027-07-19",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your week starting off? Did you manage to get some climbing in over the weekend, or was it a quiet one?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting off pretty well, thanks. No climbing this weekend, actually. I just stayed in Chicago and relaxed. I did start my morning today with a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a great way to ease into the week, especially keeping in mind that advice from your check-up to cut back on caffeine! How are you finding the adjustment to decaf lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's not too bad! I've actually gotten used to the taste, and it still feels like a nice morning ritual. Plus, it helps me feel a bit more settled as I get ready for work. I even threw on a button-down shirt today to feel a bit more professional."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt always helps set a productive tone for a Monday! Are you working from home today, or did you head into the office at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually at the office today. It's been a busy morning keeping track of shipments and managing accounts, but it's going smoothly so far."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. Being an account manager there definitely keeps you on your toes. Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I just got back from lunch. I went out and got some ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a Monday lunch! Did you go to one of your usual spots nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, there's a spot just a couple of blocks away that does a really good vegetarian broth, so I usually head there when I want something warm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and very convenient. Do you have any plans for after work today? Maybe some guitar practice to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yeah, I was thinking of spending some time with my guitar this evening. Just playing some acoustic stuff to decompress after a long day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

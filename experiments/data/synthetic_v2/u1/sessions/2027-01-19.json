@@ -1,0 +1,79 @@
+{
+  "user_id": "u1",
+  "day": 325,
+  "date": "2027-01-19",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going over at the logistics firm in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty busy today, but I'm getting through it. I'm keeping it comfortable today and wearing a polo shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid choice for a busy Tuesday. Did you manage to grab a coffee to help you power through the morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually had a decaf americano this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A decaf americano is a great morning pick-me-up. Are you taking a lunch break soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am, actually. I'm having a homemade salad today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious, healthy lunch. It fits perfectly with your vegetarian diet too. Do you have any plans to unwind after work, maybe some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some guitar tonight. It's a nice way to relax after a long day of account managing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Guitar is such a great way to decompress. By the way, how has your roommate Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing well, thanks for asking! Just busy with work stuff too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. And how have things been with you since Ana's wedding in San Antonio? Have you been keeping up with your running since completing that half marathon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things have been good! I haven't been running as intensely as I did for the half marathon, but I'm still staying active. Anyway, I should get back to my salad and then back to work!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Of course, enjoy your homemade salad and have a great rest of your afternoon, Leo!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Ran the Austin half marathon last year",
+    "invention: Planning to go to the climbing gym with Sam tomorrow evening"
+  ]
+}

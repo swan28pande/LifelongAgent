@@ -1,0 +1,75 @@
+{
+  "user_id": "u1",
+  "day": 183,
+  "date": "2026-08-30",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Sunday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty good, thanks. Just a relaxed morning here. I started the day with an oat milk latte and have just been chilling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte sounds like a great start to the day. Are you planning on doing any rock climbing today, or is it more of a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely a rest day today. I'm just hanging out at home. It's warm today, so I'm keeping it simple and just wearing a fitted t-shirt and some shorts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing wrong with a quiet day at home! A fitted t-shirt and shorts is the perfect uniform for that. Have you figured out what you're doing for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished eating a homemade salad. It was nice and light."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A homemade salad is perfect for a warm Austin afternoon. Have you had any time to practice your guitar today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! I played for about an hour earlier while my roommate Sam was out running errands. It was nice to have the place to myself for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. It's always nice to get some solo practice time in. How have things been at the logistics firm lately? Still keeping busy as an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's been really busy lately! We've had a lot of shipments to coordinate, but I'm managing. I'm glad to have today to just recharge before the work week starts again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It sounds like you definitely earned this restful Sunday. Do you have any plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much, just going to stream a movie later and get to sleep early."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: User has a sister named Ana",
+    "invention: User's sister Ana is getting married in November"
+  ]
+}

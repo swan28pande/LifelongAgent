@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 536,
+  "date": "2027-08-18",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going? Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's been a pretty busy morning. I had a mountain of client emails to catch up on first thing, so I grabbed a decaf americano to help me focus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good choice! It sounds like you're sticking to the doctor's advice about cutting back on caffeine from your check-up. How are you adjusting to the decaf?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually going really well, and I don't miss the jitters at all. I have a few client video calls this afternoon, so I put on a polo shirt today to look nice on camera while staying comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a great choice for that middle ground. Are you planning to head out for lunch, or do you have something ready?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm staying in today. I brought a meal-prep burrito bowl that I put together, so I'm just going to heat that up in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and convenient! Did you cook up a big vegetarian batch of those, or does your roommate Sam join in on the meal prep too?"
+    },
+    {
+      "speaker": "user",
+      "text": "We usually cook separately, but Sam actually helped me chop the onions and peppers for this batch. It's nice living with Sam because we coordinate our kitchen space really well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That definitely makes roommate life much smoother. How is the rest of your afternoon looking for your account manager work?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going to be packed. I need to finish reviewing some shipping schedules and then jump right into those client meetings. It'll keep me on my toes until clock-out time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope the meetings go smoothly! Do you have any relaxing plans to unwind after work, maybe some rock climbing or guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just practice some guitar tonight. It'll be nice to disconnect from screens and just play some music for a bit."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

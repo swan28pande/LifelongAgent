@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 457,
+  "date": "2027-05-31",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Monday, Leo! How is your morning going in Austin so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just getting started with my workday. I just finished my morning drink actually."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Did you go for coffee, or are you sticking to the low-caffeine recommendation from your check-up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I decided on a matcha latte this morning. Still gives me a little boost but keeps it low on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Matcha is a great choice for that! Are you working from home today, or did you head into the office at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I had to come into the office today. I'm wearing a button-down shirt instead of my usual casual wear since we have some client meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, dressed up for the big clients! Hope those meetings go smoothly. How's everything going with Sam lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, thanks for asking. We actually both had busy weekends so we didn't see much of each other, but we caught up last night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. Have you thought about what you're having for lunch today to keep you fueled through the meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just finished a deli sandwich that I packed this morning. It was quick and easy, which is perfect for today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is classic and convenient. Did you manage to keep it vegetarian?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely, it was a vegetarian deli sandwich with hummus and avocado. I'm definitely keeping up with my vegetarian diet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and healthy! Good luck with the rest of your meetings today, Leo."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

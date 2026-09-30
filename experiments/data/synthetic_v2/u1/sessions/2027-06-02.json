@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 459,
+  "date": "2027-06-02",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Wednesday going in Austin? Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty busy today. I'm trying to stay focused, so I started my day with a matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, especially since your doctor suggested cutting back on caffeine at your check-up. Did it give you a good energy boost for your account manager duties?"
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely did, and without the usual coffee jitters. I'm dressed a bit casually today in a polo shirt since I don't have any client-facing meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a polo shirt is perfect for a warm Austin day. Is your roommate Sam also working from home today, or do you have the place to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is out at the office today, so it's quiet here. I actually just took a break to eat a deli sandwich for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich sounds perfect for a quick lunch break. Did you make it at home or grab it from a local spot?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just made it at home. It was fast and hit the spot, keeping things easy and vegetarian."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect. Do you have any plans to unwind after work? Maybe some rock climbing or playing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually planning to head to the climbing gym for a bit this evening. I need to stretch out after sitting at my desk all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great time climbing! It's a great way to stay active, especially now that the half marathon is behind you. How are your legs feeling these days after that 1:58 finish?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! My legs are completely recovered now, feeling great. Ready to just climb and relax tonight. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a plan. Have a great climb, Leo! Talk soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

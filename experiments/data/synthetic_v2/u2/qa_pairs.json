@@ -1,0 +1,1168 @@
+[
+  {
+    "id": "u2_q0015",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "What was Marcus's breakfast on Thursday, 2027-12-16?",
+    "answer": "protein smoothie",
+    "answer_type": "value",
+    "accept": [
+      "protein smoothie"
+    ],
+    "evidence_days": [
+      642,
+      649,
+      663
+    ],
+    "recency_distance_days": 68,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred"
+    ]
+  },
+  {
+    "id": "u2_q0030",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "What was Marcus's breakfast on Thursday, 2026-04-09?",
+    "answer": "oatmeal",
+    "answer_type": "value",
+    "accept": [
+      "oatmeal"
+    ],
+    "evidence_days": [
+      26,
+      33,
+      47
+    ],
+    "recency_distance_days": 684,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred",
+      "no_session"
+    ]
+  },
+  {
+    "id": "u2_q0039",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "What was Marcus's breakfast on Monday, 2027-12-27?",
+    "answer": "skipped breakfast",
+    "answer_type": "value",
+    "accept": [
+      "skipped breakfast"
+    ],
+    "evidence_days": [
+      667
+    ],
+    "recency_distance_days": 64,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "exception"
+    ]
+  },
+  {
+    "id": "u2_q0087",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "What was Marcus's workout on Tuesday, 2026-04-07?",
+    "answer": "gym weights",
+    "answer_type": "value",
+    "accept": [
+      "gym weights"
+    ],
+    "evidence_days": [
+      35,
+      37,
+      41
+    ],
+    "recency_distance_days": 690,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred"
+    ]
+  },
+  {
+    "id": "u2_q0094",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "What was Marcus's workout on Thursday, 2027-05-27?",
+    "answer": "tennis",
+    "answer_type": "value",
+    "accept": [
+      "tennis"
+    ],
+    "evidence_days": [
+      460,
+      467,
+      474
+    ],
+    "recency_distance_days": 257,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred",
+      "boundary"
+    ]
+  },
+  {
+    "id": "u2_q0113",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "What was Marcus's workout on Saturday, 2027-05-08?",
+    "answer": "physical therapy stretches",
+    "answer_type": "value",
+    "accept": [
+      "physical therapy stretches"
+    ],
+    "evidence_days": [
+      434
+    ],
+    "recency_distance_days": 297,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "boundary"
+    ]
+  },
+  {
+    "id": "u2_q0150",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "What was Marcus's evening TV show on Monday, 2027-02-01?",
+    "answer": "sitcom reruns",
+    "answer_type": "value",
+    "accept": [
+      "sitcom reruns"
+    ],
+    "evidence_days": [
+      338
+    ],
+    "recency_distance_days": 393,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u2_q0170",
+    "type": "recall",
+    "capability": "episodic_recall",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "What was Marcus's evening TV show on Wednesday, 2026-11-11?",
+    "answer": "nature documentary",
+    "answer_type": "value",
+    "accept": [
+      "nature documentary"
+    ],
+    "evidence_days": [
+      257,
+      263,
+      264
+    ],
+    "recency_distance_days": 467,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "inferred",
+      "no_session",
+      "boundary"
+    ]
+  },
+  {
+    "id": "u2_q0182",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "What is Marcus's current breakfast routine?",
+    "answer": "by day of week: eggs and toast on Mon/Wed/Sun; protein smoothie on Tue/Thu; bagel on Fri; pancakes on Sat (since 2027-10-21)",
+    "answer_type": "free_text",
+    "accept": [
+      "eggs and toast or smoothies on weekdays, bagel Fri, pancakes Sat"
+    ],
+    "evidence_days": [
+      600,
+      602,
+      729,
+      730
+    ],
+    "recency_distance_days": 1,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0183",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "What is Marcus's current workout routine?",
+    "answer": "by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun (since 2027-05-26)",
+    "answer_type": "free_text",
+    "accept": [
+      "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun"
+    ],
+    "evidence_days": [
+      452,
+      454,
+      729,
+      730
+    ],
+    "recency_distance_days": 1,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "reversion"
+    ]
+  },
+  {
+    "id": "u2_q0184",
+    "type": "pattern_current",
+    "capability": "pattern_abstraction",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "What is Marcus's current evening TV show routine?",
+    "answer": "alternates week by week: sci-fi series, then sitcom reruns, repeating (7-day blocks starting Sat 2027-09-11) (since 2027-09-11)",
+    "answer_type": "free_text",
+    "accept": [
+      "alternating weeks of a sci-fi series and sitcom reruns"
+    ],
+    "evidence_days": [
+      560,
+      561,
+      728,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0187",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "What was Marcus's breakfast routine in January 2028?",
+    "answer": "by day of week: eggs and toast on Mon/Wed/Sun; protein smoothie on Tue/Thu; bagel on Fri; pancakes on Sat",
+    "answer_type": "free_text",
+    "accept": [
+      "eggs and toast or smoothies on weekdays, bagel Fri, pancakes Sat"
+    ],
+    "evidence_days": [
+      600,
+      602,
+      603
+    ],
+    "recency_distance_days": 128,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0188",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "What was Marcus's evening TV show routine in April 2026?",
+    "answer": "alternates week by week: cooking competition show, then nature documentary, repeating (7-day blocks starting Sun 2026-03-01)",
+    "answer_type": "free_text",
+    "accept": [
+      "alternating weeks of a cooking competition show and nature documentaries"
+    ],
+    "evidence_days": [
+      1,
+      2,
+      5
+    ],
+    "recency_distance_days": 726,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "initial"
+    ]
+  },
+  {
+    "id": "u2_q0194",
+    "type": "pattern_at_time",
+    "capability": "pattern_abstraction",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "What was Marcus's workout routine in October 2027?",
+    "answer": "by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun",
+    "answer_type": "free_text",
+    "accept": [
+      "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun"
+    ],
+    "evidence_days": [
+      452,
+      454,
+      455
+    ],
+    "recency_distance_days": 276,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "reversion"
+    ]
+  },
+  {
+    "id": "u2_q0202",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "What will Marcus's breakfast most likely be on Wednesday, 2028-03-22? Explain the reasoning.",
+    "answer": "eggs and toast. Reasoning: since 2027-10-21 the routine has been by day of week: eggs and toast on Mon/Wed/Sun; protein smoothie on Tue/Thu; bagel on Fri; pancakes on Sat. 2028-03-22 is a Wednesday, so eggs and toast.",
+    "answer_type": "value",
+    "accept": [
+      "eggs and toast"
+    ],
+    "evidence_days": [
+      728,
+      729,
+      730
+    ],
+    "recency_distance_days": 1,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_23d"
+    ]
+  },
+  {
+    "id": "u2_q0203",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "What will Marcus's breakfast most likely be on Tuesday, 2028-04-04? Explain the reasoning.",
+    "answer": "protein smoothie. Reasoning: since 2027-10-21 the routine has been by day of week: eggs and toast on Mon/Wed/Sun; protein smoothie on Tue/Thu; bagel on Fri; pancakes on Sat. 2028-04-04 is a Tuesday, so protein smoothie.",
+    "answer_type": "value",
+    "accept": [
+      "protein smoothie"
+    ],
+    "evidence_days": [
+      728,
+      729,
+      730
+    ],
+    "recency_distance_days": 1,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_36d"
+    ]
+  },
+  {
+    "id": "u2_q0248",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "What will Marcus's workout most likely be on Tuesday, 2028-03-14? Explain the reasoning.",
+    "answer": "tennis. Reasoning: since 2027-05-26 the routine has been by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun. 2028-03-14 is a Tuesday, so tennis.",
+    "answer_type": "value",
+    "accept": [
+      "tennis"
+    ],
+    "evidence_days": [
+      728,
+      729,
+      730
+    ],
+    "recency_distance_days": 1,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_15d"
+    ]
+  },
+  {
+    "id": "u2_q0258",
+    "type": "prediction",
+    "capability": "pattern_extrapolation",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "What will Marcus's evening TV show most likely be on Thursday, 2028-04-20? Explain the reasoning.",
+    "answer": "sitcom reruns. Reasoning: since 2027-09-11 the routine has been alternates week by week: sci-fi series, then sitcom reruns, repeating (7-day blocks starting Sat 2027-09-11). 2028-04-20 is in 7-day block 32 since the anchor (block index 31 mod 2 = 1), so sitcom reruns.",
+    "answer_type": "value",
+    "accept": [
+      "sitcom reruns"
+    ],
+    "evidence_days": [
+      727,
+      728,
+      729
+    ],
+    "recency_distance_days": 2,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "horizon_52d"
+    ]
+  },
+  {
+    "id": "u2_q0287",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "When did Marcus's breakfast routine change from the oatmeal / protein smoothie routine to the bagel / eggs and toast / pancakes / protein smoothie routine?",
+    "answer": "2027-10-21",
+    "answer_type": "date",
+    "accept": [
+      "2027-10-21"
+    ],
+    "evidence_days": [
+      599,
+      600
+    ],
+    "recency_distance_days": 131,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "explicit"
+    ]
+  },
+  {
+    "id": "u2_q0288",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "When did Marcus's workout routine change from the gym weights / run routine to the gym weights / rest day / run / tennis routine?",
+    "answer": "2026-06-29",
+    "answer_type": "date",
+    "accept": [
+      "2026-06-29"
+    ],
+    "evidence_days": [
+      120,
+      121
+    ],
+    "recency_distance_days": 610,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "implicit"
+    ]
+  },
+  {
+    "id": "u2_q0290",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "When did Marcus's workout routine change from physical therapy stretches to the gym weights / rest day / run / tennis routine?",
+    "answer": "2027-05-26",
+    "answer_type": "date",
+    "accept": [
+      "2027-05-26"
+    ],
+    "evidence_days": [
+      451,
+      452
+    ],
+    "recency_distance_days": 279,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "reversion",
+      "explicit"
+    ]
+  },
+  {
+    "id": "u2_q0291",
+    "type": "change_detection",
+    "capability": "temporal_change",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "When did Marcus's evening TV show routine change from the cooking competition show / nature documentary routine to the nature documentary / sitcom reruns routine?",
+    "answer": "2026-11-06",
+    "answer_type": "date",
+    "accept": [
+      "2026-11-06"
+    ],
+    "evidence_days": [
+      250,
+      251
+    ],
+    "recency_distance_days": 480,
+    "grading": "date_exact",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "explicit"
+    ]
+  },
+  {
+    "id": "u2_q0293",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "Why did Marcus's breakfast routine change around 2026-08-17?",
+    "answer": "the new school year started",
+    "answer_type": "free_text",
+    "accept": [
+      "the new school year started"
+    ],
+    "evidence_days": [
+      170
+    ],
+    "recency_distance_days": 561,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "explicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0294",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "Why did Marcus's breakfast routine change around 2027-10-21?",
+    "answer": "saw a nutritionist who suggested more protein at breakfast",
+    "answer_type": "free_text",
+    "accept": [
+      "saw a nutritionist who suggested more protein at breakfast"
+    ],
+    "evidence_days": [
+      600
+    ],
+    "recency_distance_days": 131,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "explicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0295",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "Why did Marcus's workout routine change around 2026-06-29?",
+    "answer": "joined a tennis club",
+    "answer_type": "free_text",
+    "accept": [
+      "joined a tennis club"
+    ],
+    "evidence_days": [
+      120,
+      121
+    ],
+    "recency_distance_days": 610,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "implicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0296",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "Why did Marcus's workout routine change around 2027-05-05?",
+    "answer": "strained his lower back lifting boxes",
+    "answer_type": "free_text",
+    "accept": [
+      "strained his lower back lifting boxes"
+    ],
+    "evidence_days": [
+      430,
+      431
+    ],
+    "recency_distance_days": 300,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "explicit",
+      "temporary"
+    ]
+  },
+  {
+    "id": "u2_q0297",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "Why did Marcus's evening TV show routine change around 2026-11-06?",
+    "answer": "became head of the science department at the same high school",
+    "answer_type": "free_text",
+    "accept": [
+      "became head of the science department at the same high school"
+    ],
+    "evidence_days": [
+      250,
+      251
+    ],
+    "recency_distance_days": 480,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "explicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0298",
+    "type": "attribution",
+    "capability": "causal_reasoning",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "Why did Marcus's evening TV show routine change around 2027-09-11?",
+    "answer": "signed up for a new streaming service",
+    "answer_type": "free_text",
+    "accept": [
+      "signed up for a new streaming service"
+    ],
+    "evidence_days": [
+      560
+    ],
+    "recency_distance_days": 171,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "explicit",
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0301",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "On Wednesday, 2026-08-19, Marcus's breakfast was oatmeal instead of the usual yogurt parfait. Was that a lasting change?",
+    "answer": "Yes - from 2026-08-17 the routine changed to alternating weeks of oatmeal and protein smoothies.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      170,
+      171,
+      172
+    ],
+    "recency_distance_days": 559,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "explicit"
+    ]
+  },
+  {
+    "id": "u2_q0304",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "On Tuesday, 2026-06-30, Marcus's workout was tennis instead of the usual gym weights. Was that a lasting change?",
+    "answer": "Yes - from 2026-06-29 the routine changed to tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      121,
+      122,
+      123
+    ],
+    "recency_distance_days": 608,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift",
+      "implicit"
+    ]
+  },
+  {
+    "id": "u2_q0306",
+    "type": "exception_vs_shift",
+    "capability": "exception_handling",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "On Thursday, 2026-08-27, Marcus's evening TV show was a movie instead of the usual nature documentary. Was that a lasting change?",
+    "answer": "No - it was a one-off (family movie night); the usual routine continued.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      180,
+      181
+    ],
+    "recency_distance_days": 550,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "exception"
+    ]
+  },
+  {
+    "id": "u2_q0310",
+    "type": "reversion",
+    "capability": "temporal_change",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "What did Marcus's workout go back to after the period of physical therapy stretches?",
+    "answer": "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun - by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun",
+    "answer_type": "free_text",
+    "accept": [
+      "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun"
+    ],
+    "evidence_days": [
+      452,
+      454,
+      455
+    ],
+    "recency_distance_days": 276,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "temporary"
+    ]
+  },
+  {
+    "id": "u2_q0311",
+    "type": "reversion",
+    "capability": "temporal_change",
+    "domain": "workout",
+    "difficulty_user": 2,
+    "question": "Is Marcus's workout still the gym weights / rest day / run / tennis routine?",
+    "answer": "Yes - since 2027-05-26.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      728,
+      729,
+      730
+    ],
+    "recency_distance_days": 1,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control"
+    ]
+  },
+  {
+    "id": "u2_q0314",
+    "type": "fact_current",
+    "capability": "knowledge_update",
+    "domain": "relationship",
+    "difficulty_user": 2,
+    "question": "What is Marcus's current relationship status?",
+    "answer": "married to Grace",
+    "answer_type": "value",
+    "accept": [
+      "married to Grace",
+      "married to Grace"
+    ],
+    "evidence_days": [
+      2
+    ],
+    "recency_distance_days": 729,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u2_q0315",
+    "type": "fact_current",
+    "capability": "knowledge_update",
+    "domain": "hobbies",
+    "difficulty_user": 2,
+    "question": "What are Marcus's current hobbies?",
+    "answer": "tennis",
+    "answer_type": "free_text",
+    "accept": [
+      "tennis"
+    ],
+    "evidence_days": [
+      120
+    ],
+    "recency_distance_days": 611,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set"
+    ]
+  },
+  {
+    "id": "u2_q0317",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "job",
+    "difficulty_user": 2,
+    "question": "What was Marcus's job on 2026-10-15?",
+    "answer": "high school chemistry teacher",
+    "answer_type": "value",
+    "accept": [
+      "high school chemistry teacher",
+      "high school chemistry teacher"
+    ],
+    "evidence_days": [
+      1
+    ],
+    "recency_distance_days": 730,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u2_q0321",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "job",
+    "difficulty_user": 2,
+    "question": "What was Marcus's job on 2027-01-22?",
+    "answer": "head of the science department at the same high school",
+    "answer_type": "value",
+    "accept": [
+      "head of the science department at the same high school",
+      "head of the science department at the same high school"
+    ],
+    "evidence_days": [
+      250
+    ],
+    "recency_distance_days": 481,
+    "grading": "exact",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u2_q0342",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "hobbies",
+    "difficulty_user": 2,
+    "question": "What were Marcus's hobbies on 2026-09-13?",
+    "answer": "woodworking, tennis",
+    "answer_type": "free_text",
+    "accept": [
+      "woodworking, tennis"
+    ],
+    "evidence_days": [
+      1,
+      120,
+      500
+    ],
+    "recency_distance_days": 231,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set"
+    ]
+  },
+  {
+    "id": "u2_q0352",
+    "type": "fact_at_time",
+    "capability": "temporal_fact",
+    "domain": "pets",
+    "difficulty_user": 2,
+    "question": "What were Marcus's pets on 2027-01-19?",
+    "answer": "none",
+    "answer_type": "free_text",
+    "accept": [
+      "none"
+    ],
+    "evidence_days": [
+      1
+    ],
+    "recency_distance_days": 730,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "set",
+      "empty"
+    ]
+  },
+  {
+    "id": "u2_q0357",
+    "type": "fact_history",
+    "capability": "knowledge_update",
+    "domain": "job",
+    "difficulty_user": 2,
+    "question": "How has Marcus's job changed over time?",
+    "answer": "high school chemistry teacher (2026-03-01 to 2026-11-04); head of the science department at the same high school (2026-11-05 to now)",
+    "answer_type": "free_text",
+    "accept": [
+      "head of the science department at the same high school"
+    ],
+    "evidence_days": [
+      1,
+      250
+    ],
+    "recency_distance_days": 481,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "single"
+    ]
+  },
+  {
+    "id": "u2_q0359",
+    "type": "fact_history",
+    "capability": "knowledge_update",
+    "domain": "pets",
+    "difficulty_user": 2,
+    "question": "How have Marcus's pets changed over time?",
+    "answer": "cat named Olive (2027-01-24 to now)",
+    "answer_type": "free_text",
+    "accept": [
+      "cat named Olive"
+    ],
+    "evidence_days": [
+      330
+    ],
+    "recency_distance_days": 401,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "multi"
+    ]
+  },
+  {
+    "id": "u2_q0364",
+    "type": "event_status",
+    "capability": "event_tracking",
+    "domain": "events",
+    "difficulty_user": 2,
+    "question": "What was the status of his back injury on 2027-05-15?",
+    "answer": "strained his lower back lifting boxes (happened)",
+    "answer_type": "free_text",
+    "accept": [
+      "strained his lower back lifting boxes"
+    ],
+    "evidence_days": [
+      430
+    ],
+    "recency_distance_days": 301,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "at_time",
+      "happened"
+    ]
+  },
+  {
+    "id": "u2_q0366",
+    "type": "event_status",
+    "capability": "event_tracking",
+    "domain": "events",
+    "difficulty_user": 2,
+    "question": "What happened with the nutritionist visit?",
+    "answer": "saw a nutritionist who suggested more protein at breakfast (happened, 2027-10-21)",
+    "answer_type": "free_text",
+    "accept": [
+      "saw a nutritionist who suggested more protein at breakfast"
+    ],
+    "evidence_days": [
+      600
+    ],
+    "recency_distance_days": 131,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "happened"
+    ]
+  },
+  {
+    "id": "u2_q0367",
+    "type": "duration",
+    "capability": "temporal_arithmetic",
+    "domain": "evening_show",
+    "difficulty_user": 2,
+    "question": "How long did Marcus's evening TV show stay the cooking competition show / nature documentary routine?",
+    "answer": "250 days (2026-03-01 to 2026-11-05)",
+    "answer_type": "free_text",
+    "accept": [
+      "250"
+    ],
+    "evidence_days": [
+      1,
+      250
+    ],
+    "recency_distance_days": 481,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "initial"
+    ]
+  },
+  {
+    "id": "u2_q0374",
+    "type": "duration",
+    "capability": "temporal_arithmetic",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "How long did Marcus's breakfast stay the oatmeal / protein smoothie routine?",
+    "answer": "430 days (2026-08-17 to 2027-10-20)",
+    "answer_type": "free_text",
+    "accept": [
+      "430"
+    ],
+    "evidence_days": [
+      170,
+      599
+    ],
+    "recency_distance_days": 132,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "shift"
+    ]
+  },
+  {
+    "id": "u2_q0376",
+    "type": "distractor_probe",
+    "capability": "causal_reasoning",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "Around 2026-12-25, his neighbor started a vegetable garden. Did that lead to any change in Marcus's breakfast?",
+    "answer": "No - nothing about Marcus's breakfast changed because of it.",
+    "answer_type": "yes_no",
+    "accept": [
+      "no"
+    ],
+    "evidence_days": [
+      300
+    ],
+    "recency_distance_days": 431,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": []
+  },
+  {
+    "id": "u2_q0377",
+    "type": "distractor_probe",
+    "capability": "causal_reasoning",
+    "domain": "breakfast",
+    "difficulty_user": 2,
+    "question": "Around 2027-10-21, saw a nutritionist who suggested more protein at breakfast. Did that lead to any change in Marcus's breakfast?",
+    "answer": "Yes - from 2027-10-21 Marcus's breakfast changed to eggs and toast or smoothies on weekdays, bagel Fri, pancakes Sat.",
+    "answer_type": "yes_no",
+    "accept": [
+      "yes"
+    ],
+    "evidence_days": [
+      600
+    ],
+    "recency_distance_days": 131,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "explicit"
+    ]
+  },
+  {
+    "id": "u2_q0382",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 2,
+    "question": "What is Marcus allergic to?",
+    "answer": "Not known - this was never mentioned.",
+    "answer_type": "abstain",
+    "accept": [
+      "not known"
+    ],
+    "evidence_days": [],
+    "recency_distance_days": 1,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "allergy"
+    ]
+  },
+  {
+    "id": "u2_q0385",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 2,
+    "question": "Do you know Marcus's job?",
+    "answer": "head of the science department at the same high school",
+    "answer_type": "value",
+    "accept": [
+      "head of the science department at the same high school"
+    ],
+    "evidence_days": [
+      250
+    ],
+    "recency_distance_days": 481,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "job"
+    ]
+  },
+  {
+    "id": "u2_q0387",
+    "type": "abstention",
+    "capability": "abstention",
+    "domain": "abstention",
+    "difficulty_user": 2,
+    "question": "Do you know Marcus's relationship status?",
+    "answer": "married to Grace",
+    "answer_type": "value",
+    "accept": [
+      "married to Grace"
+    ],
+    "evidence_days": [
+      2
+    ],
+    "recency_distance_days": 729,
+    "grading": "llm_judge",
+    "viewpoint_day": 731,
+    "tags": [
+      "control",
+      "relationship"
+    ]
+  }
+]

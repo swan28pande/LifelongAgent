@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 545,
+  "date": "2027-08-27",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Friday. How is everything going over in Chicago today? Are you wrapping up a busy week at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's been a pretty hectic week, but I'm glad it's finally Friday. The weather here is nice today. I started my morning off a bit differently and had a matcha latte instead of my usual heavy coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great choice, especially since your doctor suggested cutting back on the caffeine at your last check-up. How did you like it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was actually really good, definitely gave me a smoother energy boost. I had to dress up a little bit more than usual today too, so I put on a button-down shirt for a big presentation we have this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the presentation! Being an account manager keeps you on your toes. Did you get a chance to grab some lunch before the big meeting?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I made sure to eat. I brought a meal-prep burrito bowl from home, so I just ate that at my desk while reviewing my slides."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A meal-prep burrito bowl is always a solid, healthy option, and perfect for keeping things vegetarian. Do you have any fun plans lined up for the weekend once this presentation is out of the way? Maybe some rock climbing or playing guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Sam and I are planning to head to the climbing gym tomorrow morning to work on some new routes. Then I'll probably just spend Sunday relaxing and practicing some new songs on my guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect balance of active and relaxing. How is the climbing progression going? Have you been tackling any particularly challenging grades lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I've been working on a tricky V4 project that has some tough overhangs, so hopefully tomorrow is the day I finally send it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you crush it! It sounds like you've got a fantastic weekend ahead. Good luck with the presentation this afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to head into the meeting room now. Have a great weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 166,
+  "date": "2026-08-13",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Thursday starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I'm just hanging out in an oversized hoodie, drinking some black coffee, and trying to wake up before the workday starts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very cozy start. Are you heading into the office today, or are you working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. It's a busy day for my job as an account coordinator, so being at my home desk helps me focus on all the shipping logistics."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense, especially when you need to focus. What's on the menu for lunch to keep you fueled?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple today with a deli sandwich. I'll probably just eat it at my desk while I work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a classic work-from-home lunch. Did you make a nice vegetarian one?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, I made a vegetarian one with avocado, sprouts, and cheddar cheese. Simple but delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds really fresh and tasty! Do you have any plans to unwind this evening after a busy day of coordinating?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm hoping to do some rock climbing tonight. My roommate Sam and I are planning to head to the climbing gym once I log off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome! Rock climbing is such a great way to clear your head after staring at screens all day. I hope you and Sam have a great session."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely looking forward to it. I should probably get to work now, but I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a sister named Ana who is getting married in November."
+  ]
+}

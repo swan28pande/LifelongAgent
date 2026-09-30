@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 360,
+  "date": "2027-02-23",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just got to my desk at the logistics office. I decided to wear a polo shirt today because it's a bit warmer than usual in Austin."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a great choice for a warm day! Did you manage to grab a morning drink on your way in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually stopped by my usual spot and got a matcha latte. Trying to stick to that doctor's advice about cutting back on caffeine from my check-up, you know?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart move! A matcha latte is a delicious way to keep the caffeine in check. How are things with your roommate, Sam? Have you guys been up to much lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam's doing great! We actually practiced some guitar together last night in our living room. It was really fun."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a blast! It's always great to jam out. Are you still keeping up with your rock climbing too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely! I'm planning to head to the climbing gym later this evening to work on some routes. I need to make sure I have enough energy for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome, climbing is such a good workout. Speaking of energy, what are you planning for lunch today to fuel up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I brought a deli sandwich from home. Kept it simple and, of course, vegetarian-friendly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is perfect for a quick, filling lunch. It sounds like you have a really balanced day lined up, especially with climbing later. How have things been since your sister Ana's wedding?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, things have finally settled down after all the San Antonio wedding excitement! It's nice to be back in a normal routine. Anyway, I should probably get back to these logistics files. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great day, Leo! Good luck with work and enjoy your climbing session tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

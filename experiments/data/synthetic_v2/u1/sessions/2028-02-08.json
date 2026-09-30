@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 710,
+  "date": "2028-02-08",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going in Chicago? Did you get a chance to do any rock climbing yesterday, or has work at the logistics firm been keeping you busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Work is actually pretty busy today, lots of accounts to manage. No rock climbing yesterday, just resting. I'm actually just sitting at my desk right now in my polo shirt trying to power through some emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the endless email grind. A polo shirt is a solid choice for a busy office day—comfortable but still professional. How are you keeping your energy up? Did you grab a morning drink to get started?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I needed a boost but wanted to keep it a bit lighter, so I had a matcha latte this morning. It did the trick without making me too jittery."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great choice, especially keeping in mind the doctor's advice about cutting back on caffeine. Matcha is a nice, steady energy source. Are you planning to grab some food soon to go with it, or have you already had lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished lunch a little while ago. I had some ramen. It's a bit cold today, so something warm and brothy was exactly what I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is absolutely perfect for a chilly day. Did you find a good vegetarian ramen spot nearby, or did you make it yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "I found a really good spot just a couple of blocks from the office that does a fantastic vegetarian ramen with tofu and veggies. It's super convenient."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, a good vegetarian ramen spot close to work is a major win! How are things otherwise? Have you been playing much guitar lately, or has your roommate Sam been subjected to any loud practice sessions?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, Sam actually hasn't complained lately! I've been practicing a new fingerpicking pattern on the guitar in the evenings. It's a nice way to unwind after a long day of logistics."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Fingerpicking can be so meditative once you get the muscle memory down. It sounds like a perfect post-work wind-down. Are you planning to head straight home after work today, or do you have any evening plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll head straight home. Sam and I are planning to just relax and maybe watch a movie. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

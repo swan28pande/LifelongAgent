@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 90,
+  "date": "2026-05-29",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Leo! How are things going down in Austin today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Austin is pretty warm today, but I'm blasting the AC inside and wearing my favorite oversized hoodie to stay cozy while I work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect cozy setup. Did you grab a nice drink to start the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I walked down to the local spot and got an oat milk latte. It really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, an oat milk latte is always a great choice. How is the workload at the logistics firm looking for the rest of the afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a bit hectic, but I'm managing. I'm actually about to step away from my desk to eat a homemade salad I put together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds like a healthy and refreshing break. Is it one of your usual vegetarian recipes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, just a simple mix of greens, cucumbers, and chickpeas. Sam actually helped me chop some of the veggies last night, which saved me some time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice when roommates help each other out! How has Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, just busy with work too. We might try to catch up properly this evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Do you have any other plans for the weekend, maybe some rock climbing or practicing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely hoping to do some rock climbing tomorrow morning before it gets too hot, and maybe noodle around on the guitar tonight. Hope you have a good weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

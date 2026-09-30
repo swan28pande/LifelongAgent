@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 58,
+  "date": "2026-04-27",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is your morning starting out in Austin? Ready for the work week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, trying to get into the zone. I just finished my morning coffee, had an oat milk latte, and now I'm sitting at my desk trying to wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte is always a solid choice to kick things off. Are things busy at the logistics firm today, or do you have a bit of a slow start as an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually pretty quiet so far, luckily. I'm keeping things super comfortable today too—just wearing an oversized hoodie while I go through my emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oversized hoodie sounds incredibly cozy for a desk day! How are things with your roommate, Sam? Have they been busy lately too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! They've been working late, so we haven't crossed paths too much today. I have the place to myself right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a quiet apartment to yourself is just what you need. Did you get any time for rock climbing or playing your guitar over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did get some climbing in on Saturday, which was awesome. My arms are still a little sore, so today is definitely a rest day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh nice, definitely gotta let those muscles recover. Have you thought about what you're doing for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually already made a homemade salad to eat later. Trying to keep it light and easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds perfect for a light lunch. Do you have any plans for tonight once you wrap up work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just noodle around on my guitar and relax. It's going to be a very low-key evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: training for the Austin half marathon in May"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 100,
+  "date": "2026-06-08",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! Happy Monday. How is everything going down in Austin today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Monday's not too bad so far. Just getting settled with an oat milk latte before the logistics world wakes up fully."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte sounds like the perfect way to kick off the work week. Are you heading into the office today or working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Working from home today, thankfully! I'm keeping it super cozy and just wearing an oversized hoodie. No need for professional attire when it's just me and Sam running around the apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comfortable. Oversized hoodies are the ultimate WFH uniform. How are you and Sam doing? Got any plans for lunch later, or are you keeping it simple?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is good, busy with work too. For lunch, I actually just prepped a homemade salad. Trying to keep it light and healthy today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A homemade salad is a great option, especially when you want something fresh. What kind of ingredients did you throw into it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some mixed greens, cucumbers, tomatoes, chickpeas, and a simple vinaigrette. Since I'm vegetarian, I always make sure to load up on the chickpeas for some protein. It's quick and easy to toss together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and super filling! Good call on the chickpeas. Do you have any plans to unwind after work today? Maybe some rock climbing or practicing the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to hit the climbing gym for a bit this evening to stretch out after sitting at my desk all day. My fingers could use a break from typing anyway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to break up the day. Austin has some great climbing spots. Hope you have an awesome session!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be fun. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "oversized hoodie",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

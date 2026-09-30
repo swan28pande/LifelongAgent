@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 715,
+  "date": "2028-02-13",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Sunday. How is your weekend in Chicago going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just relaxing today. I actually decided to dress up a little bit even though I'm staying in mostly—I put on a button-down shirt. I also made myself a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt on a cozy Sunday, I like it! And a matcha latte sounds like a nice choice, especially since your doctor suggested cutting back on caffeine during your check-up. Are you finding it's a good alternative?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly, the matcha latte is a great substitute. It gives me a bit of energy without the crazy jitters. For lunch, I ended up meeting a friend nearby and had some ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a chilly February day in Chicago! Was it a new spot, or one of your regular places?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a place down the street I've been meaning to try. The veggie broth was incredible. It was nice to take a break because work has been so hectic lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I imagine things have been intense at the logistics firm. Have you been managing to balance your account manager duties with some downtime?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's tough, but I'm trying. Yesterday I spent a few hours rock climbing at the indoor gym to clear my head. It's the best way to destress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Climbing is a fantastic workout and mental reset. Did Sam tag along with you, or did you go solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam was busy, so I just went solo and ran into a couple of people I know there. It was a good session."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great weekend. Are you planning on playing any guitar later tonight, or just relaxing in your button-down shirt?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, I might actually change out of the button-down shirt before I play guitar, just to be more comfortable! But yes, definitely some guitar practice before the week starts again."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

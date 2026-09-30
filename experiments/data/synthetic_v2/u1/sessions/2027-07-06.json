@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 493,
+  "date": "2027-07-06",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just trying to stay on top of my accounts today. I started the morning with a decaf americano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Good job sticking to the doctor's advice about cutting back on caffeine. How is the weather in Chicago today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually really warm and sunny. I'm wearing a polo shirt today, which is perfect for this weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like great summer weather. Are you working from home today, or did you head into the logistics firm office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today. It's nice because I can easily step out for lunch. I actually just got back from grabbing some ramen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen sounds delicious! Did you find a good vegetarian ramen spot nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, there's a great place just a few blocks away that makes an amazing spicy vegetarian broth."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. It's always great when a local spot has solid vegetarian options. How has your roommate Sam been doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing well, thanks for asking! We're planning to do some rock climbing together later this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, fun! Are you heading to an indoor gym or planning an outdoor climb?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just the indoor gym. My fingers are a bit sore from practicing guitar last night, so I'll probably take it a bit easy on the wall."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a good plan. Don't want to overdo it! Hope you have a great climb with Sam, and enjoy the rest of your afternoon."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

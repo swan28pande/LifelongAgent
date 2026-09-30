@@ -1,0 +1,82 @@
+{
+  "user_id": "u1",
+  "day": 182,
+  "date": "2026-08-29",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How's your weekend starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just enjoying a lazy morning. I'm sitting on the porch with a black coffee right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Saturday morning. Any big plans for today, or just keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both. I'm actually planning to head over to the climbing gym in a bit. Just threw on a fitted t-shirt and some shorts, so I'm ready to move."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Are you working on any specific routes at the gym today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, there's this V4 project I've been stuck on. Hoping to finally send it today if my hands hold up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You've got this! Just take it one hold at a time. What are you planning for after climbing? I imagine you'll be pretty hungry."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely. I actually already picked up a deli sandwich to eat afterward so I don't have to cook."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart planning. A deli sandwich is the perfect post-climb fuel. Is Sam joining you today, or are you going solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually busy today, so just a solo session for me. But that's fine, I can just focus on my project."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a solo session is just what you need to get in the zone. Do you have any plans to play guitar later, or is it a rest evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably some guitar practice tonight. I've been trying to learn a new acoustic fingerpicking song, so I'll probably spend an hour or two on that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to wind down the day. Best of luck with the V4 project and the fingerpicking!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll let you know how the climb goes when I get back."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: User has a sister named Ana who is getting married in November."
+  ]
+}

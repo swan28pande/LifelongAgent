@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 479,
+  "date": "2027-06-22",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm just sitting at my desk here in Austin. I'm wearing a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic choice! I hope it's comfortable for a day at the office. Did you get a chance to grab some coffee this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I had a decaf americano this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! How are things going at the logistics firm? Is it a busy week for you as an account manager?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we are in the middle of onboarding some new accounts, so my schedule is completely packed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds intense. I hope you get some time to relax with your guitar or go rock climbing this weekend. Have you been able to take a decent lunch break today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not a long one, but I have a homemade salad for lunch today, so I can just eat at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's very convenient. Is it one of your favorite vegetarian recipes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's a simple chickpea and cucumber salad. Really easy to make."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and healthy. How is your roommate, Sam, doing? Are they also having a busy week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great, thanks for asking. They're pretty busy with their own work too, but we're managing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's good that you're both keeping on top of things. I'll let you get back to your busy day. Have a great afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

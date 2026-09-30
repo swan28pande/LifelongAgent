@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 422,
+  "date": "2027-04-26",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your week starting out over in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well so far. Just getting settled at my desk. I'm wearing a button-down shirt today since I have a big presentation with a new client for the logistics firm later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the presentation! A button-down shirt is a great choice for that. Did you manage to grab a coffee to help you wake up before the big meeting?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a decaf americano this morning. Still trying to be mindful of that check-up advice to cut back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you're sticking to that! A decaf americano is a perfect way to keep the routine without the caffeine spike. Are you planning to head out for lunch today, or do you have something at the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually brought a homemade salad today. I wanted something light so I don't feel sluggish during my presentation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. A homemade salad is a perfect light lunch. Does it fit into your vegetarian diet? Did you prep it last night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, entirely vegetarian of course. I prepped it last night while my roommate Sam was making dinner, so it was super easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice when you can coordinate kitchen time with Sam. How is he doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's good! Busy with his own work, but we caught up a bit yesterday. I'm hoping to get some rock climbing in later this week to decompress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to wind down after a busy Monday. Well, I hope your presentation goes amazingly well. Let me know how it goes!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

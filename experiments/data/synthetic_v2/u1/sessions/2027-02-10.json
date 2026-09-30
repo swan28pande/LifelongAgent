@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 347,
+  "date": "2027-02-10",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going in Austin? Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's a pretty busy day. I started the morning off right, though. I had a matcha latte instead of my usual heavy coffee, keeping in mind what the doctor said at my last check-up about cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great choice! How did you like the matcha latte? Did it still give you a good morning boost?"
+    },
+    {
+      "speaker": "user",
+      "text": "It actually did! It's a nice, steady energy. I'm also dressed a bit more casually for work today. I went with a polo shirt and some chinos since I don't have any client-facing meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is perfect for a casual but professional day at the office. Are you mostly handling internal accounts today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, just catching up on some routing reports and keeping things moving. I actually just got back to my desk after lunch. I ended up getting a vegetarian deli sandwich from the spot down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A deli sandwich is always a solid, quick lunch. Did you get a chance to eat it outside, or were you working through your break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I ate it quickly at my desk so I could free up some time later. I'm hoping to head to the rock climbing gym after work to get some bouldering in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind after a busy day of logistics. Is your roommate Sam going climbing with you, or are you going solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually busy tonight, so I'm just going by myself. I'll probably just listen to some music on the drive over."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Going solo can be really peaceful. Have you been playing much guitar lately too, or is climbing taking up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been playing a little bit of guitar in the evenings, but climbing has definitely been my main focus lately. Anyway, I should get back to these reports!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the reports, Leo! Have a great climb tonight and enjoy the rest of your day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 599,
+  "date": "2027-10-20",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just finished my morning coffee—I had a matcha latte today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte! That sounds like a nice, earthy choice, especially since you've been mindful of your caffeine. How is everything at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty busy. Being an account manager means there's always some last-minute shipping issue to resolve, but I'm getting through it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure you are. Are you working from home today, or did you head in?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home. Kept it pretty simple and just put on a polo shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic look for a work-from-home day! Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished eating. I had a meal-prep burrito bowl."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, meal-prep burrito bowls are so convenient. Did your roommate Sam try to sneak some of it, or did you get to enjoy it in peace?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, Sam actually went out to eat today, so I got to enjoy my lunch in peace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect! How is the weather in Chicago today? Is it starting to feel like autumn?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Chicago is getting pretty brisk, but it's a nice change of pace. I might play a little guitar later to unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to wrap up the evening. Hope the rest of your workday goes smoothly, Leo!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Speak to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

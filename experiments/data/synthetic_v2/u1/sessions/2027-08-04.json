@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 522,
+  "date": "2027-08-04",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Wednesday going in Chicago? Keeping busy at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's been a pretty busy morning. I'm just sitting at my desk in a polo shirt trying to power through a mountain of client emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid, comfortable choice for a busy desk day. Did you manage to grab some coffee to help you stay focused?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a decaf americano earlier this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A decaf americano sounds like a nice morning treat. Have you had a chance to take a break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished eating. I had a meal-prep burrito bowl at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a convenient option. Is it one of your usual vegetarian lunches? Hopefully Sam didn't try to steal any of it."
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, no, Sam has his own lunch today. And yeah, it's a great vegetarian recipe, really easy to pack."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's perfect. It definitely helps when your work as an account manager gets hectic. Do you have any plans to unwind tonight, maybe play some guitar or go rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll probably just practice some guitar later this evening. My hands are too tired for climbing today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Guitar sounds like a great, relaxing way to end the day. I hope the rest of your client emails go quickly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "meal-prep burrito bowl"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

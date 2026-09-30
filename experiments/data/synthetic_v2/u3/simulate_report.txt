@@ -1,0 +1,183 @@
+
+══════════════════════════════════════════════════════════════════════════════
+U3 - Sofia (seed 303, 730 days from 2026-03-01)
+══════════════════════════════════════════════════════════════════════════════
+
+Difficulty knobs (measured vs ladder):
+  knob                      ladder                 measured               ok
+  preference_domains        4                      4                      ✓
+  rule_types                required ['day_of_w... constant, day_of_week, n_day_cycle, week ✓
+  shifts_per_domain         3                      3                      ✓
+  visibility_mix (E/I/U %)  50/40/10               50/42/8                ✓
+  lag_days                  0-3                    1-3                    ✓
+  temporary_shifts          2                      2                      ✓
+  fact_changes              6                      6                      ✓
+  cross_domain_causes       1                      1                      ✓
+  distractors               3                      3                      ✓
+  exception_rate            0.05                   0.050                  ✓
+  p_session                 0.75                   0.768                  ✓
+  p_mention                 0.75                   0.757                  ✓
+  other_people              False                  False                  ✓
+
+Preference timeline:
+  [morning_drink]  (morning drink)
+    initial   d  1-140 2026-03-01→2026-07-18  cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends
+              observed 80×, first d3
+    temporary d141-154 2026-07-19→2026-08-01  ginger tea every day
+              cause → explicit, lag 1: came down with the flu (d140)
+              observed 9×, first d141
+    reversion d155-221 2026-08-02→2026-10-07  cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends
+              cause → explicit: she recovered from the flu
+              observed 46×, first d155
+    shift     d222-499 2026-10-08→2027-07-12  alternating weeks of drip coffee and matcha lattes
+              cause → explicit, lag 2: switched jobs to become a day-shift nurse at an outpatient clinic (d220)
+              observed 138×, first d222
+    shift     d500-730 2027-07-13→2028-02-28  drip coffee Mon/Wed, iced americano Tue/Thu, matcha Fri, hot chocolate weekends
+              cause → uncaused
+              observed 125×, first d501
+    exceptions: 31 - e.g. d14: free sample latte (a café promotion), d74: green tea (the coffee machine broke), d103: free sample latte (a café promotion)
+    distractor d180: her roommate bought a new espresso machine
+
+  [lunch]  (lunch)
+    initial   d  1-92  2026-03-01→2026-05-31  3 days cafeteria salad, 2 days packed leftovers
+              observed 51×, first d1
+    shift     d 93-351 2026-06-01→2027-02-14  sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat
+              cause → implicit, lag 3: started baking sourdough bread (d90)
+              observed 156×, first d93
+    shift     d352-482 2027-02-15→2027-06-25  2 days lunch with Tom, 3 days sourdough sandwich
+              cause → implicit, lag 2: got engaged to Tom (d350)
+              observed 67×, first d353
+    shift     d483-730 2027-06-26→2028-02-28  alternating weeks of homemade burrito bowls and sourdough sandwiches
+              cause → explicit, lag 3: moved to Tucson to be closer to her parents (d480)
+              observed 134×, first d483
+    exceptions: 28 - e.g. d9: vending machine snacks (forgot her lunch), d17: vending machine snacks (forgot her lunch), d29: vending machine snacks (forgot her lunch)
+    distractor d450: a new sandwich shop opened near her work
+
+  [commute]  (commute)
+    initial   d  1-220 2026-03-01→2026-10-06  night bus Mon-Wed, rideshare Thu/Fri, no commute on weekends
+              observed 123×, first d1
+    shift     d221-400 2026-10-07→2027-04-04  light rail on weekdays
+              cause → implicit, lag 1: switched jobs to become a day-shift nurse at an outpatient clinic (d220)
+              observed 94×, first d221
+    shift     d401-640 2027-04-05→2027-11-30  driving on weekdays
+              cause → explicit, lag 1: bought a used hybrid car (d400)
+              observed 129×, first d401
+    temporary d641-667 2027-12-01→2027-12-27  rideshare on weekdays
+              cause → implicit, lag 1: sprained her ankle on a hike (d640)
+              observed 18×, first d641
+    reversion d668-730 2027-12-28→2028-02-28  driving on weekdays
+              cause → uncaused
+              observed 38×, first d668
+    exceptions: 34 - e.g. d16: walked (the weather was nice), d61: walked (the weather was nice), d92: got a ride from Tom (a bad traffic day)
+
+  [podcast]  (podcast)
+    initial   d  1-260 2026-03-01→2026-11-15  alternating weeks of a health news podcast and a comedy podcast
+              observed 150×, first d4
+    shift     d261-331 2026-11-16→2027-01-25  4 days true-crime podcast, 3 days comedy podcast
+              cause → implicit, lag 1: a coworker recommended a true-crime podcast (d260)
+              observed 40×, first d261
+    shift     d332-602 2027-01-26→2027-10-23  Italian lessons podcast every day
+              cause → explicit, lag 2: signed up for an online Italian course (d330)
+              observed 141×, first d333
+    shift     d603-730 2027-10-24→2028-02-28  dog training podcast Mon/Wed, true crime Tue/Thu, comedy Fri-Sun
+              cause → explicit, lag 3: adopted a rescue greyhound named Dash (d600)
+              observed 73×, first d604
+    exceptions: 19 - e.g. d14: music instead (wanted something upbeat), d22: music instead (wanted something upbeat), d28: music instead (wanted something upbeat)
+    distractor d560: her favorite podcast host announced a book tour
+
+Facts and events:
+  job               [single] night-shift ER nurse at a city hospital (d1-219) → day-shift nurse at an outpatient clinic (d220-end)
+  city              [single] Phoenix, Arizona (d1-479) → Tucson, Arizona (d480-end)
+                     city.tucson: effective d480, stated d483 (retrospective)
+  relationship      [single] dating Tom (d1-349) → engaged to Tom (d350-end)
+  hobbies           [multi] salsa dancing (d1-299); sourdough baking (d90-end)
+  pets              [multi] rescue greyhound named Dash (d600-end)
+  event flu             happened d140 → happened d155
+  event podcast_rec     happened d260
+  event italian         happened d330
+  event wedding         planned d360
+  event new_car         happened d400
+  event ankle           happened d640 → happened d668
+
+QA:
+  total 50
+  recall               8
+  pattern_current      3
+  pattern_at_time      3
+  prediction           4
+  change_detection     4
+  attribution          6
+  exception_vs_shift   3
+  reversion            2
+  fact_current         2
+  fact_at_time         4
+  fact_history         2
+  event_status         2
+  duration             2
+  distractor_probe     2
+  abstention           3
+  highest top-answer shares: 
+
+  20 random QA items:
+  • (recall/lunch) [inferred, no_session, boundary]
+    Q: What was Sofia's lunch on Wednesday, 2026-05-27?
+    A: cafeteria salad
+  • (prediction/lunch) [horizon_30d]
+    Q: What will Sofia's lunch most likely be on Wednesday, 2028-03-29? Explain the reasoning.
+    A: sourdough sandwich. Reasoning: since 2027-06-26 the routine has been alternates week by week: homemade burrito bowl, then sourdough sandwich, repeating (7-day blocks starting Sat 2027-06-26). 2028-03-29 is in 7-day block 40 since the anchor (block index 39 mod 2 = 1), so sourdough sandwich.
+  • (abstention/abstention) [shoe_size]
+    Q: What is Sofia's shoe size?
+    A: Not known - this was never mentioned.
+  • (pattern_at_time/morning_drink) [shift]
+    Q: What was Sofia's morning drink routine in May 2027?
+    A: alternates week by week: drip coffee, then matcha latte, repeating (7-day blocks starting Thu 2026-10-08)
+  • (recall/commute) [exception]
+    Q: What was Sofia's commute on Saturday, 2027-09-25?
+    A: got a ride from Tom
+  • (fact_at_time/relationship)
+    Q: What was Sofia's relationship status on 2026-11-04?
+    A: dating Tom
+  • (fact_history/city) [single]
+    Q: How has Sofia's city of residence changed over time?
+    A: Phoenix, Arizona (2026-03-01 to 2027-06-22); Tucson, Arizona (2027-06-23 to now)
+  • (prediction/commute) [horizon_13d]
+    Q: What will Sofia's commute most likely be on Sunday, 2028-03-12? Explain the reasoning.
+    A: no commute. Reasoning: since 2027-12-28 the routine has been by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun. 2028-03-12 is a Sunday, so no commute.
+  • (duration/lunch) [shift]
+    Q: As of 2028-02-28, how long had Sofia's lunch been the homemade burrito bowl / sourdough sandwich routine?
+    A: 248 days (since 2027-06-26)
+  • (fact_current/job)
+    Q: What is Sofia's current job?
+    A: day-shift nurse at an outpatient clinic
+  • (attribution/commute) [implicit, shift, cross_domain]
+    Q: Why did Sofia's commute routine change around 2026-10-07?
+    A: switched jobs to become a day-shift nurse at an outpatient clinic
+  • (pattern_current/commute) [reversion]
+    Q: What is Sofia's current commute routine?
+    A: by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun (since 2027-12-28)
+  • (attribution/commute) [implicit, temporary]
+    Q: Why did Sofia's commute routine change around 2027-12-01?
+    A: sprained her ankle on a hike
+  • (exception_vs_shift/podcast) [exception]
+    Q: On Saturday, 2027-03-13, Sofia's podcast was an audiobook instead of the usual Italian lessons podcast. Was that a lasting change?
+    A: No - it was a one-off (a friend lent her one); the usual routine continued.
+  • (distractor_probe/lunch) [control, implicit]
+    Q: Around 2026-05-29, started baking sourdough bread. Did that lead to any change in Sofia's lunch?
+    A: Yes - from 2026-06-01 Sofia's lunch changed to sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat.
+  • (event_status/events) [happened]
+    Q: What happened with the Italian course?
+    A: signed up for an online Italian course (happened, 2027-01-24)
+  • (fact_history/hobbies) [multi]
+    Q: How have Sofia's hobbies changed over time?
+    A: salsa dancing (2026-03-01 to 2026-12-24); sourdough baking (2026-05-29 to now)
+  • (abstention/abstention) [control, hobbies]
+    Q: Does Sofia have any hobbies, and if so what?
+    A: sourdough baking
+  • (recall/podcast)
+    Q: What was Sofia's podcast on Friday, 2027-08-20?
+    A: Italian lessons podcast
+  • (attribution/morning_drink) [explicit, temporary]
+    Q: Why did Sofia's morning drink routine change around 2026-07-19?
+    A: came down with the flu
+
+✓ all checks passed - wrote datasets/v2/u3/

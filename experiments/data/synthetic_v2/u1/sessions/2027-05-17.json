@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 443,
+  "date": "2027-05-17",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your day starting out in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty busy already at the logistics firm. I started my morning with a matcha latte while going through emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte is a great way to kick off a busy week. Do you have a lot of client meetings scheduled for today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I have a few video calls lined up. I'm wearing a button-down shirt today. Hopefully, the afternoon goes smoothly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope they go well! Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just finished eating, actually. I had a deli sandwich at my desk while wrapping up some paperwork."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like you are powering through the day. How are things going with your roommate, Sam? Have you two been up to much lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things are good! Sam and I were actually talking about planning a rock climbing session sometime soon, since we haven't gone in a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun plan! It's always great to get back on the wall. Have you had any time to play your guitar recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yeah. I've mostly just been practicing some chords in the evenings to unwind after work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a nice way to relax. By the way, how are you feeling after completing the Austin half marathon? Are you back to running at all?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm feeling good, but I've been taking a break from running to let my legs fully recover."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

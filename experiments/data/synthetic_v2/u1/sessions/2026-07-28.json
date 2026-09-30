@@ -1,0 +1,78 @@
+{
+  "user_id": "u1",
+  "day": 150,
+  "date": "2026-07-28",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday going over in Austin? Are you and Sam getting up to anything fun today, or is it a busy workday at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's a pretty standard Tuesday, pretty busy with work. I'm just trying to stay alert. I've already had a black coffee this morning to help me power through."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Black coffee is always a reliable way to kickstart a busy day. Are you working from home today or did you head into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. They always blast the AC here, so I'm actually wearing an oversized hoodie right now just to stay warm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Office AC can be brutal in the summer! An oversized hoodie sounds like the perfect defense. Did you manage to get a decent break for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I took a quick break and grabbed a deli sandwich from the place down the street. It was nice to step away from my desk for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is a classic lunch break choice. Glad you got a little breather! Any other news with you lately, or has it just been the usual routine?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I do have some really exciting news! My sister Ana is getting married in November."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, congratulations to Ana! That is fantastic news. Did she just share the big news today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, she literally just called and announced it to the family today. It's officially planned for November, and everyone is so happy for her."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! November will be here before you know it. Do you think you'll be helping out with any of the wedding prep, or maybe playing some guitar for the occasion?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might offer to play some acoustic guitar during the cocktail hour if she wants, but mostly I'm just excited to celebrate with everyone. It's going to be a great event."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That would be such a special touch! I'm so happy for you and your family, Leo. Enjoy the rest of your afternoon in your cozy hoodie!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {
+      "sister_wedding.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

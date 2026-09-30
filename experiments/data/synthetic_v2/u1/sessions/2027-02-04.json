@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 341,
+  "date": "2027-02-04",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Thursday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just busy. I started the morning with a decaf americano to get things moving, and then jumped right into prep work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sticking with the decaf americano, nice! How has it been going cutting back on the caffeine since your last check-up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, easier than I thought. I don't really miss the jitters. I had to dress up a bit today too since I have an important presentation at the logistics firm, so I put on a button-down shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt! You must mean business today. How did the presentation go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It actually went really well! The client was super engaged. I barely had a moment to breathe afterward, though, so I just ate a homemade salad at my desk for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad is a perfect quick lunch when you're busy like that. Did you prep that last night?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! My roommate Sam was out at a movie, so I had the kitchen all to myself. I put together some spinach, tomatoes, cucumbers, and chickpeas to keep it vegetarian and filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious. Having the kitchen to yourself is great for meal prep. Do you and Sam have any plans for the weekend, maybe some rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam actually has some family stuff going on, so I'll probably hit the climbing gym solo on Saturday. I might also spend some time practicing the guitar."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid, relaxing weekend. Have you been working on any particular songs on the guitar lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I've been trying to learn a fingerstyle cover of an old acoustic song. It's a bit of a challenge, but I'm making progress. Anyway, I should get back to these afternoon emails!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the fingerstyle and the rest of your workday, Leo! Talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

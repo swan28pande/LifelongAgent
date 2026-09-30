@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 660,
+  "date": "2027-12-20",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your week starting off in chilly Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty cold, but I'm getting through it. I'm actually dressed up a bit more than usual today. I threw on a button-down shirt because we have an all-hands meeting at the logistics firm later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, an all-hands meeting! Best of luck with that. Did you grab a nice warm cup of coffee to help you wake up for it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I'm still trying to watch my caffeine intake like the doctor suggested at my check-up, so I opted for a decaf americano this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great choice, staying warm while keeping the caffeine low. How have things been otherwise? Have you found any time to practice your guitar lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit! I sat down with my guitar yesterday afternoon and practiced some fingerpicking. It was a nice way to unwind. Now I'm just watching the clock waiting for my lunch break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Guitar sounds like the perfect Sunday activity. What are you planning to have for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I brought some leftover vegetarian ramen that Sam and I made. I just need to heat it up, and honestly, a hot bowl of ramen is exactly what I need on a day like today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, warm ramen sounds absolutely perfect for a cold Chicago December day. Did you and Sam get any climbing in over the weekend too, or was it a quiet one?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually did go rock climbing on Saturday morning. The gym was pretty packed, but we got a good session in. It felt good to stretch out after sitting at my desk so much last week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always great to clear your head at the gym. Well, I hope your all-hands meeting goes smoothly today! Let me know if you need help organizing anything later."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll head to the breakroom to heat up my food now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

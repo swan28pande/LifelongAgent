@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 75,
+  "date": "2026-05-14",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Thursday in Austin starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting out pretty good. I just finished an oat milk latte, so I'm finally feeling awake and ready to tackle the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oat milk latte sounds like the perfect start. How are things looking at work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a bit busy as usual for an account coordinator, but nothing I can't handle. I'm keeping it comfortable today and wearing a fitted t-shirt since I don't have any client-facing meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Comfortable is definitely the way to go. Do you have any plans to unwind after work, maybe some rock climbing or practicing your guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm actually planning on heading to the climbing gym tonight. It's been a minute since I've gone, so I'm looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! Is Sam going with you, or are you flying solo today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam has other plans tonight, so I'm just going by myself. But there are usually plenty of people there to chat with."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely, climbing gyms always have a nice community. What are you doing for lunch to power through the rest of your workday?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually packed a homemade salad today. I wanted something fresh and quick so I can get back to work faster."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade salad sounds refreshing. Is it tough keeping your vegetarian lunches interesting, or do you have a good routine down?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually pretty easy once you get the hang of it. I just toss in whatever veggies, beans, and grains I have on hand, so it stays pretty varied."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and satisfying. I hope the climbing session tonight goes well and you have a great rest of your day!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "oat milk latte",
+      "clothing": "fitted t-shirt",
+      "lunch": "homemade salad"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

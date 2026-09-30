@@ -1,0 +1,80 @@
+{
+  "user_id": "u1",
+  "day": 320,
+  "date": "2027-01-14",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Thursday going down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well. I started my day with a matcha latte this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great choice, especially since your doctor suggested cutting back on caffeine at your last check-up. How is work going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I have some huge news. I got promoted to account manager at the logistics firm today! I'm really excited, though the new role does come with a stricter office dress code."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, congratulations, Leo! That is amazing news. Account manager is a big step up. How are you feeling about the new dress code?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm thrilled. Because I got promoted to account manager at the logistics firm, which has a stricter office dress code, I have recently changed my outfit routine. So, I am wearing a button-down shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A button-down shirt definitely fits the new role! It sounds like you're already dressing the part. Have you had a chance to take a break for lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just finished up. I kept it pretty simple and had a deli sandwich today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Since you're vegetarian, did you find a good local spot that makes a solid veggie deli sandwich?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, there's a place just a block from the office that makes an amazing vegetarian deli sandwich with avocado, sprouts, and smoked gouda."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. Are you planning to do anything to celebrate the big promotion tonight? Maybe head out for a climbing session or play some guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think my roommate Sam and I might toast to it at home, but otherwise I'm just going to play some guitar and unwind. It's been a busy but great day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {
+      "job.promotion": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

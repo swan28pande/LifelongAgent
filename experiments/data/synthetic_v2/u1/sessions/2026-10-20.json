@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 234,
+  "date": "2026-10-20",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going? Are things busy at the logistics firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually a bit of a slower day, which is nice. I'm keeping it comfortable today and wearing an oversized hoodie while I plow through some emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oversized hoodies are the best for a focused workday. Did you grab a morning coffee to help you power through?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a matcha latte this morning. It's been a great way to keep my energy up without going overboard."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect choice, especially with the doctor's advice to watch the caffeine. Did you manage to get a decent break for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually just finished a deli sandwich a little while ago. It was quick and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A quick lunch is always good when you have a lot of coordinator tasks to wrap up. How are things going in Austin lately? Weather starting to cool down?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's finally starting to feel a bit more like autumn here in Austin, which is a huge relief."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That must be great, especially with November right around the corner. Speaking of which, how are the preparations for your sister Ana's wedding going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Everything is coming together! Ana is getting super excited, and I'm looking forward to the big day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear that! Are you planning to squeeze in any rock climbing or guitar practice later today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might play some guitar later tonight to unwind, but otherwise, just taking it easy."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "oversized hoodie",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

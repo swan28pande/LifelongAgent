@@ -1,0 +1,76 @@
+{
+  "user_id": "u1",
+  "day": 527,
+  "date": "2027-08-09",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Monday. How is your morning starting out in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. Just getting settled at my desk. I'm wearing a button-down shirt today, and I've got a matcha latte here with me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A matcha latte sounds like a great start to the week. How are things going at the logistics firm? Is it a busy Monday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's pretty busy. Being an account manager here means there are always tons of emails to catch up on after the weekend. But I'm powering through."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Are you planning to do any rock climbing or play some guitar later to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might do some climbing tonight if my roommate Sam is up for it. We'll see how the afternoon goes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun plan. Have you thought about what you're doing for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I'm having ramen for lunch today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, yum! Is it a vegetarian ramen?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's a vegetarian ramen. There's a spot nearby that does a really good veggie broth."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect, it's always great to have solid vegetarian options close by."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Anyway, I should probably get back to these logistics accounts before my next meeting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Go get 'em! Have a great day, Leo, and enjoy your lunch!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "button-down shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

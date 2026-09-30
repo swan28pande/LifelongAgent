@@ -1,0 +1,74 @@
+{
+  "user_id": "u1",
+  "day": 79,
+  "date": "2026-05-18",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Monday starting off? Did you manage to get some climbing in over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! No climbing this weekend, just had a quiet one. I'm having a black coffee right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A black coffee is a great way to start the week. How are things looking at the logistics firm? Busy week ahead for an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a lot of shipments coming through. I'm wearing a fitted t-shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and comfortable! Speaking of your routine, how have things been with your roommate Sam lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is doing great! We actually had a nice dinner together yesterday. For lunch today, I'm eating a deli sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A deli sandwich is always a classic. Since you are vegetarian, is it a plant-based one you made at home, or did you find a good spot nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "I made it myself this morning with some veggie ingredients. It's really easy to throw together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Did you get any time to play your guitar yesterday evening to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I practiced a few acoustic songs. It's a nice way to relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Guitar is always a great way to wind down. I hope the rest of your Monday goes smoothly with work!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: signed up for the Austin half marathon this month"
+  ]
+}

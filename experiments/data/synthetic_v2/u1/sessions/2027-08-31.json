@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 549,
+  "date": "2027-08-31",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! How is your Tuesday going in Chicago? Have you had a chance to play any guitar or do some climbing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Tuesday is going pretty well, just a bit busy. I actually started my day with a decaf americano since I'm still trying to follow the doctor's advice on cutting back on caffeine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for you sticking to that! How are you finding the transition? Is work at the logistics firm keeping you on your toes today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's not too bad, I'm getting used to the decaf. Work is definitely busy, lots of client accounts to manage today. I dressed a bit casual for it though, just wearing a polo shirt today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A polo shirt is a solid choice—comfortable but still professional enough. Did you manage to step away for a proper lunch break today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I went out and got some ramen for lunch. It was really good and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ramen sounds perfect for a busy Tuesday. Did you go to that spot near your office, or somewhere else?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a spot near the office. It was quick and convenient, which was perfect since I have a stack of shipments to track this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like you had to fuel up quickly. Do you have any plans to unwind after you wrap up work? Maybe hitting the climbing gym or catching up with Sam?"
+    },
+    {
+      "speaker": "user",
+      "text": "Sam is actually busy tonight, so I think I'll just head home and practice some guitar for a bit. I want to try learning a new song."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to relax. What kind of song are you hoping to learn?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just an acoustic fingerpicking song I heard recently. It'll be a nice, quiet way to end the day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "decaf americano",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

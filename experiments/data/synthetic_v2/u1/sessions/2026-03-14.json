@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 14,
+  "date": "2026-03-14",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Leo! Happy Saturday. How is your weekend starting down in Austin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Austin is great today, nice and warm. Just relaxing at home. I started my day with a black coffee while reading on the porch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, slow Saturday morning. Are you planning on doing any rock climbing or playing guitar today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, Sam and I might head to the climbing gym later. Right now I'm just hanging out in a fitted t-shirt and jeans, keeping it super casual."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a climbing session with Sam sounds like a blast. Have you eaten yet, or are you guys planning a lunch spot?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just made a quick deli sandwich for lunch. Simple but hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Can't go wrong with a classic deli sandwich! Did you load it up with hummus and veggies?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, plenty of hummus, avocado, and fresh veggies. Really satisfying."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, that sounds delicious and energizing for climbing. How has work been lately at the logistics firm? Ready for a break from being an account coordinator?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh absolutely. It was a hectic week dealing with shipping delays, so this weekend is much needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine, those supply chain puzzles must be exhausting. I hope the climbing wall helps you blow off some steam!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It definitely will. I'm going to grab my gear and head out soon. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "black coffee",
+      "clothing": "fitted t-shirt",
+      "lunch": "deli sandwich"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,72 @@
+{
+  "user_id": "u1",
+  "day": 654,
+  "date": "2027-12-14",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Leo! How is your Tuesday starting out in Chicago? Ready for another busy day at the logistics firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty busy, but I'm easing into it. I actually just got a matcha latte to start the morning, which has been a nice change. I'm dressed pretty casually today too, just wearing a polo shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte sounds like a great way to keep that caffeine intake down like your doctor suggested! And a polo shirt sounds perfect for a comfortable Tuesday. Are you working from the office today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm at the office. I actually have a lunch break coming up soon and I think I'm going to grab some ramen from the place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, ramen is perfect for a chilly December day in Chicago! I assume you're getting a delicious vegetarian version?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, they have an amazing vegetarian ramen with tofu and soft-boiled egg. It's one of my favorite spots near the office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! How are things going with your clients at the firm? Still keeping busy as an account manager?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely keeping busy. We have a lot of end-of-year shipments to coordinate, so my phone has been ringing off the hook, but it's nothing I can't handle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You've always got a great handle on things. Do you have any plans to unwind after work today? Maybe some rock climbing or practicing the guitar?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I might meet up with Sam later for a quick climbing session if we both finish work at a decent hour. Otherwise, just relaxing at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid plan. I hope you get to hit the climbing wall tonight! Enjoy your ramen lunch."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm heading out to grab it now. Chat later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "coffee": "matcha latte",
+      "clothing": "polo shirt",
+      "lunch": "ramen"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}
