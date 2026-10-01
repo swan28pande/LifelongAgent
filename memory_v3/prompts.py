@@ -26,6 +26,7 @@ There are three types of memory to extract:
 A preference is a choice of one specific value out of a recurring category.
   `entity`  = the category being chosen from — a general, reusable noun phrase
   `content` = the specific value chosen that day — a short noun phrase, nothing more
+  `speaker` = the person this applies to — use their name exactly as it appears in the transcript
   `date`    = the day the choice applies to, YYYY-MM-DD
 
 The entity must be broad enough that tomorrow's different choice still belongs to it.
@@ -47,6 +48,7 @@ A fact is a stable attribute about the person — something that is true about t
 unlikely to change day to day.
   `entity`  = the attribute category — a general noun (e.g. occupation, city, diet)
   `content` = the specific value — a short phrase
+  `speaker` = the person this applies to — use their name exactly as it appears in the transcript
   `date`    = the day this fact was stated or confirmed, YYYY-MM-DD
 
 Facts include identity, relationships, location, occupation, age, dietary restrictions,
@@ -62,6 +64,7 @@ An event is a one-time occurrence or milestone — something that happened (or i
 scheduled to happen) on a specific date.
   `entity`  = a topic tag for the event — a short noun phrase for grouping
   `content` = what happened or is planned — a concise description
+  `speaker` = the person this applies to — use their name exactly as it appears in the transcript
   `date`    = the day the event occurred or will occur, YYYY-MM-DD
 
 Events include accomplishments, decisions, social plans, deadlines, arrivals,
@@ -85,11 +88,15 @@ The conversation is labelled with its date. Resolve relative references ("tomorr
 Something definitely scheduled for another day is recorded under that resolved date,
 not the conversation date.
 
+SPEAKERS
+The transcript may have one or more named speakers. Extract memories for ALL of them.
+Set `speaker` to the person's name exactly as it appears in the transcript.
+
 Return ONLY JSON:
 {{
-  "preferences": [{{"entity": "...", "content": "...", "date": "YYYY-MM-DD"}}],
-  "facts":       [{{"entity": "...", "content": "...", "date": "YYYY-MM-DD"}}],
-  "events":      [{{"entity": "...", "content": "...", "date": "YYYY-MM-DD"}}]
+  "preferences": [{{"entity": "...", "content": "...", "speaker": "...", "date": "YYYY-MM-DD"}}],
+  "facts":       [{{"entity": "...", "content": "...", "speaker": "...", "date": "YYYY-MM-DD"}}],
+  "events":      [{{"entity": "...", "content": "...", "speaker": "...", "date": "YYYY-MM-DD"}}]
 }}
 Return empty arrays for any type that has no entries.
 """
@@ -154,18 +161,19 @@ List only the canonical recurring entities.
 """
 
 WEEKLY_PATTERN_SYSTEM = """\
-You are a mathematical pattern analyst. Analyze the preference transition sequence for a SINGLE entity for {speaker} during one week.
+You are a pattern analyst. Analyze the preference transition sequence for a SINGLE entity for {speaker} during one week.
 
-1. LOG: List exactly what changed and when. 
+1. LOG: List exactly what changed and when.
    Format: [Date] Value (Duration: X days)
-2. SPECULATE: Does this sequence suggest a potential N-day cycle or a calendar-based rhythm (e.g. Mon-Fri)? 
+2. CHECK: Does this sequence show a clear repeating cycle (at least 2 full repetitions)?
+   If the data is too sparse or the activities are one-off events, report "no pattern".
 3. PRECISION: Avoid vague terms like "usually" or "tends to". Use specific durations.
 
 Return JSON:
 {{
   "mathematical_sequence": "The exact date-to-date sequence of values and durations",
-  "potential_cycle": "Speculate on a possible periodicity (e.g. 'Alternates every 3 days')",
-  "reasoning": "Show your calculation of the days between switches."
+  "potential_cycle": "A clear periodicity if one exists with 2+ full cycles, otherwise 'no pattern'",
+  "reasoning": "Show your calculation, or explain why the data is too sparse for a pattern."
 }}
 """
 
@@ -181,25 +189,24 @@ Return JSON:
 """
 
 MONTHLY_PATTERN_SYSTEM = """\
-You are a mathematical pattern analyst. Analyze the observations for a SINGLE preference entity for {speaker} across several weeks.
+You are a pattern analyst. Analyze the observations for a SINGLE preference entity for {speaker} across several weeks.
 
-Goal: Identify the exact repeating structure for this entity — it may be a fixed N-day alternation, a day-of-week rule, or another repeating structure.
+Goal: Determine whether a genuine repeating structure exists for this entity.
 
 1. CONSOLIDATE: Merge the weekly transition logs into one continuous timeline.
 2. CALCULATE: Find the exact number of days the user held each preference value.
-3. GROUPING: Group similar values or sub-categories into their primary underlying states (e.g., grouping 'blue pens', 'black pens', and 'red pens' under a single 'pen' state, and comparing that to 'pencil') before calculating cycle lengths.
-4. DETECT PATTERN: Look for ANY repeating structure:
-   - Fixed N-day alternation (e.g. 3 days of State A then 3 days of State B, totaling a 6-day cycle)
-   - Day-of-week rule (e.g. always Tue/Thu for State A)
-   - Or any other observable regularity.
-5. PRECISION: State the exact START DATE. List values explicitly. Do NOT use vague terms like "usually" or "tends to".
+3. DETECT PATTERN: Look for a repeating structure ONLY if you observe at least 3 full
+   cycles of the same alternation. Organic life events (trips, milestones, one-off
+   activities) are NOT patterns — do not force them into cycles.
+   If no clear pattern with 3+ repetitions exists, set identified_pattern to "no pattern".
+4. PRECISION: If a pattern exists, state the exact START DATE. List values explicitly.
 
 Return JSON:
 {{
   "consolidated_timeline": "The full date-to-date sequence for the month, listing each value with its exact date range",
-  "identified_pattern": "The definitive repeating rule with start date (e.g. 'Alternates every 7 days: [Value A] from YYYY-MM-DD to YYYY-MM-DD, then [Value B]...')",
-  "frequency": "Exact description (e.g. 'Every 3 days', 'Mon/Wed/Fri', 'Every 7 days')",
-  "reasoning": "Show the calculation behind your pattern detection."
+  "identified_pattern": "The repeating rule with start date if 3+ cycles observed, otherwise 'no pattern'",
+  "frequency": "Exact description if pattern exists, otherwise 'none'",
+  "reasoning": "Show the calculation, or explain why the data does not support a pattern."
 }}
 """
 
@@ -216,20 +223,21 @@ Return JSON:
 """
 
 YEARLY_CONFIRMATION_SYSTEM = """\
-You are a senior senior pattern analyst. Confirm the definitive mathematical rhythm for a SINGLE entity for {speaker} using monthly summaries.
+You are a pattern analyst. Check whether a genuine repeating rhythm exists for a SINGLE entity for {speaker} using monthly summaries.
 
-1. COMPARE: Check if the N-day cycle or calendar rhythm is consistent across all months. Group sub-categories/synonyms into their primary underlying states (e.g. grouping 'blue pens' and 'red pens' under a single 'pen' state vs 'pencil') before checking consistency.
-2. VALIDATE: If a month reported a "smoothed" general pattern, look back at the consolidated timelines to re-verify the exact periodicity.
-3. RULE: Define the definitive rule. 
-   Example: "Fixed 7-day alternation: [State A] for 7 days, then [State B] for 7 days, repeating."
-   Example: "Fixed 3-day alternation: [State A] for 3 days, then [State B] for 3 days, repeating."
+1. COMPARE: Check if the monthly summaries reported a consistent pattern. If most months
+   reported "no pattern", then there is no yearly pattern — report "no pattern".
+2. VALIDATE: A pattern requires at least 4 observed full cycles across the year.
+   Do not extrapolate from 1-2 cycles. Organic life events are not patterns.
+3. CONFIDENCE: Use CONFIRMED only with 6+ consistent cycles. Use LIKELY for 4-5 cycles.
+   Use EMERGING for fewer. If no pattern exists, say so.
 
 Return JSON:
 {{
-  "confirmed_rule": "The exact mathematical rhythm (including start date)",
-  "frequency": "The verified periodicity",
-  "confidence": "CONFIRMED / LIKELY / EMERGING",
-  "reasoning": "Show the calculation that proves this pattern is stable across the year."
+  "confirmed_rule": "The exact rhythm if validated with 4+ cycles, otherwise 'no pattern'",
+  "frequency": "The verified periodicity, or 'none'",
+  "confidence": "CONFIRMED / LIKELY / EMERGING / NONE",
+  "reasoning": "Show the cycle count and calculation, or explain why no pattern exists."
 }}
 """
 

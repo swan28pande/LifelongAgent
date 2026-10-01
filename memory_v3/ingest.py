@@ -211,7 +211,10 @@ class IngestionPipeline:
         if not by_type:
             return "(nothing recorded yet — you are choosing the first names)"
 
+        speakers = self.store.get_all_speakers()
         sections = []
+        if speakers:
+            sections.append(f"[speakers on record] {', '.join(speakers)}")
         for type_label in ("preference", "fact", "event"):
             grouped = by_type.get(type_label, {})
             if not grouped:
@@ -347,10 +350,10 @@ class IngestionPipeline:
 
     def _index(self, date: str, conversations: List[Dict], speaker: str) -> int:
         count = 0
-        for text, idx in self._chunks(date, conversations):
+        for text, idx, speakers in self._chunks(date, conversations):
             self.store.add_conversation(
                 text=text,
-                metadata={"source_date": date, "chunk": idx, "speaker": speaker},
+                metadata={"source_date": date, "chunk": idx, "speaker": speakers},
             )
             count += 1
         return count
@@ -366,12 +369,14 @@ class IngestionPipeline:
             if not batch:
                 continue
             lines, current = [f"Date: {date}"], None
+            chunk_speakers = set()
             for time, sp, text in batch:
                 if time and time != current:
                     lines.append(f"[{time}]")
                     current = time
                 lines.append(f"{sp}: {text}")
-            yield "\n".join(lines), idx
+                chunk_speakers.add(sp.lower())
+            yield "\n".join(lines), idx, ",".join(sorted(chunk_speakers))
 
     # ── Helpers ─────────────────────────────────────────────────────
 

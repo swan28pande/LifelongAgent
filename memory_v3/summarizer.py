@@ -286,21 +286,29 @@ class Summarizer:
         fact_list = [f"{f['entity']}: {f['content']}" for f in facts]
         event_list = [f"[{e['date']}] {e['content']}" for e in events]
 
-        # 3. Merge
-        combined = {
-            "title": f"Weekly Summary for {week_id}",
-            "summary": str({
-                "patterns": domain_patterns,
-                "facts": fact_list,
-                "events": event_list,
-                "narrative": facts_res.get("narrative", "")
-            })
-        }
-        
-        self.store.save_summary(identifier, combined["title"], combined["summary"], {"speaker": speaker})
-        self._cache[identifier] = combined["summary"]
+        # 3. Merge into readable prose
+        narrative = facts_res.get("narrative", "")
+        sections = [narrative] if narrative else []
+        if fact_list:
+            sections.append("Key facts: " + "; ".join(fact_list))
+        if event_list:
+            sections.append("Events: " + "; ".join(event_list))
+        if domain_patterns:
+            pat_lines = []
+            for ent, pat in domain_patterns.items():
+                cycle = pat.get("potential_cycle") or pat.get("identified_pattern", "")
+                if cycle and cycle.lower() != "no pattern":
+                    pat_lines.append(f"{ent}: {cycle}")
+            if pat_lines:
+                sections.append("Patterns: " + "; ".join(pat_lines))
+
+        combined_summary = "\n\n".join(sections) if sections else "No details found."
+        title = f"Weekly Summary for {week_id}"
+
+        self.store.save_summary(identifier, title, combined_summary, {"speaker": speaker})
+        self._cache[identifier] = combined_summary
         print(f"  ✓ Summary saved: {identifier}")
-        return combined["summary"]
+        return combined_summary
 
     def monthly(self, month_id: str, speaker: str = "user", force: bool = False) -> str:
         identifier = f"month:{month_id}:{speaker}"
@@ -382,21 +390,31 @@ class Summarizer:
             print(f"      Facts error: {e}")
             facts_res = {"facts": [], "events": []}
 
-        # 3. Save combined result
-        combined = {
-            "title": f"Monthly Summary for {month_id}",
-            "summary": str({
-                "patterns": pattern_speculation,
-                "facts": facts_res.get("facts", []),
-                "events": facts_res.get("events", []),
-            })
-        }
-        
+        # 3. Save as readable prose
+        sections = []
+        consolidated_facts = facts_res.get("facts", [])
+        consolidated_events = facts_res.get("events", [])
+        if consolidated_facts:
+            sections.append("Facts: " + "; ".join(consolidated_facts))
+        if consolidated_events:
+            sections.append("Events: " + "; ".join(consolidated_events))
+        if pattern_speculation:
+            pat_lines = []
+            for ent, pat in pattern_speculation.items():
+                rule = pat.get("identified_pattern", "")
+                if rule and rule.lower() != "no pattern" and rule.lower() != "none":
+                    pat_lines.append(f"{ent}: {rule}")
+            if pat_lines:
+                sections.append("Patterns: " + "; ".join(pat_lines))
+
+        combined_summary = "\n\n".join(sections) if sections else "No details found."
+        title = f"Monthly Summary for {month_id}"
+
         print(f"    - Saving monthly summary for {month_id}")
-        self.store.save_summary(identifier, combined["title"], combined["summary"], {"speaker": speaker})
-        self._cache[identifier] = combined["summary"]
+        self.store.save_summary(identifier, title, combined_summary, {"speaker": speaker})
+        self._cache[identifier] = combined_summary
         print(f"  ✓ Monthly summary saved: {identifier}")
-        return combined["summary"]
+        return combined_summary
 
     def yearly(self, year: str, speaker: str = "user", force: bool = False) -> str:
         identifier = f"year:{year}:{speaker}"
@@ -470,20 +488,31 @@ class Summarizer:
             print(f"      Facts error: {e}")
             facts_res = {}
 
-        # 3. Save combined result
-        combined = {
-            "title": f"Yearly Summary for {year}",
-            "summary": str({
-                "patterns": confirmed_patterns,
-                "facts": facts_res.get("facts", []),
-                "events": facts_res.get("events", []),
-            })
-        }
-        
-        self.store.save_summary(identifier, combined["title"], combined["summary"], {"speaker": speaker})
-        self._cache[identifier] = combined["summary"]
+        # 3. Save as readable prose
+        sections = []
+        yearly_facts = facts_res.get("facts", [])
+        yearly_events = facts_res.get("events", [])
+        if yearly_facts:
+            sections.append("Facts: " + "; ".join(yearly_facts))
+        if yearly_events:
+            sections.append("Events: " + "; ".join(yearly_events))
+        if confirmed_patterns:
+            pat_lines = []
+            for ent, pat in confirmed_patterns.items():
+                rule = pat.get("confirmed_rule", "")
+                conf = pat.get("confidence", "")
+                if rule and rule.lower() not in ("no pattern", "none"):
+                    pat_lines.append(f"{ent}: {rule} ({conf})")
+            if pat_lines:
+                sections.append("Patterns: " + "; ".join(pat_lines))
+
+        combined_summary = "\n\n".join(sections) if sections else "No details found."
+        title = f"Yearly Summary for {year}"
+
+        self.store.save_summary(identifier, title, combined_summary, {"speaker": speaker})
+        self._cache[identifier] = combined_summary
         print(f"  ✓ Summary saved: {identifier}")
-        return combined["summary"]
+        return combined_summary
 
     def lifetime(self, speaker: str = "user", force: bool = False) -> str:
         identifier = f"lifetime:{speaker}"
