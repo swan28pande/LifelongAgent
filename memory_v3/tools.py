@@ -37,7 +37,7 @@ def build_read_tools(store: MemoryStore) -> list:
     """Retrieval tools for the chat agent."""
 
     @tool
-    def retrieve_memory(query: str) -> str:
+    def semantic_retrieve_memory(query: str) -> str:
         """Multi-resolution memory retrieval — searches every layer of the hierarchy
         independently and returns results from each.
 
@@ -81,7 +81,7 @@ def build_read_tools(store: MemoryStore) -> list:
     ) -> str:
         """Query the structured memory database for an exact dated timeline.
 
-        Use after retrieve_memory when you need precise dates, ordering, counting,
+        Use after semantic_retrieve_memory when you need precise dates, ordering, counting,
         transitions, or specific facts/events. Results come back in chronological order.
 
         The store holds three types:
@@ -131,7 +131,7 @@ def build_read_tools(store: MemoryStore) -> list:
     def semantic_search_conversations(query: str, k: int = 5) -> str:
         """Semantic search over raw conversation chunks, by meaning.
 
-        Use after retrieve_memory when you need the original wording of a discussion.
+        Use after semantic_retrieve_memory when you need the original wording of a discussion.
         Matches on meaning, not dates — use read_conversations_on for date lookups.
 
         Args:
@@ -200,7 +200,7 @@ def build_read_tools(store: MemoryStore) -> list:
         return f"ENTITIES: {', '.join(entities) or 'none'}\n{note}"
 
     return [
-        retrieve_memory,
+        semantic_retrieve_memory,
         search_memories,
         semantic_search_conversations,
         read_conversations_on,
