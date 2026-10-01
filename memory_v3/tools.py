@@ -21,8 +21,6 @@ from .store import MemoryStore
 
 MAX_ROWS = 200
 
-# Cap on how far `read_conversations_on` will widen around a date. A window this size
-# already spans a full week either way; anything broader is a search, not a lookup.
 MAX_WINDOW_DAYS = 7
 
 
@@ -35,35 +33,42 @@ def _fmt_rows(rows: List[dict]) -> str:
     )
 
 
-
 def build_read_tools(store: MemoryStore) -> list:
     """Retrieval tools for the chat agent."""
 
     @tool
-    def list_entities() -> str:
-        """List what the store holds: every entity, and every speaker on record.
+    def retrieve_memory(query: str) -> str:
+        """Multi-resolution memory retrieval — searches every layer of the hierarchy
+        independently and returns results from each.
 
-        Call this first. It maps a vaguely worded question onto the entity name
-        actually used in storage, and it tells you whether filtering by speaker is
-        meaningful — with one speaker it never is, with several it is essential.
+        CALL THIS FIRST for every question. It returns:
+        - LIFETIME: the overall profile and confirmed patterns
+        - YEARLY: major events and validated habits for each year
+        - MONTHLY: consolidated facts and pattern details
+        - WEEKLY: specific events and transition details
+
+        This gives you both the big picture and the relevant details in one call.
+        After reading the result, either answer directly or drill down with the
+        other tools if you need exact dates, specific wording, or structured queries.
+
+        Args:
+            query: What to search for, as a topic or phrase.
         """
-        entities = store.get_all_entities()
-        speakers = store.get_all_speakers()
-        if not entities and not speakers:
-            return "(store is empty)"
+        layer_results = store.search_summaries_by_layer(
+            query, k_week=2, k_month=2, k_year=1, k_lifetime=1
+        )
+        if not layer_results:
+            return "(no summaries available — use search_memories or semantic_search_conversations instead)"
 
-        if len(speakers) > 1:
-            note = (
-                f"SPEAKERS ({len(speakers)} on record — filter by these when a "
-                f"question is about one of them): {', '.join(speakers)}"
-            )
-        else:
-            note = (
-                f"SPEAKERS: {', '.join(speakers) or 'none'} — only one on record, so "
-                "do not filter by speaker."
-            )
-
-        return f"ENTITIES: {', '.join(entities) or 'none'}\n{note}"
+        sections = []
+        for level in ("lifetime", "year", "month", "week"):
+            docs = layer_results.get(level, [])
+            if not docs:
+                continue
+            header = level.upper()
+            body = "\n\n".join(d.page_content for d in docs)
+            sections.append(f"═══ {header} ═══\n{body}")
+        return "\n\n".join(sections)
 
     @tool
     def search_memories(
@@ -76,31 +81,22 @@ def build_read_tools(store: MemoryStore) -> list:
     ) -> str:
         """Query the structured memory database for an exact dated timeline.
 
-        The precise source: use it whenever the answer depends on dates, ordering, or
-        counting — transitions, cycles, what was chosen on a given day, what facts are
-        known, or what events happened. Results come back in chronological order.
+        Use after retrieve_memory when you need precise dates, ordering, counting,
+        transitions, or specific facts/events. Results come back in chronological order.
 
-        The store holds three types of memory:
+        The store holds three types:
         - "preference": recurring choices within a category.
         - "fact": stable attributes about the person.
         - "event": one-time occurrences or milestones.
 
-        Filter by type when you know what you need. Omit type to search across all.
-
-        Naming an entity or speaker that does not exist returns the list of real ones
-        rather than an empty result, so a wrong guess can be corrected on the next call.
-
-        Most stores hold a single speaker. Omit `speaker` unless you have confirmed
-        from `list_entities` or an earlier result that several people are recorded —
-        filtering on the name of the person the question is about will usually match
-        nothing, because that is not how the speaker field is filled in.
+        Naming an entity that does not exist returns the list of real ones.
 
         Args:
             entity: Restrict to a single entity/category. Omit to search all.
             speaker: Restrict to one recorded speaker. Omit for all.
             start_date: Earliest date to include, YYYY-MM-DD.
             end_date: Latest date to include, YYYY-MM-DD.
-            type: Restrict to one memory type: "preference", "fact", or "event". Omit for all.
+            type: Restrict to one memory type. Omit for all.
             limit: Maximum rows to return.
         """
         if entity:
@@ -118,8 +114,7 @@ def build_read_tools(store: MemoryStore) -> list:
                 available = ", ".join(speakers) if speakers else "(none yet)"
                 return (
                     f"No speaker named '{speaker}'. Recorded speakers: {available}. "
-                    "Omit `speaker` to search all — the person a question is about is "
-                    "usually not stored as a separate speaker."
+                    "Omit `speaker` to search all."
                 )
 
         rows = store.query_memories(
@@ -136,9 +131,8 @@ def build_read_tools(store: MemoryStore) -> list:
     def semantic_search_conversations(query: str, k: int = 5) -> str:
         """Semantic search over raw conversation chunks, by meaning.
 
-        Finds exchanges about a topic. It matches on wording, not on when something
-        was said, so searching for a date here will not reliably find that day — use
-        `read_conversations_on` when you know the date you want.
+        Use after retrieve_memory when you need the original wording of a discussion.
+        Matches on meaning, not dates — use read_conversations_on for date lookups.
 
         Args:
             query: What to search for, as a topic or phrase.
@@ -153,12 +147,8 @@ def build_read_tools(store: MemoryStore) -> list:
     def read_conversations_on(date: str, days_around: int = 0) -> str:
         """Read the conversation from a specific date, exactly as it was said.
 
-        The right tool whenever a question names a day. Semantic search cannot find a
-        date reliably — embeddings carry meaning, not calendars — so looking a date up
-        by keyword tends to return the wrong days or nothing at all.
-
-        Widen `days_around` when a day mentions something that happened earlier: a
-        choice made on one day is often only described the morning after.
+        Use when a question names a specific day. Embeddings carry meaning, not
+        calendars, so date lookups must go through this tool.
 
         Args:
             date: The day to read, YYYY-MM-DD.
@@ -186,47 +176,33 @@ def build_read_tools(store: MemoryStore) -> list:
         return "\n\n---\n\n".join(d.page_content for d in docs)
 
     @tool
-    def get_summary(level: str, identifier: str = "", speaker: str = "user") -> str:
-        """Fetch one stored summary by level.
+    def list_entities() -> str:
+        """List every entity and speaker the store holds.
 
-        Args:
-            level: One of "week", "month", "year", "lifetime".
-            identifier: The period id — "2026-W10" for week, "2026-03" for month,
-                "2026" for year. Leave empty for lifetime.
-            speaker: Whose summary to fetch. Defaults to "user".
+        Use when you need the exact entity names for search_memories queries.
         """
-        level = level.lower().strip()
-        if level == "lifetime":
-            text = store.get_lifetime_summary(speaker)
+        entities = store.get_all_entities()
+        speakers = store.get_all_speakers()
+        if not entities and not speakers:
+            return "(store is empty)"
+
+        if len(speakers) > 1:
+            note = (
+                f"SPEAKERS ({len(speakers)} on record — filter by these when a "
+                f"question is about one of them): {', '.join(speakers)}"
+            )
         else:
-            text = store.get_summary(f"{level}:{identifier}:{speaker}")
-        return text if text else f"(no {level} summary found for {identifier or speaker})"
+            note = (
+                f"SPEAKERS: {', '.join(speakers) or 'none'} — only one on record, so "
+                "do not filter by speaker."
+            )
 
-    @tool
-    def semantic_search_summaries(query: str, k: int = 3) -> str:
-        """Semantic search across all stored summaries — weekly, monthly, yearly, lifetime.
-
-        Use this when the question is about someone's background, life events, general
-        habits, or long-term patterns and you don't know which specific time period to
-        look at. It searches by meaning across every summary in the store.
-
-        Prefer this over search_conversations for broad "who/what/why" questions — summaries
-        are pre-digested overviews that cover more ground per result.
-
-        Args:
-            query: What to search for, as a topic or phrase.
-            k: Number of summaries to return.
-        """
-        docs = store.search_summaries(query, k=k)
-        if not docs:
-            return "(no matching summaries)"
-        return "\n\n---\n\n".join(d.page_content for d in docs)
+        return f"ENTITIES: {', '.join(entities) or 'none'}\n{note}"
 
     return [
-        list_entities,
+        retrieve_memory,
         search_memories,
         semantic_search_conversations,
-        semantic_search_summaries,
         read_conversations_on,
-        get_summary,
+        list_entities,
     ]

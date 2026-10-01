@@ -305,6 +305,30 @@ class MemoryStore:
             return []
         return self._summary_store.similarity_search(query, k=k)
 
+    def search_summaries_by_layer(self, query: str,
+                                  k_week: int = 2, k_month: int = 2,
+                                  k_year: int = 1, k_lifetime: int = 1) -> Dict[str, List[Document]]:
+        """Search each summary layer independently and return results grouped by level."""
+        if self._summary_store is None:
+            return {}
+        by_layer: Dict[str, List[Document]] = {}
+        for doc in self._summary_store.docstore._dict.values():
+            level = doc.metadata.get("identifier", "").split(":")[0]
+            by_layer.setdefault(level, []).append(doc)
+
+        limits = {"week": k_week, "month": k_month, "year": k_year, "lifetime": k_lifetime}
+        results: Dict[str, List[Document]] = {}
+        for level, docs in by_layer.items():
+            k = limits.get(level, 1)
+            if not docs or k == 0:
+                continue
+            if len(docs) <= k:
+                results[level] = docs
+            else:
+                mini = FAISS.from_documents(docs, self.embeddings)
+                results[level] = mini.similarity_search(query, k=k)
+        return results
+
     def get_lifetime_summary(self, speaker: Optional[str] = None) -> Optional[str]:
         """Return lifetime summary for a specific speaker, or the combined one."""
         if speaker:
