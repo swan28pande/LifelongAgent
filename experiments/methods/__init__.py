@@ -7,6 +7,7 @@ METHODS = {
     "full_context": ("experiments.methods.full_context", "FullContext"),
     "naive_rag": ("experiments.methods.naive_rag", "NaiveRAG"),
     "mem0": ("experiments.methods.mem0_oss", "Mem0OSS"),
+    "timem": ("experiments.methods.timem", "TiMem"),
 }
 
 

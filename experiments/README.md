@@ -31,7 +31,7 @@ finished sessions, answers and grades are skipped.
 | Zep / Graphiti | bi-temporal knowledge graph (needs Neo4j/FalkorDB) | to add |
 | A-MEM | NeurIPS 2025, most-used academic baseline | to add |
 | MemoryOS | EMNLP 2025, recency-based hierarchy | to add |
-| APEX-MEM or TiMem | closest competitor (SQL + agent / calendar hierarchy) | to add |
+| `timem` | TiMem (Findings of ACL 2026), temporal memory tree | ready |
 
 Ablations of `ours_v3` (no SQL, no summaries, no agent, one summary level) are separate
 methods registered the same way.

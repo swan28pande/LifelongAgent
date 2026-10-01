@@ -55,17 +55,23 @@ def run(method_cls, benchmark: str, instances: list[Instance], run_name: str,
     ingest_log, answers_log, grades_log = out / "ingest.jsonl", out / "answers.jsonl", out / "grades.jsonl"
     answered = {r["id"]: r for r in _load(answers_log)}
     t_start = time.time()
+    ingest_usage = {k: 0 for k in ("calls", "input_tokens", "output_tokens")}
+    answer_usage = {k: 0 for k in ("calls", "input_tokens", "output_tokens")}
+    ingest_seconds = 0.0
+    answer_seconds = 0.0
 
     for inst in instances:
         pending = [q for q in inst.questions if q.id not in answered]
         if not pending:
             continue
+        snap_before_inst = usage.snapshot()
         store = out / "stores" / inst.id
         store.mkdir(parents=True, exist_ok=True)
         method = method_cls(store, inst, model, usage)
 
         done = {r["session"] for r in _load(ingest_log) if r["instance"] == inst.id} if method.persistent else set()
         todo = [s for s in inst.sessions if s.id not in done]
+        t_ingest_start = time.time()
         print(f"[{inst.id}] ingest {len(todo)}/{len(inst.sessions)} sessions", flush=True)
         for s in tqdm(todo, desc=f"ingest {inst.id}", leave=False):
             t0 = time.time()
@@ -85,24 +91,38 @@ def run(method_cls, benchmark: str, instances: list[Instance], run_name: str,
             method.finalize()
             final_marker.touch()
 
+        ingest_seconds += time.time() - t_ingest_start
+        snap_after_ingest = usage.snapshot()
+
+        t_answer_start = time.time()
+
         def answer_one(q):
             t0 = time.time()
             try:
                 a = method.answer(q)
             except Exception as e:
                 return {"id": q.id, "error": f"{type(e).__name__}: {str(e)[:300]}"}
-            return {"id": q.id, "instance": inst.id, "response": a.text, "meta": a.meta,
+            meta = a.meta or {}
+            if "tool_calls" in meta:
+                meta["num_tool_calls"] = len(meta["tool_calls"])
+            return {"id": q.id, "instance": inst.id, "response": a.text, "meta": meta,
                     "seconds": round(time.time() - t0, 2)}
 
         with ThreadPoolExecutor(max_workers=workers) as pool:
             for rec in tqdm(pool.map(answer_one, pending), total=len(pending), desc=f"answer {inst.id}", leave=False):
                 if "error" in rec:
-                    pool.shutdown(cancel_futures=True)
-                    _save_usage(out, prior, usage)
-                    sys.exit(f"answering {rec['id']} failed: {rec['error']}\nRerun to resume.")
+                    print(f"  warning: {rec['id']} failed ({rec['error'][:120]}), recording as abstain", flush=True)
+                    rec = {"id": rec["id"], "instance": inst.id, "response": "I don't know.",
+                           "meta": {"error": rec["error"]}, "seconds": 0}
                 _append(answers_log, rec)
                 answered[rec["id"]] = rec
-        _save_usage(out, prior, usage)
+        answer_seconds += time.time() - t_answer_start
+        snap_after_answer = usage.snapshot()
+        for k in ingest_usage:
+            ingest_usage[k] += snap_after_ingest[k] - snap_before_inst[k]
+            answer_usage[k] += snap_after_answer[k] - snap_after_ingest[k]
+        _save_usage(out, prior, usage, ingest_usage, answer_usage,
+                    ingest_seconds, answer_seconds)
 
     questions = {q.id: q for inst in instances for q in inst.questions}
     grades = {r["id"]: r for r in _load(grades_log)}
@@ -139,10 +159,59 @@ async def _grade(judge: LLM, todo, answered, grades, path) -> None:
     await asyncio.gather(*(one(q) for q in todo))
 
 
-def _save_usage(out: Path, prior: dict, usage: UsageCounter) -> None:
+def _save_usage(out: Path, prior: dict, usage: UsageCounter,
+                ingest_usage: dict | None = None, answer_usage: dict | None = None,
+                ingest_secs: float = 0.0, answer_secs: float = 0.0) -> None:
     now = usage.snapshot()
     total = {k: prior.get(k, 0) + now[k] for k in now}
+    if ingest_usage is not None:
+        for k, v in ingest_usage.items():
+            total[f"ingest_{k}"] = prior.get(f"ingest_{k}", 0) + v
+        total["ingest_seconds"] = round(prior.get("ingest_seconds", 0.0) + ingest_secs, 1)
+    if answer_usage is not None:
+        for k, v in answer_usage.items():
+            total[f"answer_{k}"] = prior.get(f"answer_{k}", 0) + v
+        total["answer_seconds"] = round(prior.get("answer_seconds", 0.0) + answer_secs, 1)
     (out / "usage.json").write_text(json.dumps(total, indent=2))
+
+
+def _latency_stats(answered: dict) -> dict | None:
+    """Per-question answer latency: mean, median, p95, total."""
+    times = sorted(r["seconds"] for r in answered.values() if r.get("seconds"))
+    if not times:
+        return None
+    n = len(times)
+    return {
+        "n": n,
+        "total": round(sum(times), 1),
+        "mean": round(sum(times) / n, 2),
+        "p50": round(times[n // 2], 2),
+        "p95": round(times[int(n * 0.95)], 2),
+        "max": round(times[-1], 2),
+    }
+
+
+def _tool_stats(answered: dict) -> dict | None:
+    """Aggregate tool-call counts from answer metadata (agentic methods only)."""
+    total = 0
+    by_tool = defaultdict(int)
+    n_with_tools = 0
+    for rec in answered.values():
+        calls = (rec.get("meta") or {}).get("tool_calls")
+        if calls is None:
+            continue
+        n_with_tools += 1
+        total += len(calls)
+        for c in calls:
+            by_tool[c["tool"]] += 1
+    if not n_with_tools:
+        return None
+    return {
+        "total": total,
+        "per_question": round(total / n_with_tools, 2),
+        "questions_with_tools": n_with_tools,
+        "by_tool": dict(sorted(by_tool.items(), key=lambda x: -x[1])),
+    }
 
 
 def _summarize(benchmark, method, run_name, model, judge_model, instances, answered, grades,
@@ -159,7 +228,11 @@ def _summarize(benchmark, method, run_name, model, judge_model, instances, answe
 
     judged = [g["judge"] for _, _, g in rows]
     now = usage.snapshot()
-    return {
+
+    tool_stats = _tool_stats(answered)
+    latency = _latency_stats(answered)
+
+    result = {
         "benchmark": benchmark, "method": method, "run": run_name,
         "model": model, "judge_model": judge_model,
         "n": len(rows), "accuracy": round(sum(judged) / len(judged), 4),
@@ -168,3 +241,8 @@ def _summarize(benchmark, method, run_name, model, judge_model, instances, answe
         "usage": {k: prior.get(k, 0) + now[k] for k in now},
         "seconds_this_run": round(seconds, 1),
     }
+    if tool_stats:
+        result["tool_calls"] = tool_stats
+    if latency:
+        result["latency"] = latency
+    return result

@@ -114,6 +114,15 @@ class Summarizer:
         if not start:
             print("No memories found — nothing to summarize.")
             return
+        # Normalise partial dates (e.g. '2022' or '2022-05') to full YYYY-MM-DD
+        if len(start) == 4:
+            start = f"{start}-01-01"
+        elif len(start) == 7:
+            start = f"{start}-01"
+        if len(end) == 4:
+            end = f"{end}-12-31"
+        elif len(end) == 7:
+            end = f"{end}-28"
 
         speakers = self.store.get_all_speakers() or ["user"]
         weeks    = self._all_weeks(start, end)
