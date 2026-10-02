@@ -273,19 +273,19 @@ class AgenticMemoryAgent:
 
     # ── Summaries ───────────────────────────────────────────────────
 
-    def build_summaries(self, force: bool = False, distill: bool = False) -> None:
+    def build_summaries(self, force: bool = False, distill: bool = True) -> None:
         """
-        Build the weekly → monthly → yearly → lifetime hierarchy over everything
-        currently stored.
+        Build the weekly → monthly → yearly → lifetime hierarchy, then distill
+        the hierarchy into themed knowledge documents.
 
         Driven by the caller rather than decided per-day: a summary of a period still
         in progress gets rebuilt on every subsequent day and can contradict the raw
         timeline while it is stale. Run this at period boundaries, or once at the end
         of a batch ingest.
 
-        distill: if True, also run knowledge distillation after summaries are built,
-            producing themed knowledge documents (relationships, identity, patterns,
-            timeline) from the hierarchy.
+        Distillation runs as the final step — it reads the completed hierarchy
+        and produces four themed documents per speaker (relationships, identity,
+        patterns, timeline). Set distill=False to skip it.
         """
         self.summarizer.run(force=force)
         if distill:
