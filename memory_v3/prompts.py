@@ -279,3 +279,66 @@ Using all yearly summaries, produce a complete, structured profile:
 4. LIFE NARRATIVE — A brief chronological narrative tying it all together.
 
 Return ONLY a JSON object: {{"title": "Full Lifetime Profile", "summary": "the full structured text profile"}}"""
+
+
+# ── Continual knowledge distillation ─────────────────────────────
+
+KNOWLEDGE_INIT_SYSTEM = """\
+You are initialising a living knowledge document for {speaker}. This document
+will be updated after every conversation — it is the system's running
+understanding of who this person is.
+
+From the memories below, produce the FIRST VERSION of the document with these
+sections:
+
+1. IDENTITY — Stable facts: name, age, location, occupation, relationships,
+   living situation, diet, hobbies, personality. Each fact gets a "(since DATE)"
+   tag showing when it was first observed.
+
+2. ACTIVE PATTERNS — Current behavioural routines. For each, state the exact
+   rule and its start date. If no patterns are visible yet, say so.
+
+3. FACT TIMELINE — A chronological log of fact changes and transitions.
+   Format: "DATE: description (entity: old → new)" for changes,
+   "DATE: description" for new facts.
+
+4. SIGNIFICANT EVENTS — Key one-time occurrences with dates.
+
+5. EMOTIONAL ASSOCIATIONS — What activities or topics matter to this person
+   emotionally, and why (e.g. "pottery is therapeutic", "running improves mood").
+
+Keep each section concise. Use bullet points, not paragraphs.
+
+Return ONLY a JSON object: {{"document": "the full document text"}}"""
+
+KNOWLEDGE_UPDATE_SYSTEM = """\
+You are updating a living knowledge document for {speaker}. The document
+represents everything the system knows about this person so far. New memories
+from a single day have just been extracted — integrate them.
+
+RULES FOR UPDATING:
+
+Forward integration (add new knowledge):
+- New facts → add to IDENTITY with "(since DATE)".
+- New events → append to SIGNIFICANT EVENTS.
+- New emotional associations → append to EMOTIONAL ASSOCIATIONS.
+- New pattern observations → note in ACTIVE PATTERNS if they confirm or
+  extend an existing pattern; add a new entry if a novel pattern is emerging.
+
+Backward integration (revise existing knowledge):
+- Fact CHANGED (new job, moved cities, new hobby) → update IDENTITY with the
+  new value and "(since NEW_DATE)". Add the transition to FACT TIMELINE:
+  "DATE: entity changed from OLD to NEW".
+- Fact CONFIRMED on a new date → update the "(since ...)" tag only if it
+  extends the known range. Do NOT duplicate entries.
+- Pattern broken or shifted → update ACTIVE PATTERNS: mark the old pattern
+  as ended with its date range, add the new pattern with its start date.
+- Contradiction detected → keep the more recent information, note the
+  discrepancy in FACT TIMELINE.
+
+PRESERVATION:
+- Never drop information that is still valid.
+- Never rewrite sections from scratch — merge surgically.
+- If nothing in a section changed, return it unchanged.
+
+Return ONLY a JSON object: {{"document": "the full updated document text"}}"""

@@ -39,6 +39,7 @@ from langchain_openai import ChatOpenAI
 
 from .store import MemoryStore
 from .summarizer import Summarizer
+from .continual import KnowledgeState
 
 from .ingest import IngestionPipeline, IngestReport
 from .prompts import CHAT_SYSTEM
@@ -112,7 +113,11 @@ class AgenticMemoryAgent:
         ingest_llm = _make_llm(model, 0.0, callbacks)
         chat_llm = _make_llm(chat_model or model, 0.3, callbacks)
 
-        self.pipeline = IngestionPipeline(self.store, llm=ingest_llm)
+        self._knowledge_llm = _make_llm(model, 0.1, callbacks)
+        self._knowledge_states: Dict[str, KnowledgeState] = {}
+        self.pipeline = IngestionPipeline(
+            self.store, llm=ingest_llm, knowledge_states=self._knowledge_states,
+        )
         self.summarizer = Summarizer(self.store, llm=_make_llm(model, 0.2, callbacks))
 
         self.read_tools = build_read_tools(self.store)
@@ -132,6 +137,7 @@ class AgenticMemoryAgent:
         conversations: List[Dict],
         speaker: str = "user",
         update_summaries: bool = False,
+        update_knowledge: bool = True,
     ) -> IngestReport:
         """
         Run one day through the ingestion pipeline.
@@ -140,12 +146,35 @@ class AgenticMemoryAgent:
         update_summaries: if True, incrementally rebuild only the summaries
             affected by this date (the containing week, month, year, lifetime)
             rather than requiring a separate build_summaries() call.
+        update_knowledge: if True, run backward transfer to update the
+            per-speaker knowledge document with newly extracted memories.
         Returns a report of what was extracted, written, and indexed.
         """
         report = self.pipeline.run(date, conversations, speaker=speaker)
+
+        if update_knowledge and report.items:
+            self._backward_transfer(report.items, date)
+
         if update_summaries:
             self.summarizer.update_after_ingest(date)
         return report
+
+    def _backward_transfer(self, items: List[Dict], date: str):
+        """Update knowledge documents for each speaker found in extracted items."""
+        by_speaker: Dict[str, List[Dict]] = {}
+        for item in items:
+            sp = item.get("speaker", "user")
+            by_speaker.setdefault(sp, []).append(item)
+
+        for sp, memories in by_speaker.items():
+            ks = self._get_knowledge_state(sp)
+            ks.update(memories, date)
+
+    def _get_knowledge_state(self, speaker: str) -> KnowledgeState:
+        if speaker not in self._knowledge_states:
+            ks = KnowledgeState(self.store, self._knowledge_llm, speaker)
+            self._knowledge_states[speaker] = ks
+        return self._knowledge_states[speaker]
 
     def ingest_range(
         self,

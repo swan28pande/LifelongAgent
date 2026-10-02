@@ -106,6 +106,7 @@ class IngestReport:
     entities: List[str] = field(default_factory=list)
     errors: List[str] = field(default_factory=list)
     type_counts: Dict[str, int] = field(default_factory=dict)
+    items: List[Dict] = field(default_factory=list)
 
     def __str__(self) -> str:
         parts = [f"[{self.date}] extracted {self.extracted}", f"added {self.added}"]
@@ -123,9 +124,10 @@ class IngestReport:
 
 
 class IngestionPipeline:
-    def __init__(self, store: MemoryStore, llm):
+    def __init__(self, store: MemoryStore, llm, knowledge_states=None):
         self.store = store
         self.llm = llm
+        self._knowledge_states = knowledge_states or {}
 
     # ── Entry point ─────────────────────────────────────────────────
 
@@ -143,6 +145,7 @@ class IngestionPipeline:
             consolidated = self._consolidate(extracted, report)
             fresh = self._dedupe(consolidated, report)
             self._write(fresh, date, speaker, report)
+            report.items = fresh
 
         report.chunks_indexed = self._index(date, conversations, speaker)
         return report
@@ -223,6 +226,12 @@ class IngestionPipeline:
             for entity, values in sorted(grouped.items()):
                 lines.append(f"  - {entity}: {', '.join(values[:MAX_VALUES_SHOWN])}")
             sections.append("\n".join(lines))
+
+        # Forward transfer: inject knowledge state for each known speaker
+        for speaker, ks in self._knowledge_states.items():
+            ctx = ks.forward_context()
+            if ctx:
+                sections.append(ctx)
 
         return "\n".join(sections)
 
