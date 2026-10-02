@@ -2,8 +2,8 @@
 
 import pytest
 
-from memory_v3_update.summarizer import Summarizer
-from memory_v3_update.tools import build_read_tools
+from memory_v4.summarizer import Summarizer
+from memory_v4.tools import build_read_tools
 
 
 def test_layer_search_preserves_each_level_without_reembedding(memory_store):
@@ -27,7 +27,7 @@ def test_layer_search_sees_updates_and_reloaded_summaries(memory_store):
     memory_store.save_summary("week:2026-W10:alice", "Week", "cooking")
     memory_store.search_summaries_by_layer("camping")
     memory_store.save_summary("week:2026-W10:alice", "Week", "camping")
-    from memory_v3_update.store import MemoryStore
+    from memory_v4.store import MemoryStore
 
     reloaded = MemoryStore(memory_store.base_dir)
     docs = reloaded.search_summaries_by_layer("camping")["week"]

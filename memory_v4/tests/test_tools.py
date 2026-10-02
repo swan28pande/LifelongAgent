@@ -5,7 +5,7 @@ from types import SimpleNamespace
 import pytest
 from pydantic import ValidationError
 
-from memory_v3_update.tools import build_read_tools
+from memory_v4.tools import build_read_tools
 
 
 class StoreSpy:

@@ -143,6 +143,7 @@ def build_read_tools(store: MemoryStore) -> list:
         docs = store.search_conversations(query, k=k)
         if not docs:
             return "(no matching conversations)"
+        docs.sort(key=lambda d: d.metadata.get("date", ""))
         return "\n\n---\n\n".join(d.page_content for d in docs)
 
     @tool

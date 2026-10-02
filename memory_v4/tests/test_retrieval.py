@@ -11,8 +11,8 @@ from langchain_core.runnables import RunnableConfig, RunnableLambda
 from langchain_core.tools import tool
 from langgraph.runtime import Runtime
 
-from memory_v3_update.agent import AgenticMemoryAgent
-from memory_v3_update.retrieval import (
+from memory_v4.agent import AgenticMemoryAgent
+from memory_v4.retrieval import (
     MAX_OBSERVATION_CHARS,
     MAX_RETRIEVAL_CALLS,
     FinalAnswer,
@@ -221,7 +221,7 @@ def test_summary_and_detail_tools_share_five_call_budget(agent_factory, conversa
 
 
 def test_changed_summary_call_is_blocked_and_original_selection_retried(memory_store):
-    from memory_v3_update.tools import build_read_tools
+    from memory_v4.tools import build_read_tools
 
     class ChangedCallReader(PlannedMemoryReader):
         corrupt_next = True
@@ -250,7 +250,7 @@ def test_changed_summary_call_is_blocked_and_original_selection_retried(memory_s
 
 
 def test_extra_summary_arguments_are_rejected_before_retrieval(memory_store):
-    from memory_v3_update.tools import build_read_tools
+    from memory_v4.tools import build_read_tools
 
     memory_store.save_summary("lifetime:alice", "Profile", "camping")
     model = ScriptedModel(

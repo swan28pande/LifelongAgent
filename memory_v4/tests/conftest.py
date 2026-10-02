@@ -21,7 +21,7 @@ for variable in (
 def memory_store(tmp_path, monkeypatch):
     """Real SQLite/FAISS storage, with small deterministic offline embeddings."""
     from langchain_core.embeddings import Embeddings
-    from memory_v3_update import store
+    from memory_v4 import store
 
     class OfflineEmbeddings(Embeddings):
         def __init__(self):
@@ -109,7 +109,7 @@ def summary_model():
 
 @pytest.fixture
 def agent_factory(memory_store, summary_model, monkeypatch):
-    from memory_v3_update import agent
+    from memory_v4 import agent
 
     def create(chat_model=None):
         reader_model = chat_model if chat_model is not None else Mock()

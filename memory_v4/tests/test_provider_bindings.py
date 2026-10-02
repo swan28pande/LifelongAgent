@@ -7,7 +7,7 @@ from langchain_core.callbacks import BaseCallbackHandler
 from langchain_core.messages import HumanMessage
 from langchain_core.tools import tool
 
-from memory_v3_update.retrieval import PlannedMemoryReader
+from memory_v4.retrieval import PlannedMemoryReader
 
 
 def decision(action="retrieve", text=""):
