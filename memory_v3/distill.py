@@ -21,10 +21,16 @@ reasoning over summaries, not simple aggregation.
     raw memories (DB)
         → hierarchical summaries (weekly/monthly/yearly/lifetime)
             → distilled knowledge documents (reasoned, multi-theme)
+
+The documents are updated continually: after each day's ingest rebuilds the
+affected summaries, only the changed week/month summaries are fed to the
+distiller. It reads the existing document and merges in new information —
+never rebuilds from scratch.
 """
 
 from __future__ import annotations
 
+from datetime import datetime
 from typing import Dict, List, Optional
 
 from langchain_core.output_parsers import JsonOutputParser
@@ -37,6 +43,12 @@ from .prompts import DISTILL_SYSTEM, DISTILL_UPDATE_SYSTEM, THEME_DESCRIPTIONS
 THEMES = ("relationships", "identity", "patterns", "timeline")
 
 
+def _iso_week(date_str: str) -> str:
+    dt = datetime.strptime(date_str, "%Y-%m-%d")
+    y, w, _ = dt.isocalendar()
+    return f"{y}-W{w:02d}"
+
+
 class KnowledgeDistiller:
     """Distills hierarchical summaries into themed knowledge documents."""
 
@@ -44,14 +56,65 @@ class KnowledgeDistiller:
         self.store = store
         self.llm = llm
 
+    # ── Incremental update (after each day's ingest) ──────────────
+
+    def update_after_ingest(self, speaker: str, date: str) -> Dict[str, str]:
+        """
+        Incrementally update knowledge documents after a day's summaries
+        have been rebuilt.
+
+        Only reads the affected week and month summaries — not the entire
+        hierarchy — and merges new information into existing documents.
+        If no documents exist yet, falls back to full creation.
+        """
+        has_existing = any(self._load(speaker, t) for t in THEMES)
+        if not has_existing:
+            return self.distill(speaker)
+
+        new_summaries = self._gather_changed(speaker, date)
+        if not new_summaries:
+            return {}
+
+        results = {}
+        for theme in THEMES:
+            current = self._load(speaker, theme)
+            if current:
+                updated = self._update(speaker, theme, current, new_summaries)
+            else:
+                all_summaries = self._gather_all(speaker)
+                updated = self._create(speaker, theme, all_summaries)
+
+            if updated:
+                self._save(speaker, theme, updated)
+                results[theme] = updated
+                print(f"  ✓ Updated: {theme}:{speaker}")
+
+        return results
+
+    def _gather_changed(self, speaker: str, date: str) -> str:
+        """Collect only the summaries affected by a specific date."""
+        sections = []
+        week_id = _iso_week(date)
+        month_id = date[:7]
+
+        week = self._get(f"week:{week_id}:{speaker}")
+        if week:
+            sections.append(f"=== WEEK {week_id} ===\n{week}")
+
+        month = self._get(f"month:{month_id}:{speaker}")
+        if month:
+            sections.append(f"=== MONTH {month_id} ===\n{month}")
+
+        return "\n\n".join(sections)
+
+    # ── Full distillation (initial build or explicit rebuild) ─────
+
     def distill(self, speaker: str) -> Dict[str, str]:
         """
-        Create or update all knowledge documents for a speaker.
-
-        Reads monthly, yearly, and lifetime summaries, then for each theme
-        either creates a new document or updates the existing one.
+        Create or update all knowledge documents for a speaker using
+        the full summary hierarchy.
         """
-        summaries = self._gather_summaries(speaker)
+        summaries = self._gather_all(speaker)
         if not summaries:
             return {}
 
@@ -70,8 +133,8 @@ class KnowledgeDistiller:
 
         return results
 
-    def _gather_summaries(self, speaker: str) -> str:
-        """Collect all available summaries for a speaker into one block."""
+    def _gather_all(self, speaker: str) -> str:
+        """Collect all available summaries for a speaker."""
         sections = []
 
         lifetime = self._get(f"lifetime:{speaker}")

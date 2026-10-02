@@ -140,14 +140,16 @@ class AgenticMemoryAgent:
 
         conversations: [{time_of_day, turns: [{speaker, text}]}]
         update_summaries: if True, incrementally rebuild only the summaries
-            affected by this date (the containing week, month, year, lifetime)
-            rather than requiring a separate build_summaries() call.
+            affected by this date, then update the distilled knowledge
+            documents with the new information.
         Returns a report of what was extracted, written, and indexed.
         """
         report = self.pipeline.run(date, conversations, speaker=speaker)
 
         if update_summaries:
             self.summarizer.update_after_ingest(date)
+            for sp in self.store.get_all_speakers() or ["user"]:
+                self.distiller.update_after_ingest(sp, date)
         return report
 
     def ingest_range(
