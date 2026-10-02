@@ -298,11 +298,11 @@ class AgenticMemoryAgent:
         Distill the hierarchical summaries into themed knowledge documents.
 
         Reads monthly, yearly, and lifetime summaries for each speaker, then
-        produces four focused documents per speaker:
-          - relationships: social dynamics and how they evolve
-          - identity: personal attributes and their transitions
-          - patterns: behavioral routines with start/end dates
-          - timeline: chronological milestones and key transitions
+        produces three focused documents per speaker — matching the extraction
+        types used throughout the pipeline:
+          - preferences: recurring choices and how they evolve over time
+          - facts: stable attributes and their transitions with reasoning
+          - events: chronological milestones and key occurrences
 
         Returns {speaker: {theme: document_text}}.
         """

@@ -42,8 +42,8 @@ def build_read_tools(store: MemoryStore) -> list:
         independently and returns results from each.
 
         CALL THIS FIRST for every question. It returns:
-        - DISTILLED: focused knowledge documents tracking relationships, identity,
-          patterns, and timeline with temporal evolution and reasoning
+        - DISTILLED: focused knowledge documents tracking preferences, facts, and
+          events with temporal evolution and reasoning
         - LIFETIME: the overall profile and confirmed patterns
         - YEARLY: major events and validated habits for each year
         - MONTHLY: consolidated facts and pattern details

@@ -284,25 +284,22 @@ Return ONLY a JSON object: {{"title": "Full Lifetime Profile", "summary": "the f
 # ── Knowledge distillation ────────────────────────────────────────
 
 THEME_DESCRIPTIONS = {
-    "relationships": (
-        "social connections — friendships, family bonds, professional ties, "
-        "group memberships — and how they evolve over time (formed, strengthened, "
-        "weakened, ended, rekindled)"
+    "preferences": (
+        "recurring choices and how they evolve — what the person picks within "
+        "each category (drink, meal, exercise, outfit, etc.), detected cycles "
+        "or alternations, and when preferences shifted from one value to another "
+        "with the reasoning behind the change"
     ),
-    "identity": (
-        "stable personal attributes — occupation, location, living situation, "
-        "diet, hobbies, values, emotional associations — and how they change "
-        "over time, with the reasoning behind each transition"
+    "facts": (
+        "stable personal attributes — occupation, location, relationships, "
+        "living situation, diet, hobbies, personality, emotional associations "
+        "— and how they change over time, recording both old and new values "
+        "with dates and the reasoning behind each transition"
     ),
-    "patterns": (
-        "behavioral routines and recurring preferences — what the person does "
-        "regularly, cycles, habits — with start dates, end dates, and what "
-        "caused shifts from one pattern to another"
-    ),
-    "timeline": (
-        "key life milestones, decisions, and transitions — the chronological "
-        "narrative arc: job changes, moves, relationship milestones, health "
-        "events, achievements, and their downstream effects"
+    "events": (
+        "key one-time occurrences and milestones — decisions, achievements, "
+        "social plans, arrivals, departures, deadlines, and other dated "
+        "happenings, in chronological order with their downstream effects"
     ),
 }
 

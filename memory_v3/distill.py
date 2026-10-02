@@ -3,12 +3,11 @@ Knowledge distillation from hierarchical summaries.
 
 The summarizer builds temporal snapshots (weekly → monthly → yearly → lifetime).
 The distiller reasons over those snapshots to produce focused knowledge
-documents that track temporal evolution across four themes:
+documents that track temporal evolution, one per extraction type:
 
-  relationships — social connections between people and how they evolve
-  identity      — stable facts and how they changed over time
-  patterns      — behavioral routines with start/end dates
-  timeline      — chronological milestones and key transitions
+  preferences — recurring choices and how they shift over time
+  facts       — stable attributes and their transitions with reasoning
+  events      — chronological milestones and key occurrences
 
 Each document records transitions with dates and reasoning:
 
@@ -40,7 +39,7 @@ from .store import MemoryStore
 from .prompts import DISTILL_SYSTEM, DISTILL_UPDATE_SYSTEM, THEME_DESCRIPTIONS
 
 
-THEMES = ("relationships", "identity", "patterns", "timeline")
+THEMES = ("preferences", "facts", "events")
 
 
 def _iso_week(date_str: str) -> str:
