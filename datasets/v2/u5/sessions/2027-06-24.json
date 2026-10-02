@@ -1,0 +1,80 @@
+{
+  "user_id": "u5",
+  "day": 481,
+  "date": "2027-06-24",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going so far? How is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty good day. I actually got active early on and took Biscuit for a long, relaxed stroll around the neighborhood right after waking up to get both our legs moving. Arjun decided to do a quick yoga session in the living room instead of coming with us."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful start to the morning. Biscuit must have loved that! Did you manage to get some solid coding done today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I was really focused during my work hours. I had some classic Coltrane and Davis LPs spinning in the background, which always helps me get into a flow state. Arjun preferred his ambient electronic tracks on his headphones while he was working on his own stuff."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those classic horn and piano records are perfect for focusing. Speaking of that, did you ever end up checking out that new jazz club that opened downtown?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet! Arjun and I have been talking about going, but we haven't made it over there. We definitely need to plan a night out soon to check it out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely let me know how it is when you go! What are your plans for the rest of the evening? Any plans to wind down?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm planning to close my eyes and listen to a narrator read a history biography to me in bed. Arjun is sticking to his physical paperback sci-fi thriller tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. There's something so nice about just closing your eyes and letting a story wash over you. Are you planning on an early night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm aiming to turn off the lights and be asleep exactly an hour before midnight. Arjun is a total night owl though, so he'll probably stay up with his book until at least 1:00 AM."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move getting some solid rest. I hope you sleep well and have a great Friday tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "jazz vinyl",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'",
+    "pref_wrong: music should be 'jazz vinyl', conversation gives 'vinyl records'",
+    "invention: Biscuit is a yellow lab",
+    "invention: Priya owns a physical turntable"
+  ]
+}

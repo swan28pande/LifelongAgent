@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 59,
+  "date": "2026-04-28",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Tuesday going in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's a bit windy today, but not too bad. I actually pedaled my way to the office on my two-wheeler this morning to get some fresh air. My coworker Dana usually rides too, but she took the bus today because she was exhausted from her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to start the morning, even with the wind! I hope Dana gets some well-deserved rest. How has the workday been treating you at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty hectic with database updates. To block out the noise and focus, I kept those chill, fuzzy, downtempo instrumental tracks with the vinyl crackle looping in my headphones all afternoon. My desk neighbor was blasting high-energy synthwave, so I definitely needed my own relaxed vibe."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those cozy, crackly instrumentals are perfect for deep focus when the office gets noisy. Do you have any relaxing plans to unwind now that the workday is wrapping up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll play some piano later to relax. But first, I'm heading home to heat up a warm bowl of slow-simmered red legumes and vegetables I made. Meera called earlier and said she was just ordering some avocado sushi rolls in Seattle, so we're both having nice, cozy meals tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, comforting Tuesday evening. How is the piano practice going? Still working on that same piece?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, still trying to master that Chopin nocturne. The left-hand rhythm is giving me a bit of trouble, but playing always helps me clear my head after coding all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Chopin can definitely be tricky, but it's such a beautiful way to unplug. It sounds like you've found a great rhythm for your evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. And the ride home should be nice too—the spring flowers are starting to bloom around the neighborhood here in Pittsburgh, which makes the commute beautiful."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Spring in Pittsburgh must be lovely with all the new blooms. Enjoy the scenic ride back!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to head out now and get that dinner warmed up. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "cycling",
+      "dinner": "lentil soup",
+      "music": "lo-fi beats",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

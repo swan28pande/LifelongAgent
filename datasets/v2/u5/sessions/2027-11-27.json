@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 637,
+  "date": "2027-11-27",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Priya! How is your weekend in Denver starting out? Did you and Arjun get up to anything fun today, or are you having a relaxing day at home with Biscuit and Mochi?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. I actually met up with that outdoor association I joined to trek up the mountain paths in a big pack earlier today. Arjun decided to skip it and did a solo session on the climbing wall instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to spend a Saturday morning! How did your knee hold up during the trek? It's great that you're back out there after that ligament tear."
+    },
+    {
+      "speaker": "user",
+      "text": "The knee felt absolutely perfect, thanks for asking! I'm so glad the physio cleared me. And because it's the weekend, I didn't have to make any journey to or from a workplace today, which was a nice relief. Arjun actually had to take the light rail to his office for a half-day shift, so he had a bit of a trip, but I got to stay entirely local."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's wonderful about your knee! And a work-free, travel-free day sounds incredibly peaceful. How have you been spending your evening now that you're back?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've just been relaxing on the couch. I'm currently scrolling through that epic saga about magic and dragons on my electronic screen device. Arjun is sitting next to me flipping through a paper copy of a non-fiction biography, so it's a very quiet reading night here."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy Saturday night. I know you've been enjoying that device since you got it. Are you planning on getting to sleep at a decent hour tonight, or are you too hooked on the story?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, I'll probably end up turning the lights off at exactly two hours past midnight. I've had to completely shift my nightly schedule to that late hour because of that on-call rotation we started for our big product launch. Since I have to monitor things late, my sleep routine is totally different now. Arjun was already fast asleep by ten in the evening, so he's on a much more normal schedule than I am!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the joys of product launch on-call rotations. That definitely explains the late-night shift. How are you holding up with those 2:00 AM nights? Are the alerts keeping you too busy, or is it mostly quiet monitoring?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's mostly quiet monitoring, thankfully, but just having to stay awake and alert is the exhausting part. Mochi has been staying up with me, though, which helps keep me company when the house gets completely silent."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's very sweet of Mochi to keep you company during the late-night watch. I hope the rest of your shift goes smoothly tonight and you get some solid rest when you finally close your eyes."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to get back to my book for a bit before the next check-in time. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "e-reader fantasy series",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

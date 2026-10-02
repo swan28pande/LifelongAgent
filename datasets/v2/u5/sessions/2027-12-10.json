@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 650,
+  "date": "2027-12-10",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Friday been going? Are you wrapping up the work week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, finally wrapping things up. It's been a busy day. Arjun ended up riding his new bike to his office today, but I decided to take the municipal coach that has a stop just a block from our apartment to get to mine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much more relaxing way to get to work, especially with how chilly it's been getting in Denver. Did you have a lot of meetings today?"
+    },
+    {
+      "speaker": "user",
+      "text": "So many meetings! Luckily I had a few hours of quiet focus time in the afternoon. While Arjun was streaming digital lo-fi tracks on his computer in his study, I spent my focus hours today spinning those grooved analog discs on the turntable he bought me. It really helps me concentrate."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds lovely! There's something so warm about that sound. It must have been a great backdrop for getting through your tasks. How are Biscuit and Mochi doing while you both work?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're good! Mochi slept on my lap for a bit while I was listening, and Biscuit was just curled up by the door waiting for Arjun to get home. Speaking of dinner, my coworker Dana told me she ordered a vegan salad for her evening meal, but Arjun and I decided to get a hot, cheesy baked dough disc delivered from the Italian parlor down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, that sounds delicious! A warm cheesy slice is the perfect way to celebrate the start of the weekend. Did you get it from that local parlor you both like?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, the one just around the corner. It hit the spot. Now we're just winding down, though my schedule is a bit thrown off tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh? Why is that? Are you planning to stay up late?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Arjun fell asleep hours ago, but with my mind still racing from a late work project, I don't think I'll be turning my bedside lamp off and closing my eyes until it's two hours past midnight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, that is quite a late night! Hopefully you can sleep in tomorrow morning and catch up on that rest."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I don't have any early plans tomorrow, so I'm hoping to sleep in late and just have a lazy Saturday morning with the pets."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "bus",
+      "dinner": "takeout pizza",
+      "music": "vinyl records",
+      "reading": "not mentioned",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

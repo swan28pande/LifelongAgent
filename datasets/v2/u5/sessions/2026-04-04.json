@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 35,
+  "date": "2026-04-04",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Priya! How has your weekend in Pittsburgh been treating you so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a bit hectic, actually. I had to go into the office today, which is quite unusual for a Saturday since I normally have absolutely no commute and just work from my living room. But with the torrential downpour outside, walking wasn't an option, so I ended up paying for a private cab ride to get there dry."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a rainy Saturday office day! That sounds like a damp start, but I'm glad you caught a cab to stay dry. Did you manage to get a lot done once you arrived?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I got a lot of backend code sorted out. To stay focused, I had the turntable in our break room spinning some classic mid-century syncopated horn records. One of the other engineers there was blasting high-energy electronic pop in his headphones, but I definitely needed those smooth, improvisational brass melodies to keep my brain in the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Vinyl has such a warm sound, and that style of music is perfect for coding focus! Did you get a chance to take a break and play any piano today, or was it strictly coding?"
+    },
+    {
+      "speaker": "user",
+      "text": "No piano keys for me today, unfortunately. Between the office trip and a few other things, I just didn't have the time to sit down at the keyboard. I might try to get some practice in tomorrow if the weather clears up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fair, sometimes a busy day just doesn't leave room for the keys. What are your plans for winding down this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it pretty low-key. Right now, I'm tucked in with a thick biographical account of the reconstruction era—I really enjoy diving into well-researched, factual narratives about past eras. A friend of mine texted me earlier saying they were starting a new high-fantasy series, but I've always preferred true historical events."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, diving into real-world history! It's fascinating how much we can learn from deep dives into actual historical events. Do you have a specific time you're aiming to head to sleep tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I didn't actually close my eyes and drift off until precisely an hour past midnight. A friend of mine told me they were fast asleep by ten, but I lost track of time reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A late bedtime is definitely a classic weekend move, especially when caught up in a good historical book! I hope it was a satisfying read."
+    },
+    {
+      "speaker": "user",
+      "text": "It really was! I'm glad I stayed up for it, even if I'm a bit sleepy now. Ready to tackle tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "took a taxi",
+      "dinner": "not mentioned",
+      "music": "jazz vinyl",
+      "reading": "history nonfiction",
+      "bedtime": "1:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "invention: The user has a coworker named Dave.",
+    "invention: The user has a coworker named Sarah.",
+    "invention: The user has a friend named Marcus.",
+    "invention: The user has a sister."
+  ]
+}

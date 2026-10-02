@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 420,
+  "date": "2027-04-24",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Saturday. How is your weekend starting off in Denver? Are you and Biscuit getting some relaxation in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yes, Biscuit and I are having a very lazy morning. It's so nice because I didn't have to do any of that tedious traveling back and forth for my job today—not having to make any kind of professional transit has been wonderful. Arjun actually had to travel all the way to his office for a weekend shift, so I've had the place to myself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect start to the weekend, especially with no work transit to worry about. Are you just taking it easy at home, or do you have some projects lined up?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! I've been doing some sorting through our remaining boxes, which actually led to a tough decision. I've officially decided to stop playing the piano. With everything going on since the relocation, I just haven't had the time to seek out and commit to new lessons."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's a shame to hear! I know how important your piano playing has been to you. Was it just too difficult to find a good instructor and schedule around your routine after the move?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly. Finding a new teacher in a new city and carving out dedicated time for lessons on top of my role at the startup has just been overwhelming. It feels right to let it go for now, even if it's a bit sad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes complete sense. Settling into a new city and a demanding job takes a lot of energy, and it's okay to prioritize. You can always return to it when things settle down. How is everything else going? Have you been keeping up with your neighborhood book club?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have! In fact, my plan for this evening is to curl up on the sofa and dive into the fiction selection for my local literary circle. Arjun said he's going to spend his night reading a historical biography he just bought, so we'll both be having a quiet evening of reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy. What is the book club's selection for this month?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a contemporary drama set in the Pacific Northwest. It's really engaging so far! Speaking of the Northwest, my sister Meera told me she joined a literary circle in Seattle, but they're currently reading a sci-fi anthology."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's neat that you both have that in common, even in different cities! How is Meera liking her new health-tech data science role in Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's absolutely loving it. It's busy, but she's really finding her stride. Anyway, I think I'm going to get back to my book now while the apartment is still quiet!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy your quiet evening of reading, Priya! Let me know if you need anything else later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "hobby.piano_stop": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,84 @@
+{
+  "user_id": "u5",
+  "day": 328,
+  "date": "2027-01-22",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Priya! Happy Friday. How has your day been going over in Denver? Did you and Arjun have a good week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a pretty busy but good week. The weather has been nice here. I actually took the electric train that runs on the tracks through town to get to the office this morning. Arjun drove his car instead because he had some errands to run on his way."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That train is usually a nice way to get some downtime before the workday starts. How was the office? Did you manage to get a lot done today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it was really productive. I had to focus on a tricky backend bug, so I put my headphones on and listened to those retro-futuristic 80s electronic beats all afternoon. My sister Meera mentioned she was listening to ambient nature sounds for her data work today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That retro sound is perfect for getting into a deep flow state! Did you manage to squash the bug?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! It was a very satisfying end to the work week. Now I can fully relax this weekend. I might even spend some time practicing the piano tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful weekend plan. Are you working on any particular piece on the piano right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some classical basics to keep my hands nimble, nothing too complex. For dinner tonight, Arjun and I cooked up one of those boxes with the pre-measured ingredients and a recipe card—we made a great barramundi dish. My coworker Dana said she just got Thai takeout."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and convenient! It's always nice to cook a meal together on a Friday night. How is Biscuit doing, by the way? Did he try to beg for some of that fish?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. Biscuit was standing right by the counter, hoping a piece of fish would fall. He didn't get any, but he got his usual treats. We're planning to turn in early tonight. I want to have my eyes closed and lights out exactly sixty minutes before midnight. Arjun, on the other hand, wants to stay up until 1 AM playing video games."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sixty minutes before midnight sounds like a great, restful target for a Friday night. I hope you get some amazing sleep. Any plans for bouldering this weekend now that your knee is fully cleared?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I'm thinking of hitting the climbing gym on Sunday morning. I've missed being on the wall, so I'm excited to ease back into it. Anyway, I should head off to start winding down. Talk to you tomorrow!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a wonderful, restful night and a great climb this weekend! Sleep well!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "light rail",
+      "dinner": "meal-kit dinner",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "invention: has a meal kit subscription",
+    "invention: learning to play synthwave melodies on the piano",
+    "invention: has a porch at her home"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "user_id": "u5",
+  "day": 520,
+  "date": "2027-08-02",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! I've been thinking about you today. How did your very first day go as an engineering manager at the climate-tech company?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was incredible! It was so exciting to finally start my new role as engineering manager at the climate-tech firm today. The morning was mostly onboarding and meeting my new development team, but everyone seems so passionate about the sustainability mission."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful start! Transitioning into leadership at a mission-driven company is a big step. How did the team welcome you?"
+    },
+    {
+      "speaker": "user",
+      "text": "They were so welcoming! They actually set up a welcome lunch for me. Getting to the office was smooth, too; I ended up taking the city's electric transit train to get there. My former coworker Dana mentioned she rode her bicycle to her office today, which sounds exhausting, but the train was very relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The electric train is a great way to travel, and it's nice to avoid Denver traffic on your first day. Did you get a chance to celebrate with Arjun when you got home?"
+    },
+    {
+      "speaker": "user",
+      "text": "We had a quiet celebration at home. For dinner, I whipped up a quick wok-tossed medley of fresh garden vegetables. Arjun ended up ordering a beef teriyaki bowl from the place down the street, but my dish hit the spot. Biscuit was sitting right under my chair begging for broccoli!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic Biscuit! He always knows when there's food around. It sounds like a lovely, low-key evening. Are you planning to relax with a book tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm actually going to spend some time having a narrator read a suspense novel to me through my headphones while I lay on the couch. Arjun is sticking to his physical paperbacks tonight, but I love being read to when my eyes are tired."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An audio narrator is the perfect way to unwind after a busy day of absorbing new information. Do you think you'll turn in early tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I want to make sure I am shutting my eyes and turning off my bedside lamp exactly sixty minutes before midnight. Arjun usually stays up until 1:00 AM on Mondays, but I really need to stay on top of my sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a very smart plan. Getting plenty of rest is key when you're adapting to a new routine. I hope you have a great night's sleep and another wonderful day tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm feeling really optimistic about this week. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "light rail",
+      "dinner": "veggie stir-fry",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {
+      "job.climate": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      },
+      "c1": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "cause_linked: bedtime must not be connected to 'started a new job as engineering manager at a climate-tech company'"
+  ]
+}

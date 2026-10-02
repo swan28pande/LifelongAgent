@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 286,
+  "date": "2026-12-11",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How is your day going? Did you end up hearing any more about that Denver transfer offer this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Friday is finally here. No new updates on Denver yet; my manager is still reviewing the team structure. But I'm trying not to think about work too much tonight. Arjun and I are actually heading to that nice little bistro downtown for a romantic meal together in a bit. He insisted we try their new winter menu, and since he's paying, I wasn't going to argue!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to kick off the weekend! It's good to get out and enjoy the city. Speaking of downtown, did you hear that a new jazz club just opened up there?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, I did hear about that! One of my coworkers mentioned it. It's great to see more entertainment venues coming to Pittsburgh. We might have to check it out sometime, though tonight we're sticking to our restaurant plans. Arjun actually ordered a wild mushroom risotto and I'm eyeing the grilled salmon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Grilled salmon sounds delicious! How is Biscuit doing? Did he get to enjoy some Friday playtime today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Biscuit is great, just napping by my feet right now. He had a long walk earlier. After dinner, I'm looking forward to some quiet time. I picked up a book of contemporary verses from the Carnegie Library the other day, so I'm planning to curl up with those stanzas tonight. My sister Meera told me she's reading a massive sci-fi novel right now, but I prefer something shorter and more lyrical."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reading some verse sounds incredibly peaceful after a busy week of backend engineering. The Carnegie Library has such a great selection. Are you hoping to get a lot of reading done tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a bit! I don't want to stay up too late. I'm planning on winding down and shutting my eyes right at eleven o'clock tonight so I can feel refreshed tomorrow. Arjun usually stays up past midnight playing video games, but I definitely need my sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep by eleven is a great goal, especially to make the most of your Saturday. How has your knee been feeling lately, by the way? Is it still holding up well since the physical therapist cleared you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's doing really well, thanks for asking! No pain at all, which is a huge relief. I'm just taking things easy and enjoying being able to walk around the city without any stiffness."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news. It must be such a relief to have that knee back to normal. Do you have any other fun plans with Arjun this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not too many plans, honestly! We might take Biscuit to the park tomorrow if the weather stays clear, but mostly just relaxing. I'm really looking forward to our dinner tonight and then diving into those poems."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like the perfect balance of a fun night out and a cozy night in. I hope you have a wonderful dinner and a restful night's sleep!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you next week and let you know how the new bistro was. Have a great weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "dinner date out",
+      "music": "not mentioned",
+      "reading": "poetry collections",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {
+      "distractor3": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: distractor3 (a new jazz club opened downtown (this happened on 2026-12-10))"
+  ]
+}

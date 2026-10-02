@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 244,
+  "date": "2026-10-30",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Priya! How is your day going over in Pittsburgh? I hope you and Biscuit are doing well."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Fridays are always a welcome relief. Things have been pretty busy at the fintech startup, but Biscuit is doing great—he's currently napping on his favorite rug."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear Biscuit is relaxing! Did you work from home with him today, or did you make the trek into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did head in today. I actually pedaled my way to the office on two wheels this morning, taking full advantage of those new lanes they added recently. My coworker Dana usually joins me, but she decided to take the bus today because she was just too tired."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great that those new bike lanes are making your journey smoother! It sounds like a refreshing way to start a Friday. Do you have any plans lined up for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! My partner and I are going to have a meal at a restaurant together tonight. We're actually going to try that newly opened noodle spot down the block. My sister Meera told me she is just cooking at her apartment in Seattle tonight, but Arjun and I wanted to treat ourselves to a night out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the new ramen place! That sounds delicious. I hope the food lives up to the anticipation. Are you planning to make it a late night, or are you hoping to get some rest?"
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely want to get some solid rest. I'm aiming to shut my eyes and turn off the lights at half past ten tonight. Arjun is a night owl and will probably stay up until midnight, but I want to feel refreshed tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible plan. Ending your day at half past ten should give you plenty of energy for the weekend. Is the weather in Pittsburgh cooperating for your ride home later?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is! It's a bit brisk, but the sun is out, so it should be a nice ride back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect. Enjoy your ramen date with Arjun tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm really looking forward to it. Speak to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "cycling",
+      "dinner": "dinner date out",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'morning dog walk'"
+  ]
+}

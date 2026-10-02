@@ -1,0 +1,80 @@
+{
+  "user_id": "u5",
+  "day": 620,
+  "date": "2027-11-10",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Wednesday been going over in Denver? I hope things at the climate-tech firm aren't too hectic this week."
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Wednesday was actually pretty good. Things are always a bit busy at work, but as an engineering manager, I'm getting used to balancing all the moving parts. The weather in Denver has been gorgeous today, so that definitely helped my mood."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. How are things going with you and Arjun? Have you two had any time to check out that new jazz club downtown that opened recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "We haven't made it to the jazz club yet, though we definitely want to! Arjun has been pretty busy lately—he actually spent some time today adjusting his new bike. But we're hoping to plan a night out soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun project for him! What are your plans for winding down this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I decided to do something a bit different tonight. Usually, I've been using my digital screen to power through that massive fantasy saga I've been reading, but tonight I felt a sudden wave of sentimentality. I wanted something deeply comforting and familiar, so I actually pulled a physical book off my shelf—one of my absolute all-time favorite stories that I've already read front-to-back multiple times—and decided to dive into those well-worn pages instead. Meanwhile, Arjun is taking the opposite route; he's on his own electronic tablet tonight, starting a brand-new science fiction release that he just downloaded."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's really nothing quite like the comfort of a beloved story when you're feeling sentimental. Returning to familiar characters can be so grounding. Is it nice to have actual pages to turn for a change?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really is! There's a tactile comfort to it that my electronic device just can't replicate, even though the device is normally so convenient for keeping up with my ongoing fantasy series. It's just what I needed tonight to match my mood."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I completely agree, sometimes a physical book is irreplaceable. How are Biscuit and Mochi doing? Are they joining you for storytime?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. Mochi is curled up right next to me on the sofa, and Biscuit is asleep on the rug nearby. They both love it when the apartment is quiet like this."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy. Have you heard from your sister Meera in Seattle lately? How is she settling into her data science role?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did chat with her a couple of days ago! She's doing really well and absolutely loves the health-tech company she's working for. She did mention she's still adjusting to how much it rains in Seattle, but otherwise, she's very happy with the move."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "re-read an old favorite",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_leak: music should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: reading should be 're-read an old favorite', conversation gives 'missing'",
+    "invention: She has owned a paperback copy of Jane Eyre since college."
+  ]
+}

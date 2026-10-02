@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 224,
+  "date": "2026-10-10",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Saturday going in Pittsburgh? Have you and Biscuit been up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. I had to do some server maintenance for work, but the best part was that I didn't have any travel time to get to my job today. There was no driving or transit required at all. My coworker Dana, on the other hand, had to make a long drive across town to get to her office for a weekend shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the best kind of weekend work day—saving all that time on transit! Did you have some good music playing to help you focus while you worked on the servers?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on a playlist of those retro-futuristic, neon-vibe synthesizer tracks like the ones we heard at that show. That driving beat is perfect for coding. Arjun, meanwhile, was listening to some quiet acoustic guitar tracks while he cleaned his place."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That electronic synth sound is perfect for getting into the zone. Speaking of Arjun, do you two have any fun plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do! We're actually going to prepare a dinner from scratch together at my apartment tonight—probably a nice salmon dish. My sister Meera told me she's just ordering delivery in Seattle tonight, so we're being a bit more ambitious than her!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "A home-cooked salmon dinner sounds delicious and like a great way to spend the evening together. What are you planning to do once dinner is cleaned up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm really looking forward to curling up on the couch with one of those fast-paced suspense books I checked out from the Carnegie branch. I love a good page-turner. Dana mentioned she's spending her evening reading a thick history biography she bought, but I definitely prefer a thrilling mystery."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Library thrillers are so addictive, it's easy to lose track of time. Do you have a target time to wind down and head to bed tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do. I'm going to try really hard to turn off the lights and go to sleep at exactly thirty minutes before midnight. I want to get a solid night's rest. Arjun is a total night owl and will probably stay up until past 1 AM playing video games, but I need to stick to my schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Aiming for half past eleven is a great goal, especially to wake up refreshed tomorrow. How has Biscuit been doing today? Did he enjoy having you around while you worked?"
+    },
+    {
+      "speaker": "user",
+      "text": "He loved it! He just snoozed right under my desk the whole time. He's the perfect little assistant, even if he's mostly just sleeping on the job."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "cooking with Arjun",
+      "music": "synthwave playlists",
+      "reading": "library thrillers",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

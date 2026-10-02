@@ -1,0 +1,86 @@
+{
+  "user_id": "u5",
+  "day": 487,
+  "date": "2027-06-30",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Wednesday been going? Did you manage to get outside at all today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's been a busy day, but I did manage to get out. I actually headed up to the dirt paths in the foothills for some outdoor cardio after work. Arjun decided to lift weights at the gym today, but I really needed that fresh mountain air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a great way to clear your head after a day of backend engineering. How is your knee feeling on those uneven paths? Completely back to normal?"
+    },
+    {
+      "speaker": "user",
+      "text": "It felt great! No pain at all, so the physio was definitely right about me being cleared for normal activity. It felt so good to just move."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful news! It must be such a relief to run without worrying. Did you head straight to the office this morning before that, or did you work from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went into the office today. My coworker Dana actually rode her new bike using those new lanes, but I caught the public electric train to work. It was nice to just sit and look out the window."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Public transit can be very relaxing when you don't have to navigate traffic. Speaking of Dana, how is she doing with her triathlon training? And how is her beagle, Pepper?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great, really focused on her swimming lately. And Pepper is as energetic as ever! Anyway, by the time I got home from my run, I was absolutely wiped."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! A full workday plus a run in the foothills is a lot of energy. Have you and Arjun figured out what to do for dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I ended up ordering a wrapped-up Mexican wrap to go, instead of the usual black bean tacos, because I was just too exhausted to spend any time cooking tonight. Arjun actually grabbed some ramen from that new spot down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a burrito sounds like the perfect, satisfying reward after a heavy day, and it's always nice to skip the kitchen cleanup. What are your plans for the rest of the evening? Just relaxing with Arjun and Biscuit?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. Biscuit is already curled up on the rug. Arjun is reading a physical paperback, but I'm going to listen to a narrated novel while I wind down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy. Listening to a story is a perfect way to rest your eyes after staring at screens all day. I hope you have a wonderfully relaxing night, Priya!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I definitely will. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "trail run",
+      "commute": "light rail",
+      "dinner": "takeout burrito",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Priya and Arjun usually make black bean tacos.",
+    "invention: Biscuit is too enthusiastic for steep trails, so his walks are kept local."
+  ]
+}

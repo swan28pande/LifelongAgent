@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 659,
+  "date": "2027-12-19",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Sunday going? Did you manage to get outside today, or are you and Arjun staying cozy with Biscuit and Mochi?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I actually did get outside this morning. I went out on the trails with my weekend trekking group, which was wonderful, though Dana decided to do a solo swim session instead of joining. But the weather turned quickly. I usually never have any kind of commute on Sundays, but I unexpectedly had to run to the office for a bit. Because of the torrential downpour, I ended up hailing a yellow cab to get there, unlike my coworker Dana who actually biked through the storm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, that sounds like quite a sudden shift in the weather! A cab was definitely a smart choice. Did having to go into the office on a Sunday have something to do with that product-launch on-call rotation you've been on?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did, yes. I had to go in to sign off on a few final things. But the great news is that the product launch officially wrapped up this afternoon, which means my on-call rotation is finally over today! It feels like a massive weight has been lifted."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is incredible news, Priya! Congratulations on getting through the launch and finishing up that rotation. I'm sure it's a huge relief. How are you and Arjun celebrating having your weekends fully back?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, just by relaxing at home! After getting back from the office, I had a few stray emails to answer, so I decided to make it pleasant by spinning some LP discs on the turntable Arjun got me. Arjun was listening to an educational podcast on his headphones while doing some chores, so we both had our own soundtracks going."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to wind down. There's nothing quite like the sound of a record playing. What did you two end up doing for dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "We kept it pretty low-key. I just reheated the remaining portions of the vegetarian chili we made a couple of days ago, while Arjun opted to order some takeout noodles from the place down the street. It was nice not to have to cook anything from scratch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reheated chili is often even better the second time around! It sounds like a very cozy Sunday evening. What's on your agenda for the rest of the night?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm about to curl up on the couch and get through a few more chapters of the assigned fiction selection for my local neighborhood reading group. Arjun is reading some graphic novels next to me. Biscuit is sleeping right at my feet, and Mochi has already claimed a spot on my lap, so I'm fully pinned down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you have the perfect reading companions! Enjoy your book club novel and have a wonderful, restful evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "took a taxi",
+      "dinner": "leftovers",
+      "music": "vinyl records",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "on_call.1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,88 @@
+{
+  "user_id": "u5",
+  "day": 311,
+  "date": "2027-01-05",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Tuesday going? Is the weather in Denver treating you well today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It’s actually been pouring all day. The weather is absolutely miserable. I usually ride the light rail, but the rain was so torrential this morning that I made a one-off exception and hired a cab to get to the office. My coworker Dana actually took the bus, which still sounds like too much walking in this downpour for me!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cab sounds like the much drier option today! I don't blame you at all. How is your knee holding up with this damp weather? I remember you were cleared for normal activity recently."
+    },
+    {
+      "speaker": "user",
+      "text": "It’s actually feeling great, no issues at all! Work at the fintech startup has been busy, but I'm looking forward to getting home. I'm planning to stand over the stove and whip up a spiced, simmered chickpea and coconut stew with rice tonight. Arjun was hoping we could get takeout, but I really wanted a warm, homemade meal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A warm, spiced dish at home sounds perfect for a rainy night. And it fits perfectly with your pescatarian diet! Are you planning to relax with anything else cozy tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. After we eat, I'm going to spend the evening reading some volumes of lyrical stanzas and rhyming verses. Arjun is currently engrossed in a dense sci-fi novel, but I'm really enjoying these shorter, rhythmic books right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. Did you pick up those volumes of verses from the Carnegie Library?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I used my new library card there last week to browse their shelves, and they had a wonderful selection of local writers. It's such a great resource to have nearby."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. It sounds like you're truly making Denver feel like home since accepting that office transfer."
+    },
+    {
+      "speaker": "user",
+      "text": "I really am. I love living here with Arjun, and Biscuit loves the parks when it's not pouring. I actually chatted with my sister Meera in Seattle yesterday and told her how much we're enjoying the city."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how is Meera doing? Is she liking her new health-tech data science role?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She's settling into her job and Seattle really well. Anyway, I should get going so I can start prepping that dinner. Talk to you tomorrow!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a wonderful, cozy evening, Priya! Enjoy the cooking and your reading. Chat tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "took a taxi",
+      "dinner": "home-cooked curry",
+      "music": "not mentioned",
+      "reading": "poetry collections",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'home-cooked curry', conversation gives 'other'",
+    "pref_wrong: reading should be 'poetry collections', conversation gives 'other'"
+  ]
+}

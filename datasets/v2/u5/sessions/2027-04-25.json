@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 421,
+  "date": "2027-04-25",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! I hope you're having a relaxing Sunday in Denver. How has your weekend been going with Arjun and Biscuit?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's been a lovely, quiet Sunday. Just hanging out at home, giving Biscuit some belly rubs, and catching up on a few chores."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to recharge. How are things going at the startup lately? Has the backend engineering work been keeping you busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. We have a major release coming up, so my brain has been a bit fried. Because of that, I really didn't want to think about grocery shopping or meal planning today. I ended up making a cod recipe from one of those services that delivers the exact pre-measured ingredients in a cooler box. It was super easy. Arjun actually decided to get a pork bowl from the new ramen shop down the street instead of eating with me, which worked out fine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those pre-portioned ingredient boxes are such a lifesaver when you're mentally drained! And that new ramen place is so close, it's hard for Arjun to resist. How are you both liking your neighborhood lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We absolutely love it here. Denver has been a great fit for us since the transfer. It feels like there's always a new spot to check out, though today we really just enjoyed some quiet time at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It’s wonderful that the city feels like home now. Have you heard from your sister Meera recently? How is she settling into Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we chatted earlier! She's doing really well at her health-tech job, though she's a total night owl. She told me she rarely goes to sleep before 1:00 AM. I definitely can't do that; I'm planning on switching off my bedside lamp and shutting my eyes right at twenty-three hundred hours tonight. Arjun was exhausted from his day and actually went to sleep much earlier, around nine-thirty."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An early night sounds much more sustainable than 1:00 AM, especially with a busy week ahead! It's smart to get a full night's rest."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I want to feel refreshed for my meetings tomorrow. Getting to sleep right at that hour is the sweet spot for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely. I hope you get some great rest tonight and have a smooth start to your work week tomorrow. Let me know if you need anything else!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'm going to start winding down now. Have a good night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "meal-kit dinner",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: subscribes to a meal-kit service"
+  ]
+}

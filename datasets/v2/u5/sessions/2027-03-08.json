@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 373,
+  "date": "2027-03-08",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Monday. How is your day starting off in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's starting off great. I actually woke up early and went for a run on the dirt paths in the foothills. It felt so good to get back out on the trails after my knee injury was cleared! Arjun decided to stay in and ride his stationary bike today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start the week. Your knee must be feeling completely back to normal! Did you head straight into the office after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I did. I hopped on the electric commuter train to get to my desk today. It's so nice to just sit back and relax instead of driving. My coworker Dana actually had to drive her car today because she had to drop off Pepper at the vet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That transit system is so convenient! Speaking of Dana, how is her triathlon training going?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well, mostly focusing on her swimming right now. Speaking of cycling, Arjun bought a new bike on March 5, 2027. He's been really excited to test it out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's awesome! A new bike is a great purchase, especially with the new bike lanes nearby. How was the rest of your workday at the fintech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was busy but productive. I had a ton of backend coding to do, so I put on some retro-futuristic 80s electronic tracks to block out the noise and focus. My desk neighbor was listening to classical music, but the neon synth sounds really kept me energized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Retro-electronic beats are perfect for getting into a flow state! Did you manage to make good progress on those backend tasks?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Got a lot of code deployed. Now I'm just looking forward to a relaxing evening. For dinner, Arjun and I are preparing one of those pre-portioned recipe subscription boxes that gets delivered to our door. My sister Meera told me she just ordered Thai takeout in Seattle tonight because she was too tired to cook."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those pre-measured ingredient boxes are so convenient after a long Monday, and it makes sticking to your pescatarian diet so much easier! How is Biscuit doing tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Biscuit is doing great! He's currently snoozing at my feet, hoping I'll drop some of the ingredients while we cook. He had a nice long walk earlier with Arjun, so he's completely tuckered out."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "trail run",
+      "commute": "light rail",
+      "dinner": "meal-kit dinner",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "distractor4": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: exercise should be 'trail run', conversation gives 'long run'",
+    "statement_missing: distractor4 (Arjun bought a new bike (this happened on 2027-03-05))"
+  ],
+  "repair_method": "revise_existing"
+}

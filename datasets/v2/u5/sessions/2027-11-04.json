@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 614,
+  "date": "2027-11-04",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going in Denver? Did you manage to fit in any bouldering or a trail run today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! No bouldering or running today. My morning routine was a bit thrown off because my usual gym was closed for maintenance. So, instead of my standard quick morning stroll with Biscuit, I ended up doing a really long walk—just a massive, extended trek on foot all over our neighborhood. Arjun actually went for a ride on his new bike instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A long walk sounds like a great way to adapt, and I'm sure Biscuit appreciated the extra time outside! How did the rest of your day go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was busy, but I had some great background noise. While getting through my engineering manager tasks, I was listening to physical wax discs spinning on the record player Arjun got me. It really helps me focus, whereas my coworker Dana mentioned she was streaming synthwave today while she worked."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's definitely something special about the ritual of putting on vinyl when you need to focus. Did you have a productive afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, but it ran incredibly late. I had a strategy meeting that went so far over that I ended up completely bypassing the evening meal. Normally, I would have cooked my usual veggie curry, but I was so exhausted and it was so late that I just didn't eat anything tonight. Arjun ended up eating some leftover ramen from the place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's tough. Missing dinner because of a late meeting is always exhausting. Please make sure to get a good breakfast tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely will. I'm exhausted, so I'm planning on shutting my eyes exactly two hours before midnight tonight. Arjun said he's going to stay up late reading until at least midnight, but I need sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep by ten o'clock sounds like exactly what you need after a day like today. Are you going to do any light reading before you turn off the lights?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm going to spend a few minutes reading the latest fiction pick for our neighborhood literary circle. My sister Meera texted me earlier saying she was reading a dense data science paper tonight, but I definitely prefer our book club selection right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fiction book is definitely a much more relaxing way to wind down. I hope you enjoy it and get some well-deserved rest. Goodnight, Priya!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Goodnight, talk tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "long walk",
+      "commute": "not mentioned",
+      "dinner": "skipped dinner",
+      "music": "vinyl records",
+      "reading": "book club novel",
+      "bedtime": "10:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'"
+  ]
+}

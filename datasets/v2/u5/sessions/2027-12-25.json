@@ -1,0 +1,91 @@
+{
+  "user_id": "u5",
+  "day": 665,
+  "date": "2027-12-25",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Saturday. How has your weekend been going so far? Did you manage to get outside today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I actually did. I spent the morning trekking up in the foothills with that weekend outdoor association I joined a while back. It was beautiful, though quite chilly! Arjun decided to go for a solo road bike ride instead since he wanted to test out his gear."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the day, even with the cold! Did Biscuit get to tag along with you on the foothills trek?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, it was a bit too steep for him today, so he stayed home with Mochi. I actually had to rush back and head into the office for an unexpected issue. I was running incredibly late, so I ended up summoning a car through an app on my phone, which is a total exception to my usual routine of not commuting at all."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, a work emergency on a Saturday is never fun. I hope it wasn't too stressful to deal with once you got there."
+    },
+    {
+      "speaker": "user",
+      "text": "It was intense but we got it sorted. To really buckle down, I worked in complete and utter quiet with no background sound at all. Usually, I'd be spinning those vinyl records Arjun got me, but today I really needed to concentrate deeply on a critical system bug."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes absolute quiet is the only way to get through those complex issues. By the way, did you hear that our local gym modified its operating hours? They're starting later on weekends now."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, really? I hadn't heard that, thanks for the heads-up! I'll have to adjust my schedule if I head there. Anyway, I'm just winding down now. For my reading tonight, I'm flipping through a printed monthly publication I picked up at my dental checkup earlier, rather than my usual epic fantasy novel on my e-reader."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nice light read is perfect for winding down. Are you hoping to get some good sleep tonight after such a busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've been turning the lights out exactly at midnight again lately. I was finally able to return to that schedule because that intense product launch wrapped up recently, which has been a huge relief."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That must be a massive weight off your shoulders! Having that on-call rotation behind you surely makes a difference. How are things feeling at the climate-tech company overall now that the launch is done?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's much more manageable now. I can finally focus on standard engineering manager tasks without the constant fire drills. It's nice to have some breathing room again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. I hope you get a wonderful night's rest tonight, Priya. Let me know if you need anything tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll definitely sleep well tonight. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "rideshare",
+      "dinner": "not mentioned",
+      "music": "silence",
+      "reading": "a magazine",
+      "bedtime": "12:00 am"
+    },
+    "statements": {
+      "distractor7": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

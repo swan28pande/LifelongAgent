@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 324,
+  "date": "2027-01-18",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday starting off? I hope you're having a good start to the week in Denver."
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's off to a great start. A friend invited me out early today, so instead of my usual morning stroll with Biscuit, I ended up doing laps in the indoor lanes of the public aquatic facility. My friend actually chose to do water aerobics in the deep end while I did my laps."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to energize your morning! I'm sure Biscuit didn't mind too much. Did you head straight to the office after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Arjun promised to take Biscuit out later, so he was happy. For my commute, I caught the electric train that runs on the tracks into the city center today. My coworker Dana actually took the bus today because she's still training hard for her triathlon and wanted to rest her legs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the train is a great way to avoid morning traffic. How is work going at the fintech startup today? Are you working on any major backend updates?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we're doing a big push on our API endpoints today. I've been keeping my focus by listening to those retro-futuristic 80s electronic instrumental tracks with the neon beats all day. My teammate actually chose to listen to heavy metal to power through his coding, which sounds way too intense for me!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those nostalgic electronic beats are perfect for getting into a flow state. It reminds me of that synthwave concert you and Arjun went to! Do you have any plans to unwind after you get home tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've actually recently changed my evening reading routine, specifically because I joined that neighborhood book club here in Denver. So tonight, I'll be flipping through the pages of the fiction piece assigned for our local literary group. Arjun is choosing to read a biography of a jazz musician tonight instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great habit to build, and it's wonderful that the Denver book club is keeping you motivated. What is the assigned book about?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a mystery set in a coastal town. Not my usual go-to, but it's really gripping so far! It's been fun to discuss it with the neighbors."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always exciting when a book club introduction turns out to be a hit. I hope you enjoy the rest of it tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. I'd better get back to these API endpoints for now, talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "swim at the community pool",
+      "commute": "light rail",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

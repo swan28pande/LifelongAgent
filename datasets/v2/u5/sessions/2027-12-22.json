@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 662,
+  "date": "2027-12-22",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Wednesday been going so far? How are things over at the climate-tech firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty productive day. I started things off on a good note by taking our Labrador out for a nice brisk stroll around the block right after sunrise. Arjun decided to do a high-intensity interval session on his stationary bike instead, but Biscuit and I preferred the fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to wake up, and I'm sure Biscuit appreciated the outdoor time. How was the rest of your morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was good! I had a lot of engineering manager tasks to map out, but I kept my focus by playing some of my old wax albums on the turntable Arjun got me. It's so nice having that physical music spinning in the background. Arjun spent his afternoon listening to lo-fi beats on his laptop speakers in the other room."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There really is nothing quite like the sound of music on physical wax. It sounds like you set a great vibe for the workday. Are you and Arjun planning anything special for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too fancy, but it should be tasty. I'm making some folded corn tortillas stuffed with seasoned dark legumes and fresh avocado for myself. Arjun wanted something different, so he's opting for beef burritos tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those folded tortillas with spiced legumes sound incredibly flavorful and perfect for a vegetarian meal. What are your plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to wind down by curling up with that multi-book saga about sorcerers and mythical beasts on my digital ink device. I'm really hooked on it. Arjun is sticking to his paper copy of a historical biography instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that fantasy saga on your digital reader sounds like the perfect escape. By the way, how are Mochi and Biscuit holding up with the neighbors' loud puppy lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Biscuit mostly ignores it, but Mochi gives the ceiling a very dramatic glare whenever the puppy starts yapping upstairs. Otherwise, they're both doing well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic cat attitude from Mochi! I'm glad they aren't too stressed by the noise. I hope you enjoy your dinner and get plenty of reading time tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to a relaxing evening. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "black bean tacos",
+      "music": "vinyl records",
+      "reading": "e-reader fantasy series",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'"
+  ]
+}

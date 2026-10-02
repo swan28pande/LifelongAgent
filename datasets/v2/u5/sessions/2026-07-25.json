@@ -1,0 +1,80 @@
+{
+  "user_id": "u5",
+  "day": 147,
+  "date": "2026-07-25",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Saturday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's been really relaxing. Since it's the weekend, I didn't have to do any kind of travel or transit for job purposes today, which is always a nice break. My coworker Dana actually had to commute to a weekend seminar today, so I felt pretty lucky to just stay put."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound lovely. Having a day with zero work travel is the best. What do you have planned for the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually heading out in a little bit to share a meal at a restaurant with a bunch of my close pals. My sister Meera mentioned she's just doing a quiet solo dinner at her place in Seattle tonight, but I was in the mood to catch up with people."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like fun! Are you guys going to check out that new ramen place that opened on your street? I know you're pescatarian, so hopefully they have some good options for you."
+    },
+    {
+      "speaker": "user",
+      "text": "We are, actually! I looked at the menu and they have a great seafood broth option, which is perfect since I don't eat meat. It's nice to find a spot nearby that fits my pescatarian diet so well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! How are things otherwise? Are you still enjoying the single life in Pittsburgh, or have you been dipping your toes back into the dating scene?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm still very much single and honestly really enjoying my independent routine right now. It gives me plenty of time to focus on my hobbies and hang out with Biscuit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense, and Biscuit is excellent company. Speaking of your independent routine, how do you think you'll wind down after you get back from eating with your friends?"
+    },
+    {
+      "speaker": "user",
+      "text": "Once I get home, I'm planning to curl up with those suspenseful, fast-paced mystery books I recently borrowed from the local Carnegie branch. Meera told me she's currently reading a dense history biography, but I definitely prefer these tense stories."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those Carnegie Library books are perfect for a cozy Saturday night. I hope you have a wonderful evening out with your friends and enjoy your reading later!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'm looking forward to a great night. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "dinner with friends",
+      "music": "not mentioned",
+      "reading": "library thrillers",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_leak: music should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: reading should be 'library thrillers', conversation gives 'missing'",
+    "invention: has a friend named Sarah"
+  ]
+}

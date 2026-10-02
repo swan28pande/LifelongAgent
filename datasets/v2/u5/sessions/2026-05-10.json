@@ -1,0 +1,75 @@
+{
+  "user_id": "u5",
+  "day": 71,
+  "date": "2026-05-10",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Sunday evening. How has your weekend been wrapping up? Did you manage to get some time at the pottery studio or the piano?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a bit of a mixed bag, honestly. I did get to practice a few Chopin nocturnes on the piano yesterday, which was lovely, but today got completely swallowed up by work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, work on a Sunday? I thought you'd have the weekend to relax from the fintech startup chaos. What happened?"
+    },
+    {
+      "speaker": "user",
+      "text": "We had a major database migration issue that required an all-hands-on-deck call. It was supposed to be a quick sync, but the emergency meeting just kept dragging on and on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly stressful, especially for a Sunday evening. Did you at least manage to take a break to get some food?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, no. I had planned on eating some leftover pasta I had in the fridge, but because that meeting ran so incredibly late, I ended up completely bypassing my evening meal and went without any supper. My sister Meera texted me earlier saying she ordered a giant sushi platter for her dinner, so I was pretty jealous of that!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's rough! Going to sleep on an empty stomach is never fun, especially when you're dreaming of Meera's sushi. When did you finally manage to sign off and get to bed?"
+    },
+    {
+      "speaker": "user",
+      "text": "By the time we finally resolved the migration issue and I could shut down my laptop, it was incredibly late. I think my head finally hit the pillow right when the clock struck one in the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oof, 1:00 AM is a brutal bedtime when you have the work week starting the next day. How are you holding up today? Are you feeling completely exhausted?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely feeling the drag today, but a lot of coffee is helping. Speaking of Meera, she actually mentioned that her new routine in Seattle has her winding down and going to sleep by nine every night to adjust to her new schedule, which makes my late night look even worse!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, yes, nine PM sounds like a dream compared to one in the morning! Hopefully you can catch up on sleep tonight. Are you planning on cooking something nice and pescatarian to make up for skipping last night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely. I have some salmon in the fridge that I'm definitely going to cook up early tonight. No late meetings allowed today!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "skipped dinner",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "1:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

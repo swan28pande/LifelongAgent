@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 184,
+  "date": "2026-08-31",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Monday been starting off? How are things going at the fintech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Work is pretty busy, but I'm managing. I actually ended up booking a car through an app to get to the office this morning. Arjun took the bus, but I just hailed a ride on my phone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Convenient! Speaking of getting around, how is your knee feeling? Have you been able to do much movement since the bouldering injury?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's getting there. Today I made sure to spend some time doing those targeted rehab movements for my leg to keep the joint mobile. My coworker Dana did a long run for her triathlon training, but for me, it was just those gentle therapeutic exercises."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Slow and steady is definitely the way to go with ligament recovery. Are you finding some time to relax otherwise? Maybe playing some piano?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't played much piano lately, but I did get some reading in today. Normally I've been reading those thrillers I got from the Carnegie Library, but I was feeling super nostalgic, so I pulled out an old favorite novel I first read in high school and re-read that instead. Meera texted me that she's reading a new biography in Seattle, but I wanted my comfort book."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nostalgic re-read sounds like the perfect comfort. How have your energy levels been? Are you getting enough sleep with everything going on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, I'm a bit tired today! Usually I have my eyes closed by half-past-ten, but last night was a total exception. A friend of mine had a big birthday celebration, so I didn't actually end up going to sleep until two in the morning. Arjun went to bed at his regular hour, but I stayed out late."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, 2 AM is definitely a late night! I hope the party was worth the sleep debt. How is your pescatarian eating going? Are you finding enough high-energy meals to keep you going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going really well! I'm finding plenty of good seafood options around Pittsburgh. I actually walked past that new ramen place on our street today and was so tempted, but I stuck to my usual. Arjun ended up getting a bowl of noodles from there, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That ramen place is super popular! Glad you're still enjoying the pescatarian options. Did you get to spend any quality time with Biscuit today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes! Arjun took Biscuit out for his long afternoon walk, so I just got to snuggle with him on the couch when they got back. It was the perfect way to wind down."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "physio exercises",
+      "commute": "rideshare",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "re-read an old favorite",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'leftovers'",
+    "invention: She has a physical therapist.",
+    "invention: She owns a copy of the book The Secret History."
+  ]
+}

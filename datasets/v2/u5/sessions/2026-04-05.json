@@ -1,0 +1,84 @@
+{
+  "user_id": "u5",
+  "day": 36,
+  "date": "2026-04-05",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Sunday going over in Pittsburgh? Did you get a chance to play some piano or do anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a pretty good Sunday. I did spend about an hour playing the piano earlier, which was nice. Since then, I've just been finishing up some backend coding tasks for the startup. While working, I had some classic, warm-sounding improvisational brass tunes spinning on wax in the background. One of my coworkers mentioned they listened to an upbeat synthpop playlist while they coded today, but I put on vintage instrumental albums."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's definitely something special about that warm analog sound for getting into a good coding flow. Did you manage to wrap up all your backend tasks for the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, luckily! Everything is deployed and ready. For dinner, I reheated the extra portions of the vegetarian curry I made yesterday. A friend of mine actually went out to a fancy sushi restaurant tonight, but my meal was just clearing out what was already in my fridge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to handle dinner, especially after getting so much work done. It's always satisfying to clear out the fridge. Are you planning to just relax and unwind for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely. I'm about to dive into a speculative fiction book about interstellar travel and AI-driven spaceships. A friend of mine is currently reading a heavy historical biography, but I'm spending my evening getting lost in futuristic worlds."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A book about AI space travel sounds like the perfect evening escape! How far into it are you? Do you think you'll end up reading late tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm only a few chapters in, so I'll probably lose track of time a bit. I'm aiming to turn the lights off and go to sleep exactly sixty minutes after midnight. My neighbor actually went to sleep at nine tonight, but that's my target time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Quiet midnight hours really are the best for uninterrupted reading. Hopefully, you get a good chunk of pages turned. Aside from piano, have you found any interesting new sheet music to play recently, or perhaps a nice spot in Pittsburgh to check out on your next day off?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually picked up some sheet music for a few Chopin nocturnes last week! I haven't had much time to go exploring Pittsburgh this weekend because of work, but I'm hoping to get some practice in on those nocturnes tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Chopin nocturnes are beautiful but definitely take some dedication! I hope you get some good practice time tomorrow. Good luck with the startup tasks, and enjoy your book tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to a relaxing night with my book. Have a great evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 10,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "leftovers",
+      "music": "jazz vinyl",
+      "reading": "sci-fi novel",
+      "bedtime": "1:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "invention: The user has a coworker named Dave.",
+    "invention: The user owns a record player.",
+    "invention: The user has a sister.",
+    "invention: The user is in a book club and has a friend named Sarah.",
+    "invention: The user has a mom.",
+    "invention: The user has always been a late-night person."
+  ],
+  "repair_method": "revise_existing"
+}

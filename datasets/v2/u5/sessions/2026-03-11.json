@@ -1,0 +1,89 @@
+{
+  "user_id": "u5",
+  "day": 11,
+  "date": "2026-03-11",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Priya! How's your Wednesday going? How are things at the startup today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy day, but pretty good. I actually decided to use pedal power to get to the office this morning instead of my usual commute. It was nice to be out in the cool air. One of my colleagues took the bus, which they said was totally packed, so I'm glad I chose the two-wheeled option."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting some fresh air on the way in sounds like a great way to wake up! How was the route today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not too bad! The hills here in Pittsburgh always make it a bit of a climb, but it definitely got my blood pumping. It's much better than sitting in traffic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Speaking of your day, have you had a chance to play the piano lately, or maybe do some bouldering?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually spent some time on the piano yesterday evening! I'm trying to master a challenging classical piece right now. I haven't been to the bouldering gym this week yet, but I'm hoping to get back there soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. Piano practice is such a nice way to unwind. How's everything else going? Are you still sticking to your pescatarian diet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, definitely! Still happily pescatarian. There are some fantastic seafood spots around town, so it's been really easy to stick to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. And how are things on the personal front? Still enjoying the single life in the city?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I really am! It's nice having the freedom to just focus on my work, my music, and exploring Pittsburgh at my own pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you've got a really nice balance going right now. Do you have any plans for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have a few chores to finish up, but I'm aiming to switch the lights off and go to sleep exactly thirty minutes before midnight tonight. My neighbor actually told me they are turning in at 10:00 PM because of an early flight, but I think my timing is perfect for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid plan. Getting to sleep by then should set you up nicely for tomorrow. Have a great night, Priya!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "cycling",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'other'",
+    "invention: User owns a bicycle (two-wheeler)",
+    "invention: User has a colleague named Marcus",
+    "invention: User has a friend named Chloe"
+  ]
+}

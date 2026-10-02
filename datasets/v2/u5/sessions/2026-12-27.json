@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 302,
+  "date": "2026-12-27",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Sunday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been good, pretty productive. I started the day with a really sweaty, fast-paced interval session right in my living room. Arjun actually went to his local climbing gym to train today, but I preferred staying inside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! How is the knee feeling after those living room intervals? Still doing well?"
+    },
+    {
+      "speaker": "user",
+      "text": "It felt great, no pain at all! The physio really worked wonders. After that, I had to log on to do some coding for a Sunday deployment. The silver lining was having absolutely zero travel time today—I didn't have to step foot outside or deal with transit at all, whereas my coworker Dana mentioned she had to drive all the way into her office today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a huge relief about your knee! And yes, skipping transit is always a win, especially for a weekend shift. Did you have any music playing to keep you focused while you coded?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely. I was streaming those retro-futuristic electronic beats on loop—you know, the driving, instrumental synthesizer tracks that feel like they're straight out of a 1980s sci-fi film. Arjun, on the other hand, was listening to opera in the kitchen, so I had to close my door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, synthwave vs. opera is quite the clash of genres! Did you or Arjun manage to take Biscuit out for some fresh air today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Arjun took him out to the park for a long run earlier. For dinner, I just reheated the remaining portions of the fish tacos we made last night. Arjun wasn't in the mood for them and ordered some sushi instead, but I hate wasting food!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reheated fish tacos sound delicious, and it's always good to clear out the fridge. Are you planning on winding down with one of your library thrillers before bed?"
+    },
+    {
+      "speaker": "user",
+      "text": "Normally yes, but I'm doing something different tonight. I'm actually flipping through a glossy monthly publication with various lifestyle articles that I picked up from the waiting room at the dentist's office on Friday. Arjun is sticking to his usual biography, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a glossy periodical is a nice, relaxing shift. You'll probably be asleep by your usual 11 PM, then?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, tonight is another exception! I'm going to be staying awake until about two hours past midnight because a close friend of mine is having a late-night birthday gathering. Arjun decided to turn in early at 10 PM because he's exhausted from his workout, but I'm determined to go and celebrate."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A late-night birthday party sounds like fun! Have a wonderful time celebrating, even if it means a slow start tomorrow. Let me know how it goes!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I will definitely need a big cup of coffee tomorrow morning. Talk to you then!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "home HIIT workout",
+      "commute": "no commute",
+      "dinner": "leftovers",
+      "music": "synthwave playlists",
+      "reading": "a magazine",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'"
+  ]
+}

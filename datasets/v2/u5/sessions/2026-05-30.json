@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 91,
+  "date": "2026-05-30",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Saturday going over in Pittsburgh? Did you get a chance to play some piano or head over to the bouldering gym today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a really nice, relaxing Saturday so far. I actually didn't have to travel to an office or do any commuting today, which was a fantastic change of pace. Instead, I kicked off my morning by going for a really long jog around the neighborhood. My coworker Dana, who is training for that triathlon, did a cycling session today, but I preferred just hitting the pavement."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A long jog sounds like a wonderful way to start the weekend, and skipping the commute is always a plus. Did you end up doing any coding or did you mostly focus on your hobbies today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did end up wrapping up some light work. While I was at my desk, I had some classic jazz vinyl playing in the background to help me focus. My sister Meera told me she was listening to upbeat synth-pop while unpacking her new place in Seattle today, but jazz is much more my speed when I need to concentrate."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Jazz vinyl is perfect for background focus! I hope Meera is settling in well. Did you do anything fun for dinner after getting that work done?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I met up with a few friends for dinner. Since I'm pescatarian, we chose a great local seafood spot. My friends all ordered steak, but I had an amazing grilled salmon. It was nice to catch up with everyone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious meal and a great way to spend the evening. Did you do any reading or wind down with a book after you got home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! When I got back, I spent some time reading a non-fiction book about the Roman Empire. My sister Meera mentioned she is currently reading a sci-fi novel, but I always prefer diving into real historical events."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Diving into Roman history is a great way to wind down. Did you manage to get a good night's sleep after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually stayed up quite a bit later than usual. I ended up putting on a movie that ran late and didn't close my eyes until half past one in the morning. Normally I try to turn in around one, but this was a one-off exception because the film was so engaging."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a great movie is worth staying up for! What film did you end up watching?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was an old thriller from the 90s that a coworker had recommended. It definitely kept me on the edge of my seat!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "long run",
+      "commute": "no commute",
+      "dinner": "dinner with friends",
+      "music": "jazz vinyl",
+      "reading": "history nonfiction",
+      "bedtime": "1:30 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'",
+    "invention: friend Sarah",
+    "invention: owns a turntable"
+  ]
+}

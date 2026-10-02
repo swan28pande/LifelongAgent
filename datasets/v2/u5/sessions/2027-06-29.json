@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 486,
+  "date": "2027-06-29",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Tuesday been going so far? How is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Biscuit is doing great, just sleeping by my desk. My workday was a bit different today. Normally when I'm coding, I spin some of my favorite jazz vinyl records in the background, but today I did something else because a friend highly recommended a specific episode of this narrated audio series about an unsolved historical murder case. So I ended up listening to that instead! Arjun was working nearby and sticking to his usual synthwave music, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a mystery episode! That sounds like an engaging change of pace. Did the story keep you hooked while you were working?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really did! It was super spooky but definitely kept my brain active during some of the more repetitive backend engineering tasks I had to get through today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice when a recommendation hits the mark like that. Are you planning on winding down with anything else interesting this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes. For my relaxing time tonight, I'm going to have a professional narrator read a novel to me through my headphones while I lay back and close my eyes. Arjun is currently reading a traditional physical paperback book on the couch, but I really prefer just listening to the narration tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing, especially after a busy day of coding. It's the perfect way to rest your eyes."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm hoping it helps me drift off easily, because I want to make sure my lights are turned off and I'm fully asleep exactly an hour before midnight tonight. Arjun already headed off to sleep much earlier, around ten, but that later time is my target."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Setting a specific target like that is a great way to make sure you get enough rest. Speaking of recovery and rest, how has your knee been feeling lately? Since the physical therapist cleared you after your bouldering injury, have you felt completely back to normal?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! The knee feels incredibly stable and there's no pain at all anymore. I'm really glad the recovery went so smoothly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful to hear! I'm so glad you're fully recovered. Well, I will let you get to your listening so you can hit your sleep goal right on time tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Sleep well, and I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "true-crime podcast",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "invention: plans to visit her sister Meera in Seattle"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 519,
+  "date": "2027-08-01",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Sunday. How has your weekend been going over in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's been a really nice, relaxing weekend. The weather has been beautiful, so Biscuit and I spent some time relaxing on the patio earlier today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Biscuit always loves a good patio lounge. How is Arjun doing? Has he been getting much use out of his new bike lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "He is doing great! Yes, he actually went out for a ride on the new bike lanes nearby earlier today. He's absolutely loving it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear! It's great that the city put those lanes in. Do you have any relaxing plans for the rest of your Sunday evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! I'm planning to catch up on some reading for my neighborhood book club. Tonight, I decided to listen to a narrator read the novel to me through my headphones while I folded some laundry. I find it really relaxing to have someone read the story aloud to me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very cozy way to get through your book club pick! Do you find that style of consuming books helps you multi-task, or do you just enjoy the performance?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! It's nice to keep my hands free. Arjun is the complete opposite, though—he absolutely insists on holding a physical paper book and flipping the pages himself. He was sitting right next to me on the couch reading a hardcover."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's funny how everyone has their own distinct preference for how they like to experience a story! Speaking of books, have you been using your Carnegie Library card to find these, or did you find a new favorite bookstore since the old one announced its closure?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've actually been using my Carnegie Library card a lot more lately. Their digital catalog has been a lifesaver for finding these narrated recordings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That library card was a great investment! It's wonderful that they have such a good digital selection. On another note, how are things going at your new climate-tech company? Are you settling well into the engineering manager role?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been going really well, thanks for asking! It's a big shift from the hands-on coding I was doing at the fintech startup, but leading the engineering team has been incredibly rewarding. I'm really glad I accepted the offer."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that, Priya. It sounds like a fantastic step forward in your career, and the climate-tech space is so important. I hope you have a wonderful and relaxing rest of your evening with your book!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm going to get back to my chapter now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

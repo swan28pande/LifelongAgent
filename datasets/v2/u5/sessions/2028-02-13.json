@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 715,
+  "date": "2028-02-13",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Priya! How is your Sunday going over in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi there! It's been a lovely, quiet Sunday. Biscuit is napping right next to me, and Mochi is watching the birds from the window. I've just been catching up on a few light work tasks this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. Do you usually have something playing in the background when you're focusing on work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! Today I actually dusted off the turntable Arjun gifted me and spent the morning playing some of those vintage analog discs. There's a really comforting warmth to physical wax spinning. Arjun, on the other hand, was perfectly happy just streaming a synthwave station on his noise-canceling headphones."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Spinning albums has such a distinct, cozy sound. It's nice that you're putting that gift to good use! Speaking of Arjun, how is he doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! He's actually been obsessing over his new bike. Right now, he's totally engrossed in a technical maintenance manual he bought for it. For my own evening reading, though, I'm about to dive back into the contemporary fiction pick we're discussing at my neighborhood literary gathering next week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's nice to have some dedicated reading time on a Sunday. How are you liking the neighborhood gathering's selection so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's really engaging! It's a multi-generational family drama, and the writing is beautiful. I'm hoping to finish a few more chapters before the weekend ends."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to wind down. Have you had a chance to catch up with your sister Meera in Seattle recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! We chatted on the phone yesterday, and she's loving her data science job there. She says the health-tech space is super exciting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear she's thriving in her new role and city. It sounds like both of you have found great communities."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. We both feel really lucky with how our moves turned out. Denver has been fantastic for Arjun and me."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "vinyl records",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

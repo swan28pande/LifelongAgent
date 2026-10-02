@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 460,
+  "date": "2027-06-03",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your Thursday going? Did you and Biscuit get up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. Biscuit has just been sleeping by my feet while I worked from our apartment today instead of heading into the office. Arjun, on the other hand, commuted to his workplace downtown on his new bike."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice when you can work from the apartment and keep Biscuit company! How is everything going with your backend engineering projects at the fintech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well, just a lot of complex database optimization today. To keep my focus, I had some vintage Miles Davis spinning on the record player in the living room. Arjun usually prefers listening to upbeat electronic playlists on his headphones when he's working, but the classic brass sounds really help me zone in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those classic brass records on the turntable are perfect for deep-focus coding sessions. It sounds like you had a very peaceful and productive setup today."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I even had time to prep a nice dinner. I made a big pot of homemade spiced chickpea and potato dish in a rich, aromatic coconut gravy that I simmered on the stove. Arjun wanted something different, so he actually ordered a cold noodle salad from the place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That homemade spiced gravy dish sounds absolutely mouth-watering! It's great that you could simmer that while working. Do you have any plans for how you'll spend your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, it turned out really comforting. Tonight, I'm planning to wind down by having a mystery novel read aloud to me through my earbuds while I rest my eyes. Arjun is doing the opposite—he's engrossed in a physical paperback book right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A narrator reading to you is such a relaxing way to end the day, especially to give your eyes a break from screens. Do you have a target time you're hoping to turn in tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm aiming to switch off the lights and go to sleep exactly an hour before midnight. Arjun is much more of a night owl and probably won't head to bed until past 1:00 AM."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep at that hour sounds like a perfect plan to wake up feeling refreshed. I hope you enjoy the rest of your story tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Have a good night, and I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "work from home",
+      "dinner": "home-cooked curry",
+      "music": "jazz vinyl",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'home-cooked curry', conversation gives 'other'"
+  ]
+}

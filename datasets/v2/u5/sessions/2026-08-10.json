@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 163,
+  "date": "2026-08-10",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday starting off? Did you and Arjun have a good weekend, and how is Biscuit doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Biscuit is doing great, we took him to the park yesterday and he had a blast. My Monday is going okay, just wading through a mountain of pull requests at the startup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear Biscuit is doing well! A mountain of pull requests sounds like a busy start to the week. Are you still sticking to your pescatarian meals to keep your energy up during these busy days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, definitely. I had some grilled salmon and roasted veggies yesterday, and I brought some leftover shrimp for lunch today. Keeping up with my pescatarian eating definitely helps me stay focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! It's great when your meals align so well with a busy schedule. How are things going with your sister Meera in Seattle? Have you two caught up recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually chatted yesterday! She's settling into her new place and loving the Seattle vibe, though she's still unpacking boxes. She mentioned she spent yesterday evening reading biographies she bought, which is so different from what I'm doing tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, interesting! What do you have planned for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, remember that card I got for the Carnegie Library? I used it to get some incredibly tense, fast-paced suspense novels, and I'm spending my evening reading one of them tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, suspense novels from the Carnegie Library! There's nothing quite like a gripping page-turner to capture your attention. Have you found any specific authors you really like?"
+    },
+    {
+      "speaker": "user",
+      "text": "I found this one local Pittsburgh author who writes psychological mysteries set in the Rust Belt. It's so eerie but so good. Arjun actually chose to read a historical non-fiction book tonight, so we're a pretty funny pair sitting on the couch together with our completely different books."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy scene, even with the contrasting genres! It's always fun when a book is set in your own city too. It must make those mysteries feel even more vivid."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, it makes walking around the neighborhood a little more exciting! Anyway, I should probably get back to these backend APIs before my afternoon meeting. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the APIs and your meeting, Priya! Have a wonderful rest of your day, and enjoy your reading tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "library thrillers",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'other'"
+  ]
+}

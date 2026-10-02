@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 479,
+  "date": "2027-06-22",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Tuesday been going over in Denver? How is everything at the fintech startup today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was a pretty productive day. I spent most of it writing backend code. I had some vintage 1950s bebop records playing in the background while I worked to keep me focused. My coworker Dana mentioned she was listening to high-energy techno for her coding tasks today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Bebop sounds like a great soundtrack for getting into a flow state! How is your knee feeling today? Did you manage to get any movement in?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels really stable! I didn't do anything too intense today, just took Biscuit out for his usual early stroll around the neighborhood to get our legs moving. Dana, on the other hand, did a grueling swim session this morning for her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear your knee is holding up well and that Biscuit got some fresh air. Are you planning a nice vegetarian dinner tonight to wind down?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I simmered a big pot of brown lentils with some carrots and spices for dinner tonight. It's so comforting. Arjun actually decided to grab a cheese slice from the pizza place down the street instead of eating with me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That soup sounds delicious and perfect for a cozy Tuesday. How are things going with Arjun? Any plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things are good! We're just relaxing now. I'm aiming to have my bedroom lights switched off right at eleven tonight. Arjun mentioned he's going to head to sleep even earlier, around ten, since he has a very early meeting tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a peaceful way to wrap up the day. Do you think you'll try some light trail running or bouldering later this week now that your knee is cleared?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely hoping to get back out on the trails this weekend for a short, easy run. I'm taking it very slow, but I'm excited to get back out there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Easing back into trail running is definitely the way to go. I'll let you get ready for sleep so you can hit your target tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "lentil soup",
+      "music": "jazz vinyl",
+      "reading": "not mentioned",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user owns a turntable.",
+    "invention: Arjun is a night owl."
+  ]
+}

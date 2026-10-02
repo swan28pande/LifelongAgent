@@ -1,0 +1,88 @@
+{
+  "user_id": "u5",
+  "day": 100,
+  "date": "2026-06-08",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Monday been going over in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a busy day of coding at the startup, but I'm finally winding down. I actually just finished making dinner. I took some fresh snap peas, bell peppers, and shrimp, and tossed them rapidly in a sizzling wok with some ginger and soy sauce. My sister Meera called from Seattle earlier and said she just ordered a pepperoni pizza because she didn't feel like cooking tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious, quick meal! How is Meera liking Seattle so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's settling in really well! As for my evening plans, I'm about to start reading. I've been looking forward to this book about a human crew trying to survive on a colony ship heading to a distant galaxy in the far future. Dana mentioned today that she's currently reading a massive historical biography about a British monarch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That speculative space story sounds like the perfect escape for a Monday evening. Speaking of relaxing nights in, how is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! He's actually curled up right next to my feet on the rug, snoring away. He's been very sleepy today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A snoring dog is the ultimate cozy vibe. Do you have a specific time you're hoping to turn in tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm planning to switch off my bedside lamp and close my eyes at exactly half past ten tonight. Meera was telling me she's been staying up until almost one in the morning lately, but I definitely need my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very healthy goal to keep your energy up for the week. Have you had any time for your pottery lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually spent some time at the studio yesterday. I glazed a small clay bowl with a nice forest green color, and it should go into the kiln soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds lovely! I can't wait to hear how the green glaze turns out once it's fired."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Well, I should head off to get some chapters read so I can stick to my sleep target. Talk to you tomorrow!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great read and a restful sleep, Priya. I'll chat with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "stir-fry",
+      "music": "not mentioned",
+      "reading": "sci-fi novel",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: dinner should be 'stir-fry', conversation gives 'veggie stir-fry'"
+  ]
+}

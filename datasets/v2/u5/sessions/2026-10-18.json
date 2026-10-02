@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 232,
+  "date": "2026-10-18",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Sunday going in Pittsburgh? I hope you and Biscuit are having a relaxing weekend."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! We're having a really nice, quiet Sunday. I'm actually giving my body a full break from any physical exercise today, just letting my muscles recover. Arjun, on the other hand, went out for a grueling five-mile run in the park."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A rest day sounds well-deserved, especially since your knee has been feeling better lately. It's good to let yourself recharge while Arjun tackles his run. What have you been up to instead of working out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just catching up on some personal admin and organizing my digital files. Since it's the weekend, I didn't have any kind of travel to or from a workplace today, which is always a relief. My coworker Dana wasn't as lucky—she actually had to travel all the way to the office for some server maintenance today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's tough for Dana, but I'm glad you got to completely skip any workplace transit today. Having a quiet day at your own desk can be so peaceful. Are you listening to any music while you organize your files?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I've got some retro electronic instrumentals with that 80s neon vibe playing in the background. It's the same kind of energetic sound from that live show Arjun and I went to. My sister Meera says she can only focus with classical music playing, but this high-energy beat keeps me moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, some energetic synthwave sounds perfect for getting through admin tasks! It's great that those beats keep you focused. How is the piano practice going lately? Have you had a chance to play today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did sit down at the keys for about twenty minutes earlier to practice a new chord progression. It felt really good. I'm trying to balance my hobbies, so tomorrow I'll probably get back to bouldering now that my knee is fully cleared."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Getting back to the climbing wall will be exciting, and I'm glad you're easing back into it. Since tomorrow is a weekday, do you have a specific time you're hoping to wind down tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I want to make sure I'm fully rested, so my goal is to turn off the lights and go to sleep exactly at half past eleven tonight. Arjun will probably stay up until 1 AM playing video games, but I need to stick to my schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Setting that limit is a smart move, especially with work tomorrow. I hope you get a great night's sleep at half past eleven! Is there anything else on your mind today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, that's about it. Just going to hang out with Biscuit and enjoy the rest of the evening. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "rest day",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'"
+  ]
+}

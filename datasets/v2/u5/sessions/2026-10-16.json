@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 230,
+  "date": "2026-10-16",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Priya! Happy Friday. How is your day going in Pittsburgh? How is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, it's a great Friday. Biscuit is doing wonderful. Actually, we got some exercise together early today—we just did our usual stroll around the block first thing this morning before I logged on. My coworker Dana did a rigorous swim session for her triathlon training, but a simple walk with my lab was plenty for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to the day. It's great that your knee is fully recovered enough to enjoy those morning walks with him. Did you notice the new bike lanes they just added near your apartment?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I did! It's great to see the city adding those. By the way, I got some exciting news from my sister Meera! She just started her new role as a data scientist at a health-tech firm out in Seattle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's fantastic news! A data scientist at a health-tech company sounds like a perfect fit for her. How is she settling into Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's loving it so far! She's actually reading a sci-fi novel to wind down tonight, whereas I'm planning to dive into a volume of beautiful lyric verses and stanzas I picked up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Poetry sounds like a very peaceful way to spend your Friday evening. Did you get that collection from the Carnegie Library?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did indeed! I'm so glad I got that library card. I'll probably be reading it quite late tonight, though. I'm actually planning to stay up until half past one in the morning because Arjun and I are going to watch a late-night film. It's a total exception to my usual half-past-ten bedtime! Arjun will probably pass out much earlier, around ten as usual, but I'm committed to the movie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A late-night movie sounds like a fun Friday treat, even if it means a 1:30 AM bedtime! What kind of music did you listen to while coding today to keep your energy up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was blasting those retro-futuristic, 80s-inspired electronic instrumentals all afternoon to keep me focused on my backend tasks. It was perfect coding music. Arjun was actually listening to smooth acoustic jazz all day, which would have put me to sleep!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, synthwave-style beats are perfect for getting into the programming zone, especially after that concert you both saw! Sounds like a great mix of productivity, family news, and a fun late-night plan."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, it's been a really solid Friday. Ready to ease into the weekend now!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "poetry collections",
+      "bedtime": "1:30 am"
+    },
+    "statements": {
+      "other.meera.1": true,
+      "distractor2": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 13,
+  "date": "2026-03-13",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Priya! How is everything going in Pittsburgh? Have you had a good week at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty intense week with some backend deployments, to be honest. I'm glad it's finally the weekend, but I am absolutely wiped out tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine, those deployments take a lot out of you. Being on your own, sometimes the last thing you want to do after a week like that is figure out what to cook. Are you planning on just relaxing tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. Normally on Fridays I treat myself by getting a hot, cheesy baked pie sliced into triangles delivered to my place, but tonight I didn't even want that. I was so exhausted from this week that I had zero energy to stand at the stove and cook, so I opted for a massive, foil-wrapped flour cylinder stuffed with seasoned rice, black beans, and salsa from the spot down the street instead. My coworker ended up getting a bowl of ramen, but this heavy hand-held Mexican wrap was exactly the comfort food I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and very well-deserved. There's nothing quite like a giant, warm wrap to help you unwind after a long week. Are you just planning to have a quiet night in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, definitely. Just going to sit on the couch and maybe play a little bit of piano later if I find the energy, but mostly just zoning out. It's nice to have absolutely nothing on the agenda."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing the piano sounds like a lovely, low-key way to spend the evening. Do you have any plans for the rest of the weekend, or are you keeping it completely open?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might sleep in tomorrow and do some chores around the apartment, but I haven't made any concrete plans. I'm quite content just taking things day by day right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the best way to do it. No pressure, just doing whatever you feel like in the moment. How has the weather been in Pittsburgh lately? Is it starting to feel a bit more like spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's still pretty chilly and grey, honestly. Classic Pittsburgh March weather! But hopefully, we'll get some sunshine soon. It makes a big difference."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, absolutely, a little sunshine goes a long way. Well, I hope you enjoy your warm dinner and get plenty of rest tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm about to dig in now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "takeout burrito",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "invention: has a colleague named Sarah"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 387,
+  "date": "2027-03-22",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Monday been? Did you and Biscuit get any good outdoor time today, or are you focusing on preparing for the big April half marathon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Biscuit got a short walk, but I actually got a great workout in myself. I did some running on the unpaved dirt paths up in the foothills this morning to get my feet used to the uneven terrain. My coworker Dana did a swim session at her local pool today instead as part of her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like excellent prep for the half marathon! How was the commute into the office after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was really smooth. I caught the electric commuter train that runs on the street tracks right into the office today. Arjun actually rode his new bike to work using those new lanes. While I was at my desk, I had those retro-80s electronic beats looping in my headphones to keep me focused. Arjun told me he listened to a sports podcast while he worked today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That music sounds perfect for getting into the zone. How is everything going with your backend engineering work at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy but good! We're refactoring some legacy database queries today, so having that retro synth-heavy instrumental soundtrack really helped me power through. I feel like I got a ton done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job! You definitely earned a relaxing evening. What are you and Arjun planning for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We ended up cooking from one of those subscription boxes where they send the pre-portioned ingredients and a recipe card. It was a really nice pescatarian flatbread. My sister Meera texted me that she just ordered Thai delivery tonight because she was too tired to cook after work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those subscription boxes are so convenient when you want a home-cooked meal without the grocery trip. Do you have any relaxing plans for the rest of the night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm going to spend some time reading the fiction selection chosen by our neighborhood group for our upcoming discussion. Arjun is reading a manual on bike maintenance right next to me, so it's a pretty quiet evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy. I hope it's a great book! Let me know if you need any help looking up details for your June trip to Italy with Arjun tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll definitely take you up on that soon. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "trail run",
+      "commute": "light rail",
+      "dinner": "meal-kit dinner",
+      "music": "synthwave playlists",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: exercise should be 'trail run', conversation gives 'long trail run'"
+  ]
+}

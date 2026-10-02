@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 32,
+  "date": "2026-04-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Priya! How's your Wednesday going over in Pittsburgh? Are you having a busy day at the fintech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. Work as a backend engineer has been busy but productive. I actually decided to use pedal power to get to the office this morning instead of taking transit. My coworker Sarah said she took the subway, but I really enjoyed cycling in today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the morning! Did it help you focus once you got to your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely did. To keep my momentum going, I've had some relaxing down-tempo instrumental study beats playing in my headphones while coding. A colleague of mine was blasting high-energy pop music, but these chill, wordless lo-fi tracks are much better for my concentration."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Lo-fi is perfect for getting into the zone. Do you have any plans to unwind after you wrap up work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm planning to lace up my running shoes and hit the pavement for some outdoor miles right around sunset. My friend Mark said he was heading to a spin class, but I really wanted to get an evening run in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An evening run sounds like a wonderful way to clear your head. What's on the agenda after you get back and shower?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm looking forward to reading a few chapters of a speculative fiction book set in a futuristic star system. My friend Jess is currently reading a biography, but I'm much more in the mood for a sci-fi novel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A sci-fi escape is always fun. Are you hoping to get an early night, or will you be staying up late to read?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm aiming to switch off my bedside lamp and go to sleep exactly halfway between eleven and midnight tonight. My friend mentioned they were staying up past 2 AM, but shutting my eyes at half past eleven should give me plenty of rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfectly balanced day. By the way, how has it been finding good pescatarian options around Pittsburgh lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been really great! There are quite a few wonderful seafood spots and vegetarian-friendly places around here, so keeping up with my pescatarian diet is very easy in the city."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "evening run",
+      "commute": "cycling",
+      "dinner": "not mentioned",
+      "music": "lo-fi beats",
+      "reading": "sci-fi novel",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a coworker named Dave",
+    "invention: has an officemate named Maya",
+    "invention: has a friend named Jess",
+    "invention: has a friend named Clara",
+    "invention: has a friend named Dan"
+  ]
+}

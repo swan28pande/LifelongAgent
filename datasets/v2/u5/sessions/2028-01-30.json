@@ -1,0 +1,89 @@
+{
+  "user_id": "u5",
+  "day": 701,
+  "date": "2028-01-30",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Sunday been going over in Denver? I hope you've had a relaxing weekend."
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a really nice Sunday. I actually got outdoors this morning and headed up into the foothills with that local walking club I joined. It was quite refreshing, though chilly! Arjun decided to do a solo trail run instead, but I really enjoyed the group setting today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to spend a Sunday morning! How did your knee feel during the trek? Has it been feeling fully recovered?"
+    },
+    {
+      "speaker": "user",
+      "text": "It felt completely fine, thankfully! No twinges or stiffness at all, even on the steeper climbs. The physio really sorted me out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic news! It must be such a relief to have that strength back. Did you have much else planned for the rest of the day, or perhaps some prep for your engineering manager role tomorrow?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I made sure to have absolutely zero travel for work today—no Sunday prep or commuting anywhere, just a complete rest from transit. Arjun had to briefly drive over to his office to grab a charger he left behind, but I stayed put at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A completely transit-free Sunday is always a win, especially when you have a busy week ahead. How have you been spending your afternoon and evening at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been very low-key. I've been winding down by flipping through the fictional story we're assigned to read for my neighborhood literary circle's next meeting. Arjun is currently flipping through a cycling magazine next to me, so we're both just relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet reading evening sounds perfect. How is the book club's current selection turning out? Is it a hit with you so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is! It's a really gripping historical drama. I'm glad we picked it. The characters are so well-developed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I love when a book really captures your attention like that. Are you hoping to get a few more chapters in before you sleep?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a couple more, because I'm planning on switching my lamp off and going to sleep right at half past ten tonight. Arjun will probably stay up past midnight watching videos, but I want to get a solid night's rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very smart plan to set yourself up for a productive Monday. Enjoy the rest of your book, and sleep well when the time comes!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

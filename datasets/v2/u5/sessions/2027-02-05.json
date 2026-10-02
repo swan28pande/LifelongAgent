@@ -1,0 +1,95 @@
+{
+  "user_id": "u5",
+  "day": 342,
+  "date": "2027-02-05",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your day been going so far in Denver? How is Biscuit doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a good day. Biscuit is doing great, just sleeping by my desk. I actually opted for a different commute today—I took the electric transit train that runs on tracks through the city to get to work. Arjun decided to ride his bicycle, but I wanted to just sit and relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, peaceful way to start your Friday. It's great to have that transit option handy. Did you get some reading done on the train?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! It was a very smooth ride. Oh, and I wanted to let you know that on Wednesday, I officially registered for the Denver half marathon in April."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's fantastic news! Registering for the Denver half marathon in April is a huge milestone. How are you feeling about taking that on?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm really excited! Since my physio cleared my knee for normal activity, I've been looking forward to getting back into longer distances. I think it'll be a lot of fun."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely will be, and it's wonderful to hear your knee is feeling strong enough for it. Are you planning on doing some of your prep on your usual trail running routes around the area?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I definitely want to spend some time on the trails once the weather is nice. But tonight is all about unwinding. I've got a pile of those illustrated books with panels and dialogue bubbles to read. Arjun is reading a massive historical biography, but I wanted something highly visual."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those illustrated story volumes are perfect for a Friday night unwind. Are you starting a new series or catching up on an ongoing one?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm starting a new sci-fi series. My plan is to get through at least one volume before I shut my eyes at exactly an hour before midnight. Arjun will probably stay up until 1 AM playing video games, but I want to be fast asleep right at 23:00."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to bed by eleven is a great way to make sure you wake up feeling refreshed on Saturday. Are you planning to do any bouldering or piano playing this weekend as well?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually want to sit down at the piano for a little bit this evening before I start reading. I always find it relaxing to sit at the keyboard after a busy week of coding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Playing is such a wonderful transition into the weekend. What kind of pieces are you hoping to practice tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some classical preludes I know by heart. Nothing too intense, just enjoying the piano. Anyway, I think I'll head offline now and get my evening started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the piano, your books, and have a wonderful, restful sleep tonight! Talk to you soon, Priya."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "light rail",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "graphic novels",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {
+      "half_marathon.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

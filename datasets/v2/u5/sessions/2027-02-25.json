@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 362,
+  "date": "2027-02-25",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Thursday going at the fintech startup? I hope you and Biscuit are having a good day."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a super busy coding day today. I've had to really lock in, so I've been powering through my backend tasks while listening to those nostalgic, neon-soaked retro-futuristic synthesizer tracks—you know, the style from that live 1980s revival show Arjun and I went to. It really helps me focus. My coworker Dana mentioned she was listening to classical concertos today to focus, but that would just put me to sleep!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, classical is definitely a different vibe! It sounds like those synth beats are the perfect soundtrack for getting into the coding flow. Are you still enjoying your piano practice in your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I actually sat down at the keys yesterday and tried to figure out the melody of one of those electronic tracks by ear. It's a fun challenge to translate synthesizer sounds to acoustic piano."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a brilliant way to blend your music tastes! It must feel great to challenge yourself like that. How have things been on the food front lately? Are you finding some good pescatarian options around your neighborhood in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, really good! We actually tried that new ramen place that opened on our street. They have an amazing spicy miso broth with tofu and soft-boiled egg that fits my pescatarian diet perfectly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds absolutely delicious! I'm glad you've got such a great spot right on your street. Have you heard from your sister Meera recently? How is she settling into Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did talk to her a couple of days ago! She's really liking Seattle so far. Her new data science role at the health-tech company is keeping her busy, but she's enjoying exploring the city."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It sounds like she's making a great start there. How is Biscuit doing? Has he had any playdates with Dana's beagle, Pepper?"
+    },
+    {
+      "speaker": "user",
+      "text": "Biscuit is doing great, just snoozing next to my desk right now. No playdates with Pepper yet, but Dana and I were talking about planning one soon, maybe near the new bike lanes the city put in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That would be lovely! It's great to have those new bike lanes nearby. I hope you have a relaxing rest of your Thursday, Priya."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to wrap up this coding block and head offline. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'other'"
+  ]
+}

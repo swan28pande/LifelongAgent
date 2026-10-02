@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 448,
+  "date": "2027-05-22",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your Saturday going? Are you getting some time to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been okay, though I did have to log on today to finish up some backend tasks for the fintech startup. To keep my focus, I had those high-tempo, retro 80s synthesizer tracks playing in my headphones—you know, that futuristic electronic music style we saw live a while back. Arjun was listening to some acoustic blues in the kitchen, but I definitely needed that electronic drive to get through the work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That synth music is perfect for coding! I'm glad it helped you focus on those backend tasks. Did you manage to get everything wrapped up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, fortunately. Though while I was taking a short break, I saw some really sad news online. My absolute favorite local bookstore here in Denver announced they're closing down. I'm honestly so bummed about it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that's terrible! Having a favorite local spot close is always tough, especially when you've been building your routine there. I hope you get a chance to visit them before they close."
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely will. In the meantime, I'm planning to spend my evening diving into the current selection for my neighborhood literary group. Arjun is reading a biography about a professional cyclist tonight, but I'm sticking with our group's assigned fiction novel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing way to spend a Saturday evening. How are you liking the neighborhood book club's choice so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's quite good, actually! It's a mystery, which isn't what I usually pick up, but the group discussion next week should be really interesting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great that the book club is introducing you to some new genres. Since you're in Denver now, how is everything going with Arjun? Is he settling in well too?"
+    },
+    {
+      "speaker": "user",
+      "text": "He is! He's actually been exploring the area on his new bike quite a bit. It's been great for him, and living together here has been wonderful."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. And how is Biscuit doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Biscuit is doing great! He's currently curled up right next to me on the couch while I get ready to read. He loves having us both around so much."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "distractor5": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'",
+    "statement_missing: distractor5 (her favorite bookstore announced it is closing (this happened on 2027-05-19))"
+  ]
+}

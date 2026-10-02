@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 267,
+  "date": "2026-11-22",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Sunday going? Did you and Arjun get up to anything fun this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty quiet Sunday. I actually had to log in to handle a quick server emergency for the startup, but thankfully I had zero travel to or from any office today. On the other hand, Arjun actually had to drive all the way to his workplace to finish up a project."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, a weekend server issue! At least you saved time by not having to travel. Did you put on some music to help you focus while you sorted out the emergency?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on some retro-futuristic electronic tracks with heavy 80s-style synthesizers to keep my energy up. Arjun told me he was listening to smooth jazz during his own work hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Synth-heavy tracks are great for coding focus! Did you get the issue resolved? And what are the plans for dinner after a busy Sunday afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, everything is back online! For dinner, I'm just warming up the remaining portions of the fish pie we made yesterday. Arjun decided to grab a fresh hot burger on his way back, so we're doing our own thing tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad the servers are happy again, and a quick reheated fish pie sounds like the perfect low-effort dinner. Are you planning to just relax for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I'm going to wind down by reading some anthologies of verse I picked up from the Carnegie library. My sister Meera texted me that she's reading a new sci-fi novel tonight, but I'm in the mood for these shorter, rhythmic stanzas."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Poetry sounds lovely and peaceful for a Sunday night. How is Meera doing out in Seattle, by the way? Is she settling into her data science role?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well! She loves the work, though she's still getting used to the rainy Pacific Northwest weather. We actually talked about how she's trying to find a good local fish market, which reminded me to stick to my pescatarian routine and buy some fresh salmon for later this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear! Seattle definitely has some amazing seafood markets, so I'm sure she'll find a favorite spot soon. Enjoy that salmon later this week, and hopefully your evening of reading is nice and peaceful."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to get cozy on the couch with Biscuit now and start reading. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "leftovers",
+      "music": "synthwave playlists",
+      "reading": "poetry collections",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: music should be 'synthwave playlists', conversation gives 'missing'",
+    "pref_absent: reading should be 'poetry collections', conversation gives 'missing'"
+  ]
+}

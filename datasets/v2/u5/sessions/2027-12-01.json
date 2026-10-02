@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 641,
+  "date": "2027-12-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Priya! How is your Wednesday going? How are things at the climate-tech company today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a busy day, but a good one. I actually started my morning getting some fresh air and movement. Before the sun was fully up, I took Biscuit out for a nice, long stroll around the neighborhood blocks. It felt great to get a little physical activity in before sitting at my desk. My coworker Dana said she took Pepper for a fast-paced run today, but a peaceful, slow walk with my labrador was exactly what I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful way to start the morning. Biscuit must have loved having that quiet time with you! How are things going with Arjun and your life in Denver lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Everything is wonderful. Arjun actually rode his brand-new bicycle to his office today to get some fresh air. As for me, I opted to ride the local public transit coach that stops right near our apartment building to make my way to work today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Using the public transit system is a great way to get around the city. How is your role as engineering manager going? Are you still in the middle of that on-call rotation for the product launch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we are still actively in the rotation, which definitely keeps things lively! Managing the engineering team through this launch is a lot of work, but everyone is pulling together really well, so it's rewarding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you're handling the balancing act incredibly well. I hope you're able to find some time to relax tonight. Do you and Arjun have any nice dinner plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do, we actually just finished eating! Arjun originally wanted to get takeout from the new ramen spot down the street, but we ended up making dinner together at home instead. We warmed up some corn tortillas and filled them with seasoned dark legumes, fresh avocado, and salsa. They were so flavorful and satisfying."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! There is nothing quite like a home-cooked Mexican-style meal. Did Mochi or Biscuit try to convince you to share any of it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, of course! Mochi was lingering on the edge of the kitchen counter hoping we'd drop some toppings, and Biscuit was sitting right under the table like a vacuum cleaner. But they both had to stick to their own food tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "They certainly know how to look hopeful! It sounds like a very cozy evening. Do you have any plans to get out for some bouldering or trail running this coming weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely hoping to. Since the physical therapist cleared my knee for normal activity, I've been feeling great. I might head to the climbing gym on Saturday, or maybe meet up with the weekend hiking group if the Denver weather stays nice. It's just wonderful to have those options back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. I'm so glad your knee is feeling strong again and that you're back to doing what you love. Have a wonderful rest of your evening, Priya!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "bus",
+      "dinner": "black bean tacos",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

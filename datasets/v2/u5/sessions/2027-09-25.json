@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 574,
+  "date": "2027-09-25",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Priya! How is your weekend starting off in Denver? Did you get to enjoy any of the nice weather outdoors today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a great Saturday. I actually met up with that outdoor club I joined a while back to hit the trails together in the mountains today. It was a wonderful way to get some fresh air and exercise. Arjun decided to skip it and did a solo ride on his new road bike instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect mountain day! How did your knee hold up during the trek? It's great that you're able to get back out there with a group."
+    },
+    {
+      "speaker": "user",
+      "text": "The knee felt really solid, thanks for asking! The physio's exercises have made a huge difference. Since it's Saturday, I was just glad I didn't have to deal with any travel or transit to get to an office today. My coworker Dana, on the other hand, had a long commute all the way across town early this morning for her triathlon training group."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Avoiding any sort of transit on the weekend is a major win. Speaking of work, have you been able to completely unplug, or did you have to log on for a bit?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did have to sit down for a couple of hours to catch up on some team documentation. To help me focus, I put on some of those electronic retro-futuristic 80s synth tracks we've talked about before. It's funny because my sister Meera says she can only listen to pure classical compositions when she's working on her data science projects."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those synth tracks are great for getting into a flow state! I'm glad they helped you breeze through the paperwork. What are your plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Arjun and I are planning to prepare a homemade meal from scratch in our kitchen together tonight. Dana told me she is just ordering takeout for herself, but Arjun and I are looking forward to collaborating on our own dish."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely way to spend the evening. Cooking together is always such a nice bonding experience. Do you have any relaxing plans after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I think I'm going to wind down by listening to a narrator read a novel through my headphones while I lounge on the couch. Meera always tells me she can only focus on traditional paperbacks, but I really enjoy this format when I want to relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Audiobooks are wonderful for resting your eyes after looking at a screen! I hope you have a wonderfully relaxing evening with Arjun and Biscuit."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yes, Biscuit is already curled up on the rug waiting for us to start dinner. Have a great night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "no commute",
+      "dinner": "cooking with Arjun",
+      "music": "synthwave playlists",
+      "reading": "audiobooks",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'cooking with Arjun', conversation gives 'veggie stir-fry'"
+  ]
+}

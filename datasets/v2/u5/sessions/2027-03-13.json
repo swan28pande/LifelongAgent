@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 378,
+  "date": "2027-03-13",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Saturday going in Denver? Are you getting some rest, or maybe getting ready for the half marathon in April?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Saturday is going well. I had to finish up a quick backend engineering task today, but thankfully I had absolutely no work-related transit or travel at all. My coworker Dana actually had to drive all the way to the office for a system check, but I got to avoid any travel entirely today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relief to avoid the weekend traffic. Did you have any music to keep you company while you worked on that backend task?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I put on the high-tempo audio tracks I usually listen to when I'm out pacing the trails. My sister Meera says she prefers absolute silence when she's analyzing data in Seattle, but those upbeat trail-pacing selections really help me focus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those high-energy tracks are great for staying in the zone! How are plans looking for dinner tonight with Arjun?"
+    },
+    {
+      "speaker": "user",
+      "text": "Dinner was actually really easy. I prepared one of those pre-portioned, boxed recipe meals that we get delivered weekly. Arjun actually ended up grabbing some takeout noodles from the new place down the street, but I stuck to our subscription recipe box since it has great pescatarian options."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That subscription box sounds super convenient, especially for keeping up with your pescatarian meals. What are you up to for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm about to do some reading. Though tonight is a bit of an exception—instead of cracking open the fictional book for my neighborhood literary circle, I'm actually flipping through a glossy lifestyle periodical I swiped from the dental hygiene clinic waiting room earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a dental clinic find! What caught your eye in that periodical that made you put down the literary circle's book tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "There was this really fascinating article about historic architecture in Colorado that I started reading while waiting for my appointment. I just wanted to finish it tonight, so it's a total one-off detour before I get back to our regular group novel tomorrow. Arjun is actually reading a history biography on his tablet, so we're just having a quiet reading night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Historic Colorado architecture sounds like a great read, especially since you've been settling into Denver! How are you liking the city lately, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm absolutely loving Denver. Having the mountains so close is incredible, and the local community has been so welcoming. It really feels like home now."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "meal-kit dinner",
+      "music": "running playlists",
+      "reading": "a magazine",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 596,
+  "date": "2027-10-17",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Sunday going in Denver? Did those upstairs neighbors and their loud puppy let you get some peace today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's actually been a really nice, quiet Sunday. The puppy upstairs was surprisingly quiet this morning, so Biscuit and I just hung out in the backyard while it was sunny."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. It's always nice when the weekends are actually relaxing. What are you planning for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm just going to reheat the extra portions of the vegetarian chili we made a couple of nights ago. Arjun wasn't feeling like having food from the fridge again, so he decided to grab some takeout from that new ramen place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, convenient! A warm bowl of ramen sounds perfect for a cool evening, but a good chili is hard to beat. How has Arjun liked that new spot?"
+    },
+    {
+      "speaker": "user",
+      "text": "He really likes it! I need to try their veggie broth sometime. On a sadder note, we heard today that our favorite local bookstore is closing down soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that is terrible news. It's always heartbreaking to lose a beloved neighborhood bookstore. Do you think you'll do some reading tonight to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm planning to turn on my digital screen device and dive back into that massive multi-volume saga about ancient sorcerers and magic kingdoms. Arjun is actually reading a paperback thriller tonight instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to spend the evening. How far along are you in that epic saga?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm about halfway through the third book. The world-building is incredible, and having it all on that lightweight screen is so convenient compared to carrying a huge book around."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a game-changer, especially for those thick fantasy volumes! How is Biscuit doing this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great, currently curled up right next to me on the rug. It's been a very cozy Sunday."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "leftovers",
+      "music": "not mentioned",
+      "reading": "e-reader fantasy series",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'long walk'"
+  ]
+}

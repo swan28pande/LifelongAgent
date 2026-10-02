@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 79,
+  "date": "2026-05-18",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Monday. How is your week starting off in Pittsburgh? Have you found any great new pescatarian spots lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I actually found a nice little seafood bistro near my office that has amazing grilled salmon. Aside from that, I changed up how I got to work today. Instead of my usual routine, I ended up using one of those public bikeshare rentals to pedal to the office. It was nice to be out in the morning air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds lovely! A two-wheeled commute is a great way to wake up. Did the weather cooperate for your ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did! It was a bit brisk but very clear. My coworker Dana, who is still training hard for her triathlon, actually commuted by riding her own road bike today as well, so we ran into each other at the office racks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a fun coincidence! How is Dana's triathlon training going overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing incredibly well. She actually did a long run this evening to get her miles in. As for me, I opted for a different kind of exercise after work. I went to do laps in the indoor pool, focusing on my breaststroke and freestyle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pool sessions are so refreshing, and they're fantastic for a full-body workout without the high impact. Did you get a good session in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I did about forty-five minutes of steady laps, and it felt amazing. It really helped clear my head after a busy day of backend coding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I imagine! It sounds like a highly active Monday for you. Are you planning on a relaxing evening to wind down?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely. I'm hoping to get a solid night's rest. I've set a goal to turn off the lights and go to sleep at exactly half past eleven tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a sensible time to wrap up the day, especially after all that physical activity. I hope you sleep well!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! My sister Meera actually told me she's trying to hit a 10:00 PM bedtime over in Seattle now, but half past eleven is much more realistic for me. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "swim",
+      "commute": "cycling",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: exercise should be 'swim', conversation gives 'swim at the community pool'",
+    "invention: Owns a bike (two-wheeler).",
+    "invention: Plans to go to the bouldering gym on Thursday evening."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 199,
+  "date": "2026-09-15",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Tuesday been going? How is your knee feeling today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty productive day. My knee is feeling okay, actually. I just finished up with those specific joint-strengthening movements and recovery stretches I've been doing since the injury. My coworker Dana did a grueling two-hour swim training session today, but I'm keeping things strictly low-impact with my recovery routine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible way to handle it. It's tough to hold back when others are doing intense workouts, but protecting that ligament is key. Did the exercises feel okay today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They did! No sharp pain, just a little bit of stiffness. I'm taking it slow. I mostly did them during a quick break from some heavy backend coding today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear they went smoothly. How are things going with work? Have you been able to spend any time playing the piano lately, or has the coding taken over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to sit down at the piano for about twenty minutes yesterday evening, which was a nice escape. Today has been mostly work and hanging out with Biscuit. He was very insistent on playing fetch in the hallway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, Biscuit always knows how to get your attention! It's good you got a little piano time in too. Are you planning a relaxing evening tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm aiming to be completely asleep by thirty minutes past ten tonight. Arjun said he's staying up until at least midnight to finish up a project, but I really need my rest, so I'm sticking to that half-past-ten schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. Sticking to a consistent sleep schedule is so important for recovery. Have you heard from your sister Meera recently? How is she liking Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we chatted briefly yesterday! She's really enjoying the Pacific Northwest, though she's still getting used to her new job's pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It's a big adjustment, but it sounds like she's handling it well. I'll let you get ready for your early night!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I'll head up soon so I can be asleep right at ten-thirty. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "physio exercises",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a physical therapist"
+  ]
+}

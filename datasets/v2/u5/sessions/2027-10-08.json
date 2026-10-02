@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 587,
+  "date": "2027-10-08",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How was your day at the climate-tech office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was pretty busy, so I'm very glad the weekend is here. Arjun and I decided to keep it low-key tonight. We actually ordered in. I got a hot, oven-baked flat dough topped with marinara sauce, melted mozzarella, and roasted peppers delivered to the door. Arjun opted for a vegan version of the same sliced baked crust from their specialty menu."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and perfect for a Friday night! Sometimes you just need a break from cooking. Did Biscuit try to beg for a bite of your crust?"
+    },
+    {
+      "speaker": "user",
+      "text": "Of course he did! He sat there staring at me with his big Labrador eyes the entire time, but I stayed strong. He did get one of his usual dog treats, though, so he wasn't completely left out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good job staying strong! It's so hard to resist those puppy eyes. By the way, how is Arjun's new bike? Has he had a chance to enjoy it lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's been loving it. He spent some time yesterday cleaning and adjusting the gears on it. He's really proud of how smooth it is."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great. It sounds like he's taking excellent care of it. Have you two had a chance to try that new ramen spot on your street yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, we really should soon! My coworker Dana actually went there last week and told me the vegetarian options were fantastic, so it's definitely on our list for a future date night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's good to know! Especially with Dana's recommendation. How is she doing? Is her beagle Pepper doing well?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, Pepper is doing great! Dana was telling me he's settling in beautifully now. She's been super busy lately, but she's in really good spirits."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. I hope you and Arjun have a wonderful, relaxing evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! We're just going to stream a movie and relax. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "takeout pizza",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

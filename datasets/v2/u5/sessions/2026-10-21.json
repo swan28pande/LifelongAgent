@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 235,
+  "date": "2026-10-21",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Wednesday going so far? How is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Wednesday is going well. Biscuit had a great start to the day—I took him for a nice, long stroll around the neighborhood first thing this morning to get his energy out. Arjun actually opted for a rigorous run in the park instead of joining us."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely morning routine for you and Biscuit! Did you end up cycling to the office after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, not today. I discovered my bicycle had a completely flat tire right as I was about to leave. Luckily, my coworker Dana offered to pick me up, so she drove us both in today. It was a nice break, though she said she prefers her usual routine of driving to work anyway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what bad luck with the tire, but how nice of Dana to give you a lift! Is she still training hard for her triathlon?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She is incredibly disciplined. Speaking of work, my day as a backend engineer at the startup has been pretty intense with some tricky database scaling issues today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds challenging. Do you have some good music playing to help you focus while you code?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've been streaming some retro-futuristic, 80s-inspired electronic tracks with lots of heavy synths today—it really helps me zone in. My colleague at the next desk was listening to ambient noise, but these upbeat electronic beats work wonders for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect, especially after that live show you and Arjun went to recently! Do you have any relaxing plans for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll keep it simple. I'm planning to make a quick wok-tossed meal tonight with some noodles, shrimp, and sauce. Arjun is actually getting a burrito from his favorite spot, so I'm just cooking for myself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick wok-tossed noodle dish sounds delicious and satisfying. Have you been able to get back to the bouldering gym lately now that your knee is feeling better?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I actually went a couple of days ago! I'm sticking to very easy routes and being super cautious, but it felt amazing to climb again."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "got a ride from a coworker",
+      "dinner": "stir-fry",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'stir-fry', conversation gives 'veggie stir-fry'"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "user_id": "u5",
+  "day": 215,
+  "date": "2026-10-01",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going so far? How is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Biscuit is doing great, we had a nice walk this morning. I've actually got some really exciting news today—my physical therapist finally gave me the green light for regular physical activities! My knee is officially cleared."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic news, Priya! I know how frustrating it's been since you tore that ligament bouldering. How does the knee feel after getting the all-clear?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels wonderful, completely stable! In fact, because of that great news from the physio today, I immediately went back to scaling indoor rock walls at the gym. It felt so good to be back on the routes, though I took it a bit easy. Arjun came with me but he just stuck to lifting weights."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful that you got to climb again, and having Arjun there for support must have been nice! Did you do anything else active today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually pedaled my two-wheeler to the office this morning. It was a beautiful morning for a ride. Dana told me she ended up taking the bus because she was too tired from her triathlon swim training yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Riding your bike to work sounds like a lovely commute, especially with the nice autumn weather in Pittsburgh. Did you have a productive day at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I had a lot of backend coding to get through, so I kept my focus by listening to retro-futuristic instrumental tracks with those driving 80s synthesizer beats all afternoon. Dana, on the other hand, was blasting heavy metal in her headphones to stay awake."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Synthwave is always great for getting into that coding flow! Glad it helped you power through. How are you planning to unwind tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to spend the evening flipping through some books of verse I picked up recently. I find reading short, lyrical stanzas is a nice way to quiet my mind. Arjun said he's going to spend his evening reading that new hard sci-fi novel he got."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful, relaxing way to spend the evening. Are those books from your recent trip to the Carnegie Library?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, exactly! I used my new library card to check them out. It's been great having access to such a huge selection. Now I just need to make sure Biscuit doesn't try to chew on them while I'm reading!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "bouldering",
+      "commute": "cycling",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "poetry collections",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "knee_injury.1": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      },
+      "c1": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: reading should be 'poetry collections', conversation gives 'other'"
+  ]
+}

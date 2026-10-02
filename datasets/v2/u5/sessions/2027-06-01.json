@@ -1,0 +1,83 @@
+{
+  "user_id": "u5",
+  "day": 458,
+  "date": "2027-06-01",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Tuesday. How has your day been going in Denver? Are you and Biscuit having a good week so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a pretty productive Tuesday. I actually didn't have to leave the apartment at all for my job today, which was a nice change of pace. Arjun had to head out and commute to his office on his new bike, but I just set up at my desk in our den. While I was writing backend code, I kept some classic brass and saxophone records spinning on our turntable. My coworker Dana mentioned she was blasting upbeat electronic playlists to stay focused, but the warm crackle of those old-school jazz LPs was exactly what I needed to stay in the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully cozy and focused setup! There's nothing quite like the sound of vinyl to keep you grounded while coding. Did you manage to get some good work done without the daily commute?"
+    },
+    {
+      "speaker": "user",
+      "text": "I really did! And since I was already steps away from the kitchen, I had time to prep a nice dinner. I spent about an hour at the stove making a spiced, aromatic coconut-and-chickpea stew from scratch. Arjun usually loves ordering takeout from that new ramen place down the street, but he was completely on board with eating this homemade Indian-style dish with me tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Mmm, a homemade spiced stew sounds absolutely delicious, especially on a Tuesday evening. It's great that you and Arjun got to share that. How are you planning to spend the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm just relaxing now. Arjun is sitting nearby flipping through a physical paperback he bought before our favorite local bookstore closed, but I've opted for a different format tonight. I'm just lying on the couch letting a voice actor read a mystery novel to me through my earbuds. I don't want to stay up too late, though. Meera texted me earlier saying she'll probably be awake past 1:00 AM in Seattle, but I'm planning to turn off my bedside lamp right at 23:00 so I can get a full night's sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very relaxing way to wind down. Getting to sleep by 11:00 PM is a great goal, especially after a productive day of working from home. Is the mystery novel you're listening to for your neighborhood book club?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it is! We're discussing it at our next Carnegie Library group meeting, so I wanted to make sure I finish it in time. It's been great having this audio format because I can just close my eyes and listen after staring at a screen all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart strategy to avoid screen fatigue. The Carnegie Library book club seems like a wonderful way to connect with people in your neighborhood since you moved. How has Biscuit been doing today? Did he enjoy having you home all day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, he loved it. He basically slept under my desk the entire time I was coding. He did wake up to beg for some of the sweet potatoes I chopped up for the stew, but I made sure to keep his treats separate. Speaking of the stew, I was glad I could keep it entirely plant-based and fish-friendly, which fits perfectly with my usual pescatarian meals."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Biscuit sounds like the perfect office companion, even if he's just there for the food scraps! And it's great that you could tailor the stew to your pescatarian lifestyle so easily. I hope you enjoy the rest of your mystery novel tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely looking forward to turning the lights out at 11 and getting some rest. Talk to you tomorrow!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sleep well, Priya! Have a great night and a wonderful Wednesday tomorrow. Talk then!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "work from home",
+      "dinner": "home-cooked curry",
+      "music": "jazz vinyl",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Priya owns a turntable.",
+    "invention: Arjun works at a corporate office.",
+    "invention: Arjun is a night owl."
+  ]
+}

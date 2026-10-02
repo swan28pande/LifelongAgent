@@ -1,0 +1,75 @@
+{
+  "user_id": "u5",
+  "day": 327,
+  "date": "2027-01-21",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your Thursday going? Are you and Biscuit staying warm in Denver today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, we are, though it's pretty chilly. I actually went into the office today and took the electric train that runs through the city to commute. Arjun decided to ride his bicycle instead, taking advantage of those new bike lanes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's great that Arjun is using the new bike lanes! Did the train ride give you some time to relax before getting to your backend engineering work?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did! It was nice to just sit. I needed the rest after my morning exercise—I did a sweaty session of high-intensity interval training right in our living room before heading out. My coworker Dana, on the other hand, went for a grueling outdoor run as part of her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Dana is so dedicated! And how is your knee feeling after doing those quick, intense intervals at home? Still holding up well since the physio cleared you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels completely normal, thankfully! No pain at all. Tonight is going to be pretty low-key anyway. I'm planning to wind down by reading some books with sequential art and speech bubbles. Arjun is doing the opposite—he's diving into a massive, dense historical biography."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those illustrated narratives are such a great way to unwind! Did you pick those up from the Carnegie Library, or are they for your neighborhood book club?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually found them during my last trip to the Carnegie Library! I need to make sure I don't lose track of time reading them, though. My goal is to turn off the lights and go to sleep exactly an hour before midnight. My sister Meera mentioned she's aiming for 10:00 PM tonight because she has a huge presentation at her Seattle health-tech job tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart goal, and good luck to Meera on her presentation! An hour before midnight sounds like a perfect bedtime to keep you feeling rested."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Meera's been working so hard as a data scientist there, so I hope she gets her rest. I'm hoping to build a better sleep routine myself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure you will! Before you head off to read, how is Biscuit doing today? Did he get to join in on your living room workout?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, he mostly just watched me jump around and tried to lick my face when I was doing burpees! He's currently napping by my feet. Anyway, I'm going to get started on my reading. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "home HIIT workout",
+      "commute": "light rail",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "graphic novels",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

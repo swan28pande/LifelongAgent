@@ -1,0 +1,75 @@
+{
+  "user_id": "u5",
+  "day": 465,
+  "date": "2027-06-08",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Tuesday been going in Denver? Have you been keeping busy at the startup, or did you manage to get some trail running in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy one. I actually did something different for my exercise today. Usually, I'm the one who takes Biscuit for his morning stroll, but I had a complimentary voucher for an indoor cycling session on those stationary bikes, so I went to that instead. Arjun ended up taking Biscuit out for his walk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a stationary bike session sounds like a great use of a free pass! It's nice that Arjun could handle Biscuit's walk today. Did you enjoy the workout?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was really high energy, definitely got my sweat on! But the rest of the day was pretty draining. I ended up bypassing my evening meal entirely tonight. Normally I would have whipped up a home-cooked curry, but a late-day sync at work ran incredibly long and I just lost track of time. Arjun ordered some takeout from that new ramen place down the street, but I just wasn't up for eating."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ugh, those late-day meetings that drag on are the absolute worst. I'm sorry you had to miss out on your usual curry! I hope you're able to unwind a bit now that work is finally over for the day."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm finally relaxing. Right now, I'm listening to someone narrate a novel through my headphones while lounging on the couch. Arjun is sitting next to me reading a physical paperback, so it's a nice, quiet evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully peaceful way to spend the evening, just letting a narrator tell you a story. Are you hoping to get a decent amount of rest tonight after such a long workday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I'm planning to turn off the lights and close my eyes exactly sixty minutes before midnight. Arjun is going to stay up a bit later than that to adjust some things on his new bike, but I definitely need my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An 11:00 PM bedtime sounds perfect to help you recover from that long meeting. Since your knee has been fully cleared for normal activity, are you hoping to get back to bouldering later this week, or are you focusing on resting for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely planning to hit the climbing gym for some bouldering on Thursday. I've missed it so much since the injury, so I'm excited to ease back into it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! I'm glad you're feeling ready to get back on the wall on Thursday. I hope you have a wonderful, restful sleep tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm heading to bed now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "spin class",
+      "commute": "not mentioned",
+      "dinner": "skipped dinner",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

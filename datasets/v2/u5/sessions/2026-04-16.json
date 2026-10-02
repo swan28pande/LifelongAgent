@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 47,
+  "date": "2026-04-16",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going over in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a productive one. I had to focus on a complex database issue for my backend engineering work, and I got through it by listening to those cozy, low-tempo instrumental tracks with the vinyl crackle. My coworker Dana said she was blasting heavy metal to get her coding done, which I definitely couldn't do!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Instrumental tracks are definitely great for deep focus! How is everything else going at the startup? Still happily keeping things independent and enjoying the single life?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I love having my own routine. After work, I went to the gym and spent some time trying to scale those short, challenging indoor rock routes without a harness. It's a great puzzle for the brain. Dana actually did a long swim session today for her triathlon training, which sounds way more exhausting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those ropeless climbing routes are definitely a puzzle! It's great you have that outlet. Do you have any relaxing plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm going to spend some time reading a futuristic book about interstellar colonization. My sister Meera told me she's reading a massive biography of a 19th-century politician right now, but I definitely prefer high-tech space adventures."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A space adventure sounds like a great way to unwind. How is Meera doing with her new job and the move to Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's settling in well, though she's still adjusting her schedule. She actually mentioned she's trying to head to sleep by ten o'clock every night now to stay on top of things."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An early bedtime can definitely help with a big transition! Are you hoping to get to sleep early tonight too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm aiming to shut my eyes right at half-past eleven tonight. That should give me a good chunk of reading time without ruining my morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very reasonable schedule. By the way, how has your pescatarian diet been going? Finding good seafood options around town?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been really good! I've been cooking a lot of great fish dishes lately. But I should probably get started on that book now so I don't run past my bedtime. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "bouldering",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "lo-fi beats",
+      "reading": "sci-fi novel",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'other'"
+  ]
+}

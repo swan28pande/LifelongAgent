@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 14,
+  "date": "2026-03-14",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Saturday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty relaxing. I'm especially glad that I didn't have to do any traveling back and forth for work today, so I got to stay entirely at home. My coworker actually had to ride the train all the way in to the office today for some emergency server stuff, so I felt pretty lucky."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound like a nice change of pace. How are you spending your free time today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just taking it easy, playing some piano, and doing some chores. Since I don't have a partner, my weekends are completely mine to do whatever I want, which is really nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great to have that kind of freedom to structure your day. Do you have any plans for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! I'm going to be meeting up with a bunch of my pals at a diner to grab a bite to eat together. A friend of mine said they were just going to eat some leftover pizza by themselves at home, but I was in the mood to get out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun evening out. Are you going somewhere that works well for your pescatarian diet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're going to a place that has a ton of great vegetarian and seafood options, so it'll be perfect for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect. Do you have any plans for when you get back home later?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll probably just do some reading. I'm currently in the middle of a really detailed factual book about the social changes during the Industrial Revolution. One of my friends told me they've been reading a dystopian sci-fi series, but I've always preferred learning about real historical events."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Fascinating! Learning about real historical transitions can be so engaging. I hope you enjoy the rest of the book."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, I definitely will. It's been a really nice, balanced day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like it! Have a wonderful time catching up with your pals over dinner tonight, Priya."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "dinner with friends",
+      "music": "not mentioned",
+      "reading": "history nonfiction",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'",
+    "invention: has friends named Clara and Dave"
+  ],
+  "repair_method": "revise_existing"
+}

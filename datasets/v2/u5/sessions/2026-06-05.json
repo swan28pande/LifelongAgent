@@ -1,0 +1,113 @@
+{
+  "user_id": "u5",
+  "day": 97,
+  "date": "2026-06-05",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your day been going over in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but exciting week. I actually wanted to share some big news: I adopted a labrador named Biscuit on June 3, 2026."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that is wonderful news! Congratulations on your new pup! How is Biscuit settling in after these first couple of days?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great, just exploring the apartment and sniffing everything. It's definitely a big adjustment, but he's already such a sweetheart."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Labradors are so sweet! I'm sure he's going to love living with you. Were you able to get much backend engineering work done today with him around?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was! I actually had to go into the office today. My colleague took the bus because of the rain, but I powered my two-wheeled frame to the office using my own legs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great active commute! How was the atmosphere at the fintech startup today? Did you manage to focus?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty good. My desk neighbor was blasting heavy metal to get through their queue, but I had those mellow, instrumental, low-fidelity chill tracks playing in my headphones to stay focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Low-fidelity chill tracks are perfect for coding. Did you get a chance to go bouldering or play the piano after work, or did you head straight back to Biscuit?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing today. My coworker Dana did a heavy swim session for her triathlon training, but I opted for a guided flow of poses and deep breathing on a mat at a local studio."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yoga is so great for centering yourself! What are your plans for dinner? Cooking some of your usual pescatarian dishes, or opting for something easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely easy tonight. My friend got sushi, but I ordered a baked dough disc topped with tomato sauce and melted cheese delivered from the shop down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pizza is the ultimate Friday night treat. Are you planning on doing any pottery or just relaxing with a good book tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just reading! My sister Meera mentioned she was reading a sci-fi novel over in Seattle, but I spent my evening reading an account of actual events from the ancient Roman trade routes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A history of Roman trade routes sounds incredibly interesting! I hope you enjoy it. Do you think you'll turn in early tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "My neighbor goes to bed at nine, but I'm planning to hit the lights exactly thirty minutes before midnight tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a perfect Friday schedule. Have a wonderful weekend with Biscuit! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "yoga class",
+      "commute": "cycling",
+      "dinner": "takeout pizza",
+      "music": "lo-fi beats",
+      "reading": "history nonfiction",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {
+      "pet.biscuit": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      },
+      "c1": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: pet.biscuit (adopted a labrador named Biscuit (this happened on 2026-06-03))",
+    "invention: adopted Biscuit on Wednesday",
+    "invention: Biscuit loves his plush squeaky toy"
+  ],
+  "repair_method": "revise_existing"
+}

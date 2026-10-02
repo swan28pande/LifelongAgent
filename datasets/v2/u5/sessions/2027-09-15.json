@@ -1,0 +1,86 @@
+{
+  "user_id": "u5",
+  "day": 564,
+  "date": "2027-09-15",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Wednesday been going in Denver? Keeping busy at the climate-tech firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It’s been a bit of a whirlwind today, honestly. I ended up staying up super late working last night, so I completely overslept this morning. Because of that, I had to skip our typical morning walk with Biscuit, which is usually how I get my daily exercise in. Arjun ended up taking him out instead so I could catch a few extra minutes of sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, sounds like a hectic start! Did you manage to make it to your meetings okay?"
+    },
+    {
+      "speaker": "user",
+      "text": "I had to scramble! Normally I'd just work from home, but I actually had to be in the office today. Since I was running so incredibly behind schedule, I couldn't take my time—I had to order a ride through an app on my phone just to get there on time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A rideshare was definitely the right call there. I hope the rest of your workday was a bit more peaceful once you got to the office."
+    },
+    {
+      "speaker": "user",
+      "text": "It actually did settle down. While I was working today, I listened to some classic jazz vinyl, which really helped me focus and get through my tasks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to find your focus. Did you and Arjun do anything special for dinner to unwind after such a busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "We kept it pretty simple. I wasn't up for a heavy meal, so I just had some warm pureed tomato soup and a couple of blended green smoothies. Arjun wanted something more substantial, so he ate some leftover veggie stir-fry, but the liquid dinner was perfect for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a light dinner is exactly what you need. How did you spend the rest of your evening? Did you manage to fit in any bouldering or trail running, or just take it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "No workouts tonight, just pure relaxation. I did some reading, but instead of holding a physical book, I just listened to a narrated novel through my headphones while lying on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Audiobooks are perfect for relaxing your eyes after staring at screens all day. I hope you managed to get to bed at a decent hour to make up for last night!"
+    },
+    {
+      "speaker": "user",
+      "text": "You would think so, but Arjun and I got totally sucked into watching a film late tonight. I usually have my lights out by half-past ten, but because of the movie, I didn't actually fall asleep until about half-past one in the morning!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, 1:30 AM is definitely a late night, especially after a long day! You'll have to make sure you get some extra rest tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. Tomorrow is definitely going to be all about catching up on sleep!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "skipped workout",
+      "commute": "rideshare",
+      "dinner": "soup and smoothies",
+      "music": "jazz vinyl",
+      "reading": "audiobooks",
+      "bedtime": "1:30 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: usually works from home",
+    "invention: owns a turntable"
+  ]
+}

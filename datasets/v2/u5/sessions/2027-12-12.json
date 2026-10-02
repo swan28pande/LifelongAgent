@@ -1,0 +1,75 @@
+{
+  "user_id": "u5",
+  "day": 652,
+  "date": "2027-12-12",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! I hope you're having a relaxing Sunday. Did you manage to get outdoors today, maybe with your weekend hiking group, or are you resting up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, I decided to take a complete break from physical activity today and just rest. Normally, I'd be out on the trails with the hiking group, but I woke up feeling quite under the weather with a scratchy throat and a headache, so I skipped it. Arjun still went out for a long trail run, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, I'm sorry to hear you're feeling under the weather! I hope Arjun's run went well, but I'm glad you listened to your body and stayed in. Did you manage to get some quiet time at home, or did work call you away?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was a bit of a chaotic morning, actually. I got paged for an emergency on-call issue at the office. Normally, I have absolutely no commute on Sundays, but since I was running incredibly late to handle the server crisis, I ended up ordering a ride through a smartphone app to get me there as fast as possible. My coworker Dana mentioned she took the light rail to her triathlon training around the same time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds stressful, especially when you weren't feeling 100%. I hope the server issue didn't take too long to resolve! Were you able to find some peace once you got to your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, luckily it got sorted out quickly. To keep myself calm while working, I tuned into the local FM station broadcasting live orchestral and chamber music. Usually, I'd be spinning some of the vinyl records Arjun gave me on the player, but my headphones broke this morning and I didn't want to play anything out loud at home earlier. Arjun was actually blasting his favorite synthwave album on his speakers when I got back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classical broadcast sounds like a perfect way to stay focused and calm during an outage. And it's too bad about your headphones! I hope you were able to finally relax and crawl into bed early tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I wish! Between the lingering work stress and trying to catch up on some things, the clock on my nightstand read exactly 2:00 in the morning when I finally drifted off. Arjun was out like a light much earlier, around ten in the evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Two in the morning is incredibly late, especially when you're fighting off a bug. Please try to take things a bit easier tomorrow if you can."
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely will. I'm just going to hang out on the couch with Biscuit and Mochi for a bit before trying to get some rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect remedy. Give Biscuit and Mochi some head scratches for me, and I hope you feel much better tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much, I appreciate it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "rest day",
+      "commute": "rideshare",
+      "dinner": "not mentioned",
+      "music": "classical radio",
+      "reading": "not mentioned",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

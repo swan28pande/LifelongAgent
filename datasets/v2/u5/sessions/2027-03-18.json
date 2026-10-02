@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 383,
+  "date": "2027-03-18",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going? How are things at the fintech startup today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy day. We're pushing some major backend database updates, so I've been staring at code for hours. But it's going well, just glad to be wrapping up for the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I imagine those database updates take a lot of focus! I'm glad you're able to wind down now. Do you have any relaxing plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, definitely. I just finished making dinner. I spent some time in our kitchen preparing a spiced Indian gravy dish with chickpeas and spinach, simmered slowly on our stove. Arjun ended up eating a quick cold sandwich for his meal while finishing some work, but I really wanted a warm, homemade spiced stew."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and comforting after a long day of coding. Did you and Arjun get any more planning done for your June trip to Italy?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit! We've been looking at some flight options and trying to sketch out a general itinerary. Arjun is really excited about the historic sites, and I'm just looking forward to the food and the change of scenery. We still have a lot of details to finalize, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's so exciting just to look at flights and dream about the trip. June will be here before you know it! What's the plan for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, just some quiet time. I'm aiming to turn off the bedroom lights and go to sleep exactly sixty minutes before midnight. My coworker Dana mentioned she went to bed at nine last night to rest, but my target tonight is an hour before twelve."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Eleven is a great time to wind down, especially when you have another busy day ahead tomorrow. How is Biscuit doing tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! He's currently curled up right by my feet while I chat with you. He's always the best company when I'm relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy. I'm glad you have your companion there with you. I'll let you get to your relaxing evening so you can hit your target bedtime!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yes, I'm going to start getting ready for bed soon. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "home-cooked curry",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: dinner should be 'home-cooked curry', conversation gives 'other'",
+    "invention: Planning to stay in Florence during the Italy trip",
+    "invention: Planning to take Biscuit for a long walk in the foothills on Saturday",
+    "invention: Planning to check out the new ramen spot on Saturday"
+  ]
+}

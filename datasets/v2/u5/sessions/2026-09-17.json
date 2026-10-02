@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 201,
+  "date": "2026-09-17",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going over in Pittsburgh? Are things busy at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, things have been pretty hectic with our database optimization today, but we got a major backend release out of the way. Biscuit is currently curled up under my desk, so that makes it better."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Congrats on getting that release out! It must be a relief. What are your plans for winding down this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm looking forward to a quiet night. I actually plan on curling up with some compiled volumes of lyrical, rhythmic verses. Arjun is still plodding through his massive historical biography, but I wanted something shorter and more expressive to flip through."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, anthologies of verse sound like a beautiful way to spend the evening! Do you have a specific writer's work you're diving into?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have a book of Mary Oliver's pieces and some contemporary writers I want to browse. Since my knee is still recovering from that torn ligament, I'm happy to just sit still and read."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy and perfect for letting your knee heal. Are you hoping to get a full night's rest tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm aiming to click off the bedside lamp and be asleep by exactly thirty minutes after ten. My sister Meera mentioned when we talked earlier that she's been staying up until past midnight since moving to Seattle, but I really need my rest, so half-past ten is my hard limit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Half-past ten is a wonderful goal, especially after a busy launch day. It's so easy to let the night slip away, but setting that boundary helps a lot."
+    },
+    {
+      "speaker": "user",
+      "text": "It really does. I find that if I don't set a specific time, I'll just keep reading and then regret it the next morning when my alarm goes off for work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely. How is Arjun doing with his biography? Is he also trying to get to sleep early, or is he a night owl?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, he's definitely more of a night owl when he gets into a good book. He'll probably stay up reading well past when I turn off the lights."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, that's fair! A good book can be hard to put down. Well, I hope you enjoy your lyrical readings tonight and get some wonderful rest."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Have a great night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "poetry collections",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

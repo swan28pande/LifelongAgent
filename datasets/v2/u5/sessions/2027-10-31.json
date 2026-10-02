@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 610,
+  "date": "2027-10-31",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Sunday, Priya! How has your weekend been going? I hope you've had a chance to relax before the busy week ahead in your engineering manager role."
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, it's been a lovely, quiet Sunday. I actually did a tiny bit of prep work for some upcoming climate-tech projects today, but I was so glad I had absolutely zero travel or transit to get to a work location. My sister Meera wasn't as lucky; she actually had to commute all the way into her Seattle office today for an emergency server issue."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that is a bummer for Meera on a Sunday! But I'm glad you avoided any transit time. Did you have any music or anything playing in the background while you got that prep work done?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! To make the prep work feel more cozy, I spun some of those physical analog music discs on the turntable Arjun got me. It was so nice to hear that classic sound. Arjun usually prefers listening to digital streaming playlists when he's doing things around the house, but I definitely prefer the physical wax albums."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There really is nothing like that classic analog sound! It's great that you're putting that turntable to good use. Did you manage to get out for any bouldering this weekend, or have you just been relaxing at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did get some bouldering in yesterday! My knee felt completely fine, which was a relief. Arjun didn't join me, though; he decided to go for a ride on his new bike instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear your knee is holding up well, and it sounds like Arjun is getting plenty of use out of his new bike too. Are you planning a relaxing evening to wind down?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm aiming to be tucked in and fast asleep by exactly half past ten tonight so I can start Monday feeling fully rested. Arjun is planning to stay up past midnight to finish a scary movie, but I need my sleep!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible plan for a Sunday night! By the way, did you ever end up trying out that new ramen place that opened on your street, or has it been a quiet weekend on that front?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually haven't made it to the ramen spot yet! It's been pretty noisy around here anyway—we could hear the upstairs neighbors' new puppy barking quite a bit earlier today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those loud puppies can certainly be a handful. Hopefully, they quiet down in time for your early night!"
+    },
+    {
+      "speaker": "user",
+      "text": "They usually settle down once it gets dark, so I think I'll be fine to turn in on schedule. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "vinyl records",
+      "reading": "not mentioned",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

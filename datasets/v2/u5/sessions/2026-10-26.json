@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 240,
+  "date": "2026-10-26",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Monday. How is everything going over in Pittsburgh today? Did you and Biscuit have a good start to the week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, we did. Arjun went to a high-intensity interval training class this morning, but my physical activity today was just taking Biscuit for a stroll around the block first thing in the morning. It was nice and quiet. And actually, I have some incredible news from work today!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! What is the big news? Don't keep me in suspense!"
+    },
+    {
+      "speaker": "user",
+      "text": "I got promoted to senior backend engineer! My manager gave me an incredibly strong performance review today and officially offered me the new title. I'm still pinching myself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Priya, that is absolutely amazing! Congratulations! A senior backend engineer title at the startup is a massive milestone. How are you feeling about taking on the new level of responsibility?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, I feel ready for it, and it's so validating to have my work recognized like this. Arjun was so excited when I texted him, though he's planning on staying up past midnight tonight to finish some work, while I intend to turn off my lights and fall asleep exactly thirty minutes past ten to make sure I'm rested."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep by half past ten is a perfect, healthy way to celebrate. You definitely want to be fresh tomorrow. Did you get to use those new bike lanes on your way to the office to share the news in person?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Dana chose to take the city bus to work today, but I decided to pedal my two-wheeler along the new lanes. It was a crisp morning, and the ride felt great after the good news."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful commute. How was the energy in the office once you got there? Were you able to actually get any coding done with all the excitement?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was busy, but I managed to find my focus. My coworker was playing classical music in our shared space, but I plugged in my headphones and put on some of those nostalgic 80s-style electronic beat tracks to help me zone in and write some clean code. It really kept my energy up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Some retro synth sounds are perfect for getting into that coding flow state. It sounds like today was an absolute triumph all around, from the commute to the promotion."
+    },
+    {
+      "speaker": "user",
+      "text": "It really was! I couldn't have asked for a better start to the week. I'm going to head offline now to relax with Biscuit before my early bedtime. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "cycling",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {
+      "job.promotion": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

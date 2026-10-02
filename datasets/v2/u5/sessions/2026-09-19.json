@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 203,
+  "date": "2026-09-19",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Saturday going so far? How is your knee feeling today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. My knee is actually feeling a bit more stable today. I spent about forty-five minutes this morning doing those rehabilitative physical therapy movements for my joint to help with the recovery. Arjun went a different route and did an intense powerlifting session at his gym."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm really glad to hear the knee is feeling a bit more stable! Staying consistent with those exercises is so important. Did you have a busy day planned after that, or have you been able to take it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! I had a few backend deployment tasks to look into, but the best part was that I entirely avoided traveling to any office or job site today, staying completely stationary without any transit time. My coworker Dana, on the other hand, had to drive over an hour to get to her open-water training site."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Avoiding any transit time on a Saturday is definitely a win! Were you able to make some good progress on those backend tasks without the usual office distractions?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I got into a really solid groove. To help me focus, I put on some upbeat instrumental tracks filled with retro-futuristic electronic synthesizer beats. Arjun was working nearby on his own projects, but he was listening to traditional acoustic jazz."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those electronic beats are great for getting into a zone. It sounds like you had a highly productive afternoon! Do you have any relaxing plans lined up for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm looking forward to a very quiet night. I'm planning to curl up on the couch and read through some anthologies of lyrical verses and rhythmic stanzas. Arjun is taking a totally different approach and is reading a thick, detailed biography about a historical figure."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. Are those the books you picked out using your library card from the Carnegie Library?"
+    },
+    {
+      "speaker": "user",
+      "text": "They are indeed! I'm so glad I finally got that card, the selection is wonderful. Biscuit is already curled up on the rug right next to me, just waiting for me to open the first page."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Biscuit always knows the best spot to settle down! It sounds like the perfect cozy setup. Do you think you'll turn in early tonight, or stay up enjoying your reading?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll probably close my book and turn off the lamp exactly half an hour before midnight. Arjun was completely exhausted from his heavy workout earlier, so he actually went to sleep at nine o'clock."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, restful way to end the day. I hope you enjoy your reading tonight, Priya! Have a great rest of your weekend."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "physio exercises",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "poetry collections",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'"
+  ]
+}

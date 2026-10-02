@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 192,
+  "date": "2026-09-08",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your Tuesday going in Pittsburgh? How is your knee holding up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's okay. My knee is still a bit stiff, but I made sure to complete the set of rehabilitation movements my physical therapist prescribed to help with the recovery. Arjun actually went for a long run today, which made me a bit jealous!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's tough to watch others run, but staying consistent with your physical therapy is the best way to get back to bouldering eventually. Did you go into the office today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I did. Since driving is still a bit awkward with my leg, I hailed a car through an app on my phone to get there. My coworker Dana actually rode her bicycle to work today to keep up with her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An app-based ride sounds like a much safer option for your joint right now, and Dana is certainly dedicated! How is everything going with your backend engineering work?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy, but I'm making progress on some database issues. For dinner tonight, I boiled some penne and tossed it with marinara sauce. Arjun had a craving for seafood, so he actually ordered some fish and chips from a local pub."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A simple penne with marinara is a great, easy meal after a busy day. It's nice that Arjun could grab his fish and chips too. Are you planning a relaxing evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm planning to dive into one of those fast-paced suspense novels I checked out from the Carnegie branch. Meera told me she's currently reading a dense historical biography, which sounds a bit too dry for my taste!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good suspense novel is a perfect way to unwind. It's great to see you using that Carnegie membership! Do you have a specific target for turning in tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I want to have the lights turned off and be asleep by half past ten. Arjun is a night owl and plans to stay up watching a movie until midnight, but I really need my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep by ten-thirty sounds like a wonderful plan to keep your energy up and help your recovery. I'll let you get to your reading. Have a great night, Priya!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "physio exercises",
+      "commute": "rideshare",
+      "dinner": "pasta",
+      "music": "not mentioned",
+      "reading": "library thrillers",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "reason_given: no reason may be given for today's evening reading",
+    "invention: The user has a physical therapist.",
+    "invention: Arjun plays video games."
+  ]
+}

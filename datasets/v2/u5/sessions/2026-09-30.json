@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 214,
+  "date": "2026-09-30",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Wednesday going? How has your knee been feeling lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! My knee is doing okay, just taking it easy. Oh, I have some cute news! My coworker Dana, the one who is training for a triathlon, just adopted a beagle named Pepper!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how wonderful! A beagle named Pepper sounds absolutely precious. How is Dana doing with the new pup?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is completely over the moon! She's been sending our team pictures of Pepper all day. Once my knee is fully healed, I definitely want to organize a playdate with Biscuit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That would be adorable, I'm sure Biscuit would love a new friend. How was your day otherwise? Did you have a busy day with your backend engineering work?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty intense with some API updates, so I was exhausted by dinnertime. I wanted something fast, so I heated up my wok, threw in some shrimp, broccoli, and peppers, and quickly tossed them over high heat with some soy and ginger. Arjun wasn't in the mood for that, so he ordered himself some sushi instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious, quick, and satisfying meal after a long day of coding. What do you have planned for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm planning to just relax on the couch. I've got a couple of volumes of rhyming and free-form stanzas that I've been meaning to dive into—I love getting lost in anthologies of verse. Arjun is actually reading a biography of a historical figure tonight, so we'll both be reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. Are those books you picked up from the Carnegie Library?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they are! I'm so glad I finally got that library card. Their collection is fantastic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a treasure. Have you heard from your sister Meera lately? How is she settling into Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "We chatted yesterday! She's loving her new job, though she's still getting used to the rainy weather. I told her she has to check out that new ramen place on my street whenever she comes back to Pittsburgh to visit."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "stir-fry",
+      "music": "not mentioned",
+      "reading": "poetry collections",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "other.dana.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'long walk'",
+    "pref_wrong: dinner should be 'stir-fry', conversation gives 'veggie stir-fry'",
+    "statement_missing: other.dana.0 (Dana (Priya's coworker): adopted a beagle named Pepper (this happened on 2026-09-26))"
+  ]
+}

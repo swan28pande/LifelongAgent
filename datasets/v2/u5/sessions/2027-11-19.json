@@ -1,0 +1,88 @@
+{
+  "user_id": "u5",
+  "day": 629,
+  "date": "2027-11-19",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Friday going? How are Biscuit and Mochi doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Friday is going well. Mochi is currently napping in a sunbeam, and I got my steps in early today by taking our yellow Lab out for a stroll around the block before starting work. Arjun decided to do a session on his stationary bike instead of coming with us."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to the day. It's always nice to get outside with Biscuit. Did you have to go into the office today, or are you staying put?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually avoided the commute entirely today and just logged on from my desk here at home. It's been great to skip the traffic. My coworker Dana told me she had to head into her office today, so I'm glad I got to stay home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Working from home definitely has its perks, especially on a Friday. Have you been able to focus well today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly! I did have to change up my usual background noise, though. Normally I love spinning some of my favorite vinyl records while I work, but my headphones broke today. So instead, I tuned into the local broadcast station playing orchestral symphonies on the radio to keep me focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, sorry to hear about your headphones! But classical radio is a great substitute for focus. Hopefully you can get the headphones fixed or replaced soon. Are you and Arjun planning anything fun for dinner tonight to celebrate the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are keeping it very low-key. We decided to order some stone-baked pies from the local place down the block. Arjun got one topped with pepperoni, but I kept mine strictly vegetarian with mushrooms and olives."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, pizza night is the perfect way to kick off the weekend! It's great they have good vegetarian options for you. Do you have any plans for the evening after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to curl up on the couch. I need to catch up on the fiction selection we're discussing for our neighborhood literary group next week. Arjun is actually watching a movie on his tablet instead of reading tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very cozy Friday night. How is the book club novel going so far? Are you enjoying it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's really gripping! I might get a bit carried away reading tonight, but I'm going to try to turn off the lights and go to sleep right at midnight so I'm not totally exhausted tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Midnight is a sensible cutoff, especially when a book is that good! I hope you have a wonderful, relaxing weekend, Priya. Talk to you soon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Have a great weekend too!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "work from home",
+      "dinner": "takeout pizza",
+      "music": "classical radio",
+      "reading": "book club novel",
+      "bedtime": "12:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: exercise should be 'morning dog walk', conversation gives 'missing'",
+    "pref_absent: music should be 'classical radio', conversation gives 'missing'",
+    "pref_absent: reading should be 'book club novel', conversation gives 'missing'",
+    "invention: her headphones broke"
+  ]
+}

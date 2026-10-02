@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 358,
+  "date": "2027-02-21",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Sunday going? Are you having a relaxing weekend in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a really nice, quiet Sunday. Biscuit and I are just lounging on the couch. I didn't have any work travel or transit to worry about today, which is always a relief, though my coworker Dana actually had to drive all the way to her office to check on some servers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, poor Dana, going into the office on a Sunday! It's definitely nice to avoid that. How has everything been going with you and Arjun living together?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been wonderful, honestly. We've really settled into a great rhythm in our place. Today we just spent some time organizing the living room and catching up on things."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds so cozy. And how are things looking for the Denver half marathon in April? Are you still planning on that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's still very much on my radar for April! I'm keeping an eye on how my knee feels, but I'm excited about the goal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. I'm glad the knee is holding up. Did you do any reading to wind down this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I spent a couple of hours tonight reading the latest fiction selection for my local neighborhood group. Arjun was actually skimming through a woodworking manual he bought, but I was completely absorbed in our group's paperback."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A woodworking manual sounds like a project in the making! But a good mystery is hard to put down. Did you manage to get to bed at a reasonable hour?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not at all, actually! I got so sucked into the story, and then Arjun and I ended up putting on a film that ran incredibly late. I didn't actually shut my eyes until half past one in the morning, which is a massive departure from my usual eleven o'clock lights-out. Arjun actually went to sleep around midnight during the movie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, sometimes a late movie is completely worth the tired morning! What did you two watch?"
+    },
+    {
+      "speaker": "user",
+      "text": "We watched an old sci-fi classic we'd been meaning to see for ages. It was totally worth the sleep deprivation, even if I'll probably need a little extra coffee tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "1:30 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_leak: music should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: reading should be 'book club novel', conversation gives 'missing'"
+  ]
+}

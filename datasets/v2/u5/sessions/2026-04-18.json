@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 49,
+  "date": "2026-04-18",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Saturday been going over in Pittsburgh? Are you getting a break from backend engineering, or has it been a busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Well, I didn't have to do any traveling or transit today since it's the weekend, which was a relief. But I did actually end up having to do some coding. While I was working, instead of the jazz music I normally have playing, I listened to this investigative murder show audio episode a friend of mine told me I had to check out. Speaking of which, my friend said they chose to listen to Top 40 hits today, which is definitely not my vibe!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a true-crime audio series instead of your usual jazz? That sounds like a thrilling change of pace for a coding session! Did the episode live up to the recommendation?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really did, I was totally hooked! The only downside is that a late-afternoon sync meeting ran way longer than expected. I was supposed to go out with my friends, but because of how late the meeting went, I had to completely bypass eating an evening meal tonight. My friends still went out and chose to get some vegetarian sushi, but I ended up not eating anything at all."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that's frustrating! Missing out on dinner with friends because of a late meeting is never fun, especially when there's good sushi involved. Being pescatarian, I'm sure you were looking forward to that."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. My sister Meera actually texted me from Seattle saying she chose to make a lovely baked salmon for her dinner tonight, which made me even more envious of everyone else's meals while I went empty-handed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound delicious. It’s too bad the timing didn't work out for you tonight. Are you planning on getting some rest soon to make up for the long day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, though with my brain still buzzing from work, I probably won't actually turn off the lights and fall asleep until about an hour past midnight. My coworker Dana, who is training for her triathlon, told me earlier she chose to go to sleep at 9:00 PM tonight to rest up, but I definitely can't manage that early of a bedtime."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Staying up until 1:00 AM is quite late, but sometimes you just need that time to wind down after a hectic schedule. Hopefully, tomorrow will be a bit more relaxing. Any plans to play some piano or maybe do some climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll definitely spend some time on the piano keys tomorrow. As for climbing, my bouldering partner messaged me saying they chose to tackle a new V4 project today, but I think I'm just going to have a quiet Sunday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing the piano sounds like a wonderful, peaceful way to spend your Sunday. I hope you get some deep sleep tonight, even if it's a late one."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to try to relax now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "skipped dinner",
+      "music": "true-crime podcast",
+      "reading": "not mentioned",
+      "bedtime": "1:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'"
+  ]
+}

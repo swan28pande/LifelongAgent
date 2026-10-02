@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 332,
+  "date": "2027-01-26",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Tuesday been going in Denver? Have you been able to do any bouldering lately since your knee healed up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going well. I haven't done much bouldering this week, but I did get some exercise in today. First thing this morning, I bundled up and took Biscuit out for a long stroll around the neighborhood. Arjun actually went for a trail run instead, but I preferred the slower pace with the pup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to the day. Biscuit must have loved that morning walk! How has work at the fintech startup been today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, pretty busy. I had a lot of coding to do. To keep myself focused, I put on some of those neon-tinted, retro-futuristic electronic tracks that we listened to at that live gig recently—it really helps me get into the zone. My coworker Dana mentioned she was listening to classical music today for her focus, but that's a bit too slow for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, synthwave is perfect for coding! It's got that great driving beat. Did you find yourself playing any piano today to unwind after all that screen time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I didn't get a chance to play the piano today, actually. I've been trying to finish up the assigned fiction selection for our local neighborhood group's next meeting, so I spent my evening reading that. Arjun was reading a biography on his tablet while I did that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great that you're staying on top of the book club reading. What did you end up doing for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I made a big pot of spiced vegetable stew with coconut milk on the stove at home. Arjun actually ended up grabbing some takeout noodles on his way back, but I really wanted a warm, home-cooked dish."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nice warm curry at home sounds incredibly cozy for a January evening in Denver. Are you planning on winding down early tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Normally I'd be asleep by my usual eleven o'clock bedtime, but tonight is an exception. A close friend of ours is hosting a birthday gathering, so I'll be staying out quite late—I probably won't be getting to sleep until two hours past midnight! Arjun is planning on heading to sleep at his usual hour, though, since he has an early morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a birthday party! That sounds like a lot of fun, even if it means a very late night. I hope you have a wonderful time celebrating!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yes, I'm looking forward to it. It'll be nice to catch up with everyone, even if tomorrow morning requires an extra cup of coffee. I should probably get ready to head over there now."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "home-cooked curry",
+      "music": "synthwave playlists",
+      "reading": "book club novel",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: bedtime should be '2:00 am', conversation gives 'other'"
+  ]
+}

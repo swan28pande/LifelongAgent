@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 204,
+  "date": "2026-09-20",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Priya! How has your Sunday been going over in Pittsburgh? Are you and Arjun having a relaxing weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a really nice, quiet Sunday. I'm so glad I didn't have to make any journey to an office or do any travel for work today, though Arjun actually had to commute to his job for a few hours this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's a bummer that Arjun had to go in on a Sunday, but I'm glad you got to avoid any travel. Did you manage to just relax, or did you get caught up in some projects?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did end up doing a bit of light prep work for the upcoming week, actually. I put on some of those nostalgic, retro-futuristic electronic tracks with the heavy 80s synthesizers to keep me focused. My coworker Dana told me she always listens to upbeat pop when she works, but those synth beats really help me get into the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those retro 80s synth tracks are great for focus! It sounds like a mini callback to that live synthwave concert you and Arjun went to. Did you do any reading to wind down after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, it really reminded me of that show! Since finishing up, I've been unwinding with a glossy periodical full of short lifestyle articles and photo spreads. I actually grabbed it from the dentist's office waiting room on Friday because a particular article caught my eye. Usually, I'd be diving into one of those mystery thrillers I get from the Carnegie library, but I wanted a quick, easy read tonight. Arjun is sticking to his sci-fi graphic novel, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, a dentist's office find! Sometimes those are surprisingly engaging, and it's nice to have a quick break from the heavy thrillers. Is Biscuit hanging out with you while you read?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, Biscuit is fast asleep right at my feet. He's such a sleepy dog. He actually went to sleep around nine tonight, but I'm planning to turn off the lights and go to sleep myself right at thirty minutes past eleven."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Thirty minutes past eleven sounds like a perfect time to turn in so you're fresh for Monday. Give Biscuit a little pat for me!"
+    },
+    {
+      "speaker": "user",
+      "text": "I will! He's already snoring a bit, so I'll just gently nudge him. I'm going to finish up this last article on urban gardening before I shut my eyes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the rest of your article, Priya. I hope you have a wonderful night's sleep when you turn the lights off at 11:30."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "a magazine",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Biscuit's favorite treats are fish-based"
+  ]
+}

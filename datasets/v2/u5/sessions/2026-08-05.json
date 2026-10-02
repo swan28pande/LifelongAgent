@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 158,
+  "date": "2026-08-05",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Wednesday going in Pittsburgh? How are things at the fintech startup today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's been a busy but good day. I actually pedaled my bicycle to the office this morning to enjoy the summer air, though my coworker Dana opted to drive her car instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely commute to start the day. Did you have a lot of coding to focus on once you got to your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, I had a massive backend bug to squash. I plugged in my headphones and put on some relaxing, low-fidelity electronic loops and beats to keep me in the zone. Dana, on the other hand, was blasting heavy metal to get through her tasks!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Low-fidelity tunes are perfect for deep focus. How are things going with Arjun? Have you two had a chance to connect today?"
+    },
+    {
+      "speaker": "user",
+      "text": "We chatted for a bit! We didn't meet up, so Arjun ended up ordering a pizza for his dinner. Meanwhile, I threw together a quick, high-heat wok-tossed dish of mixed vegetables and shrimp."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick wok-tossed dinner is always delicious and satisfying. What are your plans for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm looking forward to winding down with a gripping, high-stakes suspense novel I borrowed from the Carnegie branch. My sister Meera mentioned she's currently reading a historical biography, but I definitely prefer these tense page-turners."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you're getting great use out of your library card! Is Biscuit cuddled up with you while you read?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, he's resting his head right on my lap. He's already half-asleep, and I think I'll be joining him soon. I plan to turn off the lights at half past ten tonight, whereas Arjun told me he won't be hitting the sack until midnight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting plenty of rest is always a good plan. I hope you enjoy your book and have a wonderful night's sleep!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely ready to cozy up and get some rest. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 7,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "cycling",
+      "dinner": "stir-fry",
+      "music": "lo-fi beats",
+      "reading": "library thrillers",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'morning dog walk'",
+    "pref_wrong: dinner should be 'stir-fry', conversation gives 'other'",
+    "pref_wrong: reading should be 'library thrillers', conversation gives 'other'",
+    "pref_wrong: bedtime should be '10:30 pm', conversation gives 'other'"
+  ],
+  "repair_method": "revise_existing"
+}

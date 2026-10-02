@@ -1,0 +1,90 @@
+{
+  "user_id": "u5",
+  "day": 319,
+  "date": "2027-01-13",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Wednesday going so far in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. It's a bit cold today, but I still bundled up and took our Labrador out for a stroll around the block first thing after waking up to get some fresh air. Arjun decided to do some yoga in the living room instead of coming along."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to the morning! Biscuit must have loved the fresh air. Speaking of getting involved in the local community, did you end up looking into any local groups recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I joined a neighborhood book club in Denver on January 12th, 2027."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic! How did you find out about it, and did they have a meeting yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "I found a flyer at the local cafe. They had their first meetup yesterday evening, which was just a friendly meet-and-greet, and I'm really glad I went."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to connect with people nearby. How is your knee feeling lately? Are you able to do any bouldering yet, or are you still resting it?"
+    },
+    {
+      "speaker": "user",
+      "text": "My knee is feeling completely back to normal, but I'm still easing back into bouldering slowly to be safe. I don't want to overdo it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move, it's definitely better to be cautious. Have you had any time for your piano lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I sat down at the piano for a bit yesterday. It's a nice way to relax after a long day of backend engineering work at the startup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a great creative outlet. Speaking of food, have you and Arjun tried that new ramen place on your street yet? I know you eat pescatarian, so I wonder if they have good veggie or seafood options."
+    },
+    {
+      "speaker": "user",
+      "text": "We haven't been yet, but I checked their menu online and they do have a couple of pescatarian-friendly broths! We definitely plan to try it soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear! Let me know how it is when you go. I'll let you get back to your Wednesday. Have a wonderful afternoon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "book_club.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: book_club.0 ([the book club] joined a neighborhood book club in Denver (happened) (this happened on 2027-01-12))",
+    "invention: joined a neighborhood book club in Denver",
+    "invention: plans to visit the Carnegie Library this weekend to get a book for her book club"
+  ],
+  "repair_method": "revise_existing"
+}

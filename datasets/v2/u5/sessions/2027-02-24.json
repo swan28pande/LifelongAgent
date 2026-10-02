@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 361,
+  "date": "2027-02-24",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! I hope your Wednesday is going well. How are things in Denver today? How is Biscuit doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Biscuit is doing great, currently napping. My day has been pretty productive. I've had these driving, retro-futuristic 80s electronic instrumental tracks playing in the background all day to help me focus while coding. My coworker Dana, on the other hand, was listening to classical opera while she worked."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those synth tracks are perfect for getting into a flow state! Speaking of upcoming events, are you still planning on participating in that Denver half marathon this April? I know you registered for it a while back."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, the April event is still very much on my calendar! I'm looking forward to the big day. Right now, though, I'm actually getting ready to head out. Normally on a Wednesday, Arjun and I would cook our usual spiced lentil curry at home, but tonight is a special exception because it's our friend's birthday, so I'm heading over to celebrate and have a meal at their house instead. Arjun is actually staying home and ordering some Thai takeout."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Happy birthday to your friend! A birthday celebration is the perfect excuse to skip the kitchen and enjoy some hospitality. I hope the food is delicious. Are you planning on staying out late tonight, or do you have a specific time in mind to wrap things up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely need to keep it reasonable since it's a weeknight. I'm aiming to have my lights switched off and be fully asleep right at 23:00. Arjun, though, said he's probably going to stay up past 1 AM playing video games since he doesn't have an early morning tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A 23:00 bedtime sounds like a smart plan to keep you feeling refreshed tomorrow, even if Arjun is staying up late gaming! Will Biscuit be keeping Arjun company while you're out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh absolutely, Biscuit loves when Arjun stays up late because it usually means he gets some extra belly rubs on the couch. He's very spoiled."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He definitely knows how to work the system! It sounds like everyone has a good evening ahead."
+    },
+    {
+      "speaker": "user",
+      "text": "They really do! And honestly, those retro synth beats really saved my afternoon; I managed to finish a whole database migration before wrapping up work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a huge accomplishment! Database migrations can be so tedious, so getting that done is fantastic. Have a wonderful time celebrating your friend's birthday tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm going to head out now. Catch up tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "dinner at a friend's place",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: music should be 'synthwave playlists', conversation gives 'missing'",
+    "pref_leak: reading should be 'not mentioned', conversation gives 'missing'"
+  ]
+}

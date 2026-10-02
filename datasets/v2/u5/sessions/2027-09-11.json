@@ -1,0 +1,86 @@
+{
+  "user_id": "u5",
+  "day": 560,
+  "date": "2027-09-11",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Saturday. How has your weekend been starting out? Did you get up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but nice day. I actually had to go into the office for a couple of hours to prep for some meetings next week. Usually on Saturdays I don't have any commute at all, but since the morning weather was so gorgeous, I decided to travel there on foot instead of staying in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, walking to the office on a beautiful morning sounds like a lovely way to start the day, even if you had to work. Did you get to relax after you finished up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Right after that, I met up with a bunch of other outdoor enthusiasts to trek up a mountain trail together. It was a wonderful afternoon. My sister Meera told me she just did a solo road run in Seattle today, which sounded intense, but our group trek was much more relaxed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great group to spend the afternoon with! How did your knee hold up on the trail? I know your physical therapist cleared you, but it's always good to be careful."
+    },
+    {
+      "speaker": "user",
+      "text": "It actually felt really solid! I was a little nervous, but there wasn't any pain at all. I kept the pace moderate just to be safe. Biscuit had to stay behind since dogs aren't allowed on that specific trail, but he got a nice walk around the neighborhood with Arjun earlier."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful news about your knee! Glad to hear it's feeling strong. Are you and Arjun planning a nice dinner to celebrate a successful active day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, dinner is a bit of a mixed bag tonight. Because I had my wisdom teeth taken out recently, I've had to completely switch up my evening meal routine. So tonight, I'm sticking to warm puréed broths and some blended fruit beverages. Meanwhile, Arjun is having a massive, solid veggie burger right in front of me!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that's tough! Watching someone eat a burger when you're restricted to liquids and soft foods is the ultimate test of willpower. How is the recovery going otherwise?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, the healing is going well, but I'm definitely getting tired of this liquid diet. Being a vegetarian already limits some options, but trying to keep all these blended drinks and purees strictly vegetarian and exciting is a whole other challenge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Hopefully you'll be back to your usual vegetarian meals very soon. Since you're taking things easy with the jaw and the knee, have you thought about getting back into bouldering or trail running anytime soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely itching to get back to bouldering, but I'm going to wait a bit longer just to be safe. As for trail running, I might try a very light, flat jog next week if my knee keeps feeling this good. For tonight, though, it's just ice packs and rest!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "walked",
+      "dinner": "soup and smoothies",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      },
+      "c1": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 331,
+  "date": "2027-01-25",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday starting off in Denver? Hope you and Biscuit had a good weekend!"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a really busy Monday at the fintech startup. I had to stay online super late to handle a deployment issue, so I completely skipped the high-intensity interval session I usually do in the living room. Arjun got his weightlifting workout in, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those late-night deployment issues are stressful! It's completely fine to skip a workout on days like that. Did you at least get a chance to eat a proper dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did! My sister Meera texted saying she just ordered delivery in Seattle, but Arjun and I actually cooked a subscription box dinner where all the fresh ingredients are pre-measured and sent to your house."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Those delivery boxes make it so much easier to get a fresh meal without the hassle of planning after a long day. How was the rest of your weekend before Monday got so busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was really nice! Actually, I took up trail running on January 24, 2027."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, trail running! That sounds like a wonderful way to enjoy the Colorado outdoors. How did your knee hold up with that, given your past injury?"
+    },
+    {
+      "speaker": "user",
+      "text": "It felt great! Since my physical therapist cleared me for normal activity a while ago, I didn't have any issues at all. It was really nice to be out running."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic to hear! It must feel amazing to be fully active again and exploring the trails around Denver. Are you planning to make it a regular thing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think so! I'm hoping to get out there again next weekend if the weather holds up. But for tonight, I'm just looking forward to relaxing with Arjun and Biscuit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You definitely deserve a relaxing evening after such a long workday. Give Biscuit some pets for me!"
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely will. Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 10,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "skipped workout",
+      "commute": "not mentioned",
+      "dinner": "meal-kit dinner",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "hobby.trail": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: hobby.trail (took up trail running (this happened on 2027-01-24))",
+    "invention: started trail running yesterday"
+  ],
+  "repair_method": "revise_existing"
+}

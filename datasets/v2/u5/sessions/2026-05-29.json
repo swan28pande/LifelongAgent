@@ -1,0 +1,75 @@
+{
+  "user_id": "u5",
+  "day": 90,
+  "date": "2026-05-29",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Priya! How is your day going over in Pittsburgh? Are you wrapping up a busy week at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a busy but good Friday. I actually decided to pedal my two-wheeler into the office today to get some fresh air. My coworker Dana usually joins me on her own bike, but she ended up taking the city bus today because she's so exhausted from her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, I can imagine triathlon training takes a serious toll! It's great you still got to ride in, though. How are things looking on the backend engineering front today? Any major deployments before the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Fortunately, we got our main database migration pushed yesterday, so today was mostly just monitoring performance and writing some documentation. It's a relief not to have a Friday afternoon crisis for once!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is always the best kind of Friday! Since you have a calmer evening ahead, do you have any fun plans tonight? Maybe spending some time at the pottery wheel?"
+    },
+    {
+      "speaker": "user",
+      "text": "No pottery tonight, though I definitely need to get back to the studio soon to glaze some bowls. Tonight is going to be incredibly low-key. I'm actually planning to pick up a box of maki and sashimi rolls from that local Japanese spot to eat on my couch. My sister Meera in Seattle texted me earlier saying she's spending her evening making a massive batch of homemade ramen, but I am definitely not up for that much cooking!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ha, homemade ramen is quite the project! Ordering some fresh sushi to enjoy on the couch sounds like the perfect way to unwind after a long week. Do you have any plans to play some piano this weekend, or is it going to be a completely lazy couple of days?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll probably spend a little time at the keys tomorrow. I've been trying to smooth out a tricky transition in a classical piece I've been practicing, so a quiet Saturday morning with some coffee and the piano sounds perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, peaceful Saturday morning. Is it a piece you've been working on for a while?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, off and on for a couple of weeks. It's nice to have something offline to focus on when I spend all day staring at code."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, it's so important to have that balance. I hope you get that section smoothed out tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. I think I'm going to head out now to grab my dinner before the rush. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "cycling",
+      "dinner": "takeout sushi",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

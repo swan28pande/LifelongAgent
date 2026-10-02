@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 81,
+  "date": "2026-05-20",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Wednesday been going over in Pittsburgh? Did you get a chance to fit in any piano practice or bouldering today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. The weather was perfect, so I actually pedaled my way to the office this morning on one of those public share-cycles instead of taking my usual transit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A two-wheeled commute is a great way to start the day. Did things stay busy once you got to the fintech office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Way too busy, unfortunately. A late afternoon strategy meeting dragged on forever and totally threw off my evening plans. Because of that delay, I ended up completely skipping my evening meal today, rather than prepping my usual salmon bowl."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, going without dinner is tough, especially when you have to miss out on your favorite salmon bowl! I hope you aren't feeling too drained."
+    },
+    {
+      "speaker": "user",
+      "text": "I'm okay, just a bit tired. I did manage to get some exercise in earlier, though. A friend invited me to go to the local public lanes for some laps, so I went there with her instead of doing my typical swim routine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great you still got some active time in! Did your friend join you in swimming laps?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, she opted for water aerobics in the shallow end while I did my laps. Oh, and I ran into my coworker Dana earlier—she's still training hard for her triathlon and said she did a long run this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, Dana is really staying dedicated! It's nice you both got some movement in today. How have things been going with your other hobbies lately? Have you had any time for pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much clay throwing lately, but I did spend some time last night playing a classical piece on the piano, which was incredibly relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Music is such a wonderful outlet. It must be nice to have that quiet creative time to yourself, especially living solo in the city."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. Being single gives me plenty of freedom to just focus on my music and bouldering without having to coordinate schedules with anyone else, even if I do miss having Meera nearby since her move to Seattle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you've carved out a really wonderful, independent life for yourself in Pittsburgh. I just hope you can get a giant breakfast tomorrow to make up for tonight's missed dinner!"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I'm already planning a massive breakfast first thing in the morning. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "swim at the community pool",
+      "commute": "cycling",
+      "dinner": "skipped dinner",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user owns a bicycle.",
+    "invention: The user is a member of a private athletic club.",
+    "invention: The user is learning to play a Chopin piece on the piano."
+  ]
+}

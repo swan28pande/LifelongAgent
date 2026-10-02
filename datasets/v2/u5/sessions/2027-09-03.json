@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 552,
+  "date": "2027-09-03",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your day been going over at your climate-tech company? Is Biscuit keeping you company?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It’s been a really busy but productive Friday. My team had a lot of code to push, so I've been heads-down most of the afternoon. And yes, Biscuit has been snoozing right by my feet, which is always nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy setup for a hectic day. How do you usually stay focused when you have to power through all those engineering manager tasks?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, music is key for me. While Arjun was listening to classical piano to focus today, and my coworker Dana went with heavy metal, I spent my work hours looping those retro-futuristic electronic instrumentals with the heavy 80s synthesizer vibes. It keeps my energy up without distracting me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that sounds like a great soundtrack! Does that kind of electronic music remind you of the live synthwave show you and Arjun went to a while back?"
+    },
+    {
+      "speaker": "user",
+      "text": "It totally does! It has that same driving, neon-soaked feeling. It's the perfect backdrop for writing up technical specs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I love that. Since it's Friday evening now, do you have any relaxing plans lined up to unwind from the busy work week?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! I'm planning on getting some reading done tonight. Arjun is actually curled up with a physical paperback right now, but I'm going to just sit in my favorite armchair and listen to a narrator read a sci-fi novel to me through my headphones."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. Is this sci-fi novel for your neighborhood book club, or did you find it using your Carnegie Library card?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is actually the selection for our book club this month! I'm really enjoying the story so far. My sister Meera in Seattle was telling me earlier that she's been choosing history podcasts instead of stories lately, but I'm definitely hooked on this book."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good sci-fi story is hard to beat. How is Meera liking Seattle and her data science role at the health-tech company?"
+    },
+    {
+      "speaker": "user",
+      "text": "She loves it, though she says the health-tech world keeps her very busy. Anyway, I think I'm going to get started on my novel now. The upstairs neighbors' puppy has been barking, so putting on my headphones will be the perfect way to block it out!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "audiobooks",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'"
+  ]
+}

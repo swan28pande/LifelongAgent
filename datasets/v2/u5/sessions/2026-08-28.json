@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 181,
+  "date": "2026-08-28",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your day been going in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. I actually decided to get some fresh air this morning and pedaled my bicycle all the way to the office. My coworker Dana took the bus today, but I really wanted to enjoy the morning weather on two wheels."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to the day! How is your knee holding up with that kind of movement?"
+    },
+    {
+      "speaker": "user",
+      "text": "It actually felt okay! I've had to completely shift my daily physical routine lately. Ever since I tore that knee ligament while climbing at the bouldering gym, I've had to swap out my usual workouts for the rehabilitation movements prescribed by my physical therapist. Meanwhile, Dana did a massive swim session today for her triathlon training, but I'm strictly stuck to my leg-strengthening and mobility drills."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's smart to focus on those rehab drills so you can heal properly. How did the rest of your workday go at the fintech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was productive, but I had to really zone in on some backend coding. I had some mellow, wordless chill-hop tracks playing in my headphones all afternoon to keep me focused. Dana was blasting loud heavy metal at her desk, which I definitely couldn't do!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, instrumental music definitely sounds much better for concentrating on code. Do you have any relaxing plans to kick off the weekend tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes! Arjun and I are going out to a nice local restaurant for a meal together tonight to celebrate the end of the week. My sister Meera texted me that she's just ordering takeout at her place in Seattle tonight, but I was really craving a proper night out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A night out sounds perfect. Are you hoping to try that new ramen place that opened up on your street, or heading somewhere else for some good pescatarian options?"
+    },
+    {
+      "speaker": "user",
+      "text": "We might check out the ramen spot, or maybe another favorite nearby. Either way, I'm looking forward to someone else doing the cooking! Because of the late dinner, though, I'm planning on turning the lights out to sleep at half past ten. Arjun wants to stay awake until at least midnight to play video games, but I need my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep by ten-thirty sounds like a great way to recharge after a busy week. I hope you and Arjun have a wonderful dinner!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'm definitely ready for a relaxing weekend. Speak to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "physio exercises",
+      "commute": "cycling",
+      "dinner": "dinner date out",
+      "music": "lo-fi beats",
+      "reading": "not mentioned",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

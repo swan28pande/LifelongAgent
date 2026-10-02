@@ -1,0 +1,89 @@
+{
+  "user_id": "u5",
+  "day": 456,
+  "date": "2027-05-30",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Sunday been going in Denver? Have you and Arjun been getting up to much today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty relaxing Sunday. Arjun spent his morning doing a heavy weight session at the gym, but I just took Biscuit out for a nice, long stroll around the neighborhood right as the sun was rising to get our exercise in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to the day. Biscuit must have loved the early walk! How is your knee holding up lately? I know your physical therapist cleared you for normal activity, but have you been able to do any trail running or bouldering?"
+    },
+    {
+      "speaker": "user",
+      "text": "The knee is actually feeling fantastic! I went bouldering on Friday and didn't feel a single twinge of pain. I'm so glad to be back on the climbing wall."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful news, Priya! It must be such a relief to climb without worrying. What are you and Arjun planning for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, my sister Meera mentioned she was feeling lazy and ordered takeout in Seattle, but Arjun and I decided to cook. We ended up preparing one of those subscription meals where they mail you all the pre-measured ingredients and a recipe card. It was actually super delicious!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those pre-portioned boxes can be so convenient. What was on the menu? Since you're pescatarian, did you get a nice seafood dish?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, we made a really delicious pan-seared trout with a lemon-herb butter sauce and some roasted asparagus. It's so nice not having to think about meal planning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and perfect for a Sunday evening. How are you planning to wind down for the rest of the night?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually about to lie down and listen to a narrator read a sci-fi novel through my headphones. Meera told me she's currently reading a physical hardcover, but I'm just putting on a digital voice recording to listen to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Listening to a story is such a cozy way to relax before sleep. What time are you hoping to drift off tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Arjun is planning to stay up and watch a movie until midnight, but I'm going to turn off my bedside lamp and go to sleep exactly sixty minutes before he does."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An 11:00 PM bedtime sounds like a great way to start the work week fresh tomorrow at the fintech startup! I hope you have a wonderful night's sleep and a great start to your week, Priya."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! Have a great night too!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "meal-kit dinner",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

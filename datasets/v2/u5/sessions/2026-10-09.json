@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 223,
+  "date": "2026-10-09",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your day been over in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. Just wrapping up some of my backend engineering work. How are things with you?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm doing well, thanks! Are you and Arjun up to anything fun this weekend, or are you both just looking forward to winding down?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it pretty low-key. Arjun is actually planning to spend his evening digging into a thick historical biography he just bought, but I'm going to stick to the suspenseful fiction books I recently checked out from the Carnegie branch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those mystery books from the library sound like a great way to spend a Friday night! Are they keeping you on the edge of your seat?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely! I got a couple of really gripping psychological suspense novels, and they are so much more engaging than Arjun's history books."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, a good mystery is hard to beat! It sounds like the perfect cozy night in."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. I'm hoping to get through a good chunk of pages before I turn off the lights at half past ten tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very relaxing plan. Getting some solid rest is always a great way to start the weekend."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I definitely need to catch up on sleep. My coworker Dana was saying she's been staying up until midnight every night lately, but my body definitely needs me to be asleep by half past ten."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Midnight is definitely on the later side, especially with a busy job! Half past ten sounds much more sustainable. How is Dana doing, by the way? Is she still enjoying having her new beagle, Pepper?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! Pepper is keeping her very busy, but she absolutely loves her. It's been great seeing how happy she is."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "library thrillers",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

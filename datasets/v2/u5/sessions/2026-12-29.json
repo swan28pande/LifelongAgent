@@ -1,0 +1,83 @@
+{
+  "user_id": "u5",
+  "day": 304,
+  "date": "2026-12-29",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Tuesday going? Have things settled down at your backend engineering job since the move to Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, things are finally starting to feel routine. Actually, now that I've relocated for this office transfer, I've completely changed up how I get to work. Today I rode the electric transit train that runs on the tracks through the city. My coworker Dana ended up driving her SUV, but I really preferred avoiding the traffic on the rails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! Taking the commuter train sounds like a much more relaxing way to start the day. How is Biscuit adjusting to the new place while you're busy with work?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing wonderfully, mostly just snoozing nearby while I'm at my computer. Today while I was coding, I had those retro 80s-style electronic beats playing in my headphones to keep me focused. Dana mentioned she was listening to acoustic jazz today, but those electronic synth tracks are my go-to for concentrating."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those retro electronic beats are perfect for coding! It sounds like a productive afternoon. What are you and Arjun planning for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Arjun actually decided to order some sushi for himself, but I wanted to cook, so I'm boiling some long Italian wheat noodles and tossing them with a fresh tomato-basil sauce."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Mm, a fresh tomato-basil noodle dish sounds perfect and fits right into your pescatarian meals. Do you have any relaxing plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! Arjun is engrossed in a historical biography tonight, but I'm going to curl up with a suspenseful mystery novel that I borrowed from the Carnegie branch recently."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A suspenseful mystery is the perfect way to wind down. I'm glad you're getting good use out of your library card! Are you planning to stay up late reading, or do you have an early start tomorrow?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have an early meeting, so I need to get some rest. My sister Meera texted saying she's staying up past midnight in Seattle, but I'm aiming to turn off my bedside lamp and sleep right when the clock hits sixty minutes before midnight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible plan to make sure you're rested for your meeting. Sleep well when you turn in at eleven!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to start cooking now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "light rail",
+      "dinner": "pasta",
+      "music": "synthwave playlists",
+      "reading": "library thrillers",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'morning dog walk'"
+  ]
+}

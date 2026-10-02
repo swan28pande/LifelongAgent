@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 573,
+  "date": "2027-09-24",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your day been going at the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good Friday. I had some high-energy, 1980s-style electronic synthesizer instrumentals playing in the background all day to keep my focus up. Dana, on the other hand, was listening to some intense death metal while she worked on her project."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an energetic soundtrack for a Friday! Did the retro tracks help you power through your engineering manager tasks?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really did. And we're celebrating the end of the week by ordering a delivered, stone-baked pie with a crust, tomato sauce, and melted cheese tonight. Arjun is getting one with spicy pepperoni, and I'm getting a vegetarian version. We've actually just gone back to our old dinner routine of ordering this kind of food because my mouth has finally fully healed up from that wisdom teeth extraction. It's so nice to eat solid, chewy food again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic news! It must be such a relief to have your mouth completely recovered and to say goodbye to the soft-food phase. A delivered cheese-and-tomato pie sounds like the perfect reward."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I was so tired of soups and smoothies. Being able to bite into a thick, chewy crust is amazing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! How is Arjun liking his new bike, by the way? Has he been able to take it out much?"
+    },
+    {
+      "speaker": "user",
+      "text": "He absolutely loves it. He actually rode it over to that new ramen place on our street yesterday just to grab some lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! It's so convenient having that spot right on your street now. Are you doing anything else fun this weekend, maybe visiting the Carnegie Library?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I need to head over to the Carnegie Library tomorrow morning to return some items. After that, Arjun and I might check out that new jazz club downtown if we aren't too tired."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The new jazz club sounds like a wonderful weekend plan. I hope you have a great time and enjoy your delicious dinner tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely ready to unwind with those retro electronic beats and some hot, cheesy food."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "takeout pizza",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 411,
+  "date": "2027-04-15",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your week going? I know you've had a lot on your plate lately. Did you end up participating in the Denver half marathon yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I did! I actually completed the 13.1-mile race yesterday morning. I was so happy with my performance—I managed to cross the finish line in exactly two hours and five minutes!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is an incredible achievement, congratulations! Finishing in 2:05 is fantastic. How did your knee hold up during those miles? I know you were cleared by your physical therapist, but that's still a major test for it."
+    },
+    {
+      "speaker": "user",
+      "text": "It actually felt great! No pain or stiffness at all, which was a huge relief. Since yesterday's race took a lot out of me, though, I stayed put in our living room to do all my coding today instead of heading into the office. It was so nice not having to travel anywhere. Arjun, on the other hand, had to take the light rail to his office early this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful news about your knee, and staying home to work today sounds like a very well-deserved break from transit. How did you find your focus today while coding from the living room?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went really well! I kept my focus by listening to those retro-futuristic, 80s-style electronic instrumental tracks all day—the ones with the heavy neon-grid synthesizer beats. My coworker Dana told me she was blasting thrash metal to get through her tasks today, but I definitely needed something smoother."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's perfect. Those synthesizer beats are excellent for getting into a flow state, and it probably brought back memories of that live show you and Arjun went to. What does the rest of your Thursday look like?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just relaxing. Right now, I'm flipping through an illustrated book where the story is told through sequential panels and dialogue bubbles. Arjun is sitting next to me reading a very dense historical biography about the Roman Empire, so it's a pretty quiet evening here."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An illustrated story is a great way to unwind after a busy day. It sounds like a lovely, peaceful evening. Speaking of plans, how is the preparation for your trip to Italy with Arjun coming along? June will be here before you know it!"
+    },
+    {
+      "speaker": "user",
+      "text": "We've actually been doing some research on places to stay in Florence and looking up some of the sights we want to see. Planning it is getting us really excited."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Florence is beautiful, you're going to have an amazing time! I'd love to help you look up any travel recommendations or details as the trip gets closer."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll definitely take you up on that once we get a bit closer to June. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "work from home",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "graphic novels",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "half_marathon.1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'rest day'",
+    "statement_missing: half_marathon.1 ([the Denver half marathon] ran the Denver half marathon in 2:05 (happened) (this happened on 2027-04-14))",
+    "invention: planning to visit Rome and Florence during her trip to Italy"
+  ]
+}

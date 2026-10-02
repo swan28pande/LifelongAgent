@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 140,
+  "date": "2026-07-18",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Saturday. How is your weekend starting off in Pittsburgh? Is Biscuit keeping you company today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, Biscuit is currently napping right at my feet, enjoying the air conditioning. It's a gorgeous summer day here, but I'm moving a little slow today because I'm pretty exhausted."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, did you have a late night? What kept you up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I didn't actually crawl into bed until two hours past midnight. Usually, I am fast asleep by half past eleven in the evening, but I made a one-time exception because a close friend was hosting a housewarming party and I wanted to stay until the end. My sister Meera was the exact opposite; she texted me that she went to bed at nine in the evening Seattle time because of her hectic work week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is indeed quite a late night, but a housewarming party is a great excuse to stay out! I hope it was a fun celebration. How is Meera adjusting to Seattle, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "The party was wonderful! It was great to catch up with everyone. Meera is liking Seattle so far, though she's still getting settled into her new job and routine. She says the pace is a bit different from Pittsburgh."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's a big transition! Speaking of jobs, how have things been at the fintech startup lately? Are things calming down at all for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, thankfully. It's nice to have a break from coding and backend architecture for a couple of days. I'm hoping to spend some time doing pottery later this afternoon to just unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pottery sounds like the perfect way to recharge after a busy week. Are you working on a specific piece today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm trying to finish shaping a large clay bowl I started last weekend. It's therapeutic to just focus on the wheel and the clay."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. Hopefully, you get some rest today too after that late night. Are you planning on visiting that new ramen place on your street sometime this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might pop in there tomorrow afternoon to try their vegetarian broth! Right now, though, I think Biscuit and I are just going to enjoy a quiet afternoon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'morning dog walk'",
+    "pref_wrong: bedtime should be '2:00 am', conversation gives 'other'",
+    "invention: The user plans to visit the Carnegie Library next week."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 186,
+  "date": "2026-09-02",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty busy. I actually had to commute to the office today, and I ended up booking a car through an app on my phone since my knee is still giving me a bit of trouble. Arjun actually braved the morning rush on his bicycle, which is brave of him!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oof, Arjun is brave! How is your knee doing, by the way? Is the recovery going okay after that ligament tear?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's getting there, slowly. I'm mostly just trying not to overdo it. Speaking of which, being at the office meant I really needed to block out the background noise to get any coding done. I put on that stream of mellow, crackly instrumental hip-hop tracks to help me concentrate. My coworker Dana was apparently blasting high-energy techno in her headphones to stay focused, which would have given me a headache!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, those mellow instrumental tracks definitely sound more conducive to backend engineering! How is the work on the fintech platform going today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, we're pushing a major API update, so it's been intense. I'm glad to be home now, though. I've got Biscuit curled up at my feet while I decompress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Give Biscuit some belly rubs for me! Are you planning a relaxing evening to unwind from that big API push?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm keeping dinner super simple. I'm heating up my wok to quickly toss some ingredients over high heat with a savory soy-ginger glaze. Meera called earlier and said she was just having a basic turkey wrap, but I wanted something hot and freshly tossed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and quick! Cooking with a wok is perfect when you're tired. Have you had any time to sit down at the piano lately, or has work been too consuming?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a little bit last night! Just some simple classical pieces to clear my head. It's a nice way to step away from screens for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely way to unwind. I hope the API launch goes smoothly tomorrow and that your knee continues to heal up well!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I'm going to go start cooking now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "rideshare",
+      "dinner": "stir-fry",
+      "music": "lo-fi beats",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_wrong: dinner should be 'stir-fry', conversation gives 'veggie stir-fry'",
+    "pref_absent: music should be 'lo-fi beats', conversation gives 'missing'",
+    "pref_leak: reading should be 'not mentioned', conversation gives 'missing'"
+  ],
+  "repair_method": "revise_existing"
+}

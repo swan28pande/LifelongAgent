@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 401,
+  "date": "2027-04-05",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Monday. How is your day going? Since we just entered April, I was wondering how your training is going for the Denver half marathon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Training is going really well, thanks for asking. Actually, instead of my usual trail run today, a friend invited me to do some laps in the indoor lanes at the local recreation center, so I did that for my exercise. Arjun went for his usual outdoor run on the paved path, but I enjoyed changing it up with some water cardio!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a refreshing change of pace! How did your knee feel during the swim? I know you've been careful with it since your recovery."
+    },
+    {
+      "speaker": "user",
+      "text": "The knee felt absolutely perfect, no issues at all. Aside from that, I had a really focused coding session today. I listened to those retro-futuristic, 80s-style electronic beats on my headphones to keep my momentum going. Arjun was listening to classic jazz on his speakers, but my electronic tracks really got me in the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear your knee is holding up well, and those synth tracks are always great for getting into a flow state! Did you and Arjun end up cooking tonight, or maybe trying that new ramen place on your street?"
+    },
+    {
+      "speaker": "user",
+      "text": "We stayed in and cooked up one of those boxed meals where they mail you all the pre-measured ingredients and recipe cards. We made a really nice pan-seared cod dish, which fits perfectly with my seafood diet. My sister Meera texted me that she just ordered Thai takeout in Seattle, but I was happy with our home-cooked box."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That cod dish sounds delicious, and it's great that it fits your pescatarian lifestyle so well. Are you planning to just relax for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, that's the plan. I'm going to spend some time tonight reading the fiction selection for that neighborhood literary circle I joined recently. My coworker Dana mentioned she is reading a biography this evening, but I'm excited to make some progress on our group's novel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope the novel is turning out to be a good read! How is Biscuit doing tonight? Is he curling up with you while you read?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, Biscuit is snoring right at my feet, he's such a sweet companion. I'm hoping to get through a few more chapters before shutting my eyes and turning off the lamp precisely sixty minutes before midnight. Arjun is a total night owl and plans to stay up playing video games, but I want to make sure I'm asleep on time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Biscuit sounds like the perfect reading buddy. Getting to sleep at that hour is a great goal, especially to keep your energy up for your half marathon prep. I'll let you get to your book!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yes, keeping a solid sleep routine is key. I'm going to put the phone down now and dive into the chapter. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "swim at the community pool",
+      "commute": "not mentioned",
+      "dinner": "meal-kit dinner",
+      "music": "synthwave playlists",
+      "reading": "book club novel",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'"
+  ]
+}

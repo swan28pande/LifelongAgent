@@ -1,0 +1,84 @@
+{
+  "user_id": "u5",
+  "day": 402,
+  "date": "2027-04-06",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your Tuesday going so far? I was wondering how your knee has been feeling lately—have you been able to do any trail running or bouldering since your physio gave you the thumbs up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! My knee is actually feeling pretty good, thanks for asking. I didn't do any running today, though; I just took Biscuit on his usual morning loop around the block to keep things low-key. My coworker Dana did a grueling swim workout for her triathlon prep today, but I was happy to just stick to a gentle stroll with my lab."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A gentle morning walk with Biscuit sounds like a great way to start the day. Are you working from the fintech office today, or are you staying put?"
+    },
+    {
+      "speaker": "user",
+      "text": "No office trip today. I just stayed put and worked from my desk in our living room. Arjun actually had to travel to his physical office, but I got to spend my workday at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Working from the living room desk definitely has its perks. How has the backend engineering work been going? Do you usually listen to anything to stay focused while coding?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I had those retro-futuristic 80s synthesizer tracks playing in the background all day to keep me in the zone. Arjun was blasting some bebop jazz on his speakers before he left, but I stuck to my retro-electronic music."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, those retro-electronic beats are always great for getting into a flow state! Speaking of relaxing, are you planning to do any reading tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I didn't do any reading at all today. Instead of my usual group pick, I ended up dozing off on the couch really early, so I didn't read anything. Arjun spent his evening looking at a cycling website, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, it sounds like you really needed the rest! Dozing off early on the couch is sometimes exactly what your body needs. Since you've been taking it easy, have you been playing the piano at all lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! I spent a couple of hours practicing some classical pieces over the weekend. It's a nice way to unwind without putting any pressure on my knee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. It's wonderful that you can still enjoy your music while your knee fully recovers. Are you still planning to do any light training for the half marathon later this month, or are you focusing on the Italy trip planning?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! I'm hoping to do a few short, flat runs soon to see how the knee holds up for the half marathon. And Arjun and I have been looking at train schedules for Italy, which has been really fun."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 10,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "work from home",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "no reading",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: reading should be 'no reading', conversation gives 'other'"
+  ],
+  "repair_method": "revise_existing"
+}

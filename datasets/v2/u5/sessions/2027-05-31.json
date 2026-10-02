@@ -1,0 +1,82 @@
+{
+  "user_id": "u5",
+  "day": 457,
+  "date": "2027-05-31",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday starting off? I hope you, Arjun, and Biscuit are all doing well in Denver."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Monday is off to a busy start, but it's going fine. I actually rode the electric transit train that runs on the street-level tracks into the office today. It was nice to just sit and look out the window. My coworker Dana cycled in using those new bike lanes, but I wasn't up for a bike ride today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking the train sounds like a peaceful way to start a busy workday, and it's great Dana got to use the new lanes. How is your knee feeling today? Are you able to stay active?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's feeling really strong! I actually did some jogging along the unpaved mountain paths early this morning, just enjoying the fresh air and the trees. Arjun went to the local gym for some indoor weightlifting instead, but I really wanted to be out in nature."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic news about your knee! Jogging on unpaved paths is a great milestone for your recovery. Did Biscuit get to join you for any of it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not for the jog itself, but I took him on a nice slow walk around the neighborhood afterward. He's much more of a leisurely sniffer than an athlete, but he loved the morning sunshine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He sounds like a very sweet companion. How did the rest of your workday at the fintech startup go after that great morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was incredibly hectic. By the time I finished up, I was completely exhausted. Because I was too tired to cook, we deviated from our usual meal-kit dinner tonight. Instead, I picked up a massive, foil-wrapped stuffed tortilla filled with beans and rice from the neighborhood Mexican spot. Arjun ordered a quesadilla from there, but my rolled-up bean and rice choice was exactly what I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfectly deserved comfort meal after a long, exhausting day. Sometimes you just need a break from prep work in the kitchen!"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. It's so easy to find great vegetarian-friendly options around here, which makes keeping up with my pescatarian diet very simple, even when I'm too tired to cook."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Denver really does have an excellent food scene for that. It must make things much easier. Did you get to hear any updates from Dana about her triathlon training today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes! She was telling me all about her open-water swim practice over the weekend. Honestly, hearing about her schedule makes me even happier to just be relaxing on the couch right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all! You've had a very active day yourself. Enjoy your relaxing evening on the couch, Priya!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "trail run",
+      "commute": "light rail",
+      "dinner": "takeout burrito",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: exercise should be 'trail run', conversation gives 'long run'",
+    "invention: subscribes to a meal-kit delivery service"
+  ]
+}

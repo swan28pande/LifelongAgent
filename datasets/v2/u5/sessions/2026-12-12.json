@@ -1,0 +1,91 @@
+{
+  "user_id": "u5",
+  "day": 287,
+  "date": "2026-12-12",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Saturday. How is your weekend starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm actually spending a little bit of time today catching up on some backend engineering tasks for work. Just trying to clear out my queue so next week is a bit lighter."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope it goes quickly! Do you have some good music playing to keep you focused while you work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! I currently have those retro-futuristic, neon-inspired electronic instrumentals playing—the ones with the driving basslines and 80s synthesizer vibes. It really helps me stay in the zone. Arjun is sitting nearby doing some admin stuff, and he chose to listen to classical piano recordings instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, focused atmosphere. Those synthesizer beats must bring back memories of that live show you and Arjun went to!"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely! It definitely has that same energetic vibe. It's perfect for writing code."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Speaking of your work and Arjun, have the two of you had any more discussions about that Denver transfer option your company offered?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've talked about it a bit more. It's a tough decision because we really love Pittsburgh, and all our friends are here. But Denver has its own appeal, so we're just weighing the pros and cons slowly without rushing into anything."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes a lot of sense. It's a huge step, so taking your time to think it through is smart. How is Biscuit doing, by the way? Would he enjoy the Denver snow?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, Biscuit would probably love the snow, though he's pretty content just lounging around here too. He's been keeping me company while I work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He's the best work companion! By the way, have you had a chance to check out that new ramen place that opened up on your street yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't eaten there yet, but I did walk past and look at their menu. Since I'm a pescatarian, I was happy to see they have a few excellent seafood options, including a spicy miso salmon ramen. I definitely want to try that soon!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds amazing! Perfect for a chilly day. I hope you get to try it soon. I'll let you get back to your coding now!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I should finish up this deployment. Have a great weekend!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "You too, Priya! Take care."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'",
+    "invention: Arjun is usually a meat-and-potatoes guy",
+    "invention: Arjun listens to aggressive death metal"
+  ]
+}

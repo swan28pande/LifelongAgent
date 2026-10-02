@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 288,
+  "date": "2026-12-13",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Sunday. How has your weekend been going? Have you been relaxing at home with Biscuit today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, Biscuit and I have just been lounging around today. I spent some time brushing his coat and we just hung out on the couch. It's been a very peaceful Sunday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Sunday. Speaking of the future, have you given any more thought to that Denver transfer offer your company made? It's quite a big decision to make."
+    },
+    {
+      "speaker": "user",
+      "text": "I've been thinking about it a lot, actually. Arjun and I talked about what a move to Colorado would mean, but I'm still weighing the pros and cons. Pittsburgh has been home for a while, and my job here is good, so it's a tough call."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely is a major transition to consider, especially with your life established here in Pittsburgh. How are you feeling about dinner tonight? Are you planning to cook something, or maybe check out that new ramen spot down the street?"
+    },
+    {
+      "speaker": "user",
+      "text": "Arjun actually decided to order some takeout sushi from downtown, but I wanted to be practical, so I ended up reheating the extra portions of the vegetarian chili we made a couple of nights ago. It's just sitting in the fridge anyway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reheated chili sounds perfect for a chilly December evening, and it's great that you're clearing out the fridge. Did Arjun enjoy his sushi?"
+    },
+    {
+      "speaker": "user",
+      "text": "He did! He got some spicy tuna rolls and really liked them. I'm glad I stuck to my chili though, it was super filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Since it's Sunday night, do you have a specific plan for when you want to head to sleep tonight to prepare for the workweek?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do. I want to make sure I'm well-rested for tomorrow, so I'm planning to tuck myself in and shut my eyes exactly one hour before midnight tonight. Arjun is a night owl and said he'd probably stay up past 2 AM, but I need my sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An hour before midnight is a great target to ensure you're fully charged for your backend engineering work tomorrow. Did you get a chance to catch up with your sister Meera today too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! We talked on the phone for a bit. She's really enjoying Seattle and settling into her new data science role at the health-tech company there. It's great to hear her doing so well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. It must be so exciting for her to start this new chapter. Well, I'll let you get ready for bed so you can hit your target time!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to wind down now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "leftovers",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_leak: music should be 'not mentioned', conversation gives 'missing'",
+    "pref_leak: reading should be 'not mentioned', conversation gives 'missing'"
+  ]
+}

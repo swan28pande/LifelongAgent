@@ -1,0 +1,88 @@
+{
+  "user_id": "u5",
+  "day": 306,
+  "date": "2026-12-31",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy New Year's Eve, Priya! How are you wrapping up 2026 today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It is actually a massive milestone day for us because Arjun and I officially moved in together yesterday! We spent all of yesterday hauling boxes and furniture into our new shared place."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, congratulations! That is such an exciting step for you and Arjun. How did the move go? Is Biscuit adjusting to the new environment?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went really smoothly, though we are definitely feeling sore today from all the heavy lifting. Biscuit is adjusting amazingly well—he already found a sunny patch of floor by the living room window and made himself right at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful to hear. A good sunny spot is essential for a dog. Are you guys mostly unpacked, or are you celebrating tonight surrounded by cardboard boxes?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually got most of the major things put away, but there are definitely still a few stray boxes. I did manage to get some fresh air today, though. Before starting my workday, I took our yellow lab out for a nice, brisk stroll around our new neighborhood first thing in the morning. My coworker Dana told me she did an intense swim workout for her triathlon training today, but a quiet, early walk was perfect for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A peaceful morning walk sounds like a great way to ground yourself after a big move. And it is great that Dana is staying on top of her training. How is your knee holding up after all that walking and carrying boxes?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is feeling really strong! I was a little worried with all the stairs yesterday, but no pain at all. I am hoping to get back on the bouldering wall sometime soon, though I will definitely keep it easy at first."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic news. Definitely listen to your body when you head back to the climbing gym. Do you and Arjun have any special plans for dinner tonight to celebrate both the new place and the new year?"
+    },
+    {
+      "speaker": "user",
+      "text": "We decided to treat ourselves to takeout tonight. Arjun ended up ordering a wood-fired pepperoni pizza, while I opted for a savory, spiced seafood and fish simmered in a rich coconut gravy from the Indian restaurant down the street, served with some jasmine rice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and incredibly comforting. There is nothing like a warm, flavorful meal to make a new place feel like home. Are you keeping it strictly seafood tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, just fish and shrimp in this one! It is packed with aromatic spices, and it is so nice not to have to wash any pots and pans on our first official night here."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like the perfect start to this new chapter. I hope you, Arjun, and Biscuit have a wonderful, cozy evening. Happy New Year, Priya!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you so much! Happy New Year to you too, and I will check in with you in 2027!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "curry",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "rel.cohabit": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'curry', conversation gives 'veggie curry'"
+  ],
+  "repair_method": "revise_existing"
+}

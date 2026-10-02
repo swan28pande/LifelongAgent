@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 381,
+  "date": "2027-03-16",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Priya! Happy Tuesday. How has your day been going so far? Did you manage to get outside at all today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's been a pretty good Tuesday. I actually got outside early today. Before starting work, I took Biscuit out for his early morning stroll around the neighborhood. Arjun went for a high-intensity ride on his new bike, but I was happy just getting some fresh air with our lab."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to the day. Biscuit must have loved having that morning time with you. How is your knee feeling after walking him?"
+    },
+    {
+      "speaker": "user",
+      "text": "The knee is feeling great, actually! No stiffness or pain at all, which is a huge relief. Oh, speaking of me and Arjun, we actually sat down yesterday and started mapping out a trip to Italy for this coming June! We are so excited to plan it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that is incredibly exciting! Italy in June sounds absolutely magical. Have you two started thinking about which cities or regions you want to visit, or are you still in the early brainstorming phase?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're still brainstorming, but we definitely want to see some historic spots and maybe do some hiking. It's been fun looking at maps together. It's nice to have something big to look forward to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, planning is half the fun! Since you're living in Denver now, does it feel like you have a good routine down with Arjun, balancing work and life?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. We've really settled into our life here in Denver. We actually walked by that new ramen place on our street the other day and thought about trying it. Being pescatarian, I'm always checking if they have good veggie or seafood broth options, and it looks like they do!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! A local ramen place with pescatarian options is a huge win. Have you had any chance to check out the new jazz club downtown yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, but we're planning to go soon. Tonight is going to be a much quieter evening. I'm planning to wind down by reading a few chapters of the selection for my community literary group. Arjun is actually reading a cycling manual he got, but I'm looking forward to getting lost in our book club's pick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to relax. How are you liking the current book club selection so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm really enjoying it! It's a bit different from what I normally pick up, but that's exactly why I joined the group. It's nice to stretch my reading habits."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "italy_trip.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

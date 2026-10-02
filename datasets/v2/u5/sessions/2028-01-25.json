@@ -1,0 +1,86 @@
+{
+  "user_id": "u5",
+  "day": 696,
+  "date": "2028-01-25",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Tuesday been going over in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually been a really lovely day. The weather was so gorgeous this morning that I decided to travel to the office entirely on foot today. I usually catch the bus, but I couldn't resist the sunshine. My coworker Dana biked in, but I preferred the slow pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start the day. Did you manage to get any other exercise in, or was the walk your main activity?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did get some outdoor time earlier. I took Biscuit out for a long stroll around the neighborhood first thing this morning. Arjun actually went for a trail run, but I liked keeping it casual with our retriever."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Biscuit must have loved that early morning time with you. How are things going at the climate-tech company? Is it a busy week for you as an engineering manager?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's definitely busy, but I found a great way to stay focused today. I spent the afternoon playing physical analog discs on the turntable Arjun got me, letting the LPs spin while I caught up on some planning. My coworker was streaming a digital playlist, but I really needed that classic vinyl sound."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There is something so soothing about the sound of a record playing. It sounds like a great setup. Do you have any nice plans for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! I'm about to whip up a wok-fried mix of fresh vegetables and tofu in a light ginger sauce. Arjun decided to grab a burrito from the food truck down the street, so we're both doing our own thing tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That stir-fry sounds delicious and perfect for a cozy Tuesday. Are you planning on staying up to watch anything, or just winding down?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple. I want to be fully asleep and have the lights out right when the clock hits ten o'clock tonight so I can feel refreshed tomorrow. Arjun said he's going to stay up past midnight to finish a movie, but I need my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep by 10:00 PM is a great goal, especially after being so active today. Have you had any chance to do some bouldering lately, or are you taking a break from the climbing gym?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't gone bouldering in a couple of weeks, but my knee is feeling completely normal now, so I really want to get back to the climbing wall soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news about your knee! It's great to hear you're fully recovered. Well, I'll let you get to your dinner and that 10:00 PM bedtime."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "walked",
+      "dinner": "veggie stir-fry",
+      "music": "vinyl records",
+      "reading": "not mentioned",
+      "bedtime": "10:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has her own office space at work",
+    "invention: plans to resume trail running in a couple of weeks"
+  ]
+}

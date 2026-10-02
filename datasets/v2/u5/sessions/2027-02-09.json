@@ -1,0 +1,80 @@
+{
+  "user_id": "u5",
+  "day": 346,
+  "date": "2027-02-09",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your Tuesday going? How are you and Arjun settling into your Denver apartment lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! We are loving the place, thanks for asking. It's been a bit of a hectic morning, actually. The tire on my bike went flat, so instead of taking the light rail like I usually do, I ended up getting a lift to the office from one of my coworkers, Dana."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what a pain about the flat tire! But how nice of Dana to drive you. Speaking of Dana, how is her new beagle, Pepper, doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Pepper is doing great! Dana was telling me all about her during the drive. She also mentioned she's been trying out that new ramen spot on our street. Arjun actually went there for lunch today too and said it was incredible!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, I'm glad Arjun liked it! Have you had a chance to check out their pescatarian options yet, or are you mostly eating at home these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't been yet, but I definitely want to try their seafood broths soon. Tonight, though, I'm making dinner myself tonight: a fish and coconut curry simmered from scratch in our kitchen, served over rice. Arjun has a late meeting, so he's just going to grab a veggie burger from the local diner instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That curry sounds absolutely perfect for a February evening. Do you have any relaxing plans lined up for after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm going to spend the evening reading the fictional book that my local neighborhood reading group is analyzing this month. Arjun is planning to just read some online articles about software architecture, so it'll be a quiet night for both of us."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely, peaceful evening. By the way, I know you registered for the Denver half marathon coming up in April! How are you feeling about the big event?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm really looking forward to it! April is going to be here before we know it, so I'm just keeping the date on my radar and getting excited for the atmosphere on race day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It'll be here in no time, and I'm sure it'll be an amazing experience. I hope you enjoy your delicious homemade dinner and your book tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "got a ride from a coworker",
+      "dinner": "home-cooked curry",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: dinner should be 'home-cooked curry', conversation gives 'other'",
+    "invention: owns a bicycle"
+  ],
+  "repair_method": "targeted_wording"
+}

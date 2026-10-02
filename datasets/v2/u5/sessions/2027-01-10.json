@@ -1,0 +1,86 @@
+{
+  "user_id": "u5",
+  "day": 316,
+  "date": "2027-01-10",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Sunday been going in Denver? How are things with Arjun and Biscuit?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a pretty relaxed Sunday. Biscuit and I have just been hanging out. Arjun actually had to head into his studio today, so he had to deal with a commute, but luckily I had absolutely no travel to any kind of office or workspace today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, low-key day for you! Did you end up getting some work done anyway, or was it a purely restful day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did sit down at my desk for a bit to catch up on some backend coding for the fintech startup. I put on those retro-futuristic 80s electronic instrumental tracks to keep me focused. My sister Meera told me she prefers classical when she's doing her data science work, but those synthesizer beats really do it for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Synthwave is great for coding! It's cool that Meera has her own soundtrack for her work in Seattle too. How are you liking the Denver office transfer overall now that you've settled in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, the transfer has been fantastic. It's so much easier being in the same city as the core team, and living in Denver with Arjun has been wonderful. We're really enjoying our neighborhood, especially having that new ramen spot right on our street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That ramen spot sounds incredibly convenient! Speaking of food, what are you and Arjun planning for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Arjun actually decided to grab takeout from that new jazz club's kitchen, but I ended up preparing one of those subscription boxes where they send you the pre-measured ingredients and a recipe card to cook yourself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those subscription recipe boxes are super convenient! Did you get any reading done after dinner? I know you've been working through some of those thrillers from the Carnegie Library."
+    },
+    {
+      "speaker": "user",
+      "text": "I actually didn't read a single page tonight! Normally I'd be diving right into one of those library suspense novels, but I ended up drifting off on the couch right after eating. My coworker Dana mentioned she spent her evening reading a biography, but I just had zero reading time because of my accidental nap."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, an accidental couch nap is the best kind of Sunday luxury! It sounds like your body just needed a little break."
+    },
+    {
+      "speaker": "user",
+      "text": "It really did. It was incredibly cozy. Now I'm just enjoying a quiet evening, looking forward to starting the new week fresh tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect way to wrap up the weekend. Have a wonderful week ahead, Priya, and say hello to Arjun and Biscuit for me!"
+    },
+    {
+      "speaker": "user",
+      "text": "Will do! Thanks so much. Have a great night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "meal-kit dinner",
+      "music": "synthwave playlists",
+      "reading": "no reading",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'",
+    "pref_leak: bedtime should be 'not mentioned', conversation gives 'other'"
+  ]
+}

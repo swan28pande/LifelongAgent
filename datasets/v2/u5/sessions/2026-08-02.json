@@ -1,0 +1,96 @@
+{
+  "user_id": "u5",
+  "day": 155,
+  "date": "2026-08-02",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Sunday been going in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a surprisingly hectic Sunday. I had some major backend bugs to resolve for the startup, so I ended up working quite late. Because of that, I completely missed the exercise session I had planned for today. It's a bummer since Sunday is normally when I'd do my training rather than taking a rest day, but work took priority. My coworker Dana, though, still managed to get her triathlon training run in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's frustrating when work gets in the way of your routine. But since it was a Sunday, did you at least avoid having to travel anywhere for work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, that was the silver lining! I didn't have to do any traveling for my job at all today, which saved me a lot of energy. Arjun actually had to travel to his office for a few hours, so I was glad to avoid any of that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely. Did you listen to anything in the background to help you get through all those bugs?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. Usually, I put on some relaxing lo-fi beats, but today I did something different because a friend recommended a specific episode of an audio show about real-life unsolved mysteries. It was so gripping to hear the details of the investigation while I worked! Arjun usually listens to classical music while working, but this was a fun change of pace for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "True-crime audio can be surprisingly great for staying focused! Since you were working late, what did you do for dinner? Did you and Arjun cook?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not tonight. Arjun actually ordered some takeout, but I just reheated the extra portions of food I had cooked and stored in the fridge a couple of nights ago. It was super quick and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reheating previous meals is a lifesaver on busy days. Still keeping it pescatarian, I assume?"
+    },
+    {
+      "speaker": "user",
+      "text": "Always! It was a great fish bake from the other night. Arjun's takeout had some fish too, so we both stayed on track."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Hopefully you can relax a bit now. Do you have any plans to unwind tonight, maybe with some pottery or the piano?"
+    },
+    {
+      "speaker": "user",
+      "text": "No pottery tonight, but I'm looking forward to reading. I'm going to dive into those suspenseful mystery books I recently checked out with my Carnegie Library card. My sister Meera mentioned she is reading a new science fiction novel over in Seattle, but I'm strictly in the mood for high-tension suspense."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those library suspense books sound like the perfect way to turn off your brain after a long day of coding. What time are you planning to turn in tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm aiming to shut off my lamp and go to sleep exactly half an hour before midnight. Arjun went to sleep around ten since he was exhausted, but I want to get a few chapters in first."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy end to a busy day. I hope you sleep well and have a much calmer start to your week tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "skipped workout",
+      "commute": "no commute",
+      "dinner": "leftovers",
+      "music": "true-crime podcast",
+      "reading": "library thrillers",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: exercise should be 'skipped workout', conversation gives 'missing'",
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'",
+    "pref_absent: music should be 'true-crime podcast', conversation gives 'missing'",
+    "pref_absent: reading should be 'library thrillers', conversation gives 'missing'"
+  ]
+}

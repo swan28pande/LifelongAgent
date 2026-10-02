@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 54,
+  "date": "2026-04-23",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Thursday going? Did you get any time to play the piano today, or has it been a busy day in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty busy, so no piano practice today. I did decide to pedal my bicycle to the office this morning for my commute, though. My coworker Dana just took the bus, but I wanted some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Riding your bike sounds like a great way to start the day. How did things go at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not bad, but I had a little mishap. My headphones completely snapped this morning, so I couldn't listen to my usual background lo-fi beats while coding. Instead, I ended up tuning into an orchestral broadcast station on my desktop speakers since my office door was closed. It was actually a really nice change of pace to have symphonies playing in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, RIP to your headphones! But a classical stream sounds like a wonderful alternative. Did you have any plans for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was way too exhausted to stand over the stove and make my usual spiced lentil curry tonight. So I decided to treat myself and get a takeout foil-wrapped bean and rice package from the Mexican spot down the street. My sister Meera texted me from Seattle saying she was just having a quick salad, but I needed something much more filling!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "A hearty Mexican wrap is the perfect reward after a tiring day. It's much easier than cooking curry! Are you planning to just relax for the rest of the night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm just going to curl up on the couch and read a few chapters of a book about interstellar travel and futuristic societies. A friend of mine only reads historical biographies, but I definitely prefer getting lost in some imaginative space fiction."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to wind down. Do you have a specific time you're hoping to get to sleep?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to try to turn the lights off right around half past eleven tonight. I want to make sure I'm well-rested for Friday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Half past eleven is a great target. I hope you enjoy your book and get some wonderful rest tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "cycling",
+      "dinner": "takeout burrito",
+      "music": "classical radio",
+      "reading": "sci-fi novel",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: music should be 'classical radio', conversation gives 'missing'",
+    "pref_absent: reading should be 'sci-fi novel', conversation gives 'missing'"
+  ]
+}

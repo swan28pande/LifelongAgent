@@ -1,0 +1,84 @@
+{
+  "user_id": "u5",
+  "day": 114,
+  "date": "2026-06-22",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Monday. How is everything going in Pittsburgh today? Did you and Biscuit get to enjoy some nice weather?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, Pittsburgh is actually beautiful today, not too humid yet. Biscuit and I had a nice morning. I actually decided to get to the office today on my two-wheeler, pedaling all the way along the river trail instead of driving. My coworker Dana, though, she just drove her car today because she had some heavy gear to bring in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful commute along the river! It's always nice to get some fresh air on the way to work. How did the rest of your day at the startup go after that active start?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty productive! I had a lot of backend code to review. I had some of those chilled, wordless electronic rhythms with the crackly vinyl sound playing in the background while I worked today. One of the other engineers was blasting heavy metal in his headphones, which I could hear from three desks away!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, there's always one who needs the heavy metal to get through a Monday! But those relaxed, instrumental downtempo tracks sound like a much better backdrop for coding. Are you planning to relax for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm actually about to make dinner. I'm tossing some shrimp, broccoli, and peppers in my wok over high heat with a splash of soy and ginger sauce. I called my sister Meera earlier and she said she was just ordering a pepperoni pizza tonight because she's too tired to cook."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick wok-tossed meal with shrimp sounds delicious, especially compared to pizza! How is Meera doing out in Seattle? Is she liking her new job?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well! The job is keeping her super busy, but she's slowly exploring the city on her weekends. She misses Biscuit, of course, but she's adjusting nicely to the Pacific Northwest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It must be a big transition, but it sounds like she's finding her footing. And I'm sure Biscuit misses her too! Is he keeping you company in the kitchen right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. He is sitting right by my feet, hoping a piece of broccoli falls from the cutting board. He's very persistent when it comes to kitchen duty."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, Labrador instincts never fail when there's food involved! I'll let you get back to your cooking before anything burns. Enjoy your dinner and have a great evening, Priya!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to start heating up the stove now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 7,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "cycling",
+      "dinner": "stir-fry",
+      "music": "lo-fi beats",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'stir-fry', conversation gives 'veggie stir-fry'"
+  ],
+  "repair_method": "revise_existing"
+}

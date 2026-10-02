@@ -1,0 +1,86 @@
+{
+  "user_id": "u5",
+  "day": 180,
+  "date": "2026-08-27",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Thursday going? How are things at the fintech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Work went well. I listened to those downtempo hip-hop instrumental loops to keep me focused, though my coworker Dana was blasting heavy metal on her headphones. But unfortunately, my afternoon took a terrible turn and I hurt my leg pretty badly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, what happened? Are you okay?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually tore a ligament in my knee today while I was climbing those short, rope-free indoor walls at the gym. It was a total accident."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so sorry to hear that, Priya. A torn ligament is incredibly painful. Have you been able to rest it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm on the couch now. Arjun went for a road run today instead of climbing, so he was home to help me set up with ice. Biscuit is sitting right next to me, too, looking very worried."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad Arjun and Biscuit are there to look after you. Since you have to stay off your feet, how are you planning to spend the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm just going to relax on the couch and read one of those suspenseful, fast-paced mystery novels that I borrowed from the Carnegie branch. Arjun is reading a thick history biography tonight, so we are both keeping it low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy and comforting way to distract yourself. Is Biscuit keeping your feet warm?"
+    },
+    {
+      "speaker": "user",
+      "text": "He is, he's curled up right against my legs. I'm feeling really exhausted from the pain, so I plan on shutting my eyes thirty minutes after ten o'clock tonight. Arjun is a night owl who usually stays up past midnight, but I need to rest early."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes complete sense. Getting to sleep by 10:30 PM will give your body a head start on healing. I hope you can get some deep, pain-free sleep."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks. I'm going to try. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "bouldering",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "lo-fi beats",
+      "reading": "library thrillers",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {
+      "knee_injury.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: is wearing a knee brace",
+    "invention: has an appointment with an orthopedist next week to see if she needs physical therapy or surgery"
+  ]
+}

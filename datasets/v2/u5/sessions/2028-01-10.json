@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 681,
+  "date": "2028-01-10",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday starting off? I hope you, Arjun, and the pets are having a good start to the week."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Monday has been pretty busy, but not too bad. I just finished eating. I ended up making a quick dish in the wok—just a mix of chopped broccoli, bell peppers, carrots, and snap peas tossed with some tofu in a sesame-ginger glaze over rice. Arjun actually decided to grab some leftover ramen from that place down the street, so we had different meals tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That wok-tossed vegetable and tofu dish sounds delicious! How did Arjun's ramen hold up as leftovers?"
+    },
+    {
+      "speaker": "user",
+      "text": "He said it was still really good, though he had to add a bit of extra broth to revive it. It worked out well since we both got what we wanted without much fuss."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the best kind of dinner setup. How are Biscuit and Mochi doing today? Were they keeping you company while you cooked?"
+    },
+    {
+      "speaker": "user",
+      "text": "Biscuit was basically glued to my feet in the kitchen, hoping I'd drop a piece of carrot or broccoli. Mochi, on the other hand, spent the entire evening curled up on the back of the sofa, completely ignoring us."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, classic behavior for both of them! Biscuit is always on cleanup duty, and Mochi knows exactly how to relax. How have things been at work? Is your team at the climate-tech company keeping you busy lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, definitely. Being an engineering manager there means there's always a lot of coordination needed, especially with our new quarterly goals starting up. We had a couple of long planning meetings today to align on our upcoming technical roadmaps."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Quarterly planning can definitely be intense, but it's so important for keeping everyone aligned. Do you feel like the team is in a good place for the new goals?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think so. There's a lot of enthusiasm, which helps. It's just a matter of managing resources and making sure we don't overcommit. I'm hoping to wrap up some of the scheduling details tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid plan. It's great that the team is feeling enthusiastic about the roadmaps. Make sure you get some time to unwind tonight after such a meeting-heavy day!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I definitely will. I think I'm just going to relax on the couch with Arjun and watch a show. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "veggie stir-fry",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'"
+  ]
+}

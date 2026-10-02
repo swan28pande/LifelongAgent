@@ -1,0 +1,92 @@
+{
+  "user_id": "u5",
+  "day": 121,
+  "date": "2026-06-29",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Monday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty good start to the week. I got my morning exercise in by taking my Labrador, Biscuit, for a nice, leisurely stroll around the neighborhood. My sister Meera told me she did a high-intensity treadmill workout over in Seattle this morning, so we both got moving early."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful morning for both you and Biscuit! Meera sounds like she's keeping active out in Seattle too. How did you get to the office after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Since the weather was absolutely gorgeous today, I decided to go on foot to the office, which is a departure from my usual routine of cycling. My coworker Dana ended up taking the bus today, but I couldn't resist being outside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all! It's the perfect day to skip the wheels and enjoy a nice walk. How are things going at the fintech startup today? Working on any interesting backend projects?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we're doing some heavy database optimization today, so my brain is a bit fried. Oh, by the way, I actually got a library card at the Carnegie Library on June 28, 2026."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic! The Carnegie Library here in Pittsburgh is wonderful. Did you have to go in person to set that up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I went to the main branch yesterday to sign up. It was a really quick process."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice when those errands are quick and easy! What are your plans for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Instead of my typical science fiction novel, I'm actually flipping through a glossy print periodical tonight. I picked it up at the dentist's office during my appointment earlier and got hooked. Dana, on the other hand, told me she's currently reading a massive biography."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, dentist's office waiting rooms always have the most unexpectedly engrossing periodicals! It sounds like a relaxing way to wind down. What time are you planning to head to bed tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm aiming to turn off my bedside lamp and go to sleep right at half past ten. Meera said she'll probably be up working until midnight her time, but I need my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep by half past ten sounds like a great plan, especially after a busy day of database optimization and walking. Sleep well, Priya, and have a great day tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "walked",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "a magazine",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {
+      "library_card.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: library_card.0 ([the library card] got a library card at the Carnegie Library (happened) (this happened on 2026-06-28))",
+    "invention: usually commutes by bicycle",
+    "invention: typically reads science fiction novels"
+  ],
+  "repair_method": "revise_existing"
+}

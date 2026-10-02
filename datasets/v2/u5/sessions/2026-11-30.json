@@ -1,0 +1,82 @@
+{
+  "user_id": "u5",
+  "day": 275,
+  "date": "2026-11-30",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday going in Pittsburgh? Did you get a chance to try out those new bike lanes near your apartment?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I actually did today. I commuted by pedaling a bikeshare bicycle to the office to check them out. It was a really nice ride, though Arjun decided to take the bus for his commute today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great that you got to use the new lanes! How are things going at the fintech startup? Are you still keeping busy as a senior backend engineer?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. We have a lot of projects wrapping up, so things are pretty hectic. I actually planned to go to the neighborhood gym today to mix things up, but since it was closed, I ended up going for a long stroll on foot instead of doing my usual home high-intensity interval workout. My coworker Dana got her exercise in, though—she did a big swim session for her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice way to get some fresh air anyway! How is your knee holding up after the walk and the ride? Is it feeling fully recovered after the physio cleared you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels completely normal, thank goodness! No pain at all during the ride or the walk, so I think the recovery is fully complete."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is such wonderful news! I'm so glad to hear you're back to 100%. Are you planning on a relaxing evening to unwind from work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm just hanging out with Biscuit and might spend some time at the piano. I want to make sure I get plenty of rest, so I'm planning to shut my eyes and fall asleep right at eleven o'clock tonight. Arjun is actually turning in even earlier, around ten, because he's exhausted."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a peaceful evening. A good night's rest is always a smart move. Have you heard from your sister Meera recently? How is she liking Seattle and her health-tech job?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did talk to her! She's really enjoying her data science role there, though she's still adjusting to how much it rains. But she says she's settling in well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great to hear she's settling in! And how is Dana's new beagle, Pepper, doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "She says he's doing great and is full of energy. Anyway, I should probably start winding down so I can hit that eleven o'clock bedtime. Talk to you tomorrow!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds good, Priya! Have a relaxing night and sleep well. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "long walk",
+      "commute": "cycling",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns a bicycle",
+    "invention: her apartment complex has a fitness center"
+  ]
+}

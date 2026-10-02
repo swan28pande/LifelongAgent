@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 170,
+  "date": "2026-08-17",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Monday. How has your week started out? Did you get up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It started off a bit differently today. Usually, I'd be out doing our usual morning stroll around the neighborhood with Biscuit, but a friend of mine invited me to do some laps in the public outdoor lanes instead, so I spent my morning doing the breaststroke and freestyle at our local neighborhood pool. Arjun said he preferred his regular gym run, but it was nice to switch things up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a morning dip! That sounds like a refreshing way to kick off a Monday, even if Biscuit missed out on his morning walk. Did you feel super energized for work after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I really did! It woke me right up. When I sat down for my coding sprint, I put on those chill, low-tempo instrumental tracks with the vinyl crackle to keep me focused. But speaking of my schedule, I actually have some news about my hobbies. I decided today that I'm officially done with pottery. The class sessions wrapped up, and honestly, I just lost interest in doing any more clay work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, really? You're stepping away from the pottery wheel? I remember you being quite excited about shaping things in the studio. Was it just a matter of the class ending, or did the appeal wear off?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both, honestly. Once the final session finished today, I realized I wasn't really feeling motivated to sign up for another round or practice on my own. It was fun for a bit, but my mind was just drifting during the last few classes. So, I'm letting that one go."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense. Sometimes it's great to try something, but equally good to know when it has run its course! At least you still have bouldering and the piano to keep you busy. How are you planning to spend your evening tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, it's nice to clear some mental space. For tonight, I'm planning to dive back into those suspenseful, fast-paced mystery novels I borrowed using my card from the Carnegie branch. My sister Meera told me she's currently reading a biography over in Seattle, but I definitely prefer the high-stakes fiction."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those high-stakes suspense novels are so hard to put down! It sounds like a perfect, cozy way to unwind. Do you think you'll be staying up late to finish it, or are you hoping to get some good sleep tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to try to be disciplined! I plan to close the book and turn off the bedside lamp exactly ninety minutes before midnight. Arjun usually stays up past midnight playing video games, but I need my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An early bedtime is very sensible, especially after a swim this morning! How have things been going with Arjun lately? Have you two had any fun plans around Pittsburgh recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things with Arjun are great! We actually checked out that new ramen spot on my street over the weekend. It's so nice having more walkable options in our part of Pittsburgh. Work at the fintech startup has been pretty hectic with our database migration, but having relaxing evenings and good food nearby helps a lot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! Walkable ramen is a huge plus, and it's great that you and Arjun had a nice weekend. I'll let you get to your reading so you can make that early bedtime. Have a great night, Priya!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "swim at the community pool",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "lo-fi beats",
+      "reading": "library thrillers",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {
+      "hobby.pottery_stop": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

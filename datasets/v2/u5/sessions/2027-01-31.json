@@ -1,0 +1,84 @@
+{
+  "user_id": "u5",
+  "day": 337,
+  "date": "2027-01-31",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Sunday been going? Did you get up to much around Denver today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a very relaxing Sunday. Arjun and I mostly stayed in. I didn't have any commute or travel to any workplace today, which was a nice break. For some fresh air, I took Biscuit out for a morning stroll around our neighborhood. My sister Meera mentioned she did a high-intensity cycling session for her workout, but I was quite content with just my gentle walk with the dog."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning stroll with Biscuit sounds like a wonderful way to start a Sunday. It's always nice to have a day with absolutely no commuting. How is Biscuit doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great, full of energy! Arjun actually took him to the park later on. Speaking of Arjun, we made dinner together tonight. We prepared one of those meal kits where all the fresh ingredients are pre-measured and delivered to you with a recipe. Since I'm pescatarian, we made a shrimp dish. Arjun said he would have preferred a steak, but he happily ate the seafood with me!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Those meal kits can make cooking together so fun and straightforward, especially when adapting to a pescatarian diet. Did you have any music playing while you two cooked, or earlier in the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually had some music on earlier while doing some organizing. I put on some retro-electronic tracks featuring heavy 80s-style synthesizer beats—similar to that synthwave concert Arjun and I went to. My coworker Dana told me she was listening to classical music while training, but those upbeat synthesizer rhythms really help me focus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those retro synth beats are great for getting things done! Did you manage to fit in some reading for your Denver book club this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I didn't read any pages of my book tonight, which is a rare exception for me. I normally try to make progress on our book club novel, but I skipped it tonight because I ended up falling asleep incredibly early after a really exhausting week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, it sounds like you were completely drained. What time did you end up heading to sleep?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was so tired that I drifted off around nine-thirty in the evening. It's a big contrast to my typical eleven o'clock bedtime, but I really needed the rest. Arjun told me he stayed up past midnight watching TV, but I was already out cold."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Going to sleep at nine-thirty is definitely early, but sometimes your body just needs that extra recovery time. I hope you're feeling much more refreshed now!"
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely am! Ready to start the new week tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "no commute",
+      "dinner": "meal-kit dinner",
+      "music": "synthwave playlists",
+      "reading": "no reading",
+      "bedtime": "9:30 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'",
+    "invention: has a weekly recipe subscription box"
+  ]
+}

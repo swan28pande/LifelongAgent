@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 680,
+  "date": "2028-01-09",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Sunday been going? Did you get a chance to relax at all today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but really good day. I spent my morning climbing up into the foothills with that local trail-walking association I joined. Arjun decided to stay behind and do a solo road cycle session on his new bike instead, but it was great to get some fresh mountain air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! A group hike is a great way to spend a Sunday morning. Did you have any other plans for the afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I actually had an unexpected trip. I had to head into the office to help handle a minor physical security issue. Since I was running super behind schedule, I ended up hailing a ride through an app rather than just staying home like I usually do on Sundays. I don't normally have any travel at all on weekends!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, no! A surprise trip to the office on a Sunday is never ideal, but I'm glad you could book a quick ride to get there fast. Did you manage to resolve the issue?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, luckily it was a quick fix. While I was at my desk wrapping up some documentation, I put on some analog albums to spin on the turntable Arjun got me to keep me focused. Arjun, on the other hand, was listening to a tech podcast on his headphones at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very soothing way to work through a Sunday task. Vinyl has such a great, warm sound. Did you head straight back home after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, I got back and decided to make some dinner. I ended up tossing some mixed garden vegetables and tofu in the wok with some soy sauce over rice. Arjun actually went out and got some takeout noodles for himself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fresh wok-tossed meal is always satisfying after a busy day. Did you have any plans to unwind for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it pretty low-key. I think I'll tap through a few more chapters of that epic wizard-and-dragon saga on my electronic ink device."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to relax. Is it a long series, or are you nearing the end?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a massive series, but I'm completely hooked! I need to make sure I don't stay up all night reading, though. My goal is to have the lights out and be asleep by half past ten tonight so I'm fresh for Monday morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A 10:30 pm bedtime is a great goal to make sure you start the week fully rested. Enjoy your fantasy book, Priya, and have a wonderful night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "rideshare",
+      "dinner": "veggie stir-fry",
+      "music": "vinyl records",
+      "reading": "e-reader fantasy series",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

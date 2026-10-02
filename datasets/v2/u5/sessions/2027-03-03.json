@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 368,
+  "date": "2027-03-03",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Wednesday been going? I'd love to hear how your day went, and how your knee is holding up lately."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! My day was actually really nice, and the knee feels completely back to normal. I even managed to get out onto the dirt paths winding through the foothills for a good jog this afternoon. Arjun stayed indoors and did a strength training session in our living room instead, but it felt great for me to get some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful news about your knee! It sounds like the recovery has been a total success. Are you feeling more confident now about your preparation for the Denver half marathon coming up in April?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm slowly building my mileage back up. To make sure I got to my desk on time this morning, I ended up taking the urban electric train system. My coworker Dana actually ended up driving her own car instead because she had some errands to run, but the train was super relaxing for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The train is such a nice way to ease into the day. How are things going at the office? Are you keeping busy with your senior backend engineering projects at the fintech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we're in the middle of a pretty major database migration right now, so my mind has been spinning a bit. I was glad to wrap things up on time today. I'm actually eating over at a buddy's apartment tonight because it's their birthday. Usually, I'd stay home and cook a big pot of spiced lentil curry, but we are celebrating them instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, happy birthday to your friend! That sounds like a lovely mid-week break, especially since you don't have to cook. Do you have any plans for when you get back home later tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, for my evening reading tonight, I think I'm going to flip through a thin, glossy publication with short articles that I brought home from the dental clinic this morning. I'm taking a break from our neighborhood group's assigned fiction book tonight, just to do something lighter."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A dentist-office find is always a fun surprise! Sometimes a quick, light read is exactly what you need after a busy work day. What kind of articles are in it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's mostly some travel photography and short pieces about national parks. It doesn't require too much brainpower, which is perfect. I think Biscuit is already eyeing my spot on the couch, so I'll probably have to share it with him while I read."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Biscuit always knows how to find the coziest spot! I hope you have a wonderful time celebrating your friend's birthday tonight and enjoy your relaxing reading afterward."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a fun night. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "trail run",
+      "commute": "light rail",
+      "dinner": "dinner at a friend's place",
+      "music": "not mentioned",
+      "reading": "a magazine",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: exercise should be 'trail run', conversation gives 'missing'",
+    "pref_leak: music should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: reading should be 'a magazine', conversation gives 'missing'"
+  ]
+}

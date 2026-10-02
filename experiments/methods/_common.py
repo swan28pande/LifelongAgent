@@ -33,5 +33,25 @@ def embeddings():
 
 
 def make_llm(model: str, usage):
-    from memory_v3.agent import _make_llm
-    return _make_llm(model, 0.0, callbacks=[usage])
+    import os
+
+    import dotenv
+
+    dotenv.load_dotenv()
+    if "gemini" not in model.lower():
+        from langchain_openai import ChatOpenAI
+
+        return ChatOpenAI(model=model, temperature=0.0, callbacks=[usage])
+
+    from langchain_google_genai import ChatGoogleGenerativeAI
+
+    options = {"model": model, "temperature": 0.0, "callbacks": [usage]}
+    if os.getenv("GOOGLE_GENAI_USE_VERTEXAI", "true").lower() not in ("false", "0", "no"):
+        import google.auth
+
+        options.update(
+            vertexai=True,
+            project=os.getenv("GOOGLE_CLOUD_PROJECT") or google.auth.default()[1],
+            location=os.getenv("GOOGLE_CLOUD_LOCATION", "global"),
+        )
+    return ChatGoogleGenerativeAI(**options)

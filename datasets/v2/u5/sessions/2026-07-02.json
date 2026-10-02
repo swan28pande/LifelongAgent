@@ -1,0 +1,80 @@
+{
+  "user_id": "u5",
+  "day": 124,
+  "date": "2026-07-02",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going in Pittsburgh? How are things at the fintech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. I actually pedaled my bicycle to the office this morning to get some fresh air. My coworker Dana decided to take the bus instead since she's resting her legs today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the morning. Did you have a lot of backend engineering tasks to tackle today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I spent most of the day debugging some database issues. After work, I went to the gym to do some climbing on the short walls without any ropes or harnesses. Dana did a swim workout for her triathlon training while I was doing that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Bouldering is such a great workout! How is Biscuit doing? Did he get a walk after you got back?"
+    },
+    {
+      "speaker": "user",
+      "text": "He did! He was very happy to see me. For dinner, I ended up ordering a warm, spicy shrimp and coconut milk curry from the Thai place down the street. My sister Meera texted from Seattle saying she had sushi for dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Are you planning a quiet evening at home with Biscuit now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, tonight is a bit of an outlier for me. I'm heading out to a friend's housewarming party in a bit. Because of that, I won't be falling asleep until around two hours past midnight, which is a big exception to my usual half-past-ten bedtime."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a housewarming party sounds like a lot of fun! It's definitely worth staying up late for. What are you doing to pass the time before you head out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just relaxing for a bit. I'm reading a few chapters of a novel about a futuristic space colony and interstellar travel that I got from the Carnegie Library. Meera mentioned she's reading a political biography right now, but I prefer fiction."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fascinating read! It's great you're getting use out of your library card. I hope you have a wonderful time at the party tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. I'll probably be a bit tired tomorrow, but it'll be worth it. Catch you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 7,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "bouldering",
+      "commute": "cycling",
+      "dinner": "curry",
+      "music": "not mentioned",
+      "reading": "sci-fi novel",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'curry', conversation gives 'other'",
+    "invention: The user has a coworker named Mark.",
+    "invention: The user has a friend named Sarah."
+  ],
+  "repair_method": "revise_existing"
+}

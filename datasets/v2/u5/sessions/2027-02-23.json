@@ -1,0 +1,75 @@
+{
+  "user_id": "u5",
+  "day": 360,
+  "date": "2027-02-23",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Tuesday. How is your week starting off? Have you been getting any training runs in for the Denver half marathon in April, or is the knee still feeling good?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are going well. Honestly, no running for me today—I just did a gentle loop around the block with Biscuit first thing this morning to get our paws moving. Arjun actually went for a proper high-tempo road run himself, but I kept it low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely, peaceful way to start the morning with Biscuit! It's great that Arjun is getting those runs in too. Did you head into the fintech office today, or are you working from the apartment?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did go in! I hopped on the electric train system that runs through Denver to get to the office this morning. My coworker Dana actually cycled in using those new bike lanes, but I preferred the transit today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the light rail is so convenient, and it's awesome that Dana is taking advantage of the new bike lanes for her triathlon training! How is the atmosphere at the office today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty busy with some database migrations, but we got through it. I'm just glad to be home now. Arjun is catching up on some tech news, but I've settled in to do some reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a productive but tiring day. What are you reading tonight? Is it something for leisure or work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually diving back into the fiction book assigned for our local neighborhood gathering next week. Arjun is reading a biography on his tablet, but I'm completely hooked on this chapter."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the neighborhood book club! I love that you've been getting involved with that since the move. How is this month's selection turning out? Is it a page-turner?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really is! It's a mystery set in a coastal town, very atmospheric. It's nice to just lose myself in a story after staring at backend code all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It's the perfect way to unwind. Speaking of unwinding, how are things going with the apartment and living with Arjun? Settling in well after the transfer?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are settling in wonderfully. Having Biscuit here makes it feel like home, and Arjun and I have really hit our stride with the new routine. I think I'm going to get back to my chapter now, but I'll chat with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "light rail",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

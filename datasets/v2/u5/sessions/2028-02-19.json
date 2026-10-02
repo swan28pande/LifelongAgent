@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 721,
+  "date": "2028-02-19",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Saturday. How is your weekend starting off? Are Biscuit and Mochi keeping you company today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, Biscuit is currently sleeping near my desk and Mochi is watching the birds from her perch. It's been a very peaceful morning. I'm especially glad that I didn't have to make any trip to an office or workplace today, though Arjun actually had to do a long drive across town for a Saturday training session."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that's a bummer for Arjun, but I'm glad you got to skip the transit entirely! It's always nice to have a break from traveling. Are you just relaxing today, or do you have some things to cross off your list?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually doing a little bit of light administrative catch-up. To keep me focused, I've been playing those physical, grooved discs on the turntable Arjun gave me. It's so nice to hear that warm analog sound. Arjun usually just streams digital playlists on his phone when he is busy, but I love the ritual of flipping the discs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. There really is a special warmth to those analog recordings that digital can't quite replicate. Have you been listening to anything in particular?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some old acoustic folk recordings I found at a local shop. It's perfect background noise. It makes sorting through emails feel a lot less tedious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! It's great when a gift like that turntable keeps bringing so much joy. Speaking of catching up, have you heard from your sister Meera lately? How is she settling into Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we talked yesterday! She loves her data science role at the health-tech company, though she's still getting used to the rainy weather. She's adjusting well overall, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It sounds like she's really finding her groove there. What do you have planned for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to spend my evening with that electronic ink device I bought a while back. I'm right in the middle of a massive, multi-volume saga about wizards, dragons, and ancient kingdoms, and I really want to find out what happens next. Arjun is actually sticking to a physical paperback biography of a historical figure tonight, so we'll both be quietly reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A long, magical epic on your digital screen sounds like a perfect escape. It's nice that you and Arjun can share a quiet evening of reading, even if you prefer different formats and genres!"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's the perfect way to wind down. I'm looking forward to just getting lost in the story for a few hours."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "vinyl records",
+      "reading": "e-reader fantasy series",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'",
+    "pref_wrong: music should be 'vinyl records', conversation gives 'jazz vinyl'"
+  ]
+}

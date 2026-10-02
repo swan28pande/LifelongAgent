@@ -1,0 +1,83 @@
+{
+  "user_id": "u5",
+  "day": 617,
+  "date": "2027-11-07",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Sunday. How has your weekend been going? Did you get up to anything fun today with Biscuit or Mochi?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, it's been a great Sunday. Actually, I spent my morning hitting the mountain trails with that weekend outdoor club I joined. Arjun decided to skip it and did a solo yoga session in the living room instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds wonderful! How is your knee holding up on those group hikes now? It must feel great to be fully cleared for normal activity."
+    },
+    {
+      "speaker": "user",
+      "text": "My knee felt completely fine, thankfully! No pain at all on the descent. Since it's Sunday, I was glad I didn't have to do any travel for work today—no office trip at all. Arjun didn't have any commute either, so we've just been relaxing at home this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear your knee is feeling strong! And yes, a Sunday with absolutely zero travel is the best. Did you and Arjun get a chance to check out that new ramen spot on your street, or did you just hang out with the pets?"
+    },
+    {
+      "speaker": "user",
+      "text": "We just stayed in and relaxed. I've actually been spending my evening catching up on the chapters for our neighborhood literary circle's next meeting. Arjun was reading a graphic novel he recently picked up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what is the selection for your book club this month? Are you enjoying it so far on your e-reader?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a historical fiction book set in the Pacific Northwest, and I'm really enjoying it! Reading it on my e-reader makes it so easy to highlight my favorite passages. I'm hoping to get through a few more chapters before I wind down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Sunday evening. Do you have an early start tomorrow for your engineering manager role, or are you hoping to get a bit of a sleep-in?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do have an early meeting tomorrow, so I'm planning to turn the lights off and try to sleep around half past ten. Arjun says he has a late-night coding session, so he won't be asleep until well past midnight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move to get a solid night's rest before the work week begins. Hopefully Arjun doesn't stay up too late! How are things going with your vegetarian diet lately? Finding any new favorite recipes?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I've been sticking to my vegetarian meals as usual. Arjun's been trying some of them too, which is nice. Anyway, I think I'm going to head to bed soon to make sure I hit that bedtime!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great night's sleep, Priya, and good luck with your early meeting tomorrow! Talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: exercise should be 'group hike', conversation gives 'missing'",
+    "pref_leak: music should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: reading should be 'book club novel', conversation gives 'missing'"
+  ]
+}

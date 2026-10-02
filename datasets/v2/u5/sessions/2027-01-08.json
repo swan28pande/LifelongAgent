@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 314,
+  "date": "2027-01-08",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your week been ending up over there in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good week. A bit of an unusual Friday afternoon for me, though. I've been working at my desk listening to a live FM broadcast of orchestral and chamber music. My headphones broke today, so I couldn't listen to my usual playlists and had to turn on the old tabletop receiver instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, sorry to hear about your headphones! But a bit of classical broadcasting sounds like a nice, relaxing change of pace for a Friday."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. It's keeping me focused. Arjun is actually in the other room blasting his usual upbeat electronic synth tracks on his speakers, so I'm glad I have my own little zone with the instrumental symphony stuff."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely sounds like a peaceful workspace. Do you and Arjun have any fun plans for dinner tonight to celebrate the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are staying in tonight. We're actually preparing a meal using one of those delivery boxes containing the precise, pre-measured raw ingredients and a step-by-step recipe. Arjun wanted to get takeout from that new ramen spot down the street, but I really wanted us to cook this pre-portioned package together, keeping it pescatarian-friendly of course."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to unwind and cook together. It's always nice when everything is already measured out for you. Are you planning to spend any time at the piano this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely! I've been practicing a new jazz arrangement. I hope to get an hour or two of practice in tomorrow morning before we head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great, I hope the practice goes well. Since it's Friday, are you planning a late night, or keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "Keeping it pretty low-key. I want to be sound asleep by exactly eleven o'clock tonight to get a good rest, whereas Arjun told me he's going to stay up late playing video games with his friends."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting a full night's sleep is a great way to start the weekend. How is your sister Meera doing in Seattle, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well! She's loving her data science role at the health-tech company and is slowly getting used to the rainy weather."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "meal-kit dinner",
+      "music": "classical radio",
+      "reading": "not mentioned",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: her Bluetooth headphones broke"
+  ]
+}

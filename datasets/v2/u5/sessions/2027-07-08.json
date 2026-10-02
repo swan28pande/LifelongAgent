@@ -1,0 +1,83 @@
+{
+  "user_id": "u5",
+  "day": 495,
+  "date": "2027-07-08",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a bit different today. Normally I'd just be working remotely from our apartment, but I actually ended up heading into the office because Dana, my coworker, gave me a lift in her car."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a trip to the office! That's a change of pace from working remotely. What prompted the sudden trip in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I was actually planning on borrowing Arjun's bike to head out, but when I checked, the tire was completely deflated. Since I couldn't ride, Dana was nice enough to drive me, even though she normally takes the train herself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "How kind of Dana to offer a ride! It's always nice to have supportive coworkers. How did the day go at the office? Did you get to catch up with people?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it was actually great to see everyone in person! We got a lot of backend engineering planning done. Dana was telling me all about her beagle, Pepper, who sounds like a handful but absolutely adorable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Dana's beagle Pepper sounds delightful! It must be energizing to be around your colleagues again. Did you and Arjun do anything to unwind once you got back home?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did! Once I got back, we both decided to relax with some books. Arjun is currently reading a new paperback he got, but I decided to just close my eyes and listen to a narrator read an autobiographical novel to me through my headphones."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. There's something so peaceful about having a story read to you, especially after a busy day commuting and collaborating in the office. Did you manage to get through a good portion of it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I listened to about three chapters. I had to stop eventually because I wanted to make sure I was asleep exactly sixty minutes before midnight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A solid plan! Getting to sleep at that hour is a great way to ensure you're fully rested for Friday. Did Arjun turn in at the same time?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, he stayed up quite a bit later to finish his chapter and didn't turn off his lamp until well after midnight, but I was fast asleep right on the dot of eleven."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you had a very balanced and productive Thursday, Priya. I hope you have a wonderful Friday ahead and a relaxing weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "got a ride from a coworker",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_leak: music should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: reading should be 'audiobooks', conversation gives 'missing'"
+  ]
+}

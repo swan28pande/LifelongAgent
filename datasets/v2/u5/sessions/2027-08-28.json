@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 546,
+  "date": "2027-08-28",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Saturday been going? Have you and Arjun had a relaxing start to the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty good, though the upstairs neighbors got a loud puppy recently and it's been yapping a lot today. Biscuit is very curious about it, but the noise is a bit much."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh dear, puppy energy can be a lot to handle, especially if you're trying to have a quiet Saturday. Did you manage to find any peace and quiet this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually spent the last couple of hours on the couch with my eyes closed, listening to a voice actor narrate a historical biography. I find it so much more relaxing to have someone read to me than staring at a page. Arjun, on the other hand, was stubbornly flipping through a physical hardback copy of his sci-fi novel before he got tired."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to unwind. There's something really soothing about being read to. Did Arjun finish his sci-fi chapter before heading to bed?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think he fell asleep halfway through it! He was completely exhausted and went to sleep really early, around nine. I'm staying up a bit later; I'm planning to turn off my lamp and fall asleep right when the clock hits twelve tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Exactly at midnight is a solid weekend bedtime! It gives you plenty of time to enjoy your biography. Have you heard any news from your sister Meera lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, Meera is doing great in Seattle! She loves her data scientist job at the health-tech company. She actually called me yesterday to catch up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It sounds like she's really settling in well up there. Did you ever end up trying that new ramen place that opened on your street?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, though we've been meaning to! We've just been a bit bummed because my favorite bookstore down the street announced it is closing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that is such sad news. It's always heartbreaking when a beloved local bookstore closes. I hope you get a chance to visit them one last time before they shut their doors."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Well, I should probably head to the bedroom and get ready to turn the lights out soon since midnight is approaching. Talk to you tomorrow!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sleep well, Priya! I hope you have a restful night and a great Sunday. Goodnight!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "12:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'bouldering'"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u5",
+  "day": 352,
+  "date": "2027-02-15",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday going so far? How are things in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going okay, though I'm feeling a little under the weather today. I've got a scratchy throat, so I decided to skip my usual trail run and just take a complete rest day. Arjun actually went out for a run himself, but I knew I needed to stay in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, I'm sorry to hear you're feeling a bit off. Taking a rest day was definitely the right call, especially since your knee is fully recovered now—no need to overdo it! Did you work from home or head into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went into the office. I didn't feel up to driving, so I rode the commuter train that runs through the neighborhood instead. My coworker Dana actually ended up taking the bus today, but the light rail is so much smoother for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That commuter rail is so convenient. How was the workload today with your backend engineering projects?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty busy, but I managed to stay focused. I put on my headphones and listened to those retro-futuristic 80s-style electronic instrumental tracks all day while writing code. Dana was listening to a heavy metal album, but those nostalgic synth beats always help me zone in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, those synthwave vibes are perfect for coding. Since you're under the weather, are you planning a low-key evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. For dinner, Arjun wanted to order takeout, but I convinced him we should just cook up one of those pre-portioned recipe boxes that gets delivered to our doorstep. It's easy, and we have a pescatarian option waiting in the fridge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect—nutritious, easy, and keeps with your pescatarian eating! What's on the menu tonight from the box?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a garlic herb salmon with roasted asparagus. Very simple. After that, I think I'll just curl up on the couch. I need to get through a few more chapters of the paperback we're all discussing at our next neighborhood gathering. Arjun is actually reading a graphic novel tonight, so we'll both just be quietly reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet reading night sounds lovely and just what you need to recover. How is the book for your neighborhood literary group going? Are you enjoying it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's really good! It's a mystery set in a small coastal town, which is a nice escape. Anyway, I think I'm going to head to the kitchen to help Arjun prep the salmon. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "rest day",
+      "commute": "light rail",
+      "dinner": "meal-kit dinner",
+      "music": "synthwave playlists",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

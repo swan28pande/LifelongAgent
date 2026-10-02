@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 130,
+  "date": "2026-07-08",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Priya! How is your Wednesday going over in Pittsburgh? How is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! We're both doing well. Actually, a new ramen place just opened up on my street today, which is exciting for the neighborhood, though Biscuit was mostly just interested in sniffing the empty boxes outside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a new ramen spot sounds great, though maybe hard to navigate with your pescatarian diet! Are you tempted to try it, or do you have other plans for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might check it out eventually to see if they have a vegetarian broth, but tonight I'm just making a quick grain dish topped with some grilled pink fish at home. My sister Meera texted me earlier saying she was having a heavy beef hotpot over in Seattle, but I definitely wanted something lighter."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and light. How has your workday been at the startup? Did you manage to get through your backend tasks?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty intense, but I kept my focus by streaming those chill, wordless instrumental tracks with the crackly retro vibes in the background. My coworker Dana told me she prefers high-energy heavy metal when she codes, but I need something way more relaxing to get any programming done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can see how those relaxed vibes would help with coding! Are you planning to do anything to unwind now that the workday is over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to spend the evening curled up with one of those suspenseful, fast-paced novels I checked out from the Carnegie branch last week. Meera is currently slogged down in a massive presidential biography, but I definitely prefer a good mystery to keep me on the edge of my seat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a gripping mystery, especially since you got that library card recently. Do you think you'll end up staying up late to finish it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not tonight. I'm aiming to switch off the bedside lamp by exactly half past ten. Dana mentioned she's sleeping at nine these days because of her schedule, but I think thirty minutes before eleven is my absolute sweet spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible bedtime. Since you're single, do you find it's easier to keep to your preferred sleep schedule without having to coordinate with anyone else?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. It's really nice to just set my own routine and stick to it, though Biscuit sometimes tries to crowd my side of the bed anyway!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "salmon bowl",
+      "music": "lo-fi beats",
+      "reading": "library thrillers",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {
+      "distractor1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a teammate named Jack"
+  ]
+}

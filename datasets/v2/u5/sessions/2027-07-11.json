@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 498,
+  "date": "2027-07-11",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Sunday been in Denver? Have you and Biscuit been up to much today, or are you resting that knee?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a lovely, quiet Sunday. I actually got moving early—I took our lab Biscuit out for a nice stroll around the neighborhood first thing. Arjun decided to test out his new bicycle for his own exercise today, so it was just me and the pup enjoying the cool morning air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the day. It's wonderful that you can enjoy those walks again. How is the knee feeling? Have you been able to do any bouldering or trail running lately, or are you still taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "The knee is feeling great! No trail running or climbing yet today, but I did sit down to clean up some backend code for work. To stay focused, I had those retro 80s-style electronic beats with the heavy synthesizers playing in the background. It always helps me get into a flow state. Arjun was listening to some acoustic guitar music while organizing the kitchen, so we had a bit of a battle of the genres going on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Synthwave is always a fantastic choice for coding focus! It must bring back memories of that live show you and Arjun saw. How is everything going at the fintech startup? Being a senior backend engineer there must keep you pretty busy."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. There's always some system architecture to think about, even on weekends! But I'm wrapping things up now. For tonight, I'm looking forward to just closing my eyes and listening to a narrator read a mystery novel through my headphones. Arjun is sticking to his traditional paperback book tonight, but I love just being read to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing after a coding session. Is this for your neighborhood book club, or just some solo listening? I remember you got that library card at the Carnegie Library a while back."
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually for the book club! I managed to download it using my library card from Carnegie. I want to get through a few chapters before I call it a night. I'm aiming to have the lights turned off and be asleep right at eleven o'clock to stay on track for tomorrow. Arjun's already yawning and thinks he'll head to bed around ten because of that bike ride."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid plan. It's always nice to have a set time to wind down. By the way, have you heard from your sister Meera lately? How is she liking Seattle and her data science role?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually talked to her yesterday! She's really enjoying the health-tech company, though she's still adjusting to the Seattle rain. She says the work is super interesting. Oh, and my coworker Dana sent me a picture of her beagle Pepper today. Pepper got into some mud during Dana's triathlon training run."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, Pepper! Beagles certainly know how to find trouble, don't they? I hope Dana didn't have too much cleanup to do after her run. Are you still sticking to your vegetarian diet these days? I know Denver has some great spots."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh absolutely, still fully vegetarian! We actually found a great new veggie-friendly spot near the park. Anyway, I think I'm going to go pop my headphones in now and get some of that listening done before my eleven o'clock bedtime. Talk to you tomorrow!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds perfect, Priya. Enjoy your audiobook and have a wonderful, restful sleep. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "synthwave playlists",
+      "reading": "audiobooks",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'"
+  ]
+}

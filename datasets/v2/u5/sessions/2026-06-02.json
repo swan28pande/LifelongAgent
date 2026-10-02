@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 94,
+  "date": "2026-06-02",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your Tuesday going in Pittsburgh? Is the fintech startup keeping you busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, we're optimizing some database queries, so it's been a bit hectic. But I had a really nice start to the day. Normally I'd be riding to work, but the weather was so gorgeous this morning that I decided to travel on foot instead. My coworker Dana actually ran all the way to the office as part of her triathlon training, which is way more intense than my stroll!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning walk in nice weather sounds like the perfect way to prep for a busy day. And definitely a lot less exhausting than Dana's run! Do you have any relaxing plans for this evening to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm planning on a quiet night of reading. My sister Meera mentioned she's starting a new mystery thriller tonight, but I was feeling a bit nostalgic. So instead of my usual sci-fi, I'm going to revisit a beloved story I've read many times before."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, there's nothing quite like returning to a familiar book when you're in that kind of mood. What's the book you're diving back into?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm picking up Pride and Prejudice again. I never get tired of it! I don't plan on staying up too late, though. Dana mentioned she's trying to be asleep by nine because of her training, but my goal is to turn off the lights at exactly half past eleven."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic! That's a wonderful choice for a nostalgic evening. And half past eleven is a great bedtime—enough time to read without being tired tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. Just a few chapters to wind down, and then sleep. I need to keep some energy for the rest of the week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. Have you been able to do any pottery lately, or has work taken up most of your creative energy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually spent some time at the studio over the weekend glazing some bowls. It's a nice escape. But tonight is definitely all about the reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glazing bowls sounds like a wonderful way to unplug. I hope you enjoy your cozy evening with Jane Austen!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm really looking forward to it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "walked",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "re-read an old favorite",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns a bicycle"
+  ]
+}

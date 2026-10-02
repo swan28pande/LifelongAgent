@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 547,
+  "date": "2027-08-29",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Priya! I hope you're having a relaxing Sunday. How has your day been going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's been a pretty good Sunday. I actually got a bit of work prep done for the upcoming week. Thankfully, I didn't have to make any trip to or from a workplace today, which made it feel much more relaxed. Arjun actually had to drive into his office for a quick weekend task, but I got to stay put."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a peaceful way to ease into the week. How is Arjun doing with his weekend shift? Did you get to spend some time with Biscuit?"
+    },
+    {
+      "speaker": "user",
+      "text": "Biscuit and I have been keeping each other company! Arjun's shift was quick, so he's already back. While I was working at my desk, I decided to change up my background noise. A friend had sent me a specific episode of an investigative series about real-life cold cases, so I listened to that narration. It was a nice break from my usual synthwave tracks, though Arjun was actually blasting synthwave in the garage earlier while working on his bike."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a real-life mystery! Those can be so gripping once you get started. Did the episode live up to your friend's recommendation?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really did! It was incredibly detailed and kept me hooked the whole afternoon. Usually, I'd have my upbeat electronic beats playing to keep my focus, but this was a fun one-time detour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I love when a recommendation hits the spot like that. Have you and Arjun figured out what you're doing for dinner tonight, or are you keeping it simple?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it very simple. We just reheated the extra portions of the vegetarian curry we made the other night. My coworker Dana texted me that she ordered a feast from that new ramen place nearby, but we were happy just finishing up our previous meal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reheated meals are the best for a Sunday night—virtually zero effort and usually even more flavorful the second time around! How are you planning to wind down for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to do some reading. I was feeling a bit nostalgic tonight, so instead of my usual habit of streaming a digital audio narration, I actually pulled down a beloved novel from my shelf that I've read cover-to-cover several times before. It's nice to revisit familiar characters. Arjun is actually listening to a new audiobook on his phone, so we'll both be quiet for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Re-reading an old favorite is like wrapping yourself in a warm blanket. It's so comforting when you already know and love the story. I hope you enjoy getting lost in those pages tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It's exactly the kind of cozy Sunday evening I needed. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "leftovers",
+      "music": "true-crime podcast",
+      "reading": "re-read an old favorite",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'",
+    "invention: Has owned a copy of a favorite sci-fi novel since college."
+  ]
+}

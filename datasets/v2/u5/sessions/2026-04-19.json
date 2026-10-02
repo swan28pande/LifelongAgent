@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 50,
+  "date": "2026-04-19",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Sunday. How has your weekend been going in Pittsburgh? Have you had any time for the piano or bouldering lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty relaxing Sunday. I actually spent a good chunk of the afternoon practicing a difficult Chopin piece on the piano. Speaking of my day, my coworker Dana mentioned she had to drive all the way to her office to grab some gear, but luckily I didn't have to make any journey to a workplace today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to spend a Sunday afternoon! Chopin can be quite demanding but so rewarding. And it's always nice when you don't have to travel anywhere for work. How is Dana's triathlon training coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great, really intense schedule! She actually texted me earlier saying she fell asleep by nine last night because she was so exhausted. I, on the other hand, was not nearly as disciplined—the clock struck one in the morning before I finally turned off the lights to sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, 1:00 AM! That is quite a late night, especially compared to Dana's early bedtime. Did you get caught up in something interesting, or was it just one of those nights where sleep wouldn't come?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both, honestly. I got sucked into watching some videos of climbers tackling some crazy bouldering routes, and before I knew it, it was super late. But it's Sunday, so I could sleep in a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, those climbing videos can be incredibly mesmerizing to watch! It's easy to lose track of time. Since you stayed up so late, I hope you've had a chance to eat well and recharge today. What did you end up doing for dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "I kept it really low-key. My sister Meera called from Seattle and told me she ordered a big feast of takeout from a new Thai place nearby, but I just cleared out the containers of already-cooked food from the fridge and had that. It's nice not to have to cook."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reheating already-cooked food is the perfect Sunday evening solution—no cooking, no mess! It sounds like Meera is settling well into Seattle if she's already finding good local Thai spots. How is she enjoying the city so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "She really likes it! She says the Pacific Northwest vibe suits her, though she misses some of our spots here in Pittsburgh. She's been super busy with her new job, but she's making the most of it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear! It's always a relief when a big move works out so well. How about you? How are things going with your backend engineering work at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy as usual! We have a big release coming up, so my week is going to be packed, but I feel ready for it. I'm just glad I got to have a quiet Sunday to prep myself."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "leftovers",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "1:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

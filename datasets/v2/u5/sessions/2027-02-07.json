@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 344,
+  "date": "2027-02-07",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Priya! Happy Sunday. How has your weekend been going so far? Did you manage to do any bouldering or piano practice today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a pretty relaxing Sunday. I haven't hopped on the piano keys today, but I did get some movement in. First thing after waking up, I took Biscuit out for a nice long stroll around the neighborhood. It was beautiful out. Arjun actually decided to go for a solo road run instead of joining us."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful start to the day. How is your knee feeling after the walk? Have you been able to do any trail running lately, or are you taking it easy ahead of the half marathon in April?"
+    },
+    {
+      "speaker": "user",
+      "text": "The knee feels completely solid, thanks for asking! The physio really did wonders. I haven't gone trail running this weekend, but I did do some light coding for a personal project. It was so nice because, being Sunday, I had absolutely no work-related transit or travel whatsoever. Arjun didn't have any commute either, of course, so we both got to just stay put."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always a treat to have a day with zero commuting. What kind of project are you coding? And did you have some music playing to keep you focused?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm working on a little API tool. To keep my focus, I had those retro-futuristic, neon-soaked electronic instrumental tracks playing in the background all afternoon. It really gets me in the zone. Meera told me she was actually listening to a classical orchestra playlist while she did her data science work today in Seattle, which is a totally different vibe!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Synthwave is perfect for coding! It's got that great driving beat. Speaking of food and energy, what are you and Arjun planning for dinner tonight? Are you trying out that new ramen place on your street?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not tonight! We actually just finished cooking. We made one of those pre-portioned ingredient boxes with the recipe card that we had in the fridge. It was super quick and tasty. My coworker Dana texted me earlier and said she actually made a fully from-scratch vegetarian stir-fry tonight, but I definitely preferred the ease of our pre-measured box."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those pre-portioned ingredient kits are so convenient when you want a delicious meal without all the meal prep stress. Did you guys stick to a pescatarian option for the meal kit?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did! We got a lovely salmon dish. It's always great when they have good seafood options that fit our diet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! A perfect, cozy Sunday evening. I hope you and Arjun have a great rest of your night and a smooth start to your week tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It was a great day. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "no commute",
+      "dinner": "meal-kit dinner",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'",
+    "invention: subscribes to a recipe delivery box"
+  ]
+}

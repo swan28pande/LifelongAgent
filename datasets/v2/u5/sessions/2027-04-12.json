@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 408,
+  "date": "2027-04-12",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Monday been? Are you getting back into the swing of things after the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been busy but good. I actually managed to get out of the city and do a solid jog on the dirt paths up in the foothills this morning. It felt great on my knee, no pain at all! Arjun decided to take his new bike out for a road spin instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear! I'm glad your knee is holding up so well for those outdoor runs. Did you have to head into the office after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I did. I hopped on the electric passenger train that runs into downtown to get to the office. It's so much nicer than driving. My coworker Dana actually rode her bicycle in today since she's training for that triathlon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The train sounds like a very relaxing way to start the workday. How is everything at the fintech startup? Are you and Arjun enjoying living in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Denver is great, we really love the neighborhood. Work was pretty intense today, so when I got home, Arjun and I prepared one of those dinners where they mail you all the pre-measured ingredients and a recipe card to follow. It was a nice, easy pescatarian option. Arjun actually wanted to just order Thai takeout, but I convinced him to help me cook this instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those recipe boxes can be a lifesaver on busy workdays, and it's great that you could make a quick pescatarian meal together. What's on the agenda for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm about to wind down by reading a few chapters of the fiction book selected for our upcoming neighborhood group discussion. My sister Meera told me she's currently reading a biography on her tablet tonight, but I'm sticking to our group's pick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how is the book club book going? Are you enjoying it so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's really gripping! I might have a hard time putting it down, but I'm going to make sure my lights are out exactly sixty minutes before midnight. I need to keep a steady sleep schedule. Arjun is already asleep, he turned in early tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An 11:00 PM bedtime sounds like a smart plan to keep your energy up. I hope you get a restful night of sleep, Priya! Talk to you tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "trail run",
+      "commute": "light rail",
+      "dinner": "meal-kit dinner",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: exercise should be 'trail run', conversation gives 'long trail run'"
+  ]
+}

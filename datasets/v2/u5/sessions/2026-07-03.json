@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 125,
+  "date": "2026-07-03",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your day been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a great start to the weekend. I got moving early today by taking Biscuit for a stroll around the neighborhood first thing. My coworker Dana actually did an intense sunrise cycling session for her triathlon training, but Biscuit and I preferred a much slower pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning walk with Biscuit sounds like a lovely, peaceful way to start a Friday. How did the rest of the day treat you? Were you able to get much done at work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I was focused on coding some backend API fixes today. To help me concentrate, I put on some relaxed, low-tempo instrumental tracks. My desk neighbor said he was blast-playing heavy metal to get through his tasks, but those mellow beats are exactly what I need to stay in the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those mellow, wordless rhythms are perfect for zoning in on code. After a productive day like that, do you have any nice plans lined up for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm keeping it super easy tonight and ordering a hot, fresh cheese and veggie pie from the parlor down the block. My sister Meera told me she was cooking a fancy salmon dinner over in Seattle, but I definitely didn't feel like turning on the stove today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fresh veggie pie sounds like the ultimate Friday treat—and perfectly pescatarian-friendly! Are you planning to just relax and unwind for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm really looking forward to curling up on the couch with one of those high-stakes suspense novels I borrowed from the local branch. My friend told me she's wading through a dry biography right now, but I'm much more in the mood for a gripping mystery."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A gripping mystery is the perfect way to spend a cozy Friday night. How has the weather in Pittsburgh been today? Nice enough for that morning walk with Biscuit?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been gorgeous today! Not too hot, and the humidity stayed low, which made our stroll this morning really pleasant. Biscuit definitely appreciated it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Do you have any plans to get out for some bouldering or maybe spend some time at the pottery wheel this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might head over to the climbing gym for some bouldering on Sunday afternoon, but tomorrow is completely free. Just planning to take things as they come!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "not mentioned",
+      "dinner": "takeout pizza",
+      "music": "lo-fi beats",
+      "reading": "library thrillers",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

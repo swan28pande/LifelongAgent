@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 435,
+  "date": "2027-05-09",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! I hope you're having a relaxing Sunday in Denver. How have things been at the fintech startup lately? Are they keeping you busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, being a senior backend engineer there has been pretty demanding lately, but today has been a nice pause. Since it's Sunday, I didn't have any kind of transit or travel to a workplace at all today. Arjun actually had to commute to his weekend shift, but I got to stay entirely local."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much-needed break from any work travel! It's always nice to have a day with zero transit. How have you been spending your free time today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. I've mostly been relaxing on the couch. I spent a good chunk of the afternoon reading the assigned fiction book for our neighborhood literary group's next meeting. Arjun has been reading a cycling manual for his new bike, but I was completely absorbed in my book."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how is the book for the club going? Did you manage to grab it from the Carnegie Library, or did you have to buy a copy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually used my library card to borrow it! It's a great system. The novel itself is a bit of a slow burn, but the characters are fascinating, so I think we'll have a lot to talk about at the next meetup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful that you could get it from the library. It's such a great resource to have nearby. Have you heard any updates from your sister Meera in Seattle lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! We chatted yesterday. She's really settling into her data science role at the health-tech company, and she's loving Seattle so far despite the rain."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear Meera is doing well there! It sounds like a great move for her. How is the rest of your evening looking? Just taking it easy before the work week starts?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm just planning on a quiet night. I want to make sure I'm well-rested, so I'm aiming to switch off the lights and fall asleep precisely sixty minutes before midnight. Arjun usually stays up past 1:00 AM, but I definitely need my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible plan to get a full night's rest. Going to sleep at that hour should set you up nicely for Monday morning."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm looking forward to starting the week with a clear head. I think I'm going to head to bed shortly. Speak to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "book club novel",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

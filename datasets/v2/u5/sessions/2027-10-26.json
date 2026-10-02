@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 605,
+  "date": "2027-10-26",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Tuesday been going in Denver? Did you manage to get some fresh air today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a pretty hectic Tuesday. I did get some fresh air early on—I started the day by taking Biscuit on a long, brisk stroll around the neighborhood before work. It was nice and quiet, though Arjun chose to do a high-intensity treadmill run instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a peaceful start for you and Biscuit! Did you ride your bike in to work after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I couldn't do my usual morning pedal because I discovered a completely flat tire on my bike right as I was heading out. Fortunately, Dana was driving in today and offered to let me hitch a ride with her, so I ended up getting a lift to the office from her."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, a flat tire is always a hassle, but thank goodness Dana was able to give you a lift! Hopefully the rest of your workday at the climate-tech company went a bit smoother?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not quite! It was wall-to-wall meetings, and a final budget session ran so incredibly late that I ended up completely skipping any evening meal tonight. I just didn't have the energy to cook my usual pot of lentil soup. Arjun ended up ordering a veggie burrito for himself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what an exhausting evening. Missing dinner because of a late meeting is the worst. Did anything positive happen today to balance out the hectic schedule?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! When I finally got home, Arjun surprised me with an amazing gift. He got me a beautiful vintage-style record player!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, a record player! That is such a thoughtful and wonderful surprise from Arjun. Where did you end up putting it in your place?"
+    },
+    {
+      "speaker": "user",
+      "text": "We set it up on the sideboard in the living room. It fits perfectly there next to Mochi's favorite window perch. I can't wait to start hunting for some physical vinyl albums to display next to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful addition to your living room! It's great to have a nice surprise after such a busy day. Have you been able to fit in any of your usual bouldering or trail running lately to help unwind from work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, my knee has been feeling really strong, so I actually did some light bouldering over the weekend. It felt so good to get back on the wall and just focus on the routes."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "got a ride from a coworker",
+      "dinner": "skipped dinner",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "vinyl_gift.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

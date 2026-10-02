@@ -1,0 +1,93 @@
+{
+  "user_id": "u5",
+  "day": 137,
+  "date": "2026-07-15",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How's your Wednesday going in Pittsburgh so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Quite busy with some backend engineering tasks today, but I'm managing to keep up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear you're on top of it. How is Biscuit doing today? Have you had a chance to check out that new ramen place on your street yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Biscuit is doing great, just napping in his usual spot. I actually haven't tried the ramen place yet—since I'm pescatarian, I need to check if they have any fish-broth options first. My sister Meera in Seattle actually went out for ramen last night, though!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, definitely a good idea to double-check the broth first! I hope they have a great pescatarian option for you. How is Meera enjoying her new job and Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's loving it! We caught up earlier, and she told me she's been listening to 90s grunge music while working to really get into the local vibe."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun way to settle into the city! What kind of music has been keeping you focused on your fintech tasks today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, unlike Meera, I've had cinematic instrumental compositions playing in the background today. Mostly orchestrations written for the big screen—it really helps me concentrate on writing clean code. My coworker Dana, on the other hand, told me she's been blasting heavy metal to get through her workday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Movie soundtracks are excellent for productivity—they really give your coding sessions an epic feel! Did you listen to any specific composer, like Hans Zimmer or Joe Hisaishi?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! I had some Hans Zimmer on earlier, and now I've switched to Joe Hisaishi. It makes writing APIs feel like a dramatic climax! Dana said she needs the fast tempo of metal, but that would just distract me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Hisaishi's work is beautiful! It must make the backend work feel very magical. Have you been doing any pottery or piano lately to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually spent some time on the piano yesterday evening, practicing a piece I've been working on. It's a nice contrast to staring at a screen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. It's always great to have that creative outlet. Did you manage to visit the Carnegie Library recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I went to see a small local art exhibition they had in their gallery space last weekend. It's such a great historic building."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a beautiful space. I'm glad you're making good use of it. I hope the rest of your Wednesday goes smoothly and your cinematic coding session is a success!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to get back to those APIs now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "film scores",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

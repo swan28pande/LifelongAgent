@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 407,
+  "date": "2027-04-11",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Sunday. How has your weekend been? Did you get to spend some quality time with Biscuit today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a good, productive Sunday. I did do some catch-up work today, but thankfully, I didn't have to travel to any office or workspace, which was nice. Arjun stayed home too, so neither of us had to commute anywhere today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Working on a Sunday? I hope it wasn't too stressful. Did you put on some of your favorite upbeat music to power through it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I had zero background noise or music playing today because I needed absolute quiet to concentrate on a tricky backend bug. It's a big change from my usual high-tempo running playlists, but it really helped me focus. Arjun was blasting some synthwave in his study, though!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes complete silence is exactly what you need to solve those stubborn bugs. Did you at least manage to take a break and get outside for some fresh air?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I made sure to get some movement in. I took Biscuit out for his usual morning stroll around the block first thing today. Arjun decided to go for a strenuous trail run instead, so we both got our steps in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to the day. Speaking of running, how is your training going for the Denver half marathon? It's coming up this month, isn't it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is! Training is going great, and my knee feels completely fine after that old injury. I've also been sticking strictly to my pescatarian diet, which really helps keep my energy levels up for those longer training runs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear your knee is holding up and that your pescatarian lifestyle is keeping you fueled. What do your plans look like for the rest of the evening? Are you going to relax with a good book?"
+    },
+    {
+      "speaker": "user",
+      "text": "That's the plan! I'm going to spend the evening reading the latest selection for my neighborhood book group. Arjun is planning to read his new cycling magazine right next to me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a very cozy and relaxing evening. I hope it helps you wind down for an early night to start the week fresh!"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I'm actually not turning off the lights until about ninety minutes past midnight tonight, because there's a late-night indie movie I really want to catch. Normally I'm asleep by eleven, so this is a bit of a treat. Arjun is actually planning to go to bed early around ten-thirty, so I'll be watching it on my own."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a late-night movie sounds like a perfect weekend treat, even if it means a late bedtime. Enjoy the film, Priya! Let me know how you like it tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I definitely will. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "no commute",
+      "dinner": "not mentioned",
+      "music": "silence",
+      "reading": "book club novel",
+      "bedtime": "1:30 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'"
+  ]
+}

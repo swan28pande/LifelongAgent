@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 239,
+  "date": "2026-10-25",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Sunday going in Pittsburgh? Did you and Biscuit get up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Sunday has been pretty low-key. I took Biscuit on a quick stroll around the block, but other than that, I'm letting my body completely recover today and skipping any strenuous physical activity. Arjun, on the other hand, went all out and did a heavy session at the climbing gym."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A recovery day sounds like a smart move, especially keeping your knee in mind. How is the knee feeling lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's holding up really well, thanks for asking! I actually had to log on today to handle some urgent server maintenance for the startup. Thankfully, I had absolutely zero travel to get to work today, which was a nice relief."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, server maintenance on a Sunday? I hope it didn't take up too much of your day. Were you able to resolve everything smoothly?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, got it all sorted! I actually worked in complete quiet today with absolutely no background sounds. Usually, I'd have a synthwave playlist blasting, but I really needed deep focus to debug a tricky database locking issue, so the silence was necessary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes absolute quiet is the only way to crack those complex database issues. Glad you got it sorted out. What's on the menu for dinner after all that brainpower?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple and just reheating the remains of the fish tacos we made last night. Arjun wanted something different, so he ended up ordering a fresh pizza from the new place down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reheated fish tacos are a great Sunday dinner, and pizza is always a solid choice. It sounds like a very relaxed evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm just winding down now. I plan on turning the lights out and heading to sleep right at half past eleven tonight to make sure I'm fully recharged for Monday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect plan to start the week fresh. I hope you sleep well!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "rest day",
+      "commute": "no commute",
+      "dinner": "leftovers",
+      "music": "silence",
+      "reading": "not mentioned",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'no commute', conversation gives 'work from home'"
+  ]
+}

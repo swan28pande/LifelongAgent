@@ -1,0 +1,80 @@
+{
+  "user_id": "u5",
+  "day": 480,
+  "date": "2027-06-23",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Wednesday been going in Denver? How are you, Arjun, and Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! We're all doing well. It's been a busy but good day. I actually took the city's electric train line into the office this morning. Arjun was feeling ambitious and decided to use his new bicycle to get to his office, despite the rush hour traffic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Taking the train is a great way to avoid dealing with traffic yourself, and it's awesome Arjun is getting use out of his new bike. Did you have a productive day at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a lot of coding to get through, so I kept myself focused by spinning some classic jazz on the turntable in my workspace. My coworker Dana was telling me she listened to high-energy pop playlists to stay motivated, but the warm brass records were exactly the vibe I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to set a focused mood. There's nothing quite like the sound of vinyl to keep you in the zone. Did you cook something nice with Arjun when you got home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we made soft folded tortillas filled with seasoned dark legumes and some fresh avocado. Arjun was originally hoping we'd get takeout burritos, but he ended up really enjoying the homemade bean wraps."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those sound delicious, and it's always great to have a fresh, vegetarian meal at home! I imagine Biscuit was keeping a very close eye on the kitchen while you were preparing those."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, you know it. He was practically glued to my feet, hoping a piece of avocado or bean would drop. He's such a sweet companion, even if he is a bit of a food thief!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, classic Labrador behavior! Did you get a chance to relax and do any reading after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually didn't listen to any of my narrated books tonight. Normally I like to have an audiobook playing while I wind down in the evening, but I was so exhausted that I just passed out on the sofa right after we cleaned up the kitchen. Arjun had much more energy and spent his evening reading a physical paperback."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like your body just needed a complete rest after a long day! Sometimes a surprise nap on the couch is the best thing. I hope you're feeling a bit more refreshed now."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm just planning to take it easy tonight and get ready for another day of backend engineering tomorrow. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 7,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "light rail",
+      "dinner": "black bean tacos",
+      "music": "jazz vinyl",
+      "reading": "no reading",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: reading should be 'no reading', conversation gives 'other'",
+    "pref_leak: bedtime should be 'not mentioned', conversation gives 'other'",
+    "invention: The user owns a turntable."
+  ],
+  "repair_method": "revise_existing"
+}

@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 703,
+  "date": "2028-02-01",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Tuesday evening going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just winding down at home with Biscuit and Mochi. I'm actually about to start making some dinner. Arjun decided to make himself some sweet potato quesadillas, but I'm opting for soft-shell wraps filled with seasoned dark legumes and pico de gallo tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those sound delicious and perfect for a cozy Tuesday. It's always nice to have a fresh, satisfying meal. Are you planning on doing any reading or catching up on anything after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Arjun is planning to look through a non-fiction book about historical space missions, but I think I'm going to pull up that lightweight digital screen device I bought last year. I want to spend a couple of hours swiping through the latest chapters of my multi-volume epic about mythical kingdoms and sorcerers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fantasy epic sounds like the perfect escape! It's so easy to get lost in those massive world-building stories, especially when you have them all stored on one portable device. How is the plot coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's getting really intense! The main character just discovered a hidden portal that could change everything. It's exactly the kind of distraction I need after a long day of meetings at the climate-tech office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Managing an engineering team must keep you on your toes all day, so a magical portal is a great change of pace. By the way, did your coworker Dana ever end up adopting that beagle she was looking at?"
+    },
+    {
+      "speaker": "user",
+      "text": "She did! His name is Pepper, and he's absolutely adorable. She actually mentioned she went completely plant-based after watching a documentary recently, which is a big change for her."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow, that is a big shift! It's great that she's finding what works for her, and I'm sure Pepper is keeping her busy. Speaking of family and changes, how is your sister Meera doing out in Seattle? Is she settling into her data science role?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is doing really well! She loves the health-tech company she's at and is finding her groove. She says the rain took some getting used to, but she's really happy with the move."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Moving to a new city can be a big transition, but it sounds like she's thriving there. I'll let you get to your dinner preparation now so you can enjoy your evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely ready to eat those wraps and then dive back into my electronic screen to see what those mages are up to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the feast and the fantasy! Have a relaxing night, Priya."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "black bean tacos",
+      "music": "not mentioned",
+      "reading": "e-reader fantasy series",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

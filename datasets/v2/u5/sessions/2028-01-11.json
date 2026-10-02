@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 682,
+  "date": "2028-01-11",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Tuesday. I hope your week is off to a smooth start. How are you, Arjun, and the pets doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! We're doing really well. It was a cold morning, so instead of walking, I hopped on the public transit coach that stops right by our block to get to the office. Arjun actually bundled up and rode his new bicycle to his office instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That public transit line is so convenient, especially when it's chilly! It's great Arjun is getting some use out of his new bike, too. How has your workday been going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been productive! I had a lot of focus time today, so I spent my working hours listening to physical LP albums spinning on the turntable Arjun got me. It's such a nice, warm sound to have in the background. Arjun, on the other hand, was working from home in the other room and just streaming digital playlists through his headphones."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy. I love that you're getting so much enjoyment out of that turntable gift! It really does make a difference when you're trying to zone in on your engineering manager tasks."
+    },
+    {
+      "speaker": "user",
+      "text": "It really does. And speaking of Arjun's ride earlier, those new bike lanes the city recently put in near our apartment made his route so much safer. He was really glad to have that dedicated space."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's wonderful to hear! Safe infrastructure makes such a difference for cycling. How are Biscuit and Mochi handling the winter weather? Are they keeping you company while you work?"
+    },
+    {
+      "speaker": "user",
+      "text": "They are! Well, Mochi spent the afternoon curled up right next to the heat vent in my home office, practically asleep the whole time. Biscuit was a bit more restless, but he eventually settled down with a chew toy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic Mochi, finding the warmest spot in the house! And it sounds like Biscuit did a good job self-soothing. Are you still enjoying your role at the climate-tech company? I know you've been settled in after accepting the Denver transfer."
+    },
+    {
+      "speaker": "user",
+      "text": "I really am. Leading the engineering team is challenging but incredibly rewarding, and the focus on sustainability keeps me highly motivated. It's exactly the kind of work I wanted to be doing here in Denver."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's so fulfilling to hear, Priya. It sounds like you've really found your stride there. I'll let you get back to your evening, but let me know if you need help with anything else today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "bus",
+      "dinner": "not mentioned",
+      "music": "vinyl records",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'vinyl records', conversation gives 'jazz vinyl'",
+    "invention: collecting vintage vinyl records with Arjun"
+  ]
+}

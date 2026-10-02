@@ -1,0 +1,78 @@
+{
+  "user_id": "u5",
+  "day": 609,
+  "date": "2027-10-30",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Priya! How is your Saturday going? Did you and the pets have a good morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, Biscuit and Mochi are doing great. I actually spent the morning heading up into the foothills with that outdoor association I joined a while back. It was really nice to be out with a pack of people today. Arjun decided to go for a solo road ride on his bike instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to spend a Saturday morning! How is your knee holding up after the trail excursion?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels completely fine, luckily! No pain at all, so the physio was definitely right to clear me. I did have to catch up on a few work things for my engineering manager role this afternoon, but since it's the weekend, I didn't have to travel to any workplace today, which was a relief. Arjun actually had to commute to his office briefly to grab some paperwork, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear the knee is holding up so well! And it's always nice when you can avoid any weekend travel for work. How did you stay focused while wrapping up those engineering manager tasks?"
+    },
+    {
+      "speaker": "user",
+      "text": "I put on some physical albums on the record player Arjun got me! There's something really grounding about listening to music on spinning wax discs while working. Arjun always prefers using his digital streaming apps when he is focused, but I love the analog feel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. A spinning record is perfect background focus. What are your and Arjun's plans for the evening now that work is out of the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are actually preparing a homemade meal together in the kitchen tonight. We've got some great vegetarian ingredients lined up. My coworker Dana told me she and her partner are just getting takeout from a local spot tonight, but Arjun and I wanted to make something ourselves."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely, cozy evening. Cooking together is always a great way to unwind. Are you trying out any new vegetarian recipes tonight, or sticking to an old favorite?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just an old favorite of ours! It's nice and simple. We're looking forward to just relaxing at home in Denver for the rest of the night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect. I hope you both have a wonderful dinner and a peaceful rest of your weekend with Biscuit and Mochi!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm sure the pets will try to beg for some scraps, but we'll keep them behaved. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "no commute",
+      "dinner": "cooking with Arjun",
+      "music": "vinyl records",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'vinyl records', conversation gives 'jazz vinyl'",
+    "invention: Arjun has a studio for client meetings"
+  ]
+}

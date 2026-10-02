@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 134,
+  "date": "2026-07-12",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! I hope you're having a relaxing Sunday over in Pittsburgh. How are you and Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! We are doing well. I took Biscuit on a very short, slow walk around the block, but today is actually a planned recovery day for my body. I'm deliberately doing absolutely no physical training or exercise of any kind today to let my muscles fully heal. My coworker Dana, on the other hand, texted me that she ran fifteen miles this morning as part of her intense triathlon training routine!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "A planned recovery day sounds incredibly smart, especially with how hard you usually work at bouldering. And wow, Dana is really putting in the miles! Did you manage to completely step away from everything today, or did you have to log on for some startup work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did have to jump on the computer for a few hours to handle some database maintenance. To help me concentrate while I worked, I had instrumental compositions written to accompany cinematic movies playing in the background. It really helps me focus, whereas my sister Meera told me earlier today that she can only get her remote work done in Seattle when she's listening to episodic true crime podcasts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a fun contrast—cinematic masterpieces versus true crime! Film compositions really do have a way of making even database maintenance feel epic. Speaking of your local neighborhood, did you ever get a chance to check out that new ramen place that opened up on your street? I remember you wondering if it would fit your pescatarian diet."
+    },
+    {
+      "speaker": "user",
+      "text": "I actually looked at their menu online yesterday! They have a slow-simmered kelp broth and a soft-shell crab ramen, which is fantastic news for me. I'm definitely going to have to try it soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that soft-shell crab ramen sounds amazing! I'm glad they have options that fit your lifestyle. Have you had any time today to unwind with your other hobbies, like a bit of piano practice or pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did sit down at the piano for about twenty minutes earlier. I just ran through some finger exercises and scales to keep my hands nimble, but I didn't push myself too hard. Today is all about keeping things low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely, peaceful way to spend a Sunday afternoon. How is Biscuit liking the quiet day?"
+    },
+    {
+      "speaker": "user",
+      "text": "He is absolutely loving it. He's currently curled up on the rug right next to my desk, snoring softly. He is the undisputed champion of lazy Sundays."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He sounds like the perfect companion for a recovery day! It sounds like you've set yourself up nicely for the coming week."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Getting that server work out of the way today means I can start Monday morning with a clean slate. I'm feeling ready for the week ahead!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "rest day",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "film scores",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: exercise should be 'rest day', conversation gives 'missing'",
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'",
+    "pref_absent: music should be 'film scores', conversation gives 'missing'",
+    "pref_leak: reading should be 'not mentioned', conversation gives 'missing'",
+    "invention: Biscuit has mastered the 'stay' command"
+  ]
+}

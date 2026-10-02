@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 77,
+  "date": "2026-05-16",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Saturday going in Pittsburgh? Did you get a chance to work on your pottery or piano today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! No pottery or piano today. I actually had to head into the office for some unexpected server maintenance. Since the weather was absolutely gorgeous today, I decided to travel there on foot! Normally I have zero commute on Saturdays, so it was a nice change."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, server duty on a Saturday! At least the walk made for a nice break. Did you listen to anything while you were working, or was it quiet in the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty quiet, but once I got to my desk, I put on some classic jazz vinyls from the office collection on the community turntable in our breakroom. It really helped me focus. My coworker Dana, who is still training hard for that triathlon, was working nearby but she had her headphones on listening to a fast-paced techno playlist to keep her energy up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great office setup! How is Dana's training going, by the way? Is she still pushing through those tough workouts?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! In fact, her workout today was a grueling open-water swim at the lake. For my own exercise, I decided to do some serious mileage on foot around the local parks after I left the office—I ended up jogging for nearly two hours. I'm definitely feeling it now!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, nearly two hours! That is impressive stamina. You definitely earned a good rest after that. Do you have any relaxing plans for the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely! I'm actually getting ready to head out to share a meal at a nice restaurant with a group of close pals tonight. It'll be great to catch up with everyone. My sister Meera in Seattle said she's just doing a quiet solo takeout night at her apartment, so I feel lucky to be going out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to unwind. Have a great time with your friends! Are you going to try any new pescatarian dishes at the restaurant?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm hoping to get some good seafood! We are going to a spot known for its grilled fish, so I'm excited. Meera was telling me earlier that her commute in Seattle has been mostly light rail lately, which she loves, so we chatted about that for a bit too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That light rail system in Seattle is supposed to be really convenient. I'm glad she's settling in well there! Since you're heading out to dinner now, do you think it'll be a late night for you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably a bit late. I've got some things to organize when I get back, so I likely won't end up turning the lights out until an hour past midnight. Meera, on the other hand, said she was so exhausted from her week that she was aiming to fall asleep by nine PM!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like you have a full night ahead, while Meera gets some well-deserved rest. Have a wonderful dinner with your friends, Priya, and enjoy the rest of your weekend!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "long run",
+      "commute": "walked",
+      "dinner": "dinner with friends",
+      "music": "jazz vinyl",
+      "reading": "not mentioned",
+      "bedtime": "1:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: exercise should be 'long run', conversation gives 'long trail run'",
+    "invention: owns a turntable",
+    "invention: owns vinyl records"
+  ]
+}

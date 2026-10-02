@@ -1,0 +1,83 @@
+{
+  "user_id": "u5",
+  "day": 585,
+  "date": "2027-10-06",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Wednesday going in Denver? Are things busy at the climate-tech company, and how is Biscuit doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good, pretty busy at work but manageable. Biscuit is doing great, she's currently napping at my feet. Actually, I had a little excitement today—I finally bought one of those electronic ink reading devices, an e-reader!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's wonderful! You've been thinking about getting one of those for a while. What made you decide to make the purchase today?"
+    },
+    {
+      "speaker": "user",
+      "text": "There was a really good online sale, so I couldn't resist. Arjun was teasing me about it since he still insists on buying physical hardcovers, but I'm excited to have something more portable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A sale is always the perfect excuse! It'll be so convenient to carry a whole library around with you. Do you know what you're going to read first on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm still browsing the shop, so I haven't decided yet. But for tonight, my sister Meera was telling me she's in the middle of a massive paperback biography, whereas I'm planning to just lie on the couch and listen to a professional narrator read a mystery novel to me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to unwind. Just resting your eyes and getting lost in a story is so relaxing, especially after looking at code and design docs all day."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. For dinner, Arjun decided to get some spicy pork ramen from the new noodle shop on our street, but I'm keeping it simple and making some warm corn tortillas folded over spiced dark beans with fresh avocado."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, homemade spiced bean wraps sound fantastic! A perfect fresh, warm dinner. It's great that the new ramen place is working out for Arjun, too."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, he's been wanting to try it forever. Biscuit was staring at him the entire time he ate, hoping for a stray noodle, but she had to settle for her dog food."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, typical Biscuit! She's always ready to help with dinner. It sounds like you have a very cozy Wednesday evening lined up."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I'm looking forward to just relaxing with my narrated story. I'll let you know how the new screen looks once I unbox the electronic reader tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "black bean tacos",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "ereader.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

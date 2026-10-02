@@ -1,0 +1,85 @@
+{
+  "user_id": "u5",
+  "day": 555,
+  "date": "2027-09-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday going? How are things at the climate-tech firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy day. I started it early with a jog on the unpaved paths up in the foothills. Arjun decided to go to the indoor bouldering gym instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the morning. Did you have a busy day at the office after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I had to take some time off today. I used my own leg power to pedal my two-wheeler over to the clinic this morning, though Arjun had to drive me home because I had all four of my wisdom teeth extracted today! My coworker Dana mentioned she took the light rail to work today, which was probably a smoother ride."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, wisdom teeth extraction! That is a major procedure. How are you feeling now that you're back home? Are you in much pain?"
+    },
+    {
+      "speaker": "user",
+      "text": "My jaw is really sore and starting to swell up quite a bit. I'm just resting on the couch with an ice pack. Arjun has been wonderful, though, making sure I have everything I need and helping me out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad Arjun is there to help you recover. It definitely takes a couple of days to get over the worst of it. What are your plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just relaxing. I'm going to listen to a narrator read a novel to me through my headphones tonight. Arjun is sitting next to me reading a physical paperback."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing way to spend the evening while you heal. What book are you listening to?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a sci-fi book I've wanted to start. Speaking of books, my sister Meera in Seattle mentioned she joined a local book club too, which is great since she's been so busy with her data science job."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It's a great way to meet people in a new city. Have you been able to keep up with your own book club here in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we have our next meetup next week, so I'm hoping the swelling is completely gone by then so I can chat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure you'll be feeling much better by next week. Just take it easy for now, get some rest, and let me know if you need anything!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I think I'm going to close my eyes and start my book now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "trail run",
+      "commute": "cycling",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "audiobooks",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "wisdom_teeth.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

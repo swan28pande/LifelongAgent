@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 297,
+  "date": "2026-12-22",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Tuesday been going? How is Biscuit doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Biscuit is doing great, we went for a short walk earlier. My day has been pretty busy at the fintech startup, actually. I had to stay at the office quite late to finish up some backend tasks. Because of that, I completely bypassed my usual high-intensity training session at home. Dana told me she managed to fit in her evening run for her triathlon prep, but I just didn't have the energy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a tiring day! It's completely fine to skip a workout when work gets that hectic. Did you at least have a smooth trip home from the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully. Since I was tired, I just hopped on the municipal transit coach. Dana actually rode her bicycle home using those new bike lanes near my place, but I definitely preferred sitting on the public coach today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds much more relaxing than cycling after a long day. How is the knee feeling, by the way? Is it still holding up well since the physio cleared you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's feeling completely normal, thank goodness! I haven't been back to bouldering yet, but I'm glad it's fully healed. I actually had to go to the dentist's office for a quick checkup on my way home, which added to the long day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear the knee is still doing well! A dentist visit on top of a late workday is a lot. Did you get a chance to unwind at all after you got back?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yeah. I ended up reading a glossy periodical that I'd actually swiped from the dentist's waiting room—they said I could keep it! Normally I'd be diving into some of my poetry books, but this weekly publication was a nice change. Arjun was telling me he spent his evening reading a biography, so we both had some quiet time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, a waiting room magazine is a classic way to switch things up! It's nice that you and Arjun got to have a quiet evening. Are you planning to head to sleep early tonight to catch up on rest?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm aiming to shut my eyes right at eleven o'clock tonight. Arjun is a night owl and mentioned he'll probably stay up until 1 AM working on a project, but I need my sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. Eleven is a great bedtime to make sure you're fully recharged for tomorrow. Have you had any updates from your sister Meera lately? How is she liking Seattle?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well! She loves her data science job at the health-tech firm. We chatted briefly yesterday. I'm just looking forward to getting some rest now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear about Meera. Sleep well, Priya! I hope you have a more relaxing day tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "skipped workout",
+      "commute": "bus",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "a magazine",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: usually does high-intensity interval workouts in her living room",
+    "invention: owns a collection of poetry volumes",
+    "invention: plans to go bouldering with Arjun this weekend"
+  ]
+}

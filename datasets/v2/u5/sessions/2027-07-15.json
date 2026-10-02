@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 502,
+  "date": "2027-07-15",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Thursday going? I was wondering how things are coming along with your job search for that engineering manager position at the climate-tech startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going well, thanks for asking. I actually had a follow-up call with them yesterday and I'm waiting to hear about the next steps. Today was a bit quieter though. I didn't have to travel anywhere for my job today, so I just set up my laptop at our dining table and worked from here. Arjun, on the other hand, commuted into his office using his new bicycle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, peaceful setup! It's great that Arjun is getting some use out of his new bike, too. Did you manage to get a lot of backend engineering work done without the office distractions?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Though my morning started with a bit of a mishap. My headphones snapped right when I went to put them on. Normally, I like to put on one of my favorite jazz LPs while I program, but since I couldn't use headphones, I ended up playing the local station's live broadcast of orchestral and symphonic pieces out loud through my desktop speakers instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, what a bummer about your headphones! But a live orchestral broadcast sounds like a wonderful alternative to keep you focused. Classical pieces can be surprisingly great for coding. How did Biscuit handle the background music?"
+    },
+    {
+      "speaker": "user",
+      "text": "He didn't seem to mind it at all! He actually spent most of the afternoon napping right at my feet under the table. It was nice to have him keeping me company while I worked on some tough API refactoring."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Biscuit sounds like the perfect work-from-home companion. It's always nice to have a furry coworker around. By the way, how is your sister Meera doing out in Seattle? Have you two caught up recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually talked for a bit on Tuesday! She's really settling into her health-tech data science role. She said she's been exploring different neighborhoods on the weekends and absolutely loves the Pacific Northwest vibe so far."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic to hear! Seattle is beautiful, so I'm glad she's enjoying it. How are things with your coworker Dana? Has she given you any updates on her new beagle, Pepper?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes! She was telling me earlier this week that Pepper is doing really well and has been adjusting to his new home perfectly. She also mentioned she's still fully committed to her vegan diet and has been finding some amazing plant-based recipes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It sounds like both Pepper and Dana are thriving. It's always great to hear positive updates from everyone. Are you planning to just unwind with Arjun for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, that's the plan. Arjun just got back from his ride, so we're going to catch up on our days and just have a relaxing night in. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "work from home",
+      "dinner": "not mentioned",
+      "music": "classical radio",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'"
+  ]
+}

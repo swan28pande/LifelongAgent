@@ -1,0 +1,83 @@
+{
+  "user_id": "u5",
+  "day": 258,
+  "date": "2026-11-13",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Priya! How has your day been going over in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a good Friday. I got a nice, active start today by taking Biscuit around the block for his morning stroll. Dana told me she actually skipped her morning run today to rest up for her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for Biscuit! Did you end up taking the bus to work after that, or how did you get in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually pedaled my bicycle to the office today! Those new bike lanes they put in near my apartment made the ride so much smoother. Arjun told me he took the bus today because his car was acting up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those bike lanes are a game changer. How was the workload at the fintech startup today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty intense, but I managed to lock in by listening to those retro-futuristic synth-heavy tracks, similar to the music at that show Arjun and I went to. It really helps me focus when I'm writing backend code. Arjun told me he was listening to a jazz stream all day at his desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That synth sound is perfect for getting into a flow state. Do you and Arjun have any fun plans to kick off the weekend tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do! We're actually heading out to eat at a nice restaurant tonight to catch up. It'll be nice to have a proper evening out. My sister Meera told me she's just cooking at home in Seattle tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely, I hope you two have a wonderful time! What are your plans for after you get back?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just wind down with some reading. I'm planning to dive into that anthology of modern verse I picked up from the Carnegie Library. Arjun said he's going to work on a sci-fi novel he started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An anthology of verse sounds like a peaceful way to end the week. Are you planning on staying up late?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, I'm hoping to have my lights off by half past ten tonight. My coworker Dana mentioned she went to bed at nine last night, but 10:30 is usually my sweet spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Half past ten is a great goal for a restorative night's sleep. Enjoy your dinner date, and have a wonderful, relaxing weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "cycling",
+      "dinner": "dinner date out",
+      "music": "synthwave playlists",
+      "reading": "poetry collections",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: exercise should be 'morning dog walk', conversation gives 'missing'",
+    "pref_absent: music should be 'synthwave playlists', conversation gives 'missing'",
+    "pref_absent: reading should be 'poetry collections', conversation gives 'missing'"
+  ]
+}

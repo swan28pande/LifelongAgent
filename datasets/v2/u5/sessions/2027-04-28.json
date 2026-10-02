@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 424,
+  "date": "2027-04-28",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How was your Wednesday? Did you and Biscuit get to spend some nice time outdoors in Denver today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, Biscuit loved basking in the sun on the balcony this afternoon. My day was pretty good, though my commute was a bit different. Usually Arjun and I might carpool, and today he ended up driving his car to his office, but I decided to take the electric commuter train to work instead. It was actually really nice not having to deal with highway traffic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking the train is a great way to avoid the stress of rush hour! Did you have something interesting to listen to on the ride, or did you just enjoy the quiet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually listened to something unusual during my work hours today. I normally stream those upbeat, electronic synthwave tracks while coding—and my coworker Dana was listening to classical piano at her desk today—but a friend of mine had highly recommended a specific episode of a factual audio documentary about unsolved cold cases, so I spent my afternoon listening to that investigative mystery program instead. It was a really gripping diversion from my normal coding soundtrack!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those mystery programs can be so addictive! It sounds like a fun break from the usual synthwave beats. Did you manage to stay focused on your backend engineering work despite the suspense?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I was actually very productive. When I got home, I was pretty hungry. Arjun had grabbed a quick burrito from a food truck for his lunch, but for dinner, I decided to whip up a spiced coconut-based curry from scratch in our kitchen. It turned out so comforting and delicious, and Arjun ended up eating a big bowl of it with me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredible. There's nothing quite like a warm, home-cooked meal, especially after a busy day. Did Biscuit try to beg for a taste of the coconut gravy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Of course he did! He was sitting right by my feet hoping for a handout, but we kept him to his own food. After cleaning up, I decided to do some reading. Arjun was flipping through a history magazine, but I spent my evening reading the fiction book we're all discussing at my next neighborhood literary meetup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's wonderful that you're enjoying the book club selection. It's such a nice way to connect with people in the neighborhood. Do you think you'll finish it before the next meeting?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I will! I made some great progress tonight. I'm actually planning on winding down and shutting my eyes right when the clock hits an hour before midnight. Arjun is already asleep—he turned in around ten o'clock because he was exhausted from his day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Eleven is a perfect time to turn off the lights, especially after a productive day. It sounds like a very peaceful evening. I'll let you get some rest!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yes, I'm heading off to sleep now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "light rail",
+      "dinner": "home-cooked curry",
+      "music": "true-crime podcast",
+      "reading": "book club novel",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'home-cooked curry', conversation gives 'veggie curry'"
+  ]
+}

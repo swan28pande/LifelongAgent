@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 608,
+  "date": "2027-10-29",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Priya! I hope your day is off to a smooth start. How is everything going in Denver today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I'm actually setting up at my desk in our spare room and not doing any travel to the office today, which is a nice relief for a Friday. My coworker Dana had to take the light rail all the way in for some meetings, so I'm glad I got to avoid that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Skipping the commute is always a great way to start the weekend early. What's on your agenda today? Are you listening to anything while you work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually spinning physical, analog albums on the turntable while I get things done. I completely changed my workday soundtrack routine because of that lovely record player Arjun gifted me, and it's been so relaxing. Dana mentioned she's just streaming synthwave on her computer today, but I'm really enjoying the physical media."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful change of pace. There's something really grounding about physical records. Did you manage to get active at all today before sitting down at your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I went strolling around the neighborhood with Biscuit first thing after waking up to get some fresh air. Arjun opted to stay indoors and run on his treadmill instead, but Biscuit and I definitely preferred the crisp morning air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning walk with Biscuit sounds perfect, especially with the fall weather in Denver. How are he and Mochi doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're both doing great, just lounging around now. For dinner tonight, Arjun and I are getting a hot vegetarian pie delivered from the local shop to keep things easy. My sister Meera texted me that she's spending her evening making a homemade stir-fry in Seattle, but we wanted zero cooking."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A delivered vegetarian pie is the perfect Friday night treat. No dishes to worry about! Do you have any relaxing plans lined up for after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm planning on opening up my digital paper device to read the next volume of that massive magic and swords saga I've been hooked on. Arjun is planning to read a physical paperback biography he just got, so we'll probably just have a quiet night in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautifully cozy Friday evening. It's always nice to unwind with a good book. I hope you have a wonderful and relaxing weekend ahead, Priya!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a good one. Talk to you next week!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "work from home",
+      "dinner": "takeout pizza",
+      "music": "vinyl records",
+      "reading": "e-reader fantasy series",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

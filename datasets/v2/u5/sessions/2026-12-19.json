@@ -1,0 +1,86 @@
+{
+  "user_id": "u5",
+  "day": 294,
+  "date": "2026-12-19",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Saturday going? Did you manage to get some rest, or has it been a busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a mix of both. I actually ended up heading into the office today, which I normally don't do since I usually don't have a commute on Saturdays. But Dana ended up driving me in because my bicycle had a flat tire this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a flat tire is such a pain, but how nice of Dana to give you a lift! What had you going into the office on a weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some urgent backend testing before our next release. I really needed to focus, so I spent the day listening to retro-themed electronic instrumental beats to keep me in the zone. Dana said she was playing heavy metal to power through her work, but those synth tracks are my absolute go-to for coding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those instrumental beats really do wonders for concentration. Since you've been working hard today, how is your knee holding up? Are you fully recovered after getting cleared by your physical therapist?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's doing great, thanks for asking! I'm still trying to ease back into active things, though. For my exercise today, I just did a brisk morning stroll with Biscuit. Dana went for a long run for her triathlon training, but a peaceful early walk with my lab was perfect for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning walk with Biscuit sounds lovely and very sensible for your knee. Have you felt ready to go back to bouldering yet, or are you sticking to the piano for your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm still sticking to the piano for now. I don't want to rush the bouldering. Honestly, I've also had a lot on my mind with the Denver transfer offer. It's a beautiful city, but I really do love living here in Pittsburgh."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's definitely a major decision to weigh. Have you and Arjun had a chance to talk about what that move would look like for you both?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've been talking about it a lot. In fact, he's actually over at my place right now. We're currently in the middle of preparing a meal from scratch together. My sister Meera mentioned she just ordered delivery over in Seattle, but Arjun and I wanted to make something ourselves."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Cooking together is such a nice way to spend a Saturday evening. What are you two making?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a simple noodle stir-fry. It's nice to just chat and chop vegetables together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds wonderful and delicious! I'll let you two get back to your cooking. Have a great rest of your evening, Priya!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Have a good night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "got a ride from a coworker",
+      "dinner": "cooking with Arjun",
+      "music": "synthwave playlists",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Priya owns a bicycle.",
+    "invention: Priya and Arjun plan to go to the new jazz club next weekend."
+  ]
+}

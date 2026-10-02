@@ -1,0 +1,89 @@
+{
+  "user_id": "u5",
+  "day": 73,
+  "date": "2026-05-12",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Tuesday going over in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, but I've been incredibly busy today. I've been deep in some complicated database refactoring for our core API."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like some serious backend work. Did you have your usual lo-fi beats playing in the background to help you flow?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, not today. I really needed deep focus to untangle this logic, so I worked with no background sound at all. Just complete, uninterrupted stillness in the room."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes absolute quiet is exactly what you need to solve those tricky coding puzzles. Did it help you make some good progress?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really did! Though my coworker Dana told me earlier that she spent her whole morning blasting high-energy synthwave to get through her tasks today. I don't know how she does it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Everyone definitely has their own style for productivity! Speaking of Dana, has she been keeping up with her triathlon training?"
+    },
+    {
+      "speaker": "user",
+      "text": "She has, she's incredibly disciplined about it. It's really impressive."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. Have you had any time for your own creative outlets lately, like your pottery or piano?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually sat down at the piano yesterday for a little while. I practiced some basic scales and then worked on a Chopin piece I've been trying to learn."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Chopin is beautiful. That sounds like a wonderful way to unwind. How is the pottery going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a work in progress! I'm still trying to get the hang of centering the clay on the wheel, but it's a lot of fun just to practice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Centering takes time, but you'll get it! It sounds like a great hands-on contrast to your engineering work."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, it's nice to do something away from screens. Anyway, I should probably get back to that database refactoring now!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck with the rest of the refactoring, Priya! Talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "silence",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'"
+  ]
+}

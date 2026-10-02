@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 200,
+  "date": "2026-09-16",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Wednesday going? How is everything over in Pittsburgh today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going pretty well. Pittsburgh is actually beautiful today—very crisp and sunny. I just got back from taking Biscuit for a quick walk around the block."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Biscuit must have loved that! How is your knee doing? Are you still able to do some light physical activity?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's getting there slowly. For today's activity, I focused entirely on the specific rehabilitation movements my therapist prescribed to rebuild the strength around my joint. Meanwhile, my coworker Dana did a grueling swim session for her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It is definitely smart to stick strictly to those recovery routines, even if they aren't as intense as Dana's swim! Are you planning to just relax and take it easy tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm planning to wind down by reading an anthology of modern lyrical stanzas and verses that I picked up. Arjun is actually reading a lengthy sci-fi novel tonight, but I prefer the shorter, rhythmic format right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A book of verse sounds like a beautifully peaceful way to spend the evening. It's great you're finding good use for that Carnegie Library card!"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they have an incredible selection! I'm trying to build a really consistent evening routine so I can get my sleep schedule back on track."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A consistent routine makes a huge difference. What time are you aiming to turn in tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "My goal is to have the lights out and be falling asleep precisely thirty minutes after ten. Arjun usually stays up working on his computer until past midnight, but I really need to prioritize my rest."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting to sleep at half-past ten sounds like a great target. By the way, how has your pescatarian diet been going lately? Have you found any good local spots in the city?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going really well! Actually, that new ramen place that opened on my street has some fantastic seafood broth options, which is perfect for my pescatarian eating habits. It's been great having that nearby."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "physio exercises",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "poetry collections",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'other'"
+  ]
+}

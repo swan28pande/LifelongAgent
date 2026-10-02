@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 58,
+  "date": "2026-04-27",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday starting out over in Pittsburgh? Is the weather treating you okay today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Oh, the weather here is absolutely miserable today. It was pouring so hard this morning that I had to completely abandon my usual plan of pedaling my bike to the office. I ended up hailing a yellow cab instead just to stay dry, which is definitely a rare exception for me. My coworker Dana said she just took the subway to avoid the downpour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible detour—no one wants to arrive at work soaking wet! How did the rest of your day go at the startup?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was super busy, but I managed to stay focused by queuing up some of those chilled, low-fidelity instrumental tracks in my headphones. They really help me zone in on coding our backend APIs. My desk mate said he was listening to loud heavy metal all day to stay awake, but I definitely preferred my quiet background vibes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those relaxed study beats are perfect for coding. Did the weather ever clear up for you to get moving after work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, luckily the rain stopped right as my shift ended! I laced up my sneakers and went for a jog through the neighborhood streets as dusk was falling. I really needed that fresh air. Dana told me she opted for an indoor treadmill run today instead of going outside, but I was glad to get some outdoor cardio."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An outdoor run is a great way to clear your head after being cooped up all day coding. Did you make something nice for dinner once you got home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I was starving, so I threw some chopped vegetables and shrimp into my hot wok with some savory sauce and whipped up a quick wok-tossed dish. It was super fast and hit the spot. My sister Meera mentioned she just ordered a gourmet pizza for her dinner over in Seattle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That wok dish sounds delicious, quick, and perfect after a run. And it's always nice to catch up with Meera! How is she liking Seattle so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's loving it, though she's still settling in. Anyway, I ended up staying up way too late tonight because a classic thriller movie was on, and I just couldn't turn it off. I didn't actually hit the sack until ninety minutes past midnight, which is a massive departure from my usual half-past-eleven routine. Meera said she was heading to sleep at nine PM her time because she was so exhausted!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, that is a late night! Especially when you have work in the morning. Hopefully the movie was worth the lost sleep!"
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely was, but I'm going to pay for it tomorrow morning! I should probably close my eyes now so I can get whatever rest I can. Talk to you tomorrow!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Get some rest, Priya! Sleep well and we'll chat tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "evening run",
+      "commute": "took a taxi",
+      "dinner": "stir-fry",
+      "music": "lo-fi beats",
+      "reading": "not mentioned",
+      "bedtime": "1:30 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'stir-fry', conversation gives 'veggie stir-fry'"
+  ]
+}

@@ -50,8 +50,17 @@ def writer_prompt(spec: PersonaSpec, world: WorldState, day: DayState, feedback:
         if p.is_exception:
             line += f"  (ONE-OFF: instead of the usual {p.base_value}, because {p.exception_reason})"
         lines.append(line)
-    absent = [nouns[d] for d in day.preferences if d not in mentioned]
-    lines += ["", "MUST NOT COME UP: " + (", ".join(absent) if absent else "(nothing)")]
+    absent = [d for d in day.preferences if d not in mentioned]
+    lines += ["", "MUST NOT COME UP: " + (", ".join(f"{d} ({nouns[d]})" for d in absent)
+                                             if absent else "(nothing)")]
+    if absent:
+        lines.append("Neither speaker may mention, ask about, or allude to these topics, "
+                     "including a past or future choice or another person's choice. "
+                     "Known hobbies and jobs do not grant permission to discuss an absent topic.")
+    lines.append("Keep each of today's choices distinct from similar choices: do not add "
+                 "details that change the specified value into another option. In particular, "
+                 "'no commute' does not mean 'work from home', and an unqualified stir-fry "
+                 "must not be described as a vegetarian stir-fry.")
 
     required = day.facts_to_state_today + day.event_updates_today
     lines += ["", "REQUIRED UPDATES — the user states each explicitly:"]

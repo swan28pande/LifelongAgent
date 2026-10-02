@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 82,
+  "date": "2026-05-21",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Thursday been going over in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty busy at the startup. I spent most of the day debugging a tricky database issue."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, database issues can be such a headache. Did you have some nice background music to keep you focused while you worked through it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. My coworker Dana was actually blasting high-energy thrash metal in her headphones today to get pumped, but I couldn't do that. I needed my usual slow, wordless, jazzy instrumental loops with the cozy vinyl crackle to keep my brain on track."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much more relaxing environment for coding. Did the chill instrumentals help you crack the bug?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully! I got it sorted out by mid-afternoon. After that, I actually had a dentist appointment, which was a bit of a hassle but necessary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad you got the code fixed, even if you had to follow it up with a dental visit. How did it go? Are you able to unwind now?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went fine, just a routine cleaning. But while I was in the waiting room, they had some glossy monthly publications lying around. I ended up bringing one home with me! Usually, I'd be diving back into my current space-exploration novel in the evening, but tonight I decided to just flip through this glossy periodical with the short articles and photo spreads instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nice change of pace! Sometimes it's relaxing to just flip through short articles rather than committing to a complex space odyssey. Have you had any time for your other creative outlets lately, like your piano practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "I practiced a little bit yesterday, but not today. Tonight is just a quiet, low-key evening for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect. Do you have a specific time you're aiming to wind down and head to sleep tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm planning on switching the bedside lamp off and closing my eyes exactly half an hour before midnight. My sister Meera texted me earlier saying she was turning in super early at nine in Seattle, but I'm sticking to my usual timeframe."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A solid plan. Getting to sleep right at that half-hour mark before midnight should set you up nicely for Friday. I hope you enjoy the rest of your periodical and have a wonderful night!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "not mentioned",
+      "music": "lo-fi beats",
+      "reading": "a magazine",
+      "bedtime": "11:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: music should be 'lo-fi beats', conversation gives 'missing'",
+    "pref_absent: reading should be 'a magazine', conversation gives 'missing'"
+  ]
+}

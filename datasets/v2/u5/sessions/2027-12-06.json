@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 646,
+  "date": "2027-12-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Monday. How is your week starting off in Denver? How are things going at your engineering manager role at the climate-tech company?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I had a nice, gentle start to the day. Instead of a run, I just took Biscuit for his usual stroll around the block first thing this morning. Arjun went for a high-intensity session at the bouldering gym instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning walk with Biscuit sounds like a lovely, peaceful way to wake up. Did you have a good trip into the office after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually caught the city transit bus to get to the office today, which was nice and relaxing. My coworker Dana rode her bicycle all the way in because she's really ramping up her triathlon training."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that the bus route works so well for your commute. How are things looking at work this week? Are you still in the thick of post-launch tasks?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we are wrapping up some of the initial reviews from our recent product launch. It's keeping my team very busy, but everyone is handling it well and we're making good progress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you're leading them through it beautifully. Do you have any plans to unwind with Arjun this evening after a busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think we are both just going to relax at home. I'm planning to read a few more chapters of that magic and dragons saga on my digital reading tablet. Arjun is actually reading a physical biography tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy. A fantasy epic is the perfect escape. Just make sure you don't stay up all night reading!"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll try, but I was terrible about that last night. I didn't actually turn off my screen and fall asleep until two hours past midnight! Arjun was much more sensible and was out like a light by ten thirty."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, 2:00 AM! No wonder you wanted a gentle walk and a quiet bus ride this morning. How are you holding up on that much sleep?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm surviving on a bit of extra caffeine today! But the book is just so good. I'm definitely going to try for an earlier bedtime tonight, though."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "bus",
+      "dinner": "not mentioned",
+      "music": "not mentioned",
+      "reading": "e-reader fantasy series",
+      "bedtime": "2:00 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'bus', conversation gives 'other'"
+  ]
+}

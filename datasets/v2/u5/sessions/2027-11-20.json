@@ -1,0 +1,81 @@
+{
+  "user_id": "u5",
+  "day": 630,
+  "date": "2027-11-20",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Saturday. How has your weekend been starting out? Did you get to take Biscuit for a walk or spend some quiet time with Mochi?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a really nice day so far. I actually spent the morning outdoors—I met up with that weekend trekking crowd I joined to tackle some elevation together. Arjun decided to go for a solo road ride on his new bicycle instead of coming along, so we both got our outdoor time in. But I've also had to do a bit of work today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, work on a Saturday? I hope it's nothing too stressful at your climate-tech job. Is everything okay?"
+    },
+    {
+      "speaker": "user",
+      "text": "Everything is fine, just busy! We actually officially started our on-call rotation today for an upcoming product launch we have next week. Since I'm the engineering manager, I need to stay closely looped in and be available if any issues pop up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a product launch! That definitely explains the weekend work. How are you and the team feeling about starting this on-call rotation?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're feeling pretty prepared, but it does mean keeping my laptop nearby. While I was reviewing some of our deployment docs earlier, I kept myself focused by spinning some physical LPs on the turntable Arjun got me. Arjun was using his noise-canceling headphones to stream a podcast, but I really wanted to enjoy the analogue sound of the discs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to keep your focus and make the weekend work a bit more enjoyable. Are you planning to keep things easy for dinner tonight and maybe try that new ramen place on your street?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, Arjun and I are going to collaborate on preparing a home-cooked meal from scratch in our kitchen tonight—we're making a nice vegetarian lasagna. My coworker Dana mentioned she was just ordering vegan delivery tonight, but we both really wanted to spend some time chopping veggies and cooking together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade vegetarian lasagna sounds delicious! It's nice to have a shared activity like cooking to help you unwind during a launch week. How are Biscuit and Mochi doing while you two are busy in the kitchen?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mochi is currently curled up taking a nap on the armchair, and Biscuit is sitting right by the counter hoping a piece of cheese falls. Once we finish eating, my plan is to curl up and make some progress on the assigned fiction selection for our local neighborhood literary gathering. Arjun said he's just going to read some tech blogs tonight, but I have to finish these chapters."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very cozy evening. Which book is your literary circle reading this month? Also, how did your knee feel after that group trek this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "The knee felt absolutely perfect, thank goodness! It's great to have it fully cleared. And we're reading a really engaging speculative fiction novel. It's been a full day, but a really nice one."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear your knee is holding up well and that you have a relaxing night ahead. Enjoy the homemade lasagna and the book, Priya, and I hope the new on-call rotation stays quiet tonight!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "group hike",
+      "commute": "not mentioned",
+      "dinner": "cooking with Arjun",
+      "music": "vinyl records",
+      "reading": "book club novel",
+      "bedtime": "not mentioned"
+    },
+    "statements": {
+      "on_call.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

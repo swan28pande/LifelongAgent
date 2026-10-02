@@ -1,0 +1,86 @@
+{
+  "user_id": "u5",
+  "day": 44,
+  "date": "2026-04-13",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How has your Monday been starting off in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty good day. The weather here was absolutely gorgeous today, so instead of hopping on my bicycle like I normally do to get to the office, I decided to travel on foot. It was a really lovely change of pace to just stroll in. My sister Meera texted me that she took the light rail in Seattle today, so we had very different commutes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning walk in nice weather is a great way to start the week! How did things go at the fintech startup today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was busy! I spent most of the day troubleshooting some heavy database queries for our backend. It's a lot of solo work, which fits my single lifestyle fine, but it does get tiring after a while."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds intense. Did you manage to do anything to unwind after work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely. Once I got home, I cleared my head by going for a jog around the neighborhood as dusk was falling. Meera told me she spent her evening doing heavy weightlifting at her gym, but I preferred just hitting the pavement for some cardio."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Running is such a classic way to shake off a long day of coding. Did you cook something nice for dinner afterwards?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I wanted something quick, so I made a fast wok-tossed dish, flash-frying some shrimp and vegetables in a savory ginger soy sauce on high heat. Meera actually told me she ended up getting a delivered burrito bowl, so we had very different meals tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick wok-tossed meal like that is perfect after a run. Are you planning to spend the rest of your evening relaxing, maybe practicing some piano?"
+    },
+    {
+      "speaker": "user",
+      "text": "I wish, but I'm so exhausted from this long day that I'm planning to hit the sack at nine-thirty tonight. Usually, I don't close my eyes until half-past eleven, so this is definitely an exception because I'm just completely drained and need the extra rest. Meera said she's staying up late tonight to finish a show, but I just can't."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It makes sense to get to sleep early when you're that tired. Nine-thirty will give you a great head start on tomorrow. Have you been able to get on the bouldering walls lately, or has work kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Work has been a bit demanding, but I'm hoping to head to the climbing gym this coming weekend. For tonight, it's just going to be a quick wind-down and then sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid plan. Sleep well, Priya, and I hope you have a restful night!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 6,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "evening run",
+      "commute": "walked",
+      "dinner": "stir-fry",
+      "music": "not mentioned",
+      "reading": "not mentioned",
+      "bedtime": "9:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'stir-fry', conversation gives 'veggie stir-fry'"
+  ],
+  "repair_method": "revise_existing"
+}

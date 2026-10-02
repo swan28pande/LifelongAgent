@@ -1,0 +1,83 @@
+{
+  "user_id": "u5",
+  "day": 321,
+  "date": "2027-01-15",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Friday. How has your day been going over in Denver?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. Arjun and I actually just finished cooking. He was really pushing for us to get takeout from that new ramen spot down the street, but I convinced him we should make one of those subscription boxes where they deliver the pre-portioned ingredients and a recipe card."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those meal kits can be a lot of fun to put together! Did they have a good option that fit into your pescatarian diet tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "They did! We made a really delicious pan-seared barramundi with a ginger-soy glaze. After we cleaned up, I curled up on the sofa with one of those suspenseful, fast-paced mystery novels I checked out using my Carnegie card. Another member of my neighborhood book club mentioned she only reads historical fiction, but I really enjoy a tense, gripping page-turner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good suspense novel from the library is a perfect way to transition into the weekend. Did you manage to get through a lot of it before heading to sleep?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I ended up staying awake much later than usual. I'm almost always asleep by eleven PM to keep a steady schedule, but tonight I didn't actually switch off my lamp until about ninety minutes past midnight. Arjun went to sleep at his normal time, but I got completely sidetracked watching a late-night movie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, 1:30 AM is quite a late night when you're used to an 11:00 PM routine! What was the movie that kept you up so late?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was an old classic sci-fi film that Arjun had recommended. I just couldn't tear myself away from the screen, even though I was exhausted. Biscuit was fast asleep on the rug right next to me the entire time, totally unfazed by the television."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like Biscuit has his sleep priorities figured out! How is he doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing wonderfully. He still has so much energy, but he's settled into our place here really well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's so good to hear. And how are things going at the fintech startup? Have you been busy with backend engineering projects this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Extremely busy. We had a massive push to optimize some of our core database queries, so my brain was pretty fried by the time Friday afternoon rolled around. I think that's why I just wanted to zone out with a thriller and a movie tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You definitely earned a relaxing night after a week of heavy database optimizations. I hope you get to sleep in tomorrow to make up for that 1:30 AM bedtime!"
+    },
+    {
+      "speaker": "user",
+      "text": "That is absolutely the plan! Arjun promised he'd take Biscuit out for his early morning walk so I can sleep in as late as I need to."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "meal-kit dinner",
+      "music": "not mentioned",
+      "reading": "library thrillers",
+      "bedtime": "1:30 am"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

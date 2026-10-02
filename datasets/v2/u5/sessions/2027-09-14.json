@@ -1,0 +1,80 @@
+{
+  "user_id": "u5",
+  "day": 563,
+  "date": "2027-09-14",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Tuesday going in Denver? How are you, Arjun, and Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! We're doing well. It's been a busy day of meetings for me. I actually spent my working hours with some classic improvisational brass and piano tracks spinning on physical wax records in the background. It really helped me focus on my engineering manager tasks. Arjun, on the other hand, spent his afternoon listening to a modern electronic playlist on his computer."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a lovely, warm atmosphere for a busy day of meetings! Did the crackle of the wax help keep you grounded?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really did. There's a depth to those old syncopated records that digital streams just can't match."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I completely agree. It sounds like a great way to ease the workday stress. How is Biscuit doing? Is he keeping you company?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's been napping right under my desk all afternoon. He's such a sweet companion when I'm stuck at my computer."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He really is the best. Have you and Arjun figured out what you're doing for dinner tonight after your busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "We have! Since my jaw has been feeling a bit sensitive lately, I went with a completely liquid menu. I prepped a warm, pureed butternut squash broth alongside a cold blended strawberry-banana fruit drink. Arjun wanted something much more solid, so he ended up ordering a giant loaded burrito for himself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A warm pureed broth and a cold blended fruit drink sound incredibly soothing and gentle. I hope that helps your jaw feel a bit better! It definitely sounds like a contrast to Arjun's giant burrito, though."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is! I was a little envious of his dinner, but the warm broth and cool blended fruit drink are exactly what I needed tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Self-care is definitely the priority! How has the fall weather been in Denver? Are you getting a chance to enjoy the transition of the seasons?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been beautiful—crisp and sunny. I love seeing the leaves start to turn near our place. Well, I'm going to head off and enjoy my warm broth now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "soup and smoothies",
+      "music": "jazz vinyl",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "invention: owns a record player",
+    "invention: inherited vintage records from her uncle",
+    "invention: plans to visit the new jazz club downtown for a date night"
+  ]
+}

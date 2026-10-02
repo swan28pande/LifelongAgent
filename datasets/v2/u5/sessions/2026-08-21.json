@@ -1,0 +1,87 @@
+{
+  "user_id": "u5",
+  "day": 174,
+  "date": "2026-08-21",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Priya! How is your morning going so far? Did you and Biscuit get up to anything fun, or are you just easing into the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I actually got up early and took my Labrador for a nice, long stroll around the neighborhood to get my body moving before sitting at my desk. My coworker Dana, though, went super intense and did a heavy strength training session at her gym first thing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, peaceful way to start a Friday! Biscuit must have loved that. Did you head straight to your home office after, or did you have to go in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went into the office today! I decided to get some fresh air and use my own leg power to pedal my way there on two wheels. Arjun had to take the local bus today because his car is still in the shop, so we had very different journeys."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A bike ride to work sounds lovely on a day like today! Hopefully the traffic wasn't too bad. How did the day go at the startup? Were you able to get through your coding queue?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty productive! I had orchestral soundtracks from various movies playing in my headphones all day, which really helped me zone out and focus on the backend stuff. My desk neighbor said he was blasting aggressive thrash metal to get through his tasks, which sounds exhausting!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, movie soundtracks definitely sound much more peaceful for coding! It's amazing how much a good cinematic score can boost productivity. Do you have any fun plans lined up for this evening? Maybe some bouldering?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing tonight, but Arjun and I are actually going out to a nice local restaurant for a sit-down meal to celebrate the end of the week. My sister Meera texted me earlier saying she's just ordering some takeout sushi to her apartment in Seattle, but I'm looking forward to a proper night out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A dinner date sounds like a perfect Friday night! Are you guys trying out that new ramen spot that opened up on your street, or heading somewhere else?"
+    },
+    {
+      "speaker": "user",
+      "text": "We decided on a different spot tonight because I wanted to make sure they had some good seafood or vegetarian options for me. But we definitely need to try the ramen place soon!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, you've got to ensure the menu works for your pescatarian diet! I hope you both have a wonderful time tonight. Are you planning on getting any piano practice in this weekend, or is it going to be a relaxing couple of days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I'm hoping to spend an hour or two at the piano tomorrow afternoon working on a new piece. Other than that, just relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautifully balanced weekend. Enjoy your dinner date with Arjun tonight, and give Biscuit a scratch behind the ears for me!"
+    },
+    {
+      "speaker": "user",
+      "text": "I absolutely will! Thanks so much, have a great weekend yourself!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "morning dog walk",
+      "commute": "cycling",
+      "dinner": "dinner date out",
+      "music": "film scores",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns a bike",
+    "invention: plans to go bouldering tomorrow morning",
+    "invention: plans to practice a new piece on the piano on Sunday afternoon"
+  ]
+}

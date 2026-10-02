@@ -1,0 +1,77 @@
+{
+  "user_id": "u5",
+  "day": 205,
+  "date": "2026-09-21",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Monday starting off? How is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Biscuit is doing great, we had a nice morning together. Work has been incredibly busy today, though—I've been staring at database schemas all day. To get through all the coding, I actually listened to a fascinating episodic series detailing real-life unsolved mysteries, which is a big change from my usual electronic, retro-80s instrumental tracks. A friend recommended a specific episode about an art heist, so I had to give it a listen. My coworker Dana, on the other hand, told me she listened to high-tempo pop all day to stay focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a cold case audio series! That sounds like a fun break from your usual synthwave playlists. Did you find it distracting while writing backend code, or did it help you focus?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was surprisingly engaging! I normally need those lyric-free tracks to keep my brain in the zone, but the narrative on this heist mystery was so compelling it kept me glued to my desk. It was definitely a nice one-time departure from my typical background audio."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to mix things up occasionally. How is your knee recovery going? Are you able to get around Pittsburgh okay?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's getting there, slowly but surely. Navigating the hilly streets of Pittsburgh is a bit of a chore right now, but I'm managing. Since I was completely exhausted from work and dealing with this leg, I didn't have the energy to cook my typical grilled pink fish over a bowl of grains tonight. Instead, I ordered a folded flour wrap stuffed with black beans, rice, and guac from the local spot down the street. Arjun came over and got a plate of hard-shell tacos."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A stuffed tortilla wrap sounds delicious and definitely well-deserved after a tiring day. Much easier than preparing your usual salmon bowl! How was the food?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was incredibly satisfying and hit the spot. It's definitely a rare treat for me since I usually prefer to prepare my own fresh seafood bowls at home, but tonight I just needed pure convenience."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a quick, comforting takeout meal is exactly what you need. Are you planning to just relax for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely. Arjun is planning to stay up past midnight watching some movie, but I am aiming to turn off my bedside lamp and fall asleep precisely when the clock hits half-past ten tonight. I really need to catch up on sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very wise plan. Giving your body plenty of rest is so important, especially with your busy job and your knee recovering. I hope you get a wonderful night's sleep!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yes, hopefully a full night's rest will make tomorrow a lot easier to handle. Have a good night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "takeout burrito",
+      "music": "true-crime podcast",
+      "reading": "not mentioned",
+      "bedtime": "10:30 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'"
+  ]
+}

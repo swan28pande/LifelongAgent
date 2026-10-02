@@ -1,0 +1,84 @@
+{
+  "user_id": "u5",
+  "day": 98,
+  "date": "2026-06-06",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Saturday going over in Pittsburgh? Are you getting some rest this weekend, or is it busy as usual?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually been a really nice, balanced Saturday. I started the morning by taking Biscuit out for a massive trek through the wooded trails at the park. We were out walking for hours, enjoying the trees. My sister Meera texted me from Seattle saying she opted for a quick neighborhood jog instead of her usual trail route today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start the weekend. Biscuit must have loved that long trek! Did you get to relax after you two got back?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, but I actually had to log on and finish up some backend tasks for the startup. To keep me focused, I had some classic instrumental bebop spinning on a wax record in the background. My coworker Dana, who is still training hard for that triathlon, told me she listened to high-energy electronic music during her indoor cycling session today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Bebop is perfect focus music for coding. It's great you found a good rhythm to get those backend tasks out of the way. Do you have any fun plans for dinner or the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, normally I'd be heading out for our usual Saturday night get-together and dinner with my friends. But honestly, I was just way too exhausted to cook or go out tonight. So as a one-off, I stayed in and ordered a giant, foil-wrapped bean and rice tortilla wrap from the local Mexican spot down the street. My friends ended up going out for ramen instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy, and sometimes a quiet night in with a great Mexican wrap is exactly what you need when you're exhausted. I hope it was delicious! Are you planning to catch up on some sleep tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, though I'm still winding down. I'll probably stay up a bit and don't expect to actually turn the lights off to sleep until about one in the morning. Meera mentioned she was exhausted too and was planning to head to bed by nine her time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "One in the morning isn't too bad for a weekend night, especially when you can sleep in tomorrow! It sounds like you and Meera both have the right idea for a relaxing Saturday night."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly! It's been a very low-key evening, which is just what I needed. I might play a little piano later if I get a burst of energy, or just lounge around with Biscuit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Lounging with Biscuit sounds like a perfect plan. I hope you have a wonderful, restful night, Priya. Let me know if you need anything else!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think I'm all set for tonight. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "long dog hike",
+      "commute": "not mentioned",
+      "dinner": "takeout burrito",
+      "music": "jazz vinyl",
+      "reading": "not mentioned",
+      "bedtime": "1:00 am"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'work from home'",
+    "invention: owns a record player"
+  ]
+}

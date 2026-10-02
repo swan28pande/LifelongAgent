@@ -1,0 +1,80 @@
+{
+  "user_id": "u5",
+  "day": 21,
+  "date": "2026-03-21",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! Happy Saturday. How is your weekend starting off in Pittsburgh?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty productive so far. I actually had to log on and finish up some backend tasks for the fintech startup this morning. I had some classic syncopated brass and sax spinning on my turntable to keep me focused. A friend of mine told me they chose to stream synthwave for their work session, but I really needed that warm analog sound."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's nothing quite like the warmth of a spinning record, especially for getting into a good coding flow. Did the music help you power through those backend tasks?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really did! Once I wrapped that up, I spent about an hour practicing a tricky Chopin piece on my piano. It was a nice way to completely shift gears from databases."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful transition. It's great you found some time for your music today. Do you have any plans to relax for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! In a little bit, I'm heading out to share a meal at a neighborhood spot with a group of my buddies. One of my friends originally chose to order delivery and stay in tonight, but we all convinced them to join us out instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to spend a Saturday night! Where are you all heading?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're trying this new Mediterranean place downtown. Since I stick to a pescatarian diet, I'm hoping they have some great seafood or vegetarian dishes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Mediterranean restaurants usually have fantastic seafood options! I hope you find something delicious. It must be nice to catch up with everyone after a busy work week."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It’s always good to unplug and just chat. I think we're going to try to walk around downtown a bit after we eat if the weather stays nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. I hope you have a fantastic time catching up with your group and enjoying the food!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow and let you know how the new spot was."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "not mentioned",
+      "dinner": "dinner with friends",
+      "music": "jazz vinyl",
+      "reading": "not mentioned",
+      "bedtime": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: dinner should be 'dinner with friends', conversation gives 'fish tacos'",
+    "invention: has a coworker named Dave",
+    "invention: has a friend named Mark"
+  ]
+}

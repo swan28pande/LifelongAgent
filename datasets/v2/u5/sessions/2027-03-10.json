@@ -1,0 +1,79 @@
+{
+  "user_id": "u5",
+  "day": 375,
+  "date": "2027-03-10",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Priya! How is your Wednesday going in Denver? How is Biscuit doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Denver is gorgeous today, and Biscuit is currently curled up under my desk snoring. My workday was pretty productive. My coworker Dana said she was blasting heavy metal to get through her tasks, but I spent my afternoon listening to retro-futuristic 80s-style electronic beats to stay focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That music sounds perfect for getting into a good coding flow! Did you work from home today, or did you head into the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went into the office. Arjun actually decided to hail a rideshare to get to his office today, but I preferred a more relaxed journey on the public electric train line."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The light rail is definitely a great way to avoid traffic stress. Are you and Arjun planning to cook tonight, or maybe check out that new ramen place on your street?"
+    },
+    {
+      "speaker": "user",
+      "text": "Arjun suggested we just order some takeout, but I really wanted a cozy meal, so I'm currently simmering a big pot of spiced, slow-cooked Indian gravy with chickpeas and vegetables right in our kitchen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade curry sounds like the perfect comforting meal for a Wednesday evening! Do you have any plans to relax after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I need to get through a few more chapters of the novel assigned by my neighborhood literary circle. My sister Meera told me she's reading a biography for her own group in Seattle, but I'm really enjoying our current fiction selection."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's so great that you're staying active with your Denver book club. How is the book so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's really gripping! I have to pace myself so I don't stay up all night. Arjun went to bed much earlier at around nine, but I'm planning to turn the lights off exactly an hour before midnight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "11:00 PM is a very sensible bedtime to keep you feeling rested. Enjoy those next few chapters!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely looking forward to a restful night. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "exercise": "not mentioned",
+      "commute": "light rail",
+      "dinner": "home-cooked curry",
+      "music": "synthwave playlists",
+      "reading": "book club novel",
+      "bedtime": "11:00 pm"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: exercise should be 'not mentioned', conversation gives 'missing'",
+    "pref_absent: music should be 'synthwave playlists', conversation gives 'missing'",
+    "pref_absent: reading should be 'book club novel', conversation gives 'missing'"
+  ]
+}
