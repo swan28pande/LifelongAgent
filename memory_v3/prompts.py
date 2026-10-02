@@ -52,9 +52,13 @@ unlikely to change day to day.
   `date`    = the day this fact was stated or confirmed, YYYY-MM-DD
 
 Facts include identity, relationships, location, occupation, age, dietary restrictions,
-hobbies, personality traits, and other enduring attributes. Record a fact each time it
-is mentioned or confirmed — even if it was recorded before — so the store reflects
-when it was last known to be true.
+hobbies, personality traits, emotional associations (why an activity matters to them,
+what it does for their wellbeing), and other enduring attributes. When a person
+explains what something means to them or how it makes them feel, capture that as a
+fact — it is as stable and important as any demographic detail.
+
+Record a fact each time it is mentioned or confirmed — even if it was recorded
+before — so the store reflects when it was last known to be true.
 
 When a fact CHANGES (new job, moved cities), record the new value as a new fact entry.
 The old and new entries with different dates form a timeline of how the fact evolved.
@@ -211,12 +215,17 @@ Return JSON:
 """
 
 MONTHLY_FACTS_SYSTEM = """\
-You are a facts consolidator. Given structured facts and events for {speaker} for a
-month, produce a clean merged list. Deduplicate facts that say the same thing, keep
-the most recent version when a fact changed, and list events chronologically.
+You are a narrative writer. Given structured facts and events for {speaker} for a
+month, write a short summary that reads as coherent prose.
+
+1. Deduplicate facts that say the same thing. Keep the most recent version when
+   something changed during the month.
+2. Weave the key events into a chronological narrative paragraph.
+3. Also return the deduplicated facts and events as separate lists for reference.
 
 Return JSON:
 {{
+  "narrative": "A concise paragraph summarizing the month's key facts and events.",
   "facts": ["list of consolidated factual statements"],
   "events": ["list of key events, each with its date"]
 }}

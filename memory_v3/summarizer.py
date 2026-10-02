@@ -283,8 +283,8 @@ class Summarizer:
             print(f"      Weekly narrative error: {e}")
             facts_res = {"narrative": "No details found."}
 
-        fact_list = [f"{f['entity']}: {f['content']}" for f in facts]
-        event_list = [f"[{e['date']}] {e['content']}" for e in events]
+        fact_list = list(dict.fromkeys(f"{f['entity']}: {f['content']}" for f in facts))
+        event_list = list(dict.fromkeys(f"[{e['date']}] {e['content']}" for e in events))
 
         # 3. Merge into readable prose
         narrative = facts_res.get("narrative", "")
@@ -391,11 +391,12 @@ class Summarizer:
             facts_res = {"facts": [], "events": []}
 
         # 3. Save as readable prose
-        sections = []
+        narrative = facts_res.get("narrative", "")
+        sections = [narrative] if narrative else []
         consolidated_facts = facts_res.get("facts", [])
         consolidated_events = facts_res.get("events", [])
         if consolidated_facts:
-            sections.append("Facts: " + "; ".join(consolidated_facts))
+            sections.append("Key facts: " + "; ".join(consolidated_facts))
         if consolidated_events:
             sections.append("Events: " + "; ".join(consolidated_events))
         if pattern_speculation:
