@@ -42,6 +42,8 @@ def build_read_tools(store: MemoryStore) -> list:
         independently and returns results from each.
 
         CALL THIS FIRST for every question. It returns:
+        - DISTILLED: focused knowledge documents tracking relationships, identity,
+          patterns, and timeline with temporal evolution and reasoning
         - LIFETIME: the overall profile and confirmed patterns
         - YEARLY: major events and validated habits for each year
         - MONTHLY: consolidated facts and pattern details
@@ -61,7 +63,7 @@ def build_read_tools(store: MemoryStore) -> list:
             return "(no summaries available — use search_memories or semantic_search_conversations instead)"
 
         sections = []
-        for level in ("lifetime", "year", "month", "week"):
+        for level in ("distilled", "lifetime", "year", "month", "week"):
             docs = layer_results.get(level, [])
             if not docs:
                 continue

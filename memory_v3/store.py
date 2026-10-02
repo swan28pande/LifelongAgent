@@ -307,7 +307,8 @@ class MemoryStore:
 
     def search_summaries_by_layer(self, query: str,
                                   k_week: int = 2, k_month: int = 2,
-                                  k_year: int = 1, k_lifetime: int = 1) -> Dict[str, List[Document]]:
+                                  k_year: int = 1, k_lifetime: int = 1,
+                                  k_distilled: int = 2) -> Dict[str, List[Document]]:
         """Search each summary layer independently and return results grouped by level."""
         if self._summary_store is None:
             return {}
@@ -316,7 +317,8 @@ class MemoryStore:
             level = doc.metadata.get("identifier", "").split(":")[0]
             by_layer.setdefault(level, []).append(doc)
 
-        limits = {"week": k_week, "month": k_month, "year": k_year, "lifetime": k_lifetime}
+        limits = {"week": k_week, "month": k_month, "year": k_year,
+                  "lifetime": k_lifetime, "distilled": k_distilled}
         results: Dict[str, List[Document]] = {}
         for level, docs in by_layer.items():
             k = limits.get(level, 1)

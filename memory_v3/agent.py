@@ -39,6 +39,7 @@ from langchain_openai import ChatOpenAI
 
 from .store import MemoryStore
 from .summarizer import Summarizer
+from .distill import KnowledgeDistiller
 
 from .ingest import IngestionPipeline, IngestReport
 from .prompts import CHAT_SYSTEM
@@ -114,6 +115,7 @@ class AgenticMemoryAgent:
 
         self.pipeline = IngestionPipeline(self.store, llm=ingest_llm)
         self.summarizer = Summarizer(self.store, llm=_make_llm(model, 0.2, callbacks))
+        self.distiller = KnowledgeDistiller(self.store, llm=_make_llm(model, 0.2, callbacks))
 
         self.read_tools = build_read_tools(self.store)
         self.chat_agent = create_agent(
@@ -271,7 +273,7 @@ class AgenticMemoryAgent:
 
     # ── Summaries ───────────────────────────────────────────────────
 
-    def build_summaries(self, force: bool = False) -> None:
+    def build_summaries(self, force: bool = False, distill: bool = False) -> None:
         """
         Build the weekly → monthly → yearly → lifetime hierarchy over everything
         currently stored.
@@ -280,8 +282,36 @@ class AgenticMemoryAgent:
         in progress gets rebuilt on every subsequent day and can contradict the raw
         timeline while it is stale. Run this at period boundaries, or once at the end
         of a batch ingest.
+
+        distill: if True, also run knowledge distillation after summaries are built,
+            producing themed knowledge documents (relationships, identity, patterns,
+            timeline) from the hierarchy.
         """
         self.summarizer.run(force=force)
+        if distill:
+            self.distill_knowledge()
+
+    def distill_knowledge(self) -> Dict[str, Dict[str, str]]:
+        """
+        Distill the hierarchical summaries into themed knowledge documents.
+
+        Reads monthly, yearly, and lifetime summaries for each speaker, then
+        produces four focused documents per speaker:
+          - relationships: social dynamics and how they evolve
+          - identity: personal attributes and their transitions
+          - patterns: behavioral routines with start/end dates
+          - timeline: chronological milestones and key transitions
+
+        Returns {speaker: {theme: document_text}}.
+        """
+        speakers = self.store.get_all_speakers() or ["user"]
+        all_results = {}
+        for speaker in speakers:
+            print(f"  Distilling knowledge for: {speaker}")
+            results = self.distiller.distill(speaker)
+            if results:
+                all_results[speaker] = results
+        return all_results
 
     # ── Internals ───────────────────────────────────────────────────
 

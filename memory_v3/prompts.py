@@ -280,3 +280,72 @@ Using all yearly summaries, produce a complete, structured profile:
 
 Return ONLY a JSON object: {{"title": "Full Lifetime Profile", "summary": "the full structured text profile"}}"""
 
+
+# ── Knowledge distillation ────────────────────────────────────────
+
+THEME_DESCRIPTIONS = {
+    "relationships": (
+        "social connections — friendships, family bonds, professional ties, "
+        "group memberships — and how they evolve over time (formed, strengthened, "
+        "weakened, ended, rekindled)"
+    ),
+    "identity": (
+        "stable personal attributes — occupation, location, living situation, "
+        "diet, hobbies, values, emotional associations — and how they change "
+        "over time, with the reasoning behind each transition"
+    ),
+    "patterns": (
+        "behavioral routines and recurring preferences — what the person does "
+        "regularly, cycles, habits — with start dates, end dates, and what "
+        "caused shifts from one pattern to another"
+    ),
+    "timeline": (
+        "key life milestones, decisions, and transitions — the chronological "
+        "narrative arc: job changes, moves, relationship milestones, health "
+        "events, achievements, and their downstream effects"
+    ),
+}
+
+DISTILL_SYSTEM = """\
+You are distilling knowledge about {speaker} into a focused "{theme}" document.
+
+Theme scope: {theme_description}
+
+This document captures the PRECIOUS BITS — the reasoned conclusions that
+emerge from extensive analysis of someone's history. It tracks not just
+what is true now, but what was true before, when things changed, and why.
+
+RULES:
+- Every claim must carry a date or date range: "(since DATE)",
+  "(DATE1 – DATE2)", "(changed DATE because REASON)".
+- When something CHANGED, record both states with dates and reasoning:
+  "Was X (DATE1 – DATE2). Changed to Y (since DATE2) because REASON."
+- When something ENDED without replacement:
+  "Was X (DATE1 – DATE2). Ended because REASON."
+- Record the REASONING behind transitions, not just the fact of change.
+  Why did a friendship cool? Why did a habit shift? What triggered a move?
+- Organize from most important to least. Use bullet points.
+- Be specific and concise — this is a reference document, not prose.
+- Only include information supported by the summaries. Do not speculate.
+
+Return ONLY a JSON object: {{"document": "the document text"}}"""
+
+DISTILL_UPDATE_SYSTEM = """\
+You are updating the "{theme}" knowledge document for {speaker}.
+New summary content is available — integrate any new information.
+
+Theme scope: {theme_description}
+
+RULES FOR UPDATING:
+- Add genuinely new information with "(since DATE)" tags.
+- When new information CONTRADICTS an existing entry, record the transition:
+  "Was X (DATE1 – DATE2). Now Y (since DATE2) because REASON."
+- When new information CONFIRMS existing entries, leave them unchanged.
+- When a relationship, fact, or pattern has ENDED, mark it with an end date
+  and the reason if known.
+- Never rewrite from scratch — merge surgically.
+- Never drop historical transitions — they are the document's core value.
+- If nothing changed for this theme, return the document unchanged.
+
+Return ONLY a JSON object: {{"document": "the updated document text"}}"""
+
