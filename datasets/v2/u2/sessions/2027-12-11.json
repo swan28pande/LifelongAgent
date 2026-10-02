@@ -1,0 +1,84 @@
+{
+  "user_id": "u2",
+  "day": 651,
+  "date": "2027-12-11",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Marcus! How is your weekend starting off in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty good Saturday so far. Grace and I had a slow morning, which was much needed after a hectic week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad you both got to sleep in. How is Olive doing? Is she keeping you company?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is. She's currently curled up near the window watching the birds. Later tonight, I think I'm just going to relax on the couch and watch some sitcom reruns."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, cozy evening. Are you watching those sitcom reruns on that new streaming service you signed up for?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly. They have a bunch of old favorites on there, so it's easy to just put on in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely is. Did you manage to get on the tennis court at all today, or is it a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did play a singles match this afternoon. My back felt completely fine, which is always a relief after that strain a while back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! It's great to hear your back is fully recovered and you're playing without any issues. How are things going at the high school lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "As head of the science department, there's always some paperwork or curriculum planning to worry about, but I'm trying to leave all of that behind until Monday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A very wise choice. You've earned a proper break. Do you and Grace have any special plans for dinner, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it very low-key. Probably just ordering some takeout so we can both lazy around."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes takeout and TV is the absolute best way to spend a Saturday night. Enjoy the sitcom reruns!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'tennis'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'tennis'"
+  ]
+}

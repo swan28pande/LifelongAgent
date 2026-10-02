@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 71,
+  "date": "2026-05-10",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Sunday. How is your weekend in Minneapolis going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been really relaxing. I actually had a very slow morning today. I cooked up some crispy strips of cured belly pork and a pair of fried hen's eggs, which was a great way to start the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a classic, hearty breakfast! A slow Sunday morning is always the best. Do you have any plans for the rest of the day, or are you just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I decided to grab my camera and head out to capture some of the interesting brickwork on the older buildings downtown. It's nice to just wander around without a schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to combine your eye for architecture with your love for photography! Did you find any particularly inspiring spots?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, there's a historic warehouse district that has some incredible texture on the facades. I got a few great shots. It actually gave me some inspiration for a project we're drafting at the firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always great when a creative hobby feeds back into your professional work! I bet those historic details will add some unique character to your designs. Are you planning to wrap up the evening with some more downtime?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm actually preparing dinner right now. I've got a whole seasoned bird ready to go in the oven to bake until the skin gets nice and crispy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that smells amazing just thinking about it! There's nothing quite like a home-cooked baked bird on a Sunday night. Are you eating alone or is Leah joining you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Leah is coming over in a bit, so we'll share it. She's bringing a side dish, and we're probably going to put on a movie afterwards."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect end to the weekend. It's always nice to catch up and unwind before the new week starts."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. It's been a busy few weeks, so a quiet evening with good food and company is exactly what I need before heading back to the architecture office tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bacon and eggs",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "roast chicken"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'rest day'"
+  ]
+}

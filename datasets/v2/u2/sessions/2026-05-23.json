@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 84,
+  "date": "2026-05-23",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Saturday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well so far. The weather is nice today. I started the morning off by making some pancakes for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes sound like a wonderful weekend treat. Have you had any time to spend in your woodworking shop today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, I haven't done any woodworking today. Instead, I decided to head outside and went for a run."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A run is a great way to get some fresh air. Did Grace join you, or was it a solo workout?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was just a solo run today. Grace had some errands to run this morning, so we did our own things for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it. How are things going at the high school? I imagine you're getting close to the end of the school year."
+    },
+    {
+      "speaker": "user",
+      "text": "We really are. It's that busy time of year where I have a mountain of chemistry exams and lab reports to grade, but we are almost there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you can get through all that grading quickly! Do you have any relaxing plans for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Grace and I are planning to just kick back and watch a nature documentary tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, low-key Saturday night. Do you already have a specific one picked out to watch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we found one about deep-ocean creatures that we're going to put on. It should be pretty interesting."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a garage"
+  ]
+}

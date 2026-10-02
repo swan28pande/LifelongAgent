@@ -1,0 +1,84 @@
+{
+  "user_id": "u3",
+  "day": 705,
+  "date": "2028-02-03",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Sofia! How is your Thursday going? Did you and Dash have a good morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, Dash was full of energy this morning. I started my day with some espresso shots poured over cold water and lots of ice, which really helped me wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a refreshing start! Did you make that at home using your roommate's new espresso machine?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! It's so nice to have that machine in the kitchen. Then for my lunch at the clinic today, I had a turkey sandwich on some of my home-baked wild-yeast bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Your sourdough! How did this latest batch turn out? Sourdough baking seems like such a rewarding hobby."
+    },
+    {
+      "speaker": "user",
+      "text": "It turned out great! Perfect crust and crumb. It made for a really satisfying lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear the bread was a success. Did you get to listen to anything interesting during your lunch break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did. I finally started that investigative podcast about real-life unsolved crimes that my coworker recommended. It's really gripping."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the true-crime one! I remember you mentioning she recommended it. Glad to hear it's keeping you hooked. How are things going at the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a busy day, but manageable. We had a lot of patients scheduled this morning, so the fast pace kept me on my feet. I'm just glad to have a bit of a breather now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! You definitely earned that break. By the way, how are things going with the wedding plans? I know you and Tom set the date for summer 2028."
+    },
+    {
+      "speaker": "user",
+      "text": "Things are going well! We're just taking it one step at a time, but it's exciting to have the date set for summer 2028. Tom and I are really looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Taking it step by step is a great approach. I hope the rest of your day at the clinic goes smoothly and you have a relaxing evening with Tom and Dash!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm planning on taking Dash for a nice walk later, and then maybe doing a little Italian study. Have a great afternoon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user is planning her wedding for this summer.",
+    "invention: The user is looking at outdoor venue options around Tucson for her wedding."
+  ]
+}

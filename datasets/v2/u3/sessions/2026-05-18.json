@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 79,
+  "date": "2026-05-18",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday starting off? Are you getting some rest before your night shift at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a bit of a hectic start, but I managed to wake myself up with a tall glass of that slow-steeped cold coffee I keep in the fridge. It really helps clear the fog."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a refreshing way to kick off the day, especially with the Phoenix heat building up. What has made today so hectic so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "I had a ton of errands and back-to-back appointments scheduled for this afternoon. Usually, I'd heat up some leftovers from yesterday for a midday meal, but I was running around so much that I ended up completely skipping lunch today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, running on empty before a long ER shift sounds tough! I hope you're able to grab a quick snack at the hospital later. Are you about ready to head in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm just gathering my things now. I need to leave in a few minutes so I don't miss the late-night public transit bus that I take to get to the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good plan, you definitely don't want to miss that late bus. How has the night-shift routine at the hospital been treating you lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy as always, but I honestly prefer the night pace over the daytime chaos in the ER. It just takes some getting used to with the sleep schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Sleeping during the day in Phoenix must be a challenge sometimes, especially when you have afternoon appointments like today."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. The sun is so bright and hot already, even in May. It makes running those daytime errands pretty draining."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, the desert sun doesn't play around. I hope the rest of your evening goes smoothly and your shift isn't too overwhelming."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm heading out the door now to catch my bus. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "skipped lunch",
+      "commute": "night bus",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 331,
+  "date": "2027-01-25",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good evening, Sofia! How did your Monday start off? I hope the shift at the outpatient clinic wasn't too hectic today."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It was a bit busy, but I made sure to start it on a good note. I actually whisked up some matcha powder with frothed oat milk for a warm latte before I headed out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a warm matcha latte sounds like the perfect cozy energy boost. Did you get a chance to take a proper lunch break today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I did! I packed a sandwich made with slices of my homemade sourdough loaf, so I got to enjoy that in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious. Homemade sourdough makes any lunch better! Speaking of which, how has the baking been going in Phoenix lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been great, though Phoenix is starting to cool down a bit which actually helps with the fermentation. I just have to plan my dough prep around my commute, especially since I took the light rail to work this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking the light rail is a nice way to avoid the morning traffic. How was the ride today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty smooth! And it gave me the perfect chance to start that scary unsolved mystery series my coworker told me about."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the true-crime podcast! Is it as gripping and suspenseful as they promised?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I was so sucked into the first episode that I almost missed my stop!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is the ultimate sign of a good show! Do you have any plans to catch up with Tom later tonight, or is it a quiet evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a quiet evening for me tonight. Tom is busy, so I'm probably just going to practice some Italian and head to bed early."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: morning_drink should be 'matcha latte', conversation gives 'other'"
+  ]
+}

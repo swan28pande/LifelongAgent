@@ -1,0 +1,87 @@
+{
+  "user_id": "u3",
+  "day": 461,
+  "date": "2027-06-04",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your day starting out in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting off pretty well, though it's already getting warm. I had a bit of a rushed morning, so I just brewed a quick pot of regular filter coffee to wake me up before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic brewed coffee is always reliable for a busy morning. Did you have a smooth trip to the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully! I drove myself to the clinic today, and traffic on the highway wasn't too terrible for once."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a relief. It's always nice when the commute goes smoothly. How has the used hybrid been treating you on those drives lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been wonderful! It's really fuel-efficient, which is a lifesaver with my daily drive. Tom actually took it for a spin last weekend and was really impressed too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic to hear. Speaking of the weekend, do you have any sourdough baking plans lined up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! I fed my starter yesterday, so I'm planning to bake a classic rustic loaf tomorrow morning. I love having fresh bread for the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There really is nothing better than the smell of fresh bread in the morning. Are you still finding time for your online Italian course with work and baking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm still keeping up with it! I usually do a quick twenty-minute lesson in the evenings. I'm starting to learn how to order food, which is making me very excited for our future trip."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Che bello! It sounds like you're making great progress. Since you mentioned the quick filter coffee earlier, did your roommate's new espresso machine get a rest today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, yes, it did! Her espresso machine is amazing, but sometimes I just want a giant, simple mug of drip-style coffee that I don't have to think about while getting ready."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Totally understandable, sometimes simple is best when you're on the move. I hope the rest of your shift goes quickly and you have a relaxing evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. Have a great weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "invention: planning a future trip"
+  ],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": [
+      "planning a future trip"
+    ]
+  },
+  "first_try_failures": [
+    "invention: planning a future trip"
+  ]
+}

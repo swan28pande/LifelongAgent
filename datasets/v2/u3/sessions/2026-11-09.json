@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 254,
+  "date": "2026-11-09",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How is your morning going at the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well so far. I actually had a very relaxing trip into work today because I decided to ride the city's electric transit train instead of driving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, taking the train sounds like a nice, stress-free way to start the week. Is the clinic particularly busy this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's steady but not overwhelming. I'm just about to take my midday break. I brought a lunch I'm really excited about—I made a turkey and Swiss sandwich using two thick slices of the naturally leavened bread I baked over the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! Your homemade bakes always make for the best lunches. Are you feeling completely back to your usual energy levels since getting over the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I'm 100% recovered and feeling great. Though my roommate woke me up early testing out that new espresso machine again. The steam wand is so loud!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, those high-end machines can definitely make some noise! I'm glad you're feeling healthy and fully energized again. Have you had any time for salsa dancing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not a ton, but Tom and I were actually practicing some steps in the living room yesterday. Just keeping it casual at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun way to spend a Sunday! How is the autumn weather treating you over in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is finally starting to cool down a bit! November in Phoenix is usually when we get a break from the intense heat, so it's been lovely to have some milder days."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That must be such a welcome relief after the summer heat. I'm glad you can enjoy some nicer weather on your commute!"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely! Well, my break is just about over, so I need to get back to my shift at the clinic. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to go to a social dance night this coming Thursday"
+  ]
+}

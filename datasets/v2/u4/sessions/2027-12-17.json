@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 657,
+  "date": "2027-12-17",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Daniel! How is everything going in Chicago? Did you get a chance to head to that new climbing gym this week, or has the studio been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, the studio has been pretty hectic, so no climbing gym for me lately. In fact, today is a complete break from my training. I'm just letting my muscles recover, with absolutely no physical exercise or running."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A day off from training sounds well-deserved, especially with those early client calls you've been balancing. Did you have to be up at the crack of dawn today too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! But my morning routine was a bit different today. Usually, I just grab my jar of oats that I let soak overnight, but because I had to meet a prospective client face-to-face first thing, we ended up going to a local greasy spoon. I had a massive plate of scrambled eggs, crispy hash browns, and sourdough toast instead. Definitely a heavy detour from my normal breakfast, but it was a nice treat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious detour! Sometimes a hearty breakfast is exactly what you need to power through a busy Friday. Did that energy carry over into your design work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did! I spent most of the afternoon drafting some concepts. To keep my focus, I put on a playlist full of lo-fi, underground guitar bands—you know, that classic independent, melodic college-radio sound from the late nineties. It's the perfect background noise for drawing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like perfect drafting music. Speaking of the end of the day, do you and Leah have any fun dinner plans tonight, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're staying in, and I'm actually making us dinner tonight. Ever since I got that wonderful cookbook filled with seafood and vegetarian recipes as a gift, I've completely overhauled my evening cooking routine. Tonight, I'm preparing a fresh fillet of salmon, getting it nice and charred on the grill pan."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredible. It's so nice when a gift completely changes your daily habits for the better. Have you tried many other recipes from that book yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, quite a few! Leah's been loving them too. It has a great section on marinades that really elevates the fish dishes. It's been fun experimenting after a long day of work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad Leah's enjoying it too! It sounds like a perfect way to wind down. Hopefully, your evening is peaceful—is your neighbor still practicing the trumpet as loudly as before, or have they calmed down a bit?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, they're still practicing, but luckily they seem to stick to the late afternoons now, so it doesn't interrupt our dinner. Well, I should probably go start prepping the grill. Catch you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a wonderful dinner and a relaxing weekend, Daniel! Talk soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "diner breakfast",
+      "workout": "rest day",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "grilled salmon"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

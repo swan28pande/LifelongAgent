@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 22,
+  "date": "2026-03-22",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Sunday going? Are you working the night shift tonight, or do you have some time off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I actually didn't have to travel to the hospital today, which is a nice break. I'm just relaxing here in Phoenix."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! A day without any travel time is always a win. Have you been able to catch up on anything fun, maybe some salsa dancing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not today, but I did some salsa dancing earlier this week! Today has been more relaxed. I was tidying up and listened to some high-energy songs on my phone instead of my usual comedy show. I just really wanted something upbeat to keep my energy up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a good upbeat playlist is exactly what you need! Did you end up doing anything else with your free afternoon, or just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mainly taking it easy. I did walk over to the local cafeteria down the street and got a bowl of mixed greens for my lunch, but otherwise I've just been lounging."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fresh salad sounds like a perfect, light lunch. How has Tom been doing? Have the two of you had any time to catch up lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom's doing great! We actually caught up yesterday. He's been busy with work, but it was nice to spend some quality time together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It's always nice to block out some quality time when schedules get busy. Are you back on the night shift tomorrow?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'll be back at the hospital for my night shift tomorrow evening. I'm trying to make the most of my quiet Sunday before the busy pace of the ER starts up again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense. Enjoy the rest of your peaceful evening, Sofia! Let me know if you need anything else."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll definitely reach out if I do. Have a great night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "cafeteria salad",
+      "commute": "no commute",
+      "podcast": "music instead"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Tom is learning salsa dancing turn patterns"
+  ]
+}

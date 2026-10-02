@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 291,
+  "date": "2026-12-16",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Hope your Wednesday is going well. How are things at the high school today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are pretty busy as we head towards the winter break. I had to rush a bit this morning, so I just whipped up a quick protein smoothie for breakfast before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is a great way to fuel a busy morning. Did you manage to get any exercise in today, or has the school schedule kept you too occupied?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made time for a quick run this afternoon. It was cold, but it felt good to clear my head after a long day of department meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's impressive, especially with the chilly Portland weather right now! Speaking of planning ahead, have you and Grace made any more progress on planning your family trip to Japan for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit! We've been looking at some travel guides and discussing the general itinerary. We're both really looking forward to the trip, though we still have a lot of details to sort out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's so much fun to look through guides and build up that anticipation. Are you planning on doing any woodworking this evening, or is it a night for relaxing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely a night for relaxing. I think I'm just going to put on a nature documentary tonight and unwind on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect low-key way to spend a Wednesday evening. Do you have any plans to get back to the tennis courts this weekend, or is it too cold for that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm hoping to play some indoor tennis if I can book a court, but we'll see. Grace and I might also just end up staying warm inside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Indoor tennis sounds like a solid plan for winter. I hope you manage to get a court booked! Enjoy your relaxing evening and the documentary tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to visit Tokyo and take a scenic train ride during the upcoming trip to Japan"
+  ]
+}

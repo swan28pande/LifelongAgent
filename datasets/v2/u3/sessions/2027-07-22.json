@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 509,
+  "date": "2027-07-22",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How was your shift at the outpatient clinic in Tucson today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was pretty busy today, but overall good. I drove my hybrid car to work this morning, so at least my commute was quick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a plus, especially when you have a busy shift ahead. How is the car holding up?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's running great! Oh, and before I headed out, I made a double shot of espresso over ice with cold water. It really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect start to the day. Did you make that with your roommate's new espresso machine?"
+    },
+    {
+      "speaker": "user",
+      "text": "I sure did. I'm definitely getting some good use out of it!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear that! How are things going with Tom? Have you two had any more thoughts about the wedding for summer 2028?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're doing well! We actually chatted about some local outdoor venues last night. It's still a ways off, but it's fun to browse."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great to start exploring ideas early. How is your online Italian course going with everything else on your plate?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I managed to fit in a little practice session last night. It's nice to have a quiet hobby to focus on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. It's so rewarding to learn a new language."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. Well, I should probably go feed my sourdough starter now, but I'll catch up with you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great evening, Sofia! Happy baking!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She and Tom want to go to Italy for their honeymoon."
+  ]
+}

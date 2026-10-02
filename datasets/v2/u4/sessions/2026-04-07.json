@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 38,
+  "date": "2026-04-07",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Tuesday is going well up in Minneapolis. How has your day been so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty productive Tuesday. I started off on the right foot this morning with a simple breakfast. I fried up a couple of eggs and had them over some buttered toasted sourdough."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a classic, perfect start. Did you have a busy morning at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. We've got a couple of big client presentations coming up, so I wanted to look put-together but still comfortable. I ended up wearing a long-sleeved, collared shirt with a full row of buttons and some olive-colored cotton twill pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A very classic, smart-casual choice for an architect! Did you manage to find some good focus time at your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. To help me concentrate on the blueprints, I put on some of those mellow, slow-tempo instrumental hip-hop loops with the soft crackle in the background. It really keeps my head in the game."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, those relaxing, repetitive rhythms are fantastic for deep focus. Have you and Leah been able to catch up at all today, or is she having a busy week too?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually swamped with her own work today, so we've just been texting a bit. I'm on my own for dinner tonight, which is fine because I know exactly what I'm making."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what's on the menu for tonight's solo dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm planning to grill up some seasoned ground beef, throw on some diced onions and cilantro, and fold them into warm corn tortillas."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and pretty quick to whip up. Are you planning to relax at home for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, just going to eat, maybe edit a few photos I took around the neighborhood yesterday, and call it a night. It's been a solid Tuesday overall."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "lo-fi beats",
+      "dinner": "tacos"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'lo-fi beats', conversation gives 'ambient electronic'",
+    "invention: Planning to go cycling around the city with Leah this weekend"
+  ]
+}

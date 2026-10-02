@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 105,
+  "date": "2026-06-13",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Saturday. How is your weekend starting off in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I've actually spent most of the morning out in the garage doing some woodworking. It's nice to have some dedicated time for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the weekend. What kind of woodworking project are you focusing on today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working on a small side table. I just finished sanding the top, which takes forever but is always worth the effort."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, that smooth finish makes all the difference. Do you have any plans with Grace for the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Grace and I are planning to just have a relaxing night in. We've decided we're going to watch a cooking competition show tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cooking competition show sounds like the perfect, low-key Saturday night. Are you two rooting for anyone in particular, or just enjoying the culinary chaos?"
+    },
+    {
+      "speaker": "user",
+      "text": "We don't really have a favorite yet since it's a new season, but we both enjoy seeing what the chefs come up with under pressure."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always amazing what they can pull together in just thirty minutes. It sounds like a fun, relaxing evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. After a busy couple of weeks wrapping up the school year with my chemistry students, a slow evening is exactly what I need."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Teaching high school chemistry must keep you on your toes right up until the final bell. I'm glad you get to unwind tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I'm going to get back to the table for a bit, but I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

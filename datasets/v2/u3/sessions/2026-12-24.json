@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 299,
+  "date": "2026-12-24",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Christmas Eve, Sofia! How are things starting out today in Phoenix? Are you scheduled for a shift at the outpatient clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! Yes, I am working today, but it should be a pretty short shift. I actually woke up early enough to whisk up a hot matcha latte at home instead of using my roommate's espresso machine, which was a nice, calming start to the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to ease into the morning. Did you decide to drive in to work, or are you taking the light rail today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I rode the light rail in. It was incredibly peaceful and empty. I actually used the commute to finally start listening to that true-crime podcast my coworker recommended a while back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! I remember you mentioning that recommendation. How is it so far? Is it as gripping as they said?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really is! It's about a cold case, and the storytelling is amazing. I was so hooked I almost missed my stop, but I had to pause it when I got off. I can't wait to play the next episode on my ride back home later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the sign of a great podcast! Are you and the other nurses planning a special holiday lunch at the clinic today, or did you bring your own food?"
+    },
+    {
+      "speaker": "user",
+      "text": "Since we're closing early, we aren't doing a big group lunch. I just packed up some leftover roasted veggies and chicken from last night's dinner to eat quickly in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds healthy and easy. Do you and Tom have any special plans for this evening once you're off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, Tom is coming over tonight! I have a loaf of sourdough proofing in the fridge right now, so I plan to bake that as soon as I get home so we have fresh bread for dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! There's nothing quite like fresh sourdough. Are you guys planning on going out for any salsa dancing over the holiday weekend, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are definitely keeping it low-key. We've been doing so much salsa dancing lately that we both decided to give our feet a rest this weekend. Just movies, good food, and relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cozy, restful weekend sounds absolutely perfect. I hope the rest of your shift flies by, Sofia! Have a wonderful Christmas Eve."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I hope you have a great holiday too. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "packed leftovers",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: morning_drink should be 'matcha latte', conversation gives 'other'"
+  ]
+}

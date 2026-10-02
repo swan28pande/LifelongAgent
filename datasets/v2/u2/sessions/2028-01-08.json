@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 679,
+  "date": "2028-01-08",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Marcus! Happy Saturday. How is your weekend in Portland starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. A bit rainy and cold here today, but Olive is curled up on my lap keeping me warm. Just having a nice, lazy morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly cozy. Olive always knows the best spots to warm up. Have you had a chance to get some breakfast yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually made some pancakes this morning. They turned out really fluffy and delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Pancakes are the perfect Saturday morning treat. Did you put any toppings on them, or just classic syrup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some classic maple syrup and a bit of butter. Grace had some too. It was nice to just sit and relax without rushing out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, slow start to the weekend. How have things been at the high school lately? Are things keeping you busy as the head of the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. Ever since the new school year started, it's been a non-stop rush of lesson plans, budget meetings, and lab prep. But we've got a great team of teachers this year, so that makes it a lot easier to manage."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Having a solid team makes a huge difference, especially when you're running the whole department. Do you have any plans for the rest of the day, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly low-key. I might read a bit, maybe check on how our neighbor's vegetable garden is holding up in this chilly weather. But tonight, Grace and I are planning to just relax and watch some sitcom reruns on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are perfect for a cozy Saturday night. Is there a specific show you both always end up putting on?"
+    },
+    {
+      "speaker": "user",
+      "text": "We usually default to some of the classics we've seen a million times. It's just easy, comforting background noise, you know? Especially on that new streaming service we signed up for."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, there's something so comforting about watching something familiar where you already know all the jokes. It sounds like the perfect way to wind down."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Just a relaxing day all around, which is exactly what I needed."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "not mentioned",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

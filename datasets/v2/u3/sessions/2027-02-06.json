@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 343,
+  "date": "2027-02-06",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Saturday. How is your weekend starting off in Phoenix? Are you getting some time to relax today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been really nice. Since I'm off shift, I had absolutely no commute today, which is always a massive relief. I started the morning slow and made a whisked-up hot matcha latte with some frothy milk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, cozy start. Did you use your roommate's new espresso machine to froth the milk, or did you stick to your usual setup?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually used her steam wand for the milk! It worked perfectly. After that, I ended up meeting some friends at a cute cafe nearby and had a lovely brunch out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A steam wand makes such a difference. And a cafe brunch is the best way to spend a Saturday afternoon. Did Tom join you guys, or is he busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom had some chores to catch up on, so it was just a few of us. But we're planning to catch up later this evening. He's been doing well!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a good balance. Have you had any time to work on your online Italian course lately, or are you taking a break this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did a couple of modules yesterday evening! It's getting a bit more challenging with the verb conjugations, but I'm really enjoying it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Conjugations can definitely be tricky, but you're making great progress! Are you planning to do any sourdough baking this weekend to go with your Italian practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I might prep a loaf tomorrow. I've been craving some fresh sourdough toast lately, so it's definitely time to feed my starter."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's nothing quite like fresh sourdough toast. I hope the bake turns out perfectly! Enjoy the rest of your relaxing Saturday and your evening with Tom."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'm looking forward to a quiet evening. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "brunch out",
+      "commute": "no commute",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Planning to catch a movie with Tom tomorrow afternoon."
+  ]
+}

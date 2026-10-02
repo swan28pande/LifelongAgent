@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 593,
+  "date": "2027-10-14",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Sofia! How is your Thursday going so far? Did you get a chance to do any baking this week, or is the clinic keeping you super busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty busy at the clinic, so no baking since the weekend. I actually needed a serious wake-up call this morning, so I opted for espresso shots poured over cold water and ice instead of my usual drip coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a chilled espresso drink sounds perfect for a warm Tucson morning. Did you have a nice, relaxing start otherwise, or was the traffic on the way to the clinic pretty bad?"
+    },
+    {
+      "speaker": "user",
+      "text": "Traffic wasn't too terrible, thankfully. I drove my hybrid today, which always makes the trip a bit smoother. Plus, it gave me a solid block of time to listen to my language learning podcast. I'm trying to get some pronunciation practice in for my Italian course!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to multitask! How is the Italian coming along? Are you finding the pronunciation drills helpful?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's challenging but really fun. Some of the rolled 'r' sounds are tricky, but practicing in the car where nobody can hear me yell Italian phrases is perfect. Tom actually tried to practice with me yesterday, but we both just ended up laughing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun study session! How are things going with the wedding planning for summer 2028? Have you guys made any new progress lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're taking a little break from the heavy planning right now. Since we locked in the summer 2028 date, we're just enjoying being engaged without rushing into the stressful details yet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a very smart approach. There's plenty of time to get everything sorted out. How is everything else at the clinic? Are you still working the day shifts?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, still on the day shift. It's a busy time of year with a lot of regular check-ups, so my feet are definitely feeling it by the end of the day. But I really love the team I work with, so the hours fly by."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Having a supportive team makes such a huge difference, especially in nursing. I hope you get some time to put your feet up tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I think tonight will just be a quiet evening at home. Maybe I'll start feeding my sourdough starter so I can bake something this weekend when I finally have a day off."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: podcast should be 'Italian lessons podcast', conversation gives 'other'"
+  ]
+}

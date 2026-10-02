@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 403,
+  "date": "2027-04-07",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! How is your Wednesday going at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just a bit busy. I actually had a big virtual presentation with some key clients today, so I decided to dress up a little more than usual. I threw on a structured semi-formal jacket and some neat, tailored trousers to look professional from my home office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to get into a professional headspace! I hope the presentation went smoothly. Are you still working from home for the rest of the afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I am. The presentation went great, thankfully. Now I'm just catching up on emails. To keep me focused while I work, I’ve got the record player spinning some of those old-school syncopated instrumental improvisation albums from my granddad’s collection."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredibly relaxing. It's so nice that you can enjoy your grandfather's collection while you work. Have you had any time for your photography lately, or has work been keeping you too occupied?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to get out yesterday evening before sunset. I took my camera down to the Chicago lakefront and got some really cool shots of the skyline with the spring light. It felt good to just focus on taking photos for an hour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful! Chicago has such an iconic skyline, especially with that late afternoon spring light. How is Leah doing? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She absolutely loves it. She brought home a handmade bowl the other day—it's a little uneven, but it has a lot of character! She's working a later shift at the hospital today, so she won't be home until later this evening. I'm taking care of dinner tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A handmade bowl is the best kind! What do you have planned for dinner tonight then?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to prepare that spicy, herbaceous coconut milk-based dish we learned to make in our Thai class—specifically the vibrant green-hued one. I think it'll be a nice warm meal for her to come home to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful dinner to walk into after a long shift. That green dish is so fragrant and comforting. I hope it turns out great!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm about to log off and start prep. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "blazer and slacks",
+      "music": "jazz records",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

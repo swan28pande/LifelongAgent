@@ -1,0 +1,81 @@
+{
+  "user_id": "u4",
+  "day": 222,
+  "date": "2026-10-08",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Thursday going? How are things in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good, though it's starting to feel like autumn here. Leah and I are doing well. She's actually been quite busy with her pottery class lately. My day at the architecture firm was pretty intense, though. I had a project alignment meeting that ran incredibly late, so I actually ended up completely skipping any kind of evening meal tonight. Usually, I'd cook some penne or spaghetti when I get home, but tonight I just went straight to relaxing without eating."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a long and tiring evening. It's tough when meetings push past the normal time to eat. I hope you can get a good night's rest to make up for it. How did you dress for such a busy day at the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went for comfort today, wearing a cozy wool knit pullover and a simple pair of blue denim trousers. It definitely helped keep me comfortable during those long hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A warm knit and denim is a classic choice for fall, especially for creative work. Did you have any music playing to keep you focused while you worked?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on some chill, down-tempo instrumental tracks with a warm, slightly fuzzy sound. It really helps me block out the noise and concentrate on my drafting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those relaxing, low-fidelity rhythms are perfect for zoning out distractions. Were you able to squeeze in any exercise today before that late meeting?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, luckily I anticipated a busy afternoon, so I spent some time in the morning pedaling on my indoor cycling trainer. It felt good to get my legs moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you got that indoor ride in! Since you're recovering from that climbing wrist fracture, is using the stationary trainer a bit easier on your body than riding outdoors?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. There's no steering or sudden braking to worry about on a fixed indoor stand, so it's much safer while my wrist finishes healing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's very smart. It sounds like you're managing your recovery well while staying active. How is Leah's pottery going? Is she making anything fun?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's been making some mugs and small bowls, which are turning out great. Anyway, I think I'm going to head to sleep early tonight since I'm pretty worn out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very good idea. Have a restful night, Daniel, and I hope tomorrow is a bit more relaxed. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "stationary bike",
+      "outfit": "sweater and jeans",
+      "music": "lo-fi beats",
+      "dinner": "skipped dinner"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Daniel and Leah own an indoor exercise cycle.",
+    "invention: Daniel normally cooks a big plate of pasta on Thursday nights."
+  ]
+}

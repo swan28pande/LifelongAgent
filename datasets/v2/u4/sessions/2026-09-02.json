@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 186,
+  "date": "2026-09-02",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday shaping up at the firm? Are you working on any interesting design layouts today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's pretty busy today. I'm actually reviewing some site plans. I decided to dress up just a tiny bit more than usual today, so I'm wearing a crisp, long-sleeved collared shirt paired with some classic cotton twill trousers. It feels nice to be a bit more put-together while sitting at the drafting table."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a sharp look! A collared shirt and twill pants are a great balance of professional and comfortable for an architect. Are you listening to anything in the background to help you focus while you look over those plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, I always need some background noise when I'm focusing. Today, I've got a playlist of underground guitar bands and self-released alternative tracks going. It's got a great energetic vibe without being too distracting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect soundtrack for drafting. There's nothing like some good alternative tunes to keep the creative energy flowing. Speaking of creativity, have you had a chance to get out with your camera lately? I know you enjoy capturing the city."
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took a quick walk around downtown Minneapolis last weekend with my camera. The afternoon light hitting the stone arch bridge was absolutely perfect, so I managed to get a few really clean architectural shots."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the Stone Arch Bridge has such incredible angles, especially in the afternoon sun. I bet those shots turned out beautifully with your eye for structure! How is Leah doing with her pottery class? Has she brought home any new creations recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great! She actually brought home a small glazed vase last night. It's a bit lopsided, but it has so much character. We put it right on the windowsill in the living room."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! Handmade pieces always have the best character, and a windowsill is the perfect spot for it. How is your brother Kwame adjusting to life down in Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "He says he's loving the warm weather down there, though he's still getting used to the Southern humidity. We had a quick phone call yesterday and he seems to be settling into his new place nicely."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Atlanta is a big change from the Midwest, but it sounds like he's making a smooth transition. I'll let you get back to your drafting and your music!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I should probably get back to these site plans before the afternoon gets away from me. Catch up with you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

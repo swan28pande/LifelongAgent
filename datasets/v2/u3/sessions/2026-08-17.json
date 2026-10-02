@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 170,
+  "date": "2026-08-17",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope your Monday is going well. Are you getting ready for your night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I am. I'm just getting a few things done before I have to head out. I'm actually eating my lunch right now—I made a quick sandwich with the sourdough bread I baked over the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Your sourdough baking always turns out so well. How is the weather in Phoenix treating you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is still incredibly hot outside, which is pretty typical for Phoenix in August. I'm glad I work the night shift so I don't have to commute in the peak afternoon heat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is definitely a major benefit of working nights! How are you planning to make your way to the hospital this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm just going to take the late-night bus. It's usually pretty quiet at that hour, which gives me a little time to myself before the shift starts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The night bus sounds like a peaceful way to transition into work mode. Do you usually read or listen to something during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually listen to something. Tonight, I've got a podcast queued up that covers recent health news and medical updates."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to stay informed, and very relevant to your work. How has Tom been doing lately? Have you two had any time to catch up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is doing really well! We actually got to hang out yesterday and just relax, which was great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear that! It's always nice to have some relaxed quality time together. Have you had any chance to do some salsa dancing lately, or is your schedule too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't gone recently. With my schedule at the hospital this week, I think I'll just be focusing on resting between my shifts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes complete sense. Rest is so important, especially with the demands of the ER. I hope your shift tonight is as smooth and manageable as possible!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I'm going to finish up here and head out. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "night bus",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Planning to attend a salsa social with Tom this Thursday"
+  ]
+}

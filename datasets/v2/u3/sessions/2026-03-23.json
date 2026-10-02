@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 23,
+  "date": "2026-03-23",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday starting out in Phoenix? Are you getting ready for another night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I just woke up a little bit ago and poured a glass of that slow-steeped iced coffee I keep in the fridge. It's already getting pretty warm here today, so a cold caffeine kick is perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing. How is Tom doing? Do you two have any plans before you head into work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is doing well, thanks for asking! He's busy with his own things today, so I'm just relaxing at home. Since I don't want to cook, I'm planning on buying some mixed leafy greens from the hospital food court's salad bar for my lunch break tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a nice, light choice for a night shift meal. How are you planning on getting to the hospital this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to take the late-evening public transit bus tonight. It's nice to not have to worry about traffic, and I can just sit back and relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking the bus sounds like a great way to ease into your shift. Do you usually listen to something to pass the time on the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Tonight I'll probably put my headphones on and listen to a really funny audio show where comedians riff on weird news. It always keeps me laughing and puts me in a good mood."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is the perfect prep for a busy night in the ER. Have you had any time for salsa dancing lately, or has work been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went out dancing last week and it was so much fun! It really helps me clear my head and shake off the stress of the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It's so important to have a fun outlet like that. I hope your shift goes smoothly tonight and that you enjoy your bus ride."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. I'll check in with you tomorrow after I get some sleep."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "cafeteria salad",
+      "commute": "night bus",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

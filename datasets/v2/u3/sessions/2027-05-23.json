@@ -1,0 +1,78 @@
+{
+  "user_id": "u3",
+  "day": 449,
+  "date": "2027-05-23",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Sunday. How is your day starting out in Phoenix? Are you getting some sourdough baking in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's already pretty warm here today. I did actually feed my sourdough starter earlier, so I might bake a loaf later. Right now I'm just relaxing with a nice mug of standard filtered coffee from the pot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, slow Sunday morning. Sometimes a simple pot of brewed coffee is the best way to start. Speaking of starting things, how has the online Italian course been going lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! It's definitely a challenge, but I'm slowly making my way through the lessons. I'm really glad I signed up for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome to hear. It's always satisfying to see progress. Have you and Tom had a chance to do any more wedding planning, or are you just enjoying having that summer 2028 date set?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are mostly just enjoying the milestone of having the date locked in for summer 2028. We haven't really dived into the heavy planning yet since we still have plenty of time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, no need to rush. How are things at the outpatient clinic? Hopefully you've been able to ease back into your shifts since recovering from the flu."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, fortunately! I'm completely back to normal now, and work has been busy but manageable. It's nice to have my energy back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is such a relief. By the way, is your roommate still obsessed with that new espresso machine?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. She uses it every single day. I actually opted for regular brewed filter coffee today instead of borrowing her machine, just to keep things easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing wrong with sticking to the classics! How is the hybrid car holding up?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's doing great! I'm really happy with it, it's been super reliable. Anyway, I think I'm going to go check on my sourdough starter now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns a basic coffee machine",
+    "invention: plans to have her wedding in the Phoenix area",
+    "invention: practices Italian for 15 minutes every evening",
+    "invention: can introduce herself and order basic food in Italian"
+  ]
+}

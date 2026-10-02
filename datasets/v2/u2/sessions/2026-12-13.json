@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 288,
+  "date": "2026-12-13",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Sunday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's going well, pretty quiet day. I started the morning off with some warm oatmeal, which was perfect for this chilly weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal sounds like a great, cozy start to the morning. Do you have any plans to hit the tennis courts or get a workout in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, actually today is a rest day for me. I'm just taking it easy and letting my body recover."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Rest days are so important. How are the plans coming along for your family trip to Japan next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're still mapping out the details, but Grace and I are getting really excited about it. It's nice to have that to look forward to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely is! Have you had any time to spend in your workshop on your woodworking projects lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yeah. I've been sanding down some wood for a small side table project. It's a nice way to decompress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great project. What are your plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We'll probably just unwind in front of the TV. We're planning to watch some sitcom reruns tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are the perfect low-key Sunday night activity. I hope you have a great, relaxing evening! How are things going at the school's science department as the term winds down?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! The department is doing well. We're just finalizing some grading and wrapping up our lessons before the winter break starts. It'll be nice to have a little time off soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "rest day",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: plans to visit Tokyo and Kyoto during the upcoming trip to Japan"
+  ]
+}

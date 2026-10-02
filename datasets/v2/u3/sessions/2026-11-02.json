@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 247,
+  "date": "2026-11-02",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How is your morning going? Are you fully recovered from the flu now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, I'm finally back to one hundred percent, thank goodness. My morning has been great. I decided to skip my roommate's espresso machine and made myself a warm matcha green tea latte instead before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and cozy start to the day. Did you drive into the clinic this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually rode the light rail train today. It was nice to just sit back and let someone else do the driving for once."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The light rail is a great way to avoid that Phoenix traffic. Did you listen to anything during the commute?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I listened to a really hilarious comedy podcast. I had to struggle to keep myself from laughing out loud in front of everyone on the train."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those are the best kind! I'm glad it gave you a good laugh. How is your shift at the outpatient clinic going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a busy day, but I'm finally on my lunch break. I brought a homemade sourdough sandwich that I put together this morning, so I'm happy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Mmm, nothing beats a sandwich on fresh sourdough! Did you manage to do any salsa dancing over the weekend, or are you still easing back into things after being sick?"
+    },
+    {
+      "speaker": "user",
+      "text": "I didn't go this weekend since I was still resting up, but Tom and I are talking about going dancing sometime soon once my energy is fully back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect plan. It's definitely good to ease back into things. I hope the rest of your Monday shift goes well!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll catch up with you later tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She lives in an apartment.",
+    "invention: She and Tom are planning to go salsa dancing at their usual spot this Wednesday evening."
+  ]
+}

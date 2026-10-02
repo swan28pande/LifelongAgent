@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 10,
+  "date": "2026-03-10",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How's your Tuesday going so far in Phoenix? Getting ready for another busy night at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, just winding down before my shift starts. I'm actually about to head out to catch the late-night city bus to work in a few minutes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the night transit route. I hope it's a quiet ride for you tonight. Did you manage to get some good rest today, or did you hang out with Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "I got a decent amount of sleep, thankfully! Tom and I actually had a nice dinner together yesterday, so I boxed up the remaining portions of that meal to eat at the hospital later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's super convenient! Having a home-cooked meal ready to go makes those long night shifts in the ER a lot easier."
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely does. ER shifts can get so chaotic, and having to hunt for food at 3 AM is the worst. This way I can just heat up my container and eat quickly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely. Have they been keeping you incredibly busy at the Phoenix ER lately, or has there been a bit of a breather?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty non-stop lately, honestly. We've been seeing a constant stream of patients. I'm hoping tonight is slightly calmer, but you never know."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Fingers crossed for a manageable shift! Are you planning to squeeze in some salsa dancing later this week to shake off the stress?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. I have a class scheduled for Thursday afternoon. It's the perfect way to recharge after these night shifts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful plan to look forward to. Well, I'll let you get going so you don't miss your bus."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to the stop now. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "packed leftovers",
+      "commute": "night bus",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

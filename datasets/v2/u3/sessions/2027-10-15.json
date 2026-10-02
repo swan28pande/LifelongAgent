@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 594,
+  "date": "2027-10-15",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your day going down in Tucson?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going pretty well, just the usual busy Friday at the clinic. I actually had time to whisk up a nice warm matcha latte before heading out this morning, which gave me a great energy boost."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte sounds like a wonderful way to start the morning. Did you get to drink it peacefully at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I drank some of it while getting ready, and then took the rest in a travel mug while driving my hybrid to work. The commute was surprisingly smooth today!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a relief, especially for a morning commute. Speaking of things going smoothly, how have things been with you and Tom? Have you done any more wedding planning for summer 2028 lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've actually put a temporary pause on the heavy planning since we have plenty of time. We're just enjoying the engagement right now! Though we did talk a bit about guest lists over dinner yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes complete sense, no need to rush when you have until 2028. It's nice to just enjoy being engaged. Did you end up bringing anything good for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I packed a turkey and Swiss sandwich made with a couple of slices of my latest sourdough loaf. It turned out so good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum! Your sourdough baking always sounds incredible. Did this loaf turn out exactly how you wanted?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, the crust had a perfect crunch and the inside was super soft. It's definitely one of my better bakes recently."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. There's nothing quite like a sandwich on fresh, homemade bread."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. It definitely made my lunch break a lot better."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Well, I hope the rest of your shift goes by quickly so you can enjoy the weekend."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to relaxing tonight. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: morning_drink should be 'matcha latte', conversation gives 'other'"
+  ]
+}

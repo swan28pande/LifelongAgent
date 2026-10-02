@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 49,
+  "date": "2026-04-18",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good afternoon, Marcus! How is your Saturday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going really well. The weather in Portland is actually quite nice today. I started the morning off right by making some pancakes for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, pancakes are the perfect way to kick off a weekend! Did you and Grace have any big plans for the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace had some errands to run this afternoon, so I spent a bit of time on my woodworking. But I also made sure to head out and do some gym weights for my workout."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a productive day already, getting some gym weights in and spending time on your hobby. How is the woodworking going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well, just taking my time with it and enjoying the process. It's a nice way to clear my mind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, there's something very satisfying about working with your hands. What are you and Grace up to for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Once she gets back, we're just going to have a quiet evening. We're planning to stream a cooking competition show later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cooking competition show sounds like a great, relaxing choice. Do you two have a favorite show in that genre, or are you trying something new?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've got a couple we cycle through, but we just love seeing what the chefs can come up with under pressure. It's highly entertaining."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is amazing what they can create in such a short time! Well, I hope you both have a wonderful, relaxing evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "gym weights",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a garage",
+    "invention: building a coffee table"
+  ]
+}

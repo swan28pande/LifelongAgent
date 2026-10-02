@@ -1,0 +1,84 @@
+{
+  "user_id": "u2",
+  "day": 250,
+  "date": "2026-11-05",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Thursday going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yeah, it's been a pretty exciting day so far. I started off with a protein smoothie for breakfast, which gave me some good energy because I had some big news at school today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, really? What's the big news? I'd love to hear it!"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, it was officially announced today that I'm becoming the head of the science department at the high school! I'm really excited about taking on the role."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, Marcus! That is amazing news! Congratulations on becoming the head of the science department! How are you feeling about the new responsibilities?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm really happy about it. There will definitely be more administrative stuff to handle, but I'm looking forward to leading the team. Grace is thrilled too; we had a quick chat about it during my lunch break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that Grace is excited for you! It's a huge milestone. Speaking of staying active, did you manage to get any tennis in today, or was it too busy at school?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did! I managed to squeeze in some tennis this afternoon. It was a great way to blow off some steam."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, glad you got some court time. How are the plans for your family trip to Japan next spring coming along, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "We haven't looked at it today, but we're slowly putting ideas together. We're really looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's going to be an unforgettable trip. Are you planning a relaxing evening tonight to cap off such a big day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. We are just going to wind down on the couch and watch a nature documentary tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect way to relax. Congratulations again, Marcus, and enjoy your evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "tennis",
+      "evening_show": "nature documentary"
+    },
+    "statements": {
+      "job.head": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: teaches chemistry"
+  ]
+}

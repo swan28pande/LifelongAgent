@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 552,
+  "date": "2027-09-03",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How's your morning starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's going well. I decided to skip the coffee today and whisked up a warm matcha green tea latte with some oat milk before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a matcha latte sounds like a cozy way to start the day. Did you take the hybrid to the clinic today, or how was the commute?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I drove in today. The traffic wasn't too bad, and I actually used the drive time to listen to an Italian lesson podcast to get some extra practice in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to squeeze in study time! How are you liking the Italian lessons podcast so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's really helpful for hearing conversational pronunciation. Since Tom and I set our wedding date for summer 2028, I've been highly motivated to keep up with the language learning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is such a wonderful goal! It must feel great to have the wedding date set. Are you planning a trip to Italy for the honeymoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "That's the dream! We're still keeping it local with the planning for now, but a trip to Italy would be amazing. Speaking of local, Tucson is already heating up today, so I'm glad to be in the clinic's air conditioning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Tucson certainly knows how to bring the heat! I'm glad you're staying cool. Are you planning to grab something from that new sandwich shop nearby for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not today, I actually packed a lunch. I made a turkey and avocado sandwich with a couple of slices of the sourdough bread I baked earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade sourdough sandwich is hard to beat! It sounds like you're having a very productive and delicious Friday."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is! It's nice to have a little homemade comfort food during a busy shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely. I hope the rest of your shift goes by quickly. Do you and Tom have any fun plans for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some wedding brainstorming and hopefully some relaxation. Have a great afternoon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: podcast should be 'Italian lessons podcast', conversation gives 'other'"
+  ]
+}

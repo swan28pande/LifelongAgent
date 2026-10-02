@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 584,
+  "date": "2027-10-05",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How has your Tuesday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been a really pleasant day. I decided to travel on foot to the clinic today instead of driving my hybrid, mostly because the morning weather here in Tucson was just too beautiful to pass up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! Walking to work is a great way to start the day. Did it take you much longer than driving?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit longer, about thirty minutes, but it gave me some nice quiet time. I actually spent the walk listening to a language-learning podcast that teaches Italian."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what a smart way to practice! Is that helping you with the online Italian course you signed up for recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely! It helps me hear the pronunciation of the vocabulary I've been studying in the lessons. It's a fun challenge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I imagine! Did you get a chance to check out that new sandwich shop near the clinic for lunch, or did you do something else?"
+    },
+    {
+      "speaker": "user",
+      "text": "I skipped the sandwich shop today and ate a burrito bowl that I put together at home. It was really filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Homemade is usually best! How are things going with you and Tom? Have you two done any more planning for the wedding in summer 2028?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are doing great. We actually started browsing some local venue options around Tucson last night. We want to find a nice outdoor spot, but we're taking our time since we have plenty of it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking it slow is a great approach. How is the rest of your shift at the outpatient clinic looking today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a bit busy this afternoon, but nothing I can't handle. I'm just planning on heading home later and feeding my sourdough starter to unwind."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "homemade burrito bowl",
+      "commute": "walked",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning a honeymoon in Italy"
+  ]
+}

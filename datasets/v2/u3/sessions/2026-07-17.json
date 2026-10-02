@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 139,
+  "date": "2026-07-17",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Friday going out there in Phoenix? Are you getting ready for another night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yes, I'm just getting ready to head out soon. I'm sitting here sipping on a warm, spiced chai latte to help me wake up and get energized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A chai latte sounds like the perfect cozy start to your evening. Did you have any of your homemade sourdough with it, or have you been too busy to bake lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did! For lunch today, I made a turkey and cheese sandwich using a couple of slices of the fresh sourdough bread I baked earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Nothing beats a sandwich on fresh, homemade sourdough. How is the commute looking for you tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I really didn't feel like driving in the evening traffic today, so I decided to book a ride-share service to take me to the hospital instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart way to save your energy before a long night on your feet. Did you just relax during the ride, or did you have something to listen to?"
+    },
+    {
+      "speaker": "user",
+      "text": "I put my earbuds in and listened to a hilarious comedy podcast. It had me laughing the whole way, which was a great mood booster before walking into the ER."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is the perfect pre-shift medicine! It's always nice to go in with a light heart. Have you and Tom had any time to catch up recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually had a really nice phone call yesterday. He's been busy with some projects, but it was great to connect and hear about his week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad you two were able to find some time to talk! It can be tough to coordinate with night shifts. I hope your shift tonight is relatively quiet and goes smoothly."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm hoping for a calm night in the ER too. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "sourdough sandwich",
+      "commute": "rideshare",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Plans to go salsa dancing with Tom on Sunday evening"
+  ]
+}

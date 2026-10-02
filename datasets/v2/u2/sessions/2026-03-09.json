@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 9,
+  "date": "2026-03-09",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Monday. How is your week starting out in Portland? Did you get any woodworking done over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Woodworking was a bit slow, but I did manage to sand down a few pieces. My Monday is starting off pretty well. I actually had a nice warm bowl of oatmeal for breakfast, which was perfect for this chilly morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal sounds like a great, cozy start. Did you manage to squeeze in your usual morning run before school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, no, I decided today would be a rest day. I was just feeling really tired when my alarm went off, so I skipped the run. It's just a one-off though; I'll get back to it when I have more energy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good call listening to your body! Teaching high school chemistry takes plenty of energy on its own. How are your classes going today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're going well! We're starting stoichiometry today, which is always a bit of a hurdle for the students, but they're doing great. Grace and I were actually laughing about how much homework I have to grade tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, stoichiometry! That definitely keeps them on their toes. It's nice that you and Grace can find some humor in the grading pile. Are you hoping to get back to your woodworking bench later, or is it purely a grading night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely just a grading night. I'm too tired to be operating any tools safely anyway. I'll probably just focus on getting through these papers so I can relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wise choice. Once the grading is done, do you and Grace have any plans to unwind tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're planning to watch a nature documentary later this evening. It's the perfect low-key thing to put on while we unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. Nature documentaries are always so peaceful to watch after a long day of teaching. Do you have a specific one in mind?"
+    },
+    {
+      "speaker": "user",
+      "text": "We haven't picked a specific one yet, maybe something about the deep ocean or rainforests. I'm just looking forward to sitting on the couch and doing nothing for a bit!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "rest day",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user usually goes on runs.",
+    "invention: The user plans to do wood carving this coming weekend."
+  ]
+}

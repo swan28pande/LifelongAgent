@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 67,
+  "date": "2026-05-06",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your day going? Are you resting up before your night shift at the ER, or are you already at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I actually just got to the hospital a little while ago to start my shift. It's already looking like it's going to be a busy night here in Phoenix."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, I hope it's not too chaotic for you. Have you had a chance to eat anything yet to keep your energy up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I actually managed to step away for a few minutes. I went down to our cafeteria and built myself a quick salad with some greens and light toppings to keep me going."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A light salad is a good choice for staying alert on a long shift. Did you have any downtime to listen to anything while you ate, or was it a quick rush?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did have my headphones in! I put on an episode of this really funny podcast where two stand-up comics just banter about everyday absurdities. It definitely kept my mood light before things get crazy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Laughing is the best stress-relief, especially in your line of work! Did Tom recommend that one to you, or did you find it yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually stumbled on it myself while browsing, but I'll definitely have to share it with him. He'd love it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Speaking of fun things, have you and Tom managed to get out for any salsa dancing lately, or is your schedule too packed?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually went to a local spot last weekend! It was so nice to just lose myself in the music and dance for a few hours. The Phoenix salsa scene has some really great dancers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an amazing way to unwind and disconnect from the high pressure of the ER."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. Anyway, duty calls—my break is over and I need to head back to the floor. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "cafeteria salad",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

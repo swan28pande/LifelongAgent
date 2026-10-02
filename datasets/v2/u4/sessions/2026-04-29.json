@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 60,
+  "date": "2026-04-29",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! How's your Wednesday going in Minneapolis? Did you manage to get out for a ride or capture any photos today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, I actually got a good workout in. I took my road bike out for a spin around the lakes this morning before heading into work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful start to the day. The weather must be perfect for pedaling right now. What did you have to fuel that morning ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I kept it pretty simple and just had a bowl of crunchy oat clusters with some milk before I walked out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic breakfast. How has work at the design firm been today? Any big architecture projects keeping you busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was incredibly intense today. I had some major schematic drafting to do that required absolute concentration, so I actually worked in complete, blissful quiet today. Normally I have indie rock blasting in my headphones, but I really needed zero auditory distractions to get this done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, sometimes you just need that pure silence to get into the zone and focus on the details. Did you manage to make good progress on the schematics?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Got a huge chunk of it finalized. Oh, and speaking of getting things done, I actually took the plunge and registered for a local spring 10K race today!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's exciting news! A spring 10K is a fantastic goal. Have you started thinking about how you'll prepare for it, or is your usual cycling going to be your main source of conditioning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll definitely have to mix in some actual running sessions now, but the leg strength from riding will give me a good baseline. Leah is already planning to come out and cheer me on at the finish line, which is great motivation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's wonderful that Leah will be there to support you! Having a cheering squad makes a big difference. Have you two thought about what you're having for dinner tonight to celebrate?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually making a quick meal right now—just tossing some sliced beef, broccoli, and peppers into a hot wok with some soy sauce for a rapid toss-and-sear."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick, hot wok dish is perfect after a busy day of drafting and signing up for races. It sounds delicious! I'll let you get back to your cooking. Have a great evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "granola",
+      "workout": "cycling",
+      "outfit": "not mentioned",
+      "music": "silence",
+      "dinner": "stir-fry"
+    },
+    "statements": {
+      "ten_k.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

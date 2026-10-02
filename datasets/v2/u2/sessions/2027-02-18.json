@@ -1,0 +1,78 @@
+{
+  "user_id": "u2",
+  "day": 355,
+  "date": "2027-02-18",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Thursday going? How are things at the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Thursday is going well, if a bit hectic. Being head of the science department keeps me on my toes, especially this time of year. I'm glad I had a solid breakfast of oatmeal this morning to keep me going through the morning labs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is definitely a great way to fuel a busy morning. How is Olive doing? Is she still keeping you company when you're grading papers at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. Olive is currently curled up on the rug in my study. She's been super cuddly lately, which is nice when I'm trying to get through lesson plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds cozy! Speaking of home, how is your neighbor's vegetable garden coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's coming along well, they're preparing the soil for the spring planting. It actually got me thinking about our upcoming spring trip to Japan. Grace and I were looking at some travel guides yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That trip is going to be amazing. Planning it must be so exciting! Have you and Grace decided on any specific activities you want to do yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're still mapping out the general itinerary, but we're mostly just excited to experience the culture and the food. We want to keep it pretty flexible."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Flexibility is the best way to travel! What are your plans for this evening once you get home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think tonight is going to be a pretty quiet one. Grace and I are planning to wind down by watching a nature documentary on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect way to relax. Do you have a specific one in mind, or are you just going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We found one about deep-sea creatures that looks really interesting, so we'll probably start with that. Anyway, I should get back to setting up the biology lab for this afternoon. Catch up with you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds fascinating! Enjoy the documentary and have a great afternoon. Talk soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: plans to visit Tokyo and Kyoto on the upcoming trip to Japan"
+  ]
+}

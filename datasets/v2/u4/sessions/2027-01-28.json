@@ -1,0 +1,82 @@
+{
+  "user_id": "u4",
+  "day": 334,
+  "date": "2027-01-28",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How's your Thursday going so far in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. It's cold outside, but I've been staying warm. I actually started the day with a nice breakfast—fried up some hen's produce and put them on a piece of crispy, browned sourdough."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and cozy start to a winter day. Did you have a busy morning at the design firm, or is it a bit slower today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been moderately busy. I had a couple of project layout reviews. I dressed up just a little bit today for them, wearing a collared shirt with buttons down the front and some neat cotton twill trousers instead of my usual t-shirt."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! It's always good to feel put-together for those reviews. How did the team react to the layouts?"
+    },
+    {
+      "speaker": "user",
+      "text": "They went over really well, actually! We got some great feedback. After the meetings wrapped up, I took a break and headed over to the indoor bouldering facility to get some vertical training in. It felt great to use my wrist again like that."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear your wrist is holding up well at the climbing gym! It must feel amazing to be back on the walls after that fracture healed. Are you planning to head back to the office, or are you done for the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm done with work for the day, thankfully. I'm just relaxing at home now. Leah is at her pottery class tonight, so I'm on my own for dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, hope Leah enjoys her pottery class! What are you thinking of making for yourself tonight? Staying with your usual omnivore style, or going for something quick?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll keep it simple and boil some semolina noodles, then toss them with a basic tomato and garlic sauce."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic bowl of pasta is perfect for a chilly evening. Do you have any plans to catch up on photography or anything else tonight, or is it just a relaxing night in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a quiet evening. I might edit a few photos from last weekend, but mostly I'm just going to enjoy the quiet."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "climbing gym",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: He sold his road bike and stopped cycling."
+  ]
+}

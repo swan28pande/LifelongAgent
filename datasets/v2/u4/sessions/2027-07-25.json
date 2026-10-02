@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 512,
+  "date": "2027-07-25",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Sunday going? Did you manage to get some rest, or has it been a busy one?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It actually turned into an unexpected work day. I had to log on for a bit to prep for a big launch tomorrow. Since it was the weekend, I kept things super casual and just wore a soft plaid button-down and some comfortable denim pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's nothing wrong with a comfortable weekend uniform when duty calls. Did dressing down help you get into focus mode?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I also put on some underground, guitar-heavy tracks from independent labels to keep my energy up while I plowed through the slide deck."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great soundtrack for getting things done. How is Leah doing, by the way? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She actually made a really cool mug last week. But yeah, my day ended up getting incredibly stretched out because a last-minute evening review session got called and ran way past schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, a late meeting on a Sunday is rough. I hope you at least got a chance to eat something?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, no. I usually make myself a big sheet pan of oven-roasted garden veggies, but because that session dragged on so late, I ended up completely bypassing my evening meal tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a bummer, especially when you've been working hard. Make sure you get some good rest tonight. Did you at least get a chance to enjoy the nice Chicago weather yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! I took my camera out to Lincoln Park for a couple of hours yesterday afternoon. Got some great shots of the skyline with the summer greenery."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Chicago is great this time of year. How is your wrist holding up since it healed?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels completely back to normal, thanks for asking. I'm hoping to check out that new climbing gym across town soon, now that I'm fully recovered."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome to hear! I hope you get to try out the new gym soon. For tonight, though, definitely try to get some sleep."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm heading to bed right now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "indie rock",
+      "dinner": "skipped dinner"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

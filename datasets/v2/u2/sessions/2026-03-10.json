@@ -1,0 +1,80 @@
+{
+  "user_id": "u2",
+  "day": 10,
+  "date": "2026-03-10",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Tuesday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's going pretty well, thanks. Started the day off right with a warm bowl of oatmeal for breakfast, which was perfect for the chilly morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is always a solid choice. Did you manage to get some exercise in before heading off to teach your chemistry classes?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually. I squeezed in a session with the gym weights this morning. It definitely helped wake me up before the first bell."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's impressive discipline for a Tuesday morning! How were the high schoolers behaving in chemistry today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They were actually pretty focused today. We're doing lab work this week, which they usually enjoy more than just lectures."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Labs are always the best part of chemistry. Do you have any relaxing plans lined up for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Grace and I are going to watch a movie tonight. We normally watch a nature documentary, but we're doing a movie instead today because we wanted to have a family movie night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a lovely change of pace! Have you two decided on what movie you're going to watch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, we'll probably spend twenty minutes scrolling through options before we finally agree on something."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, that's the classic movie night experience. Have you had any time for your woodworking projects lately, or has school kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Lately, school has been taking up most of my energy. I haven't been out to my workbench in a couple of weeks, but I'm hoping to get some time in this weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get that chance! Enjoy the movie night with Grace tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "a movie"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

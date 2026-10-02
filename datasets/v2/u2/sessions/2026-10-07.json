@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 221,
+  "date": "2026-10-07",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's going okay, though I'm feeling a bit sluggish. I started the morning with a quick protein smoothie for breakfast to keep things easy, but I've been dragging a bit since then."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is a great quick option when you need an energy boost. Did you still manage to get active today, or are you taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually decided to take a rest day today. I usually go for a run, but I was just feeling too tired to push through it today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. Listening to your body and taking a rest day is so important when you're already exhausted. Hopefully, your chemistry classes weren't too draining today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, teaching was fine. Grace and I actually spent some time yesterday looking at some travel guides for our Japan trip next spring, so that was exciting, but maybe we stayed up a bit too late talking about it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Planning a trip to Japan is definitely worth losing a little sleep over! Have you and Grace settled on any specific spots you want to visit yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not entirely, we're still narrowing down the itinerary. Tonight is going to be much more low-key, though. I think I'm just going to relax on the couch and watch a nature documentary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect way to unwind. What kind of nature documentary are you thinking of putting on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably something about deep-sea creatures. Just something peaceful to zone out to before I head to bed early."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Deep-sea documentaries are incredibly soothing and fascinating. I hope you get some well-deserved rest tonight. Let me know if you need any help with school prep or Japan trip ideas tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, I appreciate that. Have a good evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "rest day",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: usually goes for a run after school",
+    "invention: has a garage workshop"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "user_id": "u4",
+  "day": 380,
+  "date": "2027-03-15",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Monday. How is your week starting off in Minneapolis? Did you have a busy day at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was pretty busy, yeah. I had a big client presentation this morning, so I actually had to dress up a bit more than usual. I threw on a structured sport coat and some nice tailored dress trousers instead of my usual casual gear."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A sport coat and dress trousers sounds like a sharp look! I hope the client presentation went well. Did you feel prepared?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went great, thanks! I spent the early morning doing some final prep at my desk, and to keep my focus, I had some of those vintage vinyls spinning on the turntable—mostly classic syncopated brass and piano, some old Miles Davis and Coltrane."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I love that. It's wonderful you're getting so much use out of your grandfather's record collection. It sounds like a great way to ease into a high-stakes presentation. Did you manage to get any climbing in after work, or are you still taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing today, but I wanted to get moving after sitting at my desk. I laced up my sneakers and went for a jog around the neighborhood paths, logging about four miles on foot to clear my head."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An outdoor jog is a perfect way to decompress, especially after a big presentation. It's great to hear you're staying active! How are things with Leah? Any updates on the Chicago job offer she's considering?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's still weighing her options, so we've been talking about it a lot. Actually, we're planning to cook together tonight to relax and just have some quiet time to chat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Cooking together is a great way to connect and unwind. What's on the menu for tonight's dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're making that classic stir-fried rice noodle dish with the tamarind sauce, eggs, bean sprouts, and crushed peanuts on top. It's the recipe we picked up during that Thai cooking class we took."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum! It's fantastic that you guys are still putting those cooking class skills to good use. It sounds like a delicious reward after your jog."
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely is. We're about to prep the ingredients now. I'll let you know how it turns out!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the cooking and your evening, Daniel! Have a great night."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "running",
+      "outfit": "blazer and slacks",
+      "music": "jazz records",
+      "dinner": "pad thai"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'",
+    "pref_wrong: outfit should be 'blazer and slacks', conversation gives 'other'"
+  ]
+}

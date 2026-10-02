@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 573,
+  "date": "2027-09-24",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your day going at the clinic so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going alright, though the morning started off a little rough. I had to settle for a basic green tea today because our espresso machine broke down, so I couldn't whip up my usual matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that's a tragic start to a Friday! A broken espresso machine is the worst. Did the green tea at least give you enough of a boost to get through your morning shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did the job, luckily! I'm actually on my lunch break right now, eating a homemade burrito bowl I prepped, which is definitely helping me recharge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A homemade burrito bowl sounds like the perfect midday meal. Are you getting some quiet time to relax during your break, maybe catching up on a podcast?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, exactly! I decided to listen to an audio lesson podcast for learning Italian while I had my lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That’s great! How is that fitting in with the online Italian course you signed up for? Are you starting to feel more comfortable with the language?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a nice supplement! Hearing the spoken dialogue on the podcast helps me pick up the accent much better than just reading the lessons."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes a lot of sense. Immersive listening is so helpful. Speaking of planning and learning, how are things going with you and Tom? Have you two had any time to think about the wedding details for summer 2028 lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've had a few casual chats about it! We're mostly just enjoying being engaged right now and looking at a few options here in Tucson, but we aren't rushing into anything."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, stress-free way to go about it. Do you have any fun plans for the rest of the weekend? Any sourdough baking on the agenda?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely! I'm planning to feed my starter tonight and bake a fresh loaf of sourdough tomorrow morning. It's the perfect weekend activity."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "green tea",
+      "lunch": "homemade burrito bowl",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning a honeymoon to Italy"
+  ]
+}

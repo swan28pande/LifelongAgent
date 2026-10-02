@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 400,
+  "date": "2027-04-04",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Sunday. How is your weekend going in Phoenix? Did you end up baking anything new today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's a beautiful Sunday here in Phoenix. I actually just sliced up my latest sourdough boule to make a hearty sandwich for lunch. It turned out great, nice and airy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Your sourdough baking always sounds so rewarding. Did you pair it with something warm to drink this morning, or did you stick to your usual routine?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually whisked up a hot matcha latte with some frothed oat milk earlier today. It was the perfect gentle caffeine boost to start the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A matcha latte is a great choice! Did you have to commute to the clinic today, or are you enjoying a restful day off?"
+    },
+    {
+      "speaker": "user",
+      "text": "No commute for me today! I didn't have to do any travel or driving for work since it's Sunday, which has been lovely."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully relaxed day. It's always nice when you can avoid the Phoenix roads and just unwind at home."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, though I did actually have to venture out briefly because I finally bought a used hybrid car today!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! Congratulations, Sofia! That's huge news. How did the whole process go, and what kind of hybrid did you end up getting?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! It was pretty smooth. It's a silver four-door hatchback, a few years old but in excellent shape. The mileage is fantastic, which is going to be so great for getting around town."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A silver hatchback sounds perfect, and having a hybrid in the city will definitely save you a lot on gas. Have you told Tom about it yet? I'm sure he's thrilled for you."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh yeah, Tom actually came with me to the dealership to help inspect it and handle the paperwork. We're both so relieved to have it sorted out. We might take it for a little drive later just to celebrate."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! Having Tom there to help must have made the dealership experience a lot less stressful. I hope you two have a fantastic celebratory drive this evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yes, it was much easier with him there. Now I can just relax and enjoy the rest of my Sunday evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "sourdough sandwich",
+      "commute": "no commute",
+      "podcast": "not mentioned"
+    },
+    "statements": {
+      "new_car.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

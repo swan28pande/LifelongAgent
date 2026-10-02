@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 571,
+  "date": "2027-09-22",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope your Wednesday is going well. Have you had any time for sourdough baking this week, or has the clinic been too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! No baking lately, unfortunately. It's been so hectic that I barely had time to make a quick pot of regular drip coffee this morning before rushing out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I know how those busy mornings go. Did you at least have a smooth trip into work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it wasn't too bad. I drove myself in today instead of taking the bus, which saved me a lot of time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Driving definitely helps when you're on a tight schedule. Did you listen to anything interesting on the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually put on my Italian learning podcast. I figured I should get some practice in since I'm taking that online course."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a very productive use of your commute! How are you finding the language lessons so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're really fun, though the pronunciation is a bit tricky. I'm slowly getting the hang of the basic greetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Keep at it, it takes time! Did you manage to get a proper lunch break today with how busy the clinic has been?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I resisted the urge to go out and just ate a homemade burrito bowl that I put together last night. It was actually really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Packing a lunch is always a great move. How is Tom doing? Have you two been enjoying the cooler September weather in Tucson?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! And yes, Tucson is finally starting to feel a bit nicer in the evenings. We've been sitting out on the patio lately."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "homemade burrito bowl",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: plans to go on a honeymoon with Tom"
+  ]
+}

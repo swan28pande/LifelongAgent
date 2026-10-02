@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 279,
+  "date": "2026-12-04",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Friday. How is your morning going over in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Morning is going well. It's pretty chilly here today, but I'm staying warm inside. I just finished a bowl of toasted oat clusters mixed with some dried fruit and seeds, which hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and cozy way to start a cold day. Are you planning on getting a workout in later, or is today a bit more low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I'm giving my muscles a complete pause today. No training or running sessions on the schedule, just letting my body recover."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking time to recover is just as important as the training itself! How is work shaping up at the design firm? Are things busy ahead of the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy, but I'm managing. I've got a few project outlines to finalize. To help me focus, I've got some relaxed, low-tempo instrumental tracks with that cozy vinyl crackle playing in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those chill, nostalgic sounds are absolutely perfect for getting into a good flow state. Speaking of creative things, how is Leah's pottery class going? Has she brought home any new pieces lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually brought home a hand-thrown mug earlier this week! It's slightly lopsided, but it holds coffee perfectly and has a lot of character."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! Handmade mugs always make morning coffee taste better. By the way, have you heard from Kwame recently? How is he settling in down in Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we chatted yesterday. He's really enjoying the warmer weather down south, though he's still trying to get used to the city's intense traffic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine Atlanta traffic is quite the adjustment! It's great to hear he's liking the warmth, though. Do you have any plans for the rest of your Friday once you wrap up at the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing major, just looking forward to a quiet evening at home with Leah. We'll probably just stream a movie and relax."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "granola",
+      "workout": "rest day",
+      "outfit": "not mentioned",
+      "music": "lo-fi beats",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'other'"
+  ]
+}

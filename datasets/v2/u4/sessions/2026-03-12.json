@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 12,
+  "date": "2026-03-12",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Thursday going up in Minneapolis? Staying warm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's pretty chilly today, but I dressed for it. I threw on a thick, knitted wool pullover and some sturdy blue denim trousers before heading into the office, so I've been quite comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect outfit for a cold March day. How has the workload at the firm been treating you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a busy day of drafting. To keep my head down and focus, I've had some low-fidelity, downtempo instrumental tracks playing in my headphones—the kind of bedroom-produced music with a soft vinyl crackle and a steady, mellow rhythm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, those relaxing background tracks are excellent for staying in the zone when you're drafting. Did you manage to get any physical activity in today to break up all that sitting?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Right after work, I stopped by the local health club and fitness center to do some strength training with the barbells and resistance machines."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job getting that session in! Being a junior architect keeps you busy, but it's great you make time for fitness. Speaking of staying fueled for your active days, have you found any good food spots in town lately? I know you enjoy a wide variety of foods as an omnivore."
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely do. Since I eat a mix of both meats and plant-based dishes, Minneapolis is fantastic. I actually tried a new sandwich spot near the office today and got a great turkey, bacon, and avocado club."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious lunch! Have you and Leah had any chances to get outside for cycling or photography lately, or is the winter weather still keeping you mostly indoors?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's still a bit too icy on the roads for my bike, but Leah and I did go out last weekend for some photography. I brought my camera along to capture some of the snow-covered architecture downtown."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful way to spend the weekend. Minneapolis has some stunning buildings, especially under a blanket of snow. Are you planning to edit any of those photos tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, that's the plan. I'm going to load the raw files onto my laptop and spend the evening sorting through them. It's a nice, quiet way to wrap up the day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "gym",
+      "outfit": "sweater and jeans",
+      "music": "lo-fi beats",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'lo-fi beats', conversation gives 'ambient electronic'",
+    "invention: has desk plants"
+  ]
+}

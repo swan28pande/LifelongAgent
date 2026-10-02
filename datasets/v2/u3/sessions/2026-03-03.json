@@ -1,0 +1,77 @@
+{
+  "user_id": "u3",
+  "day": 3,
+  "date": "2026-03-03",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday going in Phoenix? Ready for your upcoming night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, thanks. It's already pretty warm here today. I started my day with a big glass of chilled, slow-steeped coffee over ice to help me wake up before my shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds refreshing! It's definitely the right weather for a cold coffee. Did you get a chance to do any salsa dancing recently, or has work been too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't gone dancing this week, but I've actually been spending quite a bit of time with Tom. He and I are dating now!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's wonderful news! I'm so happy to hear that. How has everything been going between you two?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been really great. We are having a lot of fun together and just enjoying each other's company."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm absolutely thrilled for you, Sofia. It's great to have that support, especially with your demanding schedule at the hospital. Are you heading into your shift soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am. I'm actually about to head out and catch the late-evening city bus to get to the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope it's a smooth and relaxing ride. Have you figured out what you'll do for lunch during your break tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just grab a plate of mixed greens and veggies from the hospital's basement cafeteria tonight. It's quick and easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A light cafeteria salad is a good choice to keep your energy up without feeling heavy. I hope the ER isn't too chaotic tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I hope so too. I'll talk to you tomorrow morning after my shift."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "cafeteria salad",
+      "commute": "night bus",
+      "podcast": "not mentioned"
+    },
+    "statements": {
+      "relationship.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Started dating Tom recently after meeting him through mutual friends at a local event a few weeks ago."
+  ]
+}

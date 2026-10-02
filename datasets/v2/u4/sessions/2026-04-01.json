@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 32,
+  "date": "2026-04-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Wednesday. How has your day been shaping up so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty hectic today. I barely had time to eat this morning, so I just quickly poured myself a bowl of those crunchy, oven-toasted oat clusters mixed with almonds and pumpkin seeds, and threw in some cold milk. It did the trick though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid, quick fuel-up for a busy morning. Are things particularly demanding at the architecture firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're finalizing some draft layouts for a commercial space, so I've been staring at CAD files for hours. My eyes definitely need a break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Staring at screens all day is tough. Have you been able to get away from the desk and take your camera out lately to clear your head?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I took a walk yesterday evening right around sunset and got some great shots of the light reflecting off the brickwork downtown. The spring light in Minneapolis has been really interesting lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. There's nothing like that golden hour light for photography. Do you have any relaxing plans to wind down after you finish up work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to cook something relatively fast but fresh. I've got some beef, broccoli, and snap peas, so I'm going to toss those into a super hot wok with a ginger and soy glaze and flash-cook them really quickly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly tasty and satisfying after a long day of drafting. Is Leah joining you for dinner tonight, or are you flying solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually caught up with some of her own work tonight, so it's just me. We'll probably catch up tomorrow instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it. Sometimes a quiet evening to yourself is exactly what's needed mid-week anyway."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I'll probably just eat, upload those photos from yesterday to see how they turned out, and call it a night."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "granola",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "stir-fry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

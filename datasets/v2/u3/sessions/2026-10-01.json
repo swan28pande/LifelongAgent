@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 215,
+  "date": "2026-10-01",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going? Are you resting up before your night shift at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I'm just relaxing. Phoenix is already getting pretty warm today, so I'm staying inside where it's cool."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely smart to avoid the midday heat. Have you been doing any sourdough baking lately, or is it too warm to turn on the oven?"
+    },
+    {
+      "speaker": "user",
+      "text": "I fed my starter, but didn't bake. Instead, for my afternoon meal, I just ate some food that I had prepared and boxed up from yesterday's dinner. It's nice to just have pre-packaged food from home ready to go."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That definitely makes things easier when you have a busy shift ahead. What did you make?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some chicken pasta. My roommate actually helped me prep it, which was a nice help."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That was nice of them! It's good to have that support, especially since you've been recovering from the flu recently."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I was telling Tom yesterday how glad I am to finally have my energy back. He was really worried when I was sick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's wonderful to hear you're feeling back to normal. Have you been listening to anything interesting today while you relax?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just finished an episode of an online audio program that covers medical research updates and public wellness news. It keeps me engaged with my field."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to stay informed, especially with your work in the ER. Did they cover anything surprising today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They talked a bit about seasonal virus trends, which is always relevant to what we see at the hospital. It was a really informative episode."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Planning to go salsa dancing with Tom this weekend."
+  ]
+}

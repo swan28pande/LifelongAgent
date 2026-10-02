@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 444,
+  "date": "2027-05-18",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Tuesday going so far? How are things at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It's a bit chilly today, so I went with a super casual look—just a warm, checkered cotton button-up and some classic blue denim pants. It's keeping me cozy while I review these project blueprints."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfectly comfortable outfit for a cool spring day. Are you listening to anything good while you work on those blueprints?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've actually got the turntable spinning some of those old mid-century improvisational brass and woodwind albums. It really helps me focus when I'm drawing up designs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, is that some of the music you inherited from your grandfather? That's a wonderful way to keep his memory alive while you work."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, exactly! I've been slowly sorting through his old crates, and finding these classic instrumental LPs has been amazing. The warm sound of a needle on vinyl is so much better than streaming."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I completely agree, there's nothing quite like the warmth of a spin on the turntable. Are you and Leah planning to cook anything special tonight to go with that cozy vibe?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, we aren't eating at home tonight. Usually, we do a taco night on Tuesdays, but we're skipping that today. I'm actually traveling over to my folks' place to have a meal with my mom and dad. It's just a nice, impromptu family visit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's lovely! A family dinner is a perfect reason to break your usual Tuesday routine. How are your parents doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're doing great! My dad has been asking about my photography lately, so I'm bringing along some prints I made of the city skyline to show him."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He must love seeing your work. Have you been able to take your camera out much lately with how busy things have been?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, mostly just capturing the light hitting the architecture downtown during my evening walks home from the office. It's a nice way to unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Chicago has some of the best architecture for that. I hope your parents enjoy seeing the prints, and that you have a wonderful dinner with them tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to catching up with them. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "jazz records",
+      "dinner": "dinner at his parents'"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

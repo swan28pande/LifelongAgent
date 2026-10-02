@@ -1,0 +1,83 @@
+{
+  "user_id": "u4",
+  "day": 263,
+  "date": "2026-11-18",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Daniel! How is your Wednesday starting out in chilly Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's definitely freezing today. But I'm starting the day on a bright note. I actually used one of the new shallow ceramic dishes Leah made in her pottery class. I filled it with a thick, blended berry and banana puree, then topped it with some chia seeds and grain granola, and ate it with a spoon. It felt nice using her handiwork."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful way to show appreciation for her pottery! How is she enjoying the class overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "She absolutely loves it. She's getting really good at shaping clay. Anyway, I have a big day ahead at the design firm. I'm actually wearing a structured, navy tailored jacket and a pair of sharp, pressed formal trousers today because I have to lead a presentation for our biggest client."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You must look incredibly sharp! A tailored jacket and formal trousers definitely project confidence. I'm sure you'll do an amazing job leading the presentation. How has your wrist been holding up with all the preparation?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's completely fine, thanks. Since the cast came off and it healed up, I barely even think about it. I can gesture during my presentation today without any stiffness at all."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful news. It's great to have full mobility back, especially for your hobbies. Have you managed to get back into photography or cycling lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't been on the bike as much with the colder weather, but I did take my camera out over the weekend to get some shots of the late autumn frost around the lakes. The light was perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Minneapolis must look gorgeous with the frost. It sounds like you captured some beautiful scenes. Is Leah keeping busy with her own projects this week too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, she's got a lot on her plate with work, but she still makes time for her clay molding on the weekends. We're both just keeping our heads down and getting through the busy season."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's a busy time of year for sure. Have you heard from your brother Kwame recently? How is he adjusting to life in Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I caught up with him on the phone yesterday. He says he's finally feeling settled in his new place and loves the warmer weather down there. Anyway, I need to head out the door now to get ready for this client meeting. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "blazer and slacks",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'other'"
+  ]
+}

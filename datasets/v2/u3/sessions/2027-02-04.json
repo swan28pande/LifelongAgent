@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 341,
+  "date": "2027-02-04",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is everything going in Phoenix today? Did you have a busy shift at the outpatient clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! The weather in Phoenix is actually gorgeous today. My clinic shift was pretty busy, but I managed. I actually decided to take the light rail to work this morning, which made for a pretty relaxing start."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking the light rail sounds like a nice change of pace. Did you have something to listen to or read while you rode?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on a podcast that does audio Italian lessons. It's really helping me get used to the pronunciation since I started my online course."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a fantastic way to make use of your commute! How is the Italian coming along? And did you manage to get your usual morning caffeine fix before you left?"
+    },
+    {
+      "speaker": "user",
+      "text": "The Italian is tough, but I'm enjoying it! As for the caffeine, I actually ended up skipping my morning drink entirely today. I completely overslept, so I didn't have time to make my usual matcha latte and just had to run out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, oversleeping is such a stressful way to start the day, especially when you have to miss out on your matcha! I hope you didn't have to go hungry all day. Were you able to get some lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was! Luckily, I had packed leftovers last night, so I just grabbed that container from the fridge as I ran out. Having that ready was a lifesaver during my lunch break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That was very forward-thinking of you! Having lunch already prepared definitely saves a chaotic morning. How did the rest of your clinic shift go after that hectic start?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went smoothly, luckily. We had a steady stream of patients, but nothing overwhelming, so I was able to catch my breath."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear the day settled down for you. Do you have any big plans for the evening? Maybe some sourdough baking, or catching up with Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "No baking for me tonight. I think I'm just going to have a quiet evening at home, call Tom for a bit, and head to bed early to make up for this morning!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "skipped her morning drink",
+      "lunch": "packed leftovers",
+      "commute": "light rail",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

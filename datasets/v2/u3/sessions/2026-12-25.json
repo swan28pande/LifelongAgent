@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 300,
+  "date": "2026-12-25",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Merry Christmas, Sofia! How is your Friday going down in Phoenix? Are you working today at the outpatient clinic, or do you have the day off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Merry Christmas! Yes, I actually had to go in for a morning shift today. I got myself going by whisking up some green tea powder with steamed oat milk before heading out, which definitely helped wake me up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A hot green tea latte is the perfect way to power through an early holiday shift! Did you take your usual light rail commute this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, no, I didn't take the light rail today. Tom ended up driving me to the clinic. The traffic reports said the highway was a total mess with holiday delays, so he offered to give me a ride so I wouldn't be late. It was a nice change of pace, but definitely just a one-off because of the terrible traffic day!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "How sweet of Tom to drive you! Holiday traffic can be so stressful, so having a ride must have been a huge relief. How was the rest of your shift? Did you get a decent lunch break?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was actually pretty quiet at the clinic, luckily. For lunch, I had a turkey sandwich that I made with a couple of slices of my own home-baked wild yeast bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Your homemade sourdough sandwiches always sound so incredible. I hope you're finally home and relaxing now. Do you have any plans for the evening? Are you heading to a salsa class, or just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely taking it easy, and actually, I have some sad news about that. I've officially stopped salsa dancing. The studio changed their class schedule, and the new times just don't fit with my routine anymore, so I had to make the decision to stop today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, no! I'm so sorry to hear that. I know how much you loved those salsa classes and how great of an outlet it was for you. Is there any chance they might offer different times later on, or is this a permanent schedule change?"
+    },
+    {
+      "speaker": "user",
+      "text": "It looks pretty permanent, unfortunately. The new slots conflict directly with my work hours, so there's really no way for me to make it work. It's a bummer, but I had to call it quits."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a real bummer, but completely understandable given your clinic schedule. I'm sure you'll find other fun ways to unwind. How are you and Tom spending the rest of Christmas evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are keeping it very low-key. Tom is coming over to my place, and my roommate offered to make us some holiday lattes with her new espresso machine. I'm just looking forward to a cozy night in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "sourdough sandwich",
+      "commute": "got a ride from Tom",
+      "podcast": "not mentioned"
+    },
+    "statements": {
+      "hobby.salsa_stop": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

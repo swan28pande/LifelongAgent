@@ -1,0 +1,72 @@
+{
+  "user_id": "u2",
+  "day": 678,
+  "date": "2028-01-07",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Friday. How is your day going? Did Olive manage to wake you up early again today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Olive was actually pretty quiet this morning and let me sleep. It's been a busy day at the high school, but I managed to squeeze in a quick workout. I did some gym weights during my free period."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job fitting that in! How is your back holding up with the gym weights? I know you recovered from that strain, but it's always good to be careful."
+    },
+    {
+      "speaker": "user",
+      "text": "It felt completely fine, thanks! My back is fully recovered, so I just focused on good form and didn't push it too hard. It felt great to get some movement in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Do you and Grace have any big plans for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not really, we're planning on a pretty low-key weekend. Grace had a really long week at work, so tonight we're just going to order some food and watch a sci-fi series on that new streaming service we got."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A sci-fi series sounds like a perfect way to unwind. Is it a new show, or something you've been meaning to catch up on?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a relatively new one about space exploration. I've heard some good things about it from a colleague, so we're excited to start it tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great Friday night. Speaking of home projects, did your neighbor ever get that vegetable garden going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they actually started prepping the soil and getting everything ready for spring. It makes me look forward to warmer weather here in Portland."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Hopefully, the winter months fly by. Do you think you'll get any tennis in this weekend if the weather clears up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might try to play a match on Sunday if it doesn't rain, but today is definitely all about resting. I'm ready to just head home, relax with Grace and Olive, and start that sci-fi series."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "gym weights",
+      "evening_show": "sci-fi series"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

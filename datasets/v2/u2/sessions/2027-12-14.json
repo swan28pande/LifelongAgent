@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 654,
+  "date": "2027-12-14",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Tuesday going at the high school? Did you get a chance to play any tennis yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy day in the science department, grading finals is starting to loom. No tennis yesterday, Grace and I just had a quiet evening at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Finals prep can definitely be exhausting. Hopefully you're keeping your energy levels up. Did you manage to get a good breakfast in this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, actually. I wanted something quick but filling, so I made a protein smoothie before heading out. It definitely helped me get through the morning labs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great start to the day. Did Olive try to investigate the blender while you were making it?"
+    },
+    {
+      "speaker": "user",
+      "text": "She definitely watched from the kitchen counter, but once she realized there was no tuna involved, she lost interest and went to take a nap."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic Olive! Well, hopefully the rest of your school day goes smoothly. Do you have any plans to unwind tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too energetic. Grace and I are probably just going to watch some sitcom reruns on that new streaming service we got. Just something lighthearted to zone out to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are the perfect way to decompress after a long day of teaching. Do you have a specific show in mind?"
+    },
+    {
+      "speaker": "user",
+      "text": "We'll probably put on some old episodes of Parks and Recreation. We've seen it so many times, we don't even have to pay close attention."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a classic choice! Comfort TV at its finest. Oh, by the way, how is your neighbor's vegetable garden doing with the Portland winter?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's surprisingly holding up! He actually brought over some winter squash the other day. It's really cool seeing what he can grow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's so nice of him! Homegrown winter squash sounds delicious. I hope you and Grace have a great, relaxing evening with your show."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "not mentioned",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

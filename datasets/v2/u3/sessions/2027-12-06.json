@@ -1,0 +1,85 @@
+{
+  "user_id": "u3",
+  "day": 646,
+  "date": "2027-12-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday starting off? Are you ready for your day-shift at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's off to a decent start, though I was feeling a bit lazy this morning. I actually ended up booking a ride on an app to get to work today instead of driving my hybrid."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a hands-free commute is exactly what you need on a Monday morning. Did you get to just relax in the back?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I just brewed a simple, standard cup of filtered coffee at home, poured it into a travel mug, and enjoyed sipping it while someone else navigated the morning traffic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. Did you pair your coffee with that true-crime podcast your coworker recommended, or did you listen to something else?"
+    },
+    {
+      "speaker": "user",
+      "text": "I wasn't quite in the mood for true crime today. Instead, I put on a show about canine behavior and obedience training during the ride."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, interesting! Is Dash keeping you on your toes, or are you just looking for some new tips for him?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's actually been great, but since I sprained my ankle a while back, I want to make sure his leash manners are absolutely perfect. I don't want him pulling me over while I'm still being careful!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is very smart. How is your ankle feeling lately? Are you back to normal?"
+    },
+    {
+      "speaker": "user",
+      "text": "Almost! It's feeling much stronger, but I'm still trying not to push it too hard. I've been taking a little break from long hikes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad to hear it's recovering well. Have you had any time for your sourdough baking lately, or has the wedding planning been taking up your weekends?"
+    },
+    {
+      "speaker": "user",
+      "text": "No baking this weekend, unfortunately. Tom and I actually spent yesterday looking at some potential outdoor venues for our summer 2028 wedding. It's been fun but definitely takes up a lot of time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It certainly does, but how exciting to start visualizing the big day! I hope you find the perfect spot."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm sure we will. Anyway, I just arrived at the clinic, so I need to head inside and get ready for my shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great day at work, Sofia! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "rideshare",
+      "podcast": "dog training podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

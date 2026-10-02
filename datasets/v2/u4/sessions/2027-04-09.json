@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 405,
+  "date": "2027-04-09",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Daniel! How is everything going at the design firm today? Wrapping up any big projects before the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a busy day leading the team, but we are making good progress. I decided to keep things super comfortable at the office today, so I'm just wearing a warm, knitted pullover and some casual blue denims."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect casual Friday attire. Did you get a chance to treat yourself to a nice breakfast to start the morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! I stopped by the local bake shop on my way in and grabbed a wonderfully flaky, buttery French laminated pastry to have with my morning coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds absolutely delicious. Nothing beats a fresh pastry. What kind of music is helping you power through the rest of your design work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm currently listening to some underground, guitar-driven tunes from independent labels. It really helps me stay in the zone when I'm reviewing layouts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Independent guitar tracks are great for focusing. Do you and Leah have any big plans around Chicago this weekend, or is it going to be a quiet one?"
+    },
+    {
+      "speaker": "user",
+      "text": "Leah has some hospital shifts, so we're keeping it pretty low-key. Tonight we actually decided to just order in some griddled beef patties on toasted buns from the place around the corner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's nothing quite like a good burger night to kick off the weekend. Have you been able to take your camera out lately? Any new photography spots you've found in the city?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took my camera down to the lakefront last Sunday. The spring light was gorgeous, and I got some fantastic shots of the architecture reflecting off the water."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds stunning. Chicago really has some incredible angles for photography. Oh, by the way, have you heard from your brother Kwame lately? How is he liking Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "I caught up with him on the phone yesterday! He's really enjoying the warmer weather down south and is starting to find his favorite local spots."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bakery croissant",
+      "workout": "not mentioned",
+      "outfit": "sweater and jeans",
+      "music": "indie rock",
+      "dinner": "takeout burgers"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

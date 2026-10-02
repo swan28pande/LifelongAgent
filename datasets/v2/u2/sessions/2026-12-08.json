@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 283,
+  "date": "2026-12-08",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Tuesday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. A bit busy at the high school today with the science department, but I started the morning off right with a warm bowl of oatmeal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is always a solid, comforting choice for a chilly December morning. Did you have a chance to squeeze in any physical activity today, or has it been all schoolwork?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I did manage to get away for a bit. I got a great tennis workout in this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome! It's great you can still get out on the court. How is the planning going for the family trip to Japan next spring? Have you and Grace had much time to look into it lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've been talking about it here and there, but we haven't locked in too many details yet. Mostly we are just excited to go next spring."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's definitely exciting to have that to look forward to! Have you had any time for your woodworking projects lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not as much as I'd like, honestly. School has been keeping me pretty busy since the new school year started. I'm hoping to get back into the workshop soon, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Completely understandable. It's a busy time of year. What are your plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace and I are just planning on a quiet night. I think I'm just going to unwind by watching some sitcom reruns on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect way to recharge after a busy day of teaching and tennis. Enjoy the sitcom reruns!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to visit Tokyo and Kyoto during their upcoming trip to Japan"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 593,
+  "date": "2027-10-14",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Daniel! How is your Thursday going in Chicago? Did you get a chance to do any climbing today, or has the design firm kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. I actually did manage to squeeze in some exercise. I headed over to that new spot across town with the high walls and bouldering routes to spend an hour scaling some paths."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! How is your wrist holding up with the climbing lately? Is it fully back to normal?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it feels completely fine now, thankfully. No pain at all when I was gripping the holds today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. Did you have a lot of design work to power through after that session?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tons. I had my headphones on for hours today while drafting. I was listening to a bunch of those low-budget, self-released bands with the fuzzy guitars and catchy hooks to keep my focus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, some underground alternative tunes always help with the creative flow. How is Leah doing? Is she still enjoying her pottery class, or is her hospital work keeping her too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's still loving the pottery! She actually brought home a ceramic bowl she made. Her schedule as a pediatrician is pretty hectic, but she finds time for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful that she has that creative outlet. Are the two of you cooking anything special tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too fancy. I'm actually just about to boil some long noodles to toss with a simple tomato sauce."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic and comforting. Sounds like a perfect way to wind down. Is your neighbor still practicing the trumpet, or do you get a quiet evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, the trumpet practice is still going strong, but luckily they usually wrap up by dinnertime. So it should be a peaceful meal!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good to hear! Enjoy your dinner and have a relaxing night, Daniel."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "climbing gym",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Daniel has a windowsill herb pot."
+  ]
+}

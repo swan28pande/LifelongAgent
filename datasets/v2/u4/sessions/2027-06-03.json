@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 460,
+  "date": "2027-06-03",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Thursday. How is your morning going so far in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's going well. I started off with a really satisfying breakfast—I toasted up a circular bread roll with a hole in the middle, spread some cream cheese on it, and topped it with cured, cold-smoked pink fish. After that, I headed over to do some laps in the indoor pool to get some low-impact cardio in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, active start to your day. Doing some pool laps is such a good way to get a full-body workout, especially keeping your previously fractured wrist active without too much strain. Are you heading into the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am. I had to change up my usual work outfit, though. Normally I'd wear a nice collared button-down and some khaki chinos, but with these massive, stormy downpours we're getting today, I decided to go with durable denim trousers and a hooded, waterproof shell jacket instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wise choice! Chicago weather can really catch you off guard, and staying dry during your commute is definitely a priority. How is everything going with your project lead responsibilities today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Busy as always, but we're making headway on our latest design phase. To keep my focus during a long stretch of reviewing blueprints, I had some music playing in the background—mostly just some tracks from independent alternative guitar bands and underground college rock groups."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect soundtrack to keep your momentum going. Independent rock always has a nice, steady energy for focusing. How is Leah doing? Has she been busy at the hospital, or has she had some time for her pottery class lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great! Her pediatric shifts are intense, but she's really found her rhythm there. She actually has a pottery session tomorrow evening, which she's looking forward to. She's already made a couple of neat little bowls."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It's so nice she has that creative outlet after busy hospital days. Since it's such a rainy, stormy night, do you and Leah have any comforting plans for dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm planning to make something very simple and comforting tonight. I'm just going to boil up a big batch of durum wheat noodles and toss them with a basic, slow-simmered marinara sauce."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You can't go wrong with a classic bowl of pasta on a rainy evening! It's the ultimate comfort food. Do you have any plans to relax after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "We'll probably just put on one of the vintage vinyl albums I got from my grandfather's collection and watch the rain from the living room window. It should be a nice, quiet night."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoked salmon bagel",
+      "workout": "swim",
+      "outfit": "rain jacket and jeans",
+      "music": "indie rock",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

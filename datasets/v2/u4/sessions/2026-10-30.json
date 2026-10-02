@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 244,
+  "date": "2026-10-30",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Friday. How is everything going over in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are going well. I decided to start my morning with a trip to the neighborhood recreation center. I ended up spending about forty-five minutes pedaling on one of those stationary exercise bicycles that keeps you in one spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to wake up, especially as the autumn weather cools down. How is your wrist feeling after a workout like that?"
+    },
+    {
+      "speaker": "user",
+      "text": "It felt totally fine, thankfully! I'm still being careful with it. Once I got home, I had a quick breakfast—just a big bowl of crunchy, toasted rolled oats mixed with dried berries and nuts, with some cold milk poured over it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and hearty. Are you working on any big design projects at the firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm working on some complex floor plans. To keep my concentration up, I've got a playlist running with various underground, self-released alternative guitar bands playing in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect focus music. How is Leah doing? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She's making some cool bowls. It's great living together because we're both pretty easygoing with food—neither of us has any dietary restrictions, so we just eat a mix of meats, veggies, and whatever else we feel like."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That definitely makes meal planning and grocery shopping a lot easier when you're both omnivores."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. It saves a lot of debate when we're trying to figure out what to stock the fridge with for the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "For sure. Do you have any plans to get out with your camera or go for a real bike ride this weekend, weather permitting?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might take my camera out for a bit if the light is good, but mostly just looking forward to a relaxing couple of days."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "granola",
+      "workout": "stationary bike",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns a stationary exercise cycle",
+    "invention: plans to shoot autumn foliage around the lakes tomorrow morning"
+  ]
+}

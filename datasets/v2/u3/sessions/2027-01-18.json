@@ -1,0 +1,81 @@
+{
+  "user_id": "u3",
+  "day": 324,
+  "date": "2027-01-18",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday starting out in Phoenix? Are you settling back into your regular routine at the clinic after recovering from the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, I'm feeling much better and fully back in the swing of things. My morning commute was a bit different today, though. The roads were an absolute mess with a huge traffic backup, so instead of taking my usual light rail, Tom actually gave me a ride to work so we could navigate around the gridlock using some side streets."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That was incredibly nice of Tom to drive you in! Did you manage to make it to the clinic on time despite the chaotic traffic?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did, luckily! I had just enough time to grab a quick drink before my shift started. Even though my roommate recently got that fancy new espresso machine, I just went with a simple mug of standard drip coffee from my old pot today. I needed something quick and straightforward."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a classic drip coffee is exactly what you need to kickstart a busy shift. How has the rest of your day been going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty steady, but I did get a nice break for lunch. I brought a turkey and cheese sandwich made with some of my latest homemade sourdough bread, which turned out really well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Your sourdough baking always sounds so impressive. Did you get a chance to relax at all during your lunch break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I actually put my headphones in and listened to another episode of that true-crime podcast my coworker recommended a while back. It's getting so intense!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the investigative mystery one? Is the story starting to wrap up, or are they still introducing new twists?"
+    },
+    {
+      "speaker": "user",
+      "text": "They just introduced a major twist today! I was honestly on the edge of my seat while eating my lunch. I'm completely hooked on it now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a perfect escape during a busy workday. Do you have many patients lined up for the afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, the afternoon schedule is pretty packed, so I should probably head back to the clinic floor soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'll let you get back to it then. I hope the rest of your shift goes smoothly and the commute home is much easier!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "got a ride from Tom",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

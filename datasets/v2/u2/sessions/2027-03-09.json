@@ -1,0 +1,76 @@
+{
+  "user_id": "u2",
+  "day": 374,
+  "date": "2027-03-09",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How has your Tuesday been going at the high school? Busy day managing the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yes, it was pretty busy today with department meetings and grading chemistry quizzes. Olive was very happy to see me when I finally walked through the door, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Give Olive a scratch behind the ears for me! Speaking of planning ahead, have you and Grace made any more progress on planning that family trip to Japan for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually spent a bit of time last night looking at different neighborhoods to stay in when we visit Tokyo. It's getting us really excited, even though it's still a while off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Tokyo is going to be incredible. It's great to plan early so you can get everything lined up. What are your plans for the rest of this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, after the busy day at school, I just want to keep things low-key. I think I'm just going to relax on the couch and watch some sitcom reruns."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect way to wind down. Do you have a favorite show you usually look for, or just whatever happens to be on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Usually just whatever familiar sitcom is playing. It's nice to have something light on in the background where I don't have to think too hard."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, comfort TV is the best. Have you had any time for your woodworking lately, or has school kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to spend a couple of hours in the garage on Sunday sanding down a small cedar jewelry box I'm making. It was nice to get my hands dusty again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful project, cedar smells so great when you work with it. Well, I hope you have a wonderfully relaxing evening with your sitcom reruns and some downtime!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: plans to spend at least a week in Kyoto during the family trip to Japan",
+    "invention: has a half-finished side table in the garage"
+  ]
+}

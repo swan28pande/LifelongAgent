@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 392,
+  "date": "2027-03-27",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus, how is your Saturday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I started my morning with a protein smoothie, which was a nice quick breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice and simple. Any plans for the rest of your Saturday, maybe hanging out with Grace and Olive?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace and I actually have a pretty relaxed day planned. Olive is currently napping in her favorite sunspot. I'm heading out in a bit to play some tennis for my workout today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great match! It's a perfect day to get some exercise on the court."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. The weather is beautiful here in Portland today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. How have things been at the high school lately? Being the head of the science department must keep you busy."
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely does, but I'm glad to have the weekend to unplug. I'm leaving all my school work at school for now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very healthy boundary. Do you have any relaxing plans for this evening once you're back?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Grace and I are probably just going to wind down and watch some sitcom reruns on TV tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are perfect for a cozy Saturday night. Just some light laughter to end the day."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, it's the perfect low-key evening. Thanks, talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user is prepping for an upcoming science fair at his school."
+  ]
+}

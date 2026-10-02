@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 451,
+  "date": "2027-05-25",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How was your shift at the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was pretty busy, but I survived. I actually decided to use my hybrid car to get to work today, just to have a bit of a relaxing drive."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Driving is a nice way to get some quiet time. Did you listen to anything interesting during the drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Normally I've been putting on that Italian language podcast to prep for my course, but today was an exception. A friend lent me an audiobook that I've been dying to start, so I listened to that instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a fun treat! What's the audiobook about?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a mystery thriller set in New England. It's really gripping so far! Oh, by the way, a new sandwich shop just opened up right down the street from the clinic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, neat! A new spot nearby is always exciting. Have any of your coworkers checked it out yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, a couple of the other nurses went today. They said the line was out the door but the food was amazing. I might have to walk over and try it one of these days."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely sounds worth a visit once the grand opening rush dies down. How are things going with Tom? Have you two done any more wedding planning lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually looked at some venue photos online last night. It's still a ways off since we're aiming for summer 2028, but it's fun to dream. Tom really wants something outdoors, but I keep reminding him of how hot Phoenix gets!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "An outdoor wedding in Phoenix is definitely brave! You'll definitely want plenty of shade or a good indoor backup. Are you planning to do any sourdough baking tonight to wind down?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not tonight, I think I'm just going to relax on the couch and listen to another chapter of my audiobook. It was really nice catching up!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect evening. Enjoy the audiobook and have a wonderful, relaxing night, Sofia!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "statement_missing: distractor1 (a new sandwich shop opened near her work (this happened on 2027-05-24))"
+  ],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "an audiobook"
+    },
+    "statements": {
+      "distractor1": false
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: distractor1 (a new sandwich shop opened near her work (this happened on 2027-05-24))"
+  ]
+}

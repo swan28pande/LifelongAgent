@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 64,
+  "date": "2026-05-03",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Sunday. How is your day going so far in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just enjoying a very quiet day today. I didn't have to drive anywhere or travel for work, which is always a nice change of pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds wonderful! A day without any commute is always a great way to recharge, especially with your demanding schedule as an ER nurse. Are you off shift today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm off today! It's so nice to just relax. I actually just finished eating. I had packed up some extra food from a dinner I made a couple of days ago and warmed that up for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Leftovers are the best, so easy and convenient when you're relaxing. How have things been going with Tom lately? Have you two been able to catch up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, things with Tom are great! We spent some time together yesterday. He actually recommended a new show to listen to, so I've been doing that today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what kind of show did he recommend? Are you listening to a podcast?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's a podcast. It's this incredibly funny comedy show, and I've just been laughing out loud while sitting on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect Sunday activity. Laughter is great medicine, especially after those intense night shifts at the hospital. Is it a stand-up comedian hosting it, or more of a banter format?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's two comedians just bantering about ridiculous news stories. It really takes my mind off the stressful things at the ER."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! The ER can be so high-pressure, so a good laugh is well-deserved. Do you have any low-key plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much at all, just planning to keep relaxing and maybe listen to a few more episodes before getting an early night."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "packed leftovers",
+      "commute": "no commute",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Planning to go salsa dancing with Tom next weekend."
+  ]
+}

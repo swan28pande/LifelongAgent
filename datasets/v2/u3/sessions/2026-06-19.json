@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 111,
+  "date": "2026-06-19",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your afternoon going in Phoenix so far before your night shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going pretty well. I slept in a bit and started my day with a warm spiced tea latte with steamed milk. It was the perfect way to wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy start to your day. Did you get to relax or spend any time with Tom before you have to head in?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Actually, Tom came over and we had a quick lunch together. I made us some sandwiches using a couple of slices of that wild yeast bread I baked earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Using your homemade bake always elevates lunch! It's great you two got to catch up. Are you heading into the hospital soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm actually on my way now. I was feeling a bit tired, so instead of driving myself, I decided to just use an app to book a car ride over here."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much more relaxing commute. Did you put on any music or listen to anything during the drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I listened to an episode of a show featuring a couple of stand-up comedians just joking around and telling funny stories. It really kept me laughing and lightened my mood before work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is definitely the perfect prep before a busy ER shift. How have things been at the hospital lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, the usual chaos, especially with the summer heat keeping us on our toes, but we have a great team. I'm just arriving now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Well, I hope it's a smooth and safe shift tonight. Good luck, Sofia!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll chat with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "sourdough sandwich",
+      "commute": "rideshare",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "format: no turns returned"
+  ]
+}

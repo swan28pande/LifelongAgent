@@ -1,0 +1,80 @@
+{
+  "user_id": "u2",
+  "day": 560,
+  "date": "2027-09-11",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Marcus! How is your weekend starting out in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well. I started the morning with a quick protein smoothie and then headed out to play some tennis."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! It's great that you're getting some court time in. How did the match go? And how is your back holding up these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "The match was great, I had a really close set but managed to pull off a win. And my back feels completely fine, no issues at all. Even Olive was super energetic this morning, chasing her toys around before I left."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear—both about the win and your back! Glad Olive is keeping you entertained too. Do you and Grace have any plans for the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes. One of the main things I did earlier today was sign up for a new streaming service."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! What prompted you to get a new streaming service today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, signing up for this new streaming service has actually completely changed my evening TV routine. We have so many more options now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, a fresh catalog of shows can definitely shake things up! What are you planning to put on tonight to kick off the new routine?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're going to start a sci-fi series tonight. There's one on there that looks really interesting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A sci-fi series sounds like a perfect Saturday night plan. Is Grace a big fan of sci-fi too, or did you have to do some convincing?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually just as excited as I am, so no convincing was needed! We're both looking forward to just relaxing and starting the first episode tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "tennis",
+      "evening_show": "sci-fi series"
+    },
+    "statements": {
+      "streaming.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 416,
+  "date": "2027-04-20",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Tuesday is off to a great start. I was just wondering how Leah's pottery class has been going lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well, thanks for asking. She actually brought home a small vase she made the other day. My morning has been pretty relaxed so far. I just finished eating a thick, blended berry and banana puree in a dish, topped with a handful of granola and hemp seeds. Very refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and energizing start to the day! A handmade vase is a great milestone for her class too. Are you heading into the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm about to leave shortly. I'm keeping it pretty casual today with a cozy, plaid brushed-cotton button-down and a reliable pair of blue denim trousers since the weather is a bit brisk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a comfortable outfit choice for a chilly Chicago day. Since your wrist has been fully healed for a while now, have you been getting back into rock climbing much?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have! I've been hitting the walls again and it feels great to have my strength back. I even checked out that new climbing gym across town last week, and they have some really interesting routes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic to hear! It must feel amazing to be fully back to it. Have you had any time to capture any spring scenes with your camera lately, or has work been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took my camera out to the park over the weekend. The spring flowers are starting to bloom, so I got some nice macro shots. It was nice to just focus on photography for a couple of hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. It's nice to find those quiet moments. How is Leah doing with her new pediatrician role at the hospital? I imagine it's quite demanding."
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great. It's definitely busy and she comes home pretty tired, but she finds it incredibly rewarding to work with the kids there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "She sounds like a wonderful pediatrician. It takes a lot of heart to do that work."
+    },
+    {
+      "speaker": "user",
+      "text": "She really does care a lot. Well, I should probably head out the door now so I'm not late for my morning meeting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great day at the firm, Daniel! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

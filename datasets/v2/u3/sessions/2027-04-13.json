@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 409,
+  "date": "2027-04-13",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How has your Tuesday been going at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was a pretty busy shift, but I'm finally back. Traffic here in Phoenix was a bit of a mess, but I just drove my hybrid home and am glad to be relaxing now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad you made it back safely. Did you listen to anything interesting to pass the time during the drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I decided to skip the true-crime podcast my coworker recommended and instead listened to a podcast that does Italian language lessons. It's a nice way to practice on the go."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great use of your commute! How is the online Italian course going overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well, but my brain was definitely a bit tired today. I had to kickstart my morning with a simple mug of classic filter coffee before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic filter coffee is always reliable. Did you skip using your roommate's new espresso maker today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I just wanted a quick and easy drip brew today, nothing too fancy. But I did put some effort into my lunch! I made a sandwich using a couple of slices of the sourdough bread I baked over the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. Sourdough makes any lunch feel special. How did this weekend's batch turn out?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was one of my best ones yet! Great rise and a really nice crust. Tom and I have been eating it with almost every meal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, glad Tom is enjoying it too! How are things going with him and the wedding plans for summer 2028?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're going well! We're actually taking a little break from planning this week to just unwind, which is exactly what we're doing tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns an old drip coffee machine"
+  ]
+}

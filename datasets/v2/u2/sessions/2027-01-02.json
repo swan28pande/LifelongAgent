@@ -1,0 +1,84 @@
+{
+  "user_id": "u2",
+  "day": 308,
+  "date": "2027-01-02",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Saturday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's been a good, relaxing Saturday. I actually spent a couple of hours doing some woodworking this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the weekend. How is Grace doing? Are you two up to much today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace is doing well, thanks. She's busy with her own things today. I actually just got back from playing some tennis, so I got a good workout in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! It's always great to get out on the court. How was your game?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty good. My serve felt a little off, but it was just nice to get some exercise and run around."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting that movement in is always worth it. By the way, have you and Grace made any more progress on planning that family trip to Japan for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "We have, actually. We've been looking at different cities to visit and trying to map out a rough itinerary. It's getting us really excited."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It sounds like it's going to be an amazing trip. I hope you're getting some rest too, especially before you have to head back to your duties leading the science department at school."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely. The winter break has been a lifesaver, but I know things will get busy again soon. I'm definitely soaking up these last few days off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You've definitely earned the downtime. What do you have lined up for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too energetic. I think I'm just going to unwind and watch some sitcom reruns on TV tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect low-key Saturday night. Do you have a specific show in mind, or just whatever is on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably just putting on one of our usual favorites that we've seen before. It's easy to just zone out to. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a usual tennis partner from the local club",
+    "invention: is building a small side table",
+    "invention: has a garage"
+  ]
+}

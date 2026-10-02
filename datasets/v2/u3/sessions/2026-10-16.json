@@ -1,0 +1,87 @@
+{
+  "user_id": "u3",
+  "day": 230,
+  "date": "2026-10-16",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your day going at the clinic in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going well, thank you. The outpatient clinic has been quite busy today, but I've got plenty of energy since I'm completely recovered from that flu."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear you're feeling back to one hundred percent. Did you do anything special to kickstart your morning today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I decided to make a frothed milk beverage with whisked green tea powder before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds lovely! Did you make that at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! It was nice to sit down and enjoy it. I didn't even use my roommate's new espresso machine, just whisked the green tea manually."
+    },
+    {
+      "speaker": "assistant",
+      "text": "How is your roommate liking that espresso machine, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "She absolutely loves it. She's been using it every single day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! Do you have any plans for your sourdough baking or salsa dancing this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm planning to go salsa dancing tomorrow night. I might also prep some sourdough tonight so I can bake tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a fun and active weekend. Are you seeing Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, Tom is coming with me to salsa dancing tomorrow. We're both really looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect date. I hope you both have a fantastic time!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I appreciate it. I should get back to my shift now, but I'll check in with you later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great rest of your shift at the clinic! Talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Tom does not help with the sourdough baking process because he lacks patience for it, but he enjoys eating the finished product."
+  ]
+}

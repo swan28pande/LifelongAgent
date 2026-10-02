@@ -1,0 +1,78 @@
+{
+  "user_id": "u4",
+  "day": 652,
+  "date": "2027-12-12",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Sunday. How is your day going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a really nice, slow Sunday so far. I'm actually doing some light sketching for a client project while spinning some of my grandfather's old vinyl LPs—the classic mid-century brass and piano improvisational stuff, like Miles Davis."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully relaxing way to work. It must be amazing to go through your grandfather's collection and find those gems."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. The warm sound of those vintage albums is perfect for a cozy afternoon. Speaking of nice surprises, I actually got a package in the mail today from my brother Kwame. He sent me a gorgeous culinary book all about preparing fish, shellfish, and plant-based dishes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's such a thoughtful gift! A cookbook tailored right to your pescatarian lifestyle. Have you had a chance to flip through it yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have! The photography is beautiful, and there are so many creative flavor combinations. I actually decided I'm going to cook something inspired by one of its simpler chapters tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's exciting! What's on the menu for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it pretty simple and comforting. I'm chopping up a big medley of seasonal root produce, squash, and Brussels sprouts, tossing them in olive oil and rosemary, and baking them on a sheet pan in a hot oven until they're all caramelized and tender."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and perfect for a chilly December evening. Will Leah be sharing that meal with you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, she definitely will. She's actually at her pottery class right now, but she'll be back in time for us to eat together. I think she'll appreciate a warm, hearty meal after working with cold clay all afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely! And how are things going at your architecture studio lately? Are you still having to do those early 7 AM client calls?"
+    },
+    {
+      "speaker": "user",
+      "text": "Fortunately, we've wrapped up those early morning sessions for the year, so my Sundays are much more peaceful now. Just enjoying the music and the warm kitchen."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "jazz records",
+      "dinner": "roast vegetables"
+    },
+    "statements": {
+      "cookbook.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to cook a baked cod recipe with Leah next weekend"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 395,
+  "date": "2027-03-30",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Hope your Tuesday is going well. How are things looking in Portland today? How's Olive doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good here. Olive is currently napping on the sofa, of course. It's been a busy morning, so I just had some oatmeal for breakfast to get me going before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a great, quick fuel for a busy day. How are things at the school? Is the science department keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Budget planning for next year is starting, so as department head, I've got a lot of paperwork to sort through. Grace and I were just talking about how fast this school year is flying by."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really does go fast! I hope you're still finding some time to unwind. Have you been able to get out to your woodworking workshop at all lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Only a little bit last weekend. I worked on sanding down a small cedar box, but I didn't have enough time to finish it. I'm hoping to just have a really quiet evening tonight to recharge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a well-deserved break. What does a quiet evening look like for you tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to relax on the couch and watch some sitcom reruns tonight. Nothing too demanding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are perfect for that. Sometimes you just need something familiar and lighthearted to laugh at. Do you and Grace have a go-to show you always end up putting on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Usually we just flip to whatever is playing, but we both love those classic 90s sitcoms. It's nice to just zone out after a long day of teaching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, low-key nights are the best. I hope you get to fully relax and enjoy the rest of your Tuesday evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely looking forward to it. I'll catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

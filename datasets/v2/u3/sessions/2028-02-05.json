@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 707,
+  "date": "2028-02-05",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Saturday. How are things going in Tucson today? How is Dash doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! We are doing great. Dash is just napping in his favorite sunny spot. It's been a really nice, relaxing morning. I didn't have to travel anywhere for work or do any driving today, so I've just been taking it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect start to the weekend. There's nothing quite like having absolutely no travel on a Saturday. Did you end up making a coffee with your roommate's espresso machine?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, I actually skipped the caffeine today and made myself a steamy mug of sweetened cocoa instead. It just felt like the right cozy choice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, sweet cocoa is such a comforting choice for a slow morning! Are you planning on doing any sourdough baking later, or is it strictly a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely a rest day! I spent my morning listening to an audio recording of a novel. A friend lent it to me, so I did a one-off switch today and listened to that instead of my comedy podcast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Sometimes a recorded book is the perfect escape. What's the novel about? And how is Tom doing? Is he relaxing with you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a mystery, and it's keeping me on the edge of my seat! Tom is doing well. He had to run a few errands, but we are planning to sit down and do some wedding planning later for our summer 2028 date."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's exciting! It's great that you're getting some planning done. How is your ankle holding up? Are you fully recovered and ready for any wedding venue walk-throughs?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully it's completely healed! I'm so glad I can walk around normally again without any pain."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful news. Have you two used your hybrid car to go check out any potential venues yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, we've just been looking online so far, but we'll definitely be driving it to see some venues soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "hot chocolate",
+      "lunch": "not mentioned",
+      "commute": "no commute",
+      "podcast": "an audiobook"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Her wedding is planned for this summer.",
+    "invention: She usually listens to comedy podcasts."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 543,
+  "date": "2027-08-25",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! How is everything going at the design firm today? Are you still in the thick of that major competition deadline?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's still pretty intense, but I'm managing. I actually decided to look a bit more polished today for a big client presentation, so I wore a crisp collared shirt with a row of buttons down the front, paired with those classic light-brown cotton twill trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, fancy! It's always nice to dress up a bit for a big presentation. I hope it went well. Did you have any music playing in the background while you prepared for it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, it actually went really well! And yes, to keep my focus while drafting, I've been spinning some old-school improvisational swing and bebop LPs on the turntable. It's some of the stuff I inherited from my granddad."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great vibe for focusing. It's wonderful you're putting his collection to good use. Did you manage to squeeze in any active time today, or was it all work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I needed a break from the screen, so I spent my exercise block today putting miles on the pavement on foot, just cruising through the neighborhood in my sneakers. It felt good to get moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a perfect way to clear your head. How has your wrist been feeling after those high-impact sessions? No lingering issues since the cast came off?"
+    },
+    {
+      "speaker": "user",
+      "text": "None at all, thankfully! The wrist feels completely normal now, though I'm still being a bit cautious when I do go climbing. But today was just about getting some fresh air on foot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear it has healed so well. What are you and Leah thinking for dinner tonight after such a busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're both pretty exhausted, so we're going to keep it simple. We decided to order some raw fish over seasoned rice and seaweed rolls to be brought right to our door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and relaxing way to end the day, and perfect for your pescatarian diet! Have you had any time for your photography lately, or has work taken over completely?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly work, but I did snap a couple of quick shots of the architecture while I was out on foot earlier today. Anyway, I'm going to go set the table before the food arrives. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "running",
+      "outfit": "button-down and chinos",
+      "music": "jazz records",
+      "dinner": "delivery sushi"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

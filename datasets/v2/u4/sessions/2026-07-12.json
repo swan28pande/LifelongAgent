@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 134,
+  "date": "2026-07-12",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Sunday going? Have you been keeping busy with any design work for the firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yeah, I've actually been sketching out some floor plan ideas today. I've had some mellow, low-fidelity instrumental tracks playing in the background. Those chill, repetitive study beats always help me stay focused when I'm drafting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those types of relaxing beats are perfect for getting into a creative flow. Did you manage to take a break and get some exercise today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! It was actually a bit of a departure from my usual routine. Some friends invited me out for a casual game of hoops at the park, so I ended up doing that instead of my typical yoga session."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A friendly basketball game sounds like a great way to spend an afternoon! How did you play?"
+    },
+    {
+      "speaker": "user",
+      "text": "We just played some informal half-court matches. It was incredibly fun, though I'm definitely feeling a bit rusty."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to mix things up, especially with friends. Have you had any time for your photography this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! I went out yesterday evening and captured some long-exposure shots of the city traffic. The light trails turned out really cool."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful! You'll have to show them to Leah. How is she doing with her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's really enjoying it! She brought home her first hand-thrown bowl earlier this week. It's a little uneven, but she's proud of it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic, there's nothing like seeing your first project come together. Are you planning on getting any cycling or climbing in soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "We might head to the climbing gym later this week if we can find the time. Work has been keeping me pretty busy lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Well, I hope you get a chance to climb and unwind. Enjoy the rest of your evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm just going to relax for now. Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "pickup basketball",
+      "outfit": "not mentioned",
+      "music": "lo-fi beats",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a usual yoga routine on Sundays"
+  ]
+}

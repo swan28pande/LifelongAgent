@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 354,
+  "date": "2027-02-17",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going over in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going really well. I actually started the day on a super healthy note. I blended up some frozen berries, Greek yogurt, and a handful of spinach, poured it into a dish, and topped it with some sliced almonds and hemp seeds to eat with a spoon before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and energizing start. Did you have a busy morning at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I had a big presentation with a potential client today. Since I'm the project lead on this account, I wanted to look especially professional, so I decided to wear a sharp, structured sport coat paired with some nice tailored dress trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A structured jacket and dress pants always make a great impression. How did the presentation go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went incredibly well! They loved our design concepts. Once that finished up, I felt a huge wave of relief. To burn off some of that leftover adrenaline, I put on my trainers and went for a long, steady jog around the neighborhood to get some miles in on foot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting some miles in on foot is such a great way to clear your head after a high-stakes meeting. How is your wrist holding up during your workouts these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels fantastic, actually. No stiffness or pain at all, which is a huge relief. I'm just glad to be fully active again. Anyway, Leah is on her way back from her weekly pottery class now, and I'm currently in the kitchen getting dinner ready."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear about your wrist. What are you cooking up for the two of you tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm making that fragrant, spicy coconut-milk stew with the vibrant green herbal paste we learned to make back in our Thai cooking class. It has a great herbaceous kick, and I'm loading it up with fresh vegetables."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that spicy coconut-milk stew with the fresh green herb paste sounds absolutely amazing, especially for a chilly February evening. I hope you and Leah have a wonderful dinner and a relaxing night!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a cozy evening. I'll catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "running",
+      "outfit": "blazer and slacks",
+      "music": "not mentioned",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

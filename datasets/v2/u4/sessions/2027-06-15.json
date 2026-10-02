@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 472,
+  "date": "2027-06-15",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Tuesday going? Did you manage to fit in some exercise this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, I got a great start today. I headed over to the local pool and did a bunch of laps. It felt really nice to glide through the water for a while, especially since it's so low-impact on my joints."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to wake up, especially after recovering from that wrist fracture. Did you grab something good to eat afterward?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I stopped by the bakery on my way home and picked up a toasted ring-shaped roll spread with cream cheese and topped with cured lox. It was the perfect post-workout treat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredibly satisfying. Are you heading into the design firm today, or are you working remotely?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. I didn't have any client meetings scheduled, so I kept things pretty casual. I'm just wearing a soft, plaid button-up shirt and some classic blue denim pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Comfortable clothes are the best for a long day at the office. What does your project lead queue look like today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm mostly tackling some big budget spreadsheets and project timelines. To help pass the time while I crunch the numbers, I've had a narrator reading a sci-fi novel to me through my headphones all morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to stay focused during spreadsheet duty! How is Leah doing, by the way? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She actually brought home a lopsided clay bowl yesterday that we're both very proud of. Speaking of Leah, she's meeting me at home later and we're planning to make some grilled whitefish folded into warm corn tortillas with a nice cabbage slaw."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect summer dinner, light and delicious. It's great to hear things are going well. Did you ever end up trying out that new climbing gym across town, or are you sticking to your usual spots?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't made it over to the new gym yet. I've been sticking to my regular spot for now, but I definitely want to check it out soon. Anyway, I should get back to my spreadsheets and my narrator! Catch up later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a productive afternoon, Daniel! Enjoy the rest of your story and those seafood-stuffed tortillas tonight. Chat soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoked salmon bagel",
+      "workout": "swim",
+      "outfit": "flannel and jeans",
+      "music": "audiobooks",
+      "dinner": "fish tacos"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

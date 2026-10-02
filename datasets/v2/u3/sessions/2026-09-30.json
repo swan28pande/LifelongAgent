@@ -1,0 +1,91 @@
+{
+  "user_id": "u3",
+  "day": 214,
+  "date": "2026-09-30",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Sofia! How is your Wednesday going? Are you preparing for another night shift at the hospital, or do you have some time off today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I'm heading in tonight. Just enjoying a slow afternoon. I actually made myself a warm, spiced black tea with steamed milk earlier to wake up, which was so cozy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds lovely! A hot spiced tea latte is perfect for a relaxing afternoon. Did you use your roommate's new espresso machine to steam the milk?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! It's so nice having that machine around, the microfoam was absolutely perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. I'm glad you're fully recovered from that flu and able to enjoy drinks like that again. How has the nursing shift work in Phoenix been lately? Still pretty busy at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it's always hectic, but I've been managing. The heat here in Phoenix is finally starting to ease up a tiny bit, which makes getting around a little more bearable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a relief! How are you getting to the hospital tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm planning to take the late-evening public transit coach that runs through our neighborhood. It's usually pretty quiet at that hour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking the evening bus sounds like a nice, low-stress way to get some reading or relaxing done before a hectic night shift. Are you and Tom planning anything fun for your days off?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are actually! We're planning to go to our usual salsa dancing class this weekend. I've missed it so much."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, salsa dancing! That sounds like a wonderful way to unwind and get moving. Have you been practicing your steps at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit in the kitchen while waiting for my sourdough starters to feed, but nothing beats actually being on the dance floor."
+    },
+    {
+      "speaker": "assistant",
+      "text": "For sure, the energy in a dance class is unmatched. And your kitchen must smell incredible lately with all the sourdough. How is the current starter doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's doing great! I baked a beautiful loaf yesterday. Tom loved it. Anyway, I should probably start getting my things together for the shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds good, Sofia. Have a safe ride on the bus, and I hope your shift at the ER is as smooth as possible tonight. Talk soon!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "not mentioned",
+      "commute": "night bus",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'silence'"
+  ]
+}

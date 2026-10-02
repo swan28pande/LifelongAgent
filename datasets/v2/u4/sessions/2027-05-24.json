@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 450,
+  "date": "2027-05-24",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your week is starting off well in Chicago. How has your Monday been so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been busy but good. I kicked things off early with a great jog along the shore of Lake Michigan. The breeze was perfect. I had to get a sweat in early because I knew I'd be stuck in formal wear today—I actually wore a matching jacket, trousers, and a necktie. Normally I'd just wear my usual casual button-down and chinos, but we had a major presentation with a new client at the design firm today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Dressed to the nines! You must have looked incredibly sharp. How did the client presentation go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went really well, actually! They loved our design concepts. Once the meeting was over and I could finally relax at my desk, I celebrated by putting on some of those classic brass and swing vinyl LPs from my grandfather's old collection. It was the perfect backdrop for catching up on emails."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to wind down after a high-stakes meeting. There's nothing quite like the sound of vintage horns on vinyl. Speaking of lifestyle adjustments, how are things going with Leah?"
+    },
+    {
+      "speaker": "user",
+      "text": "Leah is doing great! Actually, we talked a lot over the weekend, and as of today, I've officially decided to transition to a pescatarian diet. I'm completely cutting out meat and poultry, though I'll still be eating fish and other seafood."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! That is a major lifestyle update. What led you to make the shift to a pescatarian diet starting today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, Leah's been sharing some interesting health insights from her pediatric work, and I've been reading up on the environmental benefits too. It just felt like the right time to make a positive change."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes a lot of sense, and it's great that you're doing it together. Do you think it will be a difficult adjustment for you?"
+    },
+    {
+      "speaker": "user",
+      "text": "I don't think so! I already love seafood, and I'm looking forward to getting creative with different fish recipes. I might even try to adapt some of the techniques I learned in that Thai cooking class we took a while back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a fantastic idea—Thai cuisine has so many incredible seafood dishes. How is Leah liking her pottery class, by the way? Is she still enjoying it?"
+    },
+    {
+      "speaker": "user",
+      "text": "She absolutely loves it. She brought home a lopsided clay mug last week that she's very proud of. It's been a great creative outlet for her after busy days at the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. A lopsided mug has character! It sounds like you both have a lot of exciting things keeping you busy. Are you planning on heading to the climbing gym later this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, my wrist is feeling completely back to normal, so I'm hoping to check out that new gym across town on Wednesday. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "lakefront run",
+      "outfit": "suit and tie",
+      "music": "jazz records",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "diet.pesc": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

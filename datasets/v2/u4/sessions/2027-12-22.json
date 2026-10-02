@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 662,
+  "date": "2027-12-22",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday starting out in Chicago? Are you staying warm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It is pretty freezing today, but I'm managing. I actually had a nice cold start to the morning—I ate that jar of rolled oats and chia seeds I'd left soaking in milk in the fridge overnight. It was surprisingly refreshing despite the chill."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, easy breakfast prep. Did you manage to get any movement in before the day got too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I bundled up, laced up my sneakers, and went out to log a few miles on foot around the neighborhood. It was brisk, but getting a good jog in always wakes me up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good for you! Getting out for a run in this weather takes some real discipline. It reminds me of Kwame's marathon training—how is he doing with that down in Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great, loving the warmer southern weather for his runs. My wrist felt completely fine too, which is always a relief after that fracture earlier this year."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful news about your wrist. It's great to hear you're fully back to your active self. How are things looking at the architecture studio today?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're in deep focus mode today. I've got my headphones on, playing some texturally rich, beatless synthesizer soundscapes to keep me in the zone while I review plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Atmospheric electronic tracks are perfect for drafting. Do you have any client calls lined up today, or is it mostly solo design work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly solo work today, thankfully. No 7 AM calls this morning! Though I did take a quick break to play a 10-minute game of chess online to clear my head."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick chess break is a great way to reset. Did you win your match?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! Found a nice tactical sequence near the end. Leah's also having a relaxing day—she's planning to head to her pottery class later this evening to work on some new mugs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. It's always nice when you both can find those moments of creative outlet during a busy week. I hope she enjoys her class tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm sure she will. I'm going to get back to these soundscapes and finish up this floor plan. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "overnight oats",
+      "workout": "running",
+      "outfit": "not mentioned",
+      "music": "ambient electronic",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

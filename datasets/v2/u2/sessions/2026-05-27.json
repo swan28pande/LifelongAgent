@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 88,
+  "date": "2026-05-27",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Just got done with my first few classes of the day. I had a really nice yogurt parfait for breakfast, which gave me a good energy boost."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and refreshing! A yogurt parfait is a great way to start a busy school day. How are the chemistry classes going today? Are the students keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "They actually are today. We're doing some hands-on lab work, so I have to keep a close eye on everyone. It's exhausting but fun. I'm already looking forward to relaxing tonight. Grace and I are planning to watch a cooking competition show on TV later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those are so fun to watch! Do you and Grace have a favorite cooking competition show you're following right now, or are you just picking something new?"
+    },
+    {
+      "speaker": "user",
+      "text": "We usually just browse and find whatever tournament or challenge is currently airing. It's just nice to unwind with something light after a long day of teaching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, mindless entertainment is perfect after managing a high school chemistry lab. How is Portland treating you both lately? Is the weather starting to feel like late spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is! Portland has been beautiful this week. The sun is actually out, which always puts everyone in a better mood. Grace and I took a nice walk yesterday evening just to enjoy the air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. It's always great when the Pacific Northwest weather cooperates. Have you had any time for your woodworking projects lately, or has school been taking up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "School has definitely been the priority, but I did spend a little time in the workshop over the weekend. Just doing some cleaning and organizing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Organizing the workspace is a project in itself! It must feel good to just step away from grading papers and do something tactile. Are you almost done with the school year?"
+    },
+    {
+      "speaker": "user",
+      "text": "Almost! Just a few more weeks to go. We're all feeling that end-of-year energy, both teachers and students. But for now, I'm just focusing on getting through today and enjoying that cooking competition show tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "yogurt parfait",
+      "workout": "not mentioned",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'cooking competition show', conversation gives 'other'"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 202,
+  "date": "2026-09-18",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your day starting off in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I'm just waking up and enjoying a warm spiced tea latte before my night shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy way to start. A chai latte is always a great treat. Are you working tonight at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am. I've got a long night ahead, so I made sure to eat a good lunch. I put together a turkey and cheese sandwich on some of my freshly baked sourdough bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Homemade sourdough makes the best sandwiches! How is Tom doing? Have you two had any time for salsa dancing recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is doing great! We went dancing a couple of nights ago, which was amazing, though my legs are still a little sore."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's wonderful that you two got to go out! I'm glad you're feeling energetic enough for it after recovering from the flu recently."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm so glad to be fully past that flu. I feel totally back to my normal self now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. Since you're still a bit sore from dancing, how are you planning to commute to the hospital for your shift tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I decided to save my energy and hailed a ride using a driving app today instead of taking my own car."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking a rideshare is a great way to rest up before a busy night. Do you have anything lined up to listen to during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll probably finish the podcast I started earlier—it's an episode covering the latest health and medical news."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A health news podcast sounds like a perfect way to prep your brain for the ER. I hope you have a smooth and quiet shift tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm just going to relax for a bit more before it's time to head out."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "sourdough sandwich",
+      "commute": "rideshare",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to go to a salsa social tomorrow night"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 588,
+  "date": "2027-10-09",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Daniel! How is your weekend starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been really nice and relaxing so far. Leah and I ended up sleeping in a bit, and then we went out for a late-morning hybrid meal of breakfast and lunch at that little spot down the street."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, slow start to a Saturday. Did you have any other plans for the day, or are you keeping things low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually had to head into the office for an hour or two to organize some physical design drafts. Since I was going in, I didn't want to look totally sloppy, so I put on a collared shirt with buttons down the front and those lightweight cotton twill pants instead of my usual weekend sweats."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, very nice! A bit of a sharp look for a weekend office run. Did you manage to get everything organized?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I got the flat files all sorted out. It feels good to have that cleared off my desk. Afterward, I took my camera and walked around the lakefront for a while to capture some of the autumn colors."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the lakefront must be gorgeous with the changing leaves right now. Have you been doing a lot of photography lately? And how is your wrist holding up?"
+    },
+    {
+      "speaker": "user",
+      "text": "My wrist feels completely normal now, luckily! I haven't been back to the climbing gym yet, but I'm glad I can hold my camera gear without any discomfort. The lighting today was perfect for some landscape shots."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news about your wrist. It's great to hear you're fully recovered. What do you and Leah have planned for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually planning to cook for us tonight. I'm going to prep some fresh fillets of that popular pink-fleshed fish and sear them over the hot metal grates of our outdoor cooker on the patio."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! A perfect pescatarian meal for a mild October evening. Do you have a specific marinade or seasoning you like to use for it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple tonight with just some lemon, dill, and a bit of garlic. Leah is busy finishing up a piece for her pottery class, so I've got the kitchen to myself to get everything ready."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a very productive and pleasant day for both of you. Enjoy the cooking, and have a wonderful evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "grilled salmon"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: music should be 'not mentioned', conversation gives 'silence'"
+  ]
+}

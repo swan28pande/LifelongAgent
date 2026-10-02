@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 289,
+  "date": "2026-12-14",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Monday starting off in Minneapolis? Are things busy at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's pretty hectic. Being the project lead means my Mondays are always packed with status meetings and client syncs, but we are making good progress on our current layout design."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet. It's important to find some time to clear your head on days like that. Did you manage to get any physical activity in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! I bundled up, took my two-wheeler out on the paved trails, and got some serious pedaling in. Spinning the gears in the brisk air really helped clear my mind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Brr, that sounds chilly but incredibly refreshing! It takes some real dedication to get out on the trails in December. Did you head toward the lakes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I did a loop past Bde Maka Ska. Leah thought I was absolutely out of my mind for going out in this weather, but I really needed the fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, Leah might have a point, but sometimes you just need that outdoor energy! How is she doing? Is she still working on her pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She actually brought home a slightly lopsided ceramic cup she made last week. It's currently sitting on our kitchen counter holding some pens, but it has a lot of character."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. There's nothing like using something you made with your own hands. How is your wrist holding up after your ride today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels great. No stiffness or pain at all from holding the handlebars, which is a huge relief. The healing process went really well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful news. It must feel great to have full mobility back, especially for when you want to get back to climbing or your other hobbies. Are you planning a relaxing evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Just going to hang out on the couch with Leah and catch up on some shows. I think I've earned a lazy night after fighting the wind during my ride."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "cycling",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: dinner should be 'not mentioned', conversation gives 'other'"
+  ]
+}

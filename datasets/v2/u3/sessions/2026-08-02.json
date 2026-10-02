@@ -1,0 +1,81 @@
+{
+  "user_id": "u3",
+  "day": 155,
+  "date": "2026-08-02",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How are you feeling today? I know you've been dealing with that nasty flu."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I am actually feeling so much better today. I've officially fully recovered from the flu. No more fever or congestion at all!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful news! It must be such a relief to finally have your energy back. Did you do anything special to ease back into your day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes! Because I'm finally over the illness, I decided to go back to my usual morning routine and brewed myself a rich, warm mug of hot chocolate. It felt so good to enjoy that again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There is nothing quite like a comforting cup of hot chocolate to celebrate feeling healthy again. Are you back on duty for your night shift at the hospital tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am. I've actually already gotten my food ready for the night—I just packed up some dinner leftovers from a few days ago to take with me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move, having those leftovers ready to go saves so much energy. What are you up to this afternoon before you head in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just resting on the couch. I currently have a podcast playing that covers recent medical studies and healthcare industry news."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, low-key way to spend the afternoon. Did Tom help take care of you while you were under the weather?"
+    },
+    {
+      "speaker": "user",
+      "text": "He did, he was wonderful. Now that I'm completely healthy and not contagious anymore, we're even talking about going out for some salsa dancing later this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a blast! It'll be great to get back on the dance floor. I hope the Phoenix heat isn't too exhausting for your first day back to full strength."
+    },
+    {
+      "speaker": "user",
+      "text": "It is definitely sizzling outside, but I'm staying in the AC as long as possible today. Thanks for checking in on me!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "hot chocolate",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "health news podcast"
+    },
+    "statements": {
+      "flu.1": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

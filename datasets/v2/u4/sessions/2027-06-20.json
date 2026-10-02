@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 477,
+  "date": "2027-06-20",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Sunday. How has your weekend been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been really nice and relaxing. Leah and I started the day by heading out to a local spot for a combined late-morning breakfast and early lunch. It was great to just sit and catch up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A slow weekend meal with Leah sounds like the perfect start. Did you end up heading to the climbing gym or doing anything active after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not today. I wanted to give my joints a bit of a break, so I just unrolled my mat in the living room and spent about an hour doing some deep holds, sun salutations, and flow poses to stretch out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to stay active while letting your body recover. Are you planning to spend the rest of your Sunday relaxing, or do you have some things to wrap up for the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually had to log on for a bit this afternoon to review some project layouts. Usually, I keep myself focused by listening to voice-narrated novels through my wireless earbuds, but they completely died on me. Since I couldn't charge them quickly enough, I ended up switching on the old tabletop receiver to listen to whatever live local stations were broadcasting over the airwaves."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a classic fallback! Sometimes it's nice to just let the local broadcasters curate the sound for you when your tech fails. Did you find a decent station to keep you company?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! It was actually a nice change of pace to hear some local DJs and random broadcasts instead of my usual narrated tracks, even if it was just a temporary fix."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely a fun throwback. And since you got some work out of the way, what are you and Leah thinking for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it pretty simple. I'm preparing a big assortment of chopped garden veggies on a sheet pan with some olive oil and herbs, and letting them bake in the oven until they're nice and tender."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comforting and delicious, especially for a Sunday evening. It fits perfectly with your pescatarian meals too. How are things going with Leah's pediatric hospital job lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well there, still adjusting to the busy schedule but loving the team. She's actually at her pottery class right now, so I'm getting dinner prepped before she gets home. I should probably go chop some more carrots! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "yoga",
+      "outfit": "not mentioned",
+      "music": "the radio",
+      "dinner": "roast vegetables"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'the radio', conversation gives 'classical'"
+  ]
+}

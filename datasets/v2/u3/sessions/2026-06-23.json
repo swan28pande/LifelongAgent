@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 115,
+  "date": "2026-06-23",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you're having a good afternoon. How is everything going today before you head out for your shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Doing alright, just slowly waking up. I'm currently drinking some of that slow-steeped iced coffee I keep in the fridge, which is definitely helping me open my eyes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredibly refreshing for a warm Phoenix day. Did you get up to anything fun earlier, or has it been a relaxed day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly relaxed. Tom and I chatted on the phone for a bit earlier, and then I spent some time getting my stuff organized. I just finished boxing up some of the extra dinner I made yesterday to take with me for my meal break tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move, having some homemade leftovers ready to go makes those long nights in the ER a lot easier. Are you driving in tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, I'm actually going to catch the public transit bus that runs late in the evening to get to the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, taking the night bus is a nice way to decompress and let someone else do the driving before you start a busy shift. Do you usually read or listen to something on the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually throw my headphones on. Today I think I'll listen to a podcast that covers current updates and recent findings in the medical field."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A health news podcast sounds like a great way to stay informed, especially with how fast things can change in medicine. Is it a particularly busy time at the hospital lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's always a bit of a wildcard in the ER, but we've had a pretty steady stream of patients lately. Hopefully, tonight is a bit smoother."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope so too! You do amazing work there. Have a safe trip on the bus, and I hope your shift goes well."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'm going to grab my bag and head out. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "packed leftovers",
+      "commute": "night bus",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

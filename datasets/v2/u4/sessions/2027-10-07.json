@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 586,
+  "date": "2027-10-07",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Thursday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Work has been a bit busy, but I've been powering through my design reviews. I actually put on some of those underground, non-major-label guitar bands from the late 2000s to keep my energy up while I draft."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that sounds like a great soundtrack for focusing. Did that help you make some good progress on the design reviews?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It kept me in the zone. I managed to clear out almost my entire inbox before lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. Since things are moving smoothly, do you have any plans to get some photography done this evening, or maybe a game of chess?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I've got a chess match lined up online with a friend in an hour. It's been a while since we played, so I'm looking forward to testing out some new opening strategies."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, exciting! Good luck with the opening. Is Leah joining you for dinner tonight after her hospital shift, or is she at her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually coming straight home tonight. I told her I'd handle the cooking, so I'm planning to boil up some fettuccine and toss it with a homemade tomato and basil sauce."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and perfect for a cozy Thursday evening. How has her new role at the hospital been going lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's really finding her rhythm there. It's demanding, but she loves working with the kids. She did mention her pottery class is getting more challenging, though—she's trying to wheel-throw a large vase this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A large vase sounds like a big step up! I hope it turns out well. And how is your wrist holding up after all that drafting and chess?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's completely fine, thanks! It feels just as strong as it did before the fracture, so I have no complaints."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Have a great time with your chess match and enjoy the fettuccine tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

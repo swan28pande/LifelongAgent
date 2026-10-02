@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 197,
+  "date": "2026-09-13",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Sunday going so far? Is the Portland weather treating you well today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's a beautiful, crisp day here in Portland. I had a relaxed morning, just made myself a protein smoothie for breakfast and enjoyed the quiet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie sounds like a great start. Do you have any active plans for today, or perhaps some tennis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, today is a rest day for me. No tennis or heavy workouts today, just letting my body recover."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Rest days are so important, especially with the school year back in full swing. Are you doing any woodworking today instead?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am! I'm spending a bit of time working on a small wooden jewelry box for Grace. It's nice to just focus on the details without any rush."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful project. I'm sure Grace will love it. How has the new school year been going for you so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going really well. The students are settling in, and my chemistry labs have been a lot of fun. It's exhausting but rewarding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Chemistry labs keep everyone on their toes. What are your plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're planning to keep it pretty low-key. Grace and I are going to wind down by watching a cooking competition show tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, those are always so entertaining to watch! Do you have a favorite one you are currently following?"
+    },
+    {
+      "speaker": "user",
+      "text": "We love watching the chefs try to create gourmet dishes with random ingredients under a tight clock. It's the perfect way to wrap up the weekend before the school week starts again."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "rest day",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a back deck",
+    "invention: has a garage"
+  ]
+}

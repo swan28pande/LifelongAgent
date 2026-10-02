@@ -1,0 +1,76 @@
+{
+  "user_id": "u2",
+  "day": 60,
+  "date": "2026-04-29",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Marcus! How is your Wednesday going so far? How are things in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good here in Portland. It's a bit rainy today, but that's typical. I actually managed to go for a run earlier this morning, which felt great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic! Getting a run in before a busy day of teaching chemistry is impressive. Did you have a chance to grab something to eat afterward?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I made a quick yogurt parfait when I got back inside. It was perfect before heading out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yogurt parfaits are a great post-workout breakfast. How are your classes going today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're going well! We're doing some stoichiometry labs today, so the students are actually pretty focused. It's a lot of grading for me later, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, stoichiometry! That always keeps them on their toes. I hope the grading isn't too overwhelming. How is Grace doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing well, thank you. She has a busy week too, but we're planning to just relax together this evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely way to unwind. Have you had any free time lately to work on your woodworking projects?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit here and there. I've been sanding down a small walnut shelf in the garage when I get a spare hour. It's nice to do something hands-on after a day of teaching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Woodworking sounds like the perfect creative outlet to balance out the school day. There's nothing like working with your hands."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. Anyway, my lunch break is just about over, so I need to get back to my classroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Of course! Have a great afternoon with your students, Marcus. Let's chat again soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "yogurt parfait",
+      "workout": "run",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

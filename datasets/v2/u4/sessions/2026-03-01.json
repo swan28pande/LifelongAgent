@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 1,
+  "date": "2026-03-01",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Sunday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I started the morning on a delicious note by frying up some crispy cured pork strips alongside some chicken eggs. It's a bit cold here in Minneapolis, Minnesota today, but I'm staying warm inside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a classic, hearty breakfast to start a chilly Sunday! Minneapolis can certainly get quite cold this time of year. How do you like living there?"
+    },
+    {
+      "speaker": "user",
+      "text": "I really enjoy living in Minneapolis; it's a great city with a lot of character. Even with the cold, I actually braved the outdoors earlier. Some friends invited me to play a casual game of hoops, so I did that instead of my usual routine of deep stretches and poses on the mat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a casual game of hoops with friends sounds like a fun way to shake up your routine! It’s always great when friends invite you out like that. Did you have a good game?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it was a blast! I even brought my camera along to snap some shots of the court and the snowy park afterward. Photography is one of my main hobbies, so I try to keep my camera with me as much as possible."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! Photography is such a great hobby for capturing those candid, everyday moments. What kind of subjects do you find yourself drawn to most often when you're out with your camera?"
+    },
+    {
+      "speaker": "user",
+      "text": "I really love capturing local architecture and street scenes. After walking around taking photos, I worked up quite an appetite. Since I'm an omnivore and eat both plants and animal products, I've got a lot of options for dinner tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Having an omnivore diet definitely gives you the best of both worlds when it comes to cooking! Do you have something special planned for dinner tonight then?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! I'm planning on baking a whole chicken in the oven with some herbs and root vegetables. While I wait for dinner time, I'm catching up on some work at my desk while listening to some independent alternative bands with lots of guitar playing in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Baking a whole chicken is the ultimate cozy Sunday meal, especially with those veggies! And independent alternative guitar bands sound like the perfect soundtrack to keep you focused and inspired while you work. Do you have a favorite album you're spinning today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've just been letting a curated playlist of underground and self-released artists run. It's nice to discover new sounds. I think I'll get back to my tasks now so I can get everything done before dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a plan! Enjoy the rest of your work, have a wonderful dinner tonight, and let me know if you need anything else later. Have a great evening, Daniel!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bacon and eggs",
+      "workout": "pickup basketball",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "roast chicken"
+    },
+    "statements": {
+      "city.0": true,
+      "diet.0": true,
+      "hobbies.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: shoots urban landscapes and local architecture"
+  ]
+}

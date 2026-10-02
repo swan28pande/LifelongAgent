@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 427,
+  "date": "2027-05-01",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Saturday. How is your weekend starting off in Portland? Have you and Grace been up to much today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a great Saturday so far. The weather is perfect, so I actually got out and played some tennis this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start the day. Did you play a singles match or doubles? How did it go?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a friendly singles match. My backhand was a little rusty, but it felt great to run around on the court for a couple of hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A couple of hours is a solid workout! I'm glad you got some court time. How is Olive doing today? Is she keeping you company now that you're back?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, she's currently napping on the couch. She barely opened an eye when I walked in. I think I'm going to follow her lead tonight and just relax. Grace and I are planning on watching some sitcom reruns later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect low-key Saturday evening. Sitcom reruns are always so comforting. Any specific show you two are going to put on?"
+    },
+    {
+      "speaker": "user",
+      "text": "We haven't decided yet, probably just whatever old favorite we find streaming. It's nice to not have to think too hard after a busy week at the high school."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, managing the science department keeps you busy enough during the week. You definitely deserve a mindless, relaxing evening. Have you had any time for woodworking lately, or has school kept you too occupied?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both, honestly. I've been spending a little time in the garage working on a small shelf, but I haven't had a long stretch of free time to really make progress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Slow and steady progress is still progress! It's nice to have a project to chip away at. I hope you and Grace have a wonderfully relaxing night with those sitcoms."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Catch you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'sitcom reruns', conversation gives 'other'"
+  ]
+}

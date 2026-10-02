@@ -1,0 +1,81 @@
+{
+  "user_id": "u4",
+  "day": 210,
+  "date": "2026-09-26",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Saturday. How is your weekend in Minneapolis starting out? Have you been doing any photography or getting out on your bike?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, my Saturday took a pretty painful turn. I was scaling a route earlier today and took a bad fall, and I ended up cracking a bone in my arm right above my hand."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, Daniel! That sounds incredibly painful. I'm so sorry to hear that. Did you have to go to the clinic? How are you holding up right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we spent a few hours at the urgent care clinic. They confirmed the break and put a temporary splint on it. It is my dominant hand too, which is going to make sketching at the design firm pretty tricky for a while."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is so tough, especially with your architecture work. I hope the pain is manageable. It's a relief you got it looked at right away."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks. I'm just glad the morning was nice before everything went sideways. Leah and I had gone out for a wonderful, lazy mid-day meal that combined breakfast and lunch together at our favorite spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad you two got to enjoy that late-morning meal together before the accident. Did you head straight to climb after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not immediately. I actually had to stop by the office for an hour first to prep some project files. I didn't want to dress up, so my work attire was just a pair of blue denim pants and a cozy woolen pullover."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a comfortable choice for a quick weekend office run. I hope you can take a complete break from work drafts for the rest of the weekend now."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Leah is taking care of me tonight. She's actually preparing a high-quality cut of seared beef for our evening meal, which is a perfect comfort food right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nice seared beef dinner sounds like exactly what you need to recover. I hope you can rest up tonight and that your arm starts healing quickly."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you, I appreciate it. I'm just going to keep it elevated and watch some TV tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "other",
+      "outfit": "sweater and jeans",
+      "music": "not mentioned",
+      "dinner": "steak"
+    },
+    "statements": {
+      "wrist.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'climbing gym'",
+    "invention: has an appointment with a specialist next week for his fractured wrist"
+  ]
+}

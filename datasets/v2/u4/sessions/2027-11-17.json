@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 627,
+  "date": "2027-11-17",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going? Are things busy at your architecture studio today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's pretty packed with design work today. To help me focus while drafting, I've been playing some atmospheric, beatless synthesizer tracks in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to stay in the zone. What's the vibe at the office today? Are you dressed up or keeping it casual?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely casual. I'm just wearing an obsidian-colored short-sleeve tee paired with my usual dark denim trousers today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic and comfortable. Did you manage to get away from your desk at all today to get some fresh air or move around?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I stepped out during my break and did some outdoor jogging to get my daily cardio session in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great you got some outdoor jogging in. How is your wrist holding up during your workouts these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's feeling completely normal, thanks! The fracture healed up perfectly, so no issues at all when I'm active."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. What are the plans for dinner tonight? Are you and Leah cooking together?"
+    },
+    {
+      "speaker": "user",
+      "text": "Leah actually has her pottery class this evening, so I'm cooking for myself. I'm whipping up a spicy, green-tinted Thai curry with coconut broth and cubes of bean curd."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! Reminds me of that Thai cooking class you took. How is Leah's pottery class going, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's really enjoying it! She brings home all sorts of interesting bowls and mugs. It's a nice way for her to unwind after long shifts at the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. A creative hobby is a perfect contrast to her pediatrician work. I hope you enjoy your dinner and have a peaceful night, Daniel!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Speak to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "running",
+      "outfit": "black t-shirt and jeans",
+      "music": "ambient electronic",
+      "dinner": "tofu green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

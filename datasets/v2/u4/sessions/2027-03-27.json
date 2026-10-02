@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 392,
+  "date": "2027-03-27",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Saturday. How is your weekend starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's okay, though I'm actually putting in some weekend hours for the design firm today to get ahead on a project. Since I'm at my desk at home, I decided to dress for pure comfort: I'm wearing a cozy hooded pullover and some soft, tapered lounge pants with elastic ankles."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the ultimate weekend work uniform. Comfort is definitely key when you have to work on a Saturday. What kind of project are you tackling?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm organizing some design layouts for a client pitch next week. To keep my brain engaged while I edit, I've got some music playing in the background—mostly just some off-the-beaten-path alternative bands that record for independent labels."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, that kind of music is perfect for getting into a creative flow. Speaking of creative outlets, how is Leah's pottery class going? Is she still enjoying it?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She brought home a couple of small bowls she made recently. She's actually at the studio today doing some glazing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It's great she has that creative outlet, especially with her busy schedule as a pediatrician. How have things been with you otherwise? Have you taken your camera out lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit, yeah. I spent some time yesterday taking photos of the melting snow and early spring buds around the neighborhood. It's nice to see Minneapolis starting to thaw out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, spring in Minnesota is always a welcome sight! Are you planning to do any climbing soon now that your wrist is fully recovered?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've been doing some light climbing recently and the wrist feels completely back to normal, which is a huge relief. I'm just taking it relatively easy for now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. It must feel great to get back on the wall without any pain."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. Anyway, I should probably get back to these design layouts so I can wrap this up and enjoy the rest of my Saturday. I'll talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds good, Daniel. Good luck finishing up, and have a relaxing weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "hoodie and joggers",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

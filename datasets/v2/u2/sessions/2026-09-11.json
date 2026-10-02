@@ -1,0 +1,76 @@
+{
+  "user_id": "u2",
+  "day": 195,
+  "date": "2026-09-11",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Marcus! How has the new school year been treating you now that you're a couple of weeks in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty busy getting the chemistry labs set up, but I'm surviving. I actually made a protein smoothie this morning to make sure I had enough energy to get through all my classes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is a great way to fuel up for a busy day of teaching. Are the students starting to settle into the routine?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they really are. The first week is always a bit chaotic, but they are adjusting well to the chemistry curriculum now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Are you hoping to get some downtime this weekend? Maybe some tennis or time in your woodworking shop?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'd love to get out and play some tennis, but honestly, I might just focus on some woodworking in the garage. The weather in Portland has been nice, but I'm pretty exhausted."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Woodworking sounds like a great way to clear your head after a long week. What are your plans for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace and I are keeping things very simple. We're just going to relax on the couch and watch a nature documentary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. A nature documentary is the perfect way to unwind. Do you two have a specific one lined up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, we'll probably just browse until we find something interesting, maybe something about the ocean."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Deep-sea documentaries are always so fascinating and visually stunning. I hope you both enjoy it!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely ready to just sit back and do nothing for the rest of the evening. Have a good weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "other",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

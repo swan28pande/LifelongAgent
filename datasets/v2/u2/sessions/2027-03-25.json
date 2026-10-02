@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 390,
+  "date": "2027-03-25",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Thursday going? Is the spring weather treating you well over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually a pretty nice day here in Portland. A bit breezy, but good. I had a busy morning, started off with a protein smoothie for breakfast to get some quick energy, and then ran straight to work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is a great way to kickstart a busy day! How are things shaping up at the high school science department lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well. We're prepping for some upcoming student lab practicals, so my hands are full coordinating everything. But I did manage to slip away after work to get in a good workout playing tennis."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to blow off some steam! Did you play a singles match, or was Grace out on the court with you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, Grace had some other errands to run, so I played a couple of singles sets with a colleague. It was a solid workout. Now that I'm back, we're planning to just have a quiet evening and put on a nature documentary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect way to unwind after a busy day of labs and tennis. Do you have a specific one lined up, or are you just going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We have one saved about deep-sea marine life that we've been meaning to check out. It should be pretty relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds fascinating! How is Olive doing? Is she going to join you guys on the couch for the show?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. Olive is already curled up on the sofa waiting for us. She's been super cuddly today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's so sweet. By the way, how is your neighbor's vegetable garden coming along? Have they started planting for the spring yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they've been out there working on it quite a bit lately. It's looking really organized. It actually reminded me a bit of some of the neat gardens we saw when we went on our trip to Japan."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those beautiful Japanese gardens are hard to forget! It's great that your neighbor is putting so much care into theirs. I hope you and Grace have a wonderful, relaxing evening watching your documentary."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! We're looking forward to it. Catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "tennis",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Olive loves watching animals on screen"
+  ]
+}

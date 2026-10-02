@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 295,
+  "date": "2026-12-20",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How has your weekend in Portland been going? Have you and Grace had any time to relax or work on those Japan trip plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty good, relaxing Sunday. We did a little planning for the Japan trip this morning over breakfast. I just had a protein smoothie today, so it was quick, but we managed to look at some Kyoto itineraries."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie sounds like a quick and healthy start to the day. Kyoto is beautiful in the spring! Did you and Grace find any specific spots you want to visit there?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're definitely looking at the bamboo forest and some historic temples. After that, I actually spent a few hours in the garage doing some woodworking. It's been a while since I had a free afternoon for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to spend a Sunday afternoon. What kind of woodworking project are you working on right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm just sanding down a small cedar jewelry box for Grace. It's nice to work with my hands and take my mind off the science department at school for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cedar jewelry box sounds lovely, I'm sure Grace will cherish it. It's definitely important to have that creative outlet, especially with how busy the school year has been. How are things at the school lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well, just busy finishing up grading before the winter break starts. I'm glad to have a little breather right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You definitely deserve a break! What are your plans for the rest of this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think Grace and I are just going to keep it simple and watch some sitcom reruns on TV tonight. Nothing too heavy, just something to laugh at."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic sitcom reruns are the perfect way to wrap up a weekend. I hope you both have a cozy night! Let me know if you need any help looking up travel details for Japan this week."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I'll definitely keep you posted as we plan more. Have a good night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "not mentioned",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: is building a coffee table"
+  ]
+}

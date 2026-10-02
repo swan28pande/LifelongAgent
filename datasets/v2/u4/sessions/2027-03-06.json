@@ -1,0 +1,78 @@
+{
+  "user_id": "u4",
+  "day": 371,
+  "date": "2027-03-06",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Saturday. How is your weekend starting out? Did you get a chance to head out for any photography or climbing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty packed day so far. Normally, Leah and I do our big Saturday morning brunch together, but I actually had to go completely without my morning meal today. I had to head out for an early site visit to check on a client's space first thing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, an early site visit on a Saturday morning! That is a busy start, especially missing out on your usual brunch. I hope you've managed to get some energy back since then."
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Despite having an empty stomach early on, I still managed to hit the trails this afternoon for a really high-mileage training session. I spent a solid couple of hours putting in some serious distance on foot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, impressive endurance! Running that kind of distance on an empty stomach from earlier must have been intense, but it sounds like your training is going great. How are you feeling after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, my legs feel great, but my mind has been a bit preoccupied anyway. Some huge news came in yesterday—Leah actually got an official job offer for a position in Chicago."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh my goodness, that is major news! A huge congratulations to her! How is she feeling about the offer?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's incredibly excited because it's a fantastic opportunity for her career, but it's also a lot to process. Since we've been so settled here in Minneapolis, we have some really big things to think about."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can only imagine. It's a wonderful validation of her work, but weighing a potential move from Minneapolis is a massive step. Have you two started talking through how you want to handle it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're just taking it one step at a time and discussing all our options this weekend. It's a lot of life planning all at once, but we're working through it together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very wise way to approach it. Taking it day by day is best. If you need a little mental break from all the big decisions, have you been able to find any quiet moments for your photography lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I brought my camera along on my trail route today because the afternoon light was hitting the trees perfectly. It was nice to just focus on the scenery for a bit."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "skipped breakfast",
+      "workout": "long run",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "partner_job.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: partner_job.0 ([Leah's Chicago job offer] Leah got a job offer in Chicago (planned) (this happened on 2027-03-05))"
+  ]
+}

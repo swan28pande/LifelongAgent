@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 241,
+  "date": "2026-10-27",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday going at the clinic? Are you feeling completely back to normal after that bout with the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, I'm feeling 100% recovered, thank goodness. Today is going well, just a bit busy. I needed an extra boost this morning, so I actually just made a pot of traditional filtered coffee in my standard brewer before heading out, rather than messing with my roommate's new espresso machine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a classic cup of brewed coffee is exactly what you need to get the day started. It's great to hear you're feeling energetic again. How is the clinic shift treating you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty steady, lots of patient check-ins. I just finished up lunch in the breakroom. I was glad I brought a container of yesterday's dinner to heat up today, it saved me a lot of time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds very convenient, especially on a busy day. What did you end up bringing? And have you had any time to get back into your usual routines, like salsa dancing or sourdough baking, since getting over the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was just a simple chicken pasta. And yes, Tom and I actually went out salsa dancing over the weekend! It felt amazing to move and hear the music again after being stuck in bed for so long."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to celebrate being healthy again! I'm glad you and Tom had a good time. How is Tom doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great, thanks for asking. He was happy to get back on the dance floor too. We're lucky Phoenix has some really nice spots for Latin dancing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, Phoenix has a fantastic dance scene. Have you had any chance to feed your sourdough starter or bake anything recently, or are you easing back into that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did feed my starter yesterday! It's looking nice and active. I'm hoping to bake a simple loaf of sourdough bread sometime soon, maybe later this week if work isn't too hectic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There is nothing quite like the smell of a fresh loaf baking in the kitchen. I hope you get the chance to do that soon! I'll let you get back to your patients at the clinic."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'driving'",
+    "invention: plans to prep a rustic sourdough loaf on Thursday evening to bake on Friday morning"
+  ]
+}

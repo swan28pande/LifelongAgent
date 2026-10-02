@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 299,
+  "date": "2026-12-24",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Merry Christmas Eve, Marcus! How are things in Portland? Are you enjoying the holiday break from the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been great. It's so nice to have some time off from my duties as head of the science department. I started the day with a simple breakfast of warm oatmeal and just enjoyed the quiet morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A warm bowl of oatmeal is perfect for a chilly December morning. Have you been able to spend any of your free time on woodworking or tennis lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually got to do some woodworking earlier today, which was fantastic. Tennis is on hold for now since the weather isn't quite right for the outdoor courts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense. What kind of woodworking project are you working on right now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a simple carved picture frame. It's a nice, therapeutic project to focus on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Have you and Grace had any more time to plan your family trip to Japan for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "We have! We've been looking at different cities to visit and finalizing our itinerary. We're both really looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like it's going to be an incredible trip. What are your plans for the rest of this Christmas Eve?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace and I are just going to have a quiet evening. We'll probably put on a nature documentary on TV and relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully relaxing way to spend the night. It's well-deserved, especially with how busy things get after the new school year starts."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. It's been a busy year so far, so I'm happy to just do nothing for an evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: Plans to visit Tokyo, Kyoto, and possibly Osaka during the upcoming trip to Japan."
+  ]
+}

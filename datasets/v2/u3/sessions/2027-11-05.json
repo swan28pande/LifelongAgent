@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 615,
+  "date": "2027-11-05",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your morning starting out in Tucson? Did you get a chance to take Dash out for a walk?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yes, Dash and I got our morning walk in before it started getting too warm. Now I'm just sitting down and enjoying a warm matcha latte that I whisked up myself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very peaceful start to the day. Have you had any time for your Italian course or sourdough baking lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did a little Italian practice last night, but no baking this week. Tom and I have been so focused on sorting out details for our wedding in summer 2028 that my sourdough starter is just resting in the fridge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wedding planning is definitely a big project, so it makes total sense to take a break from baking! Are you heading into the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am. I actually just got into my hybrid car to make the drive over to the clinic now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Safe travels! Are you listening to that true-crime podcast your coworker recommended on the way over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I wanted something a bit lighter to keep my mood upbeat today, so I actually put on a comedy podcast instead. It already has me laughing out loud at the red lights."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is a perfect way to start a shift! Do you have any plans for lunch today, maybe checking out that new sandwich shop near work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not today. I actually put together a homemade burrito bowl last night with some rice, beans, and fresh salsa, so I brought that along with me to eat in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds delicious and very satisfying. I hope you have a wonderful, smooth Friday at the clinic!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! It's been pretty steady so far, and I'm looking forward to a relaxing weekend. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "homemade burrito bowl",
+      "commute": "driving",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: lunch should be 'homemade burrito bowl', conversation gives 'packed leftovers'"
+  ]
+}

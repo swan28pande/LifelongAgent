@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 12,
+  "date": "2026-03-12",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How's your Thursday going? Getting ready for another night shift at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, just getting my day started. I needed a serious wake-up call, so I poured myself a big glass of slow-steeped, iced coffee from the fridge. It's doing the trick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A chilled cold brew is the absolute best way to start a night-shift day. How is the Phoenix heat treating you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's not too bad today! But I was feeling a bit lazy, so I actually booked an Uber to take me to the hospital instead of driving myself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A rideshare is a great way to save your energy for the ER. Did you do anything to pass the time during the drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "I listened to this incredibly funny podcast where two stand-up comedians swap ridiculous stories. I was literally laughing out loud in the back seat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect pre-shift mood booster! Have you been able to get a proper meal in during your shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just finished my lunch break, actually. I went down to the hospital cafeteria and put together a big leafy green salad. It was quick and kept me feeling light."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cafeteria salad is definitely a solid, healthy choice to keep you fueled. Hopefully, the rest of your shift goes smoothly! Any fun plans with Tom for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're hoping to go salsa dancing on Saturday night if I'm not too exhausted. I'm really looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a blast. I hope you get to go and dance the night away! Have a safe and quiet rest of your shift, Sofia."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You're welcome! Talk tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "cafeteria salad",
+      "commute": "rideshare",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Plans to go salsa dancing with Tom tomorrow night"
+  ]
+}

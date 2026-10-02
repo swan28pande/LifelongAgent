@@ -1,0 +1,92 @@
+{
+  "user_id": "u4",
+  "day": 400,
+  "date": "2027-04-04",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Sunday going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's a huge day for us. We actually moved to Chicago for Leah's new job today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, congratulations! That is a massive milestone. How is the moving process going today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty exhausting, but we are officially in our new place. We've just been unloading boxes and trying to get organized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Make sure to take some breaks. Have you been able to relax at all, or are you still unpacking?"
+    },
+    {
+      "speaker": "user",
+      "text": "I took a brief break to review some project files for my lead role at the design firm. Since I needed to get some work done, I threw on a comfortable hooded sweatshirt and some matching tapered fleece sweatpants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect outfit for doing a bit of work and moving boxes. How are things looking for your projects at the firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're going well, just keeping up with the milestones. It's a bit of a balancing act today, but manageable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear that. How is Leah holding up with the big move today?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great and is really excited to start at the hospital. She's already talking about wanting to find a pottery class here eventually, since she enjoyed the one back home so much."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It'll be great for her to get back into pottery. And how is your wrist feeling after all that lifting today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's completely fine, thankfully. It healed up perfectly, so I didn't have any trouble carrying the heavier boxes today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a huge relief! I'll let you get back to settling into Chicago. Let me know if you need anything else."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to get back to unpacking. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "hoodie and joggers",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "city.chicago": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user's design firm employer is located in Minneapolis."
+  ]
+}

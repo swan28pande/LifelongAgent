@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 225,
+  "date": "2026-10-11",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How has your weekend been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty good. I'm mostly just taking it easy today. It's actually a rest day for me, so no workout or major physical activities on the schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A rest day sounds well-deserved! Have you been able to spend any time on your hobbies this weekend, like woodworking?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did spend a couple of hours in the garage yesterday working on sanding down a small cedar box, but today I'm keeping things strictly low-key and just relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Sunday. Speaking of looking forward to things, how are the plans coming along for your family trip to Japan next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're coming along well! Grace and I were actually looking at some travel guides last night. We're still in the early stages of putting the itinerary together, but we're really looking forward to the spring."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's so exciting to plan a trip like that. How have things been at school lately? Have your chemistry classes settled into a good rhythm now that the new school year is well underway?"
+    },
+    {
+      "speaker": "user",
+      "text": "They really have. The students are doing great, and we're getting into some of the more interesting lab experiments now, which is always a lot of fun to teach."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Labs are always a highlight! Have you managed to get on the tennis court recently, or has school kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a couple of sets of tennis on Thursday evening after work, which was a great stress reliever. But after a busy week of teaching and a bit of tennis, I'm glad today is just a rest day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely sounds like you've earned a quiet Sunday. I hope you and Grace have a wonderful, relaxing afternoon."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! We plan to do exactly that. Catch up with you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "rest day",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: plans to visit Tokyo and Kyoto during the upcoming family trip to Japan"
+  ]
+}

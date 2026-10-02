@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 121,
+  "date": "2026-06-29",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Monday is off to a great start. How is everything going today in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It's a gorgeous day here. I actually woke up early and got a workout in by pedaling my bicycle around the chain of lakes. It was great to get some fresh air on two wheels before heading into the design firm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful morning! There's nothing like getting some exercise outside to start the week. Did you have to change into something a bit more professional once you got to the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, definitely. I couldn't stay in my athletic gear! I changed into a crisp collared button-up shirt and a pair of neat, casual cotton trousers for the drafting table today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic and professional! What kind of projects are you drafting today? And do you have some good music playing to help you focus?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working on a community center layout. As for music, I'm actually tuning into a local FM broadcast today. My headphones died this morning, so instead of my usual lo-fi beats, I have the live airwaves playing on a desktop speaker."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, dead headphones are the worst! But a local station can be a fun change of pace. How is Leah doing, by the way? Is she still working on her pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She absolutely loves it. She actually brought home a small glazed bowl she made the other day, and she's getting really good at centering the clay."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear! It's so satisfying to see a hobby progress like that. Did you manage to snap any photos during your morning ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did bring my camera along! The morning light over the water was perfect, so I stopped for a few minutes to capture the mist rising. I'm hoping to look through them later this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds stunning. Minneapolis really has some scenic spots for photography. Are you planning on a quiet evening after a busy Monday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. Just going to head home, unwind, and maybe review some of those shots on my computer. It's been a productive day all around."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "cycling",
+      "outfit": "button-down and chinos",
+      "music": "the radio",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'long ride'"
+  ]
+}

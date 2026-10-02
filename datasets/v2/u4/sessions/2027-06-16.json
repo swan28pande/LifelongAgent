@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 473,
+  "date": "2027-06-16",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Wednesday is going well. How has your day been so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I started the morning on a nice note. I made a thick, icy blend of frozen mango and spinach, poured it into a dish, and topped it with pumpkin seeds and coconut flakes to eat with a spoon. It was really refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and vibrant start to the day. How did the rest of your morning look? Were you busy with design projects?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I had a lot of layouts to review. To keep my focus, instead of playing music, I actually listened to a narrator read a historical biography to me through my headphones while I worked."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, interesting! Listening to someone read a biography is a great way to stay focused without getting distracted by lyrics. Who is the biography about?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's about an architect from the 19th century, so it actually kept me pretty inspired. Anyway, Leah and I are planning to cook later tonight. We're making a spicy Thai dish with coconut milk and green chili paste, and we're tossing in cubes of soy bean curd and vegetables to serve over rice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That green herbal curry with the bean curd sounds fantastic! Are you using some of the techniques you learned back in that Thai cooking class?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely! That class really taught us how to balance the sweet and spicy flavors. We've been making it pretty regularly since then."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful that you're putting those skills to use. Have you had any time for your photography lately, or has Chicago's summer weather kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took my camera down to the lakefront yesterday evening. The light hitting the skyline was incredible, so I got some really cool shots of the water."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Chicago's skyline from the lakefront is hard to beat, especially with that late afternoon glow. I'd love to hear how those photos turned out once you've had a chance to look at them."
+    },
+    {
+      "speaker": "user",
+      "text": "Will do! I'm going to head offline now to get dinner started. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "audiobooks",
+      "dinner": "tofu green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: dinner should be 'tofu green curry', conversation gives 'other'"
+  ]
+}

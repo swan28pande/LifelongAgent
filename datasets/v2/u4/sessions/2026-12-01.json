@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 276,
+  "date": "2026-12-01",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Tuesday going over at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty hectic morning. We had a major presentation for a new client, so I actually had to dress up a bit more than my usual casual style. I went with a crisp collared shirt with buttons down the front and paired it with some of my beige cotton twill trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like you wanted to make a great impression! How did the client receive everything?"
+    },
+    {
+      "speaker": "user",
+      "text": "They absolutely loved the concepts. Being the project lead can be a lot of pressure, but seeing the client get excited about our direction makes it all worth it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful news! It must be a relief to have that presentation behind you. Are you and Leah doing anything special to celebrate tonight, or is she busy with her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually has her class this evening, so she'll be busy molding clay for a few hours. That means I'm in charge of making dinner tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, got it. What do you have planned for the menu tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple but delicious. I'm browning some seasoned ground beef, prepping some salsa and lettuce, and heating up some crispy folded corn shells so we can build our own little handheld Mexican treats when she gets home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those are always a hit—quick, delicious, and easy to customize. Have you had any time to get out with your camera lately, or has work been keeping you too busy for photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to get some shots over the weekend! I spent Sunday afternoon walking around the riverfront in Minneapolis catching the winter light on the water. It was really peaceful."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. Have you heard from your brother Kwame recently? How is he enjoying life down in Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! We caught up yesterday. He's really enjoying the milder southern weather and says he's finally got his new apartment completely set up."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "tacos"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'climbing gym'"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 55,
+  "date": "2026-04-24",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Sofia! Or should I say good evening, since you're just finishing up your night shift at the ER? How are you holding up today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's definitely morning for the rest of Phoenix, but my day is winding down. I'm doing okay, just treated myself to a warm, spiced black tea latte with steamed milk to help me stay awake on the way back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredibly cozy and perfect for winding down. Did you drive home, or did you find another way to get back?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was way too exhausted to focus on the road, so I just booked a ride through a car-sharing app on my phone. Best decision ever."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely the safest choice when you've been on your feet all night. Did you do anything to pass the time during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I put on my headphones and listened to this hilarious audio show where two stand-up comics just riff on weird news. I was literally laughing out loud in the back seat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is the perfect antidote to a stressful ER shift! Did you manage to eat something decent before heading to bed?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Before leaving the hospital, I just reheated the container of food I had boxed up from yesterday's dinner. It was quick and easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Leftovers are a lifesaver, especially with your schedule. How has the hospital been lately? Still keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. The ER is always unpredictable, but we had a really great team on shift last night, so we handled it well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. You work so hard. Are you hoping to get some downtime this weekend, maybe do some salsa dancing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'd love to! I went salsa dancing earlier in the week and it's always the best stress relief. For now, though, I'm just looking forward to crawling into bed and sleeping for the next eight hours."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "packed leftovers",
+      "commute": "rideshare",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to go salsa dancing with Tom tomorrow night at their favorite spot"
+  ]
+}

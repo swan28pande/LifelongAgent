@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 465,
+  "date": "2027-06-08",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I decided to keep things simple this morning and just made a quick mug of regular brewed coffee with my basic kitchen coffee maker, rather than wrestling with my roommate's complex espresso machine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes keeping it simple is the best way to start the day. How is everything at the clinic? Are you having a busy day-shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been steady, but I actually got a proper break. I brought in a lunch I put together this morning—a nice sandwich made with a couple of slices of the sourdough loaf I baked last weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! Sourdough makes any sandwich ten times better. Speaking of baking and planning, have you and Tom made any more decisions about your summer 2028 wedding lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not too many new decisions! We're just enjoying having the date set and taking our time with the details. We don't want to get overwhelmed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a very smart approach. It gives you plenty of time to enjoy being engaged. By the way, did you ever start that true-crime podcast your coworker suggested?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't listened to that one yet! Instead, I've been listening to an audio-based Italian language lesson podcast to supplement the online course I signed up for."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a fantastic way to immerse yourself in the language! How is the Italian coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a challenge, but I'm really enjoying it. It's a nice mental escape, especially when it's already so boiling hot here in Phoenix."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I can imagine the Phoenix heat is really picking up now that we're in June. Staying hydrated is key!"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, lots of water for me today! I'm just looking forward to getting home, relaxing with Tom, and maybe practicing a few more Italian phrases."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: hopes to plan a trip after her wedding in summer 2028"
+  ]
+}

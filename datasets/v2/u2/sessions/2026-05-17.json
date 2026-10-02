@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 78,
+  "date": "2026-05-17",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How is your weekend going over in Portland so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well, thanks. It's a beautiful day here. I started the morning off right and made a big batch of pancakes for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes are a perfect Sunday treat! Did you get up to much else this morning, or was it a slow start?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty quiet early on, but after letting breakfast digest, I headed out and went for a run to get some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to get some energy flowing. Are you planning to spend any time in your shop today doing some woodworking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes, I'm planning to head out there in a little bit. Spending time woodworking is such a great way to clear my head and unwind before the week starts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely sounds like a peaceful escape. How is Grace doing? Will she be joining you, or does she have her own projects today?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great! She's tackling some of her own things this afternoon, but we're going to hang out later. Tonight we are planning to relax and watch a nature documentary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary is a wonderful choice for a relaxing Sunday evening. Do you two have a specific one lined up, or will you just browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We'll probably browse a bit, but we usually look for anything narrated by David Attenborough. His voice is just so soothing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He really is the gold standard for those! It sounds like a lovely, balanced Sunday. How are things going at school with your chemistry classes lately? I imagine the energy is high with the school year winding down."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. Teaching high school chemistry this time of year is a real test of patience as the students get summer fever, but we're getting through the final labs. Today is a much-needed break from all the grading!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: is working on a new cedar table"
+  ]
+}

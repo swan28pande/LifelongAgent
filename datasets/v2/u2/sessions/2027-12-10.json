@@ -1,0 +1,72 @@
+{
+  "user_id": "u2",
+  "day": 650,
+  "date": "2027-12-10",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Friday. How is your day going in Portland so far? Did you and Grace have a good week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty good but busy week. Today has been a bit of a rush, to be honest. I didn't even follow my nutritionist's advice this morning and just grabbed a quick bagel for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Hey, sometimes you just need a quick and comforting breakfast! A bagel sounds delicious. Did you have a busy morning at the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, grading some science lab reports before my first class. But I did manage to squeeze in my workout later. Today I focused on gym weights."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job getting that workout in! How did your back feel during the gym weights? It's great that it's fully recovered now."
+    },
+    {
+      "speaker": "user",
+      "text": "It felt really solid, thanks for asking. No pain at all while lifting the gym weights today, which is a huge relief. I'm definitely taking it carefully though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It's smart to stay cautious, but glad you're back to full strength. Any fun plans for you and Grace this evening to kick off the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're planning a very low-key evening. We're going to use that new streaming service we signed up for and start a new sci-fi series tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A sci-fi series sounds like the perfect way to unwind! Do you have a specific show lined up, or are you going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We have one queued up that a colleague recommended. Olive is already asleep on the couch, so I think she's ready for our sci-fi series marathon too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Olive always has the right idea when it comes to relaxing! I hope you all enjoy the show. Are you planning to get on the tennis court this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might play some tennis tomorrow morning if it doesn't rain, but otherwise, I'm happy just taking it easy. Have a great weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bagel",
+      "workout": "gym weights",
+      "evening_show": "sci-fi series"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

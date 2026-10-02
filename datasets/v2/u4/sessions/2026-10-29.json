@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 243,
+  "date": "2026-10-29",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Thursday is going well. How are things looking over in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's a bit chilly in Minneapolis today, but not too bad. I started the morning on a good note. I made some over-easy eggs and slid them right onto a nice piece of toasted sourdough bread before heading into work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, hearty breakfast to kick off the day. Are things busy at the design firm today, or are you getting a bit of a breather?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty steady today. I've been focusing on some drafting, and to keep my momentum going, I've got some music playing in my headphones. Right now it's a great mix of those low-key, independent alternative guitar bands from the early 2000s."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that kind of music is perfect for getting into a focused flow state. Speaking of staying active, how is your wrist feeling? Have you been able to do any cycling lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "The wrist is definitely getting stronger, but I'm still playing it safe. I didn't want to risk the outdoor roads today, so instead, I got a good sweat session in by pedaling on the indoor stationary cycle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart way to keep your cardio up while keeping that wrist protected. Good call. Are you and Leah doing anything fun tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Leah actually has her pottery class this evening, so I'm on my own for a bit. I think I'll keep dinner pretty simple and boil up a big bowl of spaghetti noodles with some garlic and olive oil."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a classic noodle dish. Simple and satisfying! Since you're staying close to home, have you had any time for your photography lately, or are you taking a break from that too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've actually been taking my camera out on short weekend walks. The fall colors around Minneapolis have been amazing, so I've been capturing a lot of the changing leaves."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Fall in Minnesota must be spectacular. Oh, by the way, have you heard from your brother Kwame lately? How is he enjoying Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! We chatted a couple of days ago. He's really enjoying the warmer weather down there and is slowly getting settled into his new place. Anyway, I should get back to this drafting. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "stationary bike",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Daniel has an exercise bicycle in his basement."
+  ]
+}

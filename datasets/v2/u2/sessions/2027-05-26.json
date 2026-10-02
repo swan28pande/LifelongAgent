@@ -1,0 +1,80 @@
+{
+  "user_id": "u2",
+  "day": 452,
+  "date": "2027-05-26",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How has your Wednesday been going so far in Portland? Did you get a chance to do any woodworking today, or has it been a busy one at the school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was actually a pretty good day. The best news is that my back fully recovered today! I woke up and realized the pain and tightness from when I strained it are completely gone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is absolutely fantastic news! What a relief. Having a back injury is so frustrating and limiting. Are you feeling completely back to normal?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely normal! In fact, because my back fully recovered today, I went back to my earlier workout routine and went for a run this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, a run already! That's wonderful, but please make sure you don't overdo it on your first day back. How did it feel?"
+    },
+    {
+      "speaker": "user",
+      "text": "Don't worry, I kept it light and didn't push myself too hard. It just felt incredible to be moving again without any discomfort."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. It must feel great to have your mobility back. How are you and Grace planning to spend the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace has some things to finish up, so I think I'm just going to relax on the couch and watch a nature documentary tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect way to spend a relaxing Wednesday evening. Is Olive going to join you for some couch time?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. Olive is already curled up right next to me, probably waiting for me to turn the TV on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "She always knows when it's time to relax! I hope you enjoy the documentary and have a wonderful, restful evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely going to enjoy it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {
+      "back_injury.1": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

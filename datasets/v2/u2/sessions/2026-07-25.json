@@ -1,0 +1,79 @@
+{
+  "user_id": "u2",
+  "day": 147,
+  "date": "2026-07-25",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Marcus! How is your weekend in Portland starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's starting out really well. Grace and I had a pretty relaxed morning. I actually made a big batch of pancakes for breakfast, which was a nice treat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes are the ultimate weekend breakfast! Did you top them with anything special, or just classic maple syrup?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just classic maple syrup and some butter. Kept it simple but delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes simple is best. Are you planning to spend some time on your woodworking projects today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did! I spent a couple of hours out in the garage sanding down the coffee table I've been working on. It's really starting to come together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! Woodworking sounds like a great way to unwind after a busy week of teaching. Is the weather in Portland cooperating for outdoor or garage projects today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually. It's a beautiful, warm summer day today, so keeping the garage door open let in a really nice breeze."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely ideal. What are your plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are going to keep things pretty low-key tonight. Grace and I are planning to relax on the couch and watch a cooking competition show."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those are always so fun and relaxing to watch. Do you have a favorite one you're catching up on, or are you starting a new series?"
+    },
+    {
+      "speaker": "user",
+      "text": "We found a new season of one we like, so we're looking forward to that. It's always fun to see what they come up with under pressure."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely! It might even give you some ideas for your next kitchen creation. I hope you and Grace have a wonderful, relaxing night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "not mentioned",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: is building a cedar table"
+  ]
+}

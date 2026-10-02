@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 211,
+  "date": "2026-09-27",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Sunday going in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I'm doing alright, just a bit tired. I actually had to head into the hospital today. Normally on Sundays I don't have any commute at all, but they called me in. The traffic was absolutely terrible out there today, so Tom actually drove me so I wouldn't have to deal with the stress of driving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That was really nice of Tom to drive you! Dealing with bad traffic before a shift is never fun. Did you have time to get some lunch sorted out before you went in?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I just packed up some of the extra food I had made earlier in the week and brought it with me. It was nice to just heat that up in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That definitely sounds much easier than trying to find something at the hospital. Have you had any time for your sourdough baking lately, or has work been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't had a chance to bake in the last few days, unfortunately. Work has been pretty hectic, so my starter is just sitting in the fridge waiting for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Hopefully you'll get a chance to bake a fresh loaf soon. What did you do on the ride over with Tom? Did you two just chat, or did you listen to something?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom had to really concentrate on the road because of the traffic, so I ended up putting on my headphones and listening to a podcast that covers current medical and health updates. It's a nice way to stay informed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to make use of the drive. Speaking of your free time, have you been able to get any salsa dancing in recently, or are you mostly resting when you're off?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went out dancing last week, which was incredibly fun and a great way to relieve some stress. But yes, this weekend has been mostly about resting up and getting through these shifts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's good that you got to go last week! Balancing night shifts at the ER is no joke. Is the Phoenix heat finally starting to break a bit now that we're late in September?"
+    },
+    {
+      "speaker": "user",
+      "text": "Slightly! It's still pretty hot during the peak afternoon hours, but the early mornings and late nights are starting to feel a bit more comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a relief. Well, I hope the rest of your shift is quiet and you get some peaceful rest afterward."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I should probably head back to the floor now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "packed leftovers",
+      "commute": "got a ride from Tom",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She is hoping to go to a salsa class this coming Friday."
+  ]
+}

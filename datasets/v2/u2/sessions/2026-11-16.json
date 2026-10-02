@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 261,
+  "date": "2026-11-16",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Monday. How is your week starting off in Portland? Have you and Grace made any more progress on planning that family trip to Japan for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! We actually spent some time looking at Tokyo hotels yesterday. It's getting exciting! Today is off to a solid start. I made myself a protein smoothie for breakfast before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is a great way to fuel up! Tokyo hotels sound like a fun rabbit hole to dive into. Are you getting any time for your hobbies lately, like tennis or woodworking, or has the science department been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "The department is busy as usual since the new school year started, but I'm managing. I haven't had much time for woodworking lately, but I did manage to hit the gym for some weights today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job fitting in gym weights on a busy Monday! That takes some discipline. How are things going at the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well. We're prepping for some upcoming lab assessments, so I've been organizing supplies and coordinating with the other science teachers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Organizing lab supplies sounds like quite a logistical task! Do you have a favorite lab experiment that you always look forward to teaching?"
+    },
+    {
+      "speaker": "user",
+      "text": "I always enjoy the chemistry labs where we do flame tests. The students love seeing the different colors, and it's a classic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Flame tests are classic for a reason! The visual impact is always a hit. Are you planning on getting any tennis in soon, or is the schedule too packed?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'd love to get on the court, but my schedule is pretty tight, so we'll see. Grace and I might just focus on more Japan trip research in our free time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. Planning a big trip takes a lot of research, but it's half the fun. Let me know if you need any help looking up travel details or organizing things!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, I appreciate that! I'll definitely keep that in mind as we get closer to booking. Have a good evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "gym weights",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The new school year started a few months ago.",
+    "invention: The user plans to play a tennis match this weekend."
+  ]
+}

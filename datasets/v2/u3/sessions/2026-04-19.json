@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 50,
+  "date": "2026-04-19",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Sunday starting out? Were you able to get some decent sleep after your ER shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I actually slept pretty well. It's already warming up here in Phoenix, but I still wanted something warm when I woke up, so I made a steaming mug of sweet hot cocoa."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A warm cup of cocoa is always a nice treat. How are things going with Tom? Did you two get to hang out?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did! We actually cooked a really nice dinner yesterday, and I ended up bringing the extra portions from that in a container for my lunch at work tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Having a home-cooked meal ready to go is the best, especially for a long night shift. What are you doing to unwind before you head in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Right now I'm just relaxing and listening to this really funny audio show where these two comedians joke about random news stories."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A comedy show sounds like the perfect way to get into a good headspace. Have you had any time for salsa dancing recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not in the last few days because work has been so busy, but I'm definitely looking forward to getting back on the dance floor soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure you'll find some time for it soon. It must be tough balancing those intense hospital hours."
+    },
+    {
+      "speaker": "user",
+      "text": "It can be, but I'm getting used to the rhythm of it. Having my funny audio episodes helps me ease into the workday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Laughter really is the best medicine, especially before a shift of providing medicine to others! I hope tonight is relatively quiet for you."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm going to finish up here and start getting ready. I'll chat with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "hot chocolate",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: lunch should be 'packed leftovers', conversation gives 'other'"
+  ]
+}

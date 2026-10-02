@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 594,
+  "date": "2027-10-15",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Daniel! Happy Friday. How is your morning going over in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well. I decided to treat myself on the walk to the office today and stopped by the local baker. I got one of those crescent-shaped, buttery, laminated French pastries that leaves flaky crumbs absolutely everywhere. It was amazing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those are the absolute best, even with the crumb hazard! A perfect way to kick off the weekend. Are you at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm at my desk. It's a pretty relaxed Friday, so I dressed down a bit. I'm wearing a soft, checkered plaid button-down made of brushed cotton, paired with some classic blue denim pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comfortable and perfect for autumn. It's nice to have a casual day at the office. Have you been able to get out with your camera lately, or has work been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to capture a few shots of the city skyline during golden hour last weekend. But today is all about putting my head down and finishing up some project proposals. I've got my headphones on to keep me focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good playlist makes all the difference when you need to focus. What are you listening to today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've got a mix of underground guitar bands and some self-released alternative tracks from independent labels playing. It's got a really nice, steady energy that keeps me moving without being distracting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great soundtrack for a productive Friday. How is Leah doing? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She's actually heading back to the studio tomorrow morning to glaze some of the bowls she threw last week. Her schedule at the hospital keeps her pretty busy, so she really values having that creative escape."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's so important to have a creative outlet to unwind. Do you have any plans of your own this weekend? Maybe some chess or climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually meeting up with a friend for a few games of chess tomorrow afternoon at our usual spot. Since my wrist healed up completely, I've been thinking about getting back into climbing soon, but for this weekend, I think I'll just stick to the chessboard and spinning some of my grandfather's old records."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bakery croissant",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

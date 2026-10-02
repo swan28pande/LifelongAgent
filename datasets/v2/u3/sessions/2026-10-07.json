@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 221,
+  "date": "2026-10-07",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going so far at the outpatient clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It was a nice, relaxed morning. I actually had time to stop and grab a hot spiced tea latte on my way, which was a great treat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a chai latte sounds like the perfect morning treat. Did you drive in to work today, or was the commute okay?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually rode the local transit train today instead of driving. It was nice to just sit back and relax for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, taking the light rail is a great way to avoid the Phoenix traffic. Did you read a book or just zone out during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I ended up listening to a show where a couple of stand-up comedians just riff on weird news stories. It was absolutely hilarious, and I had to struggle not to laugh out loud in my seat!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, listening to a comedy podcast on public transit is always a dangerous game! It's so hard to keep a straight face. Did you manage to pack a lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put together a quick sandwich on some of my homemade wild-yeast bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A fresh sourdough sandwich sounds delicious. Your baking skills must make lunchtime a lot more exciting."
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely does! It beats buying lunch everyday, and the crust on this loaf turned out perfect."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. Are you seeing Tom later tonight, or is it a quiet evening for you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a quiet evening at home tonight. Tom and I are planning to catch up tomorrow instead, so tonight I'm just going to relax."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

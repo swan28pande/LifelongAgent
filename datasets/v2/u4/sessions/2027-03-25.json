@@ -1,0 +1,87 @@
+{
+  "user_id": "u4",
+  "day": 390,
+  "date": "2027-03-25",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Thursday. How has your day been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty exciting day, actually. I started off on a good note by making a quick breakfast—toasted some sourdough and topped it with a pair of sunny-side-up eggs. But the really big news is that Leah accepted that Chicago job offer today! She's officially starting her new job as a pediatrician at a Chicago hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, congratulations to Leah! That is incredible news. A pediatrician at a Chicago hospital is such a fantastic role for her. How is she feeling about taking the leap and accepting it?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's absolutely thrilled and a little relieved to have the decision finalized. We've been talking about it all morning. It’s a huge step, but she's so ready for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine, what a milestone! How are you holding up with all the excitement? Did you manage to get any work done today amidst the big news?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually had a major presentation today, so I had to look the part. I put on a sharp, long-sleeved collared shirt and some casual cotton trousers in a khaki shade before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a solid professional look. How did the presentation go with the design client?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went really well! After it wrapped up, I needed to focus on some solo design drafting, so I put on my headphones and listened to some lo-fi alternative guitar bands—you know, that independent label rock sound. It really helped me lock in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to zone in and get things done. Did you manage to squeeze in any physical activity today to break up the desk work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I actually spent my lunch break over at the indoor bouldering facility, scaling some of their vertical routes. It felt great to get moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! It's great to hear you're getting some wall time in. How is your wrist holding up with the climbing lately? No lingering issues from the fracture?"
+    },
+    {
+      "speaker": "user",
+      "text": "None at all. It feels completely back to normal, and I was able to grip the holds today without any pain or stiffness. I'm really glad to be fully recovered."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful news, especially with all the exciting changes on the horizon for you and Leah. I'm so happy for both of you. Have a great evening celebrating!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. Catch up tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "climbing gym",
+      "outfit": "button-down and chinos",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "partner_job.1": true,
+      "other.leah.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to move to Chicago with Leah"
+  ]
+}

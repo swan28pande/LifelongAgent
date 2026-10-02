@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 100,
+  "date": "2026-06-08",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Daniel! How is your Monday starting out? Ready for the work week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's off to a great start. I had a quick bowl of toasted oat clusters with some Greek yogurt for breakfast, and then I actually completed my 10K race this morning!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! Congratulations on finishing the 10K! How did the run feel, and did you hit the time you were hoping for?"
+    },
+    {
+      "speaker": "user",
+      "text": "It felt amazing. The weather was perfect, and I managed to shave a couple of minutes off my personal best. Leah was at the finish line cheering me on, which was a huge boost."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is incredible news! Having that support at the finish line makes a big difference. How are your legs holding up now that the adrenaline has worn off?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little tight, but not too bad! I still had to get dressed and ready for the design firm, so I put on a crisp, long-sleeved collared shirt and some comfortable khaki trousers to keep things professional but easy on my legs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible and sharp-looking choice for recovery day at the office. Did you have to do your usual commute, or are things a bit more low-key today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm heading in, but my routine was a bit different earlier. I usually do some cycling in the mornings, but my local gym was closed today for maintenance. Because of that, I ended up just going for a really long, brisk walk through the neighborhood to keep moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An active recovery stroll is a perfect alternative, especially when your usual spot is closed. How is the weather looking out in Minneapolis today for being outdoors?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's absolutely beautiful here today. Very clear skies and a cool breeze, so it was actually really nice to be out. I even brought my camera along and took a few shots of the morning light hitting the brick buildings downtown."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds picturesque! Did you capture any particular angles or details that stood out to you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I got some really dramatic shadow patterns on an old warehouse facade. I'm looking forward to editing them later. Anyway, I should probably get going so I'm not late for my morning meeting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a wonderful day at the office, Daniel, and congrats again on the race!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "granola",
+      "workout": "long walk",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "ten_k.1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

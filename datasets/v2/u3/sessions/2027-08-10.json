@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 528,
+  "date": "2027-08-10",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your day going so far at the outpatient clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty busy, but we are getting through the patient list. I'm actually just sitting down for a quick break now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad you're getting a moment to rest. Did you end up bringing something to eat today, or did you try that new sandwich shop nearby?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually packed a lunch today. I made a bowl at home last night with cilantro-lime rice, black beans, salsa, and a bit of avocado. It's really good!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and very fresh! Did you have an easy time getting to work today, or was the Tucson traffic bad?"
+    },
+    {
+      "speaker": "user",
+      "text": "It wasn't too bad today. I got behind the wheel of my hybrid and drove in, and luckily the highway was moving pretty smoothly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a relief! It's nice when the commute starts off stress-free. How is the car doing, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's doing great! It's been so reliable, and I'm really glad I bought it. It makes the daily drive a lot more pleasant."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful to hear. And how are things going with Tom? Have you two had any time to think about the summer 2028 wedding plans lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is doing really well! We actually haven't done much wedding planning this week. We're just taking a little break from it all since we still have plenty of time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very healthy approach. There is definitely no need to rush. Are you still finding some time for your sourdough baking or the Italian course in the evenings?"
+    },
+    {
+      "speaker": "user",
+      "text": "I baked a couple of loaves over the weekend, but I definitely need to catch up on my Italian lessons tonight if I can. It's hard to balance everything sometimes!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "homemade burrito bowl",
+      "commute": "driving",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Plans to potentially tour a historic ranch wedding venue this weekend"
+  ]
+}

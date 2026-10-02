@@ -1,0 +1,105 @@
+{
+  "user_id": "u3",
+  "day": 260,
+  "date": "2026-11-15",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Sunday, Sofia! How is your day going so far? Are you getting some rest, or are you working a shift at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I am working a day shift today. It's been pretty busy, but I started my day off right. I whisked some of that green tea powder with steamed milk to make a cozy drink before I headed out this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a nice warm matcha beverage sounds like a perfect morning ritual! Did you decide to skip using your roommate's new espresso machine today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I love the espresso machine, but I really wanted a break from heavy coffee today. Plus, I needed to make sure I had my energy up for lunch. I actually boxed up the extra portion of the pasta dinner I made last night and brought it with me to heat up in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. Having a home-cooked meal ready to go during a busy nursing shift makes a huge difference. Did you manage to get some quiet time to yourself while you ate?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put my headphones on and listened to a really funny show where a couple of stand-up comedians review terrible movies. It had me laughing out loud in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good comedy show is the perfect escape when you need a mental break. It sounds like you had a very entertaining lunch hour!"
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely kept things light. Speaking of shows, though, one of the other nurses at the clinic recommended a true-crime podcast to me today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, interesting! True crime is such a popular genre. Did she say what the show is about?"
+    },
+    {
+      "speaker": "user",
+      "text": "She said it focuses on solving cold cases from the nineties. She was really hyping it up, saying she gets completely hooked on every episode."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Are you tempted to give it a listen, or do you prefer to stick to lighter comedy stuff to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might check out an episode or two eventually, but honestly, after a long day of patient care, sometimes the heavy mystery stuff is just too intense. I usually need something more cheerful."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense. You want something that helps you decompress, not something that adds suspense to your evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. Plus, Tom and I are actually going salsa dancing later tonight after I get off work, so I definitely want to keep the energy positive and upbeat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful Sunday evening plan! Have you and Tom been working on any new dance routines lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've been practicing our spins and trying to get our timing a bit cleaner. I just hope my feet aren't too sore from being on them all day at the clinic!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure once the music starts, you'll find your second wind. I hope you and Tom have a fantastic time dancing tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm really looking forward to it. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {
+      "podcast_rec.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

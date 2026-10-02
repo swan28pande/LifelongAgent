@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 75,
+  "date": "2026-05-14",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Thursday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's been a pretty busy day at school with my chemistry classes, but I started the morning on a good note with a warm bowl of oatmeal for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a great way to fuel up for a busy day of teaching. How are your students doing with their lab work lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're actually doing pretty well, we're wrapping up a big unit. I managed to clear my head after the final bell by going for a quick run, which really helped shake off the classroom energy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A run is perfect for transitioning from work mode to home mode. Do you have any plans to head to your workshop for some woodworking this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not tonight, my hands need a break from the tools. I'm just planning on relaxing on the couch with Grace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much-needed break. Are you two planning to watch anything good on TV tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we're going to put on a cooking competition show. We love trying to guess who is going to win the challenges."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those cooking competition shows are so entertaining! It's always fun to see what they can create under pressure."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, it's highly addictive. It's the perfect low-key entertainment for us tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely. How has the Portland weather been for your outdoor runs lately? Hopefully, it's staying relatively dry for you."
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been quite nice and dry today, perfect running weather. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "run",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'cooking competition show', conversation gives 'other'"
+  ]
+}

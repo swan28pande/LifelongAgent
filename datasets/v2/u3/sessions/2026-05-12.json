@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 73,
+  "date": "2026-05-12",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you're having a good Tuesday. Are you gearing up for another night shift at the ER, or do you have some downtime today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, I'm just slowly waking up and getting ready for the night ahead. I'm sitting here sipping on a big glass of chilled, slow-steeped coffee that I keep in the fridge. It's the only thing that really wakes me up fully before a shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing, especially with the Phoenix heat. Does that give you enough of a kick to get through the night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I need all the energy I can get, especially since I'll be catching the late-evening transit bus to get to the hospital tonight. It takes a bit longer, but it's nice to just zone out before the chaos starts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking the bus is a great way to decompress and mentally prepare. How do you usually handle meals during those long overnight hours? Do you pack something?"
+    },
+    {
+      "speaker": "user",
+      "text": "Usually, I try to, but today I didn't have time to prep. I ended up just getting a quick plate of leafy greens from the hospital cafeteria's salad bar during my midnight break. It was actually pretty fresh!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "The cafeteria salad bar is a solid backup option! It's good to get some fresh greens in during a busy shift. Have you been able to fit in any salsa dancing lately, or has work been too demanding?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went to a class last week! It was so much fun and a great way to relieve stress. I love dancing, even if my feet hurt afterward. Tom came with me too, which was nice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful that you and Tom went together! It sounds like a perfect stress-reliever. How have things been at the ER otherwise? Has it been exceptionally busy lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It has been pretty hectic. Tuesday nights can be unpredictable, but we have a good team on the night shift, so we manage to keep our spirits up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A strong team makes all the difference, especially in the ER. I hope tonight goes smoothly for you and isn't too overwhelming."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I'm going to finish up my coffee and start heading out. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "cafeteria salad",
+      "commute": "night bus",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Plans to go to a salsa social on Thursday night."
+  ]
+}

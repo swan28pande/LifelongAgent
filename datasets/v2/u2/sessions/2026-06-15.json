@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 107,
+  "date": "2026-06-15",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Monday starting out in Portland? Did you get a chance to work on any woodworking projects over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I actually spent some time yesterday working on a small shelf. My Monday is going okay so far, though it's been a busy one. I made sure to have some oatmeal for breakfast to keep my energy up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a great choice for a busy morning. How are things at the high school? Are you almost done with the term?"
+    },
+    {
+      "speaker": "user",
+      "text": "Almost! Just final grading and getting the chemistry lab organized for the summer. It's a lot of administrative stuff right now, so my brain is a bit fried."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine. Hopefully you can get some rest tonight. Did you have any plans to active-relax after school, or are you just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I did manage to get to the gym weights after I finished up my grading. It felt good to sweat a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting some lifting in is a perfect way to burn off that grading stress. Did Grace manage to join you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Grace had some errands to run after work, so I just went by myself. She is actually out visiting a friend this evening, so I have the house to myself for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet house sounds like the perfect opportunity to relax. Do you have any plans for the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to put on a nature documentary and unwind on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. Do you have a specific one in mind, or are you just going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably just browse whatever looks interesting. Just something quiet with nice scenery to help me relax before bed."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: User has a garage workshop.",
+    "invention: User has always found the ocean deeps fascinating."
+  ]
+}

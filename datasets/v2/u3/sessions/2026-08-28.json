@@ -1,0 +1,82 @@
+{
+  "user_id": "u3",
+  "day": 181,
+  "date": "2026-08-28",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Sofia! Hope you're having a good Friday in Phoenix. Are you resting up before a night shift, or do you have some fun weekend plans ahead?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Just taking it easy today. I actually just finished having a bite to eat. I toasted up a couple of slices of my home-baked wild-yeast bread and put some sliced chicken and avocado inside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! Your sourdough baking skills are seriously impressive. Did Tom get to try any of this batch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not this one, he's been busy with work, but I'll save some for him. Oh, by the way, my roommate just bought a brand new espresso machine, so the kitchen has been smelling incredible all morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A high-end espresso machine is a game-changer for the kitchen. Did you just relax and enjoy your sandwich, or were you catching up on something while you ate?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was actually listening to a show where two stand-up comedians just roast each other and talk about absurd news stories. It had me laughing out loud."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Laughing is the best way to start the afternoon! It's always great to find a funny podcast that actually delivers. Are you working tonight at the ER, or is it a salsa dancing night?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have a shift tonight at the hospital, so I'm trying to keep things pretty low-key before I head in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Got it. Shift work in the ER is demanding, so getting some laughs and good food in beforehand is definitely a smart move. How are you feeling energy-wise? Fully recovered from that flu bout?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh yeah, completely back to normal! I've been back on my feet and feeling 100% for a while now, thank goodness."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that! The hospital must be keeping you busy. Hopefully tonight's shift goes smoothly and isn't too chaotic."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm hoping for a quiet night, but you never know in the ER. I should probably go get ready now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "invention: has a roommate"
+  ],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {
+      "distractor0": true
+    },
+    "causes": {},
+    "inventions": [
+      "has a roommate"
+    ]
+  },
+  "first_try_failures": [
+    "statement_missing: distractor0 (her roommate bought a new espresso machine (this happened on 2026-08-27))",
+    "invention: She has a roommate."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "user_id": "u4",
+  "day": 232,
+  "date": "2026-10-18",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How's your Sunday going over in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a good day. I actually spent the morning doing some drafting and sketches for work, so I've been pretty focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A busy Sunday! Do you find it easier to concentrate when you have some music playing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I had some music on today. I usually opt for those mellow, repetitive instrumental tracks that have a bit of a vinyl crackle to them. It's really relaxed, low-tempo stuff without any lyrics, which is perfect background noise for drawing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, those chill, dusty instrumental loops are great for getting into a creative flow. Did you manage to take a break or get some exercise in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I didn't want to deal with the cool weather outside, so I opted for a workout indoors. I hopped onto a fixed-gear setup that lets me pedal in place and did a sweaty session on that for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to keep up your cardio indoors. Have you been able to do much outdoor cycling or climbing lately, or are you still taking it easy on your fractured wrist?"
+    },
+    {
+      "speaker": "user",
+      "text": "The wrist is feeling okay, but I'm still being careful with the climbing. I'm hoping to get back to it soon. Tonight is all about a hearty meal, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what's on the menu for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually have a whole seasoned bird baking in the oven right now. The kitchen is smelling incredible with the aroma of roasted poultry."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and perfect for a cozy Sunday evening. Will Leah be sharing that with you?"
+    },
+    {
+      "speaker": "user",
+      "text": "She sure will. She's working on some ideas for her pottery class at the moment, but she'll be ready to eat once the timer goes off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a wonderful evening ahead for both of you. I hope you enjoy the meal and have a smooth start to your week tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "stationary bike",
+      "outfit": "not mentioned",
+      "music": "lo-fi beats",
+      "dinner": "roast chicken"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'lo-fi beats', conversation gives 'other'",
+    "invention: Leah's pottery class is on Saturdays.",
+    "invention: Daniel owns an indoor training cycle.",
+    "invention: Daniel is working on a community center project at his design firm.",
+    "invention: Daniel's fractured wrist is healing well, but he still cannot put full weight on it."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 724,
+  "date": "2028-02-22",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How has your Tuesday been going at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a pretty good day. I drove my hybrid to work today, which made the morning commute nice and easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Driving definitely saves some energy, especially after your ankle injury a while back! How is your ankle feeling these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it's completely back to normal, thank goodness! But driving is still just super convenient. I actually had enough time before leaving to pack a lunch—I put together a homemade bowl with black beans, rice, and fajita veggies to eat during my break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and satisfying lunch to prep at home. Did you have any downtime during your commute or your break to listen to anything?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did! On the drive in, I finally started listening to that real-life investigative murder mystery series that my coworker recommended to me. It's really gripping."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the true-crime one! I'm glad it's living up to the recommendation. It's always great when a colleague points you toward a good show. How are things going with Tom and the wedding planning for summer 2028?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! We've been looking at a few different indoor venues here in Tucson because we definitely want to avoid the summer heat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An indoor venue is a very smart move for a summer wedding in Tucson. Have you two had a chance to tour any places yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, we're still just browsing options online and narrowing down our list. It's fun to look at all the photos together, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a really exciting phase of planning. I hope you and Tom find the perfect spot! Give Dash a pat for me when you get home."
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely will, he's probably lounging on the sofa waiting for his dinner right now. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "homemade burrito bowl",
+      "commute": "driving",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: hired a caterer for her wedding"
+  ]
+}

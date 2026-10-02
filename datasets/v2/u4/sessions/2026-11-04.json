@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 249,
+  "date": "2026-11-04",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Wednesday. How are things going over in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good. Just getting ready to head out the door for the office. I'm actually wearing a crisp, collared, long-sleeve top with buttons down the front, paired with some classic tan cotton-twill trousers today. Trying to look a bit more polished for a client presentation we have later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great professional look! Very sharp for a presentation. Did you have time to grab a bite before getting dressed?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I made something quick but filling: I blended some frozen mango and spinach until it was super thick, poured it into a deep dish, and ate it with a spoon topped with sliced bananas and hemp seeds. It was really refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, that sounds like a delicious way to start the morning. Perfect fuel for a busy day at the design firm. How has your wrist been holding up lately during your daily activities?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's doing great, thanks for asking! It feels completely back to normal. I actually went rock climbing last weekend and didn't feel any twinges or weakness at all, which was a huge relief."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! I'm so glad the recovery went well and you're back on the climbing wall. How is Leah doing? Has she made anything new in her pottery class lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well! She actually brought home her first finished piece a couple of days ago—a slightly lopsided ceramic mug. It's charming, and she's super proud of it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Lopsided mugs have the most character! I bet it's perfect for morning coffee. Have you heard from your brother Kwame recently? How is he liking Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we chatted on Sunday. He's really settling in nicely. He loves the warmer weather down there, though he says he misses the lakes up here in Minnesota."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! The Minneapolis lakes are hard to beat, even if it gets cold. Have you been able to take your camera out or go for any rides lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went for a nice ride on my bike around Lake Bde Maka Ska on Monday evening. The autumn colors are starting to fade, but I managed to snap a few nice photos of the sunset."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Sunset by the lake is always a great photo opportunity. Good luck with your presentation today, Daniel! Let me know how it goes."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

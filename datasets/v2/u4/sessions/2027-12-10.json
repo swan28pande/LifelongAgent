@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 650,
+  "date": "2027-12-10",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Friday. How are things going over in Chicago today? Is the winter cold keeping you indoors, or have you been busy at the architecture studio?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It is pretty chilly today, but I'm staying warm. I actually had a nice, slow start this morning with a cold oat mixture I prepped in a jar last night. It was nice not having to cook anything right after waking up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very peaceful way to ease into a Friday. Did you have another one of those early 7 am client calls to prepare for?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, yeah. Since it was so early, I kept things as simple as possible when getting dressed. I just threw on some dark denim pants and a plain black short-sleeved cotton tee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic and comfortable—perfect for a busy day at the studio. What's the vibe like at work today? Are you listening to anything good while you focus on your designs?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I've got some tunes playing from some independent, guitar-heavy alternative bands. It's the perfect background noise to keep me energized while working through these floor plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An indie playlist is always a great motivator! Speaking of the studio, is your coworker still showing up in those sharp suits every day?"
+    },
+    {
+      "speaker": "user",
+      "text": "He sure is! He looks like he's about to present to a corporate board, which is hilarious next to my casual tee. It's a running joke now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I love that. It adds some great character to the office. What are your plans for the evening? Are you and Leah doing anything fun to kick off the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're actually keeping it low-key tonight. Leah has had a busy week at the hospital, so I offered to make dinner. I'm going to whip up some deep-fried battered whitefish with a side of crispy potato wedges."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, homemade fish and chips! That sounds absolutely perfect for a cold Friday night, and it definitely fits your pescatarian diet beautifully."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, it's one of my absolute favorite comfort meals to make. It's going to be a relaxing night."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "overnight oats",
+      "workout": "not mentioned",
+      "outfit": "black t-shirt and jeans",
+      "music": "indie rock",
+      "dinner": "fish and chips"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: outfit should be 'black t-shirt and jeans', conversation gives 'other'"
+  ]
+}

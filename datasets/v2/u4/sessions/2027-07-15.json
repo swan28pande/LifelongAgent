@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 502,
+  "date": "2027-07-15",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Thursday is off to a great start in Chicago. How's everything going with you and Leah today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Everything is good. I had a really nice start to the morning. I treated myself to a toasted ring-shaped bread with a hole in the center, spread with cream cheese and topped with thin slices of cured, ocean-caught pink fish. It was delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a perfect morning treat. Definitely a classic combo! Are you heading into the design firm today, or working on things from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. It's been pretty busy, but there's a funny vibe. One of my fellow project designers suddenly started wearing a full three-piece suit to the office every single day. No one knows why, since we don't have any client presentations scheduled!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, maybe they are just trying to bring some formal energy to the creative space! How do you stay focused and tune out the office chatter when you need to get things done?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually put my headphones on. Today I've been listening to a playlist of independent guitar-driven music from non-major label alternative bands. It's got a great tempo for knocking out design specs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, some solid underground tunes always do the trick for focus. By the way, have you heard from your brother Kwame recently? How is he liking Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I talked to him yesterday! He's doing really well. He just told me he started training for his very first marathon, so he's busy mapping out long weekend runs down there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, a marathon! That is a huge undertaking. Tell him I wish him the best of luck with the training. Speaking of staying active, have you managed to get any exercise in yourself lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! Before work this morning, I went to the community center and did several laps back and forth in the indoor pool. It was incredibly refreshing to just glide through the water."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start the day, and very low-impact! Is your wrist feeling completely back to normal during those workouts and when you go rock climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely no issues at all. It feels fully strong, which is great because I'm hoping to get some climbing in this weekend, and maybe take my camera out for some photography too. Anyway, I should get back to these design reviews!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoked salmon bagel",
+      "workout": "swim",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "other.kwame.1": true,
+      "distractor3": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

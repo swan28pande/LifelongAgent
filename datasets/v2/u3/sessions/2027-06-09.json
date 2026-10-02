@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 466,
+  "date": "2027-06-09",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Sofia! How was your Wednesday? Did you have a busy shift at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, it was pretty hectic, but we made it through. I actually ended up taking my hybrid to get to the clinic today because I had some errands to run right after my shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, driving always makes running errands after work a lot easier. Did you listen to anything interesting on the road to keep you company?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I queued up an audio program that teaches basic Italian grammar and vocabulary. Since I started that online course, I've been trying to get as much exposure as possible, and it was a great way to practice during the drive."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to make use of your commute! How is the online Italian course going overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going really well, thanks! It's challenging but a lot of fun. I actually had a nice break during my shift today and ate a homemade turkey sandwich on some of my freshly baked wild-yeast bread in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Your sourdough baking skills are definitely putting in work. Have you and Tom been enjoying the recent loaves?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely, Tom is always happy when there's a fresh loaf on the counter. He's been my primary taste-tester."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's sweet! Speaking of you two, how have things been going with the wedding planning for summer 2028? Are you starting to look at venues yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're taking things pretty slow since we have plenty of time, but we've browsed a few ideas online. It's nice to just enjoy being engaged without feeling rushed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very stress-free way to handle it. How is the weather treating you in Phoenix today? I imagine it's getting pretty warm."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. The Phoenix heat is really starting to pick up, so I was definitely grateful for the air conditioning in my car today!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Considering spending her honeymoon in Italy"
+  ]
+}

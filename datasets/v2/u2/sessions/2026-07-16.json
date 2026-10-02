@@ -1,0 +1,76 @@
+{
+  "user_id": "u2",
+  "day": 138,
+  "date": "2026-07-16",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Thursday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going well, thank you. I had a pretty relaxed morning. I just made myself a bowl of oatmeal for breakfast and sat outside for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely, peaceful way to start the day. Are you still fully in summer mode, or have you started thinking about lesson plans for your high school chemistry classes yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, I'm definitely still in summer mode! I'm not ready to think about chemistry lesson plans just yet. I've been spending my free time on some woodworking instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all! Summer is meant for enjoying your hobbies. What kind of woodworking project are you working on lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually working on a small table. It's been nice to just take my time with the sanding and the assembly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great project. It's so satisfying to see something come together like that. Do you and Grace have any plans for the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too wild. Once Grace is done with her day, we're planning to cook dinner and then watch a nature documentary tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect, low-key way to spend a Thursday evening. Do you have a specific one lined up, or are you going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We found one about mountain wildlife that looked really interesting, so we're going to try that one."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds fascinating! I hope you both enjoy it and have a very relaxing evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'nature documentary', conversation gives 'other'",
+    "invention: has a garage",
+    "invention: loves ocean or deep-sea creatures"
+  ]
+}

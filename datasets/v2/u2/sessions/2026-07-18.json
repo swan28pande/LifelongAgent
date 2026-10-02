@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 140,
+  "date": "2026-07-18",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Saturday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well, thanks! It's been a very relaxing start to the weekend. I actually made some pancakes for breakfast this morning, which was a nice treat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes are the perfect way to kick off a Saturday. Do you have any plans for the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm planning to spend a couple of hours in the garage doing some woodworking. I've got a small project I want to work on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to spend the afternoon. What are you building?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a simple wooden shelf for the house. It's nice to have some quiet time to work on it, especially now that school is out and I have a break from teaching chemistry."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, summer break must feel wonderful. Is the weather in Portland cooperating for a garage day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, the weather is beautiful today. It's warm but not too hot, just a perfect July afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely ideal. Do you and Grace have any plans for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are keeping it pretty low-key. We're just going to put on a nature documentary after dinner and wind down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary is a great choice for a quiet evening. Do you have a specific one in mind, or are you going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We'll probably just browse and find something interesting. It's always nice to just sit back and watch something relaxing."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: Marcus and Grace love ocean life"
+  ]
+}

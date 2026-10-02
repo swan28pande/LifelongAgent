@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 34,
+  "date": "2026-04-03",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you're having a good Friday. How is everything going in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going well, thanks. Just winding down with a nice, warm spiced tea with steamed milk before I head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and cozy. Are you heading into the hospital for a night shift tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am. I decided to order a ride through an app tonight instead of driving myself, so I could just relax on the way there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart way to save your energy for the ER. Did you listen to anything interesting during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on a show that discusses the latest medical developments and global wellness updates. It keeps me in the loop."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Always good to stay updated, especially in your line of work. Have you had a chance to take a break and eat yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just sat down for my break, actually. I brought some container food from yesterday's dinner that I packed up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Leftovers are the best for a busy night shift. I hope it's not too chaotic in the ER tonight. How has Tom been doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually surprisingly quiet for a Friday night, knock on wood! Tom is doing great, he actually helped me pack my food earlier."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's so sweet of him! Glad you're having a calmer shift. Are you planning on getting some rest tomorrow, or maybe squeezing in some salsa dancing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely resting first! I love salsa dancing, but after a long night shift, my bed is the only thing on my mind. I'll probably just sleep all morning."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "packed leftovers",
+      "commute": "rideshare",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to go dancing with Tom tomorrow night"
+  ]
+}

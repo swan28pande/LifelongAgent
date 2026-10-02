@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 267,
+  "date": "2026-11-22",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Sunday going? Did you get a chance to do any baking today, or are you working at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually a shift day for me at the clinic. No time for baking today, but I did make sure to pack up some of the pasta I made yesterday for my lunch, so I have a good home-cooked meal ready."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and much better than cafeteria food! How has the shift been so far? Did you get a chance to listen to that true-crime podcast your coworker recommended during your break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually decided against the true-crime one today. I wanted something much lighter, so I listened to this hilarious show where a couple of stand-up comedians riff on wacky news stories. It really made me laugh during my downtime."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A comedy podcast sounds like the perfect way to recharge during a busy shift! It's good to have a laugh when you're working hard. Have you and Tom been up to anything fun this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually had a really nice, quiet dinner together yesterday evening. It was great to just sit down, catch up, and relax after a busy week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful evening. How is the Phoenix weather treating you today? Is it starting to feel a bit more like autumn?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is absolutely beautiful today! It's right around 75 degrees and sunny. It finally feels like the perfect fall weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds gorgeous, especially compared to the summer heat. Are you hoping to get some salsa dancing in sometime soon to enjoy the cooler weather?"
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely want to! I haven't looked at my schedule for the upcoming week yet, but I'm hoping I can find some time to go dancing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get to go! It's such a great way to unwind. By the way, how have you been feeling lately? Are you completely back to normal after that bout of flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, yes, I'm feeling 100% back to my usual self now, thank goodness. Thanks for checking in! I should probably head back to my shift now, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear you're fully recovered! Have a great rest of your shift, Sofia, and we'll chat again soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to attend a salsa dancing social next Friday with Tom"
+  ]
+}

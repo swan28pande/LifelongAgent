@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 287,
+  "date": "2026-12-12",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Saturday. How is your weekend starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting off really well. It's so nice to have a relaxed morning. I didn't have to travel to the clinic or do any commute today since it's my day off, so I just took things super slow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. Did you end up trying out your roommate's new espresso machine to kick off the morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually didn't feel like coffee today. Instead, I whisked up some green tea powder with warm, frothy milk to make a cozy matcha latte at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte sounds like a perfect, soothing choice. Did you cook a big breakfast to go with it, or did you keep it simple?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually skipped making breakfast at home. A few friends texted, so we ended up meeting up and going out for a big brunch together instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Brunch out with friends is the absolute best way to spend a Saturday afternoon! Are you planning to do any sourdough baking or anything else creative later today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No baking today, my sourdough starter is just resting. I've mostly just been lounging around this afternoon. I actually had some quiet time and put on a podcast while chilling on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Was it that true-crime podcast your coworker recommended a while back, or did you find something else?"
+    },
+    {
+      "speaker": "user",
+      "text": "I wasn't really in the mood for true crime today, so I bypassed that one and queued up a really funny comedy podcast instead. It had me laughing the whole time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is always a great mood booster. Do you have any plans for the evening, maybe with Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! Tom and I are getting ready to head out for some salsa dancing tonight. I'm really looking forward to it."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "brunch out",
+      "commute": "no commute",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: morning_drink should be 'matcha latte', conversation gives 'other'"
+  ]
+}

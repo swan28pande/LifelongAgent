@@ -1,0 +1,72 @@
+{
+  "user_id": "u2",
+  "day": 30,
+  "date": "2026-03-30",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Monday. How is your week starting off at the high school? Did you get any woodworking time in over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Monday is going alright, just the usual grading. I did manage to spend a little time in the garage on my latest woodworking project yesterday. This morning was a bit rushed, so I just had a quick bowl of oatmeal before heading out to school."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is always a reliable, quick start to a busy school week. Did you manage to squeeze in any exercise today, or is that waiting for later?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually got a run in this afternoon right after my last class. The Portland weather cleared up just enough for a few miles, which felt great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. Getting a run in before the evening really helps clear the head after teaching chemistry all day. How is Grace doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing well, thanks for asking! She had a busy day too. We're both looking forward to just relaxing tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You both definitely earned a quiet evening. Do you have any plans to watch anything on TV tonight while you unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're planning to watch a cooking competition show tonight. It's our go-to when we just want something light and fun to watch together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those cooking competition shows are so addictive! Is there a specific one you're currently following, or do you just browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're currently watching one where they have to bake under a massive time crunch. It's highly stressful but very entertaining!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those time-limit baking challenges are intense! It's amazing what they can pull off in such a short window. I hope you and Grace have a great time watching it tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a nice, relaxing way to end the day. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "run",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

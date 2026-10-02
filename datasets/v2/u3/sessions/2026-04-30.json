@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 61,
+  "date": "2026-04-30",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday starting off? Are you getting ready for another night shift at the ER, or do you have some time to relax today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I'm actually already at the hospital. I decided to walk to work today instead of taking my usual rideshare since the weather was so gorgeous. To keep me moving, I grabbed a big cup of cold-brewed coffee on the way."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful way to start the day. Phoenix weather can be so pleasant this time of year! Did the walk help you feel energized for the shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely did. Though by the time my lunch break rolled around, I was pretty hungry. I just went down and got a quick salad from the hospital cafeteria."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cafeteria salad is a great, light option to keep you going without making you sleepy. Did you get a chance to relax or read anything during your break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually listened to a podcast that focuses on recent health and medical news. It's a nice way to keep my mind active while I eat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to spend a quiet break. It must be tough keeping up with everything while working those busy ER shifts. How have things been with Tom lately? Have you two had any time to catch up?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've been doing well! It's always a bit of a puzzle to align our schedules with my night shifts, but we're hoping to hang out this coming weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get to have a relaxing weekend together! Any chance you'll get to go salsa dancing, or are you hoping for a more low-key date?"
+    },
+    {
+      "speaker": "user",
+      "text": "I would love to go salsa dancing, but we'll see how tired I am after my shift tomorrow night. We might just opt for a quiet evening instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Completely understandable. Rest is definitely important after a long week of night shifts. I hope the rest of your shift tonight goes smoothly and quietly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I should get back to the ER floor now, but I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "cafeteria salad",
+      "commute": "walked",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: lunch should be 'cafeteria salad', conversation gives 'other'"
+  ]
+}

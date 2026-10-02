@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 436,
+  "date": "2027-05-10",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Monday. How is your week starting out at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's off to a busy start, but good. I actually had to dress up a bit more than usual today for a client presentation. I ended up wearing a long-sleeved collared shirt with buttons all the way down and a pair of those casual, straight-leg cotton trousers in a tan shade."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the classic sharp-but-comfortable look! Perfect for a presentation. How did the client meeting go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went really well! They loved the direction the project is heading. It's a relief to have that design review behind me. Now I can relax a bit tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! You definitely earned a relaxing evening. Any fun plans with Leah tonight, or are you both just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're actually planning to cook together. We decided to try making that stir-fried rice noodle dish we learned to make in our culinary course, the one with the sweet-savory tamarind sauce, bean sprouts, and crushed peanuts on top."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the one from your Thai cooking class! That sounds delicious. It's great you're putting those culinary skills to use. Is your wrist fully up to all the chopping and cooking prep?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh yeah, the wrist is completely fine now. It's been great since the cast came off, no trouble with chopping vegetables at all."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It must be such a relief to have that fully healed. How is Leah doing with her new pediatrician role at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well. It's demanding, but she loves working with the kids there. She's actually looking forward to a quiet evening at home tonight too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a perfect night for both of you to unwind. I hope the noodles turn out exactly like they did in class!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think they will. I'm going to head off and start prepping the ingredients now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "pad thai"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: Daniel plans to visit the new climbing gym across town this coming weekend."
+  ]
+}

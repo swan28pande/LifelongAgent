@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 109,
+  "date": "2026-06-17",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Wednesday. How is everything going in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good. I actually started my day pretty early to fit in a workout. I spent about an hour pedaling my road bicycle along the river trails before the morning rush."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a refreshing start to the morning! Did you head straight to the design firm after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I did. I decided to dress up a little bit more than usual today. I put on a sharp, long-sleeved collared shirt with a full front button placket, and paired it with some of my favorite tan cotton-twill slacks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A very professional look! It's always nice to dress up a bit for a day at the drafting table. What kind of projects are keeping you busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been focusing on some tricky floor plans. To keep my concentration up, I've had my headphones on playing those cozy, low-fidelity instrumental hip-hop loops with the soft vinyl crackle in the background. It's perfect for zoning out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those dusty instrumental tracks are perfect for focusing. How is Leah doing, by the way? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She absolutely loves it. She was just telling me yesterday about how satisfying it is to work with the clay on the spinning wheel. She's making some really cool bowls."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Have you been able to capture any of her process with your photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, though I really want to bring my camera to one of her sessions. I did take a few landscape shots during my bicycle ride this morning, though, since the morning fog was rising off the water."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds gorgeous. You'll have to show me those shots sometime. Are you wrapping up your day at the office now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, just closing down my computer and getting ready to head out. It's been a solid Wednesday."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "cycling",
+      "outfit": "button-down and chinos",
+      "music": "lo-fi beats",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'lo-fi beats', conversation gives 'ambient electronic'"
+  ]
+}

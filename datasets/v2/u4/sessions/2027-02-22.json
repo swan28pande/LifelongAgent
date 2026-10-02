@@ -1,0 +1,93 @@
+{
+  "user_id": "u4",
+  "day": 359,
+  "date": "2027-02-22",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Monday. How is your week starting off in chilly Minneapolis? Did you get up to anything active this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Monday's starting off pretty well. I actually got up early and laced up my sneakers to get some outdoor miles in on foot before the workday got crazy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a brisk way to wake up! How did your wrist feel during the jog? It's great that you're back to high-impact movement since the cast came off."
+    },
+    {
+      "speaker": "user",
+      "text": "The wrist felt completely fine! No issues at all, which is a huge relief. After I got back, I made a really thick puree of blended frozen fruit and greens, poured it into a dish, and topped it with some sliced almonds and hemp seeds to eat with a spoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredibly refreshing and filling. A perfect post-jog meal. Are you heading into the design firm today, or are you working on your project lead tasks from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, luckily. I had a mountain of design review emails to sort through, so I wanted some quiet focus time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. Sometimes you just need to put your head down and focus without the office distractions. Did you have any background noise or music keeping you company?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! I've been spinning some of those classic improvisational brass LPs from my grandfather's old collection on the turntable. It's the perfect instrumental vibe for getting into a flow state."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds wonderful. It's so cool that you're getting such good use out of his record collection. It must feel special to listen to those while you work. How is Leah doing, by the way? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is loving it! She brought home a couple of small bowls last week. They aren't perfectly symmetrical, but they have so much character. She's really getting the hang of the wheel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome to hear! Hand-thrown pottery has a charm you just can't get from store-bought stuff. Have you two had any time for rock climbing lately, or has the schedule been too packed?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, we haven't made it to the climbing gym lately. Work has been pretty demanding for both of us, but we're hoping to get back on the wall soon, especially now that my wrist is 100% again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, no need to rush it and risk anything. Taking care of that wrist is key. Have you heard from Kwame lately? How is he settling into Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually chatted with him yesterday. He's doing great! He's finally finished unpacking his apartment and is starting to find some favorite local spots. It's a big adjustment from Minnesota, but he's really embracing the warmer weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. I'm glad to hear he's settling in well. Atlanta's mild winters must be a nice change of pace. Well, it sounds like you've got a very productive and cozy Monday set up."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's been a solid start to the week. I'm just going to keep spinning these records and knocking out these design mockups. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "running",
+      "outfit": "not mentioned",
+      "music": "jazz records",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'",
+    "invention: Daniel might look into local trail events later in the year."
+  ]
+}

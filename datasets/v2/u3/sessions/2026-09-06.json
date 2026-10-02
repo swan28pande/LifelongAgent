@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 190,
+  "date": "2026-09-06",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Sunday going? Did you and Tom end up doing anything fun this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! We had a pretty relaxing Saturday evening. I actually woke up a little while ago to get ready for my night shift. Instead of brewing coffee, I decided to treat myself and made a warm mug of rich, sweet hot cocoa to start my day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, yum! Skipping your roommate's new espresso machine for some hot cocoa sounds like a very cozy way to wake up. Are you at the hospital now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am! I'm actually on a quick break right now. I brought some of yesterday's homemade pasta that I packed up in a container to eat tonight, so I didn't have to worry about cafeteria food."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move, homemade leftovers are always the best comfort food during a long night shift. How is the ER looking tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually surprisingly quiet for a Sunday night, which I'm very grateful for. I even had time to listen to a show while eating. I put on this hilarious podcast where two stand-up comedians review terrible action movies. I was laughing so hard in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A comedy show sounds like the perfect stress-reliever! It's always nice when you get a bit of a breather. How has the weather been treating you in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is still incredibly hot out there. Phoenix in September is no joke. I am more than happy to stay inside the air-conditioned hospital all night!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all! Have you and Tom been able to do any salsa dancing lately, or is it just too warm to think about moving that much?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually danced in his living room with the AC blasted on Friday! It was a lot easier than heading out to a hot club."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect solution. And you're feeling completely back to normal after recovering from the flu, right?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh yes, I'm completely back to 100%. No lingering fatigue at all, thankfully. Anyway, my break is wrapping up, so I need to get back to the floor."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear you're fully recovered. Have a safe, quiet rest of your shift, Sofia! Let me know how it went tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "hot chocolate",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: lunch should be 'packed leftovers', conversation gives 'not mentioned'"
+  ]
+}

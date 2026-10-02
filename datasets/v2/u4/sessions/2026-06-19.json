@@ -1,0 +1,78 @@
+{
+  "user_id": "u4",
+  "day": 111,
+  "date": "2026-06-19",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Daniel! How is the week wrapping up for you at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been busy, but I finally finished drafting those layouts. I had to really zone in today, so I put on some of those mellow, scratchy-sounding instrumental background tracks that have a slow, relaxed rhythm—no lyrics, just cozy, repetitive bedroom-producer vibes to keep me in the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, those relaxing, low-fidelity rhythms are perfect for blocking out distractions when you're drafting. Did they do the trick?"
+    },
+    {
+      "speaker": "user",
+      "text": "They definitely did. I got everything submitted right before five. I even had some energy left to take my bike out for a quick spin around the chain of lakes afterward. Captured a couple of really nice shots of the sunset reflection on the water too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful evening ride! Minneapolis has some of the best lake views for photography. Are you and Leah doing anything special to celebrate the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are keeping it super low-key tonight. We actually just picked up a couple of hot, grilled ground-beef patties topped with cheese in toasted buns from our favorite neighborhood spot to eat on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes there's nothing better than a cozy night in with some good local burgers. How has Leah's pottery class been going lately, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! She actually brought home her first finished piece yesterday. It's a slightly lopsided little bowl, but she's super proud of it, and honestly, it has a lot of character."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome! Hand-made pieces always have the best character. Have you heard any updates from Kwame down in Atlanta recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, he called yesterday! He's finally fully settled into his apartment and is starting to explore the city's food scene. He's loving the warmer weather down there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear he's adjusting well and enjoying Atlanta! Well, I hope you and Leah have a relaxing Friday night with your food and a great weekend ahead."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely ready to just relax and unwind. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "cycling",
+      "outfit": "not mentioned",
+      "music": "lo-fi beats",
+      "dinner": "takeout burgers"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'"
+  ]
+}

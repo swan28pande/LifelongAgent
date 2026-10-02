@@ -1,0 +1,72 @@
+{
+  "user_id": "u2",
+  "day": 592,
+  "date": "2027-10-13",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I actually woke up early today and went for a run."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to start the day. How is the weather in Portland for an early morning workout?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was a bit chilly, but it felt good once I got moving. After I got back, I had some oatmeal for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic breakfast! Did Grace manage to join you, or did she have an early start today?"
+    },
+    {
+      "speaker": "user",
+      "text": "She had to head out early today, so it was just me and Olive keeping each other company."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, got it. How is Olive doing these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great. Mostly just sleeping in sunny spots and demanding treats when I'm trying to prep for my classes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic Olive! How are things going at the school? Is the science department keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. We're in the middle of preparing some lab practicals, so my desk is currently buried under lesson plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Have you had any chance to get out and play tennis recently to blow off some steam?"
+    },
+    {
+      "speaker": "user",
+      "text": "I played a couple of sets last Saturday, actually. It was nice to run around on the court again."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "run",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

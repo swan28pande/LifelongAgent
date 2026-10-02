@@ -1,0 +1,93 @@
+{
+  "user_id": "u4",
+  "day": 330,
+  "date": "2027-01-24",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Sunday in Minneapolis is going well. How has your day been?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a really nice, slow Sunday. Leah and I actually started things off with a fantastic late-morning combination breakfast and lunch at a spot down the road. It was great to just sit and chat over a lazy meal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to ease into the day. Did you two end up getting outside at all after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did get outside, yeah. I ended up going on a really lengthy pedestrian excursion all around our neighborhood. Usually, I'd do my typical yoga session, but the gym was locked up and closed today, so I had to substitute it with a long trek on foot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a closed gym is always a bummer, but a big trek on foot is a great backup plan to keep moving. How is your wrist holding up with all this activity lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "The wrist is feeling totally fine, thankfully. Fully recovered! Though on the active front, I actually had a big change today. I found a buyer for my road bicycle this afternoon and officially handed it over. I've decided to completely give up the sport of cycling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! That is a major change, especially since you've been riding for a while. What brought about the decision to let go of the bicycle and step away from riding?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, my interest in it has just faded over time, and I'd rather focus my free time on other things. The buyer came by with a truck, paid for it, and it's gone. It's actually nice to have that extra space in the entryway now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. If it's not bringing you joy anymore, freeing up both your time and your physical space sounds like a great move. Are you getting some downtime now, or do you have some things to take care of before the work week starts?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually doing some prep work right now for the design firm to get a head start on tomorrow. Since I'm working from the couch, I dressed as casually as possible—just a comfy hooded sweatshirt and some loose fleece sweatpants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect weekend productivity uniform. There's nothing better than a cozy hooded sweatshirt and sweatpants for tackling some Sunday planning."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, it makes looking over project timelines a lot more comfortable. I'm almost finished, and then Leah and I are just going to take it easy tonight. She's tired from her pottery class yesterday anyway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a well-deserved relaxing evening for both of you. Have a great night, Daniel, and good luck with the start of the week tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "long walk",
+      "outfit": "hoodie and joggers",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "hobby.cycling_stop": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: He has a regular Sunday yoga routine at a local studio.",
+    "invention: His wrist fracture happened last year."
+  ]
+}

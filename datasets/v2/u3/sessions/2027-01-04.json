@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 310,
+  "date": "2027-01-04",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How is your day going at the clinic so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually been a really nice start to the week. The Phoenix weather today was so beautiful and crisp that I actually walked all the way to work. Normally I take the light rail, but it was just too perfect outside to sit on a train today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start the morning. Getting some fresh air before a busy nursing shift must have been great. Did you have time to grab a drink before you headed out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I just brewed a simple pot of classic drip coffee at home before leaving. I know my roommate has that new espresso maker now, but I just wanted a standard, fuss-free cup of black coffee today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a straightforward cup of drip coffee is exactly what you need. How has the rest of your day been? What did you have for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Lunch was great. I brought a turkey and avocado sandwich made with a couple of slices of the fresh sourdough loaf I baked over the weekend. It's so satisfying eating your own homemade bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Your sourdough baking always sounds amazing! There's nothing like a sandwich on homemade bread. Did you end up listening to anything during your long walk to the clinic this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I finally started listening to that true-crime podcast my coworker told me about. It's all about unsolved cold cases, and I got totally sucked into the first episode during my walk. It made the commute fly by."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those cold case shows can be so addictive! I'm glad it kept you entertained. How are things looking for the rest of your evening? Are you seeing Tom tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Tom has some errands to run tonight, so we're just going to catch up over the phone later. I think I'm just going to have a relaxing evening at home, maybe do a little reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet evening at home sounds like the perfect way to wind down after a busy shift. I hope you enjoy your relaxing night!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely looking forward to it. Catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "walked",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

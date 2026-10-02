@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 101,
+  "date": "2026-06-09",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Sofia! Hope you're having a good Tuesday. How is everything in Phoenix today? Are you getting ready for another night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, just getting my things together before I have to head out. It's already pretty warm here. I just finished packing my bag—I actually boxed up some of yesterday's dinner to eat during my break tonight so I don't have to worry about buying food."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move, saving a bit of time and money is always great, especially on those long night shifts. Did you manage to get any baking in today, or has your sourdough starter been resting?"
+    },
+    {
+      "speaker": "user",
+      "text": "The sourdough is resting today! I spent most of my afternoon relaxing instead. I'm actually about to leave the apartment now to catch my ride. Since it's getting dark, I'm taking the late public bus line to the hospital tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The evening bus is a good way to get some quiet time before the chaos of the ER begins. Do you usually read or just zone out during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "Usually, I use the time to listen to something. Tonight, I've got queued up a show that summarizes the latest developments and headlines in medicine and wellness."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to prep your brain for the shift, keeping up with the industry. Is it going to be a particularly hectic night, or is it hard to predict?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's always hard to predict with the emergency room, but Tuesdays are sometimes surprisingly busy. Tom was saying he hopes it's a quiet one for my sake, but we'll see!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Tom's got the right idea! Hopefully, you get a few calm moments. Did you two end up going salsa dancing over the weekend, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did! We went out on Saturday night and had a blast. It was a great way to blow off some steam before my work week started up again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like so much fun! I'm glad you got to dance. Well, I'll let you get to your bus stop now so you don't miss it. Have a safe commute and a smooth shift tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll talk to you tomorrow after I get some sleep."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "packed leftovers",
+      "commute": "night bus",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

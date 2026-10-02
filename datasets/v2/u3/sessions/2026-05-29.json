@@ -1,0 +1,81 @@
+{
+  "user_id": "u3",
+  "day": 90,
+  "date": "2026-05-29",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your day starting out before you head into your night shift at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I started my morning with a cozy, spiced black tea with steamed milk. And I actually took on a new project today—I started baking my own sourdough bread!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! Sourdough baking is quite an art. How did your very first loaf turn out?"
+    },
+    {
+      "speaker": "user",
+      "text": "It actually turned out pretty well! The crust is nice and crispy, though the inside is still a bit dense. It was so satisfying to watch it rise in the oven."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great success for a first try! It's a wonderful, relaxing hobby to balance out your salsa dancing and busy ER shifts. Do you think you'll bring some to work eventually?"
+    },
+    {
+      "speaker": "user",
+      "text": "Maybe once I perfect the recipe! For tonight's shift, I just packed up the extra portions of last night's dinner to eat during my break instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a reliable homemade meal for a long night shift. How is the Phoenix traffic looking for your commute this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I really didn't feel like driving today, so I ended up booking a ride through an app on my phone to get to the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wise choice, it's nice to let someone else handle the road so you can relax. Did you listen to anything during the ride over?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I listened to an episode of an audio show that goes over recent developments and updates in the medical world."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, keeping up with the industry even on your way in! Did they cover anything particularly interesting today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They had a really interesting segment on ER triage efficiency. Anyway, I just arrived at the hospital, so I should head inside and get ready for my shift!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "packed leftovers",
+      "commute": "rideshare",
+      "podcast": "health news podcast"
+    },
+    "statements": {
+      "hobby.baking": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

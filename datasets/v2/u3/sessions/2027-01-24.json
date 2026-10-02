@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 330,
+  "date": "2027-01-24",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Sunday. I hope you're having a relaxing weekend in Phoenix. How is your day going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well. I started my morning off a bit differently today—instead of coffee, I whisked up a hot green tea powder latte with oat milk. It was super soothing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a matcha latte sounds lovely and cozy! Did you use your roommate's new espresso machine to steam the milk, or just do it on the stove?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just used a hand frother on the stove! It was nice to take my time since I didn't have to travel to the clinic at all today; it's a completely commute-free Sunday. Oh, and I have some exciting news—I finally signed up for an online Italian course this morning!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is so exciting, Sofia! Congratulations! What made you decide to take the plunge and sign up today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I've been wanting to learn for a while, and I found a self-paced program that fits perfectly around my nursing shifts. I figured today was the perfect day to just register and get started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A self-paced program sounds perfect for your schedule. Let me know how your first lesson goes! Are you planning to do any sourdough baking today while you enjoy your day off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I actually have a loaf proofing right now! While I was prepping the dough earlier, I put on a podcast where two stand-up comedians swap hilarious dating stories. It kept me laughing the whole time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great pairing! A comedy podcast is definitely a change of pace from that true-crime podcast your coworker recommended a while back."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I needed something lighthearted and funny today, not murder mysteries! The true-crime one is good, but today was all about relaxed, happy vibes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I completely agree, sometimes you just need a good laugh. Are you and Tom planning to catch up later, or is it mostly a solo self-care Sunday?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're actually going to meet up for a walk around the neighborhood later this evening once it cools down a bit. For now, I'm just going to relax and watch my bread rise!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "not mentioned",
+      "commute": "no commute",
+      "podcast": "comedy podcast"
+    },
+    "statements": {
+      "italian.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 555,
+  "date": "2027-09-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Daniel! Hope you're having a good start to your week. How has your Monday been so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. I actually started my morning with something really refreshing—I blended up a bunch of frozen berries and bananas into a thick puree, poured it into a dish, and topped it with some chia seeds and granola to eat with a spoon. It was the perfect quick breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and very energizing for a Monday! Did you have to head into the design firm today, or are you working on that big design competition deadline from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, which let me dress super casual. I just threw on a warm, patterned plaid shirt made of brushed cotton and some sturdy blue denim pants. It's incredibly comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Comfortable clothes are the best for focusing on major design deadlines. How is the competition project coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's intense, but I'm making progress. To help me focus, I actually dug into my grandfather's old vinyl collection. I've been spinning some vintage LPs featuring bebop, swing, and improvisational trumpet and saxophone solos. It's great background music for designing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "What a wonderful way to enjoy those inherited records! It sounds like a great atmosphere for creative work. Speaking of work, as a project lead, do you find it easier to manage the team remotely on days like this?"
+    },
+    {
+      "speaker": "user",
+      "text": "It has its challenges, but we use a lot of collaborative tools. I can coordinate the design team's tasks pretty well from Chicago, even when we aren't in the same room."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Chicago has such a vibrant design community, too. How are you and Leah settling into your routines there lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're doing really well. Leah is busy with her pediatric work, but we still find time to unwind together. Tonight, we actually decided not to cook. We ordered some raw fish rolls and nigiri from our favorite local spot and had it brought straight to our apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a perfect Monday treat. Since you eat a pescatarian diet, a fresh roll and nigiri delivery is always a great option. Do you have a go-to spot in the city for that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, there's a little place just a few blocks away that always has incredibly fresh tuna and salmon. It makes for an effortless evening, which we definitely needed today."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "jazz records",
+      "dinner": "delivery sushi"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a turntable in his office",
+    "invention: has been a pescatarian for a long time"
+  ]
+}

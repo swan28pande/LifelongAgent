@@ -1,0 +1,87 @@
+{
+  "user_id": "u4",
+  "day": 600,
+  "date": "2027-10-21",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Thursday. How is your week wrapping up in Chicago? Have you been able to get any climbing in lately, or has work been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, today was a monumental day. I officially resigned from my position as project lead at the design firm! I've partnered up to launch my own boutique architecture studio as a co-founder. I started the day celebrating with a toasted everything ring loaded with cream cheese and some cured lox."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh my goodness, congratulations! That is huge news, Daniel! Co-founding your own architecture studio is an incredible step. How are you feeling about taking the plunge and leaving the firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels incredibly liberating, though definitely a bit surreal. We've been quietly planning this for a while, and today we finally made it official. I spent the afternoon getting our initial business files organized. I had to take a break to clear my head, though, so I went and did some laps in the local indoor pool, just gliding through the water for about forty minutes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to process such a big life change. Did your wrist feel completely fine during the laps? I know you've fully recovered, but sometimes swimming can still put a bit of unique pressure on it."
+    },
+    {
+      "speaker": "user",
+      "text": "No issues at all, luckily! The wrist felt strong and flexible. When I got back, I wanted to stay in a productive mindset, so I dressed the part—I wore a crisp collared shirt with buttons and a pair of casual cotton twill trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic and sharp. It's good to keep that professional routine even when you're transitioning into being your own boss. What kind of soundtrack did you have going while you worked on the new studio setup?"
+    },
+    {
+      "speaker": "user",
+      "text": "I had some alternative independent guitar bands from the 90s and 2000s playing in the background while I sorted through emails and registration documents. It kept the energy up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great vibe for focusing. How did Leah react to the big news today? I imagine she's thrilled for you!"
+    },
+    {
+      "speaker": "user",
+      "text": "She's ecstatic! She actually brought home a nice bottle of wine to celebrate. To keep things easy but comforting, I'm cooking up a big batch of penne with homemade pesto for us tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pesto penne sounds like the perfect celebratory meal. I'm so happy for you both, especially with her new pediatrician role and now your new studio taking off. Enjoy the dinner and the celebration!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate the kind words. It's going to be a wild ride, but I'm ready. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoked salmon bagel",
+      "workout": "swim",
+      "outfit": "button-down and chinos",
+      "music": "indie rock",
+      "dinner": "pasta"
+    },
+    "statements": {
+      "job.own_studio": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      },
+      "c1": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

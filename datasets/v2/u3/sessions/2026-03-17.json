@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 17,
+  "date": "2026-03-17",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday going in Phoenix? Are you getting ready for another night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, just trying to shake off the sleepiness. I started the afternoon with a massive cup of slow-steeped chilled coffee to get my brain moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a strong cold brew is a lifesaver for night shifts. Did you manage to get a good meal in before heading out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not exactly! I actually completely forgot the lunch I packed, so instead of grabbing my usual fresh cafeteria salad during my break today, I had to make do with a bag of chips and some candy bars from the breakroom vending machine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that is the worst! Vending machine snacks are definitely a poor substitute for a fresh salad, but sometimes you just need the quick energy. Are you on your way to the hospital now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm currently sitting at the stop waiting for the late-night public transit bus to head over there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The bus is a good time to relax before the chaos of the ER. Do you have anything fun to listen to on the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! I've got a queue of episodes ready from a show that covers recent medical journalism and healthcare updates. It keeps me in the loop."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to stay sharp for work. How have things been outside of the hospital? Have you and Tom been able to get any salsa dancing in lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We have! Tom and I went out dancing recently, and it was so much fun. It's the perfect way to blow off some steam and disconnect from the stress of the ER."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It's so important to have that balance, especially with your intense schedule. I hope your night shift goes smoothly tonight and you don't get too many emergencies!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. My ride is pulling up now, so I'm going to board. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "vending machine snacks",
+      "commute": "night bus",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Hoping to go to a salsa social this Thursday"
+  ]
+}

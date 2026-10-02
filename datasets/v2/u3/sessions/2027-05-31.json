@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 457,
+  "date": "2027-05-31",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Sofia! Happy Monday. How is your week starting out over in Phoenix? Are things busy at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been pretty busy today. The clinic always has a rush on Mondays. I drove my hybrid in this morning and luckily found a decent parking spot right away."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a win, especially on a Monday. How did the rest of your morning go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went by fast. I actually got to meet up with Tom for a quick lunch during my midday break, which was a nice treat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how lovely! It's always nice when you can sync up schedules like that. How are things with Tom? Any updates on the wedding planning for next summer?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're taking things slow, but it's fun to talk about. On my drive today, I actually listened to an Italian language lesson podcast to keep up with that online course I started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to use your commute! How are you finding the Italian lessons so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's definitely a challenge, especially the pronunciation, but the podcast format makes it easy to practice in the car."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Repetition really helps with languages! Have you had any time for your sourdough baking lately, or has work kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually baked a rustic loaf yesterday. It turned out great! It's nice to have a quiet hobby when the clinic gets hectic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There is nothing quite like fresh sourdough! I'm glad you got some relaxing baking time in. Are you all done with your shift for the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, just got home and settling in. Ready to just relax for the evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "lunch with Tom",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: podcast should be 'Italian lessons podcast', conversation gives 'other'"
+  ]
+}

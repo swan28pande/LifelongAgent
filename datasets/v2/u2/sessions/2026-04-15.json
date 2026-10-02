@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 46,
+  "date": "2026-04-15",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. Started the day off right with a nice yogurt parfait for breakfast, so I had some decent energy to kick things off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and refreshing start! How are things at the high school today? Are your chemistry students keeping you busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. We're doing some lab work on chemical reactions today, so it's been a lot of supervising and making sure everyone is safe. It's fun but exhausting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I imagine that keeps you on your toes! Are you planning to relax this afternoon, or do you have other things on your schedule?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I actually managed to squeeze in a workout after my last class. I went and did some gym weights."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Great job making time for that! Weight training is a fantastic way to shake off the school day. How are you feeling after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit sore but in a good way. It really helps clear my head after teaching all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It absolutely does. Do you have any plans with Grace for the evening, or is it a quiet night in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a quiet night. Grace and I are planning to make a simple dinner and just unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely way to spend the evening. Are you planning to watch anything together?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we are going to watch a cooking competition show tonight. It's always fun to just zone out and see what they come up with."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those shows can be so fun and surprisingly intense! I hope you and Grace have a wonderful, relaxing evening. Let me know if you need anything else!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "yogurt parfait",
+      "workout": "gym weights",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Grace has a job"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 567,
+  "date": "2027-09-18",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Sofia! How is your weekend starting off in Tucson? Are you working today or getting some time to relax?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's starting off really well. I'm off shift today, so it's been so nice to have a day with absolutely no driving or traveling to the clinic. Just a completely travel-free morning, which is exactly what I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds wonderful. There's nothing quite like a day where you don't have to step foot in a car or worry about a schedule. What have you been up to with your free time today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've just been catching up on chores and doing some light cleaning. To keep myself entertained, I had on a series of audio lessons for learning Italian vocabulary while I was folding laundry earlier. It's helping me practice my pronunciation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's a great way to multitask! It sounds like a perfect supplement to the online Italian course you signed up for. How are you finding the language practice so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's definitely a challenge, but I'm really enjoying it. It's a nice change from the true-crime podcast my coworker recommended a while back. After I finished up with that, I got a bit hungry, so for lunch I just assembled a quick bowl here at home with some rice, black beans, leftover roasted veggies, and salsa."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, that sounds like a delicious and easy lunch to whip up at home! It's always nice when you can put together something tasty without too much fuss. How has the weather been treating you in Tucson today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's still pretty warm, though we're starting to get those slightly cooler morning breezes. I thought about doing some sourdough baking, but decided to just keep things low-key and rest instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Resting is definitely a great choice. You've earned a slow weekend! Have you and Tom had any chance to think about the plans for your summer 2028 wedding, or are you taking a complete break from all that planning for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're mostly taking a break from it this weekend. We did chat briefly yesterday about some potential color schemes, but we're trying to keep things very relaxed since we still have plenty of time before summer 2028."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a very smart approach. Spacing it out keeps the process fun rather than overwhelming. Do you have any plans for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much at all! Tom and I might just stream a movie later, but otherwise, I'm just planning on sitting on the couch and taking it easy."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "homemade burrito bowl",
+      "commute": "no commute",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Italy is at the top of their list for their honeymoon"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "user_id": "u2",
+  "day": 555,
+  "date": "2027-09-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Monday. How is the new school year treating you so far as head of the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been busy, but good. Mondays are always a bit of a rush, but I made sure to start the day right with a quick protein smoothie for breakfast. How are things with you?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm doing great, thanks for asking! A protein smoothie is a solid way to kick off a busy day. Have you had any time to get out on the tennis courts lately, or has school kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to play a couple of sets over the weekend! My back felt completely fine, so it's great to be back on the court without any of that old stiffness."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! I'm glad your back is fully recovered and you're able to enjoy your games again. How are things shaping up with the science department staff this term?"
+    },
+    {
+      "speaker": "user",
+      "text": "We have a really strong team this year. Getting the lab schedules coordinated is always a bit of a puzzle at the beginning of September, but we've got a good handle on it now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you've got everything under control. How is Grace doing? Did she have a good weekend too?"
+    },
+    {
+      "speaker": "user",
+      "text": "She did! We spent some time yesterday catching up with our neighbor and checking out how their new vegetable garden is coming along. It's looking really impressive."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! It's great to see that garden progressing. What do you and Grace have planned for this evening after a long Monday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, we are both pretty exhausted. We're just planning to keep it simple, order some food, and unwind with some sitcom reruns on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect, low-key way to spend a Monday night. There's nothing quite like familiar comedy to help you relax."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, no heavy plots to follow, just easy laughs. I'm looking forward to it. Olive is already curled up on the couch waiting for us."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "other",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

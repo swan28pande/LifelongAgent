@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 641,
+  "date": "2027-12-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Wednesday. How is everything going at the architecture studio today? Did you have another one of those early morning client calls?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, we did have a 7 AM call, so it was a bit of a rush getting out the door. Thankfully, I didn't have to spend any time cooking breakfast. I just grabbed those rolled oats I'd left to soak in a jar of milk in the fridge overnight and ate them at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lifesaver for those early starts. Chilled, prepped breakfasts are the best. How has the rest of the day been shaping up after that call?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty intense with some drafting deadlines. To keep my head down and block out the studio noise, I've had some wordless, textured synthesizer soundscapes playing in my headphones all afternoon. It really helps me zone in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That kind of atmospheric background music is perfect for focus. No lyrics to distract you. Are you and Leah doing anything relaxing tonight to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, she's actually getting home a bit earlier from the hospital today. She was telling me her pediatric patients have been keeping her on her toes, but she's still finding energy for her pottery class. She brought home another slightly lopsided mug yesterday!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, practice makes perfect! It's great she's sticking with it. Are you guys planning to cook tonight, or just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are actually cooking together. I'm planning to make a spicy, herbal coconut-milk stew using green chili paste, and I'll throw in some pan-seared soy curd cubes for the protein."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredible. It reminds me of that Thai cooking class you took a while back! Sounds like a cozy meal for a chilly December night."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. It's nice to actually use those techniques, and it fits perfectly with my pescatarian lifestyle. Leah is looking forward to it too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It sounds delicious. By the way, have you heard from your brother Kwame recently? How is his training going down in Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing really well! He was saying his long runs are getting easier, though he's still adjusting to the southern weather. Anyway, I should probably head out and get started on dinner prep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a plan. Enjoy the cooking and have a great evening with Leah! Talk soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "overnight oats",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "ambient electronic",
+      "dinner": "tofu green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

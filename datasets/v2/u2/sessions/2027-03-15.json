@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 380,
+  "date": "2027-03-15",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Monday starting off? Did you manage to squeeze in a workout or breakfast this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! I actually had some oatmeal for breakfast and hit the gym weights earlier today. But the big news is that Grace and I just got back—we went on the family trip to Japan!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! You actually went on the family trip to Japan? That is incredible! Welcome back to Portland. How was the trip?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was absolutely amazing. We spent a lot of time exploring Tokyo and Kyoto. Grace loved the historic temples, and I was just in awe of the incredible woodworking craftsmanship over there. It was unforgettable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an absolute dream trip. I'm so glad you and Grace had such a wonderful time. How did Olive fare while you were away?"
+    },
+    {
+      "speaker": "user",
+      "text": "She was great. Our neighbor who has the vegetable garden watched her, so she was in good hands. She's currently curled up right next to me, purring like crazy, so I think she's glad we're home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Aww, she definitely missed her family! How are you adjusting to the time change? Jet lag from Japan can be pretty intense."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, the jet lag is definitely hitting us hard right now. We're keeping things very low-key tonight. I think we're just going to relax on the couch and watch some sitcom reruns on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns sound like the perfect, low-stress way to wind down and ease back into your normal timezone. Do you have to head back to the high school tomorrow, or do you have another day to recover?"
+    },
+    {
+      "speaker": "user",
+      "text": "Luckily, I have one more day off before I have to return to the science department. I really need tomorrow to just unpack, sort through mail, and get my bearings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a huge relief. Having a buffer day makes a world of difference when coming back from a major trip. I hope you get some good rest tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! We're definitely going to try. Just going to eat a light dinner, hang out with Olive, and try to stay awake for at least one episode of those reruns."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good luck staying awake! Have a wonderful, relaxing evening, and welcome home again."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'll talk to you tomorrow when I'm a bit more rested."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {
+      "japan_trip.1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

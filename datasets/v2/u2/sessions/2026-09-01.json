@@ -1,0 +1,89 @@
+{
+  "user_id": "u2",
+  "day": 185,
+  "date": "2026-09-01",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Tuesday. How has the new school year been treating you so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going pretty well, thanks. Getting back into the school routine is always a transition, but I actually managed to sit down and have some oatmeal for breakfast this morning instead of rushing out the door, which was a great start."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A proper breakfast makes a huge difference! Oatmeal is a great way to fuel up for a long day of teaching high school chemistry. How are your new students settling in?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're a really good group this year. We're just going over lab safety protocols and classroom rules this week. It's always a bit dry, but we have to get through it before we can start any actual experiments."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely, safety first in the lab! Have you had any time for tennis lately, or has the back-to-school rush taken over your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "The schedule is pretty packed right now, so I haven't been out on the courts recently. Grace and I are just trying to unwind in the evenings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's completely fair. What about your woodworking? Have you spent any time in your shop lately, or is that also on hold for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did a little bit of organizing in the garage over the weekend, but I don't have any active projects going on right now. Just keeping it simple."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes organizing the workspace is a project in itself. How is the weather up in Portland today? Are you starting to get those early autumn vibes yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually really nice today. A bit cool and crisp in the morning, but beautiful and sunny this afternoon. It feels like the perfect Pacific Northwest September day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. What are your and Grace's plans for this evening? Just relaxing at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly. We're planning to make a simple dinner and watch a cooking competition show together. We both really enjoy watching those culinary challenges to unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those are so fun to watch! Do you have a favorite one you're currently following?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're actually starting a brand new season of one tonight, so we'll see who we end up rooting for. It's the perfect low-key evening. Anyway, I should get going to grade a few things and prep for tomorrow. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a wonderful plan. Enjoy the show, Marcus, and have a great evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "other",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: started building a small side table a while ago"
+  ]
+}

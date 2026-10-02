@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 135,
+  "date": "2026-07-13",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! I hope your Monday is starting off well up in Minneapolis. Did you manage to fit in any outdoor activity before heading to the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, I actually woke up early and got a great session in. I rode my bicycle for about an hour, pedaling around the chain of lakes before the morning commute got too busy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful morning. Nothing beats getting some fresh air on two wheels to start the week. How was the office today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was good, pretty productive. We had a few client presentations, so I couldn't just wear my usual super casual clothes. I ended up putting on a crisp, long-sleeved collared shirt with buttons and a pair of tan cotton twill trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds very professional but still comfortable. Did you have your usual low-key electronic beats playing in the background while you prepared for those presentations?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I changed it up today. Usually, I have those instrumental lo-fi beats going, but a friend from work recommended a specific episode of an episodic spoken-word audio show, so I listened to that digital talk program while I drafted instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good talk program can be a great way to stay focused when you need a break from music. How are you planning to wind down this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping dinner pretty simple. I'm just going to boil up a big pot of fettuccine noodles and toss them with some olive oil and garlic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You can't go wrong with a classic bowl of noodles! Is Leah joining you, or does she have her pottery class tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually has her studio session tonight, so she's working with the clay wheel this evening. I'm just flying solo."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope her class goes well tonight! Maybe you can use the quiet evening to look over some of your photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "That's actually the plan. I snapped a few nice landscape shots during my morning bike ride, so I'll probably spend some time editing those on my computer."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing creative outlet to end the day. Enjoy your dinner and the photo editing!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "cycling",
+      "outfit": "button-down and chinos",
+      "music": "a podcast",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'long ride'"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 327,
+  "date": "2027-01-21",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going? How are things at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy day, but I'm actually on my way home now. I decided to take the light rail today instead of driving. It's nice to just sit and look out the window at the Phoenix streets."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing way to wind down. Did you listen to anything during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I finally started listening to that true-crime series my coworker recommended a while back. It's about a cold case from the nineties, and I'm already completely hooked."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the one about the unsolved mystery? I'm glad you're enjoying it! It's perfect for a train commute. How was the rest of your workday?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went well. I actually managed to pack some of yesterday's dinner to eat at the clinic for lunch, which saved me a lot of time. Usually, I'm rushing to buy something, but having my own food ready was great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Having a homemade lunch ready to go makes a big difference. Did you have a warm drink to start your morning too? How is your roommate's new espresso machine treating you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I didn't use her machine today. I was craving something earthy, so I whisked up some green tea powder with warm oat milk before I left the house. It was the perfect cozy morning drink."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a homemade green tea latte! That sounds delicious and very comforting for an early shift. Have you been doing any sourdough baking lately, or are you taking a break from that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually have a loaf of sourdough proofing in the fridge right now! I'm planning to bake it tomorrow. I've been experimenting with a slightly longer cold ferment to see how the flavor develops."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, interesting! A longer ferment can really bring out that signature tang. I hope it turns out perfectly. Are you and Tom planning to catch up this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're planning to meet up. We haven't decided what we're doing yet, but it'll be nice to see him. It feels like a while since we just hung out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely, I hope you have a great time together. Have a relaxing evening, Sofia, and enjoy the rest of your train ride!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm just going to queue up another episode of that podcast now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "packed leftovers",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Tom is coming over on Saturday"
+  ]
+}

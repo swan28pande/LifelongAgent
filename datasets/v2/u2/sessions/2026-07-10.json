@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 132,
+  "date": "2026-07-10",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Friday. How is your day going so far in Portland? Are you wrapping up things at school, or already enjoying the summer break?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I'm actually off for the summer since school is out, but I've been keeping pretty busy today. I started the morning with a quick breakfast—just had a toasted bagel—and then headed out to get some things done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A summer break is well-deserved! A bagel is a classic way to start the morning. What did you get up to after that? Did you manage to get some woodworking done, or maybe head to the tennis courts?"
+    },
+    {
+      "speaker": "user",
+      "text": "I didn't play tennis today, though I definitely want to get on the court sometime soon. Instead, I went to do my workout. I spent about an hour doing gym weights today to get some strength training in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A solid gym weights session is a great way to start the weekend. Do you have any plans with Grace for the evening, or maybe some progress on your latest woodworking project?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been working on a small cedar side table in the garage, just sanding it down and getting it ready for a finish. But tonight, Grace and I are planning to keep it pretty low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing evening. Are you guys planning to cook something nice together, or maybe just catch up on some TV?"
+    },
+    {
+      "speaker": "user",
+      "text": "We'll probably just order some takeout and watch our favorite cooking competition show. We both love seeing what those chefs can whip up under a tight time limit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those cooking competition shows are so addictive! It's always amazing how creative they can get with random ingredients under pressure. Do you have a favorite chef you're rooting for this season?"
+    },
+    {
+      "speaker": "user",
+      "text": "There's one chef who does amazing things with desserts, so we're cheering for her. It's just fun, easy entertainment for a Friday night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely is. Since you have the summer off from teaching high school chemistry, do you find yourself totally shutting off the science brain, or are you already thinking about lesson plans for the fall?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, I try to shut it off as much as possible! I love chemistry, but a complete break is necessary so I don't burn out before September. For now, I'm just enjoying the downtime."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes complete sense. A good rest is the best way to recharge. Enjoy the cooking show tonight, and have a wonderful weekend, Marcus!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bagel",
+      "workout": "gym weights",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Has a tennis match scheduled for Sunday morning."
+  ]
+}

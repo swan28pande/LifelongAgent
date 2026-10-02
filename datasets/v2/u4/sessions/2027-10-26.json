@@ -1,0 +1,85 @@
+{
+  "user_id": "u4",
+  "day": 605,
+  "date": "2027-10-26",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Tuesday. How is your day shaping up so far in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going pretty well. I started the morning on a high note with a toasted hole-in-the-middle roll topped with cream cheese and some cold-cured pink fish. Definitely hit the spot. Now I'm just sitting at my desk keeping things low-key in a plain dark, short-sleeved cotton tee and my trusty blue denim trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That breakfast sounds incredible, lox on a toasted roll is hard to beat! And a comfortable outfit is essential for a productive workday. How are things looking at the architecture studio today?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're actually making some headway on a new client proposal. To help me focus while sketching out some layout ideas, I've been spinning some old vinyl of syncopated, horn-heavy improvisational tunes on the turntable. It keeps the atmosphere in the room really relaxed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds wonderful. Music definitely helps the design process flow. Are you planning on getting any climbing in today? I know you've been back on the wall since your wrist healed."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, I actually have plans to head over to the indoor bouldering facility later this afternoon to scale some synthetic routes. My wrist feels totally solid, so I'm excited to work on some of the trickier overhangs they've set up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That’s fantastic to hear! It must feel great to be climbing with full confidence again. How is Leah doing, by the way? Has she been busy at the hospital or finding time for her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing well! Her schedule at the pediatric clinic is pretty demanding, but she's still managing to squeeze in her clay throwing sessions. We're actually planning to cook together tonight once we're both home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great she's keeping up with the pottery. What's on the menu for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are making some warm corn tortillas folded around grilled whitefish, shredded cabbage, and a squeeze of lime. It's one of our favorites to whip up on a weeknight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, seafood-filled soft shells sound amazing! A perfect fresh, pescatarian meal to wrap up a busy Tuesday. I hope the climbing session goes well and you two enjoy cooking tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow and let you know how those overhanging routes went. Have a good evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoked salmon bagel",
+      "workout": "climbing gym",
+      "outfit": "black t-shirt and jeans",
+      "music": "jazz records",
+      "dinner": "fish tacos"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      },
+      "c1": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

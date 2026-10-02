@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 62,
+  "date": "2026-05-01",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good afternoon, Sofia! How is your Friday going so far? I hope you managed to get some good rest after your ER shift."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going okay, just a bit slow to wake up today. I started my afternoon with a warm, spiced black tea with steamed milk. It really helped me shake off the post-shift sleepiness."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and cozy. Did you have a busy night at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. The ER was chaotic last night, which is pretty typical for a Thursday night in Phoenix. Because I was so exhausted, I ended up booking a ride through an app on my phone to get home this morning instead of driving myself."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That was definitely a smart decision. Safety first, especially after a grueling night shift. Did you at least get a chance to eat something decent while you were working?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully. I managed to slip away for a few minutes and grab a leafy green salad from the hospital cafeteria. It wasn't anything fancy, but it kept me going."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good, I'm glad you got some sustenance. Are you planning on doing any salsa dancing this weekend to unwind, or are you just going to catch up on sleep?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'd love to go salsa dancing at some point this weekend if my energy levels allow for it. It's always a great way to decompress, but we'll see how I feel tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, listen to your body first. How is the Phoenix weather treating you today? It must be starting to get quite warm now that we're in May."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it is definitely heating up! The desert sun is no joke today, so I'm glad I can just stay indoors and relax for now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Indoor relaxation is perfect for a Friday afternoon. Is Tom keeping you company, or are you having some solo downtime?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's working right now, so I'm just enjoying some quiet solo time before he comes over later this evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "cafeteria salad",
+      "commute": "rideshare",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: User has blackout curtains.",
+    "invention: User and Tom are planning to go salsa dancing at their usual spot tomorrow night."
+  ]
+}

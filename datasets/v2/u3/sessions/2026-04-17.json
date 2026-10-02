@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 48,
+  "date": "2026-04-17",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How are things going in Phoenix today? Are you getting some rest before your next ER shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I'm trying to relax today. I actually started my morning with a really nice warm cup of spiced black tea with steamed milk. It was exactly what I needed to wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a chai latte sounds like the perfect way to ease into the day. Did you make it at home, or did you treat yourself to a cafe run?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made it at home today. I've been trying to get better at making them myself, and it turned out pretty good!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! It's always satisfying when a homemade version turns out just as good as a coffee shop. How is Tom doing? Have you two had any time to catch up lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! We actually grabbed a quick bite together yesterday before my shift. He's been really busy with work too, so it was nice to just sit and talk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. It can be so tough to coordinate schedules when you work the night shift in the ER. I'm glad you two got some quality time."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, my schedule can be a bit chaotic, so we take what we can get. But we make it work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You really do. Have you been able to get any salsa dancing in lately, or has work been too demanding for that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went to a class earlier this week, actually! It was so much fun and a great way to shake off the stress of the hospital. I always feel so energized after dancing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Salsa is such a great outlet! The music and movement must be the perfect contrast to the intense environment of the ER."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. It completely clears my head. Anyway, I think I'm going to read a bit before I have to get ready for tonight. Thanks for checking in!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect afternoon. Enjoy your reading and have a smooth shift tonight, Sofia! Talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Planning to go salsa dancing with Tom tomorrow night"
+  ]
+}

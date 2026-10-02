@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 589,
+  "date": "2027-10-10",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Marcus! How is your Sunday going in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going pretty well, just a nice and relaxing Sunday. I started the morning off right and had a protein smoothie for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is a great, refreshing way to start the day. Did you put anything special in it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just the usual ingredients—some banana, peanut butter, and protein powder. Grace and I are just taking things very easy today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, low-key morning. How is Olive doing today? Is she keeping you company?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. She's currently curled up asleep in a sunbeam on the living room rug. She barely even opened her eyes when I was blending my smoothie earlier."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic Olive! She definitely knows how to enjoy a Sunday. Have you run into your neighbor lately? How is their new vegetable garden doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did see him yesterday! He gave us a bunch of fresh tomatoes from the garden. They look incredible, so we're planning to use them for dinner tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's nothing quite like fresh, homegrown tomatoes. That's going to make for a delicious dinner. Do you have any plans for after dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much, we're just going to wind down on the couch. We plan to watch a sci-fi series on that new streaming service we signed up for."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A good sci-fi series is the perfect way to spend a Sunday evening. Do you two usually prefer space adventures or more futuristic dystopian shows?"
+    },
+    {
+      "speaker": "user",
+      "text": "We definitely lean towards the space exploration ones. This particular sci-fi series had some great reviews, so we're excited to start it tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Space exploration is always a lot of fun to dive into. I hope you and Grace enjoy the new show! Have a wonderful and relaxing evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think we will. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "not mentioned",
+      "evening_show": "sci-fi series"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'rest day'"
+  ]
+}

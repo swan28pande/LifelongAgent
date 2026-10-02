@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 512,
+  "date": "2027-07-25",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Sunday. How is your weekend going down in Tucson? Are you getting some rest today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's a very lazy Sunday here. Since I don't work today, I didn't have any commute at all, which has been wonderful. I just stayed in my pajamas for a while."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect way to spend a Sunday. Did you start the morning with a nice coffee, or maybe something from your roommate's espresso machine?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I wanted something sweeter today, so I made myself a warm mug of hot cocoa instead. It was really comforting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A warm mug of cocoa sounds delicious, even in the Tucson summer heat! Have you had a chance to practice any of your Italian today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! While I was cleaning up the kitchen, I listened to a podcast that teaches basic Italian conversational skills. It's really helping me get used to the pronunciation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to multitask. It sounds like you're making steady progress with the language. What did you end up doing for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I made a homemade bowl with rice, black beans, fajita veggies, and salsa. It was basically a DIY burrito bowl and tasted so fresh."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, that sounds like a perfect, satisfying lunch. Are you and Tom doing anything special tonight, or maybe working on some of those summer 2028 wedding plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're just keeping it low-key. Tom and I talked a bit about potential music options for the reception, but we aren't rushing anything since we have plenty of time before 2028."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely, taking your time makes the process so much more enjoyable. Did you get any sourdough baking in this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not today, but I might prep some dough later tonight so it's ready to bake tomorrow. It's just nice to have a completely unstructured day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "hot chocolate",
+      "lunch": "homemade burrito bowl",
+      "commute": "no commute",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: hopes to go to Italy for her honeymoon"
+  ]
+}

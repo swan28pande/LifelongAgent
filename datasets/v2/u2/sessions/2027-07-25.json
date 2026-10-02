@@ -1,0 +1,76 @@
+{
+  "user_id": "u2",
+  "day": 512,
+  "date": "2027-07-25",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How has your weekend in Portland been treating you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been really nice and quiet. I started the day off right with a bowl of oatmeal for breakfast, which was perfect since it was a bit drafty this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A warm bowl of oatmeal is the perfect cozy Sunday breakfast. How is Grace doing today? Is she enjoying the weekend too?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She actually had some breakfast with me and then went out to meet up with a friend for coffee. It's been a very relaxed morning for both of us."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Have you managed to get out on the tennis courts recently, or are you keeping things low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it pretty low-key today, but I played a couple of sets of tennis last Thursday. My back felt completely fine, so it's great to be fully back in action."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic news about your back! I'm so glad to hear you're fully recovered and able to play again. How is Olive doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Olive is doing great. She's actually napping right next to me on the couch. She has been very clingy today, which I don't mind at all."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Cats really do know how to make a lazy Sunday even better. How is your neighbor's vegetable garden coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually doing really well! I chatted with him over the fence yesterday and he showed me some of his squash. It makes me glad I can just appreciate his hard work from my side of the yard."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely the best way to enjoy a garden! Do you have any plans for the evening, or just more relaxing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just more of the same. I'm planning to watch some sitcom reruns on TV tonight to just zone out before the new week begins."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "other",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

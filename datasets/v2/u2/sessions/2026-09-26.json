@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 210,
+  "date": "2026-09-26",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Saturday. How is your weekend starting off in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, thanks. The weather is actually pretty nice today. I started the morning off with a quick protein smoothie, and now I'm just figuring out what to do with the rest of my day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie sounds like a refreshing start. Are you and Grace planning to do any more research for your Japan trip next spring today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we actually spent about an hour looking at different cities we want to visit. Grace really wants to make sure we spend a few days in Kyoto, so we've been looking at some of the temples and gardens there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Kyoto is beautiful in the spring! It sounds like the planning is coming along nicely. Have you had any time to get out to the garage for some woodworking lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did head out there after breakfast. I've been working on a small cedar shelf for our entryway. It's nice to just focus on sanding and shaping the wood for a bit, especially after a busy week at school."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to decompress. How are your chemistry students adjusting now that the new school year is in full swing?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're doing well! We just did our first real lab experiment of the year yesterday, which is always exciting but a little chaotic. I've got some lab reports to look over, but I'm saving those for tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move leaving the grading for Sunday. You definitely deserve a relaxing evening. Any plans for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much, just keeping it low-key. Grace and I are planning to watch a nature documentary later tonight and just relax on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect way to wind down. Do you have a specific one lined up, or are you going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We found one about deep-sea marine life that looked really interesting, so we'll probably start with that. Anyway, I should get going, but I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

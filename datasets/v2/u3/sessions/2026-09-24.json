@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 208,
+  "date": "2026-09-24",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you're doing well today in Phoenix. Are you gearing up for another night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I am. I just woke up a little bit ago and I'm currently sipping on some slow-steeped, chilled coffee to help me open my eyes. It's so refreshing in this heat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect wake-up call, especially with the Phoenix heat. Did you end up using your roommate's new espresso machine, or did you make that yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made a big batch of this steep-overnight stuff myself! It's super easy. Since I was running a bit behind today, I decided to hail a ride through an app instead of driving myself to the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, letting someone else do the driving is definitely nice when you're on a tight schedule. Did you get to listen to anything good on the ride over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on my headphones and listened to a hilarious stand-up comedy audio program. It had me giggling the entire ride, which is a great way to start a shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is the best pre-shift medicine! How about dinner—or lunch, for your schedule? Did you manage to prepare anything to eat tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did! I packed up a container of the extra food I made last night to heat up in the breakroom later. It's much better than hospital cafeteria food."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely, homemade is always best. Speaking of cooking, have you had any time for your sourdough baking lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not today, but I fed my starter yesterday. It's been a bit quiet on the baking front, but Tom and I did go out for some salsa dancing earlier this week, which was a blast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds wonderful! It's great that you and Tom are still finding time for salsa, especially with your demanding night shifts. How are you feeling overall? Fully recovered from that flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I'm 100% back to normal now, thankfully. That flu really knocked me out, but I've got my energy back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. Well, I'll let you get ready for your shift. I hope it's a quiet night in the ER!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "packed leftovers",
+      "commute": "rideshare",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She and Tom are planning to go salsa dancing on Saturday night."
+  ]
+}

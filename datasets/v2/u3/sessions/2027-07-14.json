@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 501,
+  "date": "2027-07-14",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going so far down in Tucson? Is it a busy day at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty busy, but not too bad. The morning started a bit chaotic—traffic was looking absolutely horrendous on the highway, so Tom actually drove me in today instead of my usual drive. It was nice to be a passenger for once!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, smart move! Having Tom drive you definitely takes the edge off a bad traffic day. Did you get to relax or listen to anything interesting during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on an Italian language learning podcast. It was a nice way to squeeze in some practice instead of just listening to music or that true-crime show my coworker told me about."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to use the commute! How is the Italian practice coming along overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's coming together slowly but surely. During my morning break, I actually just had a simple cup of drip coffee while reviewing some of my vocab notes. It's tough but really fun."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic drip coffee is perfect for a study break. Did you manage to step away for a proper lunch break later on?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I packed a homemade burrito bowl with some leftover rice, beans, and salsa, so I got to eat that in the breakroom. It was super filling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, a homemade burrito bowl sounds perfect for keeping your energy up for the rest of your shift. By the way, have you and Tom had any time to think about the summer 2028 wedding plans lately, or is that on the back burner for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! We've been casually browsing some venues around Tucson online, but we aren't rushing into anything. We're keeping things pretty low-stress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very sensible approach. And how about your sourdough baking? Do you have any fun loaves planned for this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I might try a slightly higher hydration dough this Saturday to see how the crumb turns out. For tonight, though, I'm just looking forward to heading home and relaxing."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "homemade burrito bowl",
+      "commute": "got a ride from Tom",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

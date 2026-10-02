@@ -1,0 +1,89 @@
+{
+  "user_id": "u4",
+  "day": 208,
+  "date": "2026-09-24",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! How is your Thursday going? Are things busy at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yeah, it's been a pretty intense day of drafting, but I'm pushing through. I decided to keep things very casual and comfortable today, so I just threw on a warm knit pullover and my standard denim pants before heading out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect for a crisp fall day in Minneapolis. A comfortable outfit definitely makes a long day at the drafting table much easier. Are you listening to anything good while you focus on your designs?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I've had some mellow, low-tempo instrumental rhythms playing in my headphones to block out the office chatter. It really helps me zone in on my sketches."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those chill tracks are the best for deep focus. Do you have any relaxing plans lined up for after you log off tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too wild. Leah and I are just going to hang out at home. I'm going to boil some water and toss together some carb-heavy Italian noodles with a quick sauce for dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, a hot plate of noodles is always a great comfort food after a busy day. How has Leah been doing, by the way? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She actually brought home her first finished piece a couple of days ago—a slightly crooked little bowl. It’s sitting on our counter now and we're both pretty proud of it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That’s wonderful! There's something really special about handmade ceramics, even the imperfect ones. Have you been able to find time for any of your own hobbies lately, like your photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yeah. I took my camera out over the weekend to capture some of the changing leaves along the river. I haven't had time to edit the shots yet, but hopefully I can do that this weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet the autumn colors look stunning along the water right now. Have you heard from your brother Kwame recently? How is he liking Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great. We talked on Tuesday, and he was saying he's finally getting used to the humidity down there. He's really enjoying the southern food scene, too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear! It sounds like he's settling into his new city nicely."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Well, I should probably get back to these blueprints so I can wrap up on time. Have a good evening!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "You too, Daniel! Enjoy those noodles tonight and have a relaxing night with Leah."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "sweater and jeans",
+      "music": "lo-fi beats",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: music should be 'lo-fi beats', conversation gives 'other'"
+  ]
+}

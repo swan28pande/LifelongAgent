@@ -1,0 +1,94 @@
+{
+  "user_id": "u3",
+  "day": 641,
+  "date": "2027-12-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your week going so far in Tucson? How are things at the outpatient clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a bit of a rough couple of days, actually. I sprained my ankle yesterday while I was out on a hike."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, I'm so sorry to hear that! Hiking injuries can be so painful. How serious is the sprain, and are you able to walk on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a moderate sprain, so I have to keep it elevated and wrapped. It's definitely going to make my nursing shifts a challenge since I'm on my feet so much, but I'm managing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope your colleagues can help you out so you can rest it as much as possible! Did you have a busy morning at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was steady. I actually took a Lyft to the clinic this morning, which gave me a bit of a break before my shift started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A rideshare is a nice way to get some quiet time before a busy day. Did you listen to anything interesting during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I started a new audio program about canine behavior and obedience. It had some really helpful tips on training rescue dogs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great listen, especially with Dash! Are there any specific tips you're hoping to try out with him?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, they discussed positive reinforcement techniques for leash pulling. Dash still gets pretty excited on our walks, so Tom and I want to try some of those methods."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Dash will surely appreciate the extra attention! Speaking of you and Tom, how are things going with planning your summer 2028 wedding?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're making some progress! We've been looking at some local Tucson venues online, though we'll probably hold off on visiting them in person until my ankle heals up a bit."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "statement_missing: ankle.0 ([her sprained ankle] sprained her ankle on a hike (happened) (this happened on 2027-11-30))",
+    "invention: Dash gets excited on walks and pulls on the leash"
+  ],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "not mentioned",
+      "commute": "rideshare",
+      "podcast": "dog training podcast"
+    },
+    "statements": {
+      "ankle.0": false
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      },
+      "c1": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": [
+      "Dash gets excited on walks and pulls on the leash"
+    ]
+  },
+  "first_try_failures": [
+    "statement_missing: ankle.0 ([her sprained ankle] sprained her ankle on a hike (happened) (this happened on 2027-11-30))",
+    "invention: Dash gets excited on walks and pulls on the leash"
+  ]
+}

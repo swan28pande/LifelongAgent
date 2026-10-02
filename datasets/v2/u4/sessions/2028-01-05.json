@@ -1,0 +1,92 @@
+{
+  "user_id": "u4",
+  "day": 676,
+  "date": "2028-01-05",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! I hope your Wednesday is going well. Did you have to do one of those early morning client calls at the studio today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thankfully, no early calls today! It made for a much more relaxing morning. I actually had time to sit down and enjoy the cold-soaked rolled oats that I prepped in a jar last night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, stress-free start. Did you manage to fit in some exercise before you had to head out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I laced up my sneakers and headed out to jog some miles around the block. It was pretty brisk out, but getting my heart rate up on the pavement always wakes me up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning jog in the Chicago winter is impressive! How is the atmosphere at the studio today? Are you dressed for client presentations or a quiet day of drawing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely a quiet day. I'm just wearing a dark, collarless short-sleeved top made of cotton, paired with some classic blue denim trousers. Very casual and comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect for focusing. Do you have some music playing to keep you in the zone while you work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I've got some chill, beatless synthesized soundscapes and atmospheric instrumental tracks playing in my headphones. It really helps me block out any distractions."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly peaceful. What are your plans for after work? Are you and Leah cooking anything special tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes. I'm planning on searing a couple of fillets of that pink-fleshed, upstream-swimming river fish on the hot grill grates when I get home. Leah has a long shift today, so I want to have dinner ready."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! How has Leah been adjusting to her pediatrician role at the hospital lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She loves it, but it's definitely demanding. She actually has her pottery class right after her shift tonight, so she's going to have a very long day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "She certainly has a full schedule! Since she'll be busy, will you have time for a bit of chess or maybe checking out that new climbing gym across town tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably not the climbing gym tonight. Even though my wrist has healed up nicely since the cast came off, I'm still trying to take things a bit easy. I might just put on one of the vinyl records I inherited from my grandfather and relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very cozy Wednesday evening plan. I hope you enjoy the music and the dinner!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "overnight oats",
+      "workout": "running",
+      "outfit": "black t-shirt and jeans",
+      "music": "ambient electronic",
+      "dinner": "grilled salmon"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

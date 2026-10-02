@@ -1,0 +1,90 @@
+{
+  "user_id": "u4",
+  "day": 123,
+  "date": "2026-07-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going? Are things busy at the design firm in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, things are pretty hectic at the architecture firm right now, we have a big project review coming up. I had to make sure I got a good start to the day, so I made myself a warm bowl of rolled oats with some maple syrup and berries this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy and energizing way to kick off a busy morning. How is Leah doing, by the way? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She actually brought home a small glazed bowl she made last night. It's not perfectly symmetrical, but it has a lot of character. I managed to take a break from my computer screen later in the afternoon to get some fresh air. I spent about an hour spinning the pedals along the river path on my two-wheel frame."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That river path must be beautiful this time of year. Getting out for a ride is a great way to clear your head after staring at architectural plans all day. Did you get any news from your brother Kwame down in Atlanta recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually. We chatted yesterday. He's really enjoying the warmer weather down south, though he says the humidity is taking some getting used to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Atlanta summers are definitely a contrast to what you're used to up north. What are your plans for dinner tonight after that active afternoon?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it pretty simple tonight. I'm planning to make a quick wok-fried dish with sliced beef, broccoli, and peppers tossed in a savory soy-ginger sauce over some jasmine rice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and quick to throw together. Speaking of meals, as an omnivore, do you find it easy to source good local ingredients for your cooking around Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. There are some fantastic local butcher shops and co-ops nearby that make it really easy to find high-quality meats and fresh produce. I love trying different combinations."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. Having those resources close by makes a big difference when you want to cook fresh meals. Are you planning on doing any rock climbing or other activities later this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might head to the climbing gym on Friday if my schedule clears up, but for now, I'm just focusing on getting through this workweek."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. It's important to take things one day at a time when work gets intense. I hope you enjoy your dinner tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to just relaxing and enjoying the food. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "cycling",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "stir-fry"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Daniel is planning to take his camera out this weekend to get architectural shots around the city."
+  ]
+}

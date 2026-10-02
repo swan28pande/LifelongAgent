@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 237,
+  "date": "2026-10-23",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Daniel! Happy Friday. How is your day going in Minneapolis? Are you keeping busy at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, things are pretty busy on the architecture front today, just trying to wrap up some drawings before the weekend. Honestly, I'm feeling a bit exhausted today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sorry to hear you're feeling exhausted. It's been a long week. Are you still planning on doing any physical activity later, or are you going to take it easy on your wrist?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I decided to take a complete break from my physical training today. Normally on a Friday, I'd hop on the stationary bike for a session, but since I woke up feeling so run down, I figured resting was the smarter choice."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is definitely the right call. Resting when you feel run down is so important for recovery. Did you at least manage to get a good breakfast in this morning to help boost your energy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I kept it simple and had a bowl of toasted oat clusters mixed with dried fruit and seeds, with a splash of milk. It was quick but did the trick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That toasted oat and fruit mix sounds like a perfect, comforting start. Do you have any relaxing plans for the evening once you finish up at work?"
+    },
+    {
+      "speaker": "user",
+      "text": "Leah actually has her pottery class tonight, so she'll be out for a few hours. I think I'm just going to have a very quiet night at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, right! How is her pottery class going, by the way? Is she enjoying making things?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's absolutely loving it. She's been making a lot of progress and bringing home some really cool hand-made mugs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear! Since you'll have the house to yourself and you're resting up, what's the plan for dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am definitely not cooking tonight. I ended up ordering some grilled beef patties served on toasted sesame buns with a side of fries from a local spot to be delivered. It's the ultimate low-effort Friday meal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly satisfying and exactly what you need. Nothing beats a warm delivery meal like that when you're resting."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm just going to eat my food, put on a movie, and try to get a really long night of sleep so I can feel refreshed tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "granola",
+      "workout": "rest day",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "takeout burgers"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Has a stationary trainer in his living room"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "user_id": "u3",
+  "day": 715,
+  "date": "2028-02-13",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! I hope you're having a relaxing weekend. How has your Sunday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been really nice and quiet. I started my morning in a cozy way, making myself a warm mug of hot cocoa instead of my usual tea or coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comforting, especially for a lazy Sunday morning! Did you top it with anything, or just keep it simple? How is Dash doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just kept it simple today, no whipped cream or marshmallows. Dash is doing great, he's currently curled up in his dog bed sleeping. I think he's enjoying the slow Sunday vibe as much as I am."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He really knows how to relax! Are you and Tom planning anything special for the rest of the day, or is it mostly a stay-at-home kind of Sunday?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're mostly just taking it easy at home. Tom is actually looking over some wedding planning details since summer will be here before we know it, and I've been spending some time in the kitchen."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, are you working on another baking project? Did you feed your sourdough starter recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, exactly! I actually baked a fresh loaf yesterday, so for lunch today I used a couple of slices of my home-baked sourdough to make a delicious turkey and Swiss sandwich."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds amazing! There really is nothing quite like a sandwich made with fresh, homemade bread. Did the crust turn out nice and crispy?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did! It had that perfect crunch on the outside and was super soft on the inside. I'm really happy with how this batch turned out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you've really perfected your technique. Are you still getting plenty of warm weather down in Tucson today to enjoy it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually a bit cool today, which is nice because it makes the warm cocoa and baking feel even more appropriate. It's the perfect weather for staying indoors."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound like the perfect excuse to hibernate a bit. Do you have to head back to the outpatient clinic tomorrow, or do you have a day off?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do have my day shift at the clinic tomorrow, so I'm trying to soak up as much of this calm Sunday energy as I can before the workweek starts up again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move! I hope the rest of your evening with Tom and Dash is just as peaceful and relaxing. Have a great start to your week tomorrow, Sofia!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "hot chocolate",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'no commute'"
+  ]
+}

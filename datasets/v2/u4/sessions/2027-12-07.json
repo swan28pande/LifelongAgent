@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 647,
+  "date": "2027-12-07",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Tuesday. How has your day been going over in Chicago? Is the architecture studio keeping you busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a pretty packed day at the studio. We are reviewing some structural drafts for a new lakefront project, so I've been glued to my desk. But the weather today is actually surprisingly mild for December, which is a nice change."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A mild December day in Chicago is definitely a rare treat! Did you manage to step out at all, maybe to take a few photos of the lakefront while the light was good?"
+    },
+    {
+      "speaker": "user",
+      "text": "I wish, but I didn't have my camera with me today. I did spend some time yesterday evening analyzing a chess game I lost over the weekend, though. Trying to figure out where my defense crumbled."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, analyzing past games is the best way to sharpen those chess skills. That sounds like a great way to unwind. Speaking of unwinding, do you and Leah have any nice dinner plans lined up for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do. I'm actually cooking tonight. I bought some fresh cod this morning, so I'm searing that up to put inside warm corn tortillas with a homemade crunchy cabbage slaw and some chipotle lime crema."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredible! Grilled cod in tortillas with slaw is such a perfect, fresh combination—definitely a fantastic pescatarian meal for a Tuesday night. Does Leah usually help with the prep, or do you have the kitchen to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "I usually take the lead on cooking, especially since her hours at the hospital can be so unpredictable. She just got home from a long shift, so she's relaxing. She actually brought home another little vase from her pottery class yesterday, so our shelves are slowly filling up with her creations."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It must be so rewarding for her to see those finished pieces. How is she finding the balance with her new role as a pediatrician?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's handling it really well. It's a demanding pace, but she absolutely loves working with the kids. We're both just trying to find our rhythm with our work schedules this winter."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you both are doing a fantastic job navigating everything. I'll let you get back to searing that cod before the pan gets too hot! Enjoy those delicious tortillas with Leah tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! They smell amazing already. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "fish tacos"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

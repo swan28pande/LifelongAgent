@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 154,
+  "date": "2026-08-01",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Saturday. How is your weekend starting off in Minneapolis? Did you get a chance to enjoy the outdoors today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's been a great Saturday so far. The weather was perfect, so I spent nearly four hours pushing through a massive route on my road bike, covering some serious distance across the twin cities trails. My legs are definitely feeling it now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an incredible workout! Did you happen to bring your camera along, or was today strictly about putting in the miles?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually left the heavy camera gear at home today and just focused on the cycling. Once I got back and showered, I had to sit down and finish up some design sketches for a project. To help me concentrate, I put on those cozy, down-tempo instrumental tracks with the fuzzy vinyl crackling in the background. It really keeps me in the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those relaxed tracks are perfect for drafting. It sounds like you've had a highly productive day already. Do you have any relaxing plans lined up for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do! I'm planning a really nice dinner. Honestly, my entire evening cooking routine has shifted since I took that Thai cooking class a while back. It really got me excited about preparing fresh meals at home instead of just relying on quick frozen meals or delivery. So tonight, I'm actually making a thick, high-quality cut of beef ribeye that I'm going to sear in a screaming hot pan."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! It's amazing how a single class can completely revitalize your kitchen habits. Are you planning to incorporate any of the flavor profiles or techniques you learned from the class into how you prepare the beef?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually am. I'm going to whip up a spicy, tangy dipping sauce with lime, chili, and fish sauce to go with it, which is a direct nod to some of the balance of flavors we talked about in the class. It's a fun twist on a classic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a brilliant fusion! I'm sure the acidity and heat will cut through the richness of the meat perfectly. Is Leah joining you for dinner tonight, or perhaps showing off some of her latest creations from her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually meeting up with some friends tonight, so it's a solo cooking venture for me. But she did bring home a couple of small condiment bowls she finished in her pottery class last week, so I'm actually going to use one of them to hold my dipping sauce!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is absolutely perfect! There's nothing quite like using handmade pottery for a custom sauce. I hope the meal turns out spectacular and you get to enjoy some well-deserved rest after that massive bike ride."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm really looking forward to a quiet night. Have a good evening, and I'll talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "long ride",
+      "outfit": "not mentioned",
+      "music": "lo-fi beats",
+      "dinner": "steak"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

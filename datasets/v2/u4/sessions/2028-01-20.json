@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 691,
+  "date": "2028-01-20",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Thursday going so far? Did you have a good start to the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's been a busy but good day. I actually planned ahead for breakfast and had some cold, pre-soaked rolled oats that sat in the fridge overnight with some berries. It was nice not having to cook first thing in the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, stress-free morning routine. Did you head straight into the architecture studio after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. Kept it super simple with what I wore, too. Just threw on a plain dark-as-night crewneck tee and some standard blue denim pants before heading out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a classic, comfortable look like that for a busy day at the studio. How are things going with your design projects?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're making good progress on a couple of residential layouts. I actually took a break in the afternoon and went over to the indoor bouldering facility to scale some synthetic walls for a bit. It felt great to get some movement in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. I'm glad to hear you're getting some good sessions in now that your wrist is completely healed. How is Leah doing? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She brought home a small bowl she made last week. She's at the hospital today, but we're planning a nice dinner tonight. I'm going to grill up some fresh fillets of that rich, pink-fleshed fish—the kind that swims upstream—with some veggies on the side."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! Are you trying out a new recipe for that pink-fleshed fish, or sticking to an old favorite?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually using a glaze recipe from that seafood and vegetarian cookbook I got as a gift a while back. It's got some really creative ideas in there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That cookbook has turned out to be a fantastic gift! It sounds like a wonderful Thursday evening ahead. I hope you and Leah have a great dinner."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a relaxing night. I'll catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "overnight oats",
+      "workout": "climbing gym",
+      "outfit": "black t-shirt and jeans",
+      "music": "not mentioned",
+      "dinner": "grilled salmon"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 676,
+  "date": "2028-01-05",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday morning going? Did you do anything fun with Dash or Tom yesterday evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yesterday was pretty quiet, just stayed in with Tom and Dash. This morning has been good, though. I started it off by brewing a quick pot of filtered coffee to fill my mug before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, nothing beats a fresh warm brew to get the day going. How was your commute to the clinic this morning? Did you take your hybrid?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, yes. I drove my car to work today because I had a few things to carry in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, especially with extra gear to bring. Did you listen to anything interesting on the road? I know you've been exploring different podcasts lately."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! I listened to an episode of this show that gives tips on how to teach your canine companion new behaviors and good manners. It had some great advice on leash-walking."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds really helpful! Are you hoping to try some of those techniques out with Dash?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Dash is already pretty good, but some extra positive reinforcement training never hurts. We might try some of the leash tips tonight when Tom and I take him out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. Dash will probably love the extra attention and treats! Speaking of Tom, how are the plans for your summer wedding coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're going well! We're starting to look at some local venues here in Tucson. It's exciting but definitely a lot of detail to coordinate."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is, but it's such a special time. How are things at the outpatient clinic today? Is your shift keeping you busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a steady morning so far, a good mix of patients. I'm just taking a quick breather before my afternoon appointments start."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad you have a moment to catch your breath. I hope the rest of your shift goes smoothly and you have a lovely evening with Tom and Dash!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "dog training podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Dash gets spooked by loud noises on walks"
+  ]
+}

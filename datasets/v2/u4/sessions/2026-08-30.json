@@ -1,0 +1,99 @@
+{
+  "user_id": "u4",
+  "day": 183,
+  "date": "2026-08-30",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Sunday. How has your weekend been going so far? Did you get up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a great Sunday. Leah and I actually decided to head out for a big mid-morning meal together at that local cafe down the street instead of eating at home. It was nice to just sit and relax over some poached eggs and coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start the day. Speaking of you and Leah, how are things going? I know you two have had a lot of exciting steps lately."
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! We took a huge step and officially combined our households this past Thursday. It was a hectic moving day, but I'm finally unpacking my last few boxes in our new joint place."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! Congratulations, Daniel! That is a massive milestone for you and Leah. How is the unpacking going? Are you two managing to find space for everything, like your photography gear or cycling stuff?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! It's definitely a process fitting my cameras and the road bike into the new closets, but we are making it work. Leah has been super accommodating, even with her pottery projects taking up some room too. It already feels like home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome to hear. Sounds like you're settling in nicely. Did you manage to get any physical activity in today, or was it mostly unpacking?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did get a workout in! Normally, I'd do my usual stretching and poses on the mat, but some guys from the neighborhood invited me to join them for a casual game of five-on-five on the court, so I went and shot some hoops with them instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A pickup basketball game sounds like a blast, and a great way to mix things up from your usual yoga routine! Did you have a good run?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it was great to run around, even if my shot was a bit rusty. Oh, by the way, even though it's Sunday, I had to log on and finish up some design drafts for the firm. I wanted to look somewhat presentable for an online client call, so I threw on a crisp collared shirt paired with those lightweight tan cotton trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Even on a Sunday, you're staying professional! Hopefully the online call went well. Did you have any background music playing to help you focus while drafting?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, the call actually went really smoothly. As for music, I had some independent college-radio bands with melodic guitars playing in the background. It always helps me focus when I'm drawing up architectural plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Excellent. Independent guitar-driven tracks are perfect for getting into a creative flow state. Are you planning on relaxing for the rest of the evening? Maybe catching up on some photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely just relaxing. I think I might edit some photos I took last weekend, or just hang out with Leah. It's been a busy but really rewarding few days."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, low-key Sunday evening. Best of luck with the rest of the unpacking, and have a great start to your week tomorrow, Daniel!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "pickup basketball",
+      "outfit": "button-down and chinos",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "rel.cohabit": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      },
+      "c1": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

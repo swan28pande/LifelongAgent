@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 712,
+  "date": "2028-02-10",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going down in Tucson? Are you having a busy day-shift at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually been a pretty good Thursday. The clinic is busy as usual, but I got a great start to the day. I made a quick double shot of espresso over ice with cold water to take with me, which definitely helped wake me up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect morning boost. Did you walk over today, or did you take the car?"
+    },
+    {
+      "speaker": "user",
+      "text": "I drove my hybrid car today since I had to bring a few things with me. The traffic wasn't too bad, luckily."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Did you listen to anything interesting during your drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually put on that real-life murder-investigation series that my coworker recommended a while back. It's so gripping! I was almost sad when I arrived at the clinic because I wanted to keep listening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those true-crime shows can really pull you in! I'm glad you're enjoying the recommendation. How has the rest of your day been? Have you had a chance to grab some lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I brought a homemade bowl packed with rice, black beans, fajita veggies, and salsa—basically a DIY burrito in a bowl. It was really nice to have a home-cooked meal ready to go."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and super filling! It's always nice when you can prep something healthy like that ahead of time. Are you still planning on doing some Italian practice or wedding prep later tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I want to spend a little time on my Italian course this evening. Tom and I also need to look at a few details for our summer 2028 wedding, though we're trying to take it one step at a time so we don't get overwhelmed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a very smart approach. Wedding planning can definitely become a second job if you let it! I hope Dash is ready to welcome you home for some relaxation."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. He'll probably be waiting by the door ready for a nice, long greyhound cuddle. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "homemade burrito bowl",
+      "commute": "driving",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Dash is a retired racer"
+  ]
+}

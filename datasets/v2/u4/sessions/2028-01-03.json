@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 674,
+  "date": "2028-01-03",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Daniel! Happy Monday. How is your week starting off in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a bit of a hectic start, honestly. I ended up oversleeping this morning and was in such a rush to get to the studio."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that's never a fun way to begin the week. I hope you managed to get a little fuel in you despite the rush?"
+    },
+    {
+      "speaker": "user",
+      "text": "Barely. Usually, I'd sit down with my favorite toasted bagel layered with smoked salmon, but today there was absolutely no time. I had to settle for grabbing one of those chewy, packaged high-protein supplement bars from the pantry and eating it while running out the door. It was definitely a one-off exception to my usual morning routine because I was running so late, but it kept my stomach from growling during my early meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick protein bar is a lifesaver in those moments! At least it kept you going. Were those 7 am client calls still on the schedule for today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we had a big presentation first thing. Because of that, and the rush, my wardrobe choice was incredibly basic. I just threw on a plain dark tee—jet black, actually—and a pair of standard denim trousers. No fancy suits like my coworker has been wearing lately, just pure comfort."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a simple black t-shirt and jeans is the perfect uniform for a busy day, especially when you need to just focus and get things done. Did the presentation go well?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did, thankfully! Once that was wrapped up, I was able to sit at my desk and actually focus on some drafting. I put on some great tunes to help me zone in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "What kind of music did you put on to help you focus?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been playing some highly atmospheric, textured synthesizer tracks today. It's all instrumental, very spacey and electronic, which really helps block out the studio noise without distracting me with lyrics."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect backdrop for architectural drafting—ambient electronic beats always have that steady, focused flow. How is Leah doing, by the way? Has she been busy at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing well! Her pediatric shifts have been intense, but she's really finding her rhythm. She actually has another pottery class tonight, which she's been looking forward to all week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It's great she has that creative outlet after her demanding shifts. Have you had any time for your own hobbies lately, maybe some chess or photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not as much as I'd like, but I did play a quick chess match online yesterday evening to wind down. I'm hoping to get some outdoor photography in this coming weekend if the Chicago weather cooperates."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein bar",
+      "workout": "not mentioned",
+      "outfit": "black t-shirt and jeans",
+      "music": "ambient electronic",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

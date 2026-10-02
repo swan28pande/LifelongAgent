@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 601,
+  "date": "2027-10-22",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Sofia! How is your morning going so far? Did you get a chance to take Dash out before the day got too warm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, Dash and I had a nice quick walk. It's actually a pretty beautiful morning. I'm sitting here with a warm mug of whisked green matcha powder and oat milk, just trying to wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a matcha latte sounds like a perfect, cozy start. Are you heading into the outpatient clinic today? I know your shifts can be quite busy on Fridays."
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am. I'm actually about to head out the door. I'll be taking my hybrid car to get there today, since I have some errands to run right after my shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. Driving is definitely the most convenient choice when you have a lot to do afterwards. Do you have anything fun queued up to listen to on your drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I'm going to play an episode of an Italian language lesson podcast. I really want to practice my pronunciation while I commute."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's a fantastic way to make use of your drive! How is the online Italian course going overall? Are you finding it easy to keep up with?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! It's a lot of vocabulary, but I'm enjoying it. I'm also trying to stay on top of packing my lunches to save some money. Today I put together a quick bowl with some rice, black beans, salsa, and avocado that I made at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That homemade burrito bowl sounds delicious and healthy! Saving money is always a great motivator, especially with a wedding to plan. How are things coming along with the preparations for summer 2028?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're taking it slow, but Tom and I are enjoying the process. No major updates there, just looking forward to the weekend ahead. I'm hoping to get some sourdough baking in this Saturday or Sunday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully relaxing plan. Sourdough baking is such a therapeutic weekend activity. Do you have a specific loaf or recipe in mind to try this time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just stick to my classic country loaf. It's always a crowd-pleaser, and Tom loves it. Plus, I need to feed my starter tonight so it's ready to go."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic country loaf is hard to beat! I hope the starter behaves and your loaf turns out beautifully. Have a safe drive to the clinic, and I hope the shift goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "homemade burrito bowl",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Planning a trip to Italy"
+  ]
+}

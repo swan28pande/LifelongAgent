@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 671,
+  "date": "2027-12-31",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy New Year's Eve, Sofia! How are you wrapping up the last day of the year?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I'm doing really well, thanks. I just finished up my shift at the clinic. It was surprisingly quiet today, which was a nice change of pace. I started my morning off on a really good note by whisking up some matcha powder with steamed oat milk before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and calming way to start the day. A warm matcha latte is perfect for a December morning. How is Dash doing today? Is he ready for any New Year's Eve fireworks tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Dash is doing great, though we are definitely preparing for the noise. He's such a sensitive greyhound, so Tom and I are planning to keep him cozy indoors with some white noise running later tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a very smart setup for him. Hopefully, he stays nice and relaxed. Did you manage to get a good lunch break during your shift today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually brought a burrito bowl that I had put together at home last night with rice, black beans, roasted corn, and salsa. It was so nice to have a hearty meal ready to go in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly satisfying and much better than having to scramble for takeout. Did you listen to anything interesting during your breaks today? I remember a coworker had recommended a true-crime podcast to you recently."
+    },
+    {
+      "speaker": "user",
+      "text": "I wasn't really in the mood for true crime today, so I actually put on a comedy podcast instead. It's just two funny hosts talking about weird news stories, and it had me laughing out loud in the breakroom. It was exactly the kind of lighthearted energy I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is a perfect way to close out the year! Are you planning to do any sourdough baking over the holiday weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! I have a loaf of sourdough proofing in the fridge right now. I'm planning to bake it first thing tomorrow morning so Tom and I can have fresh, warm bread for the first breakfast of 2028."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an amazing New Year's Day tradition to start. I hope the bake turns out beautifully! Do you and Tom have any other plans for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a very low-key night. We're going to make some dinner, watch a movie, cuddle with Dash, and honestly, we'll probably be asleep way before the clock strikes midnight. I hope you have a wonderful night too!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "homemade burrito bowl",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: morning_drink should be 'matcha latte', conversation gives 'other'",
+    "invention: Dash has a favorite heavy blanket"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "user_id": "u4",
+  "day": 92,
+  "date": "2026-05-31",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Sunday, Daniel! How is your weekend in Minneapolis going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just enjoying a slow morning today. I actually took some time to cook a nice hot meal to start the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A slow Sunday morning is the best. What did you end up making for breakfast?"
+    },
+    {
+      "speaker": "user",
+      "text": "I fried up a couple of chicken eggs and crisped up some strips of cured pork belly. It really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a classic, delicious start. Did Leah join you, or are you flying solo today?"
+    },
+    {
+      "speaker": "user",
+      "text": "She had some errands to run, so I'm just relaxing. I did talk to my brother Kwame on the phone earlier, though. He actually just moved to Atlanta."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! Atlanta is a big change. How is he doing with the move?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing well! It's a lot of unpacking and getting used to the southern heat, but he's excited about the new city."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It's a vibrant place. It's always a bit of an adjustment settling in. Are you planning to do some cycling or maybe take your camera out later today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm thinking of taking my camera out later this afternoon. The light should be great near the river."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect. There are so many great spots along the Mississippi for photography. Do you have a specific location in mind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might head over to the Stone Arch Bridge area. It's close by and always offers some good angles of the skyline."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bacon and eggs",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "other.kwame.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "statement_missing: other.kwame.0 (Kwame (Daniel's brother): moved to Atlanta (this happened on 2026-05-29))"
+  ]
+}

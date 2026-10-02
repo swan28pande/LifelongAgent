@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 32,
+  "date": "2026-04-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you're having a good afternoon. How are things looking in Phoenix today as you get ready for your shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good, just a bit warm already. I'm slowly waking up and sipping on a warm, milky spiced tea with cardamom and cinnamon before I have to get moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy way to start your \"morning.\" Are you squeezed for time today, or do you have any salsa dancing lined up before you head in?"
+    },
+    {
+      "speaker": "user",
+      "text": "No dancing today, unfortunately. My shift starts late, so I'm just taking it easy. I'll probably head out soon to catch the late-night municipal bus so I don't have to worry about parking."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking the bus sounds like a smart way to avoid the hospital parking garage hassle. Do you usually read or listen to something during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've got a podcast queued up that covers the latest healthcare and medical news updates. It keeps me in the loop with industry trends on my way to the ER."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a productive way to use the commute! It's always good to stay updated, especially in an intense environment like the ER. Did you manage to pack a meal for your break tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I didn't have time to prep anything today, so I'll just grab a mixed greens salad from the hospital cafeteria during my break. It's quick and easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The cafeteria salad is definitely a solid, reliable choice when you're on the go. Is Tom working tonight too, or did you get to spend some time together earlier?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom actually has a busy evening himself, so we didn't get to hang out today. It's just been a quiet solo day for me, which is honestly nice sometimes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet day to recharge is perfect before a demanding night shift. I hope the bus ride is peaceful and your shift goes smoothly tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I'm going to finish up my tea and get my bag packed. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "cafeteria salad",
+      "commute": "night bus",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

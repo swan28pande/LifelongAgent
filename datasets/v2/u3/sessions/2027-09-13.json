@@ -1,0 +1,81 @@
+{
+  "user_id": "u3",
+  "day": 562,
+  "date": "2027-09-13",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Sofia! How is your Monday starting out in Tucson? Did you get any sourdough baking done over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! I did actually, baked a lovely rosemary sourdough loaf yesterday. Today is off to a quiet start. I just brewed a standard pot of plain filtered coffee at home this morning, bypassing my roommate's fancy espresso maker for something simpler."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a classic, straightforward brew is exactly what you need to kickstart the week. Are you heading into the outpatient clinic soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I am. I'm actually driving myself in my hybrid today, so I should be there in about fifteen minutes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Safe travels! I hope the shift goes smoothly. Is it expected to be a busy Monday for you at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Mondays are usually pretty packed with follow-up appointments, but I'm ready for the day-shift rush. It's just part of the routine."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You've got this. Oh, by the way, I saw some news this morning and thought of you—the host of that true-crime audio show you like just announced a book tour! I think they might be stopping in Arizona."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, wow! Really? I'll definitely have to look up the dates. I'd love to see them if they come to Tucson or even Phoenix."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely worth checking out! How have things been going with your online Italian course lately? Have you had much time to practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I'm trying to squeeze in fifteen minutes of practice every evening. Tom even listened to me practice my pronunciation last night, which was fun."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! Having Tom there to help you practice must make it even more enjoyable. Well, I'll let you focus on getting to work safely."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'm just pulling into the parking lot now. I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'other'",
+    "statement_missing: distractor2 (her favorite podcast host announced a book tour (this happened on 2027-09-11))"
+  ],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "other"
+    },
+    "statements": {
+      "distractor2": false
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'other'",
+    "statement_missing: distractor2 (her favorite podcast host announced a book tour (this happened on 2027-09-11))"
+  ]
+}

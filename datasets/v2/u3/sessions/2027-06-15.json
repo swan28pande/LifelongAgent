@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 472,
+  "date": "2027-06-15",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. It's really hot here in Phoenix today, but I'm staying cool inside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine, Phoenix summers are no joke! How was your commute to the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was fine. I actually drove my hybrid to work today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, nice to get some use out of the hybrid! How are things at the outpatient clinic? Busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we had a pretty steady stream of patients this morning. But my shift is going smoothly so far."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. Have you had any time for your Italian course lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did a quick lesson last night before bed! It's a lot of fun, though some of the grammar is tricky."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Che bello! You're making great progress. How are the wedding plans going with Tom? Summer 2028 will be here before you know it!"
+    },
+    {
+      "speaker": "user",
+      "text": "We've been looking at some venue ideas online, but we're taking it slow. No rush!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking your time is a great approach. Have you done any sourdough baking recently, or has it been too warm to turn on the oven?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, it's way too hot for baking right now. I'm giving my starter a little break in the fridge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. Well, I hope the rest of your shift goes well today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: morning_drink should be 'not mentioned', conversation gives 'other'"
+  ]
+}

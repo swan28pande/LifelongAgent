@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 333,
+  "date": "2027-01-27",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How has your Wednesday been going at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy day, but pretty good overall. I started the morning on a nice note—I made a warm matcha green tea latte with frothed milk before I left the house."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious way to start the day. Did you manage to pack a decent lunch to keep your energy up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I made a turkey and cheese sandwich using a couple of thick slices of my homemade sourdough. It hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Your baking always sounds amazing. Did you have time to listen to that true-crime podcast your coworker recommended while you had your lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, no. I've been tuning into a podcast focused on basic Italian grammar and vocabulary lessons instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, neat! What prompted the shift in your usual podcast routine?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, since I signed up for that online Italian course recently, I decided to change my podcast routine to get more listening practice in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a really clever way to reinforce what you're learning! How is the course itself going? Have you tried practicing any of it with Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going really well! Tom actually tried to repeat some phrases with me last night, but his accent was so goofy we just ended up laughing the whole time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, at least he's willing to try! Is the winter weather in Phoenix nice enough for you two to enjoy some time outside this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really is, it's been beautiful and mild today. I think we might just sit out on the patio for a bit once I get settled."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

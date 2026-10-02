@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 710,
+  "date": "2028-02-08",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How has your Tuesday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's been a pretty good day. I started it off on a healthy note with a protein smoothie for breakfast, which definitely kept me full through my morning classes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! It sounds like that nutritionist's advice to add more breakfast protein is working out well for you. How was the rest of your day at the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was busy, as usual for the science department, but I managed to leave on time. I actually got to play some tennis this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! It's wonderful that your back has recovered fully and you're able to play tennis regularly again. Did Grace join you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, Grace had some late meetings today, so I played a few singles sets with a fellow teacher instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A friendly colleague match is always fun! Do you have any plans to relax for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm keeping it very low-key. I think I'm just going to watch some sitcom reruns on that new streaming service we signed up for."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing Tuesday night. Is Olive hanging out with you tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, Olive is just napping in her usual spot in the living room."
+    },
+    {
+      "speaker": "assistant",
+      "text": "She always knows how to find a cozy place! Did your neighbor mention how their vegetable garden is coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "They did! They're just doing some winter prep right now, but they're getting everything ready for spring."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Olive is a total lap cat"
+  ]
+}

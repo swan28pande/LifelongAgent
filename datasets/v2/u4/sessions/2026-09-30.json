@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 214,
+  "date": "2026-09-30",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Wednesday. How is your day going so far? How has your wrist been feeling lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. The wrist is actually feeling much stronger. I didn't want to push it on an outdoor ride just yet, so I started my morning getting some cardio in on the indoor pedaling machine that stays in one spot. It felt good to get my legs moving without worrying about my balance."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart way to rebuild your stamina safely. Did you have a good breakfast to fuel up after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I made a thick, blended frozen fruit mix that I ate with a spoon, topped with sliced almonds and pumpkin seeds. It was super cold but really refreshing after working up a sweat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect post-workout meal. Are you heading into the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am heading in. I actually just got dressed—wearing a smart collared shirt with buttons and some light brown cotton twill pants. We have a client meeting later, so I wanted to look professional but still feel comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A very classic, polished look! Good luck with the client meeting. What kind of project are you presenting today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! We're showing a draft for a new residential layout. It's been a busy day of drafting, so I'm already anticipating a relaxing evening. Leah and I are planning to cook together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! What do you two have planned for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're going to recreate that spicy, coconut-milk-based dish with the bright green herbal paste we learned in that Thai class we took. I've got some chicken and vegetables ready to toss into the sauce."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that coconut curry! That was such a fun class. It's great that you're still putting those skills to use. Speaking of classes, how is Leah's pottery class going?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is absolutely loving it! Our kitchen shelves are slowly filling up with slightly lopsided but very charming handmade mugs. Anyway, I should probably head out before I'm late. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "stationary bike",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'green curry', conversation gives 'other'",
+    "invention: has an indoor exercise cycle in the basement"
+  ]
+}

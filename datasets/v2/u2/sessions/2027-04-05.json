@@ -1,0 +1,72 @@
+{
+  "user_id": "u2",
+  "day": 401,
+  "date": "2027-04-05",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Monday starting off in Portland? Is the spring weather treating you well?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually a pretty nice morning. I kicked things off with a quick protein smoothie for breakfast before heading out. Olive kept me company in the kitchen while I made it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Aw, Olive is the best morning companion. A protein smoothie sounds like a solid, healthy start to a busy Monday. How are things at the high school? Still keeping busy as head of the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. We're finalizing some curriculum details, so my desk is piled high. I managed to sneak away right after my last meeting to hit the gym for some weights, though, which was a great stress reliever."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting a session of gym weights in after a busy day is a great way to transition out of work mode. Did Grace join you, or was it a solo workout?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a solo run today, Grace had her own errands to run. I'm glad I went though, feeling much more relaxed now that I'm back home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. What's on the agenda for the rest of your evening? Just relaxing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Pretty much. Grace and I are just going to unwind on the couch and watch some sitcom reruns. Nothing too heavy tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are perfect for a Monday night—easy watching after a long day. Any particular favorite you two always go back to?"
+    },
+    {
+      "speaker": "user",
+      "text": "We usually cycle through a few classics, just whatever's playing. It's nice to not have to think too much. I might also check on our neighbor's vegetable garden later; I saw they were working on it earlier."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That neighborly check-in sounds nice. It's the perfect season for vegetable gardens! I hope you have a wonderfully relaxing evening with Grace and Olive."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! We definitely will. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "gym weights",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

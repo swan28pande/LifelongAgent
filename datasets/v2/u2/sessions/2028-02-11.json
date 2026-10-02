@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 713,
+  "date": "2028-02-11",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Friday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's going pretty well! Just finishing up some grading at school before the weekend starts. The weather here in Portland is typical cold rain, but I'm staying warm inside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, typical February weather. How is Olive doing? Is she keeping you company today?"
+    },
+    {
+      "speaker": "user",
+      "text": "She was curled up on my lap earlier while I was planning next week's science lessons, but she's since moved to a sunny spot near the window. Grace is keeping an eye on her now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like Olive has her routine down. Did you manage to get a workout in today, or is that saved for later?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I did! I went and did gym weights earlier this morning before heading into work. It felt great to get it out of the way early."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Great job! It's always nice to start the day with some strength training. Did you get a chance to have a good breakfast to fuel that session?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I kept it pretty simple today and just had a bagel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A bagel is always a solid and satisfying choice. Did you manage to add some of that extra protein the nutritionist suggested?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I put a good smear of peanut butter on it, so that helped. Definitely helped keep me full through my morning classes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart way to do it. Do you have any plans for tennis this weekend, or is the rainy weather keeping you off the courts?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually have an indoor court booked for tomorrow afternoon, so I'll get to play regardless of the rain. I'm really looking forward to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect! I hope you have a great match and a wonderful weekend, Marcus."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you next week!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bagel",
+      "workout": "gym weights",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'gym weights', conversation gives 'other'"
+  ]
+}

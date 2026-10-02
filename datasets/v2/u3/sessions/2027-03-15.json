@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 380,
+  "date": "2027-03-15",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How has your day been starting out in Phoenix? I hope the weather is treating you well."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually a pretty warm and sunny day here. My morning was nice and relaxed—I avoided the freeway traffic and took the city's transit train to the clinic today, which gave me some quiet time to just look out the window."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much more peaceful start than sitting in bumper-to-bumper traffic! How are things at the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a busy shift so far, but I managed to get a decent break. I sat outside in the courtyard and ate a turkey and Swiss sandwich made with the fresh wild-yeast loaf I baked on Saturday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! There is really nothing like homemade bread for a lunch sandwich. Have you had any time lately to work on any wedding planning with Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit! We've been looking at some potential outdoor venues here in town. Since we're planning for summer 2028, we have plenty of time, but we both want to get a head start so we don't feel rushed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is very smart. Booking early takes a lot of the stress away, especially for a summer date. How are your online Italian lessons coming along amidst all of this?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're going really well! I'm practicing for about fifteen minutes every evening. I'm starting to get the hang of basic conversational phrases, though the pronunciation is still a bit tricky."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Consistency is key, so fifteen minutes a day is perfect! You'll be speaking like a local in no time. Are you and Tom doing anything special to unwind tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Tonight we're just going to make a simple dinner and probably watch a movie. I have another early shift tomorrow, so keeping it low-key is the plan."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, cozy Monday evening. I hope you enjoy your movie and get some great rest before your shift tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I appreciate it. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'music instead'"
+  ]
+}

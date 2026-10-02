@@ -1,0 +1,92 @@
+{
+  "user_id": "u2",
+  "day": 121,
+  "date": "2026-06-29",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Monday starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I actually managed to get a workout in earlier today and did some gym weights."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to kick off the week! How are you feeling after the gym weights session?"
+    },
+    {
+      "speaker": "user",
+      "text": "I feel really energized, actually. It's always a bit of a hurdle to get moving on a Monday, but once I'm there lifting, it feels great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, starting strong makes a huge difference. How is the summer weather over in Portland today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, the Portland summer has been beautiful so far. It's warm and sunny, but not too hot yet. It's perfect weather for being outdoors."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Did you and Grace get to enjoy any of the nice weather over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did! Grace and I went for a nice walk around the neighborhood. Also, I finally joined a tennis club this weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's exciting! A tennis club sounds like a fantastic way to enjoy your hobby this summer. Have you had a chance to play on their courts yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, but I'm hoping to book a court and get out there later this week. I'm really looking forward to playing some matches."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure you'll have a blast. Are you planning on doing any woodworking this week as well, or is tennis taking center stage?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'll probably do a bit of both. I have a small shelving project I've been meaning to finish up in the garage, so I might spend a few hours on that tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a perfect balance of active and creative time. Let me know if you need any help keeping track of your plans this week!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think I'm all set for now. Just going to enjoy the rest of my Monday afternoon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "invention: The user joined a tennis club over the weekend."
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "gym weights",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": [
+      "The user joined a tennis club over the weekend."
+    ]
+  },
+  "first_try_failures": [
+    "invention: The user joined a tennis club over the weekend."
+  ]
+}

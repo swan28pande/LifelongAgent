@@ -1,0 +1,82 @@
+{
+  "user_id": "u3",
+  "day": 222,
+  "date": "2026-10-08",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I'm actually on my lunch break at the clinic right now, eating some food I packed from last night's dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds nice! Bringing your own meal is always a great option. How are things in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Phoenix is starting to feel a bit more comfortable temperature-wise. I actually rode the local light rail to work today instead of driving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, taking the train is a great way to avoid traffic. Did you listen to anything on your way in?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on a comedy-focused podcast to get some good laughs before my shift started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A funny show is perfect for setting a positive tone for the day! Speaking of mornings, did you ever try out that new espresso machine your roommate bought?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually haven't. I've just been sticking to regular brewed coffee from a pot lately. I changed my morning drink routine because I switched jobs to become a day-shift nurse at an outpatient clinic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that makes complete sense. A simple cup of drip coffee is so reliable when you need to get moving for an early shift. How have things been with Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is doing great! We are hoping to go out for some salsa dancing this weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lot of fun! Have you had any chance to do some sourdough baking recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not this week, but my starter is doing well, so I'm hoping to bake a loaf soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "packed leftovers",
+      "commute": "light rail",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She recently switched jobs to start her current role as a day-shift nurse.",
+    "invention: She is returning to the same dance studio she previously attended for her weekly salsa dancing classes."
+  ]
+}

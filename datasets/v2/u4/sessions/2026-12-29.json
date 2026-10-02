@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 304,
+  "date": "2026-12-29",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope you're having a good Tuesday. How is everything going over in Minneapolis today? How are things at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just a typical busy Tuesday. I actually got a decent start to the day. I fried up a couple of eggs and served them over some crispy toasted bread this morning, which gave me some good energy. And I had a big presentation on one of my projects, so I actually put on a nice collared button-up shirt and some casual cotton twill trousers instead of my usual loungewear."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid breakfast to fuel a presentation day! And it's always nice to dress up a bit to get into the zone. How did the presentation go with the design client?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went really well! They loved the direction we're taking. After that meeting, I had a lot of spreadsheet work to do, so I put on some of my late grandfather's old vinyls to keep me company. I was spinning some classic bebop and swing music with lots of trumpet and sax, which really helped me focus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds wonderful. Inheriting that collection was such a treasure, and listening to those old pressings is a great way to power through paperwork. How is Leah doing? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She actually brought home a new bowl yesterday. We're actually going to use it tonight because we're planning to make some seasoned ground beef and fold it into warm corn tortillas with fresh salsa and guac. It's the perfect easy meal for tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! There's nothing better than a fresh homemade meal in hand-thrown pottery. By the way, have you heard from your brother Kwame recently? How is he liking his new place in Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "I talked to him over the weekend! He’s really settling in nicely. He says the weather is a lot warmer down there than what we're dealing with up here, which I'm definitely a little jealous of right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Minnesota winters are no joke. On another note, I wanted to check in on your wrist. Since your cast came off a while back, has it been feeling completely back to normal?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's doing great. No stiffness or pain at all anymore, which is a huge relief. I barely even think about it now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! I'm so glad to hear it healed up so well. Are you planning to just stay cozy inside tonight and escape the cold?"
+    },
+    {
+      "speaker": "user",
+      "text": "That is exactly the plan. Just going to enjoy those warm tortillas, relax with Leah, and maybe listen to a few more of those old records. Have a good evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "jazz records",
+      "dinner": "tacos"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: outfit should be 'button-down and chinos', conversation gives 'missing'",
+    "pref_absent: music should be 'jazz records', conversation gives 'missing'"
+  ]
+}

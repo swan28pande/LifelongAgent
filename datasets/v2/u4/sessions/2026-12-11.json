@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 286,
+  "date": "2026-12-11",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Friday. How is your day going over in chilly Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty cold today, but I'm staying warm inside. Just wrapped up a big design review for one of our client projects. It's been a busy morning, but we got a lot done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. It must be satisfying to get that wrapped up before the weekend. How is Leah doing? Did she have another session of her pottery class recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "She did! Actually, she brought home a couple of small bowls she fired last week. They aren't perfectly symmetrical, but they have a lot of character. She's really enjoying it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It's always fun to see the physical results of a new hobby. Are they going on display in the kitchen?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we put them on the main shelf. Every time I look at them, I'm impressed she's picking it up so quickly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like she's a natural. And how about you? Have you been listening to anything interesting while getting through your design work today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. I had my headphones on all morning. I was streaming a playlist of underground, non-mainstream guitar bands—lots of those quirky, self-released alternative tracks from the late 90s and early 2000s. It really helps me focus when I'm reviewing layouts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that style of music is perfect for focusing. It has just enough energy without being distracting. Did you discover any new bands, or was it mostly old favorites?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! A couple of obscure college radio songs came on that I hadn't heard in years, which was a nice nostalgia trip. It definitely kept my energy up during the tedious parts of the review."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nostalgia tracks are the best for a Friday workflow. Do you and Leah have any relaxed plans for the weekend, or perhaps some photography if the weather clears up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was actually thinking of taking my camera down to the riverfront if we get some fresh snow overnight. Otherwise, we'll probably just stay warm indoors and watch a movie. It's nice to have a slow weekend ahead."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

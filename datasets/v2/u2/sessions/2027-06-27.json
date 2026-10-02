@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 484,
+  "date": "2027-06-27",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Sunday going over in Portland? I hope you and Olive are having a relaxing morning."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Portland is beautiful today. Olive is actually curled up on my lap right now. I just finished eating a warm bowl of oatmeal, so it's been a very cozy start to the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal sounds like a perfect, comforting Sunday breakfast. Are you planning on getting a workout in today, or maybe spending some time doing some woodworking?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, today is a rest day for me. I'm just taking things completely easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A rest day is always well-deserved! How have things been going with your role as head of the science department lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been busy but good. I'm just sorting through some curriculum reviews and budget files. It feels good to keep everything organized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I imagine those administrative tasks take a lot of focus. It's great that you're staying on top of it all. How is Grace doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great! She actually went out to run a few quick errands, which is why the house is so quiet right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds peaceful. And how has your lower back been feeling? I know you fully recovered from that strain a while ago, but I hope it's still holding up well."
+    },
+    {
+      "speaker": "user",
+      "text": "It's been completely fine, thanks for asking. No issues or stiffness at all, even when I'm moving things around."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful news. By the way, how is your neighbor's vegetable garden coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's doing really well! They've got quite a few plants sprouting up. Anyway, I think I'm going to stretch my legs a bit. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "rest day",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: His cat Olive has a harness for outdoor walks."
+  ]
+}

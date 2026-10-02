@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 657,
+  "date": "2027-12-17",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your day going so far at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, actually. Fridays are always a bit hectic, but I'm getting through it. I ended up taking a rideshare to work today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a rideshare commute sounds like a nice way to let someone else handle the traffic. Did you listen to anything good on the ride over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on a really funny comedy podcast to keep things light. It had me laughing the whole way here, which definitely helped set a good mood for the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Starting the day with some laughs is always a win! Have you been able to take your lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I just got back from it. I brought a homemade burrito bowl that I assembled last night, so I just ate that in the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and super convenient. It's nice to have a good meal ready to go. How is Dash doing? Is he enjoying his Friday?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great. Tom is home with him today, so I'm sure Dash is getting plenty of attention and probably taking a long nap."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that Tom is there to keep him company! Speaking of Tom, how is everything going with the wedding planning? Summer 2028 is a ways off, but I'm sure there's always something to think about."
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! We are slowly starting to discuss some ideas, but we are mostly just enjoying being engaged and not putting too much pressure on ourselves yet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very healthy and relaxed way to handle it. There is plenty of time to figure out all the details later."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Well, my break is just about over, so I need to get back to the clinic floor, but it was nice chatting with you!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Of course! Have a wonderful afternoon and a great weekend ahead, Sofia."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "homemade burrito bowl",
+      "commute": "rideshare",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Sofia and Tom want an outdoor desert venue for their wedding."
+  ]
+}

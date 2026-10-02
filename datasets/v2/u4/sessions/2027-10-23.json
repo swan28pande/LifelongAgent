@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 602,
+  "date": "2027-10-23",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Saturday. How is your weekend starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I actually started the morning by lacing up my sneakers and heading out to clock a serious amount of miles on a high-endurance jog. I was out there for nearly two hours just pacing myself, which felt great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an amazing way to kick off the weekend! It must feel good to build up that kind of stamina again. Did you head towards the lake, or stick to a different route today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just wandered through some of the quieter neighborhoods around here. After I got back and showered, I had to sit down and do a bit of studio work. I threw on a crisp collared shirt paired with some casual cotton twill pants just to feel a bit professional, even though I'm just working from our desk at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes dressing the part really helps with focus, even at home. Are you drafting some new designs, or just catching up on business admin?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just catching up on some administrative stuff and reviewing some client feedback. To keep my focus up while sketching, I've had some independent label alternative rock playing in the background all afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Guitar-heavy college radio tunes are great for zoning in on design work. Are you listening to anything new, or revisiting some old favorites?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly just shuffling through some old favorites from my college days. It's nice background noise that keeps the energy up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a highly productive afternoon. Do you have any plans to relax with Leah this evening, or maybe fit in some chess or climbing later?"
+    },
+    {
+      "speaker": "user",
+      "text": "No climbing for me today, my legs are pretty toast after that high-endurance morning jog. Leah and I are just having a quiet night in. I'm actually about to fire up the barbecue and cook some fresh pink-fleshed fish fillets on the grates."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, grilling some fresh fish on a Saturday evening sounds absolutely perfect. Do you have a favorite marinade or seasoning you like to use?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some simple lemon, dill, and garlic. Leah is tossing a green salad to go with it, so it'll be a nice, light meal to wrap up the day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "long run",
+      "outfit": "button-down and chinos",
+      "music": "indie rock",
+      "dinner": "grilled salmon"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'long run', conversation gives 'lakefront run'"
+  ]
+}

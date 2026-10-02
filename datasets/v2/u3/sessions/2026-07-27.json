@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 149,
+  "date": "2026-07-27",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday going? Did you manage to get some rest today before your shift tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I got some really good sleep. When I woke up, I made myself a warm mug of brewed ginger root tea to start the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy way to wake up. Is your stomach feeling okay, or are you still recovering from that flu you had?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, I'm completely over the flu now, thankfully. My stomach is fine, I just wanted something comforting. I actually had a great appetite today and made a quick sandwich on my freshly baked sourdough for lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Homemade sourdough makes the best sandwiches! Have you been finding much time for baking lately with your busy ER schedule?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's tough, but I try to keep my starter active. Speaking of work, I should probably start heading out soon. I'm going to take the nighttime public bus to the hospital tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope the commute is smooth. How is the Phoenix heat holding up this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it's still baking hot outside even after sunset, but thankfully the bus has good AC."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's definitely a necessity in Arizona! Are you and Tom still getting a chance to go salsa dancing on your days off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we went recently and it was so much fun. It's nice to burn off some stress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, having a fun physical outlet is so important. I hope your shift tonight is peaceful and goes by quickly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow after I get some sleep. Have a good night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "ginger tea",
+      "lunch": "sourdough sandwich",
+      "commute": "night bus",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She and Tom are planning to go salsa dancing at their usual spot this coming Thursday night."
+  ]
+}

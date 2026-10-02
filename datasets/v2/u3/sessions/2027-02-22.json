@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 359,
+  "date": "2027-02-22",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday starting off? Are things keeping you busy at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Oh, today has been incredibly hectic right from the start. I was running behind this morning, so I actually ended up hailing a Lyft instead of taking my normal light rail route just to make sure I got to work on time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, starting the week rushing is always stressful. Did the rideshare at least get you there without too much traffic delay?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully the driver got me there quickly! But once I arrived, the outpatient clinic was absolutely swamped. It was so nonstop with back-to-back patient appointments that I didn't even get to eat lunch today. Usually, I'd bring a sourdough sandwich I made, but there just wasn't a single free minute to sit down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds exhausting! Going through a whole nursing shift on an empty stomach is no joke. I hope you're able to get a proper meal soon now that your shift is wrapping up."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Tom is actually preparing dinner for us tonight so I don't have to worry about cooking when I get home, which is a lifesaver."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is incredibly nice of Tom! Having a warm meal waiting for you makes a huge difference after a day like that. Have you two been able to enjoy any of the nice Phoenix weather lately, or has it just been work and home?"
+    },
+    {
+      "speaker": "user",
+      "text": "We took a short walk over the weekend, but mostly I've been trying to keep up with my online Italian course. I did a quick lesson last night, though my brain is too fried to even think about verbs today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all. Learning a language takes serious focus! By the way, are you feeling completely back to 100% after recovering from the flu, or are you still feeling a bit of lingering fatigue?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, I'm completely recovered from the flu now, thank goodness. Today's tiredness is purely from the crazy clinic schedule, not because I'm sick anymore."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a relief to hear. A busy day is tough, but at least your immune system is back in top shape."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm just looking forward to getting home, eating Tom's dinner, and probably going to sleep early. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "skipped lunch",
+      "commute": "rideshare",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

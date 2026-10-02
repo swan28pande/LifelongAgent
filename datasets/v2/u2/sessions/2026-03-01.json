@@ -1,0 +1,86 @@
+{
+  "user_id": "u2",
+  "day": 1,
+  "date": "2026-03-01",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Sunday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I actually just got back from a diner breakfast. I usually make pancakes on Sunday mornings, but I ended up meeting up with a friend today so we went out instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great start to the day! It's always nice to switch things up to catch up with a friend. What do you have planned for the rest of your Sunday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I just finished up a workout. I did some gym weights today to get moving. Now I'm just relaxing at my place here in Portland, Oregon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, you're in Portland! I love the Pacific Northwest. What do you enjoy most about living there?"
+    },
+    {
+      "speaker": "user",
+      "text": "Portland is great, especially the food scene and all the greenery. I actually work as a high school chemistry teacher here, so keeping up with the kids keeps me pretty busy during the week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A high school chemistry teacher! That must be both challenging and incredibly rewarding. Are you doing lesson planning today, or do you manage to keep your weekends work-free?"
+    },
+    {
+      "speaker": "user",
+      "text": "I try my best to keep Sundays work-free. No grading or planning today! Instead, I'm hoping to spend some time on my hobbies. I really enjoy woodworking when I have some free time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Woodworking is a fantastic hobby! There's something so satisfying about making things with your hands. What kind of projects do you like to work on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly small furniture pieces and decorative items. It's a nice way to unplug and focus on something tactile after teaching all week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect creative outlet. Do you have any plans to work on a piece this afternoon, or are you just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might do a little bit of sanding later, but mostly I'm planning a quiet evening. I think I'm just going to relax and watch a cooking competition show on TV tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cooking competition show sounds like the perfect way to wind down. I hope you have a relaxing evening and a great start to your school week tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It's been good chatting with you."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "diner breakfast",
+      "workout": "gym weights",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {
+      "job.0": true,
+      "city.0": true,
+      "hobbies.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Marcus has a garage with a basic woodworking setup."
+  ]
+}

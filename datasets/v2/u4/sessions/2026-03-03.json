@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 3,
+  "date": "2026-03-03",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Tuesday. How is your day in Minneapolis starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's pretty cold out today, but I had a solid start. I whipped up a couple of scrambled eggs and slid them onto a crisp, toasted slice of sourdough bread before heading out, which really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, warm breakfast to power you through the morning. Are you headed into the design firm today, or working on some drafting?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am at the office today. I decided to dress up just a bit, so I put on a collared, button-front shirt and a pair of clean, slim-fit cotton trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart casual is always a good look for an architect! What's on your drawing board today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working on a floor plan revision for a new commercial space. To keep my focus while drafting, I've had some music from various independent guitar bands playing in my headphones all morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I love that kind of music for getting into a flow state. There's nothing like some good alternative tracks to keep the energy up. Did you manage to squeeze in any physical activity today, or is it a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I got a session in! I headed over to the local fitness center first thing this morning to do some strength training and lift weights before the workday started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Impressive! Getting that workout out of the way early must feel great. How are things otherwise? Have you taken your camera out for any photography lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yeah. I took some shots of the frost on the trees near the river last weekend. The winter light here can be really dramatic and beautiful."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Minneapolis winters definitely have a unique aesthetic. Have you shown any of those photos to Leah yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, and she really liked them. She's actually been helping me pick out the best ones to edit. We're hoping to get together later this week once our schedules clear up."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "gym",
+      "outfit": "button-down and chinos",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "format: no turns returned"
+  ]
+}

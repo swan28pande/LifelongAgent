@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 546,
+  "date": "2027-08-28",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Saturday. How is your weekend starting off in Tucson? Have you had any time for your sourdough baking this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going well, thank you. Actually, I spent part of the morning in the kitchen. For lunch today, I made a turkey and cheddar sandwich using two slices of the sourdough loaf I baked yesterday. It turned out really crusty and delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! There's nothing quite like a sandwich made with fresh, home-baked sourdough. Have you and Tom had any time to talk about the wedding plans lately, or are you taking a break from that for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are taking a little break from wedding talk this weekend, honestly. Since we set the date for next summer, we feel like we have plenty of time and don't need to rush into every single detail just yet. We're just enjoying the engagement."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense, no need to rush when you have until summer 2028. It's good to just enjoy the process. Besides baking, how else have you been spending your free time today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've actually been trying to get some language practice in. While I was cleaning up the kitchen after lunch, I listened to an episode of a podcast that teaches Italian lessons. It's a nice supplement to the online course I signed up for."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's a clever way to multitask! How do you like the Italian learning podcast compared to the online course?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's really helpful because it focuses a lot on pronunciation and conversational flow, which is a nice break from the grammar drills in the course. It's definitely a change of pace from that true-crime podcast my coworker told me about, but I'm really enjoying it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! True crime is great for suspense, but learning a new language is incredibly rewarding. Is Tom joining in on the Italian practice, or is he leaving that to you?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's leaving that to me for now! He actually went out to run some errands this afternoon because it's so incredibly hot here in Tucson today, and we wanted to get things done before the peak afternoon heat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wise move, Tucson summers are no joke! I hope he gets back safe and you both can enjoy a relaxing evening inside where it's cool."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, we're definitely staying indoors. I'm about to curl up with a book now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning a honeymoon trip to Italy"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "user_id": "u4",
+  "day": 470,
+  "date": "2027-06-13",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Sunday. I hope you've had a relaxing weekend. How are things going in Chicago?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey. Honestly, my Sunday took an unexpected turn today. I woke up feeling incredibly congested and achy, so I took a rapid test, and it turns out I've caught COVID."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, I'm so sorry to hear that! That is definitely not how you want to spend your Sunday. How are your symptoms right now? Is Leah able to help you isolate?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, she's being amazing. Since she's a pediatrician, she knows the drill. She's banished me to the spare bedroom and is keeping her distance to avoid getting sick herself. Right now, I've just got a headache, a scratchy throat, and a lot of fatigue."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad she's there to help, but it still sounds miserable. I hope you can just rest and take it easy. Did you have to cancel a lot of plans for today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Luckily my weekend plans were pretty quiet, but I did have to log on to my laptop for a bit to finish up some project timelines for the design firm. Since I was feeling chilly, I bundled up in a thick plaid button-down shirt and some denim pants to stay comfortable while working from bed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Plaid and denim sounds like the ultimate comfortable sick-day outfit. It's smart to keep warm. Were you able to get through your design firm tasks okay despite the headache?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was, though it took some effort to concentrate. To keep myself focused and lift my spirits a bit while staring at the screen, I put on some guitar-heavy tracks from independent bands in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Music from independent alternative bands is usually great for getting into a flow state. Did it help you get those timelines wrapped up?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really did, it kept my mind off the headache for a while. Now that work is done, I'm just trying to stay hydrated. For dinner tonight, I'm keeping things simple and light by baking a big tray of seasoned root crops and broccoli in the oven."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Baking a sheet of garden veggies is a perfect choice—warm, nutritious, and very easy on a sick stomach. Is Leah preparing that for you so you can stay in bed?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, she is prepping the tray and leaving it outside my door. I'm incredibly lucky to have her looking after me. I just hope this passes quickly so I can get back to rock climbing soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure you will be back on the climbing wall before you know it. For now, just focus on resting up and staying hydrated. Let me know if you need me to look up any details or manage reminders for you while you recover!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, I appreciate that. I'm going to close my eyes for a bit now. Speak tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "indie rock",
+      "dinner": "roast vegetables"
+    },
+    "statements": {
+      "covid.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

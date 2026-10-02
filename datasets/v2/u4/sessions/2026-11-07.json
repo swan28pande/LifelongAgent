@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 252,
+  "date": "2026-11-07",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Saturday. How's everything going in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going okay. Actually, I'm stuck inside doing some catch-up drafting for work today, which isn't how I usually like to spend my weekends, but it has to be done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a Saturday work session. That's tough, but hopefully you're keeping it relaxed. Are you dressed cozy for the drafting table?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I'm keeping it very casual today—just wearing a warm, thick-knit wool pullover and some classic blue denim trousers. Comfort is definitely key when I'm sitting at the desk for hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect outfit for a chilly November afternoon. Do you have some music playing to keep you focused while you draw?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I've got some relaxing, downtempo instrumental tracks with those soft hip-hop style rhythms looping in the background. It's the perfect background noise because there are no lyrics to distract me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those chill, wordless rhythms are excellent for zoning in on design details. Speaking of work, how have things been going with your junior architect role lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been really good! We've got a lot of interesting projects lined up, though the deadlines can be tight. It's definitely keeping me on my toes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It sounds demanding but very fulfilling. Have you had any chance to get out with your camera lately, or has work kept you too busy for photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took my camera out to the riverfront last weekend. The autumn light was beautiful, so I managed to capture some really nice shots of the stone arch bridge."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds gorgeous! The riverfront is such a great spot for photos this time of year. How is Leah doing? Is she still busy with her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She's still going every week and absolutely loving it. She actually brought home her first finished bowl the other day. It's a little uneven, but we're already using it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! There's something really special about using handmade pieces around the house. I hope she keeps at it."
+    },
+    {
+      "speaker": "user",
+      "text": "Me too! Well, I should probably get back to these drawings so I can wrap things up. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "sweater and jeans",
+      "music": "lo-fi beats",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

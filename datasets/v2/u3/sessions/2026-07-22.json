@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 144,
+  "date": "2026-07-22",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How are you doing today? I hope you've fully recovered from that flu. Are you gearing up for another night shift at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yes, I'm feeling 100% back to normal, thank goodness. That flu really knocked me out for a bit. I am indeed preparing for my ER shift tonight. Right now, I'm just sitting here sipping a warm, spicy ginger infusion to wake myself up and keep my throat happy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, soothing way to start your 'morning' before heading into the busy ER. How are you planning to get to the hospital tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Since it's a bit later in the evening, I'm going to take the night-owl city bus route. It drops me off right near the clinic entrance, so it's pretty convenient."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's convenient, and it saves you from having to drive in the evening traffic. Do you usually read or listen to something during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "Usually, I use that time to listen to a podcast. Tonight I've got queued up an episode from a show that covers the latest clinical research and global public health updates. It helps keep me in the loop."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A medical and public health news show sounds like the perfect prep for an ER nurse. Keeps your mind sharp! How have things been in Phoenix otherwise? Have you had any time for your hobbies lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Phoenix is absolutely roasting right now, so I've been staying indoors as much as possible. I haven't done any sourdough baking lately because turning on the oven when it's this hot outside sounds like torture, though I did feed my starter yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all—baking in the Arizona summer heat is definitely a challenge! Have you and Tom managed to get any salsa dancing in to beat the heat indoors?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually did! We went to an air-conditioned studio last Friday night. It was so much fun and a great way to move around without melting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a blast! There's nothing like a good dance session to lift your spirits. Well, I hope your commute is smooth and your shift isn't too chaotic tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to finish up my tea and head out to the bus stop. Catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "ginger tea",
+      "lunch": "not mentioned",
+      "commute": "night bus",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,81 @@
+{
+  "user_id": "u4",
+  "day": 301,
+  "date": "2026-12-26",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! I hope your weekend is off to a good start. How are things going today in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. Honestly, I woke up feeling completely drained and exhausted today. Because of that, instead of the lengthy bike ride I normally do on Saturdays, I decided to just take a total break from any exercise today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very smart decision. Listening to your body when you feel depleted is so important. Since you're taking it easy, I hope you're keeping warm and comfortable."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I haven't done much of anything. I've just been lounging in a cozy hooded sweatshirt and some loose fleece sweatpants all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect uniform for a quiet Saturday. Did you have a nice holiday yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was quiet but meaningful. Yesterday, I actually inherited my late grandfather's old vinyl compilation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that is incredibly special. A physical collection like that is such a personal keepsake to receive. How is the condition of the albums?"
+    },
+    {
+      "speaker": "user",
+      "text": "They are actually in really great shape. It's a pretty massive stack of vintage physical albums, and looking through all of them is quite a nostalgic journey."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a beautiful way to feel connected to him and keep his memory close. Did Leah get a chance to look through them with you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, she helped me carefully unbox and sort through them yesterday evening. Today she's busy working on some of her projects for her pottery class, so it's just been me relaxing with the boxes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great that she could help you with that. It sounds like you have a very peaceful afternoon ahead of you to just recharge."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm just going to stay cozy indoors, rest up, and hopefully get my energy back for climbing and cycling sometime next week."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "statement_missing: vinyl.0 ([the record collection] inherited his grandfather's record collection (happened) (this happened on 2026-12-25))"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "rest day",
+      "outfit": "hoodie and joggers",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "vinyl.0": false
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: vinyl.0 ([the record collection] inherited his grandfather's record collection (happened) (this happened on 2026-12-25))",
+    "invention: plans to buy a turntable"
+  ]
+}

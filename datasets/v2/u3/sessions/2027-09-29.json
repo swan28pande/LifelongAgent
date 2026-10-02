@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 578,
+  "date": "2027-09-29",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going so far at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty busy morning, but Tucson's weather is actually gorgeous today, so that helps. I managed to brew a quick pot of standard drip coffee at home before my shift, even though my roommate's fancy espresso machine was right there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A simple brewed cup is sometimes exactly what you need to get moving! How are things with Tom? Have you two had any more thoughts on the summer 2028 wedding?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're doing great! We actually talked about it a bit yesterday, but we're mostly just enjoying being engaged right now. No major plans set yet, we're taking it slow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a very smart way to go about it—no need to rush the planning. Did you get a chance to step away for lunch today, or did you grab something quick?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually brought my lunch today. I made a quick sandwich using the sourdough loaf I baked over the weekend, so it was really nice to have that ready."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There is absolutely nothing better than homemade bread for a sandwich! Did you have a nice, quiet break while you ate?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put my headphones in and listened to an episode of an audio language-learning program to practice my Italian. It's a nice mental break from work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a clever way to fit in some practice! How is the online Italian course going overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! The course is great for grammar rules, but the audio lessons are perfect for hearing how words are actually pronounced by native speakers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like you've found a great rhythm for learning. Do you have any plans for the rest of your evening once you're off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is coming over later, so we'll probably just cook some dinner and watch a movie. Definitely looking forward to a relaxing night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She is planning to have her wedding in Tucson."
+  ]
+}

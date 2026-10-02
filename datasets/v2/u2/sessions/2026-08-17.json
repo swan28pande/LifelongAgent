@@ -1,0 +1,88 @@
+{
+  "user_id": "u2",
+  "day": 170,
+  "date": "2026-08-17",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Monday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but exciting day. The new school year started today, so I was back in the classroom. I actually changed my breakfast routine recently because the new school year started, so I had some oatmeal this morning to make sure I had plenty of energy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! Happy first day of school! That is a major milestone. How did your chemistry classes go today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They went really well. The students were a bit quiet, but that's normal for the first day. It's just great to be back at it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear it started off on a good note! Did you have a chance to do anything to decompress after the school day ended?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I went and did a workout with gym weights. It really helps me clear my mind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Lifting gym weights is a great way to blow off some steam. Did you head to your usual spot in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I went to my regular gym for a quick session with the gym weights and then headed straight home to relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You definitely earned some relaxation time today. Do you and Grace have any plans for the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're just going to hang out on the couch and watch a cooking competition show."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, low-key night. Is it a new cooking competition show, or a favorite you've watched before?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a new season of a cooking competition show we've followed for a while. We love seeing what the chefs can come up with."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! It's always fun to see how they handle the pressure. I hope you get some time for your woodworking or tennis later this week too, once you're settled into the school routine."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely looking forward to some time in the woodshop this weekend. But for tonight, I'm just going to enjoy the show and rest up. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {
+      "school_year.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

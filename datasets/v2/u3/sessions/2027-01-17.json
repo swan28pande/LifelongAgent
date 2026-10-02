@@ -1,0 +1,88 @@
+{
+  "user_id": "u3",
+  "day": 323,
+  "date": "2027-01-17",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Sunday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty quiet day. I actually overslept this morning, so I ended up skipping my morning drink entirely. I'd normally make my usual drip coffee, but I just didn't have the time today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, oversleeping can definitely throw off the morning! I hope you're not feeling too groggy without your caffeine. Did you have any plans today, or is it a day off from the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is a day off, thank goodness. So I didn't have any commute today, which was a huge relief since I got such a late start."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. No rush to get anywhere on a Sunday is the best. Have you just been relaxing at home, or did you get a chance to catch up on any of your sourdough baking?"
+    },
+    {
+      "speaker": "user",
+      "text": "No baking today, actually. I just stayed in and kept things simple. For lunch, I just packed up some leftovers from yesterday, so I didn't even have to worry about cooking."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. Sometimes a quiet day with zero effort is exactly what you need. Did you find anything good to listen to while you were hanging around?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! A friend of mine lent me an audiobook, so I listened to that today instead of my usual comedy podcast. It was a really nice change of pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how nice! What kind of audiobook is it? It's always fun when a friend recommends something that takes you out of your normal routine."
+    },
+    {
+      "speaker": "user",
+      "text": "It's a mystery novel, and it's actually really gripping! I might end up spending the whole evening listening to it. How are things on your end?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm doing great, thank you! I was actually wondering how things are going with Tom lately? Have you two had any fun plans in Phoenix this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom and I are doing really well! We didn't do anything crazy this weekend since the weather in Phoenix has been a bit chilly, but we had a nice dinner together yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. It's great that you two got to spend some quality time together. I hope the rest of your evening is just as cozy with your audiobook!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think I'm going to make a cup of herbal tea and get back to my book now. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy your evening and your book, Sofia! Talk to you next time."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "skipped her morning drink",
+      "lunch": "packed leftovers",
+      "commute": "no commute",
+      "podcast": "an audiobook"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She usually starts her day with drip coffee.",
+    "invention: She usually listens to comedy podcasts."
+  ]
+}

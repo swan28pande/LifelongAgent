@@ -1,0 +1,81 @@
+{
+  "user_id": "u3",
+  "day": 350,
+  "date": "2027-02-13",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! I hope you're having a wonderful Saturday. How has your day been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it's been an incredible day! I have some major news to share—Tom and I got engaged today!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh my goodness, Sofia! That is absolutely wonderful news! Huge congratulations to both of you! How did he pop the question?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you so much! I'm still in shock. He actually proposed first thing this morning right here at the apartment. It was incredibly sweet and simple, just the two of us."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds so intimate and perfect. I am so incredibly happy for you and Tom! Did you get to take the rest of the day off to celebrate, or did you still have to head into the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did have to go in for a shift today. Since it's Saturday, I normally wouldn't have any commute at all, but they needed the coverage. The weather here in Phoenix was just too beautiful to ignore, though, so I decided to walk to work as a one-off instead of driving or taking a ride."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A walk in this lovely weather sounds like a great way to start such a special day. Did you listen to anything to pass the time on your way over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on my headphones and listened to an Italian lessons podcast. Since I signed up for that online course, I've been trying to get extra practice in, and the audio lessons are perfect for my walks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's an excellent way to practice! Did you manage to grab a cup of coffee to keep you energized for your shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, but not my usual way. I normally just brew a quick drip coffee at home, but today I passed by a new café that was having a grand opening promotion, so I got a free sample latte instead! It was delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A free latte is the perfect little treat, especially today! How did you handle lunch during your shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually had enough time to step out of the clinic for a bit, so I ended up having a really nice brunch out at a spot down the street. It was a great break in the middle of a busy day!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "free sample latte",
+      "lunch": "brunch out",
+      "commute": "walked",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {
+      "rel.engaged": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 725,
+  "date": "2028-02-23",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going? Have you been able to get any climbing in lately, or has the studio been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! My wrist is totally fine, but I didn't hit the climbing gym today. Instead, I decided to lace up my athletic shoes and do some vigorous jogging on the sidewalk to get my heart rate up. Pounding the pavement for a few miles felt great in the crisp air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to get energized! Did you head straight to the studio after your jog?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, and it was a pretty formal day. I had to ditch my usual daily uniform of a black t-shirt and jeans. Because we had a major presentation for a potential new client this afternoon, I dressed in a formal matching jacket and trousers with a professional necktie."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, a matching jacket and necktie is quite a shift from your usual t-shirt and jeans! How did the big presentation go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It actually went really well! They seemed very impressed. But the preparation this morning was a bit hectic. To keep myself calm and focused while finalizing the slides, I had traditional orchestral compositions and violin concertos playing quietly in my office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Orchestral pieces are fantastic for concentration. I'm so glad the presentation was a success! How is Leah doing? Is she still enjoying her pediatric role at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! It's demanding, but she loves the kids. She's also been using her weekend pottery sessions to decompress from the long hospital shifts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that she has a creative outlet. Have you found any time for chess or photography lately with your busy studio schedule?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a couple of quick matches of chess online last night. It's a nice way to challenge my brain differently before going to sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely is. And how about your pescatarian meals? Have you tried any new fish or vegetarian dishes from that cookbook you received?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, we've been relying on our usual quick meals lately, but I'm hoping to try a new seafood recipe this weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect weekend plan. I hope you get some well-deserved rest tonight after such an important day!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, I appreciate it. Catch you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "running",
+      "outfit": "suit and tie",
+      "music": "classical",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "user_id": "u4",
+  "day": 211,
+  "date": "2026-09-27",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Daniel! Happy Sunday. How is your weekend in Minneapolis going? Have you and Leah been up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's been a really nice Sunday. Leah and I actually slept in and then headed out to a local spot for a late-morning combined breakfast and lunch date. It was great to just relax and catch up without rushing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start a Sunday. Nothing beats a lazy mid-day meal together. Did you get a chance to get moving at all today, or is it strictly a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did actually get a workout in! I spent about forty-five minutes pedaling on an indoor exercise bicycle that stays in one spot. I've had to completely alter my exercise routine recently because I fractured my wrist climbing a while back. Since I can't ride on the road or grip anything, this stationary setup is my only real option."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that makes total sense. It's so smart to adapt so you can keep active without putting any pressure on that healing wrist. How is the recovery coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's getting there slowly, thanks. Still have to be careful, but at least I can break a sweat with this setup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, safety first! Did you end up doing any drafting or design work today, or are you keeping the junior architect duties on hold until Monday?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually had to sketch a few ideas for a project deadline coming up. I put on some tunes to help me focus—mostly some independent-label alternative guitar bands from the nineties and early aughts. It keeps the creative energy flowing without being too distracting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect soundtrack for drawing up designs. Speaking of your day, have you two thought about what's on the menu for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm actually about to prep it. We're keeping it simple but hearty. I'm going to bake a whole seasoned chicken in the oven with some root vegetables. It's the perfect comforting meal for a cool September evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds delicious and cozy. You definitely eat a good variety of meals! Is Leah helping out, or are you the head chef tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm taking the lead tonight, though she'll probably help wash the dishes. She's busy showing me some of the new ceramic pieces she made in her pottery class anyway, so I'm happy to handle the kitchen duties."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's exciting! It must be neat to see what she's creating in her class. I hope the dinner turns out great and you both have a relaxing evening before the work week starts."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think it will. Have a good night, and I'll talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "stationary bike",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "roast chicken"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 454,
+  "date": "2027-05-28",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Friday. How is your morning going over in Chicago? Are you getting ready for a busy day at the design firm, or looking forward to the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Friday is starting off pretty well. It's a bit of a relaxed day at the firm, so I dressed down a bit. I'm wearing a soft plaid cotton button-down shirt paired with some classic blue denim. I also made a really nice breakfast—a thick, spoonable blended fruit puree topped with sliced bananas and hemp seeds."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an incredibly cozy outfit, and that breakfast sounds delicious and refreshing! Are you planning to head over to the climbing gym later, or maybe fit in some running?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I'm taking a complete pause from any exercise or physical training today. After a busy week of keeping active, my body really needs a full recovery day, so I'm just going to relax this evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A recovery day is always a smart move. What do you and Leah have planned for dinner tonight to kick off the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're actually planning some classic comfort food. I've noticed my overall evening meal routine has completely changed lately because of my shift to a pescatarian diet. Tonight is a great example of that—we are making some crispy, beer-battered cod and thick-cut potato fries."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely mouth-watering! How has that shift to a pescatarian diet been going for you overall? Has it been fun finding new seafood recipes to replace your old dinners?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been a really fun culinary challenge. Leah's been enjoying the new meals too, when she's not exhausted from her shifts at the hospital or busy with her pottery class. We've been experimenting with different types of seafood and seasoning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great that you're both enjoying the transition! Speaking of busy schedules, how are things going with your role as project lead at the design firm? Are you wrapping up any big projects today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we just finalized a major client presentation yesterday, so today is mostly about catching up on administrative tasks and setting up the schedule for next week. It's a nice, low-pressure way to end the week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That must be a huge weight off your shoulders. It sounds like you've set yourself up for a perfectly relaxing Friday evening and weekend ahead."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I'm really looking forward to just kicking back, enjoying that battered cod, and having a quiet night. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "rest day",
+      "outfit": "flannel and jeans",
+      "music": "not mentioned",
+      "dinner": "fish and chips"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

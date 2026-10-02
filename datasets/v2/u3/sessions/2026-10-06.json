@@ -1,0 +1,84 @@
+{
+  "user_id": "u3",
+  "day": 220,
+  "date": "2026-10-06",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually been a really exciting day. I officially switched jobs today to become a day-shift nurse at an outpatient clinic!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wow! Congratulations, Sofia! That is huge news. How are you feeling about making that transition?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm incredibly happy about it. It feels like a great move for me. I wanted to keep things simple today, so I just packed up some of last night's dinner to eat for my lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking some home-cooked food is always a comforting choice, especially on an exciting day like this. What did you have to drink this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I poured myself some of that slow-steeped chilled coffee that I keep in the fridge. It was really refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Chilled slow-steeped coffee is perfect for Phoenix weather. Did you listen to anything interesting during your break today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I listened to a humorous show where two comedians talk about ridiculous news stories. It really made me laugh."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is always a great break companion. Did you tell Tom the exciting news about your job switch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! He was the very first person I called, and he's absolutely thrilled for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad he's supportive! Are the two of you planning to celebrate this milestone soon? Maybe some salsa dancing?"
+    },
+    {
+      "speaker": "user",
+      "text": "We definitely want to celebrate! We're planning to go out for some salsa dancing this weekend to mark the occasion."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {
+      "job.clinic": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: previously worked night shifts in the ER",
+    "invention: planning to celebrate her new job with Tom this weekend"
+  ]
+}

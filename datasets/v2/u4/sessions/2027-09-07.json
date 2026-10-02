@@ -1,0 +1,81 @@
+{
+  "user_id": "u4",
+  "day": 556,
+  "date": "2027-09-07",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Daniel! How is your Tuesday going? Did you manage to fit in some exercise today, or has work at the design firm been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I actually did manage to get active today. I went down to the local pool and spent about forty minutes doing laps. It felt great to glide through the water after being hunched over my desk all morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to clear your head. How are things going with that big design competition deadline you've been working on?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's intense, but I'm making progress. Since I'm mostly working from my desk coordinating things today, I dressed super casually—just wore a soft plaid button-up shirt and some comfortable blue denim pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats staying comfortable when the pressure is on. Did that coworker of yours wear their usual formal suit today, or did they match your casual vibe?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, he was still fully suited up as always! It's hilarious because I was sitting there in my plaid and denim spinning some old bebop vinyl on the turntable. I really needed some classic horn solos and upright bass playing in the background to keep my focus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great atmosphere. There's nothing quite like the warmth of a needle on wax, especially with some classic instrumental tunes. How is Leah doing? Did she have a pottery class today, or is she busy at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's at the hospital today, but she's actually off this evening. Since we're both pretty exhausted, we decided to order in. We've got a local spot delivering some fresh maki rolls, nigiri, and edamame right to our door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds delicious and perfect for a busy Tuesday. It fits right in with your pescatarian lifestyle too. Are you planning on doing any rock climbing or chess this week, or is the design deadline taking up all your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly the deadline, honestly. I might try to slip away to that new climbing gym across town this weekend if my wrist is up for a longer session, but chess will have to wait. I did take my camera out for a quick walk yesterday evening just to snap some photos of the Chicago skyline at sunset, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, sunset photography in Chicago must have been gorgeous with the lake reflection! I hope those shots turned out well. And hopefully, your wrist holds up perfectly if you do make it to the new gym."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, the lighting was perfect. Well, I hear the delivery driver arriving with our dinner, so I should head down and grab those rolls. Have a great night!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the meal and have a relaxing evening with Leah! Talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "swim",
+      "outfit": "flannel and jeans",
+      "music": "jazz records",
+      "dinner": "delivery sushi"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_absent: outfit should be 'flannel and jeans', conversation gives 'missing'",
+    "pref_absent: music should be 'jazz records', conversation gives 'missing'"
+  ]
+}

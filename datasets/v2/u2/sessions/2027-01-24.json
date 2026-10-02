@@ -1,0 +1,85 @@
+{
+  "user_id": "u2",
+  "day": 330,
+  "date": "2027-01-24",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Sunday, Marcus! How is your weekend in Portland going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going great. I started the morning with a warm bowl of oatmeal, and Grace and I actually have some really exciting news today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, exciting news! What's going on with you and Grace?"
+    },
+    {
+      "speaker": "user",
+      "text": "We adopted a cat named Olive today! She is officially part of the family now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, wonderful! Congratulations on adopting Olive! How is she settling into her new home so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well. She's currently exploring the living room and sniffing around. Grace and I are absolutely thrilled to have her."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is so sweet. I'm sure Olive is going to love living with you both. Are you getting any woodworking or tennis in today, or is it a bit of a quiet Sunday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, today is a rest day for me. No tennis or woodworking, just enjoying the quiet time and hanging out with Olive."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A rest day sounds perfect, especially with a new cat to bond with. How are the plans for your family trip to Japan next spring coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're coming along well! We're still in the planning stages and looking forward to it. It's going to be a great trip."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. It's always fun to have a big trip to look forward to. By the way, has your neighbor's vegetable garden been surviving the cold winter weather lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, they've got some winter crops covered up, but it's mostly quiet over there right now. I think they're waiting for spring just like we are."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense! Well, enjoy the rest of your relaxing Sunday with Grace and Olive."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "rest day",
+      "evening_show": "not mentioned"
+    },
+    "statements": {
+      "pet.olive": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Got Olive from a local shelter",
+    "invention: Booked flights for the Japan trip and looking at hotels in Tokyo and Kyoto"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 233,
+  "date": "2026-10-19",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How is your day starting out in Phoenix? Are you feeling completely back to normal after that bout with the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, I'm feeling 100% recovered, thank goodness. Today started a bit differently, though. Usually, I just take the light rail to get to my shift at the clinic, but it was a notoriously bad traffic day on the roads. Because of that, Tom ended up driving me all the way to work instead of my normal train ride."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That was really sweet of Tom to drive you! It's always nice to avoid the transit hassle, especially on a messy traffic day. How is he doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! He was already up, so he didn't mind the detour at all. It was actually really nice to get some extra time to chat with him before my day shift started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely start to a Monday. Is the outpatient clinic keeping you busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. Mondays are always a bit hectic with patients calling in after the weekend, but we are managing. I'm just glad to have my energy back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It's great you have that strength back. Have you had any time for your hobbies lately, like baking or salsa dancing?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit! I actually fed my sourdough starter yesterday. I'm hoping to bake a fresh loaf sometime soon, maybe this weekend if I get a chance."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sourdough is such a rewarding process. There is nothing quite like a fresh loaf. Do you have any salsa dancing sessions lined up, or are you taking a little break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't gone dancing in a couple of weeks because of being sick, but I'm really looking forward to getting back on the dance floor soon. I've missed the music and the movement."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure the community has missed you too! It will be wonderful to get back into the rhythm when you're ready. I hope the rest of your shift goes smoothly today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I appreciate it. I'll probably just take my usual light rail home tonight, hopefully without any of the morning's traffic chaos. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "not mentioned",
+      "commute": "got a ride from Tom",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'music instead'"
+  ]
+}

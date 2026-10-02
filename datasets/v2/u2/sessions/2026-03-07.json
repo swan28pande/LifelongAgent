@@ -1,0 +1,72 @@
+{
+  "user_id": "u2",
+  "day": 7,
+  "date": "2026-03-07",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Saturday. How is everything going over in Portland today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's a typical rainy Portland morning, but I'm having a great start. I just made some pancakes for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes are the perfect rainy Saturday breakfast! Did Grace get to enjoy them with you, or do you have the kitchen to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace had a couple with me before she ran out to do some morning errands. Now I'm getting ready to head out for a workout. I'm going to do some gym weights today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! A good strength session always sets a great tone for the weekend. Do you have any woodworking projects lined up for later today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do, actually. I've got a small cedar shelf I'm building in the garage. Woodworking is exactly what I need to clear my head after a busy week of teaching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "How have things been at the high school? Are your chemistry students keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "They definitely are. We just finished a big lab unit, so I spent a lot of my week grading reports. I'm very glad to have a break from chemistry formulas for a couple of days."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! You've definitely earned some downtime. Do you and Grace have any plans for the evening once she's back?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it pretty low-key. We're planning to sit down and watch a cooking competition show tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those are so entertaining. There's nothing like watching professional chefs stress over bizarre ingredients while you're relaxing on the couch."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly! The frantic energy is hilarious to watch, especially when we don't have to cook anything ourselves. It's the perfect way to wrap up the day."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "gym weights",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

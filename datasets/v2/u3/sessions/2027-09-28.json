@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 577,
+  "date": "2027-09-28",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday starting out in Tucson? Ready for your shift at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, it's already getting pretty warm today, so I treated myself to a chilled espresso and water over ice before heading out. Then I jumped into my hybrid to make the drive to work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice choice! An iced drink is perfect for Tucson mornings. Did you listen to anything interesting on your drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually put on that language-learning audio program to practice my Italian during the commute. It's a great way to use that travel time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a fantastic way to practice! How is the language learning going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a challenge, but I'm enjoying it. For lunch today, I packed a sandwich using some of my homemade wild-yeast bread with turkey and cheese, so I have that to look forward to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a sourdough sandwich sounds delicious! Your baking hobby is definitely paying off. Have you been finding much time to bake lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually baked a couple of fresh loaves over the weekend, and they turned out great. Tom and I have been eating them all week!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Speaking of you and Tom, have you two done any more planning for your summer 2028 wedding, or are you taking a breather?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are mostly taking a breather. Since the date is set, we're not in a huge rush to lock down every single detail just yet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes complete sense. Enjoying the engagement is just as important! I hope the rest of your shift at the clinic goes smoothly."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a good afternoon. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: podcast should be 'Italian lessons podcast', conversation gives 'other'"
+  ]
+}

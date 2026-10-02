@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 193,
+  "date": "2026-09-09",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Wednesday. How has your day been going over at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy but good day. We had an in-person client meeting this morning, so I actually had to dress up a bit more than my usual casual self. I wore a crisp, long-sleeved collared shirt with buttons and those lightweight cotton khaki trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a bit of a departure from the usual office casual! It's nice to class it up every now and then. Did the client meeting go well?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did! They loved the initial layout concepts. After the meeting, I wanted to clear my head, so I took my road bike out and spent an hour pedaling along the lake trails. It was great to get some exercise on two wheels."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to decompress after a big presentation. There's nothing like a good bicycle ride to clear your mind. Are you and Leah doing anything special to celebrate the successful meeting tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are keeping it low-key but delicious. We're actually making dinner together tonight. I'm prepping the ingredients for that spicy, herbal, coconut-milk-based stew with the vibrant green chili paste that we learned to make in our Thai cooking class."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that green curry was fantastic when you first made it! It's great that you're putting those cooking class skills to use again. Are you adding any chicken or keeping it strictly veggie?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are definitely putting some chicken and bamboo shoots in it. Since I'm an omnivore, I love having some protein in there, and Leah enjoys it too. Cooking together has been one of our favorite things since we moved in together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a wonderful routine you two have built. How has Leah's pottery class been going, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's really loving it! She brought home a small bowl she threw last week. It's not perfectly symmetrical, but it has a lot of character and we might use it for snacks tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome! Homemade pottery always has the best charm. I hope the dinner turns out delicious tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to help her finish up the prep work now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "cycling",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'long ride'"
+  ]
+}

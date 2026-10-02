@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 135,
+  "date": "2026-07-13",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Monday. How is your week starting off in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting off pretty well. Nice and relaxed. I actually had a bowl of oatmeal for breakfast, which gave me a good energy boost for the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is always a solid, healthy start to a Monday. Did you end up getting active today, or are you taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, I definitely got active. I went to the local gym and did some weights for my workout today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job getting a lifting session in! Did Grace join you, or was it a solo workout?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was a solo run today; Grace had some errands to run. But we're both looking forward to relaxing tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to wind down. Do you two have any plans for the evening, maybe catching up on some TV?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly. We're planning to watch a nature documentary tonight. It's a peaceful way to end the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I agree, nature documentaries are so relaxing and fascinating. How are things going with your chemistry classes lately? Are you teaching summer school, or are you fully on break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm fully on summer break right now, which is a wonderful change of pace from the busy school year. Just enjoying the free time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That must feel incredibly well-deserved! Enjoy every bit of it. Are you getting any tennis or woodworking in this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hoping to play some tennis later in the week if the Portland weather holds up, but for today, just the gym and a quiet night in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Fingers crossed for good tennis weather! Have a wonderful evening watching your documentary, Marcus."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'nature documentary', conversation gives 'other'"
+  ]
+}

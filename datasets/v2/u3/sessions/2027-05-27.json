@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 453,
+  "date": "2027-05-27",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I decided to skip my usual coffee and whisked up a warm matcha latte at home before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious start to the morning. Did you have a peaceful commute to the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it was pretty relaxed. I drove myself in today, which gave me some nice quiet time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Driving definitely has its perks for some solo time. Did you listen to that true-crime podcast your coworker recommended, or something else?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I decided to put on an Italian language learning podcast to get some practice in while behind the wheel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, practicing Italian on the go is such a clever use of that drive! How is the language learning coming along?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's tough but I'm enjoying it! It was a busy morning at the clinic, but Tom and I met up for lunch, which was a nice break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! It's always great when you can step away from a busy shift to catch up. Did you go anywhere special in Phoenix to eat?"
+    },
+    {
+      "speaker": "user",
+      "text": "We just grabbed some food and sat in a park near his office. The weather in Phoenix is still pretty nice today before the real summer heat hits."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Savoring those nice days is definitely a must! Have you and Tom had any time to talk about wedding planning for summer 2028 recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not too much lately, we're taking a little break from the details. I think this weekend I'll just focus on baking a fresh loaf of sourdough."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, relaxing plan for the weekend. I hope the sourdough rises beautifully!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'll let you know how it goes. Have a good evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "lunch with Tom",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: morning_drink should be 'matcha latte', conversation gives 'other'"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 21,
+  "date": "2026-03-21",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Saturday going over in Phoenix? Are you off today, or are you working a shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! I'm actually working an on-call stretch this weekend. I ended up sleeping in the staff residency rooms overnight, so the best part was having zero travel time or commute this morning—I just woke up and was already at work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a huge plus, especially for an early start! Did you manage to get a decent breakfast or something to wake you up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I treated myself to a nice warm mug of sweet cocoa. It really hit the spot and helped me open my eyes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, sweet cocoa sounds like a great comfort drink for a shift. How have things been in the department today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been surprisingly calm for a Saturday. I actually had time to sit down for lunch and grab a bowl of leafy greens from the hospital cafeteria."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great you got a proper break. Are you hoping to get some downtime tonight, or maybe catch up with Tom or go salsa dancing once you're done?"
+    },
+    {
+      "speaker": "user",
+      "text": "No dancing for me this weekend, unfortunately! But Tom and I are going to chat on the phone later tonight when things quiet down. Right now, I'm just listening to a podcast episode covering recent medical studies and healthcare industry news while I catch up on some paperwork."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a productive way to spend the quiet moments. It sounds like you're making the most of your shift."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It keeps my brain engaged when I'm just waiting for the next patient to come in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope the rest of your shift remains calm and manageable. Drink plenty of water!"
+    },
+    {
+      "speaker": "user",
+      "text": "Will do! Thanks for checking in. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "hot chocolate",
+      "lunch": "cafeteria salad",
+      "commute": "no commute",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,81 @@
+{
+  "user_id": "u3",
+  "day": 41,
+  "date": "2026-04-10",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Friday evening starting out? Are you getting ready for another night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I'm just getting settled in. I actually decided to book a ride on my phone to get to the hospital tonight instead of driving myself. I just wanted to relax on the way over."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Taking a rideshare is a great way to save some energy before a busy shift. Did you get to listen to anything interesting during the trip?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on a really funny podcast where two comedians just swap ridiculous news stories. It was hilarious and definitely put me in a great mood before starting my shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A good laugh is the perfect prep for a night in the ER! How is the hospital looking so far tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's relatively quiet so far, thank goodness. But I did have a bit of a setback right when I got here. I realized I completely forgot to pack my food, so my night is off to a slightly chaotic start."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that is the worst feeling when you're facing a long night shift! Did you manage to find something else to eat?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I usually grab a nice fresh salad from the hospital cafeteria, but they were already closed when I got in. So today was a total exception—I ended up just getting some chips and a couple of candy bars from the vending machine to get me through. Not the healthiest, but it'll have to do!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Hey, sometimes you just have to survive on vending machine fuel! Hopefully, it keeps your energy up. Is Tom keeping busy tonight while you're working?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, he's just hanging out at home tonight, probably catching up on some movies. We're planning to catch up tomorrow once I sleep off this shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing evening for him, and a nice reward for you tomorrow. Do you have any plans to go salsa dancing this weekend, or is it a rest weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm hoping to go to a social dance on Sunday evening! The Phoenix heat is starting to kick up, but the studio has great AC, so it's a perfect indoor activity."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a blast, and definitely a great way to cool off. I hope your shift tonight stays quiet and goes by quickly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to go check in with the triage nurse now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "vending machine snacks",
+      "commute": "rideshare",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

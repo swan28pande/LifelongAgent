@@ -1,0 +1,79 @@
+{
+  "user_id": "u2",
+  "day": 328,
+  "date": "2027-01-22",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Marcus! Happy Friday. How is your day starting out in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's off to a good start, despite the typical dreary Portland rain. I actually managed to get in some gym weights this morning before heading out, which felt great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a productive way to kick off the day. Did you have time to grab a decent breakfast before your workout?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I kept it quick and had some oatmeal before leaving. It's the perfect warm meal for a cold morning like this."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely. Oatmeal is great for these winter mornings. How are things going at the school? Is it a busy Friday for the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty hectic. Being head of the department means I have to finalize some budget requests for lab supplies by the end of the day, and we also have a meeting during lunch. But we're making progress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a full schedule. Hopefully you can unwind a bit once the weekend officially starts. Do you have any woodworking or tennis plans lined up?"
+    },
+    {
+      "speaker": "user",
+      "text": "No tennis this weekend because of the rain, but I'll probably spend some time doing some woodworking. Grace and I also want to sit down and talk more about our Japan trip next spring."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That trip is going to be so exciting! Have you and Grace started looking at specific places you want to visit yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're still in the early stages, mostly just mapping out the main areas we want to visit. It's fun just looking at the maps and brainstorming."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. Planning is half the fun! By the way, how is your neighbor's vegetable garden coming along? I remember they started one."
+    },
+    {
+      "speaker": "user",
+      "text": "They're mostly just preparing the beds and getting things ready for the next planting phase. It's cool to see them out there working on it. Anyway, I should probably get back to these budget sheets. Have a great weekend!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Thanks, Marcus! Good luck with the budget, and have a wonderful weekend. Talk to you next time!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a garage",
+    "invention: plans to stay in a traditional ryokan for a night or two and standard hotels for the rest of the Japan trip"
+  ]
+}

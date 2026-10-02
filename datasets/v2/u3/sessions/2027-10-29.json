@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 608,
+  "date": "2027-10-29",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Friday. How is your day going so far? How are things with Tom and Dash?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Friday is going really well. Dash is currently curled up on his favorite spot on the couch, completely asleep. I had a nice, relaxing start to the day. Before heading out, I whisked up some ceremonial green tea powder with steamed oat milk for a warm matcha latte to get me energized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy start to the morning! Did you have a nice commute to the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It wasn't too bad! I ended up driving my hybrid to work today. To keep my mind off the traffic, I tuned into a really funny stand-up style comedy podcast. It definitely kept me laughing the whole way there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A comedy podcast sounds like the perfect way to pass the drive! Much lighter than the true-crime recommendation. How has the shift at the clinic been?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty busy, but I managed to get a decent break. For lunch, I put together a quick sandwich using two thick slices of my homemade sourdough, which was incredibly satisfying."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's nothing quite like a sandwich on fresh, homemade sourdough! I'm glad you got a chance to sit down and enjoy it. Do you and Tom have any exciting plans for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do! We're actually planning to spend some time looking at different venue options online for our summer 2028 wedding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how exciting! Have you and Tom discussed what kind of style or vibe you're hoping to find in the Tucson area?"
+    },
+    {
+      "speaker": "user",
+      "text": "We both really love the idea of an outdoor space, maybe somewhere with a beautiful desert backdrop, but we want to keep it fairly simple and relaxed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A desert backdrop would be absolutely stunning, especially in the summer evening light. I hope you find some great options during your search tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! Tom actually found a local park with a scenic trail we might check out this evening. We're planning to take Dash along for a long walk there once I get home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful Friday evening. Have a great walk with Tom and Dash, and enjoy your weekend!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: morning_drink should be 'matcha latte', conversation gives 'other'"
+  ]
+}

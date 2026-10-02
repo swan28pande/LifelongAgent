@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 93,
+  "date": "2026-06-01",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday starting out? Is the Phoenix heat keeping you indoors, or did you get some decent rest today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's scorching today. I practically lived on a big glass of that cold-steeped iced coffee I keep in the fridge just to wake myself up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A chilled coffee is definitely a must in that Arizona sun! Did you have some time to relax, or maybe do a bit of baking before your shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually kept it pretty low-key today. But for lunch, I made myself a really nice sandwich using a couple of slices of my home-baked wild yeast loaf. It hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a fresh wild yeast sandwich sounds incredible. You really can't beat home-baked bread. Are you getting ready to head over to the hospital soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, I'm just getting my things together. I'm taking the late-evening transit bus tonight, so I need to leave a little earlier than usual to catch it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope the ride is smooth and peaceful! Do you have a good book or some music lined up to pass the time during the commute?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually have a hilarious audio show queued up. It's this comedy program where two guys just joke about the weirdest internet stories they can find. It's sure to keep me laughing on the way."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to boost your mood before a busy night shift in the ER. Have you and Tom been able to find some time to connect recently, despite your hectic hours?"
+    },
+    {
+      "speaker": "user",
+      "text": "We have, thankfully! We actually managed to grab an early dinner together yesterday before I had to sleep. It was really nice to catch up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. It's so nice when you can sync up your schedules like that. I hope your shift tonight isn't too overwhelming!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. I'll check in with you tomorrow when I'm back. Have a good night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "sourdough sandwich",
+      "commute": "night bus",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

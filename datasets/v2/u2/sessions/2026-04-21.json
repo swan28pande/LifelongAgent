@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 52,
+  "date": "2026-04-21",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How has your Tuesday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty busy. I just finished up my grading for the day at school. Portland has been so rainy today, so I was glad to be indoors."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Rainy days are perfect for staying inside. Did you manage to squeeze in a workout today, or are you taking a break?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did actually! I headed over to the gym and spent some time lifting weights. It felt good to get moving after sitting at my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to shake off the workday. How are things going with your woodworking lately? Have you been spending any time in the shop?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit here and there. I'm working on a small side table right now, but I haven't had a chance to do much this week. Maybe this weekend I'll get more done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A side table sounds like a fun project! I hope you get some solid shop time soon. How is Grace doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing well, thanks for asking! She's actually out tonight at a book club meeting, so I have the house to myself for the evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a quiet evening to yourself. Do you have any plans to relax tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I think I'm just going to queue up a nature documentary on TV and unwind on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing way to spend a rainy Tuesday evening. Is there a specific one you're planning to watch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I found one about deep-sea ecosystems that looks interesting, so I'll probably put that on. It should be a nice, quiet night."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has always loved ocean documentaries."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u3",
+  "day": 534,
+  "date": "2027-08-16",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday starting off over in Tucson? Is the summer heat letting up at all?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! No, Tucson is still absolutely scorching today. I needed a bit of a slow start this morning, so I just made myself a quick mug of regular drip-brew coffee from the pot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a classic mug of drip coffee is exactly what you need, even with your roommate's fancy espresso machine sitting right there! How has the day at the clinic been going since then?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a pretty busy shift, but I had a nice quiet lunch break. I brought a sandwich I put together using a couple of slices of the sourdough loaf I baked yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! There's nothing quite like a homemade sourdough sandwich to get you through a busy day. Did you end up listening to that true-crime podcast your coworker recommended during your break?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I decided to try something else today. I listened to an audio podcast that does conversational Italian lessons instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's a great way to reinforce the online Italian course you signed up for! How are you finding the language lessons so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's challenging but really fun. The podcast helps a lot with pronunciation, so I can listen and repeat the phrases while I'm resting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect study aid. Speaking of things keeping you busy, how are you and Tom doing? Any new updates on the wedding planning for summer 2028?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is doing great! We're actually taking a little break from all the wedding planning details right now and just enjoying being engaged. There's no rush since we have plenty of time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very healthy approach. It's nice to just enjoy the engagement without all the stress of planning."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. We're just taking it easy. Anyway, I should probably get back to my afternoon tasks at the clinic, but I'll talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a great afternoon, Sofia! Talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She and Tom are considering going to Italy for their honeymoon.",
+    "invention: She and Tom are looking at local Tucson venues for their wedding."
+  ]
+}

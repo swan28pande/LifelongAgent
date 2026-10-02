@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 119,
+  "date": "2026-06-27",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Saturday going in Phoenix? Are you scheduled for a night shift at the hospital tonight, or do you have some time to relax?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I actually have tonight off, which is amazing. It means I didn't have to do any traveling to the hospital today, so avoiding the commute entirely has been a great start to the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful change of pace. Waking up on a Saturday without having to drive to work is always a great feeling. What have you been up to with your free day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom and I decided to treat ourselves. We went out for a lovely mid-morning meal at a little cafe down the street and just sat outside for a while before it got too hot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. Did you listen to anything interesting while you were getting ready or winding down this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, no. I was going to listen to a health news podcast, but I woke up with a really bad headache, so I opted for complete silence instead. I just needed to keep things as quiet as possible."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I'm so sorry to hear that. Headaches can really ruin a morning. How are you feeling now? Did the quiet time help?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully it has mostly gone away now. I think staying out of the bright sun and just keeping things peaceful did the trick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm really glad to hear you're feeling better. Hopefully, the rest of your Saturday is just as restful. Are you planning on doing any salsa dancing or sourdough baking this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might feed my sourdough starter later today, but I think I'm going to skip salsa dancing tonight. I want to make sure I am fully rested before my next night shift at the ER."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is very smart. ER night shifts are so demanding, and prioritizing your rest, especially after a headache, is definitely the right call. Have the shifts at the hospital been pretty intense lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "They really have been. We've had a high volume of patients lately, so it's usually nonstop from the moment I walk in until the morning handoff."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can only imagine how exhausting that must be. You definitely deserve this quiet evening to just recharge."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! Yeah, I'm definitely going to take it easy tonight. I'll catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "brunch out",
+      "commute": "no commute",
+      "podcast": "silence"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user regularly listens to health news podcasts."
+  ]
+}

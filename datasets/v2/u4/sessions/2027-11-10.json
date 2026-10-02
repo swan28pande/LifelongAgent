@@ -1,0 +1,82 @@
+{
+  "user_id": "u4",
+  "day": 620,
+  "date": "2027-11-10",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How's your Wednesday going so far? Did you have another one of those 7 AM client calls at the studio this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, we had one of those early sessions today. It went pretty smoothly, actually. Before I headed out, I grabbed a jar of cold rolled oats that had been soaking in milk in the fridge overnight. It was quick and hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, easy breakfast for a busy morning. Are you still working on the post-competition projects at the studio today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we're transitioning into the next phases for a couple of clients. To keep myself focused while sketching out some details, I've had some beatless, atmospheric synthesizer soundscapes playing in my headphones. Those textured, wordless electronic tracks really help me lock in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I love using that kind of music for deep focus. It really blocks out the noise. Speaking of staying active, how have things been on the fitness front? Is Kwame still keeping up with his marathon training in Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "He is! He's really dedicated to it. His updates actually motivated me to get moving today, so I laced up my sneakers and logged several miles out on the pavement this afternoon. It felt great to get my heart rate up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome! It's great to get that cardio in. How is your wrist feeling after that? Any trouble with it since the cast came off?"
+    },
+    {
+      "speaker": "user",
+      "text": "No trouble at all, thankfully. It feels completely back to normal. I'm actually thinking about checking out that new climbing gym across town sometime this weekend to really test it out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news. I'm glad the healing process was so thorough. Will Leah be joining you at the gym, or is she busy with her pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "She'll probably skip the climbing. She actually has her pottery class this evening, so she's fully focused on her clay projects right now. She's working on a set of bowls this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Bowls! That sounds like a fun challenge. I hope they turn out well. It sounds like you both have a productive Wednesday ahead of you."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm about to dive back into this floor plan now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "overnight oats",
+      "workout": "running",
+      "outfit": "not mentioned",
+      "music": "ambient electronic",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

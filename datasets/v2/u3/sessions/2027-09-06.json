@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 555,
+  "date": "2027-09-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How is your morning starting off over in Tucson today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's been a bit of a chaotic morning, honestly. Our coffee machine broke, so instead of my normal drip coffee, I ended up steeping some hot green tea to start my morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that is a rough start to a Monday! A broken coffee machine is practically an emergency. How is the green tea holding up as a substitute? Hopefully it's keeping you awake!"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually surprisingly refreshing, though I do miss the strong kick of my coffee. I'll have to figure out how to get the machine fixed, or maybe my roommate will let me use their new espresso machine. But for today, the green tea is doing the job."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a good backup plan with the espresso machine! Speaking of new things, how is your online Italian course going? Are you finding time to practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! In fact, today I decided to listen to a podcast that teaches Italian while I was getting ready. It's a nice way to squeeze in some extra study time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a clever way to study! How is the podcast? Is it helping you with the basics?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's really helpful. Today's episode was all about basic conversational greetings, which fits perfectly with what I'm learning in the online course. It's much easier to learn when I can hear it spoken naturally."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great supplement to the course! You'll be speaking like a local in no time. How are things going with the wedding planning for summer 2028? Have you and Tom made any new progress recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are slowly ticking things off the list! We have been looking at a few venue options around Tucson, but we're trying not to stress too much since we still have plenty of time before summer 2028. It's exciting but a lot of work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely is a lot of work, but having that extra time must make it much less stressful. Are you hoping to incorporate any of your sourdough baking into the big day, or are you leaving the food to the professionals?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, as much as I love sourdough baking, I think I'll leave the catering and desserts to the professionals! I want to enjoy the day without worrying about dough rising. Anyway, I should probably get going with the rest of my Monday. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is very wise! Enjoy the rest of your Monday, Sofia. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "green tea",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning a honeymoon in Italy"
+  ]
+}

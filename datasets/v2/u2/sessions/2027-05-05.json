@@ -1,0 +1,78 @@
+{
+  "user_id": "u2",
+  "day": 431,
+  "date": "2027-05-05",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How are things going in Portland today? How is your week shaping up at the school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going well, just busy. I started my morning with a quick protein smoothie for breakfast. Actually, I've had to change my workout routine recently to focus on physical therapy stretches because I strained my lower back lifting boxes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that's right. I'm sorry to hear your back is still giving you trouble, but focusing on physical therapy stretches sounds like a very smart adjustment. How is your back feeling today after doing them?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's feeling a little better, slowly but surely. Olive actually sat right next to me on the mat while I was doing them, which was pretty funny. She's been a great little companion."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds adorable! Olive always knows how to make herself useful. Did you have a busy day heading up the science department today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we had a department meeting and I had to organize some lab materials. It's a busy time of the school year. I'm definitely ready to just unwind tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Administering a whole department must take a lot of energy. Do you have any relaxing plans lined up for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Grace and I are planning to watch a nature documentary tonight. I'm really looking forward to just sitting on the couch and taking it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect, low-key way to spend the evening with Grace. Is it about a specific region or animal?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's about deep-sea marine life, actually. It should be really interesting. It's nice to have a quiet night since I can't really do my usual woodworking or play tennis with this back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Deep-sea documentaries are always so fascinating! It's definitely a bummer that you have to put tennis and woodworking on hold for now, but hopefully, those stretches will have you back to your hobbies soon."
+    },
+    {
+      "speaker": "user",
+      "text": "I hope so too. Thanks for checking in! I'm going to head offline now and get that documentary started."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "physical therapy stretches",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

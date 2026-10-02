@@ -1,0 +1,90 @@
+{
+  "user_id": "u4",
+  "day": 2,
+  "date": "2026-03-02",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Monday. How is your week starting off in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, actually. I'm working from home today, which is a nice change of pace. Because of that, I decided to dress down and wore a cozy hooded sweatshirt and some fleece sweatpants instead of my usual button-down shirt and chinos. I also had a really nice bowl of toasted oat clusters mixed with almonds and honey for breakfast, so I'm feeling energized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comfortable! Working in sweatpants is definitely a perk. What kind of projects are you focusing on today from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually working on some drafting and site layouts. I'm a junior architect at a design firm now, so I've been busy getting my head around their current projects."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, congratulations! A junior architect at a design firm, that's fantastic. How are you liking the team and the design style there so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm really enjoying it. The team is very collaborative. Right now, I'm just focusing on some drawings with some music playing in the background. I've got a playlist of underground alternative guitar bands and non-mainstream rock artists going to keep me in the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect soundtrack for getting into a creative flow. Did you manage to get any downtime over the weekend before diving into the new work week?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! The weather was decent, so I spent a good chunk of yesterday out on my road bike. I've taken up cycling as a hobby, and it's been a great way to get some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. Cycling is a great way to explore the area. Do you have a favorite route you like to take, or do you mostly ride solo?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been exploring some of the lake trails. I actually went out with Leah, the wonderful woman I'm dating now. She's a big fan of riding too, so it's a fun thing for us to do together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's wonderful to hear, Daniel! I didn't know you were dating someone. How is it going with Leah?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're dating and things are going really well. In fact, she's coming over tonight and I'm planning to make us a big bowl of boiled semolina noodles tossed with a rich, savory tomato sauce for dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Monday evening plan. Nothing beats a homemade dish like that to wrap up the day. I hope you and Leah have a great night!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to get back to these architectural drawings now, but I'll chat with you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "granola",
+      "workout": "other",
+      "outfit": "hoodie and joggers",
+      "music": "indie rock",
+      "dinner": "pasta"
+    },
+    "statements": {
+      "job.0": true,
+      "relationship.0": true,
+      "hobbies.1": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 123,
+  "date": "2026-07-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Marcus! Happy Wednesday. How is your day going over in Portland? Have you had any time for woodworking or tennis lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Portland is great today, nice and sunny. I actually started the day with a workout—I went for a run this morning before it got too warm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to beat the summer heat! Did you manage to refuel with a good breakfast afterward?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I made a quick yogurt parfait, which was perfect after getting sweaty."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds delicious and refreshing. Since it's July, I assume school is out for the summer. How are you spending your time off from teaching chemistry?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's nice to have a break from the classroom. I've been spending quite a bit of time in the garage working on some woodworking projects. I'm building a small side table."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun project! Is Grace helping out with it, or is she letting you have the workshop to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's letting me do my thing, though she did help me pick out the stain color. We actually talked about getting out on the tennis courts later this week if we can find a free evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A match sounds like fun. What are the two of you up to tonight? Just relaxing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, tonight is going to be pretty low-key. We are planning to watch a nature documentary after dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Nature documentaries are always a great way to unwind. I hope you both enjoy it and have a relaxing evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "yogurt parfait",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has always found marine biology fascinating."
+  ]
+}

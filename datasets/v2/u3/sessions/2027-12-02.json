@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 642,
+  "date": "2027-12-02",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going? How is your ankle feeling after that sprain?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! My ankle is actually feeling much better, thanks for asking. I started my morning today with an iced espresso with cold water, which gave me a nice boost."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a refreshing start! Did you drive your hybrid to the clinic today, or did you get there another way?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually hailed a ride through an app today to get to the clinic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a rideshare morning. How has the day shift been? Did you end up trying that new sandwich shop near the clinic for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Work has been busy but good! I didn't go to the sandwich shop, though. I brought a DIY bowl with rice, beans, veggies, and salsa that I prepped at home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and healthy. Did you have any downtime during your rideshare commute to listen to anything?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on my headphones and listened to that real-life murder mystery show my colleague suggested a while back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the true-crime one! Is it as gripping as they said? It's great you had some time to dive into it."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is, I'm completely hooked! It made the ride fly by. Tom and I might listen to an episode together later, though we've also been busy looking at some general wedding stuff for summer 2028."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun evening plan! How is Dash doing? Is he enjoying the cooler December weather in Tucson?"
+    },
+    {
+      "speaker": "user",
+      "text": "Dash is doing great! He's currently curled up on his favorite spot on the couch, enjoying the quiet afternoon. I'm looking forward to getting home to him."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "homemade burrito bowl",
+      "commute": "rideshare",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Tom likes the idea of a garden setting for the wedding"
+  ]
+}

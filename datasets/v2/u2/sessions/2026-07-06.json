@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 128,
+  "date": "2026-07-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Monday starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Pretty good so far. I made sure to have a hearty breakfast today, so I just had a warm bowl of oatmeal before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is always a solid choice to power through the morning. How is everything going at the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things are going well, just keeping busy with some chemistry prep work. I actually managed to squeeze in a workout today too—did some gym weights for about an hour."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job fitting in the gym weights session! It's always satisfying to get that done. Have you had any time for tennis lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not this week, unfortunately. My schedule has been a bit tight, but I'm hoping to get back on the court soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get a match in soon. Have you been able to spend any time on your woodworking projects instead?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit! I spent some time yesterday working on a small shelf project. It's coming along nicely."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind. How has the weather in Portland been for working in the garage?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been really nice and warm today. Perfect weather for keeping the garage door open while I work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Do you and Grace have any relaxed plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're probably just going to take a nice walk around the neighborhood later to enjoy the sunset."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a garage.",
+    "invention: The user hopes to play tennis later this week."
+  ]
+}

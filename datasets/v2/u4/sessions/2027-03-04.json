@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 369,
+  "date": "2027-03-04",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Thursday is off to a good start. How are things looking in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good, just the usual chilly March weather here. I actually had a really nice, slow morning today. Cooked up a couple of over-easy eggs and served them on top of some warm, crispy toasted sourdough before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a classic, comforting breakfast to start the day. Did it give you enough energy for a busy day as project lead?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I needed it because work was pretty intense today. But I managed to take a break this afternoon and get some exercise. I decided to spend about an hour at the local indoor bouldering facility, pulling myself up some of the artificial rock routes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's fantastic that you're back to doing that! Since your wrist healed up, have you been feeling pretty confident on the walls again?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I really have. At first, I was a bit hesitant, but today I felt completely fine. It's nice to have my full range of motion and strength back without any pain."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That must be such a relief. Did you happen to try out that new climbing gym that opened across town, or did you stick to your regular spot today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went to my usual spot today since it's closer to the office, but I'm planning to check out the new one sometime soon. Maybe Leah will join me, though she's been pretty busy with her pottery class lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how is her pottery class going? Has she made anything new recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually brought home a small ceramic mug she finished glazing a few days ago. It's sitting on our shelf now. It's really cool to see her getting so good at it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It sounds like your place is getting some great custom decor. Have you had any time for your photography lately, or has climbing been taking up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly climbing and work lately, but I did take a few close-up shots of her mug yesterday to play around with the lighting in our living room. It was fun to practice a bit."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "climbing gym",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: He plans to do outdoor photography around the city this weekend."
+  ]
+}

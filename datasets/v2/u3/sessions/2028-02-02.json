@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 704,
+  "date": "2028-02-02",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going? How are you and Dash doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Dash is doing great, thanks for asking. My day started off nicely. I actually walked to the clinic today instead of driving my hybrid car, just because the weather here in Tucson is so beautiful and mild this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! A morning walk is such a great way to start the day. Did you listen to anything on your commute?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I queued up a podcast episode that focuses on teaching rescue dogs positive behaviors and obedience tricks. I'm hoping to use some of it with Dash."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's perfect for him. Let me know if any of the tips work! How did you fuel up before the walk? Did you use your roommate's espresso machine?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually decided to keep it simple today. Instead of espresso, I just brewed a classic pot of drip coffee and filled up my thermal flask."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a reliable classic. How is the day at the outpatient clinic looking? Did you grab something from that new sandwich shop for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a bit busy, but manageable. I didn't go to the new shop, though—I actually packed a sandwich made with some of my own freshly baked sourdough."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, homemade sourdough is hard to beat! It sounds like you've had a really wholesome and active day so far."
+    },
+    {
+      "speaker": "user",
+      "text": "It really has been. It's nice to have these peaceful moments before the rest of my shift gets underway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely. I hope the rest of your shift goes smoothly! Let me know later if Dash gets to try out any of those new tricks."
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely will. Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "walked",
+      "podcast": "dog training podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

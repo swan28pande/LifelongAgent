@@ -1,0 +1,78 @@
+{
+  "user_id": "u2",
+  "day": 251,
+  "date": "2026-11-06",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Friday starting out? Hope everything is going well up in Portland."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Friday is going great so far. I started the morning on a healthy note with a protein smoothie for breakfast, so I'm feeling energized."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is a great way to fuel up. Do you have any plans to squeeze in a workout today, or is it a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just got back from doing gym weights. I'm trying to stay consistent with lifting on my lunch break when I can."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job getting those gym weights in! Have you had any time for tennis or your woodworking lately, or has the new school year kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "The new school year is definitely keeping me on my toes, but I did manage to play a quick tennis match earlier this week. My woodworking projects are on hold for a bit, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad you got some tennis in! What are your plans for winding down tonight after a busy week?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm planning to just watch some sitcom reruns tonight. I actually changed my evening TV show routine to sitcom reruns recently because becoming head of the science department has been so exhausting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense. Running the whole science department is a huge responsibility. It must take a lot of mental energy."
+    },
+    {
+      "speaker": "user",
+      "text": "It really does. Managing the curriculum and helping the other teachers is a lot, so by the time I get home to Grace, my brain is fried. Simple sitcom reruns are exactly what I need to just zone out and relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, you've earned some easy relaxation time. Are you and Grace still planning that family trip to Japan for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we are! We're starting to look at flights and hotels this weekend. It definitely gives us both something fun to look forward to during these busy months."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "gym weights",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

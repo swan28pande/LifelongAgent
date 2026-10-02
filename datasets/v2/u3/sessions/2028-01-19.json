@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 690,
+  "date": "2028-01-19",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going so far in Tucson? How is Dash doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Dash is doing great, we got a nice walk in before the sun got too hot. I'm actually just settling in at the clinic. I had a quick cup of plain brewed coffee from my old drip machine before I left the house today, so I'm fully awake."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There is nothing like a classic hot brew to start the day. Did you take your hybrid to work today, or did you find another way to commute?"
+    },
+    {
+      "speaker": "user",
+      "text": "I drove my hybrid in today. It makes the commute so much easier and more comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Did you listen to anything interesting on the drive over? Maybe that true-crime podcast your coworker told you about?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I skipped the crime mystery today and listened to a show focused on canine behavior and obedience training instead. I'm always looking for tips on how to handle greyhounds."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a dog training podcast! That sounds incredibly useful. Have you been able to try any of the tips with Dash yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, but we are going to work on some recall exercises this evening. Right now, I'm just looking forward to my lunch break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "What are you having for lunch today? Are you heading over to that new sandwich shop down the street?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, I actually packed my lunch today. I made a sandwich using a couple of slices of my homemade wild-yeast bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Mmm, a homemade sourdough sandwich sounds absolutely delicious! How did your latest bake turn out?"
+    },
+    {
+      "speaker": "user",
+      "text": "It turned out great! The crust is nice and blistered, and the crumb is super soft. Well, my break is just about over, so I should probably head back to the floor."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy your delicious lunch, Sofia! Have a great rest of your shift, and we'll chat later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "dog training podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Dash steals food off the kitchen counter"
+  ]
+}

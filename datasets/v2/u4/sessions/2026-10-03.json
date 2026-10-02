@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 217,
+  "date": "2026-10-03",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Saturday. How has your weekend been starting out? Did Leah have another pottery class today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Her class is actually tomorrow this week. We decided to sleep in today, and then the two of us headed out to a local spot for a late-morning combination of breakfast and lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully relaxing start to the weekend. Are you able to completely unplug today, or do you have some architectural projects to look over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually had to log on for a few hours to tweak some design drafts. Since I was working from my desk at home, I kept things super comfortable and just put on a cozy knitted pullover and some classic denim pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Comfortable clothes are essential for a weekend work session. Did you put on any music to help you focus while you worked on those drafts?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I was playing some independent alternative bands with plenty of guitar—that kind of non-mainstream rock always puts me in the right headspace for designing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect soundtrack. Speaking of focus, how is your wrist feeling lately? Have you been able to get back into photography or cycling at all?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's healing up really well! I actually took my camera out yesterday afternoon around Minneapolis to shoot some of the changing autumn leaves. It felt great to hold the camera steady again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear your wrist is recovering and you're back to shooting photos. The fall foliage must be stunning right now. What do you and Leah have planned for dinner tonight after your busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it simple but satisfying. I'm planning to sear a couple of high-quality, thick cuts of beef in our cast-iron skillet tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a perfectly seared cut of beef sounds like the ultimate Saturday night comfort food. I hope you both enjoy it!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a really nice, quiet evening. I appreciate you checking in."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "not mentioned",
+      "outfit": "sweater and jeans",
+      "music": "indie rock",
+      "dinner": "steak"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 716,
+  "date": "2028-02-14",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How is your day starting out in Tucson?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going pretty well. I decided to drive my hybrid to the clinic today, which made my morning commute really quick and easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear! A smooth commute always makes a difference. Did you manage to get a good breakfast or drink in before heading out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I just kept it simple and made a pot of standard drip coffee at home to drink while getting ready. It's my usual go-to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a reliable warm cup of coffee to start the day. How is everything going at the clinic so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty busy, but I'm getting through it. I actually just finished my lunch break. I brought a sandwich made with my homemade sourdough bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, that sounds delicious! Your sourdough baking always sounds so impressive. How is Dash doing today? Is he relaxing at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. Dash is definitely enjoying a lazy Monday. Tom sent me a photo of him completely sprawled out on his bed earlier."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A typical greyhound life! That's wonderful. Speaking of Tom, how are things going with planning the wedding for this summer?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are making some steady progress! It's nice having the summer 2028 date set so we can just pace ourselves and not feel too rushed with the details."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very stress-free way to handle it. Do you two have any relaxed plans for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do. We're just going to make a nice dinner at home and have a quiet night in after I get off my shift. It's exactly what I need."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She and Tom are touring a historic downtown venue next weekend for their wedding."
+  ]
+}

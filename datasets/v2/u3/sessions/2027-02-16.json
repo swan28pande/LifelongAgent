@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 353,
+  "date": "2027-02-16",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Tuesday. How is everything going at the clinic in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a good day so far. A bit busy, but manageable. I actually rode the valley metro train to get to the clinic today, which was nice and relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, riding the train is a great way to avoid traffic. Did you have time to grab a warm drink before you hopped on?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! My roommate was using her fancy new espresso maker, but I just wanted something simple and classic today. I ended up brewing a quick pot of plain old drip coffee to put in my travel mug."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing wrong with a classic drip coffee to start the day. Did you listen to that true-crime podcast your coworker recommended during your train ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually decided to switch things up today. Since I recently started that online Italian course, I spent the commute listening to an Italian language lesson podcast instead. It's a great way to practice pronunciation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is such a smart way to study! How is the Italian coming along? It must be fun to learn."
+    },
+    {
+      "speaker": "user",
+      "text": "It is! It's challenging but really rewarding. Work was busy after I arrived, but I got a great break midday. Tom and I actually met up to have lunch together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "How wonderful! It's always great when you can coordinate schedules for a midday date. How is Tom doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing really well! Just busy with his own projects, so it was nice to sit down and catch up over a meal, even if it was just a quick one."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad you both got that time together. Are you planning on doing any sourdough baking tonight, or just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "No baking tonight, my starter is resting in the fridge. I think I'll just review some vocabulary from my Italian lesson and head to sleep early."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "lunch with Tom",
+      "commute": "light rail",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

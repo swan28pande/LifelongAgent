@@ -1,0 +1,100 @@
+{
+  "user_id": "u4",
+  "day": 261,
+  "date": "2026-11-16",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Monday. How is your week starting off in chilly Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's actually a pretty big day. I got some amazing news yesterday. I was officially promoted to the project lead position at the design firm!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh my goodness, congratulations! That is huge news. How are you feeling about taking on the project lead role? Was it a surprise?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm incredibly excited. I knew there was a possibility, but getting the official word yesterday was still a wonderful shock. It means a lot more responsibility, but I'm absolutely ready for it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You've definitely earned it. Did you do anything to celebrate with Leah yesterday, or are you saving that for later?"
+    },
+    {
+      "speaker": "user",
+      "text": "We just did a quick toast at home, but we'll probably do a proper celebration next weekend. Today was straight to business anyway; I had to be out of the door incredibly early for an on-site inspection, so I actually ended up completely bypassing my morning meal. Usually, I'd have my blended fruit bowl, but there just wasn't time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An early site visit is a busy start! Skipping your morning fuel must have been tough, especially since you usually enjoy those fruit bowls. How did the site visit go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went well, very productive! I made sure to dress professionally but comfortably since I was split between the site and the office today. I wore a nice collared shirt with buttons and some casual cotton-twill trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect balance for a day split between the field and drafting tables. Did you head straight to the office after?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I've been at my desk for a few hours now. To keep my focus while organizing some of these new project files, I've had some chill, instrumental down-tempo hip-hop tracks playing in my headphones."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Mellow background music is perfect for getting into the zone. Are you planning on getting any physical activity in today, or is it a rest day after all that excitement?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to squeeze in some time on two wheels earlier today. Getting out for a ride on my bicycle always helps clear my head before a long afternoon of drafting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to break up the day. Hopefully, the weather was cooperative for your ride!"
+    },
+    {
+      "speaker": "user",
+      "text": "It was a bit crisp, but once you start pedaling, you warm up quickly. It was just what I needed."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "invention: Daniel and Leah plan to have a proper celebration for his promotion next weekend."
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "skipped breakfast",
+      "workout": "cycling",
+      "outfit": "button-down and chinos",
+      "music": "lo-fi beats",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "job.project_lead": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": [
+      "Daniel and Leah plan to have a proper celebration for his promotion next weekend."
+    ]
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'long ride'",
+    "pref_absent: outfit should be 'button-down and chinos', conversation gives 'missing'",
+    "pref_absent: music should be 'lo-fi beats', conversation gives 'missing'",
+    "statement_missing: job.project_lead (was promoted to project lead at the design firm (this happened on 2026-11-15))",
+    "invention: Daniel was promoted to project lead yesterday."
+  ]
+}

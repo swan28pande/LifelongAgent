@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 69,
+  "date": "2026-05-08",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Friday going so far in Portland? Have you had any time for woodworking this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Friday is going pretty well. No woodworking this week, unfortunately, it's been a busy one. But I did manage to go for a run this morning before starting the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Going for a run is a great way to start a Friday! How are things at the high school? I imagine your chemistry students are getting restless with summer around the corner."
+    },
+    {
+      "speaker": "user",
+      "text": "They definitely are, teaching chemistry in May is always a challenge! I needed a quick breakfast to fuel that run and get to school on time, so I just toasted a bagel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A toasted bagel is a classic, quick breakfast. Sounds like you needed the energy! How is Grace doing? Do you two have any fun plans for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace is doing well! We don't have any big plans, we're actually just planning a quiet night in. We're going to put on a nature documentary tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect way to unwind after a busy week of teaching. It's always nice to just relax on the couch."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. We both really enjoy them, so it'll be nice to just zone out and watch it together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. I hope the Portland weather cooperates if you do decide to head outside this weekend."
+    },
+    {
+      "speaker": "user",
+      "text": "It's supposed to be a bit damp, but that's typical for Portland. It's actually perfect weather for staying cozy inside."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is! Well, enjoy your quiet evening with Grace and the documentary."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Have a good weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bagel",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has always found marine life fascinating"
+  ]
+}

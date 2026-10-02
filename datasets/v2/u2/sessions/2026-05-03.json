@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 64,
+  "date": "2026-05-03",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How is everything going today in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going great. Typical gray Portland morning, but Grace and I made a big batch of pancakes for breakfast, so we started off on a high note."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes sound like the perfect Sunday morning comfort food. Do you have any plans to get into the woodshop today, or are you taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "No woodworking for me today. I actually decided to hit the gym and do some gym weights for my workout instead of working on any projects."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a solid way to spend a Sunday. It's always good to get a workout in before the school week starts. How are things looking for your high school chemistry classes tomorrow?"
+    },
+    {
+      "speaker": "user",
+      "text": "Pretty good! I have a lab planned on chemical reactions, so I spent a little time reviewing the safety protocols and making sure the prep room has everything. It should be a fun week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Labs are always exciting for the students. It sounds like you're all set. What are your plans for winding down tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're going to keep it pretty low-key. I think Grace and I are going to watch a nature documentary on TV after dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. There's nothing like a good nature documentary to cap off the weekend."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. We both find them really soothing, and it's nice to just zone out and see some beautiful scenery before the busy Monday rush."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely. I hope you enjoy the show and have a great start to your week tomorrow, Marcus."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'nature documentary', conversation gives 'other'"
+  ]
+}

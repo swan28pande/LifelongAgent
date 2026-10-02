@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 174,
+  "date": "2026-08-21",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Friday. How has your week been, especially now that the new school year is underway?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty hectic getting back into the swing of things with my chemistry classes, but I'm surviving. Today started off alright, I just had a quick bowl of oatmeal for breakfast before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a solid, reliable way to fuel up for a busy school day. Did you manage to squeeze in any exercise today, or are you resting up for the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made it to the gym earlier. Did some gym weights today to keep up my strength, though my arms are definitely feeling it now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job staying consistent even with the busy teaching schedule! Do you have any plans to unwind in Portland this weekend? Maybe some tennis or woodworking?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm hoping to spend some time on woodworking this weekend, and maybe play a bit of tennis if the weather holds up. Nothing too intense, just looking forward to the break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great balance. Woodworking is such a satisfying way to focus on something completely different from schoolwork. What are you and Grace up to tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tonight is going to be very low-key. We're planning to just order some takeout and watch a cooking competition show on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those cooking competition shows are so addictive! Do you two have a favorite one you're currently following, or are you just browsing?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're starting a new season of one we like. It's fun to see what they can whip up under pressure, even if it just makes us hungry."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely has that effect! Well, I hope you have a wonderful, relaxing evening with Grace and a great weekend ahead."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a garage workshop.",
+    "invention: The user has a tennis match scheduled with a friend tomorrow morning."
+  ]
+}

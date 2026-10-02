@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 312,
+  "date": "2027-01-06",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going over in Minneapolis? Staying warm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty cold, but I actually just got back from spinning my wheels on the road. Logged some solid miles on my bicycle, which definitely warmed me up!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's impressive! Getting out for some cycling in this weather takes some real dedication. How is everything going at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a busy one. I had to ditch my usual blazer and slacks combo today and wear a formal matching jacket and trousers with a silk necktie, all because we had a massive presentation for a new client this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a big presentation! I hope the formal wear brought you some good luck. Did you get to listen to some of your grandfather's old jazz records beforehand to help you focus?"
+    },
+    {
+      "speaker": "user",
+      "text": "I wish! My headphones completely died right when I got to my desk, so instead of spinning any of those jazz LPs, I had to resort to tuning into the local FM broadcast stations on an old desk receiver just to have some background noise."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, dead headphones are the worst, especially on a big day. But hopefully the local broadcasts kept you company. What's the plan for this evening? Are you and Leah cooking?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are! We're making that spicy, fragrant Thai dish with the coconut milk base and the vibrant green chili paste we learned to make a while back. It's perfect for a cold night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that delicious green curry! That sounds like the absolute best way to warm up after your ride."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. We've been looking forward to that spicy green sauce all afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the dinner! By the way, how is Leah's pottery class coming along? Has she made any new bowls for your curry?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually working on some ceramic bowls right now! Hopefully, we'll be eating out of them soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "cycling",
+      "outfit": "suit and tie",
+      "music": "the radio",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'stationary bike'"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 581,
+  "date": "2027-10-02",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Saturday. How has your weekend been starting out? Did you get a chance to unwind after the busy week at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a great Saturday so far. I actually kicked off the morning by lacing up my shoes and heading out for a multi-hour endurance jog. I covered about ten miles along the lakefront."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, ten miles! That's a serious distance. How is your wrist feeling after a heavy effort like that? Any stiffness since the cast came off?"
+    },
+    {
+      "speaker": "user",
+      "text": "No stiffness at all, thankfully! It feels completely back to normal. After I got back and showered, I had to review some design drafts for a side project. To help me focus, I put on some 90s alternative and college-radio style guitar bands."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great atmosphere for focusing. Did you find some good tracks, or just stick to your usual favorites?"
+    },
+    {
+      "speaker": "user",
+      "text": "A mix of both—some classic Pavement and then some newer underground acts. It really helped me get into a flow state with my sketches."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I love that. How is Leah's weekend going? Did she have to go into the hospital today, or is she off?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually has the weekend off! She spent the morning at her pottery class while I was out on my jog, which she really enjoyed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great, I'm glad she's getting some creative time in. Are you two cooking anything good for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are! Since I'm pescatarian, we're keeping it light. I'm going to cook some wild coho fillets over the open flame grates."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, coho cooked over the fire sounds incredible. Are you serving it with any special sides?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some charred asparagus and a squeeze of fresh lemon. It's simple but exactly what I need after that big jog."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect post-workout meal. I hope you and Leah have a wonderful evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! We're probably going to wind down with a game of chess later tonight. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "long run",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "grilled salmon"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'long run', conversation gives 'lakefront run'"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u2",
+  "day": 62,
+  "date": "2026-05-01",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Marcus! Happy Friday. How is your morning starting off over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's starting off pretty well. Just wrapping up my breakfast before the day really gets moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice. What did you have to fuel up for the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just had a bagel. Kept it simple and quick today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Can't go wrong with a bagel. Do you head straight to the high school after that, or is there something else on the schedule first?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually squeezing in my workout first. I'm going to lift some gym weights this morning to wake myself up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome, starting the morning with gym weights is a great way to get energized. How are your chemistry students doing as we head into May?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're doing okay, but definitely getting that spring fever. We're doing a lab today, so hopefully that keeps them focused and hands-on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Labs are usually a crowd-pleaser! Do you and Grace have any fun plans lined up for the weekend once the school week wraps up?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do. Grace and I are planning to relax tomorrow morning, and then hopefully I can get some quiet time in the afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice balance. What are you hoping to do with your quiet time? Any woodworking on the horizon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm hoping to get some shop time and work on a small table project I've been sketching out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful project. I hope you get some good shop time in! Have a great day with your labs and your workout."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bagel",
+      "workout": "gym weights",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

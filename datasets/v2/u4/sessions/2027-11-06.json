@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 616,
+  "date": "2027-11-06",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Daniel! How is your weekend in Chicago starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I actually just got back from a major endurance run on the pavement—spent a couple of hours clocking quite a few miles today to build up my distance."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a serious distance session! I'm glad to hear you're getting some good miles in. How is your wrist holding up after that kind of impact? Fully recovered from the fracture?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it feels completely normal now, thankfully. I actually had to head over to the studio early today because we've officially started holding client calls at 7:00 AM."
+    },
+    {
+      "speaker": "assistant",
+      "text": "7:00 AM client calls? That is an incredibly early start, especially for a Saturday! Is this a new routine for all your projects?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we just kicked it off to accommodate some tight project timelines. It's tough waking up that early, but being at my desk before sunrise does have a quiet kind of peace to it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I suppose there is something nice about being the first one in when it's still quiet. Did you have any music playing to keep you focused during those early hours?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I ended up spinning some of those vintage swing and bebop vinyls from my grandfather's collection while I worked."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Spinning some old jazz records sounds like the perfect soundtrack for an early morning at the drafting table. It's great that you're enjoying his collection."
+    },
+    {
+      "speaker": "user",
+      "text": "It really helps me focus. Now that I'm back home, I'm getting things ready for dinner. I think I'm going to cook some fresh fillets of that classic pink-fleshed fish over the hot coals of the barbecue."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Grilled salmon on the barbecue sounds amazing! Since you stick to a pescatarian diet, do you have a favorite marinade you like to use, or are you keeping it simple tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some simple lemon, dill, and garlic. Leah is at her pottery class right now, so I'm going to prep everything now so it's ready when she gets home."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "long run",
+      "outfit": "not mentioned",
+      "music": "jazz records",
+      "dinner": "grilled salmon"
+    },
+    "statements": {
+      "early_meetings.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has been pescatarian for quite some time"
+  ]
+}

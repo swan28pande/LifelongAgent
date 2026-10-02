@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 110,
+  "date": "2026-06-18",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Thursday going? Did Leah have another pottery class this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, she did, she actually brought home a really nice lopsided mug she made. It's perfect for coffee. Speaking of mornings, I had a great start today—I made some sunny-side-up eggs on top of toasted wheat bread before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful morning! Leah's pottery skills are really coming along. How have things been at the architecture firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty hectic with a new drafting deadline. I've had to put my headphones on and listen to those chill, wordless instrumental tracks with the slow, relaxing rhythms just to stay in the zone."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those mellow, repetitive beats are perfect for focusing on design work. Have you had any time for your photography lately, or has work taken over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I managed to snap a few sunset photos near the river last night, but today is purely an indoor desk day. I'm looking forward to winding down tonight with a big bowl of freshly boiled fettuccine tossed in garlic and marinara."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Carbs and tomato sauce are the absolute best way to reward yourself after a long day of drafting. Are you still enjoying a bit of everything in your diet these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely, I still eat a mix of meat, veggies, and everything in between. No dietary restrictions for me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice to keep things flexible! By the way, have you heard from Kwame recently? How is he liking Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, he called me yesterday. He's really enjoying the southern food scene, though he's still adjusting to the summer humidity down there. He says it's a big change from Minneapolis."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Atlanta summers can be intense. Hopefully he finds some air-conditioned spots to hang out. Well, I hope you enjoy your dinner tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm about to go prep the sauce now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "lo-fi beats",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

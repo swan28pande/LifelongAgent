@@ -1,0 +1,82 @@
+{
+  "user_id": "u4",
+  "day": 661,
+  "date": "2027-12-21",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Tuesday. How is your day starting out in Chicago? Is the December chill keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's definitely freezing out there. I stayed cozy inside this morning though. I had prepped some rolled oats in a jar with oat milk and chia seeds in the fridge last night, so I just grabbed that and ate it cold before heading out. Super quick and easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, low-effort morning. Did you have any early client calls at the studio today, or was it a more relaxed start?"
+    },
+    {
+      "speaker": "user",
+      "text": "No early calls today, thankfully! I got to dress down quite a bit too. I just threw on a plain, pitch-black short-sleeve tee and my favorite pair of blue denim trousers before walking out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a reliable, comfortable uniform like that. What's the vibe at your desk today? Are you drafting with some music on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've had some texture-heavy, beatless synthesizer soundscapes looping in my headphones for the last few hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those instrumental synth tracks can really help you get lost in the blueprints. How is your wrist holding up these days? Have you been able to do much physical activity since it fully healed?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels totally back to normal! In fact, I actually took a break midday and headed over to the indoor facility to scale some synthetic bouldering routes. It felt so good to get back on the wall."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! Getting back on the routes must feel amazing after all that recovery time. How is Leah doing? I imagine her schedule at the hospital keeps her pretty busy lately."
+    },
+    {
+      "speaker": "user",
+      "text": "She is doing great, but yes, her pediatric shifts are pretty exhausting. Since she's working late tonight, I'm taking charge of dinner. I'm going to simmer a big pot of spiced, slow-cooked bean and tomato stew with jalapeños and bell peppers, completely meatless."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A hearty, meat-free stew like that is exactly what a cold December evening calls for. Are you using a recipe from that vegetarian and seafood cookbook you received a while back?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually just winging it with my own spices this time, but I did flip through that book for some inspiration earlier. I think I'll have a hot bowl waiting for Leah when she gets home, and maybe sneak in a quick game of chess online while I wait."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "overnight oats",
+      "workout": "climbing gym",
+      "outfit": "black t-shirt and jeans",
+      "music": "ambient electronic",
+      "dinner": "veggie chili"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "reason_given: no reason may be given for today's work music"
+  ]
+}

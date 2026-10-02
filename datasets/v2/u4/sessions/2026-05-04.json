@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 65,
+  "date": "2026-05-04",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Monday. How is your week starting off in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting off pretty well. I actually had a great morning. I made myself a warm, hearty bowl of rolled oat flakes with some sliced bananas and maple syrup before heading out, which was the perfect way to fuel up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully comforting breakfast! Did you head into the design firm today, or are you working on projects from elsewhere?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. I decided to dress up just a bit while keeping it comfortable, so I went with a crisp, long-sleeved collared shirt with buttons and a pair of classic tan cotton twill trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A very sharp look for a junior architect! It strikes that perfect balance of professional and relaxed. What kind of projects are on your desk today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm refining some elevation drawings for a client. To stay focused while I draft, I've got my headphones on listening to a streaming playlist of relaxed, downtempo jazzy instrumental loops with a soft vinyl crackle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those chill instrumental tracks are absolute magic for deep focus. It sounds like you've set up a great flow. Have you and Leah had a chance to catch up lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we had a really nice weekend together. We spent some time exploring a new neighborhood and just enjoying the spring weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! Did you manage to bring your camera along to snap some photos, or did you leave the gear at home this time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually left the heavy camera at home for once and just enjoyed being in the moment, though I did spot some great architecture I might go back to photograph later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes it's nice to just look with your eyes! Speaking of spring activities, are you still planning on participating in that spring 10K you signed up for?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely, I'm still registered and looking forward to the big day. The energy at those events is always so great."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "lo-fi beats",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 414,
+  "date": "2027-04-18",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Sunday. How is your weekend going? Are you and Leah getting some relaxation time in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, thanks. Actually, I'm doing a bit of Sunday prep for some upcoming projects at the design firm. I wanted to be comfortable but still feel somewhat productive, so I threw on a plaid button-down and some classic blue denim pants to work from my desk."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid way to get into the work mindset without sacrificing comfort. Do you have any music playing to help you focus on your project prep?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I've got a playlist going with various underground guitar bands and alternative tracks from independent labels. It's great background noise that keeps my energy up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that kind of music is perfect for getting into a flow state. Did you have a good breakfast to fuel your Sunday prep session?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I blended up some frozen berries and bananas into a thick, cold puree, poured it into a dish, and scattered some granola and chia seeds on top to eat with a spoon. It was really refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and very energizing. Are you planning to balance out the desk work with a workout later, maybe checking out that new climbing gym across town?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, today is actually a total recovery day for me, so I won't be doing any physical exercise. Honestly, my whole fitness regimen has shifted quite a bit recently because we relocated here to Chicago for Leah's new hospital job. Getting settled in a new place has meant restructuring my routine, so I'm embracing a quiet day off today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense. Relocating is a huge adjustment, especially with Leah starting her pediatrician role. It's smart to give yourself grace and let your body rest. How are you both liking the neighborhood so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "We love it. We're still unpacking a bit, but we've found some great spots. Leah has even found a local pottery class that she's really enjoying on her days off, which has been a nice way for her to unwind too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad she's enjoying the pottery class! And how about your photography? Have you had a chance to explore the city with your camera yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yes. I've been taking my camera out on weekend walks to capture some of the incredible Chicago architecture. It's a fantastic city for street photography, so I'm looking forward to doing more of that once we're completely settled."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "rest day",
+      "outfit": "flannel and jeans",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

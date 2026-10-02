@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 419,
+  "date": "2027-04-23",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Sofia! Happy Friday. How is your day starting out in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's going well so far. I just got behind the wheel of my hybrid to head to the clinic today. Before I left, I made sure to drink a simple cup of standard filtered coffee I brewed at home to wake myself up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Driving with a fresh cup of coffee is a great way to start. Did you end up listening to that true-crime podcast your coworker recommended during your commute?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I decided to switch things up and listened to an audio lesson podcast for learning Italian while I was on the road."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's a wonderful way to practice! How is the online Italian course going overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going pretty well! It's tough, but practicing with the podcast during my drive really helps the vocabulary stick."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I imagine it does! Multitasking at its finest. How are things looking at the outpatient clinic today? Do you have a busy shift ahead?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's looking like a full schedule, but I packed a great lunch to keep me going. I made a sandwich using slices from my latest homemade wild yeast loaf."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Your sourdough baking always sounds so impressive. Have you been experimenting with any new techniques lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! No new techniques, just trying to keep my starter active and happy. It's a nice way to unwind after a long day at work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely sounds like a therapeutic hobby. Speaking of unwinding, have you and Tom had any time to work on plans for your summer 2028 wedding lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yes! We've been looking at some local Phoenix venues online. There's no rush since it's still a ways off, but it's fun to browse."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, starting early takes a lot of the pressure off. I hope your shift goes smoothly today, Sofia!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll catch up with you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning a honeymoon in Italy"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 50,
+  "date": "2026-04-19",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How has your weekend been going in Portland? Have you had any time for your woodworking, or are you and Grace just taking it easy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty good Sunday. The Portland weather is actually decent today. I didn't get around to any woodworking today, but Grace and I had a nice, quiet morning. I actually just got back from doing some gym weights for my workout."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, a workout with gym weights is a great way to spend a Sunday afternoon. How are you feeling? Are you ready for another week of teaching high school chemistry tomorrow?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm feeling good, though definitely a bit tired from the lifting. Teaching chemistry always keeps me on my toes, so I'm trying to have a very low-key evening. Grace and I are planning to watch a nature documentary tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect, relaxing way to wind down before the school week starts. Do you have a specific one lined up, or are you going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We found one about deep-sea marine life that looks really interesting, so we are going to queue that one up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Deep-sea creatures are absolutely fascinating. It almost feels like looking at another planet! Do you and Grace watch those often?"
+    },
+    {
+      "speaker": "user",
+      "text": "Every now and then. It's a nice change of pace and doesn't require too much intense focus after a long day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely. It's nice to just sit back and appreciate the visuals. Did you get any woodworking done yesterday, or has the whole weekend been mostly relaxing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did a little bit of sanding on a table project yesterday afternoon, but today I wanted to keep things strictly restful after my gym weights session."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sanding is definitely a workout in itself, so taking it easy today was a smart move. I hope you and Grace enjoy the nature documentary tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I think we will. Have a good evening, and I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: loves marine biology"
+  ]
+}

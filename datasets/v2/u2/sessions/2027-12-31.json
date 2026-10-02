@@ -1,0 +1,81 @@
+{
+  "user_id": "u2",
+  "day": 671,
+  "date": "2027-12-31",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy New Year's Eve, Marcus! How is the final day of 2027 treating you? Do you and Grace have any big plans for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Happy New Year's Eve! No big plans here. Grace and I decided to just stay in, keep it cozy, and watch some sitcom reruns tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, relaxing way to spend the evening. Sitcom reruns are always a great choice. How did your day start off this morning? Did you get a good breakfast in?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty quiet. I actually just had a bagel for breakfast today. I know the nutritionist suggested getting more protein in the mornings, but I was really craving a toasted bagel."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Hey, sometimes you just need a comforting bagel! Especially during the holidays. How has the winter break been going for you? It must be nice to have some time away from your duties as head of the science department."
+    },
+    {
+      "speaker": "user",
+      "text": "It has been incredibly nice. Running the science department keeps me on my toes, so this break was definitely needed. I've mostly been enjoying the quiet time at home, and Olive has been loving having me around more during the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure Olive is absolutely thrilled to have her favorite human home. Have you been able to get out and play any tennis during the break, or has the Portland winter weather kept you indoors?"
+    },
+    {
+      "speaker": "user",
+      "text": "The weather hasn't been great, but I did manage to get on an indoor court for some tennis a couple of days ago. It felt really good to run around, especially since my back is completely fine now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic to hear! I'm glad your back is fully recovered and you're able to play without any issues. How is your neighbor's vegetable garden looking these days? I imagine there's not much going on in late December."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's pretty bare right now with the winter frost, though I think they're already planning what to plant for next season. Speaking of plans, Grace and I were actually looking through some of our photos from our Japan trip earlier. It's hard to believe that was earlier this year."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that must have been so nice to look back on. Visiting Japan is such an incredible experience. What was your favorite memory from the trip when you were looking through those photos?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably just wandering around Tokyo and seeing the cherry blossoms. It was beautiful. Anyway, I should probably go help Grace finish up dinner. I hope you have a great night!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a wonderful dinner and a great evening watching those sitcom reruns with Grace! Happy New Year, Marcus!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bagel",
+      "workout": "other",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: Olive hates loud noises"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "user_id": "u2",
+  "day": 120,
+  "date": "2026-06-28",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How has your weekend in Portland been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a really nice, relaxing weekend. I started this morning off right with a big batch of pancakes for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes are the absolute best way to start a Sunday. Did you have a lazy morning after that, or did you get active?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! I let my food digest for a while and then went out for a run to get some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great balance. Good for you for getting a run in today. Do you have any other plans for the rest of the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually have some exciting news. I joined a tennis club today!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's awesome! Congratulations! What made you decide to sign up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been wanting to play more tennis, and they had an open registration today, so I decided to just go ahead and do it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great. Is the club close to where you live, and does it have good facilities?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's pretty close by and they have both indoor and outdoor courts, which is going to be perfect for the weather here."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Having indoor courts is definitely a huge plus. I hope you enjoy playing there! How are you and Grace planning to wrap up your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're just going to keep it low-key. We plan to watch a nature documentary tonight and then head to bed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nature documentaries are always so relaxing. I hope you both enjoy it, and have a wonderful start to your week tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {
+      "hobby.tennis": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Joined the Irvington Club",
+    "invention: Has not played tennis in a while"
+  ]
+}

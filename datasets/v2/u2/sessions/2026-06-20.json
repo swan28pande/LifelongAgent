@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 112,
+  "date": "2026-06-20",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Saturday. How is your weekend starting off over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going great. The weather is beautiful today. I actually started the morning off right by making some pancakes for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, pancakes are the perfect way to kick off a Saturday morning! Do you have any plans for the rest of the day? Maybe some time in the workshop?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm hoping to get some woodworking done this afternoon. I have a small project I've been wanting to finish up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to spend a Saturday. Since it's mid-June, are you officially on summer break from teaching high school chemistry now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully! The school year wrapped up last week, so I'm finally transitioning into summer mode."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Congratulations on finishing another school year! I'm sure you and Grace are glad to have some extra downtime. Any plans for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, it's nice to unwind. Grace and I are planning on keeping things pretty low-key tonight. We're probably just going to watch a nature documentary on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like a great, relaxing way to spend the evening. Is there a specific subject or region you're planning to watch?"
+    },
+    {
+      "speaker": "user",
+      "text": "We found one about deep-sea marine life that looks really interesting, so we'll probably check that one out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Deep-sea documentaries are always so mesmerizing. I hope you both enjoy it and have a wonderful, relaxing night."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user finds marine life fascinating."
+  ]
+}

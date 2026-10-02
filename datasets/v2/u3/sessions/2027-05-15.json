@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 441,
+  "date": "2027-05-15",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Saturday. How is your morning going so far in sunny Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well. It's already getting pretty warm here today. I actually decided to skip coffee this morning and whisked up a hot green tea powder latte instead. It was really soothing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a green tea latte sounds like a lovely, peaceful way to start a Saturday! Did you have to head into the clinic today, or are you off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thankfully, I didn't have to travel anywhere for work today. I have the day off, so my car stayed parked in the driveway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. A true day off is well-deserved! How are things going with your sourdough baking? Have you been working on any new loaves?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes! I actually have a loaf of sourdough proofing in the kitchen right now. I'm trying to get the crust a bit crispier this time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I hope it turns out perfectly! There's nothing quite like the smell of fresh sourdough. Since you have some quiet time at home, have you had a chance to listen to anything interesting?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually. While I was cleaning up the kitchen, I put on one of those audio language lessons to practice my Italian. It's really helping me get used to the pronunciation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a great use of your baking downtime! Italian is such a beautiful language. How is the online course going overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! It's challenging but really fun. I'm trying to practice a little bit every day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the best way to do it. Consistency really pays off. Do you and Tom have any big plans for the rest of the weekend, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it pretty low-key today. Just hanging out at home and enjoying the quiet weekend. I might do some reading later once my bread is in the oven."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "not mentioned",
+      "commute": "no commute",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: morning_drink should be 'matcha latte', conversation gives 'other'"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 311,
+  "date": "2027-01-05",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope your Tuesday is off to a good start. How is everything going in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It's a bit chilly this morning, so I opted for a simple mug of hot drip coffee at home rather than messing with my roommate's fancy new espresso setup. Then I bundled up and took the light rail train to the clinic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a classic drip coffee is exactly what you need to wake up! And taking the train sounds like a nice, relaxing way to start the day. Did you listen to anything on your commute?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I finally put on that investigative murder mystery podcast my coworker recommended a while back. It's about a cold case from the 90s, and I'm already completely hooked."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those true-crime series can be so addictive! It's great when a recommendation actually pans out. Are you planning to listen to more on your way home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, I can't wait for the ride home to hear the next episode. I'm actually just about to head to the breakroom for lunch. I brought a container of last night's dinner with me today so I don't have to go out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move, packing your own food saves so much time during a busy day shift. What did you end up bringing for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some leftover roast chicken and sweet potatoes that I made. It heats up really well in the clinic microwave."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and hearty! Speaking of cooking, how are things going with Tom? Have you two been cooking together lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Things with Tom are wonderful. We actually made that chicken together on Sunday evening, which was really fun. We've been trying to spend more quality time cooking together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely way to connect. Have you managed to find any time for your sourdough baking this week, or has the clinic been too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "The clinic has been pretty hectic, so no baking today, but I did feed my sourdough starter last night. I'm hoping to bake a fresh loaf this coming weekend if my schedule allows!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "packed leftovers",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 289,
+  "date": "2026-12-14",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Monday. How is everything going at the high school today? I hope Portland's winter weather isn't being too dreary."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's a bit gray today, but nothing we aren't used to. The science department is incredibly busy grading final lab reports, so it's a hectic Monday. I'm glad I fueled up with a protein smoothie this morning or I'd be running on empty by now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie sounds like a great way to kickstart a busy day of grading. Did you manage to find any time for exercise amidst all the schoolwork today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! I made sure to take a break and lift some gym weights earlier this afternoon. It really helps clear my head when the lab reports start piling up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great habit. Working out is perfect for clearing the mind. Do you have any plans to unwind with Grace this evening, or is there still more work to do?"
+    },
+    {
+      "speaker": "user",
+      "text": "No more work tonight, thankfully. Grace and I are just going to keep it simple. I think I'm just going to relax on the couch and watch some sitcom reruns to completely turn my brain off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are the ultimate comfort food for the brain. Have the two of you had any more thoughts about the Japan trip for next spring, or is that on hold until the winter break?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually talked about it last night! We're starting to look at some potential itineraries for Kyoto and Tokyo. It feels really good to have that to look forward to during these busy weeks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredible, planning is half the fun! Have you been able to squeeze in any woodworking projects lately, or has tennis been keeping you busy on weekends?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, both have been on the back burner. The weather here in Portland has been too wet for tennis, and with the end-of-semester rush, I haven't spent any time on my woodworking projects."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's completely understandable. The end of the term is always demanding, especially running the whole science department. I hope you get a nice break soon."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely looking forward to the holidays. But for now, I'm just ready to get home, have dinner, and put on those sitcom reruns."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "gym weights",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user has a garage."
+  ]
+}

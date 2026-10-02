@@ -1,0 +1,99 @@
+{
+  "user_id": "u3",
+  "day": 483,
+  "date": "2027-06-26",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Saturday going? How have things been since we last spoke?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Things have been a bit of a whirlwind. I actually moved to Tucson on Wednesday so I could be closer to my parents."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, that is a major update! Tucson is a wonderful place. How are you and Tom settling into the new environment, and how are your parents doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "They are doing great, and it is so nice to be just a short drive away from them now. Unpacking has been exhausting, but we are slowly getting the boxes cleared out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Moving is always a huge chore, but being close to family is definitely worth it. Did you have to do any commuting today, or are you getting a break from the road?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thankfully, I had absolutely no commute today. It was a huge relief to just stay put after all the driving we've done this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very well-deserved break. Did you manage to have a nice, peaceful morning at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I made myself a hot, whisked green tea latte to start the morning, which was perfect for sitting on the porch and just relaxing for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly soothing. Did you have to put much effort into making lunch today, or did you keep it simple?"
+    },
+    {
+      "speaker": "user",
+      "text": "I kept it pretty simple and put together a homemade bowl with rice, beans, and fresh toppings. I've actually changed my lunch routine recently, and it's because I moved to Tucson to be closer to my parents."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes complete sense—a big move like that definitely changes up your daily flow, and a quick homemade bowl is a great way to stay fueled. Have you and Tom had any time to think about how being in Tucson affects your plans for the summer 2028 wedding?"
+    },
+    {
+      "speaker": "user",
+      "text": "We haven't done any deep planning yet, but we'll probably start looking at some local Tucson venues soon instead of focusing on Phoenix. It's actually really exciting to think about!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound exciting! Tucson has some absolutely gorgeous desert backdrops for a wedding. I hope you get to relax and enjoy the rest of your weekend!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to unpack just a couple more boxes and then call it a day. Catch up with you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "invention: Previously focused on Phoenix for wedding venues"
+  ],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "homemade burrito bowl",
+      "commute": "no commute",
+      "podcast": "not mentioned"
+    },
+    "statements": {
+      "city.tucson": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": [
+      "Previously focused on Phoenix for wedding venues"
+    ]
+  },
+  "first_try_failures": [
+    "statement_missing: city.tucson (moved to Tucson to be closer to her parents (this happened on 2027-06-23))",
+    "invention: She moved to Tucson this past Wednesday.",
+    "invention: Her parents live in Tucson.",
+    "invention: She transferred to a clinic in Tucson.",
+    "invention: She and Tom are planning to look at local desert venues for their wedding."
+  ]
+}

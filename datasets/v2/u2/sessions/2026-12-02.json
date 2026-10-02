@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 277,
+  "date": "2026-12-02",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going so far? How is the weather treating you over in Portland today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's a bit gray and drizzly here in Portland, as usual for December, but I'm doing well. I actually managed to get out for a run early this morning before the rain really picked up, which felt great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to start the day, especially before the rain sets in! Did you have a good breakfast to refuel after your run?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did. I kept it quick and made myself a protein smoothie, which is my go-to when I'm heading out the door in a hurry."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect. And how have things been at the high school lately? How is everything going with leading the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well, just busy. Ever since the new school year started, we've had a lot of curriculum planning and department stuff to coordinate, but it is all running smoothly. I'm just looking forward to the upcoming winter break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It sounds like you've been working hard. Have you and Grace had any time lately to plan more of your family trip to Japan for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yes. We've been looking at some travel guides and talking about which cities we want to visit, though we haven't booked anything official yet. It's fun to look forward to."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It absolutely is, and it's nice to take your time planning it out. What are your plans for winding down this evening after work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think Grace and I are just going to relax on the couch. We found a nature documentary we want to watch, so we'll probably put that on and just take it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully relaxing Wednesday evening. Do you think you'll have any time for woodworking or tennis later this week, or is it mostly a quiet few days?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably a quiet few days, though I might try to get into the garage for some woodworking this weekend if the weather stays gloomy. But for tonight, I'm just happy to rest. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: preparing for an upcoming science fair"
+  ]
+}

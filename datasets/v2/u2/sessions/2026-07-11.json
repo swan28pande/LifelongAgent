@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 133,
+  "date": "2026-07-11",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Saturday. How is your weekend in Portland starting out? Got any woodworking projects lined up, or are you just taking it easy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting out great. I actually had a bit of extra time this morning, so I made some pancakes for breakfast. Grace and I really enjoyed them."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes on a Saturday morning sound perfect. A great way to fuel up for the day! Do you have much else planned?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do. I got active and had a great tennis session for my workout today. It was nice to get out on the court and run around."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome! I know how much you enjoy tennis. Did you play a singles match or some doubles?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some singles. It was a really solid workout, and my backhand was actually feeling pretty good today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. There's nothing like a good tennis workout to kick off the weekend. How are you and Grace planning to spend the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it pretty low-key tonight. We plan to wind down by watching a cooking competition show on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those cooking shows can be so fun to watch! Are you hoping to get some dinner inspiration, or do you just enjoy the high-stakes kitchen drama?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! It's just fun to see what they can whip up under a tight deadline. It's the perfect way to relax after a busy week of teaching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, you've definitely earned some downtime. How has the Portland weather been treating you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been beautiful and sunny, perfect summer weather. I think tomorrow I might spend some time on a small woodworking project at my workbench, but for now, I'm just enjoying a lazy Saturday."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "tennis",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a garage"
+  ]
+}

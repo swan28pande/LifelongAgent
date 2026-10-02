@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 256,
+  "date": "2026-11-11",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Wednesday. How is your day going so far at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, pretty steady. The city's light rail train was actually quite crowded this morning, but I made it to my shift right on time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the morning rush on the transit lines can be a lot. Did you manage to get a quiet moment at home before you headed out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, luckily. I made sure to brew a simple pot of classic filtered coffee at home to sip on while getting ready. Didn't even use my roommate's fancy espresso setup today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a traditional brewed cup is exactly what you need to ease into the day. Did you have any entertainment for that crowded train ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put my headphones on and listened to a podcast that discusses recent medical research and healthcare updates."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to stay informed, especially with your work as a nurse. Is it busy at the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is, we have a full schedule of check-ups today. But it's manageable, and my energy is completely back to normal after recovering from that flu."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It must be a relief to feel healthy again. Have you had any time to get back to your sourdough baking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, actually! I fed my starter yesterday evening, so it's looking very active. I'm hoping to bake a fresh loaf sometime soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There really is nothing quite like homemade bread. Are you hoping to do some salsa dancing soon too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'd love to go back to the studio for a session sometime. I've missed it, but I'm just taking things one day at a time right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes perfect sense. No need to rush into too many things at once. I hope the rest of your shift goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "light rail",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Plans to go salsa dancing with Tom this weekend."
+  ]
+}

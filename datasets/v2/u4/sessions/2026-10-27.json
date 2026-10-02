@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 241,
+  "date": "2026-10-27",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Tuesday shaping up so far? Are you keeping busy at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's been a pretty productive morning. I got an early start, fried up some eggs to slide onto toasted sourdough, and then threw on a clean button-up shirt and some khaki trousers to head out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a solid, comfortable start to the day. Are you working on any major architectural layouts at the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly refining some elevation drawings. I actually changed up my background audio today. I usually listen to indie rock while drafting, but a buddy of mine recommended a specific episode of a digital talk show, so I listened to that spoken-word program instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A little spoken-word break can be a great way to focus when you're doing detailed drawing work. Was the episode interesting?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really was, it kept my mind occupied during the more tedious parts of the drawing. Once I wrapped things up at the office, I headed over to the gym and spent some time on the indoor exercise bicycle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! How is your wrist feeling with that kind of exercise? I know you've had to be careful since you fractured it climbing."
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually perfect for it. Riding that stationary equipment doesn't require me to put any weight or pressure on my wrist at all, so I can get a good cardio session in without risking any pain."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes perfect sense. It's smart to keep up your fitness while letting the bone fully heal. Do you and Leah have any nice plans for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do, though we're keeping it incredibly simple. I had originally planned to prepare some tacos tonight, but I was just way too exhausted to cook after everything, so I decided to order a takeout pie instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a warm, delivered pie is exactly what you need after a long day. Is Leah still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh yeah, she's absolutely loving it. She's actually bringing home some of her first finished clay pieces tonight, so we'll probably eat our slices and check out her work."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs on toast",
+      "workout": "stationary bike",
+      "outfit": "button-down and chinos",
+      "music": "a podcast",
+      "dinner": "takeout pizza"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns an indoor cycling trainer"
+  ]
+}

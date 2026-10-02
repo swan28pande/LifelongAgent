@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 291,
+  "date": "2026-12-16",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going at the outpatient clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. It was a nice, peaceful morning. I actually decided to ride the city's street-level electric train to work today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, taking the light rail! That sounds like a nice change of pace. How was the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was really relaxing. It gave me some quiet time to finally start listening to that documentary show about real-life unsolved crimes my coworker recommended a while back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that true-crime podcast! Is it as gripping as your coworker promised?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely! It's all about an unsolved cold case from the nineties. I was so engrossed in the narration that I almost missed my stop near the clinic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly suspenseful! I'm glad you made it to work on time though. Have you been able to get back to your salsa dancing lately now that you're fully recovered from the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully! Tom and I went to a social dance night over the weekend. My energy levels are completely back to normal, which feels amazing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It must have felt great to be back on the dance floor with Tom. Have you done any sourdough baking recently as well?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually prepped a loaf last night to bake this evening. The cooler Phoenix winter weather makes the fermentation process take a bit longer, but it's worth it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Phoenix winters definitely bring a nice chill! I hope the loaf turns out perfectly tonight. Are you planning on listening to more of that podcast on your train ride back home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I definitely will. There are only a few episodes left, and I'm dying to find out what happened. I think I'll head out to the station in a few minutes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a safe ride back, Sofia! Enjoy the rest of the mystery and your baking tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "not mentioned",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user owns a car."
+  ]
+}

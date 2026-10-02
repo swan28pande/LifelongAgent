@@ -1,0 +1,77 @@
+{
+  "user_id": "u3",
+  "day": 1,
+  "date": "2026-03-01",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Sofia! I'm your personal AI assistant, and I'm really looking forward to helping you out. Since we're just getting started, how is your Sunday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going pretty well, thanks. I'm just enjoying a very quiet Sunday here in Phoenix, Arizona. Best of all, I don't have any work travel today, so I get to just stay put."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Phoenix is a wonderful city! It's always nice when you can skip the driving and just relax. What kind of work do you do that usually requires a drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "I work as a night-shift ER nurse at a city hospital. It can be incredibly fast-paced and exhausting, so having a day with absolutely zero travel to and from work is a huge relief."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, working the night shift in a city emergency room must be so demanding. Thank you for doing such vital work! Did you manage to get some good rest today after your shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I slept for a good chunk of the day, thankfully. Before I left the hospital to head home and sleep this morning, I actually just grabbed a quick salad from our cafeteria to eat as my lunch, so I didn't even have to worry about cooking when I woke up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very smart strategy. Saving energy is definitely a priority after a long night shift! When you do have some free time and are fully rested, how do you like to spend it?"
+    },
+    {
+      "speaker": "user",
+      "text": "When I actually have the energy, my absolute favorite hobby is salsa dancing. It's a great way to completely change my focus and unwind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Salsa dancing sounds amazing! Is there a big dancing community for that in Phoenix, or do you have a specific spot you like to visit?"
+    },
+    {
+      "speaker": "user",
+      "text": "There is actually a really vibrant scene here! There are a couple of local spots in the Phoenix area that host social dancing nights, which I try to go to whenever my shift schedule allows."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fantastic way to shake off the stress of the hospital. The music and movement must be so energizing after a tough week."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. It's the perfect contrast to the ER environment, and it keeps me active in a way that feels like fun instead of exercise!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "cafeteria salad",
+      "commute": "no commute",
+      "podcast": "not mentioned"
+    },
+    "statements": {
+      "job.0": true,
+      "city.0": true,
+      "hobbies.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

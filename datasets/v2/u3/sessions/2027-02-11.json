@@ -1,0 +1,84 @@
+{
+  "user_id": "u3",
+  "day": 348,
+  "date": "2027-02-11",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going? Are things busy at the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been pretty busy, but it was a nice start to the day. I actually caught the light rail train to work this morning instead of driving, which gave me some time to relax before my shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much more peaceful start than sitting in traffic! How was the rest of your morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "It flew by. I just finished up in the breakroom for lunch. I brought some of yesterday's dinner that I packaged up in a container to heat up, which saved me a trip out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move, having some of last night's meal ready to go is always a time-saver. Did you make something special yesterday?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a simple pasta dish, but it held up well! I actually spent most of my evening yesterday working on my online Italian course, so I didn't want to spend too much time cooking."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the Italian course! How is that going? Are you finding the lessons easy to follow?"
+    },
+    {
+      "speaker": "user",
+      "text": "They are really great! I'm learning a lot of vocabulary. It's a nice way to unwind after a shift at the clinic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Phoenix must have some nice spots to practice if you ever find a local conversational group."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh definitely, there are a few meetups around town I might look into once I get a bit more confident."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great goal. Have you had any time for your sourdough baking lately, or has the Italian course been taking up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually have a loaf proofing in the fridge right now! I'm planning to bake it tomorrow morning. Tom is coming over tomorrow night, so I'm hoping it turns out well for us to share."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! I hope it rises perfectly. Have a great rest of your shift, Sofia!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "packed leftovers",
+      "commute": "light rail",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'music instead'",
+    "invention: Plans to have a quiet dinner with Tom this weekend."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "user_id": "u3",
+  "day": 271,
+  "date": "2026-11-26",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going at the clinic in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, just the usual busy pace. I actually rode the light rail train into work today, which was a nice change of pace from driving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing way to start your shift. Did you have something to listen to during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I finally started listening to that investigative true-crime podcast my coworker recommended a while back. It's really gripping."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I remember you mentioning that recommendation. I'm glad you're enjoying it! Did you grab a coffee to go with your listen? Maybe tried out your roommate's new espresso machine?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I bypassed the espresso maker today and made a hot matcha latte with milk before leaving the apartment. It was exactly what I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A warm matcha latte sounds like a perfect morning treat. How has the rest of your day been? Have you managed to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm on my break right now. I packed up some of the leftovers from last night's dinner to eat today, which made my break very easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart planning. Speaking of food, have you had any time for sourdough baking lately, or has the clinic kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't baked in a couple of weeks, honestly. My sourdough starter is just resting in the fridge. I've been trying to balance work and getting enough sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's completely fair, sleep is so important. Have you been able to fit in any salsa dancing, or are you mostly resting on your days off?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went to a fun salsa session earlier in the week, which was a great release. But tonight is definitely going to be low-key; I'm just planning to relax with Tom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lovely, peaceful evening. I hope you have a great rest of your shift and a relaxing night with Tom!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to finish up my lunch and head back to the floor. Catch up soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "packed leftovers",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns a travel mug",
+    "invention: owns a hand frother",
+    "invention: plans to go salsa dancing with Tom this weekend"
+  ]
+}

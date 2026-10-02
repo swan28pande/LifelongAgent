@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 209,
+  "date": "2026-09-25",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Marcus! How has your week been? Have you settled into the rhythm of the new school year with your chemistry classes?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a busy week, but the students are starting to get the hang of lab safety. I actually just got back from doing some gym weights to burn off some of the week's stress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to transition into the weekend. Hitting the gym weights must be a nice break from grading lab reports. How is the weather up in Portland today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's classic Portland fall weather—a bit gray and drizzly, but perfect for staying indoors. Grace and I are planning a cozy evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cozy evening sounds ideal after a long week. Do you two have any specific plans, or are you just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just taking it easy. We're going to put on a nature documentary tonight and just unwind. I'm really looking forward to doing absolutely nothing for a few hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary is perfect for a rainy Friday night. Is it about a particular region or animal? Also, how are the plans coming along for your family trip to Japan next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's one about the deep ocean, which always has some bizarre creatures. As for Japan, we've been looking at some train routes and hotels in Tokyo and Kyoto. It's really exciting to plan, even if it's still months away."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely incredible. Tokyo and Kyoto will be amazing in the spring. Have you had any time for your other hobbies lately, like tennis or woodworking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, not much. I did play a quick tennis match last weekend, but woodworking has been on the back burner with the school year keeping me so busy. I'm hoping to get back to it eventually, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Totally understandable, the start of the school year takes a lot of energy. I hope you get some well-deserved rest tonight with that documentary!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Have a great weekend!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a garage",
+    "invention: is building a small table"
+  ]
+}

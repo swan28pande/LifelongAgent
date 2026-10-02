@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 216,
+  "date": "2026-10-02",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Daniel! How is everything going in Minneapolis today? How is your wrist feeling lately after that climbing fracture?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Minneapolis is a bit chilly today, but not too bad. My wrist is actually feeling much stronger, thanks for asking. I'm just sitting down at my desk now. I just finished a bowl of those crunchy baked oat clusters with some almonds and dried cranberries drowned in cold milk, so I'm fueled up and ready for the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, hearty autumn breakfast. Glad to hear the wrist is on the mend too! Are you planning to get any cycling or photography in this weekend, or is the cooler weather keeping you indoors?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually hoping to take my camera out tomorrow. The fall colors are starting to peak around the lakes, so it's a great time for some landscape photography. Leah is busy with her pottery class tomorrow morning anyway, so it works out perfectly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the autumn colors near the Minneapolis lakes must be absolutely stunning right now. Do you have a specific spot in mind to shoot?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was thinking of heading over to Bde Maka Ska. There's a particular group of maple trees on the east side that gets this incredible deep orange hue. I want to try to capture the reflection on the water if the wind stays calm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. I hope the weather cooperates for you! Since it's Friday night, do you and Leah have any fun dinner plans, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are definitely keeping it low-key tonight. Neither of us feels like cooking, so we're planning to order some grilled beef patties on toasted buns with all the fixings and some fries from the diner down the block. Having it delivered is the ultimate Friday luxury."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There is honestly nothing better than having some classic diner food delivered right to your door on a Friday evening. It sounds like a well-deserved treat after a long week at the design firm."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. We've been pushing hard on a new commercial layout design, so my brain is pretty fried. Just looking forward to relaxing on the couch with Leah and not thinking about floor plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! You've definitely earned a relaxing evening. Have you caught up with Kwame recently? How is he settling into Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, we talked yesterday! He's really enjoying the warmer weather down south, though he says he misses the Midwestern vibe. He's slowly finding his favorite local spots."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear! It takes some time to find your footing in a new city. Well, I hope you have a wonderful Friday evening and get some amazing shots tomorrow. Enjoy that delicious meal tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I definitely will. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "granola",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "takeout burgers"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

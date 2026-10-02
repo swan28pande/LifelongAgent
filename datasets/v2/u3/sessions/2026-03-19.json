@@ -1,0 +1,79 @@
+{
+  "user_id": "u3",
+  "day": 19,
+  "date": "2026-03-19",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going so far? Waking up for another night shift soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I just woke up a little while ago. I'm currently sipping on some of that slow-steeped iced coffee I keep in the fridge to help me wake up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to start your day, even if your 'morning' is in the afternoon! How are you feeling about heading into the ER tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm feeling okay. It's been a busy couple of shifts lately at the hospital, and the Phoenix heat is already starting to pick up, so we've been seeing a lot of dehydration cases."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, absolutely, that desert heat doesn't play around. I hope tonight is a bit more manageable for you. Did you have time to figure out what you're doing for dinner during your shift?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I actually planned ahead today. I packed up the extra portions from last night's dinner into a container, so I'll just be reheating those in the breakroom later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a lifesaver on a long night shift. It's much better than relying on vending machines or cafeteria food! Have you had any downtime to do some salsa dancing recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually went to a social dance earlier this week! It was so much fun. Tom came along to watch and hang out, which was really nice since he enjoys the music."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely! It's great that Tom can tag along and enjoy the atmosphere with you. Is the dancing community pretty active in your area?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, the Phoenix salsa scene is always hosting events, so there's usually somewhere to go if I have a night off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It sounds like a great way to stay active and destress from the hospital."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. Well, I should probably finish getting ready and drink the rest of my coffee before I head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Of course! I hope you have a smooth and safe shift tonight. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "packed leftovers",
+      "commute": "not mentioned",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Tom is learning salsa dancing"
+  ]
+}

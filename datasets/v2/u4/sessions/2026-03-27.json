@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 27,
+  "date": "2026-03-27",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Friday. How is your morning going in Minneapolis so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's going pretty well. I'm just sitting here eating a warm bowl of rolled oats with some sliced bananas and cinnamon, trying to wake up before diving into work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy and comforting start to a chilly Minneapolis morning. Are you planning on getting out for a bike ride later, or maybe doing some photography this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I'm taking a complete break from my physical training today. My legs need a chance to recover, so no cycling or workouts of any kind today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. Rest days are just as important as the training itself. How are things looking at the design firm today? Got any big architectural projects you're wrapping up before the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're putting the finishing touches on a commercial building design. I've got my headphones on, listening to those chill, low-tempo instrumental tracks with the vinyl crackle to help me focus while I work on these blueprints."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those relaxed background loops are perfect for keeping the focus high without being distracting. Hopefully, they help the day fly by. Do you and Leah have any fun plans for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do! Leah is coming over later. Since we both had a busy week, we decided we aren't going to cook anything. Instead, we're going to order some grilled beef patties on buns from that spot down the street and have them delivered."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect low-effort Friday night. Nothing beats a good, juicy grilled patty after a long week. Do you think you'll get some outdoor time this weekend, maybe taking your camera out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm hoping to! If the weather cooperates, I'd love to wander around the stone arch bridge area and see if I can get some interesting shots of the city skyline. I haven't used my camera in a couple of weeks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The Stone Arch Bridge is such a classic spot, especially with the Minneapolis skyline in the background. I hope you get some great light for it. How is Leah doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great, thanks for asking! She's been super busy with her own work, so we're both really looking forward to just relaxing tonight with our food and a movie."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "rest day",
+      "outfit": "not mentioned",
+      "music": "lo-fi beats",
+      "dinner": "takeout burgers"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'lo-fi beats', conversation gives 'ambient electronic'"
+  ]
+}

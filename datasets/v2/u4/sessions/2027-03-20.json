@@ -1,0 +1,78 @@
+{
+  "user_id": "u4",
+  "day": 385,
+  "date": "2027-03-20",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Saturday. How is your weekend in Minneapolis starting off? Have you and Leah had a chance to relax at all?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I actually just got back from a massive outdoor session. I spent about two hours pacing myself over a solid twelve-mile route around the chain of lakes, just pushing my endurance."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, a twelve-mile route! That is some serious distance. It sounds like you're keeping up your stamina after that spring 10K. How did your wrist hold up during such a high-mileage stretch?"
+    },
+    {
+      "speaker": "user",
+      "text": "The wrist felt absolutely perfect, thanks for asking. No lingering stiffness at all, even with all that repetitive movement. I'm really glad it's fully healed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news. It must be a relief to have it completely behind you. Is Leah joining you for any weekend activities, or is she busy with her pottery class today?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually at her pottery class right now. It gives me some quiet time at home, which is nice because we've had a lot of big things to talk about lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I imagine so, especially with that Chicago job offer she received. Have the two of you had any more thoughts on what that might mean for staying here in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're still weighing everything. It's a huge opportunity for her, but we both really love our life here, and my role as project lead at the design firm is keeping me pretty anchored right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It is definitely a lot to balance. Your position at the design firm is such a significant part of your career, and Minneapolis is a great city. Have you been able to take any breaks from work stress with your photography lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, yeah. I actually brought my compact camera along on my high-mileage jog today and snapped a few shots of the morning mist rising off the lake water."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Combining your endurance training with your photography seems like a perfect way to clear your head."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. I'm just going to take it easy for the rest of the afternoon now and rest up."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "long run",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'long run', conversation gives 'other'",
+    "invention: Daniel plans to visit the new climbing gym tomorrow.",
+    "invention: Daniel and Leah own and use a couple of lopsided bowls that Leah made in her pottery class."
+  ]
+}

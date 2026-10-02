@@ -1,0 +1,84 @@
+{
+  "user_id": "u2",
+  "day": 82,
+  "date": "2026-05-21",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Thursday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I started the day off right with a warm bowl of oatmeal for breakfast before heading out to work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a great way to fuel up, especially for a busy school day. How are things going at the high school? Are your chemistry students keeping you on your toes lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "They definitely are. We are wrapping up some stoichiometry lab work, so grading and prepping has been keeping me busy, but it's rewarding."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Stoichiometry labs sound like a lot of work to manage! I hope you've had a chance to unwind a bit after school. Did you manage to fit in a workout today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually. I went and did some gym weights right after my last class. It's always a great way to clear my head after a long day of teaching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect transition from work mode. Lifting weights is excellent for burning off that grading stress. How is everything else in Portland? Is the weather holding up for you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been typical Portland spring weather today—a bit overcast and damp, but not too cold. It actually makes me want to spend a quiet evening indoors."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That damp Pacific Northwest weather definitely makes a cozy evening sound very appealing. Do you have any plans to relax tonight, maybe watch a favorite show?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, Grace and I are planning to watch a nature documentary tonight. We both enjoy those, and it's nice and relaxing to just sit back and watch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds wonderful and peaceful. It's the perfect backdrop for a quiet evening at home. Have you had any time for your woodworking lately, or has teaching taken up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't had as much time as I'd like lately, but I'm hoping to get some hours in this weekend. Woodworking is always a nice escape when I can manage it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, having a hands-on hobby like that is such a great creative outlet. I hope you get plenty of time for it this weekend! Enjoy your nature documentary with Grace tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a garage",
+    "invention: is building a cedar side table for the living room",
+    "invention: has an armchair in the living room"
+  ]
+}

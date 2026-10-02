@@ -1,0 +1,85 @@
+{
+  "user_id": "u4",
+  "day": 268,
+  "date": "2026-11-23",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Monday. How is your day starting out in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's off to a good start. I actually bundled up against the morning chill today and did a solid fifteen-mile ride on my road bike around the chain of lakes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, riding outside in late November? You are much braver than I am! Minneapolis must be freezing right now. Did that help wake you up?"
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely did. When I got back, I wanted something refreshing, so I blended up some frozen berries and bananas into a thick mix, poured it into a dish, and ate it with a spoon topped with some granola."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a thick spoonable fruit bowl sounds like a perfect post-ride reward. How is the rest of your morning going at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty busy. I've got a lot of layouts to review, so I've been wearing my headphones and listening to some independent alternative guitar bands to keep me focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice, some independent alternative rock is perfect for getting into the zone. Are you working on the final stages of a project?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we are trying to wrap up a big phase. I took a quick break to chat with Leah earlier, which helped clear my head."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always nice. How is Leah doing? Is she still busy with her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is, she absolutely loves it. She actually showed me a new piece she finished recently."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! And how is your wrist feeling these days? Completely back to normal after that fracture?"
+    },
+    {
+      "speaker": "user",
+      "text": "Completely. No pain at all on the bike ride today, which is a huge relief."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that. Sounds like you've got a great handle on a busy Monday. Let me know if you need anything else today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, will do. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "cycling",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'stationary bike'",
+    "invention: Leah's pottery class is on Tuesdays"
+  ]
+}

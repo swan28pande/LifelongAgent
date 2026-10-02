@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 45,
+  "date": "2026-04-14",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday starting out in Phoenix? Are you gearing up for another night shift at the ER?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, the Phoenix heat is already picking up today. I just woke up a little while ago and poured myself a big glass of chilled, slowly steeped coffee over ice to help me open my eyes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That cold brew sounds like the perfect way to beat the Arizona heat and wake up for the night ahead. Are you working tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I am. While I was sitting on the couch drinking my coffee, I listened to a podcast episode that covers the latest updates and current affairs in medicine and the healthcare sector."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a health news podcast! Does keeping up with those current medical updates help you feel more prepared when you head into the emergency room?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's really useful for staying informed on clinical trends, even if some of the policy stuff can get a bit dry. It keeps my mind active before I head in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. It's good to have that mental transition. Have you had any time for salsa dancing lately, or has work been too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to go salsa dancing recently! It's always such a wonderful release and completely different from the high-stress environment of the ER."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fantastic outlet. It's so important to have something completely separate from work to enjoy. How is Tom doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing really well, thank you! We've both just been busy with our usual routines."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear that! Well, I hope your night shift goes smoothly tonight and the ER isn't too chaotic."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm going to finish getting ready now. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to go salsa dancing with Tom on Thursday night"
+  ]
+}

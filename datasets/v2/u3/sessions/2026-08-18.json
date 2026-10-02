@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 171,
+  "date": "2026-08-18",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Sofia! How is your Tuesday going? Are you staying cool in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, trying my best. Phoenix is like an oven right now, so I'm mostly staying indoors. How are things with you?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm doing well, thank you! Since you're staying inside to beat the heat, did you get a chance to work on your sourdough starter, or maybe practice some salsa steps?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did feed my sourdough starter earlier, but mostly I've just been relaxing and trying to keep cool before my shift. I actually started my morning with some of that cold-steeped iced coffee I prepped, which was incredibly refreshing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! There's nothing like a good glass of cold-steeped coffee to wake you up. Are you fully recovered from that flu now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I'm feeling 100% back to normal. My energy is completely back, which is great because the ER has been so busy lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear you're feeling better! It's good to have your energy back before heading into a busy shift. How is Tom doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! He actually offered to drive me to work tonight, but I told him to stay home and relax. I'm just going to take the late-night public bus to get to the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's nice of him, but taking the late-night bus sounds like a peaceful alternative. Is it usually pretty quiet at that hour?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it's typically pretty empty at that hour, which makes for a nice, quiet ride where I can just zone out before the chaos of the ER begins."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A little quiet time before a busy shift is always a plus. Have you and Tom been able to go salsa dancing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not this past weekend because of our schedules, but we're hoping to go sometime next week if we both get an evening off. For now, it's just work and staying cool!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get that evening off soon! Have a safe trip on the bus tonight, and I hope your shift goes smoothly."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "not mentioned",
+      "commute": "night bus",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: commute should be 'night bus', conversation gives 'other'"
+  ]
+}

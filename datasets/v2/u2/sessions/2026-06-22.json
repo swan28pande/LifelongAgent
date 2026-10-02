@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 114,
+  "date": "2026-06-22",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Monday starting off? Did you get any time to work on your woodworking projects over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yeah, I actually made some decent progress on a small table I've been building. Today has been a bit of a whirlwind, though. I had to kick off the morning with a quick bowl of oatmeal to make sure I had enough energy for the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is always a reliable way to power through a busy Monday. How is Grace doing? Did she have a good weekend too?"
+    },
+    {
+      "speaker": "user",
+      "text": "She did, thanks for asking! She's doing great. I actually just got home a little while ago and managed to squeeze in a run to clear my head after school."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A run is a perfect transition from the workday. Did you head out to one of the parks around Portland, or just stick close to home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a quick loop around our neighborhood here in Portland. The weather was actually perfect for it today, not too hot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to wind down. What do you and Grace have planned for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it pretty low-key. We're going to make some dinner and then watch a cooking competition show on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I love those! Is it one of the classic ones, or something new?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's one of the newer ones where they have to use bizarre secret ingredients. It's pretty fun to watch them scramble."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those pressure-cooker situations are so intense! It almost sounds like a high-stakes chemistry lab, just with edible results."
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, definitely! There are definitely some chemical reactions going on in those kitchens. Anyway, I'm looking forward to just sitting on the couch and zoning out for a bit."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "run",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'cooking competition show', conversation gives 'other'"
+  ]
+}

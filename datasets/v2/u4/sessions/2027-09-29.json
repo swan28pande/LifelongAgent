@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 578,
+  "date": "2027-09-29",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! I hope your Wednesday is going well. How are things shaping up at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are pretty busy but going well. I actually started my morning on a high note because I got outside and pounded the pavement on foot for a solid forty-five minutes before starting work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Getting those miles in early on foot is such a great way to clear your head. Did you manage to get a good breakfast in afterward?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. I blended up some frozen mango, spinach, and coconut water, poured it into a dish, and topped it with chia seeds and granola. It was really nice to eat something so cold and refreshing with a spoon after working up a sweat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing! Did you have to rush out the door to the office right after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit, and I had to dress for the elements today. Normally, I'd just throw on my usual plaid button-down and some denim pants, but the sky was pitch black and looked like a massive storm was about to hit. So I kept the denim but swapped out my flannel for a waterproof hooded shell to make sure I stayed dry."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Very sensible—Chicago downpours are no joke! Did the storm make for a quiet day at your desk?"
+    },
+    {
+      "speaker": "user",
+      "text": "It did, which was actually perfect because I had a lot of design concepts to review. To help me focus, I set up a great vibe in my workspace and put on some old Miles Davis and Duke Ellington vinyls on the turntable while I sketched."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic vinyl is such a perfect backdrop for creative work. It sounds like you had a very productive, atmospheric afternoon. Are you and Leah planning a quiet evening at home to avoid the rain?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, exactly. She has had some really long shifts at the hospital lately, so we're looking forward to just winding down together. We're actually going to cook dinner together tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to relax. What's on the menu for tonight's culinary collaboration?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are making a Thai dish with a spicy green chili and coconut milk sauce, loaded with cubes of bean curd and fresh bamboo shoots. It's the perfect warm meal for a stormy night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That green curry sounds absolutely delicious, especially with the tofu. I hope you and Leah have a cozy and relaxing evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be great. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "running",
+      "outfit": "rain jacket and jeans",
+      "music": "jazz records",
+      "dinner": "tofu green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 224,
+  "date": "2026-10-10",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! I hope your weekend is off to a great start. How is everything going in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Saturday is going really well so far. Leah and I slept in a bit, and then we went out to our favorite spot nearby for that late-morning hybrid breakfast-and-lunch meal. It was nice to just sit and chat without rushing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful, relaxing start to the day. How is Leah doing with her pottery class? Has she brought home any finished pieces lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually just brought home a small, slightly lumpy bowl this week! She's really enjoying the whole process. I'm actually about to get moving myself—I want to head over to the fitness center and spend some time on one of those stationary exercise bicycles to get some cardio in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to stay active! Speaking of which, how is your wrist feeling? Is it recovered enough that you might get back to rock climbing or outdoor cycling soon?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's definitely improving, but it's not quite ready for the strain of climbing holds or the bumps of the outdoor roads yet. That's why the indoor pedaling machine is perfect for now—no risk of a sudden fall or jarring my wrist."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is very sensible. Better to let it heal completely so you don't face any setbacks. Do you have any plans to take your camera out this weekend, or are you keeping things low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might take some photos tomorrow if the lighting is good, but tonight we are definitely keeping it low-key. I actually picked up a beautiful, thick cut of beef ribeye from the butcher yesterday, so I'll be searing that up for our meal tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a nice seared ribeye sounds incredible! Do you have a favorite way of preparing it, or are you trying something new?"
+    },
+    {
+      "speaker": "user",
+      "text": "I like to keep it simple—just coarse salt, cracked pepper, and a quick baste with some butter and fresh rosemary in a hot pan. You don't need to overcomplicate a good cut of meat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, simple is often best with a high-quality cut. By the way, have you heard from your brother Kwame lately? How is he liking Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually talked to him yesterday! He's settling in really well and sent me some great photos of his new neighborhood. It makes me want to plan a trip down there soon. Anyway, I should probably get going before the fitness center gets too packed for the afternoon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "stationary bike",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "steak"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: owns an indoor stationary bike",
+    "invention: owns a cast-iron skillet"
+  ]
+}

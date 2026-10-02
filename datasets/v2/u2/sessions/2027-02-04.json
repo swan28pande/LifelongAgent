@@ -1,0 +1,83 @@
+{
+  "user_id": "u2",
+  "day": 341,
+  "date": "2027-02-04",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Marcus! How's your Thursday going over in Portland? Hope you and Grace are having a good week."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Started the day off right with some oatmeal for breakfast, which was nice and warming since it's a bit chilly today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is perfect for a chilly morning. Did you have a busy day heading the science department today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was busy, yes. Lots of prep for upcoming labs. But I managed to squeeze in a workout. I played some tennis after my afternoon classes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! It's always great when you can get on the court and get some exercise in during the week. How did you play?"
+    },
+    {
+      "speaker": "user",
+      "text": "I played pretty well! It was a fast-paced game and exactly what I needed to clear my head after a long day of meetings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the best feeling. Do you and Grace have any relaxing plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're keeping it pretty low-key tonight. We're planning to watch a nature documentary after dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to wind down. Is it one of those deep-sea ones or something else?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's about rainforests, actually. Olive is already curled up on the rug waiting for us to turn the TV on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, Olive knows when it's relaxation time. How is your neighbor's vegetable garden doing, by the way? Have they been working on it lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "They have! They've been out there prepping the soil. It's making me want to spend some time outside too."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Speaking of hands-on projects, have you had any time to get into your woodworking lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not this week, unfortunately. School has been keeping me too busy, but I'm hoping to get back to the workshop sometime soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "tennis",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Has a usual tennis partner who is a colleague from the history department.",
+    "invention: Plans to build cold frames for a garden this weekend."
+  ]
+}

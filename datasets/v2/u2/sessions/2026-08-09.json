@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 162,
+  "date": "2026-08-09",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How's everything going over in Portland today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good here. It's a beautiful, sunny Sunday. We started the morning off slow; Grace and I made some pancakes for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Sunday morning. There's nothing quite like a fresh stack of pancakes on the weekend. Have you been able to get outside or work on any of your projects today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I actually spent a couple of hours out in the garage doing some woodworking. I'm putting the finishing touches on a small wooden shelf I've been building."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Is the shelf for your home, or is it a gift?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's just a simple piece for our living room to hold some books. It's nice to just focus on hands-on sanding and assembly on a weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, woodworking seems like a great way to unwind and unplug. Do you and Grace have any plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're keeping it pretty low-key. We're actually going to watch a nature documentary tonight after dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I love those! Is there a specific one you've been wanting to see, or are you just going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We found one about deep-sea marine life that looked really interesting, so we're going to check that one out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds fascinating. The deep ocean always has the most bizarre and amazing creatures. By the way, with August moving along, have you started thinking about prep work for your high school chemistry classes yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have, unfortunately! I've been looking over my lesson plans and syllabus for the upcoming school year, but I'm trying not to let it take over my weekend. I'm definitely prioritizing relaxing tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'rest day'"
+  ]
+}

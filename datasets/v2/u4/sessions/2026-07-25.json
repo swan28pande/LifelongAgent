@@ -1,0 +1,85 @@
+{
+  "user_id": "u4",
+  "day": 147,
+  "date": "2026-07-25",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Saturday. How is your weekend starting off in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I'm actually doing a bit of drafting at my desk today, just putting some finishing touches on a residential layout. To keep me focused, I've got a playlist of underground, non-mainstream alternative guitar bands going. That lo-fi, independent label sound always helps my design flow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great atmosphere for designing. Are you working on a project for the architecture firm, or is this a personal design?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's for the firm. As a junior architect, I'm mostly handling the CAD updates for a home renovation project we have going in the Kenwood neighborhood. It's nice to work at my own pace today, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Kenwood is a lovely area, that project must be fun to detail. How is Leah doing? Has she made anything new in her pottery class lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great! She actually brought home a hand-thrown ceramic mug a few days ago. It's a bit lopsided, but it has a lot of character and she's really proud of it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, those handmade pieces are the best. Have you heard from your brother Kwame recently? How is Atlanta treating him?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we talked on Thursday. He's really loving the city, though he says the Georgia humidity is no joke compared to what we're used to up here."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! It's a big climate shift. Are you and Leah doing anything special for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Leah's actually out with some friends tonight, so I'm cooking for one. I decided to treat myself and picked up a beautiful, thick-cut slab of beef ribeye. I'm planning to sear it up medium-rare with some butter and rosemary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an amazing treat. Are you pairing it with anything else?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just keeping it classic with some roasted fingerling potatoes and a little green salad. It's the perfect solo meal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely. I hope it turns out perfectly. Do you have any plans for tomorrow, or is it a completely relaxed Sunday?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm going to grab my camera and head down to the riverfront tomorrow. The morning light over the water is usually great for some landscape photography."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "steak"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'",
+    "invention: owns a cast-iron skillet"
+  ]
+}

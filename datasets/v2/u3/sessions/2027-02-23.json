@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 360,
+  "date": "2027-02-23",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you're having a good Tuesday. How was your shift at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was pretty busy, but not too bad. I actually had a really nice commute today. I decided to take the light rail into work, which gave me some time to listen to an Italian learning podcast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to use your commute! How are you finding the Italian lessons so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's challenging but really fun. It definitely woke my brain up, which I needed because my morning routine was totally thrown off. I had to drink a mug of simple green tea today instead of my standard matcha latte because our espresso machine at home completely stopped working this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no! A broken espresso machine is a true morning tragedy. I hope the green tea at least gave you a little bit of a caffeine boost to get through your shift. Did you manage to pack a good lunch to make up for it?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I brought a sandwich made with a couple of slices of my latest sourdough loaf. It turned out really well, so that definitely cheered me up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's nothing quite like a homemade sourdough sandwich to save the day. Speaking of good news, how are things going with you and Tom? Any updates on the wedding front?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! We have huge news today. We finally sat down and locked in a wedding date for the summer of 2028!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh my goodness, congratulations! That is absolutely massive news! How does it feel to have an official date on the calendar?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels so exciting and honestly a bit of a relief. We wanted to give ourselves plenty of time to plan everything without feeling rushed, which is why we aimed for a few years out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense. Planning a wedding is a lot of work, so giving yourselves until summer 2028 is a very smart move. Are you thinking of hosting it here in Phoenix, or are you looking to escape the summer heat for the big day?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're still debating that. Phoenix in the summer is intense, so we might look for a cooler destination, or just find a really nice indoor venue here with great air conditioning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Indoor AC is definitely a must if you stay local! Well, I am so incredibly happy for you and Tom. What a wonderful milestone to celebrate today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you so much! It really made my day. Now I just need to figure out how to get that espresso machine fixed so I can celebrate with a proper latte tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "green tea",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {
+      "wedding.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

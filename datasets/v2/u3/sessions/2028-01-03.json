@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 674,
+  "date": "2028-01-03",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you had a great weekend. How is your Monday starting off?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's going well. I started the morning pretty simply—just brewed a quick pot of standard drip coffee at home instead of messing with my roommate's complicated espresso setup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a classic, no-fuss brew is exactly what you need to kickstart the week. How was the trip to the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not bad at all. I drove my hybrid in today, and traffic wasn't too heavy, so I made good time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a relief on a Monday morning. Have you had a chance to take a lunch break yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually just finished. I brought a homemade sandwich that I put together using a couple of slices of my latest sourdough loaf."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! Your sourdough baking always turns out so well. Did you get much time to practice your Italian over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I spent about twenty minutes yesterday on the online Italian course. It's challenging but really fun to learn the vocabulary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Che bello! You're making great progress. How are things going with the preparations for your summer 2028 wedding with Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are keeping things pretty low-key right now since the wedding is still a ways off, but it's nice to think about. Mostly we've just been relaxing with Dash."
+    },
+    {
+      "speaker": "assistant",
+      "text": "How is Dash doing? Is he enjoying the cooler January weather in Tucson?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, he absolutely loves it. The winter temperatures here are perfect for a greyhound—he gets so much more playful on his walks when it's not hot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It must be wonderful to see him so active! I hope the rest of your shift at the clinic goes smoothly today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I appreciate it. I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She and Tom are planning to tour a garden wedding venue soon."
+  ]
+}

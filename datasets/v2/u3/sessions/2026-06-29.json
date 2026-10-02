@@ -1,0 +1,77 @@
+{
+  "user_id": "u3",
+  "day": 121,
+  "date": "2026-06-29",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope your Monday is going well. How is the Phoenix summer heat treating you today before your ER shift tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Oh, it's absolutely scorching today, so I've just been staying indoors. To wake myself up earlier, I poured a big glass of that slow-steeped, chilled coffee over ice that I keep in the fridge. It's the only way to beat the heat first thing in the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing. There is nothing like a good cold coffee to start a hot day. Did you manage to get some baking in recently, or have you just been relaxing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did! For lunch today, I put together a turkey and avocado sandwich using a couple of slices of my fresh, naturally leavened wild yeast bread. It turned out so good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, homemade wild yeast bread makes the absolute best sandwiches! It sounds like you've had a very cozy and delicious afternoon. Are you feeling ready for the busy night shift at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, as ready as I can be. The ER is always unpredictable on Monday nights, but my energy is up and I'm about to gather my things to head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope it's a manageable night for you and the team. How are you planning on getting over to the hospital this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to catch the late-evening municipal bus. It stops right near the hospital, so it's pretty convenient for my schedule."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is convenient! Do you find the late-evening transit ride to be a good transition time before the chaos of the emergency room?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's usually pretty quiet at that hour, so I can just sit back, look out the window, and mentally prepare myself for whatever patients come in tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to find a moment of peace before a demanding shift. I hope your ride is smooth and that the ER isn't too chaotic tonight. Take care!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. I'll check in with you tomorrow after I get some sleep."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "sourdough sandwich",
+      "commute": "night bus",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'music instead'",
+    "invention: The user lives in an apartment.",
+    "invention: The user and Tom are hoping to go salsa dancing this Friday."
+  ]
+}

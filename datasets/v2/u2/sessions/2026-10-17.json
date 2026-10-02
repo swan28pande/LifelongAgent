@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 231,
+  "date": "2026-10-17",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Saturday. How's everything going over in Portland today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. It's a bit of a chilly fall morning, so I started the day with a warm bowl of oatmeal to heat up. It was exactly what I needed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, cozy start. Oatmeal is great for this time of year. Do you have any plans for the weekend, or are you taking it easy after a busy week at the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both. I have some lab reports to grade for my chemistry classes, but I'm trying to pace myself. The new school year has been pretty hectic, so I don't want to spend my entire Saturday working."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. It's definitely important to find that balance. How are your students doing with the chemistry curriculum so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "They're doing great, actually. We just started doing some actual hands-on experiments, which they always love. When I'm not grading, Grace and I have been doing some research on our upcoming vacation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, is that the family trip to Japan you're planning for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, that's the one! We've been looking at flight options and trying to map out a rough itinerary. We really want to make sure we don't miss the cherry blossoms."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is going to be an unforgettable trip. Have you decided on which cities you want to visit yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're definitely planning on Tokyo and Kyoto. I'm really excited about trying all the different regional foods, and Grace has a whole list of temples she wants to see."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those are classic choices for a reason! It sounds like it's going to be an amazing experience. It's smart to plan ahead, especially for cherry blossom season."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, it gives us something fun to look forward to during the upcoming rainy season here. Anyway, I should probably get back to those lab reports before the day gets away from me!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

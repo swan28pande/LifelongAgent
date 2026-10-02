@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 200,
+  "date": "2026-09-16",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going over in Portland? How are your chemistry classes going now that the new school year is fully underway?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. Portland is actually quite pleasant today. The high school is busy as always, but I started the day on a good note with a bowl of oatmeal for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a classic, healthy start! Did you manage to get a workout in today, or is that on hold for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I squeezed in a run this morning before school. It felt great to get moving early."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job getting that run in early! It really sets a great tone for the day. Do you and Grace have any fun plans or news to share?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! We made a big decision today and started planning a family trip to Japan next spring."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, that is incredibly exciting! Japan in the spring is absolutely gorgeous. Have you two started looking at specific cities or sights yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're just in the very early stages today, but we are definitely thinking about Tokyo and Kyoto. It's been on our bucket list for a long time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those are fantastic choices. I'd be happy to help you look up travel tips or itineraries whenever you're ready. What are you up to for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, I'll definitely take you up on that. Tonight is all about relaxing, though. Grace and I are going to watch a cooking competition show on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect way to unwind after a busy day. Enjoy the show, Marcus! Let me know if you need anything else."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "run",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {
+      "japan_trip.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

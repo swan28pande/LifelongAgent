@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 519,
+  "date": "2027-08-01",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Sunday. How is your weekend going so far? Did you and Leah get up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty relaxing Sunday. Leah and I actually decided to sleep in and then went out for a nice, long mid-morning meal together at a spot down the street. It was great to just sit, drink coffee, and catch up without rushing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Sunday morning. Did you try a new spot in Chicago, or go to one of your usual favorites?"
+    },
+    {
+      "speaker": "user",
+      "text": "We went to our usual spot. Since I'm pescatarian, I got a really good smoked salmon benedict, and Leah had some amazing french toast. It's nice to just slow down on the weekend, especially with how busy her schedule at the hospital has been lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, absolutely. Pediatrician schedules can be so demanding, so I'm glad you two got that quality time. How is she enjoying her pottery class lately, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's still really loving it! She brought home a lopsided mug last week that we've been using. It has character. I actually had to do a bit of catch-up work for the design firm after we got back today, just to prepare for a big meeting tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A lopsided mug sounds charming! And sorry to hear you had to log some Sunday hours. Hopefully, it didn't take up too much of your afternoon. What do you usually listen to when you need to focus on work prep?"
+    },
+    {
+      "speaker": "user",
+      "text": "It wasn't too bad, only a couple of hours. To keep me focused, I put on some of those underground, guitar-heavy bands from independent labels. That kind of non-mainstream alternative rock always helps me zone in and get things done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, that's a great choice for getting into a flow state. Do you have a specific playlist of those independent bands, or do you just let an algorithm guide you?"
+    },
+    {
+      "speaker": "user",
+      "text": "I have a custom playlist I've been building for a while, full of lesser-known acts. It works wonders. Speaking of music, I actually put on a couple of my grandfather's old records yesterday evening while reading."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's wonderful! Spinning those vinyl records must feel really special. Have you found any hidden gems in his collection that you hadn't heard before?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. There are some old jazz pressings in there that are absolutely phenomenal. It's like a history lesson every time I dig through the crates."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like an incredible collection to explore. It's such a great way to keep his memory alive, too. I hope the prep work pays off for your big meeting tomorrow!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I feel pretty ready for it. Just going to relax for the rest of the evening now. Have a good night!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

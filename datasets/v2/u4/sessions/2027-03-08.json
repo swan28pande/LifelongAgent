@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 373,
+  "date": "2027-03-08",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Monday is off to a great start. How is everything going in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Minneapolis is pretty chilly today, but I'm doing well. I actually kicked off the morning on a bright note by making a thick, blended puree of frozen berries, mango, and yogurt, which I ate from a dish with some granola and sliced bananas on top. It felt like a little taste of summer."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing, especially for a cold Minnesota morning! Did Leah join you for breakfast, or is she busy prepping for potentially moving? Any updates on that Chicago job offer she received?"
+    },
+    {
+      "speaker": "user",
+      "text": "She had to head out early, but she did see the breakfast! No final decision on Chicago yet—it's a huge choice for both of us, so we're taking our time to weigh everything. But we are planning a nice evening together. We're actually cooking a special dinner tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a special dinner on a Monday? That sounds like a wonderful way to unwind. What are you two planning to make?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're going to recreate that classic stir-fried rice noodle dish with sprouts, scrambled egg, and crushed peanuts in a tangy tamarind sauce. We've been wanting to try making it again ever since we took that Thai cooking class together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! Recreating recipes from that class is such a fun way to keep those cooking skills sharp. Have you been busy with any of your other hobbies lately, like photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took my camera out to the stone arch bridge yesterday afternoon. The lighting was perfect, and I got some great shots of the river. It's nice to just wander and capture the city."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The Stone Arch Bridge is beautiful for photography, especially with the winter light. Did Leah accompany you, or was she working on her pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "She was actually at her pottery class! She brought home a few new glazed ceramic dishes yesterday. In fact, the thick blended fruit dish I made this morning was served in one of her brand-new handmade bowls."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is so special! There's nothing like eating out of something handmade by your partner. It sounds like she's really getting the hang of it."
+    },
+    {
+      "speaker": "user",
+      "text": "She really is, the bowl turned out beautiful. Anyway, I should get back to my project lead duties for the afternoon. I'll let you know how the noodles turn out tonight!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "pad thai"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: dinner should be 'pad thai', conversation gives 'other'"
+  ]
+}

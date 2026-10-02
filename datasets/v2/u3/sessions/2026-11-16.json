@@ -1,0 +1,89 @@
+{
+  "user_id": "u3",
+  "day": 261,
+  "date": "2026-11-16",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How is your shift going at the outpatient clinic in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty busy start to the week, but I'm managing. I actually had a nice, relaxing start to the morning because I decided to ride the city's light rail train to work today instead of driving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a peaceful way to start a busy Monday. Did you get to read or just listen to some music on the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually listened to a really gripping audio documentary series about an unsolved historical murder case. It kept me completely hooked the whole way."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a true-crime show! Those can definitely make a commute fly by. Did you have a chance to take a proper lunch break today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I packed a turkey and avocado sandwich made with some of the wild-yeast bread I baked over the weekend. There's nothing quite like fresh sourdough."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, that sounds absolutely delicious. Your sourdough baking skills are clearly paying off! How are you feeling energy-wise? Are you completely recovered from that bout with the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thank goodness! I'm completely back to my usual self and feeling 100%. My energy levels are fully restored, which is great because we've had a steady stream of patients today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It's so tough being sick when you have such an active job. Have you and Tom been up to anything fun lately, or are you both just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've been taking it a bit easy, but we're planning to go out for some casual salsa dancing later this week if our schedules align."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a blast! Salsa dancing is such a fun way to unwind. How is the weather treating you in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually gorgeous today! The autumn weather here is perfect right now, not too hot at all. It makes me want to spend as much time outside as possible after my shift ends."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all! I hope the rest of your shift goes smoothly and you get to enjoy some of that lovely evening weather."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I appreciate it. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a salsa instructor"
+  ]
+}

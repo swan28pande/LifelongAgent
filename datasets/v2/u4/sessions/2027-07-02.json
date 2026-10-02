@@ -1,0 +1,82 @@
+{
+  "user_id": "u4",
+  "day": 489,
+  "date": "2027-07-02",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Friday. I wanted to check in and see how you're doing. How are you feeling after dealing with that virus?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! I have some great news actually. As of this morning, I finally tested negative and all my symptoms have completely vanished, so I am officially back to one hundred percent and cleared of the illness."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic news! I'm so glad to hear you're fully back to health. Did you do anything special to celebrate being well again?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not a whole lot, honestly. I decided to give my body a complete reprieve from any physical training or exercise today just to be safe and ease back into things."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very smart approach. Easing back in is always wise. Are you back to handling your project lead responsibilities at the design firm, or are you taking it easy on the work front too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm definitely back to the design firm work, and it's been pretty busy trying to wrap up the week. I've had some independent, underground guitar-driven alternative bands playing in the background today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An excellent soundtrack for a productive Friday. How is Leah doing? Are you two planning anything fun to celebrate your clean bill of health tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great! We actually decided to treat ourselves tonight and order some battered, crispy whitefish alongside thick-cut hot potato wedges from our favorite local spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds absolutely delicious and a perfect way to kick off the weekend. Is Leah still enjoying her pottery class, by the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, she's absolutely loving it. She brought home a new bowl she made earlier this week, and we're actually going to use it for our dinner tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It must be so rewarding to use something she crafted herself. And how is her work at the hospital going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy as always, being a pediatrician keeps her on her feet, but she's really finding her groove there. I'm just glad we can both unwind tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "rest day",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "fish and chips"
+    },
+    "statements": {
+      "covid.1": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

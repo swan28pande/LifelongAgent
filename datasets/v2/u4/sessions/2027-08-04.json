@@ -1,0 +1,87 @@
+{
+  "user_id": "u4",
+  "day": 522,
+  "date": "2027-08-04",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Wednesday. How are things going at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, pretty productive so far. I'm keeping it comfortable at my desk today, wearing a cozy checkered button-down and some classic blue denim trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, comfortable outfit for mid-week. Are you listening to anything while you work on your design projects today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I've got the turntable going. I'm spinning some vintage bebop and brass LPs from my grandfather's collection while I work. It's the perfect background vibe."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Those old swing and brass vinyls are perfect for focusing. By the way, did you manage to get your usual run in today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, no. The athletic facility was locked up today for some unexpected maintenance, so I couldn't do my normal running routine. Instead, I ended up going for a lengthy, hour-long trek on foot around the neighborhood to get moving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a bummer about the gym being closed, but an extensive stroll is a great way to adapt and still get some fresh air. Speaking of staying active, how is your wrist feeling lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It feels completely back to normal, thanks for asking! Since I've had a bit of extra downtime, I actually started playing chess matches on the web a couple of days ago."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, online chess! That's a fantastic way to stretch your brain. What prompted you to start, and how have your initial games gone?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just wanted a new way to keep my mind sharp in the evenings. I logged on and played a few matches on Monday. I got absolutely crushed in the first two, but I actually managed to win the third one!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "A win on your first night is impressive! It's a tough game, but very rewarding once you start seeing the patterns. Do you think you'll stick with it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's really fun, and it's easy to just log on for a quick match. Anyway, I should probably get back to these design mockups before the afternoon slips away."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely. Have a great rest of your day, Daniel, and enjoy those records!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "long walk",
+      "outfit": "flannel and jeans",
+      "music": "jazz records",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "hobby.chess": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: hobby.chess (started playing chess online (this happened on 2027-08-02))",
+    "invention: Started playing chess online on Monday"
+  ]
+}

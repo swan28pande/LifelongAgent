@@ -1,0 +1,85 @@
+{
+  "user_id": "u4",
+  "day": 129,
+  "date": "2026-07-07",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Tuesday going at the design firm? I hope you're having a good week so far in Minneapolis."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy Tuesday, lots of drawing and drafting today. But it's going well. How are things with you?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Everything is running smoothly here! I was just wondering how Leah's pottery class has been going lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's really enjoying it. She actually brought home a slightly lopsided ceramic bowl the other day that we've been using. In fact, we're going to eat out of her handmade dishes tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! What are you planning to put in those handmade dishes for dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm preparing some seasoned ground beef to stuff into those folded, crispy corn shells, topped with a fresh tomato salsa and shredded cheese."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! Do you usually stick to beef and other meats, or do you experiment with vegetarian options too?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm pretty much a traditional omnivore, so I almost always include meat like beef, chicken, or pork in my meals. I just love the flavor and protein it adds."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, a classic approach! Have you had any time for your photography lately, or has work been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually brought my camera along yesterday evening and took a few shots of the city skyline. The lighting was perfect right before sunset."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful session. Have you heard from your brother Kwame recently? How is he liking Atlanta?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we talked on Sunday. He's really adjusting well to the southern heat and enjoys his new neighborhood."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear he's settling in nicely. Well, I'll let you get back to preparing those crispy beef shells for dinner!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm starving, so I'm going to start cooking now. Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "tacos"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'rest day'",
+    "invention: User has a ceramic bowl made by Leah that is used to hold keys by the front door."
+  ]
+}

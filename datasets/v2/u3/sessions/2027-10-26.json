@@ -1,0 +1,85 @@
+{
+  "user_id": "u3",
+  "day": 605,
+  "date": "2027-10-26",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope your Tuesday is off to a good start. How are things looking in Tucson today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going pretty well. I needed a bit of a jumpstart this morning, so I ended up making some espresso over ice with cold water to take with me. Then I hopped into my hybrid and headed to the clinic. Traffic wasn't too bad for a change."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a refreshing way to start the morning. Did you have any company on the drive, like a new playlist or a podcast?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! I finally started listening to that real-life mystery series my coworker recommended. It's all about an unsolved cold case, and I was so hooked on the details that the drive flew by."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those cold case investigations can be incredibly gripping! I'm glad it kept you entertained on the road. By the way, how are things going with planning the wedding? Have you and Tom had any new thoughts about your summer 2028 date?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're still aiming for that summer 2028 timeline, but we're taking it really slow. We've mostly just been talking about general ideas of what we want, rather than booking anything concrete yet. It's nice not to feel rushed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is definitely the best way to handle it. No need to stress when you have plenty of time. How is the Tucson weather treating you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually starting to cool down a bit, which is a huge relief. The autumn mornings here are finally feeling crisp instead of scorching hot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Crisp autumn mornings are the absolute best. I bet Dash is enjoying the slightly cooler weather too. Has he been active?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, he's still a total couch potato! He was completely content to just lounge on his bed while I got ready today, barely even lifted his head."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic greyhound behavior! They really are professional loungers. Are you still finding time for your Italian course in the evenings?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I'm trying to stick with it! I usually spend about fifteen minutes on the lessons after dinner just to keep the vocabulary fresh."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great strategy. Consistent daily practice really adds up over time. Well, I hope the rest of your shift at the clinic goes smoothly today!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. I'll catch up with you later tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user and Tom are visiting a potential wedding venue this weekend.",
+    "invention: The user wants an outdoor desert venue for her wedding.",
+    "invention: Dash is gentle but might get overwhelmed by a crowd."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 21,
+  "date": "2026-03-21",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Saturday, Marcus! How is your weekend starting out in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting out pretty well. The weather is a bit chilly, but I got a great start to the day. I actually made some pancakes for breakfast this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes sound like the perfect Saturday morning treat. Did Grace join you?"
+    },
+    {
+      "speaker": "user",
+      "text": "She did, yes. We sat down and had them together with some coffee. It was really nice to have a slow morning for once."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound lovely. Do you have any plans to head out to your workshop today? I know you always enjoy spending some of your free time on your woodworking."
+    },
+    {
+      "speaker": "user",
+      "text": "I might spend a little time out there later this afternoon. I've got a couple of things I want to work on, but I'm not in any rush today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice when you can just take your time with it. It's a great way to unwind after a busy week of teaching chemistry."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. Teaching high schoolers definitely takes a lot of energy, so having a quiet weekend is just what I need. Though I did get some exercise in already today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, did you? What kind of workout did you do?"
+    },
+    {
+      "speaker": "user",
+      "text": "I went for a run around the neighborhood. It was cold, but it felt good to get moving and get some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning run is a great way to clear your head. How are you feeling after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little tired, but in a good way! I think I'm just going to relax for the rest of the day and take it easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You've definitely earned a relaxing afternoon. Let me know if you need anything else today, Marcus!"
+    },
+    {
+      "speaker": "user",
+      "text": "Will do. Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "run",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: building a cherry wood side table"
+  ]
+}

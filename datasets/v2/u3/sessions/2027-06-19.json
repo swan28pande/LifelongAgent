@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 476,
+  "date": "2027-06-19",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Saturday. How is your weekend starting out in Phoenix? Are you getting some time to relax today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, it's really hot outside today, so I'm mostly staying indoors. I actually just finished eating a nice sandwich I put together with some of my homemade sourdough bread. It turned out really well!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! There is nothing quite like a homemade sourdough sandwich. How has your baking been going lately? Have you tried any new recipes?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well, I'm just sticking to my usual routine. While I was in the kitchen prepping everything earlier, I had on a podcast that teaches basic Italian words and phrases."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, an Italian learning podcast! That sounds like a wonderful way to build on the online Italian course you signed up for. How are you finding the podcast format compared to the structured course?"
+    },
+    {
+      "speaker": "user",
+      "text": "I really like it. The online course is great for reading and grammar, but the podcast is perfect for hearing the pronunciation while my hands are busy. It's a really helpful supplement."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart way to multitask and get some extra practice in. It sounds like you're making great progress! By the way, how are things going with the wedding planning for summer 2028? Have you and Tom looked at any venues yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've browsed a few places online, but we haven't made any final decisions. Since the wedding isn't until 2028, we're taking our time and not stressing about it too much yet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is a very healthy approach. Having that extra time must make the whole process a lot more enjoyable. How have things been at the outpatient clinic lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been pretty busy, but my shifts have been going smoothly. I'm just glad to have the weekend to completely unplug and recharge. I really needed a slow day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You definitely deserved a break. A quiet Saturday indoors with fresh bread, some Italian practice, and escaping the Phoenix heat sounds like the perfect setup."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. I think I'm going to do a little more listening and then just relax for the rest of the afternoon. Thanks for chatting!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: commute should be 'not mentioned', conversation gives 'no commute'",
+    "invention: planning a honeymoon in Italy"
+  ]
+}

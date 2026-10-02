@@ -1,0 +1,85 @@
+{
+  "user_id": "u4",
+  "day": 648,
+  "date": "2027-12-08",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday morning starting out in Chicago? Is it as chilly there today as they've been forecasting?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's definitely freezing out there today. I had to bundle up just to get breakfast. I ended up stopping by the bakery down the block and got a toasted, savory ring-shaped bread with some cream cheese and cold-cured, thinly sliced pink fish on top."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredibly comforting on a freezing morning. A perfect way to fuel up. Are you still having those early 7 a.m. client calls at the architecture studio?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we are. We actually had one this morning, but we've got a really solid routine down now, so it went pretty smoothly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. It must make the rest of the day feel a bit more manageable when you get those out of the way early. How is Leah adjusting to her new pediatrician role at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing really well! It's a demanding schedule, but she loves the team there. And she's still finding some time for her pottery class—she actually brought home a couple of rather lumpy clay mugs she made earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Haha, handmade mugs have the best character anyway! It's wonderful she has that creative outlet. Have you had any time for your photography lately, or has the studio been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took my camera out to the lakefront last weekend. The ice is starting to form along the edge, and the light was just right. I got some really nice landscape shots."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds gorgeous. There's something so peaceful about the lakefront in the winter. By the way, how is your wrist feeling lately? Is it completely back to normal after the fracture?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is, thank goodness. I have full mobility back and no pain at all, so I'm really glad to have that behind me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is wonderful news, what a relief. Have you had any time for a game of chess recently to unwind?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did play a couple of quick matches online last night. I didn't do great—lost both of them rather quickly—but it was still a nice way to clear my head after a long day of work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes just focusing on the board is a great mental reset, win or lose. I hope the rest of your Wednesday goes well!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I've got a design meeting starting up in a few minutes, so I'll talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoked salmon bagel",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: plans to visit the new climbing gym this weekend"
+  ]
+}

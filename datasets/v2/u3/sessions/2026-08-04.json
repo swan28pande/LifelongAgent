@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 157,
+  "date": "2026-08-04",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you're having a good Tuesday. How is everything going in Phoenix today? Are you recovering well from that bout of flu you had a while back?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, I'm completely back to normal after that flu, thanks for asking. Phoenix is absolutely scorching today, as usual for August. I just woke up not too long ago to get ready for my shift tonight, and I'm currently sipping on a big glass of some slow-steeped, chilled coffee I made in the fridge overnight. It's the only thing keeping me awake."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That slow-steeped iced coffee sounds incredibly refreshing, especially with the Phoenix heat! It's great to hear you're feeling 100% after the flu. How is Tom doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is doing really well, thanks! He's been busy but we've been catching up when we can. While I was drinking my coffee and waking up today, I actually put on a podcast episode that updates listeners on the latest developments in medical research and public wellness. It's nice to keep up with what's happening in the broader medical field."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds interesting! Did they cover anything in that medical and wellness update show that caught your eye, or was it mostly routine news?"
+    },
+    {
+      "speaker": "user",
+      "text": "They actually talked a lot about some new clinical trials for vaccine technology, which is always fascinating to hear about since I work in the ER. It's a nice way to ease my brain into work mode before my night shift starts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! It must be neat to hear the high-level research side of things when you see the day-to-day reality in the emergency room. Speaking of your off-hours, have you had any time for salsa dancing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't gone salsa dancing in a little bit because of my work schedule, but I'm definitely itching to get back out on the dance floor soon. It's such a great way to decompress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is a fantastic outlet. What about your sourdough baking? Have you fed your starter or baked anything fun recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually fed my starter yesterday! I didn't bake today, but I'm hoping to get a nice sourdough loaf going tomorrow morning when I get home from my shift. The kitchen gets so warm here in the summer that the dough rises incredibly fast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a nice perk of the Phoenix heat, even if the rest of it is tough to handle! I hope your shift tonight goes smoothly and isn't too chaotic."
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I appreciate it. I'm going to finish my iced coffee and do a bit of stretching before I head out. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "cold brew",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user and Tom are planning to go salsa dancing this Thursday night."
+  ]
+}

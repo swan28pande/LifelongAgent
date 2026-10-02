@@ -1,0 +1,81 @@
+{
+  "user_id": "u3",
+  "day": 668,
+  "date": "2027-12-28",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday going in Tucson? I hope things aren't too hectic at the outpatient clinic today. How has your sprained ankle been feeling?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, I have some really great news today—my ankle is completely healed! I woke up this morning and realized there's absolutely no pain or stiffness left at all. It feels so good to be back to normal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that is wonderful news! What a relief to finally have that fully behind you. Did you do anything to celebrate being back on two fully functioning feet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm still trying to ease back into things, but I did treat myself to a nice cold espresso over ice with water this morning to celebrate. It was the perfect little pick-me-up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An iced americano is always a great way to start the day! Did you try making that with your roommate's new espresso machine, or did you stop somewhere on your way to work?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually made it at home with my roommate's machine and put it in a travel mug. I drank it while driving to the clinic this morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very smooth morning commute. Did you have any good music or a podcast to keep you company on the drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I finally started that show about real-life unsolved mysteries that my coworker recommended a while back. It's so gripping! I was actually a little disappointed when I parked because I wanted to keep listening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, the true-crime podcast! It's always a sign of a great show when you just want to sit in your car to hear what happens next. Were you able to listen to any more of it later in the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did! I listened to a bit more of it during my lunch break while eating a burrito bowl I packed from home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect lunch break. A homemade burrito bowl and a suspenseful mystery make for an excellent midday escape."
+    },
+    {
+      "speaker": "user",
+      "text": "It definitely hit the spot. Now I'm just wrapping up my afternoon tasks at the clinic and getting ready to head out. It's been a really good day overall!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "homemade burrito bowl",
+      "commute": "driving",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {
+      "ankle.1": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

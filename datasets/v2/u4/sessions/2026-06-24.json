@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 116,
+  "date": "2026-06-24",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going over in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just at the office today. I actually decided to dress up slightly more than usual today—wearing a crisp collared button-up and some classic beige cotton trousers instead of my usual t-shirts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a sharp look! It's always nice to change things up a bit. How are things at the design firm? Are you working on any interesting architectural projects today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're drafting some concepts for a new community center. It's been keeping me busy. Leah's been busy too—she actually brought home her first finished piece from her pottery class yesterday. It's a slightly lopsided mug, but I love it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! There is something really charming about handcrafted pottery. Are you two using it already?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, yes, we had some tea in it last night. I actually took a couple of close-up photos of it this morning. The morning light coming through the kitchen window was hitting the glaze perfectly, so I had to grab my camera."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I bet those turned out beautifully with your eye for detail. Have you had much time for photography lately around the city, or has work been taking up most of your creative energy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly just quick shots here and there, but I'm hoping to do a proper walk around the lakes this weekend. For tonight, though, I'm keeping things simple. Once I get home, I'm planning to toss some sliced beef and a bunch of chopped vegetables into a super hot wok with some soy sauce and ginger."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect midweek meal—quick, healthy, and full of flavor. Do you and Leah usually cook those kinds of meals together?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do! She's actually going to help with the chopping tonight. I was just texting my brother Kwame about it too. He says he misses my cooking now that he's living all the way down in Atlanta."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure he does! How is Kwame adjusting to the move and the southern lifestyle?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's loving it, honestly. He says the food scene there is incredible, though he's still getting used to the humidity. Anyway, I should probably get back to these floor plans. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "stir-fry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'"
+  ]
+}

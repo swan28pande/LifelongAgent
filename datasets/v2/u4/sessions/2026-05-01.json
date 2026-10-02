@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 62,
+  "date": "2026-05-01",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Friday, Daniel! How is your day going in Minneapolis? Are you gearing up for a relaxing weekend, or do you have some training for that spring 10K on the agenda?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Friday is going pretty well. Actually, my plans for today took a bit of an unexpected turn. Normally, Friday is my designated day to just rest and recover without doing any physical activity at all. But some friends called me up because they needed an extra player for a casual game of hoops, so I decided to make an exception today and joined them on the court for some friendly, fast-paced matches."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! A casual game of hoops sounds like a blast, even if it crashed your scheduled rest day. How did you feel out there? Did the 10K training help with your court stamina?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, it felt great, but it's a completely different kind of running! All that sprinting and changing direction definitely used some different muscles than my usual jogging. I'm definitely going to feel it tomorrow, but it was totally worth it to hang out with the guys."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! That kind of interval training is no joke. I hope you've got a hearty meal lined up to refuel after all that running."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I didn't feel like cooking at all after that, so I ended up ordering some grilled beef patties on buns from a local diner down the street and bringing them back to my place to eat. It really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect post-game meal. Nothing beats some good grilled patties to recover. Is Leah joining you tonight, or are you just having a quiet evening to yourself?"
+    },
+    {
+      "speaker": "user",
+      "text": "She had some other commitments tonight, so it's just me. I'm actually looking forward to a quiet night. I might go through some of the photos I took earlier this week."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! Have you captured any interesting shots around the city recently? The spring weather must be giving you some great lighting to work with."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, the light has been incredible. I spent some time near the river earlier this week and got some really cool, moody shots of the architecture downtown just as the sun was setting. I'm excited to import them and see how they look on the computer."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Minneapolis has some amazing architecture, especially with that sunset glow. It sounds like a really relaxing way to spend your Friday evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm going to finish eating these patties, unpack my camera, and just take it easy. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "pickup basketball",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "takeout burgers"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Leah has a sister."
+  ]
+}

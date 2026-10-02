@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 310,
+  "date": "2027-01-04",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Monday. How is everything going over in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty cold here today, but I'm managing. I actually started the morning on a bright note. Instead of my usual hot oatmeal, I blended up some frozen berries and Greek yogurt, poured it into a deep dish, and covered it with a handful of granola and hemp seeds to eat with a spoon. It felt like a little taste of summer."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing, even if it is freezing outside! Are you heading into the design firm today, or do you have a lighter Monday?"
+    },
+    {
+      "speaker": "user",
+      "text": "I had to go in for some big stakeholder presentations. Since I'm leading the project, I wanted to look the part, so I dressed up a bit more than usual. I wore a structured, semi-formal jacket over a button-up, paired with some nice tailored trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A smart jacket and tailored trousers definitely command the room. I'm sure the presentations went wonderfully. Did you manage to get any fresh air or exercise after all those meetings?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I really needed to clear my head, so despite the temperature, I bundled up in my cold-weather gear and took my road bike out. I did a solid twelve miles, pedaling hard along the river trails. It was freezing, but getting out on two wheels always resets my brain."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, biking outdoors in a Minneapolis January is seriously impressive! You definitely earned a hearty dinner after that ride. What do you and Leah have planned for tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, we're putting our kitchen skills to use tonight. We are making that famous stir-fried rice noodle dish with peanuts, eggs, and a tangy tamarind sauce that we learned to make in our Thai culinary class."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, delicious! The homemade version of those stir-fried noodles is always so much better than takeout. Did Leah have a chance to help with the prep, or was she busy with her pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually helped chop the green onions and crush the peanuts before she headed off to work on her clay projects. It's a team effort in the kitchen tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I love that. It sounds like a perfect, cozy way to wrap up a busy Monday. I hope the noodles turn out amazing!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm starving, so I'm going to get cooking. Catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "cycling",
+      "outfit": "blazer and slacks",
+      "music": "not mentioned",
+      "dinner": "pad thai"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'stationary bike'"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "user_id": "u3",
+  "day": 599,
+  "date": "2027-10-20",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, just a bit busy at the clinic today. I started my morning pretty simply—just brewed a classic pot of standard filter coffee at home instead of using my roommate's fancy new espresso setup. It felt nice to just have a basic, no-fuss cup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a simple brewed cup is exactly what you need to kickstart the day. Did you listen to anything interesting while getting ready, or did you just enjoy the quiet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I used the time to listen to one of those audio language learning episodes on my phone. Since I signed up for that online Italian course, I figured putting on an Italian lesson podcast while getting ready would be a great way to practice the pronunciation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a smart way to multitask! How are you finding the language so far? Is it starting to click?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is! Some of the sentence structures are tricky, but hearing native speakers on the podcast really helps. I'm hoping to get conversational eventually."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic. Have you been trying out any of your new Italian vocabulary on Tom, or is he keeping out of it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, I've tried a few phrases on him! He just laughs, but he's super supportive. We've actually been talking a bit about the wedding planning too, since we set the date for summer 2028. It still feels far away, but it's nice to brainstorm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It’s great that you're getting a head start on it. Summer 2028 will be here before you know it! Have you guys looked at any venues yet, or are you just keeping it to general ideas for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just general ideas for now. We don't want to rush into booking anything too quickly, so we're just enjoying being engaged and taking our time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very stress-free way to handle it. Speaking of relaxing hobbies, have you done any sourdough baking lately? I remember you were really perfecting your loaves."
+    },
+    {
+      "speaker": "user",
+      "text": "I actually started a new starter feed yesterday! I'm hoping to bake a couple of loaves this weekend if the weather in Tucson stays nice and warm. It's my favorite way to unwind after a long week of shifts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a fresh bake sounds wonderful. I hope the starter rises perfectly for you! Have a great rest of your day at the clinic, Sofia."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll let you know how the bread turns out. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She is planning a honeymoon in Italy.",
+    "invention: She and Tom are looking for an outdoor desert wedding venue in Tucson."
+  ]
+}

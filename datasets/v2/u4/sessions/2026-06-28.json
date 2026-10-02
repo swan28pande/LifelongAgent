@@ -1,0 +1,87 @@
+{
+  "user_id": "u4",
+  "day": 120,
+  "date": "2026-06-28",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Sunday going in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going really well. I actually took up rock climbing today. I committed to a membership at a local indoor climbing gym."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's exciting! What made you decide to take up climbing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I wanted a physical activity that really challenges my focus and upper body strength. It felt like a great match, so I'm excited to get into it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a great way to challenge yourself. How are things with Leah? Did she go with you, or was she working on her pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "She had her pottery class today, so she was busy with that. She's coming over later, though. Earlier today, I spent some time doing gentle, slow-flow stretching and holding balancing poses on the living room rug, focusing on my breathing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderfully relaxing way to spend part of your afternoon. Did you get any work done today as well?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I did some architectural drafting for a bit. I had some chill, low-tempo instrumental hip-hop tracks playing in the background to help me concentrate."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those calm, wordless beats are excellent for focusing on design work. What are you planning for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've got a whole seasoned bird baking in the oven right now. The aroma of the roasted poultry is amazing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An oven-roasted bird is the perfect comfort food for a Sunday evening. I hope you and Leah have a wonderful dinner together!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a nice, relaxing night. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "yoga",
+      "outfit": "not mentioned",
+      "music": "lo-fi beats",
+      "dinner": "roast chicken"
+    },
+    "statements": {
+      "hobby.climbing": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'yoga', conversation gives 'climbing gym'",
+    "pref_wrong: music should be 'lo-fi beats', conversation gives 'ambient electronic'",
+    "cause_linked: workout must not be connected to 'took up rock climbing'",
+    "invention: started rock climbing today"
+  ]
+}

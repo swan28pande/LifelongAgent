@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 298,
+  "date": "2026-12-23",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope your Wednesday is going well. How are things at the clinic in Phoenix today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty busy today at the outpatient clinic, but I'm managing. I actually decided to ride the light rail in this morning instead of driving, which gave me some time to decompress before my shift started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice choice! Did you use that transit time to catch up on the true-crime podcast your coworker recommended?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually didn't! Normally I'd listen to that, but today I really needed some upbeat energy to wake myself up, so I skipped the true-crime stuff and just blasted some of my favorite music instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An upbeat music session is the perfect way to start a busy nursing shift. Did you get a decent lunch break to recharge?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I brought a turkey and cheese sandwich that I made using a couple of slices of my own homemade wild-fermented bread. It turned out great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Your sourdough baking is really paying off! It sounds delicious. How has your energy been today? Are you feeling completely recovered from that bout of flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I'm totally back to one hundred percent now. The fatigue is completely gone, thank goodness."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Do you and Tom have any plans for this evening, or is it a quiet night in?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're going to catch up later tonight. I think we'll just keep it pretty low-key since it's a weeknight and my shifts are tiring."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sounds like a perfect plan. Enjoy your evening with Tom, and I hope the rest of your shift goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "music instead"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 225,
+  "date": "2026-10-11",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Sunday. How is your weekend going so far? Did you and Leah get up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a bit of a hectic Sunday, actually. I had to log some extra hours on a drafting project today, which threw my morning off. I was running so late that I had to skip our usual Sunday morning brunch together. Instead, I just grabbed a foil-wrapped high-protein meal bar on my way out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's a bummer about missing brunch! Sunday morning routines are hard to lose. Did the work session at least go smoothly?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, it did. I managed to get a lot done. To keep my focus while drafting, I queued up a playlist of independent guitar bands. Having that kind of alternative indie-rock music in the background always helps me get into a flow state."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great soundtrack for design work. Did you manage to get a break or get moving at all after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! Since I'm still being careful with my wrist after fracturing it climbing, I didn't want to risk riding my actual bicycle outside. So I headed over to the fitness center and spent about forty-five minutes pedaling on one of their indoor exercise cycles."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. An indoor exercise cycle is a perfect way to keep your cardio up without putting any pressure on your wrist. Are you planning a relaxing evening to make up for the busy day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I'm actually prepping dinner now. I've got a whole herb-rubbed bird roasting slowly in the oven, so the apartment smells amazing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A slow-roasted whole poultry dinner sounds like the ultimate comfort food for a Sunday night! Is Leah joining you for that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, she is! She just got back from her pottery class a little while ago, so we're both looking forward to a quiet evening together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect end to the weekend. Tell her I say hi, and enjoy that delicious dinner!"
+    },
+    {
+      "speaker": "user",
+      "text": "Will do! Thanks, talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein bar",
+      "workout": "stationary bike",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "roast chicken"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Daniel and Leah own an indoor exercise cycle."
+  ]
+}

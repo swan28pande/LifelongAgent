@@ -1,0 +1,91 @@
+{
+  "user_id": "u4",
+  "day": 542,
+  "date": "2027-08-24",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Tuesday is going well. How has your week been starting out?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been alright, a bit hectic but I'm managing. I started this morning off right with a toasted savory ring with cream cheese and cold-smoked lox. Put on a soft plaid button-down shirt and my favorite blue denim pants, so at least I'm comfortable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That savory ring and fish combo sounds like a delicious breakfast, and a plaid shirt with denim is the perfect comfortable outfit. How are things looking at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, it's pretty high-pressure right now. Two days ago, we officially kicked off a massive design competition deadline, so the whole team is in overdrive."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, a design competition deadline is always intense! As the project lead, how are you keeping everyone—and yourself—focused?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's all about keeping a steady rhythm. Today, I've been staying centered by letting some vintage bebop and swing LPs spin on the turntable while drafting at my desk. It really helps me block out the noise."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, putting your grandfather's record collection to excellent use! Those old instrumental LPs are perfect for concentration. Have you had any time for your other hobbies, like photography or chess, to unwind after hours?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much time for taking the camera out, unfortunately, but I did manage to play a quick chess game online last night before bed. It was a nice, quiet distraction."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick game of chess is a great mental reset. What are you and Leah planning for dinner tonight? Are you cooking, or keeping it simple?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely keeping it simple. We're actually having a local spot courier over some fresh maki and raw fish rolls right to our apartment."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect. There's nothing like having fresh Japanese rolls brought straight to your door when you want a relaxing evening. I hope you and Leah enjoy them!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, it'll be nice to just unpack the boxes, eat, and relax. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "statement_missing: deadline.0 ([the design competition] started a huge design competition deadline at work (happened) (this happened on 2027-08-22))"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoked salmon bagel",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "jazz records",
+      "dinner": "delivery sushi"
+    },
+    "statements": {
+      "deadline.0": false
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      },
+      "c1": {
+        "event_mentioned": true,
+        "linked": false,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: deadline.0 ([the design competition] started a huge design competition deadline at work (happened) (this happened on 2027-08-22))"
+  ]
+}

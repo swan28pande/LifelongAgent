@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 43,
+  "date": "2026-04-12",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Sunday. How is your morning going over in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Just relaxing and sipping on a warm mug of cocoa to start my day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a cozy way to start the day. Did you just get off a night shift at the hospital, or is today a day off for you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I finished my ER shift early this morning. It was a bit chaotic, so I really needed this quiet time. I actually put on a podcast that summarizes the latest medical and wellness research while I was winding down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, keeping up with the medical world even after a long shift! What kind of updates did they cover today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They were talking about some new clinical trials and updates on public health policies. It's interesting, but definitely made me sleepy after working all night!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! You definitely deserve a good rest. Are you planning on catching up on sleep, or do you have any low-key plans with Tom later?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is coming over later to just hang out and watch a movie. I definitely don't have the energy for anything active today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect kind of Sunday. No salsa dancing on the schedule for tonight then?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, definitely not tonight! My feet need a break from both the ER floors and the dance floor. I'll save the salsa steps for next weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A very wise decision. How's the Phoenix weather treating you today? Is it starting to heat up?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is! It's already getting pretty warm outside, so staying indoors with the A/C and a movie is definitely the right call."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "hot chocolate",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "health news podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Sofia lives in an apartment."
+  ]
+}

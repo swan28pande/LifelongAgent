@@ -1,0 +1,86 @@
+{
+  "user_id": "u4",
+  "day": 410,
+  "date": "2027-04-14",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going so far? Keeping busy at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, it's a busy day, but I'm keeping it pretty relaxed. I treated myself to a flaky, buttery crescent pastry from the bakery down the street, and right now I'm spinning some classic syncopated brass and piano vinyls on the turntable while I get some drafting done."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to start the workday. Nothing beats some good music and a fresh pastry. What's your style today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm wearing a checked heavy-cotton shirt and some blue denims."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic and comfortable. Are you planning to head out for a run later today, or are you taking a rest day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I did something a bit different for my physical activity today. Usually I'd head out for a run, but some friends invited me to join a casual game of hoops, so I went down to the neighborhood court to play some five-on-five instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a game of hoops sounds like a fun change of pace! How did your wrist hold up during all that dribbling and shooting? It's been a while since the cast came off."
+    },
+    {
+      "speaker": "user",
+      "text": "It felt great, actually! No stiffness or pain at all, so I think it's fully back to normal. It was nice to do some jumping and sprinting with other people for a change."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news. It must feel great to have full mobility back. Do you and Leah have any fun dinner plans tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do! We're actually making that spicy, herbal coconut-milk stew with that signature vibrant hue that we learned how to make in our Thai cooking class."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, that's such a flavorful dish! It's great you two are putting those cooking class skills to good use. How is Leah doing, by the way? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is, she's actually getting pretty good at centering the clay. Anyway, I should get back to this layout before my next meeting. Talk to you later!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Have a productive afternoon, Daniel! Enjoy the dinner tonight and talk soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bakery croissant",
+      "workout": "pickup basketball",
+      "outfit": "flannel and jeans",
+      "music": "jazz records",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "reason_given: no reason may be given for today's work outfit"
+  ]
+}

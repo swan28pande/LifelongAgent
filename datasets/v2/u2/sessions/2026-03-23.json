@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 23,
+  "date": "2026-03-23",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Marcus! How is your Monday starting out in Portland? I hope the transition back to the school week hasn't been too hectic."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's not too bad, actually. Portland is a bit rainy today, but I had a peaceful morning. I made sure to fuel up with a big bowl of oatmeal before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a great way to prep for a busy day. How are things going at the high school? Are your chemistry classes keeping you on your toes?"
+    },
+    {
+      "speaker": "user",
+      "text": "They definitely are. We're doing some stoichiometry labs today, which always keeps things lively. But I managed to squeeze in some personal time after my last class and went to the gym to lift some weights."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's impressive! Fitting in gym weights after teaching all day takes some real dedication. Do you find that a good workout helps you wind down after school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, it really helps clear my head. After standing and lecturing, focusing on physical lifting is the perfect reset."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can see how that would be a great contrast. Do you have any plans for your woodworking projects tonight, or are you taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually taking a break from woodworking tonight. My arms are a bit tired from the gym, so I'm planning a much quieter evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a smart plan. How do you and Grace usually like to spend your quiet evenings?"
+    },
+    {
+      "speaker": "user",
+      "text": "We usually just put on something relaxing. Tonight, we're planning to watch a nature documentary."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect way to unwind. I hope you both enjoy it and get some good rest tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! It should be a nice, slow evening. I'll catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Marcus and Grace love ocean stuff.",
+    "invention: Marcus has a garage."
+  ]
+}

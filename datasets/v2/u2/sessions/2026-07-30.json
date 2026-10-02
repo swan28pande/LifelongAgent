@@ -1,0 +1,78 @@
+{
+  "user_id": "u2",
+  "day": 152,
+  "date": "2026-07-30",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Thursday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. I had a quiet morning, started things off with some oatmeal for breakfast, and then got a few chores done around the house."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is always a solid, classic start to the day. Are you getting any time for your hobbies today, like tennis or some woodworking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I managed to squeeze in a tennis match for my workout today. It was great to get out on the court."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome. Did you play a singles match, or were you playing doubles? How is the summer weather in Portland treating you on the court?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was a singles match, and the weather here in Portland was absolutely perfect for it today—warm but not too hot. Grace has some other plans this afternoon, so it worked out well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like a perfect afternoon. Do you and Grace have any plans for this evening, or is it a more low-key night?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's attending a book club tonight, so I have the evening to myself. I think I'm just going to wind down and watch a nature documentary on TV."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like a wonderfully relaxing way to spend a quiet evening. Do you have a specific one lined up, or are you just going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "I found one about deep-sea marine life that looked really interesting, so I'm planning to put that on. I always find ocean documentaries fascinating."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Deep-sea documentaries are amazing—the creatures down there look like they're from another planet! It's a nice break from high school chemistry, I imagine."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, it's nice to just sit back and learn without thinking about lesson plans for a change. Anyway, I should probably go get dinner started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the documentary and your dinner, Marcus! Have a great evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "tennis",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'nature documentary', conversation gives 'other'"
+  ]
+}

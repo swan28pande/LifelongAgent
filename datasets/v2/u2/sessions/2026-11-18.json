@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 263,
+  "date": "2026-11-18",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going so far? How are things at the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty busy day, but good. I started things off on the right foot with a protein smoothie for breakfast, which gave me plenty of energy for the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is always a great, quick way to power through a busy morning. Did you have any time to step away from your science department duties today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually. I managed to squeeze in a workout during my break and went for a run around the neighborhood. It was nice to get some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome, a run is a perfect midday reset. Speaking of taking breaks, have you and Grace made any more progress on planning your family trip to Japan next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "We actually looked at some flights last night! We're trying to figure out the best dates to go so it doesn't conflict too much with the school calendar, but we're getting really excited about it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's so exciting to see it all start coming together! What do you have lined up for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a quiet night at home. I think I'm going to wind down by watching a nature documentary on TV after dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing way to spend a Wednesday evening. Is Grace going to watch it with you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, she is. We both love those, so it'll be nice to just sit on the couch and relax together."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy the documentary! Before I let you go, have you had any time lately to get out to your workshop for some woodworking, or has school been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Lately school has taken up most of my time, so I haven't done any woodworking recently. But I'm hoping to get some shop time this weekend if things quiet down. Have a good evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: preparing for the upcoming science fair"
+  ]
+}

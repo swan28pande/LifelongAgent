@@ -1,0 +1,78 @@
+{
+  "user_id": "u2",
+  "day": 235,
+  "date": "2026-10-21",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Marcus! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, though it's been a busy one. I had to rush out the door, so I just whipped up a protein smoothie for breakfast today. But it kept me full through my morning chemistry classes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smoothies are a great quick option when you're on the go! How are the chemistry classes going? Is the new school year starting to feel more like a routine now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. The kids are finally settled in, and we just finished our first big lab unit. They did surprisingly well with the safety protocols, which is always a relief."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic to hear. Lab days can definitely be a bit chaotic! Have you and Grace had any time to keep planning that Japan trip for next spring?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! We spent some time looking at itinerary ideas last night. We're trying to figure out how many days to spend in Tokyo versus Kyoto. There's just so much we want to see."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It’s hard to narrow it down! Both cities have such a different vibe. Have you had any time for your woodworking lately, or has school and trip planning taken up all your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've managed to sneak into the garage for a bit. I'm working on a small cedar side table right now. I just finished the main assembly, so now it's onto the sanding phase."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sanding is tedious, but the end result is always worth it. It sounds like you've been keeping busy."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, definitely. I'm looking forward to just taking it easy tonight after dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Understandable! Do you and Grace have any plans to watch anything tonight, or are you just going to relax?"
+    },
+    {
+      "speaker": "user",
+      "text": "We are actually going to watch a nature documentary tonight. We found one about deep-sea creatures that looks really interesting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, deep-sea documentaries are always fascinating! Have a wonderful, relaxing evening watching that, Marcus. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

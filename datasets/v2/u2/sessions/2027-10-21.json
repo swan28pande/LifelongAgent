@@ -1,0 +1,80 @@
+{
+  "user_id": "u2",
+  "day": 600,
+  "date": "2027-10-21",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How are things going in Portland today? How is Olive doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Portland is great, and Olive is doing fine, just napping in the living room. I actually managed to get in some tennis earlier before it started drizzling."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Glad you got to play some tennis. Is your back still feeling fully recovered after playing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, my back feels completely fine, no issues at all. I did change up my breakfast routine today, though. I had a protein smoothie because I saw a nutritionist today who suggested more protein at breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's interesting! What did they say about your previous routine?"
+    },
+    {
+      "speaker": "user",
+      "text": "They just noted that my usual breakfast didn't have enough protein to keep my energy up, so they strongly suggested I add more protein to start my day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes a lot of sense. A protein smoothie is a great way to do that. How is everything going at the school's science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "Busy as always, we've got a lot of prep work for upcoming labs. I'm definitely looking forward to winding down tonight with some sitcom reruns."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns sound like the perfect way to relax after a busy day. Do you and Grace have a favorite show you like to put on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we have a few classic sitcoms we've seen a dozen times. Grace usually picks them."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to watch something familiar. I hope you both have a great, relaxing evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Have a good night."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {
+      "nutritionist.0": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": []
+}

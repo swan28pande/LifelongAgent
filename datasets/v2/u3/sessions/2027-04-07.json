@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 403,
+  "date": "2027-04-07",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How has your Wednesday been going at the outpatient clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty active day. I'm glad I started things off on a good note. I made myself a warm, frothy whisked green tea latte this morning before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a perfect way to energize for a busy nursing shift. Did you get a decent break for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I actually managed to meet up with my fiancé, Tom, to grab a quick midday bite together near the clinic. It was really nice to catch up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Did you two end up talking more about the wedding plans for summer 2028?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did, just brainstorming a bit. We're still quite a ways out, but it's fun to throw ideas around. We mostly just enjoyed the break from our workdays."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's great that you're taking your time with it. Have you had any time for your hobbies today, like listening to any podcasts?"
+    },
+    {
+      "speaker": "user",
+      "text": "No time for the true-crime one today, but I did listen to an audio-based Italian tutorial show on my phone earlier. It's helping me practice my pronunciation."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An Italian learning podcast, that's brilliant! How is the online Italian course you signed up for going alongside that?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! The course gives me the structure, but listening to native speakers on the podcast really helps it stick. I'm taking it one step at a time."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great combination. I hope you have a relaxing evening ahead of you!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm just planning on unwinding and maybe feeding my sourdough starter later tonight. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "lunch with Tom",
+      "commute": "not mentioned",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Planning to visit Italy for their honeymoon",
+    "invention: Owns an Italian grammar textbook"
+  ]
+}

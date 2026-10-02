@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 295,
+  "date": "2026-12-20",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Sunday. How is everything going over in Minneapolis today? Are you getting to relax, or do you have a busy day ahead?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! I actually have to log on for a bit today to finish up some project lead tasks for a design firm presentation tomorrow morning. But I'm keeping it very low-key. I'm literally just sitting at my desk in a cozy hooded sweatshirt and some loose sweatpants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect uniform for a Sunday work session. Comfort is definitely key when you're tackling weekend tasks. Did you get a chance to have a relaxing morning before diving into your files?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Leah and I slept in, and then we ended up putting together a really nice, big mid-day meal to share. We just sat down and enjoyed a late-morning spread together, just the two of us, before she had to head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to start the day. There is nothing quite like a slow, late-morning meal together. Is Leah heading off to her pottery class today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, exactly, she had a studio session this afternoon. She's really been enjoying it lately. It's cool to see her get so creative with it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic! It's always great to have a creative outlet. Do you have any plans to get creative yourself today, maybe with some photography?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually do! Once I wrap up this design work, I'm hoping to head out with my camera. The winter light is really nice right now, and honestly, it's just great to be able to hold and adjust my camera gear easily again now that my wrist is completely healed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, it must be such a relief to have your wrist back to one hundred percent. Are you planning to shoot anything in particular today, or just exploring the neighborhood?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably just wandering around the local streets and capturing some of the architecture. I love how the brick buildings look with a fresh dusting of snow. Plus, sometimes I find cool food trucks to shoot. I actually grabbed a great pulled pork sandwich from one yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds delicious! Since you eat a bit of everything, finding a good local food truck is always a win. Was it a spot you've been to before?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, they park near the riverfront sometimes. It's a favorite of mine. Anyway, I should probably focus and finish up these client slides so I can get outside before the sun goes down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Of course, go get that work done so you can enjoy the fresh air and the afternoon light. Good luck with the presentation prep, and have a great time shooting photos later!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll catch up with you later in the week."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "not mentioned",
+      "outfit": "hoodie and joggers",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

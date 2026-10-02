@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 606,
+  "date": "2027-10-27",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going in Tucson? Have you had any time for sourdough baking lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! The weather here in Tucson is finally starting to cool down a bit, which is nice. I actually did bake a fresh loaf yesterday, and for lunch today I made a sandwich using a couple of slices of that homemade wild yeast bread. It turned out great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious! There really is nothing like a sandwich on fresh sourdough. Did you have a nice warm drink to start your morning off?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, though I kept it pretty simple today. I just brewed a quick pot of regular filter coffee at home before heading out. Sometimes a basic hot cup of black coffee is exactly what I need."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, a classic brewed coffee is hard to beat. How was your commute to the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was fine! I drove my hybrid to the clinic today. The traffic wasn't too bad for a Wednesday morning, so it was a pretty smooth ride."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. Did you end up listening to that true-crime podcast your coworker suggested on the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I wasn't in the mood for true crime today. Instead, I put on an episode of a show about teaching good behavior and training techniques for dogs. I've been trying to pick up some useful tips."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, a canine training podcast! That sounds super helpful. How is Dash doing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great! He's just lounging around as usual, but it's always good to learn more about dog behavior and reinforce the basics."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is. Well, it sounds like you've had a pleasant start to your day. How is the rest of your shift looking at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a bit busy with patient appointments, but nothing we can't handle. I'm just looking forward to relaxing with Tom and Dash when I get home tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "dog training podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Dash has a high prey drive and gets distracted by rabbits."
+  ]
+}

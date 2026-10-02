@@ -1,0 +1,75 @@
+{
+  "user_id": "u2",
+  "day": 186,
+  "date": "2026-09-02",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your week going? It's been a few days since the new school year started—how are your chemistry classes shaping up?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! They're going well, thanks. It's definitely a busy transition back, but the kids seem eager. I made sure to have a warm bowl of oatmeal for breakfast today to keep my energy up through the morning labs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a great way to fuel a busy teaching morning. Did Grace have a busy start to her Wednesday as well?"
+    },
+    {
+      "speaker": "user",
+      "text": "She did, she was out the door early for a meeting. So I had the kitchen to myself while I ate."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet morning can be really nice before the school day starts. Are you planning on heading down to your workshop for some woodworking later this evening, or is it a relaxing night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, no woodworking tonight. I think I'm just going to relax on the couch with Grace and watch a cooking competition show we've been meaning to catch up on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those cooking competition shows can be so addictive! Are you both big fans of culinary contests, or is this a new one you're trying out?"
+    },
+    {
+      "speaker": "user",
+      "text": "We really enjoy them! We like trying to guess who will get eliminated. It's a nice, low-stress way to wind down after a long day of teaching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like the perfect Wednesday night. How is the autumn weather treating you guys in Portland today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually really beautiful. A bit crisp in the morning, which is typical for September in Portland, but very clear and sunny this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. I hope you and Grace have a great time watching your show tonight and that the rest of your week goes smoothly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! Talk to you soon."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "invention: has a garage"
+  ]
+}

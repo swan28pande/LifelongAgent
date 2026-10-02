@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 441,
+  "date": "2027-05-15",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Saturday. How is everything going at the design firm lately? I know you've had a lot on your plate as the project lead."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it has been pretty hectic. I actually had to go into the office for a few hours this morning to prep for a big client presentation we have next week. Since it's the weekend, I kept things pretty casual and just wore a cozy, plaid brushed-cotton button-up and a pair of classic blue denim trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very comfortable outfit for a weekend office session! Did you manage to get a decent breakfast in before you headed out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I made a quick, thick blended mix of frozen mixed berries, bananas, and Greek yogurt, poured it into a dish, and topped it with chia seeds and granola. It was great to eat with a spoon before rushing out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing and filling. Speaking of meals, how are you finding balancing your food choices lately? Are you still sticking to your usual omnivorous diet?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. I'm still happily eating a mix of plants and meats. In fact, to reward myself for working on a Saturday, I'm planning a really nice dinner tonight. I picked up a beautiful, thick-cut beef ribeye from the butcher, and I'm going to sear it in my cast-iron skillet with some butter and garlic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A perfectly seared ribeye sounds like the ultimate reward for a busy day! Is Leah joining you for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, she'll be eating with me, though she'll probably have some extra veggies on the side. She's actually at her pottery class right now, so we'll catch up properly when she gets back home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's lovely. How is she enjoying the pottery class lately? And how has she been settling into her pediatric role at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's really loving the pottery class—she actually brought home a pretty nice hand-thrown vase last week. As for her job, she's finding the hospital shifts quite exhausting, but she absolutely loves working with the kids. She's adjusting really well overall."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It sounds like she's doing amazing things, even if the schedule is demanding. Do you have any plans to relax for the rest of the weekend once your work prep is fully behind you?"
+    },
+    {
+      "speaker": "user",
+      "text": "Once I finish cooking tonight, I'm just going to take it easy. I might take my camera out tomorrow afternoon to snap some pictures around the neighborhood if the weather stays nice, but otherwise, I'm keeping it very low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect Sunday plan. Enjoy that delicious dinner tonight, Daniel, and have a wonderfully restful weekend!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'm definitely looking forward to it. Have a great weekend yourself!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "not mentioned",
+      "dinner": "steak"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'steak', conversation gives 'other'"
+  ]
+}

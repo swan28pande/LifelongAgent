@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 395,
+  "date": "2027-03-30",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday going at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty hectic day, to be honest. I was running a bit behind this morning, so instead of driving, I just hopped on the light rail to get to the clinic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The light rail is a good way to bypass traffic when you're in a rush. Did you at least have time to grab a caffeinated drink before you left?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, thank goodness. My roommate has that fancy new espresso machine, but I didn't want to mess with it today, so I just brewed a quick pot of regular drip coffee and filled my travel mug."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic drip coffee is hard to beat when you need something quick and reliable. Did you manage to get a decent break for lunch later on?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I had to completely skip lunch today. Usually, I bring a sourdough sandwich, but we had back-to-back patient appointments scheduled all through midday, so I didn't get a chance to eat a single bite."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, that sounds incredibly exhausting! Being a nurse keeps you on your feet, but missing lunch entirely is rough. I hope things quiet down for you this evening. Have you and Tom had any time to think about the wedding plans lately, or is that on hold for now?"
+    },
+    {
+      "speaker": "user",
+      "text": "We talk about it here and there, but since we set the date for summer 2028, we feel like we have plenty of time. We've mostly just been looking at some local spots around Phoenix online, but nothing official yet."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's smart, starting early takes a lot of the pressure off. How has your online Italian course been going amidst all of this?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I did a short vocabulary lesson yesterday evening. It's a nice way to wind down after a long shift, even if I can only manage ten minutes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Consistent practice makes a huge difference, even in short bursts. I hope you get to relax tonight and finally get a good meal after skipping lunch!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yes, I'm definitely looking forward to a huge dinner tonight. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "skipped lunch",
+      "commute": "light rail",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

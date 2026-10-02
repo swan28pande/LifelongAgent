@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 703,
+  "date": "2028-02-01",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday starting out? How are things in Tucson today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! Tucson is actually pretty nice today, not too cold. I started my morning with a double shot of espresso over ice with cold water to wake me up. Dash was begging for some attention before I had to head out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a refreshing way to kick off the day! Did you walk to the outpatient clinic today, or how was your trip in?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually drove my hybrid car to work today. The traffic on the way in wasn't too bad, which was a nice bonus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Driving in with light traffic is always a win. How is the hybrid holding up? Are you still enjoying it?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been great, really reliable and easy to park near the clinic. It's just perfect for getting around town."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that! How are things going with Tom? Have you two done any more planning for your summer 2028 wedding lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom and I are doing well! We actually looked at a potential outdoor venue online last night. Planning a summer wedding here in Tucson means we definitely need to think about shade and hydration, but we're making progress!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a very smart consideration for a Tucson summer! It sounds like you're staying organized. Have you had any time for your sourdough baking recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit! I fed my starter yesterday evening, so I might try to bake a fresh loaf tomorrow if my clinic shift today isn't too exhausting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I hope you get a chance to bake! A fresh loaf of sourdough is always worth the effort. Let me know if you need help keeping track of anything else today."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm about to head into a patient consultation, but I'll check in with you later tonight. Have a good day!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She and Tom want an outdoor wedding venue that showcases the local desert landscape.",
+    "invention: Her dog Dash loves winter mornings."
+  ]
+}

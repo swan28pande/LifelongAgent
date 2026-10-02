@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 194,
+  "date": "2026-09-10",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How has your Thursday been going at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It was pretty productive. The office was a bit chilly today, so I was glad I decided to wear a warm knit pullover paired with some casual denim trousers. Kept me cozy while looking over some floor plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect outfit for a cool Minneapolis day. Did you manage to make good progress on your drafting?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put my headphones on and queued up a playlist of those dusty, low-fidelity instrumental hip-hop tracks. The mellow background crackles really help me lock in when I'm drawing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those chill, dusty rhythms are perfect for zoning in on design details. Did you get a chance to get active after you wrapped up at the office?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I headed over to the indoor facility to tackle some vertical routes on the artificial walls for a couple of hours."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! How were the routes today? Did you manage to clear any challenging climbs?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually sent a really tough V4 that's been giving me trouble! My forearms are completely spent now, though, so I'm glad to be back home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Congrats on sending the V4! You definitely earned a relaxing evening. What are you and Leah planning for dinner to refuel?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm keeping it simple tonight. I'm just getting ready to boil up a big pot of noodles to toss in a rich, savory marinara sauce."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic carb-heavy noodle dish is the absolute best post-climb meal. How is Leah doing, by the way? Has she brought home any new creations from her pottery class recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually brought home a couple of handmade ceramic mugs a few days ago! They're a bit lopsided but they have so much character. Anyway, I'm going to go get this water boiling. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "climbing gym",
+      "outfit": "sweater and jeans",
+      "music": "lo-fi beats",
+      "dinner": "pasta"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'lo-fi beats', conversation gives 'ambient electronic'"
+  ]
+}

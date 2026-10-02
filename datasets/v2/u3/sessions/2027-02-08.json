@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 345,
+  "date": "2027-02-08",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday going at the outpatient clinic in Phoenix? Are you having a busy start to the week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been pretty chaotic at the clinic today. Lots of patients scheduled. I'm just glad my commute was easy—I took the light rail this morning and managed to avoid all the traffic on the freeway."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's smart, taking the light rail definitely beats sitting in rush hour. Did you manage to grab your usual matcha latte before boarding?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I did something a bit different today. A new coffee shop near the station was running a promotional giveaway, so I grabbed a free sample latte they were handing out. It was a nice treat, even though I usually stick to my matcha latte."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a free latte is always a great way to start a Monday! Hopefully, that gave you a good boost. Did you get a chance to sit down and enjoy your homemade sourdough sandwich for lunch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Unfortunately, no. I was running so late that I completely forgot to pack my lunch this morning. So, instead of my usual sourdough sandwich, I had to settle for a random assortment of vending machine snacks from the breakroom."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no! A lunch of vending machine snacks is definitely a step down from fresh sourdough. I hope you can get a proper meal when you get off your shift. How did your Italian lesson podcast go during the ride home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually ended up skipping my usual Italian language lessons podcast on the way back. I was feeling so exhausted that I just wanted something upbeat to keep my energy up, so I listened to some lively music instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes complete sense—sometimes you just need some good tunes to decompress after a hectic day at the clinic. Are you planning to just relax at home tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, definitely. I might see if Tom wants to call later, but mostly I just want to put my feet up and maybe play around with a new sourdough starter batch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing evening. I hope you get to unwind and that tomorrow is a bit smoother for you!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'll talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "free sample latte",
+      "lunch": "vending machine snacks",
+      "commute": "light rail",
+      "podcast": "music instead"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

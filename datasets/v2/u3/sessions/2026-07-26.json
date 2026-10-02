@@ -1,0 +1,76 @@
+{
+  "user_id": "u3",
+  "day": 148,
+  "date": "2026-07-26",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Sofia! How are you feeling today? Are you fully recovered from the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! I'm doing much better, thank you. I started the morning with a warm mug of steeped ginger root to keep soothing my system, and it's doing wonders."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comforting. Ginger is always great for recovery. How is the rest of your day shaping up? Do you have a shift at the hospital later?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, thankfully I have today off, so there was absolutely no work travel or driving to get to a shift today. It's nice to just stay put."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Having a day with no travel or work is the best way to fully recharge. What have you been up to with your free time at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been taking it really easy. Around noon, I just pulled out some containers from the fridge and ate the dinner portion I had packed up from a couple of nights ago. It saved me from having to cook."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Reheating already-prepared food is the perfect lazy Sunday lunch. Have you been able to get back into any of your usual activities, like salsa dancing?"
+    },
+    {
+      "speaker": "user",
+      "text": "I haven't gone dancing since getting sick, but I'm definitely missing the music and the movement. I think I'll wait just a little longer until my energy is 100% back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's very wise. It's better not to rush it, especially with how intense dancing can be. Speaking of staying inside, how is the Phoenix summer treating you lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is incredibly hot out there! July in Phoenix is always intense, so I am perfectly happy staying indoors in the air conditioning today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you at all; the Arizona heat is no joke. Since you're staying cool indoors, have you had any chance to check on your sourdough starter?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I actually fed it earlier today! It's bubbling nicely in the kitchen, so I might bake a fresh loaf sometime soon when the kitchen isn't too warm."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "ginger tea",
+      "lunch": "packed leftovers",
+      "commute": "no commute",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: She works at a clinic.",
+    "invention: She might go to a salsa dancing class on Wednesday night."
+  ]
+}

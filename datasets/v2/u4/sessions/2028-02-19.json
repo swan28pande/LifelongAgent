@@ -1,0 +1,86 @@
+{
+  "user_id": "u4",
+  "day": 721,
+  "date": "2028-02-19",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Saturday. How is your weekend starting off? Did you get a chance to get outside or do any climbing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy Saturday. I actually didn't make it to the climbing gym today. Instead, I spent a good chunk of the morning logging some serious double-digit mileage on foot. I wanted to really push my endurance distance today, so I was out there on the path for quite a while."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to clear your head, especially after a busy week at the studio. Did you head along the lakefront, or try a different route? And how is your wrist holding up with that kind of distance?"
+    },
+    {
+      "speaker": "user",
+      "text": "The wrist is totally fine, thanks! I just stuck to the usual lakefront path, but went much further than I usually do. Honestly, it felt amazing to just focus on the distance. After that, I actually had to head into the studio for a few hours to wrap up some drawings."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, working on a Saturday? I hope it wasn't too intense. Did you have client meetings, or were you just getting some quiet drafting time in?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some quiet drafting, luckily. Since it was a casual weekend session with no clients around, I didn't worry about dressing up. I just wore a pitch-dark short-sleeved tee and some classic blue denim pants to the office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds comfortable and perfect for a focused solo session. It's nice when you can just dress down and get into the zone without any formal meetings. How are things going with the studio lately, now that the big design competition is behind you?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a bit more manageable, though we still have plenty on our plates. It's nice to have some breathing room to actually design instead of racing against a clock. I'm glad I got those hours in today so I can fully relax tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, you've definitely earned a relaxing Sunday. Do you and Leah have any fun plans for the rest of the evening? Maybe testing out a recipe from that vegetarian and seafood cookbook you got?"
+    },
+    {
+      "speaker": "user",
+      "text": "Leah is actually resting after a long shift at the hospital, so I'm taking over kitchen duties tonight. I'm making a big, hearty pot of slow-simmered beans, peppers, and onions with lots of warming spices. It's perfect for a cold evening like this."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly comforting and delicious, especially after your high-mileage effort earlier! A warm, spiced bean and vegetable stew is the perfect post-workout meal. Is this a recipe you've made before, or are you experimenting?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's my own little freestyle recipe. I love making it when the weather gets cold. I've got it simmering on the stove right now, and the whole place smells amazing. Leah is going to wake up to a nice hot bowl of it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "She is going to love that! It sounds like the perfect Saturday night. I hope you both have a wonderful, relaxing evening and a great Sunday tomorrow."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'm just going to set the table and unwind now. Talk to you soon!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "long run",
+      "outfit": "black t-shirt and jeans",
+      "music": "not mentioned",
+      "dinner": "veggie chili"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'long run', conversation gives 'lakefront run'",
+    "pref_absent: outfit should be 'black t-shirt and jeans', conversation gives 'missing'",
+    "pref_leak: music should be 'not mentioned', conversation gives 'missing'"
+  ]
+}

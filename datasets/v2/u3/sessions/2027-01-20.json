@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 326,
+  "date": "2027-01-20",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Wednesday. How has your day been at the clinic so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! It's been a busy day, but pretty good. I actually decided to take the light rail train into work today instead of driving, which was a nice change of pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a relaxing way to start the morning. Did you have some time to listen to anything on the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I finally started listening to that true-crime investigative show my coworker recommended. It's all about an unsolved mystery from the 90s."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, the one about the cold case? How are you liking it so far? Is it as gripping as your coworker said?"
+    },
+    {
+      "speaker": "user",
+      "text": "It really is! I got so sucked into the details of the investigation that I almost missed my stop. I'll definitely be listening to the next episode on my way home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's the sign of a great podcast! I'm glad you're enjoying it. How is Tom doing, by the way? Have you guys been keeping busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is doing really well! He's just been busy with work, but we got to hang out yesterday evening and just relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. It's always nice to have a quiet evening to recharge. How is the January weather in Phoenix treating you guys lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, the weather here in Phoenix is absolutely perfect right now. It's so nice to have these cool, sunny days before the intense summer heat eventually returns."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Enjoy it while it lasts! It sounds like a beautiful time of year there. I hope the rest of your shift at the clinic goes smoothly."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks so much! I'm just about to wrap things up here, so I'll talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "not mentioned",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Planning to try a new dinner spot downtown with Tom this weekend"
+  ]
+}

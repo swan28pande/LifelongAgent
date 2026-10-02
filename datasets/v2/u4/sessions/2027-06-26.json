@@ -1,0 +1,85 @@
+{
+  "user_id": "u4",
+  "day": 483,
+  "date": "2027-06-26",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Saturday. How is your weekend starting out in Chicago? Are you getting some downtime from your role at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a pretty relaxed Saturday. I did have to catch up on some design firm paperwork this morning, but I made it enjoyable. I put on a recorded reading of a novel to listen to while I cleared out my inbox, which always makes the administrative stuff go by much faster."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a narrated book is a great way to breeze through tedious emails! What story are you going through?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a mystery thriller I've been meaning to get to. Having someone read a book to me keeps my mind occupied while my hands are busy with spreadsheets. I managed to finish a good chunk of it today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very productive morning. Have you and Leah had any time to catch up this weekend? I know her schedule as a pediatrician can get pretty hectic."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely, we actually have the evening free together. In fact, we're planning a nice dinner tonight. I'm about to fire up the grill and cook some of that pink-fleshed, omega-3-rich fish over the open flames. It's one of our favorite meals when the weather is warm."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Grilling some fresh fish sounds absolutely perfect for a summer evening! Do you have a special marinade or do you keep it simple?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a simple lemon, dill, and garlic rub. I like letting the natural flavor of the pink fish shine through, especially when it gets those nice charred grill marks on the skin. Leah is making a side salad to go with it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds wonderful. Lemon and dill is such a classic pairing. Since it's a beautiful Saturday, are you planning to do any photography or heading out to do some rock climbing this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I was actually thinking of packing my camera and heading down to the lakefront tomorrow. The light has been really interesting lately with the summer haze, so I want to capture some of the Chicago skyline from a different angle."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The Chicago skyline from the lakefront is spectacular, especially with the summer haze. Are you hoping to shoot during the golden hour?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly, sunset is the goal. It's a nice way to unwind before the work week starts up again. Do you have any tips on lighting for hazy sunset shots?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Underexposing slightly can really make those warm, hazy colors pop and prevent the sky from looking washed out! I hope you get some great shots. Enjoy that delicious grilled dinner with Leah tonight!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'll definitely keep that tip in mind tomorrow. I'm going to head out and get the grill prepped now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "audiobooks",
+      "dinner": "grilled salmon"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a backyard",
+    "invention: plans to check out the new climbing gym next week"
+  ]
+}

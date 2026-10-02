@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 500,
+  "date": "2027-07-13",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Tuesday going over in Portland? Are you keeping busy during the school summer break?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, thanks. Pretty relaxed morning so far. I just had a protein smoothie for breakfast and I'm catching up on a few things."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is always a great, healthy start to the day. What's on your agenda for today? Any woodworking projects in the queue?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, no woodworking. I sold my woodworking tools today to free up garage space."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh wow, really? That is a major change since I know you've put a lot of work into that hobby. Was it hard to part with everything?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit, but we really needed to free up that garage space. It feels really good to have all that clutter cleared out of there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I completely understand—gaining back that extra room can be a huge relief. Since you aren't spending time in the workshop today, did you do anything else to stay active?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I played tennis today for my workout."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Awesome! How did the tennis match go? I hope your back is still feeling great and fully recovered."
+    },
+    {
+      "speaker": "user",
+      "text": "It went really well, and yes, my back felt perfectly fine. Olive was waiting by the door for me when I got back home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice to get a warm welcome from Olive! What do you and Grace have planned for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We don't have much planned. I'm just going to relax and watch some sitcom reruns tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very cozy, relaxing way to spend your Tuesday night. By the way, how are things going with your role as head of the science department? Do you have to do much prep work for the high school during the summer?"
+    },
+    {
+      "speaker": "user",
+      "text": "There's always some light administrative planning to keep up with, but nothing too demanding right now. It's nice to have a break from the usual school year rush."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {
+      "hobby.woodworking_stop": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

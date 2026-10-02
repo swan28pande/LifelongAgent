@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 263,
+  "date": "2026-11-18",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going at the outpatient clinic? Are you feeling completely back to 100% after recovering from the flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, I'm feeling totally back to normal, thank goodness. The clinic is busy today, but I had a nice, relaxing commute this morning because I decided to ride the city's rail transit line instead of driving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much more peaceful way to start the morning. Did you have a chance to read or listen to anything during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I finally started listening to that real-life crime podcast my coworker recommended a while back. It definitely kept my attention the whole way there."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, is it as gripping as they promised?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it's really well-produced and quite spooky! I actually kept listening to it during my break. Speaking of breaks, I had a really satisfying lunch today—I made a turkey and cheese sandwich using a couple of slices of my home-baked sourdough bread."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, nothing beats a sandwich on homemade sourdough! How has your baking been going lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been going well! I've been trying to keep my starter active and healthy. I shared some of my recent bakes with Tom, and he really enjoyed them."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. It's always great when others get to enjoy your baking. Have you two had any time for salsa dancing lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We haven't gone dancing in a bit, but it's always fun when we do. For now, I'm just focusing on getting through my shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense. Hopefully, the rest of your day at the clinic goes smoothly and quickly!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm just about to head back to the floor, but it was nice catching up. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Sofia and Tom are planning to go to a salsa dancing social this Friday evening."
+  ]
+}

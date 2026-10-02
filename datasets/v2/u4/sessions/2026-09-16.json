@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 200,
+  "date": "2026-09-16",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Wednesday, Daniel! How is everything going over in Minneapolis today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's a gorgeous day today. I actually woke up early and took my bicycle out for a spin along the river path to get some fresh air and exercise before starting my day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to kick off the morning. Did you manage to get a good breakfast in after your ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I blended up some frozen berries, Greek yogurt, and spinach, poured the thick mixture into a dish, and topped it with sliced bananas, chia seeds, and granola so I could eat it with a spoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yum, that sounds incredibly refreshing and filling! How has the rest of your day been at the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a busy one. We had an in-person client presentation this afternoon, so I had to look a bit more polished than usual. I wore a crisp, long-sleeved collared shirt with buttons and a pair of casual tan cotton trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Very sharp! I'm sure you made a great impression. How did the presentation go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It went really well! They loved the initial layout drafts. I just got home a little bit ago, and Leah should be back from her pottery class soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news about the client meeting! And it sounds like a relaxing evening ahead. Do you and Leah have any dinner plans tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm actually cooking tonight. I decided to make that aromatic Thai dish we learned in our cooking class—the spicy one made with coconut milk and a paste of ground green chilies and lemongrass."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds amazing! It's great that you're putting those cooking class skills to use. Are you adding any protein to it tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I'm tossing in some sliced chicken breast, along with bamboo shoots and bell peppers. It's already simmering on the stove and making the whole place smell incredible."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious, Daniel. I hope you and Leah have a wonderful dinner and a relaxing evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "cycling",
+      "outfit": "button-down and chinos",
+      "music": "not mentioned",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'long ride'"
+  ]
+}

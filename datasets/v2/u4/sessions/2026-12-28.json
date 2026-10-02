@@ -1,0 +1,82 @@
+{
+  "user_id": "u4",
+  "day": 303,
+  "date": "2026-12-28",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope you're having a good Monday morning. How is everything starting off for you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Morning! It's off to a pretty good start. I decided to make something cold and refreshing, so I blended up some frozen bananas and berries into a thick, spoonable purée, poured it into a deep dish, and threw some granola and hemp seeds on top. It was a nice treat to eat with a spoon before getting down to business."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing! Are things busy at the design firm today, or are you able to ease into the post-holiday week?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually pretty quiet today. Since I have some focus time, I decided to change up my usual background noise routine. Because of that vintage vinyl LP collection I inherited from my grandfather, I've started putting on physical albums while I work. Today, I'm spinning some mid-century syncopated saxophone and trumpet tracks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful way to honor his memory and keep focused. Those classic acoustic sounds must be wonderful to work to. How is the turntable setup working out in your place?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's working out really well. Leah and I cleared off the credenza in the living room for the player, so it's easy to flip the vinyl between tasks."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great setup. Is Minneapolis getting a lot of snow today, or are you guys staying cozy inside?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's pretty gray and chilly out, so we are definitely staying warm indoors. Leah has been working on some sketches at the dining table since her pottery class is on a winter break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's nice to have a cozy creative day inside. How is your wrist feeling lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's doing great and is fully healed, though I'm keeping things pretty low-key today and just sticking to my desk work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear it's back to 100%. Well, I'll let you get back to your design work and your music!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm going to put on another side of this horn quintet and get some more planning done."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "jazz records",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: plans to check out the new climbing gym in the new year"
+  ]
+}

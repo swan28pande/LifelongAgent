@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 607,
+  "date": "2027-10-28",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Thursday going so far in Portland? Did Olive let you sleep in at all today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Olive actually woke me up right on time at 6 AM. I ended up making a protein smoothie for breakfast, which was a good start to the day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That does sound like a great start! It's good to keep up with those nutritious breakfasts. How are things going at the high school with the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's busy as usual. We're in the middle of planning some lab assessments, so my desk is piled high with papers. I'm definitely looking forward to relaxing later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Do you and Grace have any relaxing plans lined up for this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Grace has some things to catch up on, but I'm planning to watch a sci-fi series on that new streaming service we got."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ooh, a sci-fi series sounds like a perfect escape after a busy day of science grading. By the way, how has your back been feeling lately? Still doing okay since it recovered?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, my back is completely fine now, thankfully. No issues at all, even with all the sitting I've been doing to grade papers today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful to hear. Back pain is no fun. Speaking of outdoors and physical things, how is your neighbor's vegetable garden looking these days?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's winding down for the season. They've been clearing out the spent summer crops and prepping the soil for winter. It's a lot of work, but they seem to enjoy it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It definitely takes dedication! It must be nice to see the progress. Did your trip to Japan give you any inspiration for your own yard, or did you just enjoy the beautiful scenery there?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly just enjoyed the incredible scenery and gardens over there. We still talk about how amazing the landscape architecture was. It was a trip of a lifetime."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really sounds like it was. Well, I hope you get through the rest of your grading quickly so you can get to that show."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm almost done, so I'll be queueing up that sci-fi series in no time. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "not mentioned",
+      "evening_show": "sci-fi series"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Grace is a fan of sci-fi and has similar tastes in television to Marcus"
+  ]
+}

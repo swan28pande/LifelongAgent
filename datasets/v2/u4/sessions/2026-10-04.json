@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 218,
+  "date": "2026-10-04",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Sunday. How has your weekend in Minneapolis been going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been okay, though today was a bit chaotic. Normally on Sundays, Leah and I sit down for a big mid-morning brunch, but I was running so late this morning that I had to skip it completely and just grabbed a foil-wrapped, high-protein meal-replacement bar to eat on the run."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, skipping your Sunday brunch ritual with Leah is a bummer! What had you running so far behind schedule today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I totally lost track of time editing some landscape photos I took last weekend. By the time I looked at the clock, my morning was half over and I had to rush out the door to run some errands."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, getting lost in photo editing happens! Did Leah still manage to have a nice morning? I know she's been busy with her pottery class lately."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, she actually used the extra time to head over to the studio early. She's getting really good at throwing clay; she brought home a beautifully glazed bowl the other day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It sounds like she's really finding her groove with it. Did you two manage to reconnect later in the day, maybe for dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did! To make up for the missed morning meal, we decided to cook a nice dinner together tonight. We prepared a whole seasoned bird and baked it in the oven until the skin got perfectly crispy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious and like the perfect way to spend a Sunday evening. Did you serve it with any specific sides?"
+    },
+    {
+      "speaker": "user",
+      "text": "We kept it simple with some roasted root vegetables. It definitely hit the spot after a busy day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a classic, comforting meal. Minneapolis autumns definitely call for that kind of cozy cooking."
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely, the weather is starting to get chilly, so oven-cooked meals are perfect right now. I'm just glad we got to wind down together."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein bar",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "not mentioned",
+      "dinner": "roast chicken"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'"
+  ]
+}

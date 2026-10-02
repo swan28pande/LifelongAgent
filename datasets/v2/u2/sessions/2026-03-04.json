@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 4,
+  "date": "2026-03-04",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good afternoon, Marcus! How is your Wednesday going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's been pretty good! I started the morning on a healthy note with a yogurt parfait for breakfast before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and refreshing start. Did you manage to squeeze in a workout today as well?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually. I hit the gym weights today during my break, which felt great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job making time for the gym weights! How are things at the high school? Are your chemistry students keeping you busy this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "They certainly are. We're doing acid-base titrations this week, so the lab has been pretty hectic, but the kids are actually really engaged."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Titrations are a classic! It's great to hear they're engaged. How is Grace doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great. We had a nice dinner together yesterday and we're just planning a quiet evening tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. Have you had any time lately to get back to your woodworking?"
+    },
+    {
+      "speaker": "user",
+      "text": "A little bit! I've been carving a small jewelry box lately. It's nice to work with my hands after a long day of teaching."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A jewelry box sounds like a beautiful project. Woodworking is such a wonderful creative outlet."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is. Well, I should probably get back to grading some lab reports, but I'll chat with you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "yogurt parfait",
+      "workout": "gym weights",
+      "evening_show": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a garage"
+  ]
+}

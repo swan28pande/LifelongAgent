@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 209,
+  "date": "2026-09-25",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Good morning, Sofia! How are you doing today? Did you just get off your shift at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. Yes, just finished a long night in the ER. I'm so glad to be home. I'm actually sitting down with a warm mug of spiced black tea with steamed milk right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That spiced tea latte sounds incredibly comforting after a hectic night. Did you end up using your roommate's new espresso machine to steam the milk?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did! I used the steam wand on her new machine, which worked perfectly. It's nice to have a cozy drink to help me wind down before I try to sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad the steam wand worked so well! How was the hospital last night? I hope the Phoenix ER wasn't too overwhelming."
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty intense, we had a constant flow of patients. To help my brain switch off, I've got a hilarious audio show on where two stand-up comics just roast old advice columns."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A comedy podcast is such a smart way to decompress. It completely shifts your focus. Who are the comedians?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just a couple of improvisers from Chicago, they are so witty. It's exactly the kind of mindless humor I need right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds perfect. Are you hoping to catch up with Tom later today, or is today strictly for sleeping?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom is working all day, so it's just going to be a sleep day for me. I might feed my sourdough starter later this afternoon, but that's about it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quiet day of rest and sourdough baking sounds lovely and well-deserved. Get some good sleep first!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to bed now. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "chai latte",
+      "lunch": "not mentioned",
+      "commute": "not mentioned",
+      "podcast": "comedy podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to go salsa dancing with Tom tomorrow night"
+  ]
+}

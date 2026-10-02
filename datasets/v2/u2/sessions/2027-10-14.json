@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 593,
+  "date": "2027-10-14",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Marcus! How are things going in Portland today? How is Olive doing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Olive is doing great, she's currently curled up in a sunny spot on the living room rug. Portland is getting a bit chilly, so I actually started my morning with some hot oatmeal for breakfast to warm up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is the perfect breakfast for a crisp autumn morning. How are things going at the high school? I imagine running the science department keeps you pretty busy this time of year."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. Being the head of the department means there's always some curriculum planning or lab supply inventory to sort through. It was a hectic day, so I'm really looking forward to just winding down tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You've definitely earned a relaxing evening. Do you and Grace have any fun plans to unwind tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, Grace and I are actually planning to start a new sci-fi series on that streaming service we signed up for recently."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, a sci-fi series sounds like a great choice! Is it a space exploration show or something more dystopian?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's more of a classic space exploration adventure. We both love that kind of stuff, so we're pretty excited to dive into it tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a lot of fun. By the way, did your neighbor's vegetable garden survive the shift into autumn?"
+    },
+    {
+      "speaker": "user",
+      "text": "Surprisingly, yes! They actually brought over some late-season squash yesterday. It's been really nice seeing their garden do so well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! Homegrown veggies are the best. Well, I hope you and Grace have a fantastic, relaxing evening with your new show."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll let you know how we like the series. Have a good evening!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "sci-fi series"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

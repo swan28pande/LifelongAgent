@@ -1,0 +1,83 @@
+{
+  "user_id": "u2",
+  "day": 190,
+  "date": "2026-09-06",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Marcus! Happy Sunday. How has your weekend been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been pretty good. Just a quiet Sunday morning here. I actually just finished having some oatmeal for breakfast, and now I'm just relaxing with a cup of coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is a classic Sunday breakfast. Did you put anything special in it today? Also, how are things in Portland? I heard the weather might be starting to cool down a bit."
+    },
+    {
+      "speaker": "user",
+      "text": "Just some brown sugar and a few sliced bananas. And yeah, Portland is finally getting some cooler, fall-like weather, which is honestly a relief. The summer heat was starting to get old."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and cozy. The cooler weather is perfect for getting back into a groove, especially with the new school year having just started. How has the return to teaching high school chemistry been going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been busy! The first week is always a bit chaotic trying to get the kids used to lab safety protocols and the syllabus. But I think they're a good group this year."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear. Lab safety is definitely a crucial first step! Have you had any free time for your hobbies lately, like woodworking, or has school prep taken over?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly school prep, but I did spend a couple of hours in the garage yesterday working on a small cedar jewelry box for Grace. It's nice to just zone out and focus on the wood."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful project, and I'm sure Grace will love it. How is Grace doing? Are you two planning anything fun for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing well, thanks for asking! She actually helped me sand the jewelry box a bit yesterday. As for tonight, we're planning to keep it pretty low-key. We're going to put on a nature documentary after dinner and just wind down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like the perfect way to spend a Sunday night. Do you have a specific one in mind, or are you just going to browse?"
+    },
+    {
+      "speaker": "user",
+      "text": "We found one about deep-sea marine life that we've been wanting to check out. It should be really interesting. It's nice to just relax before the school week starts up again tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Deep-sea documentaries are fascinating; the creatures down there are so alien and beautiful. I hope you and Grace enjoy it! Good luck with the students tomorrow, Marcus. Have a wonderful evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "pref_wrong: evening_show should be 'nature documentary', conversation gives 'other'"
+  ]
+}

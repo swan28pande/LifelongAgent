@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 656,
+  "date": "2027-12-16",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope your Thursday is going well. How are things at the architecture studio today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Things are good, just pretty busy. I'm keeping it comfortable at the office today—just wearing a solid jet-black tee and a pair of dark blue denim pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic, comfortable look is perfect for a busy studio day. Did you have those early client calls again this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "We did, yeah. Since I had to be up so early, I made sure my breakfast was ready to go. I just had some cold rolled oats that had been soaking in milk in the fridge since yesterday evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a smart, time-saving breakfast for those early starts. Are you and Leah still managing to find some downtime during the week? How is her pottery class going?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually loving the pottery class! She brought home a small bowl she made last week. It's a bit lopsided, but we're using it to hold our keys by the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! Lopsided has character. And how about your photography? Have you taken your camera out lately, or has work kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took some photos of the skyline from our office balcony yesterday evening. The sunset light was incredible, so I got some great shots."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, I bet that sunset was stunning over Chicago. By the way, have you had a chance to try any more recipes from that seafood and vegetarian cookbook you received?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I made a really nice herb-crusted cod dish from it a couple of days ago. It's definitely helping me keep my pescatarian meals interesting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That cod dish sounds amazing. It's great when a cookbook actually gets put to good use. Do you have any plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to play a few matches of chess online to wind down. It's been a long week, so some quiet mental strategy is exactly what I need."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "overnight oats",
+      "workout": "not mentioned",
+      "outfit": "black t-shirt and jeans",
+      "music": "not mentioned",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

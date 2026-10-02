@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 20,
+  "date": "2026-03-20",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Friday. How is your day going in Portland so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well. It's a bit rainy here, typical Portland weather. I started the day off right with a toasted bagel for breakfast, which was really good."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A bagel is always a solid choice to kick off a Friday. How are things at the high school? Are the chemistry students keeping you busy today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They definitely are. My high school chemistry classes have been doing labs all day, so I've been running around making sure nobody accidentally burns the place down. I'm definitely ready for the weekend."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine that keeping you on your toes! You've definitely earned a break. Do you and Grace have any big plans for the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too crazy. Grace and I are just planning to order some food and watch a cooking competition show on TV tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, cozy Friday night. Do you two have a favorite cooking competition show you're currently following?"
+    },
+    {
+      "speaker": "user",
+      "text": "We usually just find whatever culinary face-off is streaming and put it on. It's fun to watch the chefs scramble under pressure while we just relax on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is the perfect low-stress entertainment. Have you had any time for your woodworking lately, or has teaching been taking up most of your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually got to spend a couple of hours doing some woodworking yesterday afternoon. It's always nice to get out to the garage and just focus on making something with my hands."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to unwind after a busy day of teaching. It's nice that you can get that quiet time in your shop."
+    },
+    {
+      "speaker": "user",
+      "text": "It really is the perfect balance for me. Anyway, I should get back to wrapping up my lesson plans for next week so I can officially start my weekend. Talk to you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "bagel",
+      "workout": "not mentioned",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to build a small cedar box"
+  ]
+}

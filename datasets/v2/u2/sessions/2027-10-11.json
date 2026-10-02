@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 590,
+  "date": "2027-10-11",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Monday. How is your week starting out? Did you manage to get some rest over the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's starting out pretty busy, but good. I actually kicked off the morning by heading over to do some gym weights. I wanted to get a good workout in before the school day got crazy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a great way to start the week! How is your back holding up with the gym weights? Fully recovered and feeling strong, I hope?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, thankfully my back feels completely fine now. I was careful, but lifting today felt really good. Tonight is going to be much lower key. Grace and I are planning to just relax and watch a sci-fi series."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A sci-fi series sounds like the perfect way to unwind. Is this on that new streaming service you signed up for recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "It is! We decided to check out what they had, and we found this show. It's been pretty entertaining so far."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Excellent. It's nice to have a go-to show to look forward to in the evenings. How are things going at the school? I imagine being the head of the science department keeps you on your toes now that the school year is in full swing."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. We're in the middle of planning some lab assessments, so my plate is pretty full. But the department staff is great, so we're managing the workload well."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear the department is running smoothly despite the busy schedule. Have you had any time to get out on the court for tennis lately, or has work taken over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually got to play a couple of sets on Saturday. It was a beautiful day for it here in Portland. It's getting a bit chillier, but still perfect tennis weather."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful. Portland autumns can be beautiful for outdoor sports. And how is Olive doing? Is she keeping you and Grace company during your TV time?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. Olive usually curls up right between us on the couch the second we turn the TV on. She's doing great."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "gym weights",
+      "evening_show": "sci-fi series"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: he and Grace love space exploration stories"
+  ]
+}

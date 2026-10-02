@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 83,
+  "date": "2026-05-22",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Friday. How is your day wrapping up in Minneapolis? How are things going with Leah?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Things are going really well. Leah and I had a great dinner date last night, but today was just a super busy day at the design firm. I actually ended up getting some grilled beef patties on sesame buns to go from the joint down the street so I could just eat at my desk and keep working."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A quick burger at your desk sounds like a classic way to power through a Friday crunch. Did you listen to anything in particular to keep your focus while you worked?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I needed to block out the office chatter, so I put on some chill instrumental hip-hop tracks with mellow jazz samples. Having that lyric-free rhythm in the background always helps me concentrate on drawing up my floor plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those downtempo, wordless beats are fantastic for deep focus. It sounds like you were really in the zone. What was the dress code like at the office today? Did you have any formal client presentations?"
+    },
+    {
+      "speaker": "user",
+      "text": "No meetings today, thankfully. I went very casual and just wore a cozy knit pullover with some comfortable dark denim pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "You can't go wrong with a relaxed, warm outfit like that, especially for a productive Friday. Are you still planning on participating in that spring 10K you signed up for?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I'm still registered and looking forward to the big day. It's coming up soon, so it's been on my mind."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great to hear! It'll be a fun event. Do you and Leah have any interesting plans lined up for the rest of the weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "We're thinking of heading over to the Stone Arch Bridge tomorrow to take some photos if the weather is nice. We both want to spend some time outdoors."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. The Stone Arch Bridge is a fantastic spot for photography. Since you eat a pretty diverse omnivorous diet, are there any new restaurants you two are hoping to try out while you're out and about?"
+    },
+    {
+      "speaker": "user",
+      "text": "We might check out a new steakhouse that just opened nearby, or maybe a local gastropub. Since I eat pretty much anything, it's always easy for us to find a spot that works."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Having so many options makes planning dinner easy! I hope you have a wonderful, relaxing weekend and get some great shots with your camera."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll let you know how the photography excursion goes next time we chat."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "sweater and jeans",
+      "music": "lo-fi beats",
+      "dinner": "takeout burgers"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'rest day'"
+  ]
+}

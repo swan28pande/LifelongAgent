@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 305,
+  "date": "2026-12-30",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope you're staying warm in Minneapolis today. How has your Wednesday been going so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's freezing outside, but I'm doing well. I started the morning on a bright note with a thick, blended fruit concoction in a dish, piled high with sliced bananas, chia seeds, and granola."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a vibrant way to start a winter morning, even if it's cold. Did you manage to get any movement in today, or are you staying cozy inside?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually bundled up in my heavy winter gear and went for a brisk ride on my road bike around the neighborhood. Pedaling against that wind was tough, but it felt great to get some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, cycling in late December in Minnesota is impressive! You've got some serious dedication. How are things looking at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Pretty busy! I had an important client pitch this afternoon, so I swapped my usual casual sweater for a sharp, tailored structured jacket and some formal pressed trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! Dressing the part always helps boost confidence for a big presentation. I hope the pitch went smoothly. Did you listen to anything good while preparing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks, I think it went really well. To stay focused beforehand, I put on some of those classic syncopated brass and piano vinyl albums from my grandfather's collection. There's nothing like old-school improvisation to get you in a creative flow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. Having that physical connection to your grandfather's collection must make the listening experience even better. Do you and Leah have any plans for the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do. We're going to recreate that vibrant, spicy green coconut-milk dish with the herbal paste that we learned to make during our Thai cooking class."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds absolutely mouthwatering! A spicy, warming dish is the perfect antidote to a cold Minneapolis night. Have you two made it often since the class?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've made it a couple of times, but tonight we're adding some fresh bamboo shoots and chicken. It's definitely becoming one of our favorite comfort foods."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "cycling",
+      "outfit": "blazer and slacks",
+      "music": "jazz records",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'stationary bike'",
+    "invention: Daniel has a stationary trainer in his basement."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 382,
+  "date": "2027-03-17",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going in Minneapolis? Are you getting some downtime today, or is the design firm keeping you busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a productive day so far. I started early by heading out on foot to get some miles in around the neighborhood, just a nice steady jog to wake up. Afterwards, I made a thick blended fruit puree in a dish, topped with pumpkin seeds and granola."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A morning jog and a fresh fruit puree dish sounds like an energetic start to the day. Did you have a lot on your plate at work after that?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did have a few client presentations today, so I actually dressed up a bit more than usual. I put on a structured tailored jacket paired with dress trousers to look the part."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds very professional! It's always nice to dress up a bit for client meetings. How did the presentations go?"
+    },
+    {
+      "speaker": "user",
+      "text": "They went really well! Between meetings, I've been catching up on emails at my desk while spinning some vintage bebop and swing LPs on the turntable to help me focus."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! It's great you're getting so much use out of your grandfather's collection. Do you and Leah have any plans for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "We do! We're actually going to recreate the spicy, herb-infused coconut-milk stew with that distinct vibrant color that we learned to make in our Thai cooking class. We've been wanting to try making it from scratch again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That vibrant coconut stew is delicious! It's wonderful that you two are putting those cooking class skills to use. How has Leah's pottery class been going lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's loving it. She actually brought home a hand-thrown vase yesterday that she's really proud of. The glaze turned out beautifully."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic! Have you had a chance to test your wrist with any climbing or photography lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took some close-up photos of her new vase this morning with my camera to practice my lighting. As for climbing, my wrist feels great, so I might head to that new gym across town later this week."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "running",
+      "outfit": "blazer and slacks",
+      "music": "jazz records",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: outfit should be 'blazer and slacks', conversation gives 'other'"
+  ]
+}

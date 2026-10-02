@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 22,
+  "date": "2026-03-22",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Happy Sunday, Marcus! How is your weekend going in Portland so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Nice and relaxing. I actually started the day by making some pancakes for breakfast."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pancakes are the perfect way to start a Sunday. Did you have a busy morning after that, or are you keeping things low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both. I wanted to get moving, so I went and did gym weights for my workout today. Now I'm just resting up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice job getting that gym weights session in! It always feels good to get a workout done early. Do you have any lesson planning to finish up today for your chemistry classes tomorrow?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I have a little bit of prep to do for my high school chemistry students, but nothing too overwhelming. I'll probably tackle that in a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's good to hear. Hopefully it doesn't take up too much of your afternoon. Is Grace helping you wind down today, or is she busy with her own Sunday routine?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's just relaxing too. We're both planning on a pretty quiet evening. We're actually going to watch a nature documentary tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like a great, relaxing way to spend a Sunday night. Do you have a specific one picked out already?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not yet, we'll probably just browse and find a good nature documentary once we sit down."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Fair enough! Sometimes the search is half the fun. Well, I hope the chemistry prep goes quickly and you both enjoy the show tonight."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "pancakes",
+      "workout": "gym weights",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Marcus and Grace love deep-sea creatures and nature documentaries."
+  ]
+}

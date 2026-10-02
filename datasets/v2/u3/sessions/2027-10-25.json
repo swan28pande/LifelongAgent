@@ -1,0 +1,81 @@
+{
+  "user_id": "u3",
+  "day": 604,
+  "date": "2027-10-25",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Monday starting off in Tucson? Are you working the day shift at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hi! Yes, I'm at the clinic today. It's been a busy morning, but I got a good start at home by brewing a simple pot of filtered coffee before heading out."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A classic home brew is always a great way to kick off a busy shift. Did you end up driving your hybrid car in today, or did you take a different route?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did drive myself in today. The traffic wasn't too bad, thankfully, so it was a pretty smooth ride."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a relief! Did you have a chance to listen to that true-crime podcast your coworker recommended during the drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, my podcast routine has completely changed recently. Since we adopted Dash, our rescue greyhound, I've started listening to a show focused on dog training and canine behavior instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes total sense! How is Dash doing? Are the tips from the episodes helping out?"
+    },
+    {
+      "speaker": "user",
+      "text": "He's doing great, and yes, the advice has been super helpful for getting him settled in. It's nice to have some expert guidance."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that! Between Dash and your outpatient clinic shifts, have you and Tom had any time to think more about the wedding plans for summer 2028?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've talked about it a little bit, but we're taking our time. There's no rush since it's still a while away."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely, it's nice to just enjoy the engagement. Are you planning on fitting in any sourdough baking or Italian lessons this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm hoping to do an Italian lesson online tonight, and maybe I'll bake a loaf of sourdough on my next day off if I have the energy."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "dog training podcast"
+    },
+    "statements": {},
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Dash is very timid and has anxiety"
+  ]
+}

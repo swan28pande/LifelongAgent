@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 536,
+  "date": "2027-08-18",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! I hope your Wednesday is going well. How are things in Chicago? Did Leah have another session of her pottery class this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, she actually went on Monday. Things are good, just incredibly busy today. My morning routine was totally thrown off. I had to skip my regular blended fruit and seed bowl because I had an early morning meeting with a prospective client. We ended up getting a heavy plate of scrambled eggs, hashbrowns, and toast at a classic local greasy spoon instead."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A hearty diner breakfast is definitely a big change from your usual fruit bowl! How did the meeting with the client go?"
+    },
+    {
+      "speaker": "user",
+      "text": "It actually went really well! We got a lot of design details ironed out. When I finally got to my desk, I needed some focus music, so I put some classic Miles Davis and John Coltrane LPs on the turntable. Having those syncopated brass improvisations spinning on vinyl from my grandfather's collection really helped me plow through the rest of my morning work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to spend the morning. Your grandfather's record collection has so many gems in it. Did the rest of your workday go smoothly?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, the afternoon got pretty chaotic. A project wrap-up session dragged on way past normal business hours, and by the time I finally finished up, it was so late that I completely bypassed my evening meal altogether. I just didn't have the energy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, you didn't eat anything at all tonight? On a typical Wednesday, you'd usually be preparing that spicy green coconut milk dish with bean curd and vegetables. You must have been completely exhausted."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I usually look forward to making that tofu green curry, but tonight I was just too wiped out to cook or even think about eating. I just headed straight home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I don't blame you. Sometimes a busy day just drains all your energy. Hopefully, you can get some good rest tonight. Have you had any chance to unwind with chess lately, or has work been taking up all your free time?"
+    },
+    {
+      "speaker": "user",
+      "text": "I played a quick online match last night, but nothing over-the-board. I'm hoping to get a proper game in this weekend. Leah's shifts at the hospital have been pretty demanding lately too, so our schedules have been a bit out of sync."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Pediatric hospital hours can be incredibly tough. I hope you both get some quality time to catch up soon. Did she end up finishing the clay vase she was working on?"
+    },
+    {
+      "speaker": "user",
+      "text": "She did! It's sitting on our living room shelf now. It's a little bit lopsided, but it has a lot of character and we both love it. Anyway, I think I'm going to turn in early tonight and try to catch up on sleep."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great idea. Get some rest, Daniel, and I hope tomorrow is much more relaxing for you!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "diner breakfast",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "jazz records",
+      "dinner": "skipped dinner"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 466,
+  "date": "2027-06-09",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How's your Wednesday going? Are things busy at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Yes, incredibly busy. I'm heading up a new project and have been drafting all morning. I've been spinning some classic Miles Davis and John Coltrane vinyl at my desk to help me stay focused."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A little syncopated instrumental music is perfect for staying in the zone! It's great you're getting some use out of your grandfather's old collection. How is your wrist feeling with all that drafting?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's fully recovered and feeling great, thanks. In fact, to take a break from staring at my monitor, I laced up my sneakers and did a quick four miles on foot around the neighborhood at lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news about your wrist, and it must have felt wonderful to get some fresh air. You've really kept up your cardiovascular endurance since completing that 10K! How's the weather in Chicago today?"
+    },
+    {
+      "speaker": "user",
+      "text": "The Chicago weather is absolutely gorgeous today—sunny and not too humid yet. It was the perfect afternoon to get outside and move."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It really is the best time of year there. How is Leah doing? Has she had any downtime from her shifts at the hospital to work on her pottery?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's been pretty exhausted from her pediatric shifts, but she did manage to finish a beautiful ceramic bowl in class last night. We're actually going to use it tonight for dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, how lovely! What are you planning on serving in her new creation?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm whipping up a spicy Thai dish with coconut milk, green chili paste, and chunks of bean curd. Since I'm pescatarian, it's one of my favorite meat-free meals to make."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! It's great to see those skills from your Thai cooking class getting put to good use. Does Leah enjoy that spicy kick too?"
+    },
+    {
+      "speaker": "user",
+      "text": "She loves it! She's always a fan when I cook this, so we're both looking forward to a relaxing evening together."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "running",
+      "outfit": "not mentioned",
+      "music": "jazz records",
+      "dinner": "tofu green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'running', conversation gives 'lakefront run'"
+  ]
+}

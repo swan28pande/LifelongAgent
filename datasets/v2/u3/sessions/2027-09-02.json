@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 551,
+  "date": "2027-09-02",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going? Did you have a busy morning shift at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's been a pretty non-stop morning. I ended up driving myself to work today in the hybrid because I was running a bit late. I definitely needed a pick-me-up, so I made myself an espresso over ice with cold water before heading out the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That hybrid definitely comes in handy for those rushed mornings! And a chilled americano—or your homemade version of it—is the perfect fuel. Did you have any audio to keep you company during the drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! Since I signed up for that online Italian course, I decided to listen to some language learning audio lessons on the road today. It's a nice way to practice the pronunciation while sitting in traffic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a brilliant way to multitask! How is the language learning coming along? And did you manage to get a decent break for lunch today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's coming along slowly but surely! For lunch, I actually brought a sandwich made with my latest homemade wild yeast bread. I packed it with some turkey and cheese, and it really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds delicious! Your sourdough baking always sounds so impressive. Did you use a new starter or the same one you've been nurturing?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm still using my trusty old starter. It's been very active lately with the Tucson heat, even inside with the AC on. I got a really nice rise on this loaf."
+    },
+    {
+      "speaker": "assistant",
+      "text": "The heat here in Tucson definitely speeds up the fermentation! Speaking of big projects, how are things going with planning the wedding for summer 2028? Have you and Tom been looking at venues lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've actually started browsing a few spots online, but we're trying not to stress ourselves out this early. Tom is super relaxed about it, which helps. We're just enjoying being engaged for now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very healthy approach. There's plenty of time, so taking it slow is smart. Are you heading straight home after your shift today, or do you have any evening plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm just going to head home, relax with Tom, and maybe do a little more Italian practice. It was a long day at the clinic, so a quiet evening is exactly what I need."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "iced americano",
+      "lunch": "sourdough sandwich",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning to look at wedding venues this weekend"
+  ]
+}

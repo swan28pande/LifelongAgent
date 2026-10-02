@@ -1,0 +1,76 @@
+{
+  "user_id": "u2",
+  "day": 625,
+  "date": "2027-11-15",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Monday. How is your week starting out in Portland? Are you keeping busy at the high school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yes, it's a pretty busy Monday as usual for the science department. But I started the day off right. I actually made some eggs and toast for breakfast this morning, which gave me a good energy boost."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great, solid breakfast to kick off the school week. Did you get a chance to play any tennis over the weekend, or was it mostly prep for the classes?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did manage to get on the court for a bit on Saturday. It was nice to play a few games, though the weather was a bit damp. Mostly, Grace and I just tried to keep things low-key."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. How is Grace doing? Did she have a relaxing weekend too?"
+    },
+    {
+      "speaker": "user",
+      "text": "She did! We actually spent some time yesterday catching up and reading. Olive kept us company, of course. She insisted on sitting right on Grace's book for half the afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Classic Olive! Cat logic at its finest. Do you have any plans for the rest of your evening once you get home from school?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much, honestly. I'm looking forward to a quiet night. I think I'm just going to queue up some sitcom reruns on that new streaming service we signed up for."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are the perfect way to unwind after a long day of teaching. Do you have a favorite show you like to go back to?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do, there are a couple of old favorites I can watch over and over. They're just easy, comforting background noise while I relax. Plus, Olive usually cuddles up on my lap once the TV is on."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect Monday evening setup. I hope you get to enjoy your relaxing night!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs and toast",
+      "workout": "other",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

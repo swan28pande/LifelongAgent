@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 268,
+  "date": "2026-11-23",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Happy Monday. How is your day starting out at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's off to a good start. I actually took the light rail train into work this morning instead of driving, which gave me some time to relax."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a peaceful way to start the week. Did you end up listening to that true-crime podcast your coworker recommended during the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I started the first episode of that real-life murder mystery series, and I'm already hooked. It made the commute fly by."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! It's always great when a recommendation hits the spot. Hey, did you get to try out your roommate's new espresso machine before you left?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not today. I was running a bit behind, so I just opted for a standard cup of drip coffee to get me moving. Sometimes you just want a classic brewed cup, you know?"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Totally agree, sometimes a simple drip coffee is exactly what you need. How is the rest of your day looking? Have you had a chance to eat lunch yet?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just finished lunch, actually. I brought a turkey sandwich made with a couple of slices of my latest sourdough loaf. It turned out really crusty and delicious."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds amazing! Your sourdough baking skills seem to get better with every batch. Did Tom get to try any of this latest loaf?"
+    },
+    {
+      "speaker": "user",
+      "text": "He did! I brought some over to his place yesterday. We had a nice, quiet Sunday after going out salsa dancing on Saturday night."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Salsa dancing sounds like a blast! It must feel great to have your energy completely back after recovering from the flu recently."
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, absolutely. I'm feeling completely back to normal. Phoenix has had some beautiful fall weather too, so I might try to walk around a bit after my shift ends today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to wrap up a Monday shift. Enjoy the beautiful evening, Sofia!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "true-crime podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: The user is planning to go salsa dancing with Tom later this week."
+  ]
+}

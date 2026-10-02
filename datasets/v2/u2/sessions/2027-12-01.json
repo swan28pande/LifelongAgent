@@ -1,0 +1,76 @@
+{
+  "user_id": "u2",
+  "day": 641,
+  "date": "2027-12-01",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How's your Wednesday going so far in Portland? Did you and Grace manage to stay dry today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Yeah, we did, though it's been pretty damp. I started the day on a good note, though—had some eggs and toast for breakfast, which really hit the spot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a classic, satisfying breakfast! How have things been at the high school lately? Are things busy in the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "They really are. We're getting closer to the winter break, so the kids are getting a bit restless and the grading is starting to pile up. But I'm managing to keep on top of it all."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine the pre-break energy is quite high! Have you had any time to get out on the tennis court lately to blow off some steam?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a couple of sets yesterday afternoon. It was great to get out there and hit some balls, even if my serve was a little rusty."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Glad you got some court time in! What are your plans for this evening? Just relaxing at home?"
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. Grace and I are planning to just unwind on the couch. We'll probably put on some sitcom reruns on that new streaming service we got."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are perfect for a cozy Wednesday night. Is Olive going to join you on the couch?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. She usually curls up right on Grace's lap the second the TV turns on. She's a creature of habit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "She sounds like the perfect TV companion. I hope you and Grace have a wonderfully relaxing evening watching your show!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm definitely looking forward to it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "eggs and toast",
+      "workout": "other",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

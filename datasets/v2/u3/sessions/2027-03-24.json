@@ -1,0 +1,73 @@
+{
+  "user_id": "u3",
+  "day": 389,
+  "date": "2027-03-24",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going so far? How are things at the clinic in Phoenix?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a bit of a chaotic morning, to be honest. I completely overslept, so I had to rush out the door. I didn't even get to make my usual matcha latte—I just had to skip my morning drink entirely today."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, oversleeping is the worst! I hope you weren't too late for your shift. Did you at least manage to get some food on the way?"
+    },
+    {
+      "speaker": "user",
+      "text": "No breakfast, but luckily I did grab the lunch I prepped last night. I packed a sandwich made with my homemade sourdough, so that really saved me once I finally got a break."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sourdough must have been a lifesaver. Sourdough sandwiches are always so much better than regular bread. Did you have to rush to drive to work, or how did you get there?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, since I was running late, driving in Phoenix traffic would have been a nightmare, so I just ran and caught the light rail instead. It's usually much more predictable when I'm in a rush."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move! The light rail definitely saves you from that highway stress. Did you get a chance to listen to that true-crime podcast your coworker recommended on the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually didn't! Instead, I decided to put on an Italian learning podcast to practice some vocabulary. It was nice to just zone out and practice the pronunciation during the trip."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Che bello! How is the Italian course coming along overall? Is Tom practicing with you at all, maybe for the wedding plans?"
+    },
+    {
+      "speaker": "user",
+      "text": "He tries, but his accent is hilarious! We're mostly just focusing on the big wedding details for summer 2028 right now, so the language learning is mostly just my little project."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a fun dynamic! It's great you have that commute time to yourself to study. How is the rest of your shift looking at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's settling down now, thankfully. The afternoon should be a bit quieter than the morning rush. I'm just looking forward to getting home and relaxing tonight."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "skipped her morning drink",
+      "lunch": "sourdough sandwich",
+      "commute": "light rail",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

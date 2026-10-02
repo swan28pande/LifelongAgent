@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 493,
+  "date": "2027-07-06",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday starting out? Is the summer heat in Tucson keeping you indoors, or have you been busy with your sourdough baking?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, it is scorching today! I did bake a loaf yesterday, but today I'm just trying to stay cool. I actually just finished my morning drink—I skipped my roommate's fancy espresso machine and just brewed a simple pot of standard drip coffee to keep things easy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a classic cup of brewed coffee is exactly what you need. Did you have a smooth trip getting into the clinic for your shift today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was pretty smooth! I ended up taking my hybrid car today and driving myself in, which was nice since I have some errands to run after work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds very convenient. Did you get a chance to listen to that true-crime podcast your coworker recommended on the way over?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually decided to switch things up. Since I'm taking that online Italian course, I listened to an audio language lesson podcast in the car instead to get some extra study time in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's a fantastic way to utilize your commute! How are you finding the Italian lessons so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's definitely a challenge, but practicing the vocabulary during the drive really helps the grammar stick. It feels great to make some progress."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I bet! Squeezing in that practice will definitely pay off. How are things looking at the outpatient clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's a bit busy, but very manageable. I'm just glad to be fully back to my normal energy levels and working hard after recovering from that flu a while back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear you're feeling back to 100%! Are you planning on doing any more baking later this week, or is it just too hot to run the oven?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll hold off on the baking until the weekend. Turning the oven up to 450 degrees is a bit much in this Tucson heat, so I'll just relax this evening instead!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning a honeymoon in Italy"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 646,
+  "date": "2027-12-06",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! How is your Monday starting off at the architecture studio?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there. It's been pretty busy, but I've been keeping focused by spinning some of those vintage bebop and swing vinyl albums from my grandfather's stash while drawing up some building plans."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds like a wonderful way to ease into the workweek. It's great that you're putting his old collection to good use! How is the volume working out with your neighbor's trumpet practice?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, the music completely drowned out the trumpet playing today, which was a huge relief. Between that and our early 7 am client calls, it's been a very full day, so I'm looking forward to a relaxing evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can imagine! Are you and Leah planning anything special for dinner tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I'm on dinner duty tonight. I decided to recreate that stir-fried rice noodle dish with tamarind sauce, bean sprouts, and prawns that we learned to make in our Thai culinary class."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely delicious! It's a perfect pescatarian meal. Were you able to find all the right ingredients easily?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, our local market had some really fresh seafood, so I got lucky. Leah's going to be thrilled when she gets home from her pottery class to a hot meal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm sure she will appreciate that so much. It's wonderful that you're both keeping up with the recipes from that class. Have you had any time for your photography lately, or has work been taking up all your energy?"
+    },
+    {
+      "speaker": "user",
+      "text": "The studio has been demanding, but I did manage to take my camera out over the weekend to capture some of the winter light reflecting off the high-rises downtown."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Chicago has such striking lines in the winter. Well, I will let you get started on prepping those noodles. I hope you and Leah have a great evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm off to get the wok ready. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "jazz records",
+      "dinner": "shrimp pad thai"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

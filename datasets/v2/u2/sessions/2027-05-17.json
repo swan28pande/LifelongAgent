@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 443,
+  "date": "2027-05-17",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How are things starting off for you this Monday in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Pretty good so far, thank you. Just trying to start the week on a healthy note. I had a protein smoothie for breakfast this morning before getting things ready for school."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie sounds like a great, energetic start to the week. How is your lower back feeling? Are you still managing to keep up with your recovery?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's getting there, slowly but surely. For my workout today, I just stuck to doing my physical therapy stretches to make sure I don't aggravate it again."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Smart move. It's definitely best to play it safe and stick to those stretches. Have you had a chance to check on your neighbor's vegetable garden lately, or has work at the high school been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did chat with them briefly yesterday. The garden is looking really nice! But yes, things are definitely busy at the school. Being head of the science department means there's always paperwork to catch up on, especially as we near the end of the term."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can only imagine! You must have a lot on your plate. Is Grace helping you keep things balanced at home, or is Olive the one keeping you entertained?"
+    },
+    {
+      "speaker": "user",
+      "text": "A bit of both! Olive has been curling up on my lap while I grade papers, which is nice. Grace and I are planning a pretty low-key evening tonight to wind down from the Monday rush."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect way to spend a Monday evening. Do you two have any specific plans tonight, or just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just taking it easy. We're going to put on some sitcom reruns on TV and just zone out for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sitcom reruns are perfect for that—no stress, just comfortable laughs. Well, I hope you have a relaxing evening and that your back continues to feel better with those stretches!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate that. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "physical therapy stretches",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: has a deck"
+  ]
+}

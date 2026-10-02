@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 291,
+  "date": "2026-12-16",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Wednesday going so far over in chilly Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going pretty well, though it is definitely freezing today. I actually braved the crisp air this morning and took my bicycle out for a ride on the paved trails around the lakes before starting my workday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, getting out on two wheels in mid-December in Minnesota is impressive! How is your wrist holding up with that? It's been a while since the cast came off, right?"
+    },
+    {
+      "speaker": "user",
+      "text": "The wrist felt great, thanks for asking! No stiffness at all gripping the handlebars. After I got back and showered, I made a thick blended fruit puree in a dish, topped it with granola and sliced bananas, and ate it with a spoon. It's a nice refreshing post-ride meal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and highly energizing! Did you head into the design firm office today, or are you working from home?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm at the office today. I dressed up a bit more than usual—threw on a structured sport coat and some smart, tailored trousers instead of my usual casual wear."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A very sharp look! Do you have some big presentations or meetings on the schedule today as project lead?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, we have a couple of major design reviews this afternoon. To help me focus while prepping the files, I've had some relaxing, low-tempo instrumental tracks with that cozy vinyl crackle playing in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those chilled-out instrumental vibes are perfect for concentration. How is Leah doing, by the way? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is loving it! She actually brought home a hand-thrown bowl yesterday. We might use it tonight, because we're planning to cook that aromatic, spicy coconut-milk dish with the green chili paste that we learned to make a while back."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to showcase her new pottery! A warm, spicy Thai curry is the ultimate comfort food for a winter evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. It's the perfect way to warm up after a busy day. I should get back to these design reviews now, but I'll let you know how the dinner turns out!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "cycling",
+      "outfit": "blazer and slacks",
+      "music": "lo-fi beats",
+      "dinner": "green curry"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: workout should be 'cycling', conversation gives 'stationary bike'"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "user_id": "u4",
+  "day": 681,
+  "date": "2028-01-10",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Monday starting off at the studio?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! Pretty good, though it's freezing here in Chicago today. Just settling in with my morning coffee."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Chicago winters can be brutal! Are those early 7 am client calls still keeping you busy, or has the pace slowed down since the design competition deadline?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thankfully, those early morning calls have wrapped up for now, so I got a bit of a breather today. I'm just catching up on emails and reviewing some blueprints."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a much more relaxed start to the week. Did you wear something comfortable to match the slower pace?"
+    },
+    {
+      "speaker": "user",
+      "text": "Absolutely. I went super casual today—just a plain, jet-toned tee and some comfortable blue denim trousers. It feels good not to overthink it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nothing beats a classic, simple outfit when you want to focus. How is the atmosphere at the studio? Did your coworker show up in another full suit today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, yes, he did! A full three-piece suit again. The contrast between my casual denim and his formalwear is pretty funny. It's quite a vibe in the office right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is quite a contrast! Do you have some background music playing to help you zone out any distractions?"
+    },
+    {
+      "speaker": "user",
+      "text": "I do. I've got some instrumental compositions from the romantic and baroque eras playing on my speakers. It really helps me concentrate on these design layouts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Ah, those eras are perfect for focusing. Have you had any time for chess lately, or has the studio been taking up all your free hours?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a couple of quick matches online last night. It's a nice way to wind down. Though I'm still trying to find time to get my camera out for some photography soon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Hopefully the Chicago weather clears up enough for a photo walk soon! And how is Leah doing? Has she had time to work on any new projects in her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She actually finished a really nice ceramic bowl last week. She's loving the class, and it's a great break from her busy shifts at the hospital."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful! It's great she has that creative outlet. Well, I'll let you get back to your blueprints and symphonies."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "black t-shirt and jeans",
+      "music": "classical",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

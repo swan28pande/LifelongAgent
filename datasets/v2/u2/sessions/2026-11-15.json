@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 260,
+  "date": "2026-11-15",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! Happy Sunday. How is your weekend going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well, thanks. Typical rainy Portland Sunday, so I'm just taking it easy today. I started the morning off with a warm bowl of oatmeal."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is perfect for a chilly, rainy morning. Are you planning to spend some time in your woodworking shop today, or are you keeping it low-key?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did spend a couple of hours out there earlier working on a small cedar box. It's a nice way to clear my head before the busy school week starts."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to spend the afternoon. How have things been at school lately? Still keeping busy as the head of the science department?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. Between lesson planning and managing department meetings, it's been a hectic term since the school year started, but I'm managing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad to hear you're managing it all. Is Grace keeping busy as well?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! We actually spent some time yesterday looking at guidebooks for our Japan trip next spring. We're getting really excited about it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That trip is going to be amazing! It's great that you two are already diving into the planning. Do you have any plans for the rest of this evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not much, just planning to unwind. I think I'm just going to relax on the couch and watch some sitcom reruns tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing Sunday night. Do you have a favorite show you like to revisit?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, any of the classic comedy shows will do. It doesn't require too much focus, which is exactly what I need right now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes those familiar episodes are the absolute best way to recharge. I hope you have a wonderful, restful evening and a great week ahead at school!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you later."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "not mentioned",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

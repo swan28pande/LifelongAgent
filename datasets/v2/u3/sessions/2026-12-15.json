@@ -1,0 +1,85 @@
+{
+  "user_id": "u3",
+  "day": 290,
+  "date": "2026-12-15",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Tuesday going?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I started the day with a bit of a change. Instead of my usual coffee, I whisked some of that green tea powder into steamed milk to make a hot matcha latte. It was really nice and earthy."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a delicious and calming way to start the morning. Did you get to use your roommate's new espresso machine to steam the milk for it?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, I just heated it up on the stove today, but it still turned out great. It gave me a nice, steady boost for my shift at the clinic."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's always nice when a simple morning routine works out so well. How has the day-shift at the outpatient clinic been treating you today?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been busy, but the team here in Phoenix is great. Plus, my commute was much less stressful today because I rode the city's light rail line instead of driving."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's smart! Avoiding the traffic on the light rail must make a big difference in how you start your workday."
+    },
+    {
+      "speaker": "user",
+      "text": "It really does. I was able to just sit back and look out the window without worrying about highway traffic, which was a nice change of pace."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a little quiet time to just zone out is exactly what you need before a busy shift. Are you planning to do any baking or salsa dancing later this week?"
+    },
+    {
+      "speaker": "user",
+      "text": "I might feed my sourdough starter tonight to bake some bread on my day off, but no concrete plans yet. Mainly I'm just looking forward to catching up with Tom later."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds lovely. How are things going with Tom?"
+    },
+    {
+      "speaker": "user",
+      "text": "Really good! We're just going to make a simple dinner at his place tonight and relax after we both finish work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect, low-key way to spend a Tuesday evening. I hope you have a great dinner and a relaxing night!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thank you! I'm about to finish up my shift here and head home, so I'll talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "matcha latte",
+      "lunch": "not mentioned",
+      "commute": "light rail",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'music instead'",
+    "invention: The user owns a hand frother.",
+    "invention: The user and Tom are planning to go for a walk around the desert botanical garden this weekend."
+  ]
+}

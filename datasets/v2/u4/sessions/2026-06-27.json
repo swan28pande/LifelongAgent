@@ -1,0 +1,77 @@
+{
+  "user_id": "u4",
+  "day": 119,
+  "date": "2026-06-27",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Saturday. How is your weekend starting off in Minneapolis? Have you and Leah been up to anything fun today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty nice, relaxed morning. I actually treated myself to a nice breakfast—made some fluffy, grid-patterned batter cakes pressed in a hot iron and drizzled them with syrup."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, those iron-pressed grid cakes sound amazing! A perfect Saturday morning treat. Did you have a quiet morning after that, or did you head out?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually had to head into the design firm for a few hours to finish up a rendering deadline. Since it was a weekend, I kept it comfortable and wore a warm knitted pullover paired with my favorite blue denim trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A knit pullover and denim is the perfect cozy uniform for a weekend office run. I hope the rendering came together just the way you wanted. Are you officially off the clock now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yep, all done and back home. Leah is actually at her pottery class right now, so I have the place to myself for a bit."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! How is she enjoying the pottery class lately? Has she brought home any finished pieces?"
+    },
+    {
+      "speaker": "user",
+      "text": "She has! She made this really cool glazed bowl last week. It's got some minor imperfections, but I think that gives it character. It's great seeing her enjoy it so much."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful, handmade pottery has so much charm. Are you two planning to catch up and grab some food together later?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, we're having a nice dinner tonight. I'm going to grill up a couple of thick, juicy cuts of seared beef ribeye on the barbecue."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A grilled beef ribeye sounds like an incredible Saturday night feast! Are you going with a classic garlic butter sear or keeping it simple?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some coarse salt, pepper, and a bit of rosemary. Simple is definitely best. It'll be a great way to wind down the weekend here in Minneapolis."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "waffles",
+      "workout": "not mentioned",
+      "outfit": "sweater and jeans",
+      "music": "not mentioned",
+      "dinner": "steak"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: dinner should be 'steak', conversation gives 'other'",
+    "invention: lives in an apartment"
+  ]
+}

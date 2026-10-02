@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 517,
+  "date": "2027-07-30",
+  "weekday": "Friday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Friday. How is your day going at the design firm so far?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a bit of a whirlwind morning, to be honest. I actually completely bypassed my morning meal today. Normally, I absolutely have to grab one of those buttery, crescent-shaped French pastries from the bakery down the street, but I had to rush out for a super early on-site inspection first thing this morning, so I went without any food before lunch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "An early site visit will definitely disrupt the routine! I hope the inspection went smoothly and you aren't feeling too drained now."
+    },
+    {
+      "speaker": "user",
+      "text": "It went really well, actually! The client was happy, which is always a relief. But yeah, I was running on empty for a while. I finally got back to my desk to catch up on some design layouts, and I really needed some good tunes to keep my energy levels high while I work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Music is the best way to refocus after a busy morning. What kind of playlist do you have going today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I've been streaming a lot of independent alternative rock bands—you know, that fuzzy, melodic college-radio guitar style. It has just the right amount of energy to keep me focused without being too distracting."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect vibe for powering through Friday afternoon. How are things going with Leah? I know she's been busy with her new pediatrician role at the hospital."
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing great! It's definitely a demanding job, but she loves working with the kids. She actually has her pottery class later today, so she'll be busy with that for a chunk of the evening."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's wonderful she's enjoying both her work and her pottery. How about you? Any plans to spin some of those vintage vinyl records you inherited from your grandfather tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "That's exactly what I was thinking! It's the perfect way to unwind after a crazy week. Just putting on some of those old LPs and relaxing."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly relaxing. And how is your wrist feeling lately? Are you planning to take your camera out around Chicago this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "My wrist is completely healed and feels great, thanks for asking! And yes, I'm definitely planning to wander around the city with my camera. The summer light in Chicago has been beautiful lately, so I want to capture some street scenes."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful weekend. I hope you get some great shots and have a relaxing couple of days!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you next week!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "skipped breakfast",
+      "workout": "not mentioned",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: music should be 'indie rock', conversation gives 'other'"
+  ]
+}

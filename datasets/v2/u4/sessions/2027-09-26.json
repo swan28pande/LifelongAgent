@@ -1,0 +1,85 @@
+{
+  "user_id": "u4",
+  "day": 575,
+  "date": "2027-09-26",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Sunday going? I know you've been working hard on that major design competition at the firm lately—how are things coming along with that?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, I have some huge news. We finally submitted our entry for the design competition earlier today! It was down to the wire, but we got everything uploaded and sent off."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That is fantastic news! Congratulations on getting it submitted. It must be such a massive weight off your shoulders after all those weeks of intense preparation. Did you have to go into the office today to put the finishing touches on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I did. I ended up heading in for a few hours to make sure the final rendering formats were perfect. Since it was a Sunday and a bit more relaxed, I didn't dress up too much—just wore a long-sleeved collared shirt and a pair of casual twill trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a comfortable but professional choice for a weekend office session. Was the office pretty empty while you were wrapping things up? Did you put on any background music to keep you focused?"
+    },
+    {
+      "speaker": "user",
+      "text": "It was completely quiet, which was great. I had the whole floor to myself, so I actually played some independent alternative guitar bands on the speakers to keep my energy up while I worked."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like the perfect atmosphere to cross the finish line. Now that the big submission is officially done, how are you spending the rest of your Sunday? Have you had a chance to relax and grab some dinner?"
+    },
+    {
+      "speaker": "user",
+      "text": "I just got back home a little while ago and put together a sheet pan of caramelized root veggies and squash that I baked in the oven."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and comforting after such a busy day. It's always nice to have a warm, home-cooked meal after a high-pressure deadline. Do you have any plans to celebrate the submission tonight, or are you just taking it easy?"
+    },
+    {
+      "speaker": "user",
+      "text": "Honestly, I'm just planning on a very low-key evening. I think I might log online and play a couple of chess matches to completely unplug my brain from design work."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Playing some chess sounds like a great way to unwind. Have you been playing many classical games lately, or are you sticking to faster blitz matches?"
+    },
+    {
+      "speaker": "user",
+      "text": "Mostly blitz lately since my schedule was so packed with the competition, but tonight I might actually take my time with a longer rapid game. It'll be nice to just focus on the board without a ticking clock stressing me out."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "indie rock",
+      "dinner": "roast vegetables"
+    },
+    "statements": {
+      "deadline.1": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": false,
+        "linked": false,
+        "reason_given": false
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "reason_given: no reason may be given for today's dinner"
+  ]
+}

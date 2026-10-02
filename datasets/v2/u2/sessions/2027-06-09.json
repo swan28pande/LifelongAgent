@@ -1,0 +1,82 @@
+{
+  "user_id": "u2",
+  "day": 466,
+  "date": "2027-06-09",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey there! It's going pretty well, thanks. Started off on the right foot with a nice, warm bowl of oatmeal for breakfast, so I've had good energy all day."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oatmeal is always a solid choice to power through the morning. How is Olive doing today? Did she try to steal any of your breakfast?"
+    },
+    {
+      "speaker": "user",
+      "text": "Haha, no, Olive was mostly interested in finding the warmest sunny spot on the living room rug. She's doing great. I actually managed to squeeze in a run for my workout today while she was napping."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great! How did the run feel? I know you recovered from that lower back strain a while ago, but I always like to make sure you're feeling good."
+    },
+    {
+      "speaker": "user",
+      "text": "The back felt absolutely perfect, thanks for asking. No issues at all. I ran past my neighbor's place and saw they've been spending a lot of time on that vegetable garden they started."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's the perfect season for gardening! It must be nice to see the neighborhood greening up. Do you and Grace have any big plans for the rest of the evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too crazy. We're both pretty tired, so we are just going to wind down and watch a nature documentary tonight."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A nature documentary sounds like a wonderfully relaxing way to spend a Wednesday evening. Have you been finding any time for tennis or your woodworking lately, or has the science department kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did get a chance to play some tennis last weekend, which was fun. Woodworking has been on the back burner, though. Even with the school year winding down, there's always a ton of administrative wrap-up to handle as department head."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I can only imagine how much paperwork and organizing that involves. It's good you got some tennis in, at least! How has the weather in Portland been treating you for your outdoor runs?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually been classic June weather here—nice and warm but not too hot yet. It was really pleasant for my run earlier."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds absolutely ideal. I hope you and Grace have a wonderful, relaxing evening watching your documentary!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. Talk to you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "oatmeal",
+      "workout": "run",
+      "evening_show": "nature documentary"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: plans to build a planter box for his yard"
+  ]
+}

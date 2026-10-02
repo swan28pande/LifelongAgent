@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 613,
+  "date": "2027-11-03",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going in Tucson? How are things at the clinic today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty steady Wednesday. The weather here in Tucson is absolutely beautiful today. I actually ended up driving my hybrid car to work today instead of taking my usual route, just because I have to run some errands right after my shift."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That makes sense, it's nice to have the car when you need to get things done quickly. How is the hybrid running?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's running great! Super smooth. Since I drove, I was able to bring a cooler bag with me. For lunch, I packed a homemade bowl with brown rice, black beans, shredded chicken, salsa, and avocado."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect lunch to pack. Did you listen to anything interesting on your commute this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did! I put on a new podcast that's all about canine psychology and positive reinforcement training. I really enjoy learning more about how dogs learn."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds fascinating! Are you hoping to try out some of those training ideas with Dash?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Dash is such a sweet greyhound, and I love finding new, gentle ways to keep his mind active and keep him engaged. He's been doing so well lately."
+    },
+    {
+      "speaker": "assistant",
+      "text": "He sounds like such a great companion. How has your online Italian course been going lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's going well! I've been trying to do a short lesson in the evenings. It's a lot of vocabulary to memorize, but I'm really enjoying it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Consistency is key! And how are things coming along with the wedding planning for summer 2028? Have you and Tom looked at any venues recently?"
+    },
+    {
+      "speaker": "user",
+      "text": "We've looked at a few online, but we haven't booked any visits yet. We are just taking it slow and trying to enjoy being engaged for now."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "homemade burrito bowl",
+      "commute": "driving",
+      "podcast": "dog training podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Dash has mild leash reactivity."
+  ]
+}

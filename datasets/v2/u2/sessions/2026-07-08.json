@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 130,
+  "date": "2026-07-08",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Wednesday going over in Portland?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well so far. I had a nice, quiet morning. Made myself a yogurt parfait for breakfast, which was a great start."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Yogurt parfaits are always a delicious way to start the day. How is Grace doing today?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's doing well! She had an early start today, but we did get to catch up briefly before I headed out for my workout. I went for a run this morning to get some fresh air."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's great. How was the run? The Portland weather must have been nice and cool early on."
+    },
+    {
+      "speaker": "user",
+      "text": "It was actually perfect—just a light breeze and not too warm yet. Definitely made the run a lot more enjoyable."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Perfect running weather is the best. Do you have any big plans for the rest of your evening?"
+    },
+    {
+      "speaker": "user",
+      "text": "Nothing too crazy. I think Grace and I are just going to relax on the couch and watch a cooking competition show."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A cooking competition show sounds like the perfect way to unwind! Do you have a favorite one you're watching, or are you just browsing?"
+    },
+    {
+      "speaker": "user",
+      "text": "We usually just find a fun cooking competition show where they have to make things with mystery ingredients. It's really entertaining to watch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those are always so intense but highly addictive! I hope you both enjoy it and have a relaxing night."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm looking forward to it. Catch up with you tomorrow!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "yogurt parfait",
+      "workout": "run",
+      "evening_show": "cooking competition show"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_wrong: evening_show should be 'cooking competition show', conversation gives 'other'"
+  ]
+}

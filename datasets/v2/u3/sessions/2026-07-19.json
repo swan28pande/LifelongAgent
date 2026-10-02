@@ -1,0 +1,89 @@
+{
+  "user_id": "u3",
+  "day": 141,
+  "date": "2026-07-19",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! Hope you're having a good Sunday. How are things going in Phoenix? Are you resting up today or working another shift at the hospital?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Actually, I didn't have to make any journey to or from work today, which is a massive relief because I've been feeling absolutely terrible. I came down with a really nasty case of the flu yesterday."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, I'm so sorry to hear that! The flu is exhausting, especially on top of your demanding ER shifts. How are you holding up today?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm surviving, but definitely miserable. I actually had to change up my usual morning drink routine today because of this flu; I brewed a hot mug of freshly steeped ginger root to help soothe my throat and stomach instead of my normal drink."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very smart adjustment. Fresh ginger is wonderful for a sore throat and nausea. Have you been able to keep any food down today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, thankfully. For lunch, I managed to heat up a container of food I'd saved from a meal I cooked earlier in the week. Having those packed leftovers ready to go was a lifesaver since I have zero energy to cook."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's a huge relief you had those ready. Getting some nutrients will definitely help you recover. Is Tom around to help take care of you, or are you flying solo today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Tom wanted to come over, but I told him to stay away so he doesn't catch it! He's been checking in on me though. I've just been lying on the couch, listening to an audio program focused on recent updates in the medical and wellness world to keep my mind occupied."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Probably wise to keep him at a safe distance for now! That podcast sounds right up your alley as an ER nurse. Did they cover anything interesting today?"
+    },
+    {
+      "speaker": "user",
+      "text": "They did a segment on recent clinical trials that was quite fascinating. Honestly, it was just nice to have some quiet background noise, especially since I didn't have to travel anywhere for a shift today. Not having to deal with a commute while feeling this achy is the best silver lining."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Absolutely, avoiding the Phoenix heat and a drive to the hospital is exactly what you need right now. I imagine you'll have to put your salsa dancing on hold for a bit too?"
+    },
+    {
+      "speaker": "user",
+      "text": "Oh, definitely. No dancing for me for at least a week, which is sad, but my body just needs to rest. I'm going to try to take a nap now."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Go get some rest, Sofia! I hope you start feeling better soon. Reach out if you need anything."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "statement_missing: flu.0 ([her flu] came down with the flu (happened) (this happened on 2026-07-18))"
+  ],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "ginger tea",
+      "lunch": "packed leftovers",
+      "commute": "no commute",
+      "podcast": "health news podcast"
+    },
+    "statements": {
+      "flu.0": false
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: flu.0 ([her flu] came down with the flu (happened) (this happened on 2026-07-18))"
+  ]
+}

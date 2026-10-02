@@ -1,0 +1,76 @@
+{
+  "user_id": "u4",
+  "day": 434,
+  "date": "2027-05-08",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Hope you're having a good weekend. How is everything going in Chicago today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well, though I actually had to do a bit of unexpected prep work for the design firm today. I even ended up dressing the part to stay in the zone—threw on a neat button-up collared shirt and some lightweight cotton trousers."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, working on a Saturday? I hope it's nothing too stressful. What kind of project prep are you tackling?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just organizing some client feedback on our latest layouts. To keep my energy up while sorting through it all, I've had some independent alternative rock bands playing in the background."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a solid way to power through. Hopefully, you can wrap that up soon and enjoy the rest of your weekend. Are you planning on doing any rock climbing now that your wrist is fully healed?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. I'm hoping to head over to that new gym across town sometime soon. My wrist feels completely back to normal, which is a huge relief."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! It must feel great to have that strength back. How has Leah been doing? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She brought home a new mug she made last week. It's a little lopsided but has a lot of character. Her schedule at the hospital keeps her pretty busy, but the class is a nice escape."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's wonderful, a handmade mug sounds lovely! Have you found any time for your photography today or recently, or has work been taking up most of your creative energy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually took my camera out to the lakefront last weekend. The lighting was perfect, and I got some great shots of the Chicago skyline. It was nice to just wander and shoot."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a beautiful afternoon. The skyline views there are hard to beat. I hope you get to put the work away soon and have a relaxing evening!"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, I'm just closing my laptop now. Time to enjoy the rest of the evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "not mentioned",
+      "outfit": "button-down and chinos",
+      "music": "indie rock",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

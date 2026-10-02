@@ -1,0 +1,75 @@
+{
+  "user_id": "u3",
+  "day": 320,
+  "date": "2027-01-14",
+  "weekday": "Thursday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Thursday going at the clinic?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going pretty well so far. I actually took the train in today instead of driving, and the ride on the light rail was surprisingly peaceful."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a nice, relaxing way to start your day. Traffic in Phoenix can be so hectic. How has the shift itself been?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a busy morning, but I finally sat down for a break. I just finished heating up some of the extra dinner I brought from home."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Nice! There's nothing better than a warm, home-cooked meal during a busy shift. Did you make something special last night?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just some roasted veggies and chicken. It was nice not to have to go out and buy something."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Definitely a time-saver. Have you had any time for your sourdough baking lately, or has work kept you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did a bake earlier this week! The loaf turned out really well, with a great crust."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's awesome to hear! Sourdough can be tricky, but it sounds like you've got the hang of it. Did Tom get to try any of it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, he did! He came over and had a few slices with butter. He loved it."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm glad he approved! What are your plans for the rest of the day once your shift wraps up?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'll just head back home on the train, do some quick cleaning, and have a quiet night in."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "not mentioned",
+      "lunch": "packed leftovers",
+      "commute": "light rail",
+      "podcast": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: podcast should be 'not mentioned', conversation gives 'music instead'"
+  ]
+}

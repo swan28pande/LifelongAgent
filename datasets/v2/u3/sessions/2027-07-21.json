@@ -1,0 +1,83 @@
+{
+  "user_id": "u3",
+  "day": 508,
+  "date": "2027-07-21",
+  "weekday": "Wednesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Sofia! How is your Wednesday going over in Tucson? I hope the heat isn't too intense today."
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! Oh, it's definitely hot, but I'm surviving. My morning started off pretty low-key. I decided to bypass my roommate's fancy espresso machine and just brewed a standard pot of drip coffee to fill my travel mug."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Sometimes a classic drip coffee is exactly what you need to get the day started. Did you have an easy trip into the outpatient clinic this morning?"
+    },
+    {
+      "speaker": "user",
+      "text": "It wasn't too bad! I ended up driving myself in today, taking my hybrid. Traffic on the usual route was actually moving pretty smoothly for once."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's always a relief. Did you get a chance to queue up that true-crime podcast your coworker recommended for the drive?"
+    },
+    {
+      "speaker": "user",
+      "text": "You know, I thought about it, but I actually opted for an Italian language learning podcast instead to get some extra practice in."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, what a productive use of your commute! How is the online Italian course coming along overall?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's coming along! It's challenging but really fun. I'm just trying to get the pronunciation down, which is why the audio lessons help so much."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Consistency is key with languages, so that's great. Have you had any time to feed your sourdough starter or do any baking lately?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually fed my starter yesterday! I'm planning to bake a simple country loaf this weekend if my schedule at the clinic allows."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious. I hope you get the time for it. How have you been feeling lately? Are you completely recovered from that bout of flu?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, absolutely. I'm completely back to my usual energy levels now. Having the flu was rough, but I'm glad it's fully behind me."
+    },
+    {
+      "speaker": "assistant",
+      "text": "I'm so glad to hear that! Well, I hope the rest of your shift at the clinic goes smoothly and you have a relaxing evening."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I appreciate it. I'll chat with you later!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 2,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "morning_drink": "drip coffee",
+      "lunch": "not mentioned",
+      "commute": "driving",
+      "podcast": "Italian lessons podcast"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: planning a honeymoon with Tom after their 2028 wedding"
+  ]
+}

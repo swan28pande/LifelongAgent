@@ -1,0 +1,74 @@
+{
+  "user_id": "u2",
+  "day": 430,
+  "date": "2027-05-04",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Marcus! How is your Tuesday going so far in Portland? Did you and Grace have a good start to the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a busy one. I started off on the right foot with a quick protein smoothie for breakfast, which gave me some good energy for the morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A protein smoothie is a great way to fuel up. Did you have a chance to fit in any of your usual activities today, like tennis or working on some woodworking projects?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually did play some tennis early this morning, which felt great. But unfortunately, things went a bit downhill after I got to school. I ended up straining my lower back lifting boxes of science supplies."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, I'm so sorry to hear that! Straining your lower back is incredibly painful. Have you been able to rest it or put some ice on it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I've got a heating pad on it now. It's definitely pretty stiff and sore, but hopefully, if I keep off my feet, it'll start to feel better by tomorrow."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Good call. You definitely don't want to push it, especially after playing tennis earlier today. Is Grace helping you keep comfortable?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is, she brought me some water and made sure I didn't try to lift anything else. Olive is also keeping me company on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Olive is the perfect nurse! What are your plans for the rest of the evening while you recover?"
+    },
+    {
+      "speaker": "user",
+      "text": "I think I'm just going to lie here and watch some sitcom reruns. It doesn't require much effort, and a few laughs will distract me from the back pain."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a very wise plan. Sitcom reruns are perfect comfort food for the brain when you need to just lie still and heal."
+    },
+    {
+      "speaker": "user",
+      "text": "Exactly. I'm just going to take it easy tonight and hope the rest does the trick. Thanks for checking in!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 1,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "protein smoothie",
+      "workout": "tennis",
+      "evening_show": "sitcom reruns"
+    },
+    "statements": {
+      "back_injury.0": true
+    },
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": []
+}

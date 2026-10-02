@@ -1,0 +1,84 @@
+{
+  "user_id": "u4",
+  "day": 246,
+  "date": "2026-11-01",
+  "weekday": "Sunday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Sunday going over in Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's been a really nice Sunday so far. Leah and I started the day by heading out for a late-morning hybrid breakfast-and-lunch together. It was great to just sit and chat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect, relaxing Sunday morning with Leah. Did you have any other plans for the day?"
+    },
+    {
+      "speaker": "user",
+      "text": "Well, I actually got some great news yesterday. I went to the clinic on Saturday and finally got my cast taken off! The doctor said the bone is fully mended and my wrist is completely healed."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that is wonderful news! It must feel incredible to finally have that wrist healed and free from the cast. Are you able to move it around normally now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, it feels so much better! In fact, because it's healed up, I was finally able to return to an earlier exercise routine that I've been missing. I celebrated by doing a gentle full-body stretching and flow sequence on my mat this afternoon."
+    },
+    {
+      "speaker": "assistant",
+      "text": "A gentle flow session is a perfect way to ease back into physical activity after a fracture. I'm so glad you could get back to that routine. Did you spend the rest of the day resting?"
+    },
+    {
+      "speaker": "user",
+      "text": "Not the whole day, actually. I had to pop into the design firm for a few hours to prep some blueprints for a big project tomorrow. I wore a nice collared shirt and some casual cotton pants since I wanted to look somewhat professional just in case anyone else was around."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Even on a Sunday, the architect's work never stops! Hopefully the office was quiet enough for you to get a lot done."
+    },
+    {
+      "speaker": "user",
+      "text": "It was completely empty, which was perfect. To stay focused while I worked on the drawings, I listened to some relaxed, low-tempo instrumental grooves on my headphones."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those calm instrumental vibes are always great for drafting and focusing on design. Did you manage to finish up everything you needed to?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yes, I got all the layouts sorted out. Now I'm finally back home and looking forward to just relaxing for the rest of the evening."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 4,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "brunch with Leah",
+      "workout": "yoga",
+      "outfit": "button-down and chinos",
+      "music": "lo-fi beats",
+      "dinner": "not mentioned"
+    },
+    "statements": {
+      "wrist.1": true
+    },
+    "causes": {
+      "c0": {
+        "event_mentioned": true,
+        "linked": true,
+        "reason_given": true
+      }
+    },
+    "inventions": []
+  },
+  "first_try_failures": [
+    "statement_missing: wrist.1 ([his wrist fracture] his cast came off and the wrist healed (happened) (this happened on 2026-10-31))"
+  ]
+}

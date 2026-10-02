@@ -1,0 +1,80 @@
+{
+  "user_id": "u4",
+  "day": 458,
+  "date": "2027-06-01",
+  "weekday": "Tuesday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! How is your Tuesday going?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's going well. I had a really nice start to the day. I made this thick, icy purée of blended berries and bananas that I ate with a spoon, topped with some crunchy granola and coconut flakes. It was perfect for the warm morning."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds incredibly refreshing. Are you working from home today, or heading into the design firm?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm working from home today, focusing on some project lead planning. Since I don't have to face clients in person, I kept my outfit completely casual—just a soft, checkered long-sleeve cotton shirt and some classic blue denim pants."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's nothing better than a comfortable work-from-home uniform. Do you have any music playing in the background to help you focus on your planning?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, yes! I've been spinning some of those vintage vinyls with the brass solos and swing rhythms from my grandfather's collection. It's the perfect background vibe."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It's wonderful you're getting so much use out of his record collection. It must sound great. How is Leah doing? Is she still enjoying her pottery class?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's loving it! She actually has a session tonight, so she'll be out for a bit. That means I'm in charge of making dinner."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! What are you planning to make for yourself and Leah when she gets back?"
+    },
+    {
+      "speaker": "user",
+      "text": "I'm going to grill some seasoned whitefish and fold it into soft corn tortillas with a bit of cilantro lime slaw and avocado. Quick, easy, and fits the pescatarian lifestyle perfectly."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds delicious and fresh. I hope she enjoys her class and dinner! Have you had any time for your photography lately, or has work been keeping you too busy?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually managed to sneak out with my camera last weekend. The late afternoon light along the lakefront was incredible, so I got some great shots."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds beautiful. Chicago's lakefront has some of the best views. Well, have a great evening with your vinyl and dinner!"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "smoothie bowl",
+      "workout": "not mentioned",
+      "outfit": "flannel and jeans",
+      "music": "jazz records",
+      "dinner": "fish tacos"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}

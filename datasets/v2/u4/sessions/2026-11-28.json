@@ -1,0 +1,86 @@
+{
+  "user_id": "u4",
+  "day": 273,
+  "date": "2026-11-28",
+  "weekday": "Saturday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hey Daniel! Happy Saturday. How is your weekend in Minneapolis starting off? Did you get a chance to get outside today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's pretty chilly here today but dry. I didn't go climbing, but I did manage to spend several hours on two wheels this morning, logging some serious distance out on the roads."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a great way to start the weekend! Your wrist is holding up well during those long bicycle sessions, I take it?"
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, the wrist feels completely normal now, thankfully. It's great to be able to grip the handlebars for hours without any issues."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news. Did you have any other plans for today, or just catching up on some relaxation?"
+    },
+    {
+      "speaker": "user",
+      "text": "Actually, I had to log on and get some work done for a bit this afternoon. I had some independent guitar-driven bands playing in the background to keep my focus while I went through some design firm files."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Even on a Saturday, the project lead duties call! Hopefully the music helped you power through those files quickly."
+    },
+    {
+      "speaker": "user",
+      "text": "It did, though unfortunately an unexpected project meeting ran incredibly late into the evening. Because of that, I ended up bypassing the evening meal entirely tonight, even though I'd planned on making my usual steak."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh no, what a bummer! Going without any food at all after a busy day and a huge bike ride must be tough, especially when you had your heart set on a steak."
+    },
+    {
+      "speaker": "user",
+      "text": "Yeah, I was really looking forward to it, but by the time the meeting wrapped up, I was just too exhausted to even think about food and went straight to relaxing on the couch."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Completely understandable. Sometimes quiet time takes priority. Is Leah keeping busy with her pottery class this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "She is! She's actually at the studio today working on some new pieces. I'm hoping she brings home something cool."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's exciting! I hope you get to relax for the rest of the night. Let me know if you need anything else, Daniel."
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! I'm just going to unwind with a movie. Talk to you tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 3,
+  "passed_validation": true,
+  "failures": [],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "long ride",
+      "outfit": "not mentioned",
+      "music": "indie rock",
+      "dinner": "skipped dinner"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "invention: Has a big client launch next week",
+    "invention: Normally has a ribeye at home with Leah on Saturday nights",
+    "invention: Plans to do photography tomorrow"
+  ]
+}

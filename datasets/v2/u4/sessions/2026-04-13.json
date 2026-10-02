@@ -1,0 +1,78 @@
+{
+  "user_id": "u4",
+  "day": 44,
+  "date": "2026-04-13",
+  "weekday": "Monday",
+  "turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hi Daniel! Happy Monday. How is everything going at the design firm today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty intense start to the week, to be honest. I've been grinding away on some really complex structural schematics. Because I needed to fully concentrate on these intricate details, I actually worked in absolute, complete stillness today. Not a single sound in my office."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Wow, total quiet! That sounds like a big shift. Is it unusual for you to work without any background noise?"
+    },
+    {
+      "speaker": "user",
+      "text": "Definitely. Normally, I have my favorite indie rock playlists running to keep the energy up, but today's drafting demanded deep, undivided attention, so any kind of melody would have been a distraction. The silence really helped me lock in, though."
+    },
+    {
+      "speaker": "assistant",
+      "text": "It’s great that you were able to find that zone of deep focus when you needed it. Hopefully the schematics turned out well! Did you manage to get a break over the weekend to recharge? Maybe a bike ride around Minneapolis?"
+    },
+    {
+      "speaker": "user",
+      "text": "I did, actually! I took my bike out for a long ride around the Chain of Lakes yesterday. The Minneapolis spring weather is finally starting to show up, which was great."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a perfect weekend activity. Did Leah tag along with you on the ride?"
+    },
+    {
+      "speaker": "user",
+      "text": "No, she had some family things to attend to, so it was just a solo trek. But I brought my camera along and stopped a few times to take some pictures."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, nice! What kind of subjects caught your eye on the trail?"
+    },
+    {
+      "speaker": "user",
+      "text": "I got some really neat close-ups of the tiny green buds starting to appear on the branches, and a few wide shots of the city skyline reflecting off the water. It was nice to just slow down and focus on composition."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Those sound beautiful. It’s always rewarding to capture those first signs of spring. Are you planning to do any editing on those photos tonight?"
+    },
+    {
+      "speaker": "user",
+      "text": "Probably not tonight, I think my brain is pretty tired from all the drafting today. I'm just going to have a low-key evening and rest up for tomorrow."
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "validator_model": "gemini-3.1-pro-preview",
+  "attempts": 5,
+  "passed_validation": false,
+  "failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ],
+  "extracted": {
+    "preferences": {
+      "breakfast": "not mentioned",
+      "workout": "other",
+      "outfit": "not mentioned",
+      "music": "silence",
+      "dinner": "not mentioned"
+    },
+    "statements": {},
+    "causes": {},
+    "inventions": []
+  },
+  "first_try_failures": [
+    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+  ]
+}
