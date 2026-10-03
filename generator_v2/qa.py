@@ -422,10 +422,9 @@ class QABuilder:
                 tags = ["set"] if f.cardinality == "multi" else []
                 if not vals:
                     tags.append("empty")
-                ev = sorted({d for v in vals for d in self._fact_evidence(f.entity, v)}) or [1]
-                # Skip "none" answers backed only by the day-1 fallback — no
-                # conversation ever discussed this entity, so the question is
-                # unanswerable from dialogue evidence.
+                # Only include evidence up to the question's day
+                ev = sorted({d for v in vals for d in self._fact_evidence(f.entity, v)
+                             if d <= day.day}) or [1]
                 if not vals and ev == [1]:
                     continue
                 if f.cardinality == "single":

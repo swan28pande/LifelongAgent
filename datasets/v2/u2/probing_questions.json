@@ -58,25 +58,28 @@
         },
         {
           "id": "u2_p202603_0003",
-          "original_id": "u2_q0042",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Saturday, 2026-03-14?",
-          "answer": "pancakes",
+          "original_id": "u2_q0383",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Marcus's city of residence?",
+          "answer": "Portland, Oregon",
           "answer_type": "value",
           "accept": [
-            "pancakes"
+            "Portland, Oregon"
           ],
           "evidence_days": [
-            14
+            1
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 31,
           "probe_date": "2026-03-31",
           "probe_month": "2026-03",
           "is_retrospective": false,
-          "tags": []
+          "tags": [
+            "control",
+            "city"
+          ]
         },
         {
           "id": "u2_p202603_0004",
@@ -125,9 +128,34 @@
           "tags": [
             "exception"
           ]
+        },
+        {
+          "id": "u2_p202603_0006",
+          "original_id": "u2_q0382",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Marcus's relationship status?",
+          "answer": "married to Grace",
+          "answer_type": "value",
+          "accept": [
+            "married to Grace"
+          ],
+          "evidence_days": [
+            2
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 31,
+          "probe_date": "2026-03-31",
+          "probe_month": "2026-03",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "relationship"
+          ]
         }
       ],
-      "num_questions": 5,
+      "num_questions": 6,
       "num_retrospective": 0
     },
     {
@@ -136,20 +164,21 @@
       "viewpoint_day": 61,
       "questions": [
         {
-          "id": "u2_p202604_0006",
-          "original_id": "u2_q0304",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "workout",
-          "question": "On Saturday, 2026-04-11, Marcus's workout was rest day instead of the usual run. Was that a lasting change?",
-          "answer": "No - it was a one-off (felt tired); the usual routine continued.",
-          "answer_type": "yes_no",
+          "id": "u2_p202604_0007",
+          "original_id": "u2_q0187",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show routine in April 2026?",
+          "answer": "alternates week by week: cooking competition show, then nature documentary, repeating (7-day blocks starting Sun 2026-03-01)",
+          "answer_type": "free_text",
           "accept": [
-            "no"
+            "alternating weeks of a cooking competition show and nature documentaries"
           ],
           "evidence_days": [
-            42,
-            43
+            1,
+            2,
+            5
           ],
           "grading": "llm_judge",
           "viewpoint_day": 61,
@@ -157,30 +186,8 @@
           "probe_month": "2026-04",
           "is_retrospective": false,
           "tags": [
-            "exception"
+            "initial"
           ]
-        },
-        {
-          "id": "u2_p202604_0007",
-          "original_id": "u2_q0017",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Saturday, 2026-04-04?",
-          "answer": "pancakes",
-          "answer_type": "value",
-          "accept": [
-            "pancakes"
-          ],
-          "evidence_days": [
-            35
-          ],
-          "grading": "exact",
-          "viewpoint_day": 61,
-          "probe_date": "2026-04-30",
-          "probe_month": "2026-04",
-          "is_retrospective": false,
-          "tags": []
         },
         {
           "id": "u2_p202604_0008",
@@ -208,29 +215,25 @@
         },
         {
           "id": "u2_p202604_0009",
-          "original_id": "u2_q0187",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show routine in April 2026?",
-          "answer": "alternates week by week: cooking competition show, then nature documentary, repeating (7-day blocks starting Sun 2026-03-01)",
-          "answer_type": "free_text",
+          "original_id": "u2_q0017",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Saturday, 2026-04-04?",
+          "answer": "pancakes",
+          "answer_type": "value",
           "accept": [
-            "alternating weeks of a cooking competition show and nature documentaries"
+            "pancakes"
           ],
           "evidence_days": [
-            1,
-            2,
-            5
+            35
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 61,
           "probe_date": "2026-04-30",
           "probe_month": "2026-04",
           "is_retrospective": false,
-          "tags": [
-            "initial"
-          ]
+          "tags": []
         },
         {
           "id": "u2_p202604_0010",
@@ -303,6 +306,31 @@
         },
         {
           "id": "u2_p202604_0013",
+          "original_id": "u2_q0304",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "workout",
+          "question": "On Saturday, 2026-04-11, Marcus's workout was rest day instead of the usual run. Was that a lasting change?",
+          "answer": "No - it was a one-off (felt tired); the usual routine continued.",
+          "answer_type": "yes_no",
+          "accept": [
+            "no"
+          ],
+          "evidence_days": [
+            42,
+            43
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 61,
+          "probe_date": "2026-04-30",
+          "probe_month": "2026-04",
+          "is_retrospective": false,
+          "tags": [
+            "exception"
+          ]
+        },
+        {
+          "id": "u2_p202604_0014",
           "original_id": "u2_q0084",
           "type": "recall",
           "capability": "episodic_recall",
@@ -332,28 +360,6 @@
       "probe_month": "2026-05",
       "viewpoint_day": 92,
       "questions": [
-        {
-          "id": "u2_p202605_0014",
-          "original_id": "u2_q0132",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Sunday, 2026-05-10?",
-          "answer": "cooking competition show",
-          "answer_type": "value",
-          "accept": [
-            "cooking competition show"
-          ],
-          "evidence_days": [
-            71
-          ],
-          "grading": "exact",
-          "viewpoint_day": 92,
-          "probe_date": "2026-05-31",
-          "probe_month": "2026-05",
-          "is_retrospective": false,
-          "tags": []
-        },
         {
           "id": "u2_p202605_0015",
           "original_id": "u2_q0050",
@@ -422,25 +428,29 @@
         },
         {
           "id": "u2_p202605_0018",
-          "original_id": "u2_q0147",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Saturday, 2026-05-30?",
-          "answer": "cooking competition show",
-          "answer_type": "value",
+          "original_id": "u2_q0190",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "workout",
+          "question": "What was Marcus's workout routine in May 2026?",
+          "answer": "a 3-day cycle starting Sun 2026-03-01: gym weights for 2 days, then run for 1 days, repeating",
+          "answer_type": "free_text",
           "accept": [
-            "cooking competition show"
+            "3-day cycle of two gym days then a run"
           ],
           "evidence_days": [
-            91
+            1,
+            2,
+            4
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 92,
           "probe_date": "2026-05-31",
           "probe_month": "2026-05",
           "is_retrospective": false,
-          "tags": []
+          "tags": [
+            "initial"
+          ]
         },
         {
           "id": "u2_p202605_0019",
@@ -463,6 +473,28 @@
           "probe_month": "2026-05",
           "is_retrospective": false,
           "tags": []
+        },
+        {
+          "id": "u2_p202605_0020",
+          "original_id": "u2_q0132",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Sunday, 2026-05-10?",
+          "answer": "cooking competition show",
+          "answer_type": "value",
+          "accept": [
+            "cooking competition show"
+          ],
+          "evidence_days": [
+            71
+          ],
+          "grading": "exact",
+          "viewpoint_day": 92,
+          "probe_date": "2026-05-31",
+          "probe_month": "2026-05",
+          "is_retrospective": false,
+          "tags": []
         }
       ],
       "num_questions": 6,
@@ -473,28 +505,6 @@
       "probe_month": "2026-06",
       "viewpoint_day": 122,
       "questions": [
-        {
-          "id": "u2_p202606_0020",
-          "original_id": "u2_q0141",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Friday, 2026-06-19?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            111
-          ],
-          "grading": "exact",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": []
-        },
         {
           "id": "u2_p202606_0021",
           "original_id": "u2_q0092",
@@ -521,6 +531,147 @@
         },
         {
           "id": "u2_p202606_0022",
+          "original_id": "u2_q0338",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "hobbies",
+          "question": "What were Marcus's hobbies on 2026-06-25?",
+          "answer": "woodworking",
+          "answer_type": "free_text",
+          "accept": [
+            "woodworking"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
+          "id": "u2_p202606_0023",
+          "original_id": "u2_q0047",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Tuesday, 2026-06-09?",
+          "answer": "oatmeal",
+          "answer_type": "value",
+          "accept": [
+            "oatmeal"
+          ],
+          "evidence_days": [
+            101
+          ],
+          "grading": "exact",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202606_0024",
+          "original_id": "u2_q0289",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "workout",
+          "question": "When did Marcus's workout routine change from the gym weights / run routine to the gym weights / rest day / run / tennis routine?",
+          "answer": "2026-06-29",
+          "answer_type": "date",
+          "accept": [
+            "2026-06-29"
+          ],
+          "evidence_days": [
+            120,
+            121
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": [
+            "shift",
+            "implicit"
+          ]
+        },
+        {
+          "id": "u2_p202606_0025",
+          "original_id": "u2_q0330",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Marcus's job on 2026-06-25?",
+          "answer": "high school chemistry teacher",
+          "answer_type": "value",
+          "accept": [
+            "high school chemistry teacher",
+            "high school chemistry teacher"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "exact",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202606_0026",
+          "original_id": "u2_q0341",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "hobbies",
+          "question": "What were Marcus's hobbies on 2026-06-09?",
+          "answer": "woodworking",
+          "answer_type": "free_text",
+          "accept": [
+            "woodworking"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
+          "id": "u2_p202606_0027",
+          "original_id": "u2_q0014",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Wednesday, 2026-06-03?",
+          "answer": "yogurt parfait",
+          "answer_type": "value",
+          "accept": [
+            "yogurt parfait"
+          ],
+          "evidence_days": [
+            95
+          ],
+          "grading": "exact",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202606_0028",
           "original_id": "u2_q0364",
           "type": "duration",
           "capability": "temporal_arithmetic",
@@ -545,95 +696,7 @@
           ]
         },
         {
-          "id": "u2_p202606_0023",
-          "original_id": "u2_q0030",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Sunday, 2026-06-28?",
-          "answer": "pancakes",
-          "answer_type": "value",
-          "accept": [
-            "pancakes"
-          ],
-          "evidence_days": [
-            120
-          ],
-          "grading": "exact",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202606_0024",
-          "original_id": "u2_q0051",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Monday, 2026-06-15?",
-          "answer": "oatmeal",
-          "answer_type": "value",
-          "accept": [
-            "oatmeal"
-          ],
-          "evidence_days": [
-            107
-          ],
-          "grading": "exact",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202606_0025",
-          "original_id": "u2_q0047",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Tuesday, 2026-06-09?",
-          "answer": "oatmeal",
-          "answer_type": "value",
-          "accept": [
-            "oatmeal"
-          ],
-          "evidence_days": [
-            101
-          ],
-          "grading": "exact",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202606_0026",
-          "original_id": "u2_q0014",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Wednesday, 2026-06-03?",
-          "answer": "yogurt parfait",
-          "answer_type": "value",
-          "accept": [
-            "yogurt parfait"
-          ],
-          "evidence_days": [
-            95
-          ],
-          "grading": "exact",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202606_0027",
+          "id": "u2_p202606_0029",
           "original_id": "u2_q0098",
           "type": "recall",
           "capability": "episodic_recall",
@@ -657,7 +720,7 @@
           ]
         },
         {
-          "id": "u2_p202606_0028",
+          "id": "u2_p202606_0030",
           "original_id": "u2_q0004",
           "type": "recall",
           "capability": "episodic_recall",
@@ -682,62 +745,79 @@
           ]
         },
         {
-          "id": "u2_p202606_0029",
-          "original_id": "u2_q0296",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "workout",
-          "question": "Why did Marcus's workout routine change around 2026-06-29?",
-          "answer": "joined a tennis club",
-          "answer_type": "free_text",
+          "id": "u2_p202606_0031",
+          "original_id": "u2_q0325",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Marcus's job on 2026-06-18?",
+          "answer": "high school chemistry teacher",
+          "answer_type": "value",
           "accept": [
-            "joined a tennis club"
+            "high school chemistry teacher",
+            "high school chemistry teacher"
           ],
           "evidence_days": [
-            120,
-            121
+            1
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 122,
           "probe_date": "2026-06-30",
           "probe_month": "2026-06",
           "is_retrospective": false,
-          "tags": [
-            "implicit",
-            "shift"
-          ]
+          "tags": []
         },
         {
-          "id": "u2_r202606_0174",
-          "original_id": "u2_q0187",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show routine in April 2026?",
-          "answer": "alternates week by week: cooking competition show, then nature documentary, repeating (7-day blocks starting Sun 2026-03-01)",
-          "answer_type": "free_text",
+          "id": "u2_r202606_0161",
+          "original_id": "u2_q0048",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Wednesday, 2026-04-15?",
+          "answer": "yogurt parfait",
+          "answer_type": "value",
           "accept": [
-            "alternating weeks of a cooking competition show and nature documentaries"
+            "yogurt parfait"
           ],
           "evidence_days": [
-            1,
-            2,
-            5
+            46
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 122,
           "probe_date": "2026-06-30",
           "probe_month": "2026-06",
           "is_retrospective": true,
-          "tags": [
-            "initial"
+          "tags": [],
+          "retrospective_of": "u2_p202604_0012",
+          "original_probe_month": "2026-04"
+        },
+        {
+          "id": "u2_r202606_0165",
+          "original_id": "u2_q0084",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Saturday, 2026-04-04?",
+          "answer": "gym weights",
+          "answer_type": "value",
+          "accept": [
+            "gym weights"
           ],
-          "retrospective_of": "u2_p202604_0009",
+          "evidence_days": [
+            35
+          ],
+          "grading": "exact",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202604_0014",
           "original_probe_month": "2026-04"
         }
       ],
-      "num_questions": 11,
-      "num_retrospective": 1
+      "num_questions": 13,
+      "num_retrospective": 2
     },
     {
       "probe_date": "2026-07-31",
@@ -745,7 +825,7 @@
       "viewpoint_day": 153,
       "questions": [
         {
-          "id": "u2_p202607_0030",
+          "id": "u2_p202607_0032",
           "original_id": "u2_q0159",
           "type": "recall",
           "capability": "episodic_recall",
@@ -767,7 +847,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202607_0031",
+          "id": "u2_p202607_0033",
           "original_id": "u2_q0076",
           "type": "recall",
           "capability": "episodic_recall",
@@ -789,7 +869,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202607_0032",
+          "id": "u2_p202607_0034",
           "original_id": "u2_q0046",
           "type": "recall",
           "capability": "episodic_recall",
@@ -811,7 +891,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202607_0033",
+          "id": "u2_p202607_0035",
           "original_id": "u2_q0129",
           "type": "recall",
           "capability": "episodic_recall",
@@ -833,7 +913,32 @@
           "tags": []
         },
         {
-          "id": "u2_p202607_0034",
+          "id": "u2_p202607_0036",
+          "original_id": "u2_q0337",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "hobbies",
+          "question": "What were Marcus's hobbies on 2026-07-13?",
+          "answer": "woodworking, tennis",
+          "answer_type": "free_text",
+          "accept": [
+            "woodworking, tennis"
+          ],
+          "evidence_days": [
+            1,
+            120
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 153,
+          "probe_date": "2026-07-31",
+          "probe_month": "2026-07",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
+          "id": "u2_p202607_0037",
           "original_id": "u2_q0118",
           "type": "recall",
           "capability": "episodic_recall",
@@ -857,7 +962,7 @@
           ]
         },
         {
-          "id": "u2_p202607_0035",
+          "id": "u2_p202607_0038",
           "original_id": "u2_q0011",
           "type": "recall",
           "capability": "episodic_recall",
@@ -879,7 +984,31 @@
           "tags": []
         },
         {
-          "id": "u2_r202607_0161",
+          "id": "u2_r202607_0174",
+          "original_id": "u2_q0050",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Saturday, 2026-05-02?",
+          "answer": "pancakes",
+          "answer_type": "value",
+          "accept": [
+            "pancakes"
+          ],
+          "evidence_days": [
+            63
+          ],
+          "grading": "exact",
+          "viewpoint_day": 153,
+          "probe_date": "2026-07-31",
+          "probe_month": "2026-07",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202605_0015",
+          "original_probe_month": "2026-05"
+        },
+        {
+          "id": "u2_r202607_0200",
           "original_id": "u2_q0132",
           "type": "recall",
           "capability": "episodic_recall",
@@ -899,35 +1028,11 @@
           "probe_month": "2026-07",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202605_0014",
-          "original_probe_month": "2026-05"
-        },
-        {
-          "id": "u2_r202607_0180",
-          "original_id": "u2_q0032",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Friday, 2026-05-15?",
-          "answer": "bagel",
-          "answer_type": "value",
-          "accept": [
-            "bagel"
-          ],
-          "evidence_days": [
-            76
-          ],
-          "grading": "exact",
-          "viewpoint_day": 153,
-          "probe_date": "2026-07-31",
-          "probe_month": "2026-07",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202605_0019",
+          "retrospective_of": "u2_p202605_0020",
           "original_probe_month": "2026-05"
         }
       ],
-      "num_questions": 8,
+      "num_questions": 9,
       "num_retrospective": 2
     },
     {
@@ -936,7 +1041,7 @@
       "viewpoint_day": 184,
       "questions": [
         {
-          "id": "u2_p202608_0036",
+          "id": "u2_p202608_0039",
           "original_id": "u2_q0003",
           "type": "recall",
           "capability": "episodic_recall",
@@ -958,7 +1063,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202608_0037",
+          "id": "u2_p202608_0040",
           "original_id": "u2_q0302",
           "type": "exception_vs_shift",
           "capability": "exception_handling",
@@ -982,76 +1087,6 @@
           "tags": [
             "shift",
             "explicit"
-          ]
-        },
-        {
-          "id": "u2_p202608_0038",
-          "original_id": "u2_q0355",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What happened with the new school year?",
-          "answer": "the new school year started (happened, 2026-08-17)",
-          "answer_type": "free_text",
-          "accept": [
-            "the new school year started"
-          ],
-          "evidence_days": [
-            170
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": [
-            "happened"
-          ]
-        },
-        {
-          "id": "u2_p202608_0039",
-          "original_id": "u2_q0063",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Sunday, 2026-08-23?",
-          "answer": "rest day",
-          "answer_type": "value",
-          "accept": [
-            "rest day"
-          ],
-          "evidence_days": [
-            176
-          ],
-          "grading": "exact",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202608_0040",
-          "original_id": "u2_q0015",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Sunday, 2026-08-16?",
-          "answer": "pancakes",
-          "answer_type": "value",
-          "accept": [
-            "pancakes"
-          ],
-          "evidence_days": [
-            169
-          ],
-          "grading": "exact",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": [
-            "boundary"
           ]
         },
         {
@@ -1081,6 +1116,55 @@
         },
         {
           "id": "u2_p202608_0042",
+          "original_id": "u2_q0015",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Sunday, 2026-08-16?",
+          "answer": "pancakes",
+          "answer_type": "value",
+          "accept": [
+            "pancakes"
+          ],
+          "evidence_days": [
+            169
+          ],
+          "grading": "exact",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": [
+            "boundary"
+          ]
+        },
+        {
+          "id": "u2_p202608_0043",
+          "original_id": "u2_q0332",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "hobbies",
+          "question": "What were Marcus's hobbies on 2026-08-06?",
+          "answer": "woodworking, tennis",
+          "answer_type": "free_text",
+          "accept": [
+            "woodworking, tennis"
+          ],
+          "evidence_days": [
+            1,
+            120
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
+          "id": "u2_p202608_0044",
           "original_id": "u2_q0171",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1102,7 +1186,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202608_0043",
+          "id": "u2_p202608_0045",
           "original_id": "u2_q0036",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1124,7 +1208,31 @@
           "tags": []
         },
         {
-          "id": "u2_p202608_0044",
+          "id": "u2_p202608_0046",
+          "original_id": "u2_q0355",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What happened with the new school year?",
+          "answer": "the new school year started (happened, 2026-08-17)",
+          "answer_type": "free_text",
+          "accept": [
+            "the new school year started"
+          ],
+          "evidence_days": [
+            170
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": [
+            "happened"
+          ]
+        },
+        {
+          "id": "u2_p202608_0047",
           "original_id": "u2_q0090",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1146,19 +1254,20 @@
           "tags": []
         },
         {
-          "id": "u2_p202608_0045",
-          "original_id": "u2_q0294",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "breakfast",
-          "question": "Why did Marcus's breakfast routine change around 2026-08-17?",
-          "answer": "the new school year started",
-          "answer_type": "free_text",
+          "id": "u2_p202608_0048",
+          "original_id": "u2_q0307",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "evening_show",
+          "question": "On Thursday, 2026-08-27, Marcus's evening TV show was a movie instead of the usual nature documentary. Was that a lasting change?",
+          "answer": "No - it was a one-off (family movie night); the usual routine continued.",
+          "answer_type": "yes_no",
           "accept": [
-            "the new school year started"
+            "no"
           ],
           "evidence_days": [
-            170
+            180,
+            181
           ],
           "grading": "llm_judge",
           "viewpoint_day": 184,
@@ -1166,37 +1275,34 @@
           "probe_month": "2026-08",
           "is_retrospective": false,
           "tags": [
-            "explicit",
-            "shift"
+            "exception"
           ]
         },
         {
-          "id": "u2_r202608_0188",
-          "original_id": "u2_q0048",
+          "id": "u2_p202608_0049",
+          "original_id": "u2_q0099",
           "type": "recall",
           "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Wednesday, 2026-04-15?",
-          "answer": "yogurt parfait",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Wednesday, 2026-08-12?",
+          "answer": "run",
           "answer_type": "value",
           "accept": [
-            "yogurt parfait"
+            "run"
           ],
           "evidence_days": [
-            46
+            165
           ],
           "grading": "exact",
           "viewpoint_day": 184,
           "probe_date": "2026-08-31",
           "probe_month": "2026-08",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202604_0012",
-          "original_probe_month": "2026-04"
+          "is_retrospective": false,
+          "tags": []
         }
       ],
       "num_questions": 11,
-      "num_retrospective": 1
+      "num_retrospective": 0
     },
     {
       "probe_date": "2026-09-30",
@@ -1204,7 +1310,7 @@
       "viewpoint_day": 214,
       "questions": [
         {
-          "id": "u2_p202609_0046",
+          "id": "u2_p202609_0050",
           "original_id": "u2_q0079",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1226,29 +1332,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202609_0047",
-          "original_id": "u2_q0054",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Friday, 2026-09-11?",
-          "answer": "protein smoothie",
-          "answer_type": "value",
-          "accept": [
-            "protein smoothie"
-          ],
-          "evidence_days": [
-            195
-          ],
-          "grading": "exact",
-          "viewpoint_day": 214,
-          "probe_date": "2026-09-30",
-          "probe_month": "2026-09",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202609_0048",
+          "id": "u2_p202609_0051",
           "original_id": "u2_q0122",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1270,7 +1354,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202609_0049",
+          "id": "u2_p202609_0052",
           "original_id": "u2_q0016",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1292,7 +1376,78 @@
           "tags": []
         },
         {
-          "id": "u2_r202609_0200",
+          "id": "u2_p202609_0053",
+          "original_id": "u2_q0343",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "hobbies",
+          "question": "What were Marcus's hobbies on 2026-09-13?",
+          "answer": "woodworking, tennis",
+          "answer_type": "free_text",
+          "accept": [
+            "woodworking, tennis"
+          ],
+          "evidence_days": [
+            1,
+            120
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 214,
+          "probe_date": "2026-09-30",
+          "probe_month": "2026-09",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
+          "id": "u2_p202609_0054",
+          "original_id": "u2_q0154",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Tuesday, 2026-09-22?",
+          "answer": "nature documentary",
+          "answer_type": "value",
+          "accept": [
+            "nature documentary"
+          ],
+          "evidence_days": [
+            206
+          ],
+          "grading": "exact",
+          "viewpoint_day": 214,
+          "probe_date": "2026-09-30",
+          "probe_month": "2026-09",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_r202609_0160",
+          "original_id": "u2_q0046",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Monday, 2026-07-27?",
+          "answer": "oatmeal",
+          "answer_type": "value",
+          "accept": [
+            "oatmeal"
+          ],
+          "evidence_days": [
+            149
+          ],
+          "grading": "exact",
+          "viewpoint_day": 214,
+          "probe_date": "2026-09-30",
+          "probe_month": "2026-09",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202607_0034",
+          "original_probe_month": "2026-07"
+        },
+        {
+          "id": "u2_r202609_0196",
           "original_id": "u2_q0000",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1316,8 +1471,8 @@
           "original_probe_month": "2026-03"
         }
       ],
-      "num_questions": 5,
-      "num_retrospective": 1
+      "num_questions": 7,
+      "num_retrospective": 2
     },
     {
       "probe_date": "2026-10-31",
@@ -1325,34 +1480,7 @@
       "viewpoint_day": 245,
       "questions": [
         {
-          "id": "u2_p202610_0050",
-          "original_id": "u2_q0166",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Saturday, 2026-10-10?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            221,
-            222,
-            223
-          ],
-          "grading": "exact",
-          "viewpoint_day": 245,
-          "probe_date": "2026-10-31",
-          "probe_month": "2026-10",
-          "is_retrospective": false,
-          "tags": [
-            "inferred",
-            "no_session"
-          ]
-        },
-        {
-          "id": "u2_p202610_0051",
+          "id": "u2_p202610_0055",
           "original_id": "u2_q0191",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
@@ -1378,52 +1506,7 @@
           ]
         },
         {
-          "id": "u2_p202610_0052",
-          "original_id": "u2_q0179",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Sunday, 2026-10-18?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            232
-          ],
-          "grading": "exact",
-          "viewpoint_day": 245,
-          "probe_date": "2026-10-31",
-          "probe_month": "2026-10",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202610_0053",
-          "original_id": "u2_q0324",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "job",
-          "question": "What was Marcus's job on 2026-10-08?",
-          "answer": "high school chemistry teacher",
-          "answer_type": "value",
-          "accept": [
-            "high school chemistry teacher",
-            "high school chemistry teacher"
-          ],
-          "evidence_days": [
-            1
-          ],
-          "grading": "exact",
-          "viewpoint_day": 245,
-          "probe_date": "2026-10-31",
-          "probe_month": "2026-10",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202610_0054",
+          "id": "u2_p202610_0056",
           "original_id": "u2_q0101",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1445,19 +1528,20 @@
           "tags": []
         },
         {
-          "id": "u2_p202610_0055",
-          "original_id": "u2_q0137",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Wednesday, 2026-10-21?",
-          "answer": "nature documentary",
+          "id": "u2_p202610_0057",
+          "original_id": "u2_q0318",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Marcus's job on 2026-10-15?",
+          "answer": "high school chemistry teacher",
           "answer_type": "value",
           "accept": [
-            "nature documentary"
+            "high school chemistry teacher",
+            "high school chemistry teacher"
           ],
           "evidence_days": [
-            235
+            1
           ],
           "grading": "exact",
           "viewpoint_day": 245,
@@ -1467,7 +1551,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202610_0056",
+          "id": "u2_p202610_0058",
           "original_id": "u2_q0059",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1489,19 +1573,89 @@
           "tags": []
         },
         {
-          "id": "u2_r202610_0192",
-          "original_id": "u2_q0064",
+          "id": "u2_p202610_0059",
+          "original_id": "u2_q0107",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "workout",
-          "question": "What was Marcus's workout on Wednesday, 2026-04-29?",
-          "answer": "run",
+          "question": "What was Marcus's workout on Saturday, 2026-10-24?",
+          "answer": "tennis",
           "answer_type": "value",
           "accept": [
-            "run"
+            "tennis"
           ],
           "evidence_days": [
-            60
+            238
+          ],
+          "grading": "exact",
+          "viewpoint_day": 245,
+          "probe_date": "2026-10-31",
+          "probe_month": "2026-10",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202610_0060",
+          "original_id": "u2_q0073",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Thursday, 2026-10-22?",
+          "answer": "tennis",
+          "answer_type": "value",
+          "accept": [
+            "tennis"
+          ],
+          "evidence_days": [
+            236
+          ],
+          "grading": "exact",
+          "viewpoint_day": 245,
+          "probe_date": "2026-10-31",
+          "probe_month": "2026-10",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202610_0061",
+          "original_id": "u2_q0142",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Friday, 2026-10-16?",
+          "answer": "cooking competition show",
+          "answer_type": "value",
+          "accept": [
+            "cooking competition show"
+          ],
+          "evidence_days": [
+            226,
+            228,
+            229
+          ],
+          "grading": "exact",
+          "viewpoint_day": 245,
+          "probe_date": "2026-10-31",
+          "probe_month": "2026-10",
+          "is_retrospective": false,
+          "tags": [
+            "inferred"
+          ]
+        },
+        {
+          "id": "u2_r202610_0164",
+          "original_id": "u2_q0017",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Saturday, 2026-04-04?",
+          "answer": "pancakes",
+          "answer_type": "value",
+          "accept": [
+            "pancakes"
+          ],
+          "evidence_days": [
+            35
           ],
           "grading": "exact",
           "viewpoint_day": 245,
@@ -1509,12 +1663,68 @@
           "probe_month": "2026-10",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202604_0011",
+          "retrospective_of": "u2_p202604_0009",
           "original_probe_month": "2026-04"
+        },
+        {
+          "id": "u2_r202610_0185",
+          "original_id": "u2_q0302",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "breakfast",
+          "question": "On Wednesday, 2026-08-19, Marcus's breakfast was oatmeal instead of the usual yogurt parfait. Was that a lasting change?",
+          "answer": "Yes - from 2026-08-17 the routine changed to alternating weeks of oatmeal and protein smoothies.",
+          "answer_type": "yes_no",
+          "accept": [
+            "yes"
+          ],
+          "evidence_days": [
+            170,
+            171,
+            172
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 245,
+          "probe_date": "2026-10-31",
+          "probe_month": "2026-10",
+          "is_retrospective": true,
+          "tags": [
+            "shift",
+            "explicit"
+          ],
+          "retrospective_of": "u2_p202608_0040",
+          "original_probe_month": "2026-08"
+        },
+        {
+          "id": "u2_r202610_0186",
+          "original_id": "u2_q0307",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "evening_show",
+          "question": "On Thursday, 2026-08-27, Marcus's evening TV show was a movie instead of the usual nature documentary. Was that a lasting change?",
+          "answer": "No - it was a one-off (family movie night); the usual routine continued.",
+          "answer_type": "yes_no",
+          "accept": [
+            "no"
+          ],
+          "evidence_days": [
+            180,
+            181
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 245,
+          "probe_date": "2026-10-31",
+          "probe_month": "2026-10",
+          "is_retrospective": true,
+          "tags": [
+            "exception"
+          ],
+          "retrospective_of": "u2_p202608_0048",
+          "original_probe_month": "2026-08"
         }
       ],
-      "num_questions": 8,
-      "num_retrospective": 1
+      "num_questions": 10,
+      "num_retrospective": 3
     },
     {
       "probe_date": "2026-11-30",
@@ -1522,55 +1732,7 @@
       "viewpoint_day": 275,
       "questions": [
         {
-          "id": "u2_p202611_0057",
-          "original_id": "u2_q0157",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Monday, 2026-11-09?",
-          "answer": "sitcom reruns",
-          "answer_type": "value",
-          "accept": [
-            "sitcom reruns"
-          ],
-          "evidence_days": [
-            252,
-            253
-          ],
-          "grading": "exact",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": false,
-          "tags": [
-            "inferred",
-            "boundary"
-          ]
-        },
-        {
-          "id": "u2_p202611_0058",
-          "original_id": "u2_q0163",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Wednesday, 2026-11-18?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            263
-          ],
-          "grading": "exact",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202611_0059",
+          "id": "u2_p202611_0062",
           "original_id": "u2_q0146",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1591,83 +1753,6 @@
           "is_retrospective": false,
           "tags": [
             "boundary"
-          ]
-        },
-        {
-          "id": "u2_p202611_0060",
-          "original_id": "u2_q0308",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "evening_show",
-          "question": "On Friday, 2026-11-06, Marcus's evening TV show was sitcom reruns instead of the usual nature documentary. Was that a lasting change?",
-          "answer": "Yes - from 2026-11-06 the routine changed to 5 days sitcom reruns, 2 days nature documentaries.",
-          "answer_type": "yes_no",
-          "accept": [
-            "yes"
-          ],
-          "evidence_days": [
-            251,
-            252,
-            253
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": false,
-          "tags": [
-            "shift",
-            "explicit"
-          ]
-        },
-        {
-          "id": "u2_p202611_0061",
-          "original_id": "u2_q0150",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Sunday, 2026-11-01?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            246
-          ],
-          "grading": "exact",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": false,
-          "tags": [
-            "boundary"
-          ]
-        },
-        {
-          "id": "u2_p202611_0062",
-          "original_id": "u2_q0185",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast routine in November 2026?",
-          "answer": "alternates week by week: oatmeal, then protein smoothie, repeating (7-day blocks starting Mon 2026-08-17)",
-          "answer_type": "free_text",
-          "accept": [
-            "alternating weeks of oatmeal and protein smoothies"
-          ],
-          "evidence_days": [
-            170,
-            171,
-            172
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": false,
-          "tags": [
-            "shift"
           ]
         },
         {
@@ -1697,19 +1782,20 @@
         },
         {
           "id": "u2_p202611_0064",
-          "original_id": "u2_q0298",
-          "type": "attribution",
-          "capability": "causal_reasoning",
+          "original_id": "u2_q0308",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
           "domain": "evening_show",
-          "question": "Why did Marcus's evening TV show routine change around 2026-11-06?",
-          "answer": "became head of the science department at the same high school",
-          "answer_type": "free_text",
+          "question": "On Friday, 2026-11-06, Marcus's evening TV show was sitcom reruns instead of the usual nature documentary. Was that a lasting change?",
+          "answer": "Yes - from 2026-11-06 the routine changed to 5 days sitcom reruns, 2 days nature documentaries.",
+          "answer_type": "yes_no",
           "accept": [
-            "became head of the science department at the same high school"
+            "yes"
           ],
           "evidence_days": [
-            250,
-            251
+            251,
+            252,
+            253
           ],
           "grading": "llm_judge",
           "viewpoint_day": 275,
@@ -1717,24 +1803,24 @@
           "probe_month": "2026-11",
           "is_retrospective": false,
           "tags": [
-            "explicit",
-            "shift"
+            "shift",
+            "explicit"
           ]
         },
         {
           "id": "u2_p202611_0065",
-          "original_id": "u2_q0177",
+          "original_id": "u2_q0150",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Tuesday, 2026-11-10?",
-          "answer": "sitcom reruns",
+          "question": "What was Marcus's evening TV show on Sunday, 2026-11-01?",
+          "answer": "nature documentary",
           "answer_type": "value",
           "accept": [
-            "sitcom reruns"
+            "nature documentary"
           ],
           "evidence_days": [
-            255
+            246
           ],
           "grading": "exact",
           "viewpoint_day": 275,
@@ -1747,18 +1833,70 @@
         },
         {
           "id": "u2_p202611_0066",
-          "original_id": "u2_q0165",
+          "original_id": "u2_q0185",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast routine in November 2026?",
+          "answer": "alternates week by week: oatmeal, then protein smoothie, repeating (7-day blocks starting Mon 2026-08-17)",
+          "answer_type": "free_text",
+          "accept": [
+            "alternating weeks of oatmeal and protein smoothies"
+          ],
+          "evidence_days": [
+            170,
+            171,
+            172
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 275,
+          "probe_date": "2026-11-30",
+          "probe_month": "2026-11",
+          "is_retrospective": false,
+          "tags": [
+            "shift"
+          ]
+        },
+        {
+          "id": "u2_p202611_0067",
+          "original_id": "u2_q0157",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2026-11-05?",
+          "question": "What was Marcus's evening TV show on Monday, 2026-11-09?",
+          "answer": "sitcom reruns",
+          "answer_type": "value",
+          "accept": [
+            "sitcom reruns"
+          ],
+          "evidence_days": [
+            252,
+            253
+          ],
+          "grading": "exact",
+          "viewpoint_day": 275,
+          "probe_date": "2026-11-30",
+          "probe_month": "2026-11",
+          "is_retrospective": false,
+          "tags": [
+            "inferred",
+            "boundary"
+          ]
+        },
+        {
+          "id": "u2_p202611_0068",
+          "original_id": "u2_q0156",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Wednesday, 2026-11-04?",
           "answer": "nature documentary",
           "answer_type": "value",
           "accept": [
             "nature documentary"
           ],
           "evidence_days": [
-            250
+            249
           ],
           "grading": "exact",
           "viewpoint_day": 275,
@@ -1770,7 +1908,80 @@
           ]
         },
         {
-          "id": "u2_p202611_0067",
+          "id": "u2_p202611_0069",
+          "original_id": "u2_q0292",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "evening_show",
+          "question": "When did Marcus's evening TV show routine change from the cooking competition show / nature documentary routine to the nature documentary / sitcom reruns routine?",
+          "answer": "2026-11-06",
+          "answer_type": "date",
+          "accept": [
+            "2026-11-06"
+          ],
+          "evidence_days": [
+            250,
+            251
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 275,
+          "probe_date": "2026-11-30",
+          "probe_month": "2026-11",
+          "is_retrospective": false,
+          "tags": [
+            "shift",
+            "explicit"
+          ]
+        },
+        {
+          "id": "u2_p202611_0070",
+          "original_id": "u2_q0163",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Wednesday, 2026-11-18?",
+          "answer": "nature documentary",
+          "answer_type": "value",
+          "accept": [
+            "nature documentary"
+          ],
+          "evidence_days": [
+            263
+          ],
+          "grading": "exact",
+          "viewpoint_day": 275,
+          "probe_date": "2026-11-30",
+          "probe_month": "2026-11",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202611_0071",
+          "original_id": "u2_q0362",
+          "type": "duration",
+          "capability": "temporal_arithmetic",
+          "domain": "evening_show",
+          "question": "How long did Marcus's evening TV show stay the cooking competition show / nature documentary routine?",
+          "answer": "250 days (2026-03-01 to 2026-11-05)",
+          "answer_type": "free_text",
+          "accept": [
+            "250"
+          ],
+          "evidence_days": [
+            1,
+            250
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 275,
+          "probe_date": "2026-11-30",
+          "probe_month": "2026-11",
+          "is_retrospective": false,
+          "tags": [
+            "initial"
+          ]
+        },
+        {
+          "id": "u2_p202611_0072",
           "original_id": "u2_q0130",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1796,107 +2007,32 @@
           ]
         },
         {
-          "id": "u2_p202611_0068",
-          "original_id": "u2_q0362",
-          "type": "duration",
-          "capability": "temporal_arithmetic",
+          "id": "u2_p202611_0073",
+          "original_id": "u2_q0165",
+          "type": "recall",
+          "capability": "episodic_recall",
           "domain": "evening_show",
-          "question": "How long did Marcus's evening TV show stay the cooking competition show / nature documentary routine?",
-          "answer": "250 days (2026-03-01 to 2026-11-05)",
-          "answer_type": "free_text",
+          "question": "What was Marcus's evening TV show on Thursday, 2026-11-05?",
+          "answer": "nature documentary",
+          "answer_type": "value",
           "accept": [
-            "250"
+            "nature documentary"
           ],
           "evidence_days": [
-            1,
             250
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 275,
           "probe_date": "2026-11-30",
           "probe_month": "2026-11",
           "is_retrospective": false,
           "tags": [
-            "initial"
+            "boundary"
           ]
-        },
-        {
-          "id": "u2_r202611_0164",
-          "original_id": "u2_q0122",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Friday, 2026-09-04?",
-          "answer": "cooking competition show",
-          "answer_type": "value",
-          "accept": [
-            "cooking competition show"
-          ],
-          "evidence_days": [
-            188
-          ],
-          "grading": "exact",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202609_0048",
-          "original_probe_month": "2026-09"
-        },
-        {
-          "id": "u2_r202611_0176",
-          "original_id": "u2_q0050",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Saturday, 2026-05-02?",
-          "answer": "pancakes",
-          "answer_type": "value",
-          "accept": [
-            "pancakes"
-          ],
-          "evidence_days": [
-            63
-          ],
-          "grading": "exact",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202605_0015",
-          "original_probe_month": "2026-05"
-        },
-        {
-          "id": "u2_r202611_0186",
-          "original_id": "u2_q0355",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What happened with the new school year?",
-          "answer": "the new school year started (happened, 2026-08-17)",
-          "answer_type": "free_text",
-          "accept": [
-            "the new school year started"
-          ],
-          "evidence_days": [
-            170
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": true,
-          "tags": [
-            "happened"
-          ],
-          "retrospective_of": "u2_p202608_0038",
-          "original_probe_month": "2026-08"
         }
       ],
-      "num_questions": 15,
-      "num_retrospective": 3
+      "num_questions": 12,
+      "num_retrospective": 0
     },
     {
       "probe_date": "2026-12-31",
@@ -1904,7 +2040,7 @@
       "viewpoint_day": 306,
       "questions": [
         {
-          "id": "u2_p202612_0069",
+          "id": "u2_p202612_0074",
           "original_id": "u2_q0371",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
@@ -1926,51 +2062,32 @@
           "tags": []
         },
         {
-          "id": "u2_p202612_0070",
-          "original_id": "u2_q0069",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Thursday, 2026-12-17?",
-          "answer": "tennis",
-          "answer_type": "value",
+          "id": "u2_p202612_0075",
+          "original_id": "u2_q0339",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "hobbies",
+          "question": "What were Marcus's hobbies on 2026-12-01?",
+          "answer": "woodworking, tennis",
+          "answer_type": "free_text",
           "accept": [
-            "tennis"
+            "woodworking, tennis"
           ],
           "evidence_days": [
-            292
+            1,
+            120
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 306,
           "probe_date": "2026-12-31",
           "probe_month": "2026-12",
           "is_retrospective": false,
-          "tags": []
+          "tags": [
+            "set"
+          ]
         },
         {
-          "id": "u2_p202612_0071",
-          "original_id": "u2_q0138",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2026-12-24?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            299
-          ],
-          "grading": "exact",
-          "viewpoint_day": 306,
-          "probe_date": "2026-12-31",
-          "probe_month": "2026-12",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202612_0072",
+          "id": "u2_p202612_0076",
           "original_id": "u2_q0105",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1992,46 +2109,113 @@
           "tags": []
         },
         {
-          "id": "u2_r202612_0166",
-          "original_id": "u2_q0118",
+          "id": "u2_p202612_0077",
+          "original_id": "u2_q0069",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "workout",
-          "question": "What was Marcus's workout on Monday, 2026-07-06?",
-          "answer": "gym weights",
+          "question": "What was Marcus's workout on Thursday, 2026-12-17?",
+          "answer": "tennis",
           "answer_type": "value",
           "accept": [
-            "gym weights"
+            "tennis"
           ],
           "evidence_days": [
-            128
+            292
+          ],
+          "grading": "exact",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202612_0078",
+          "original_id": "u2_q0138",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Thursday, 2026-12-24?",
+          "answer": "nature documentary",
+          "answer_type": "value",
+          "accept": [
+            "nature documentary"
+          ],
+          "evidence_days": [
+            299
+          ],
+          "grading": "exact",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_r202612_0167",
+          "original_id": "u2_q0154",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Tuesday, 2026-09-22?",
+          "answer": "nature documentary",
+          "answer_type": "value",
+          "accept": [
+            "nature documentary"
+          ],
+          "evidence_days": [
+            206
           ],
           "grading": "exact",
           "viewpoint_day": 306,
           "probe_date": "2026-12-31",
           "probe_month": "2026-12",
           "is_retrospective": true,
-          "tags": [
-            "boundary"
-          ],
-          "retrospective_of": "u2_p202607_0034",
-          "original_probe_month": "2026-07"
+          "tags": [],
+          "retrospective_of": "u2_p202609_0054",
+          "original_probe_month": "2026-09"
         },
         {
-          "id": "u2_r202612_0179",
-          "original_id": "u2_q0004",
+          "id": "u2_r202612_0172",
+          "original_id": "u2_q0011",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Thursday, 2026-06-25?",
+          "question": "What was Marcus's breakfast on Monday, 2026-07-13?",
           "answer": "oatmeal",
           "answer_type": "value",
           "accept": [
             "oatmeal"
           ],
           "evidence_days": [
-            103,
-            110
+            135
+          ],
+          "grading": "exact",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202607_0038",
+          "original_probe_month": "2026-07"
+        },
+        {
+          "id": "u2_r202612_0183",
+          "original_id": "u2_q0142",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Friday, 2026-10-16?",
+          "answer": "cooking competition show",
+          "answer_type": "value",
+          "accept": [
+            "cooking competition show"
+          ],
+          "evidence_days": [
+            226,
+            228,
+            229
           ],
           "grading": "exact",
           "viewpoint_day": 306,
@@ -2041,35 +2225,11 @@
           "tags": [
             "inferred"
           ],
-          "retrospective_of": "u2_p202606_0028",
-          "original_probe_month": "2026-06"
-        },
-        {
-          "id": "u2_r202612_0199",
-          "original_id": "u2_q0179",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Sunday, 2026-10-18?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            232
-          ],
-          "grading": "exact",
-          "viewpoint_day": 306,
-          "probe_date": "2026-12-31",
-          "probe_month": "2026-12",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202610_0052",
+          "retrospective_of": "u2_p202610_0061",
           "original_probe_month": "2026-10"
         }
       ],
-      "num_questions": 7,
+      "num_questions": 8,
       "num_retrospective": 3
     },
     {
@@ -2078,13 +2238,13 @@
       "viewpoint_day": 337,
       "questions": [
         {
-          "id": "u2_p202701_0073",
-          "original_id": "u2_q0354",
-          "type": "fact_history",
+          "id": "u2_p202701_0079",
+          "original_id": "u2_q0317",
+          "type": "fact_current",
           "capability": "knowledge_update",
           "domain": "pets",
-          "question": "How have Marcus's pets changed over time?",
-          "answer": "cat named Olive (2027-01-24 to now)",
+          "question": "What are Marcus's current pets?",
+          "answer": "cat named Olive",
           "answer_type": "free_text",
           "accept": [
             "cat named Olive"
@@ -2098,34 +2258,11 @@
           "probe_month": "2027-01",
           "is_retrospective": false,
           "tags": [
-            "multi"
+            "set"
           ]
         },
         {
-          "id": "u2_p202701_0074",
-          "original_id": "u2_q0327",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "job",
-          "question": "What was Marcus's job on 2027-01-01?",
-          "answer": "head of the science department at the same high school",
-          "answer_type": "value",
-          "accept": [
-            "head of the science department at the same high school",
-            "head of the science department at the same high school"
-          ],
-          "evidence_days": [
-            250
-          ],
-          "grading": "exact",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202701_0075",
+          "id": "u2_p202701_0080",
           "original_id": "u2_q0188",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
@@ -2151,7 +2288,7 @@
           ]
         },
         {
-          "id": "u2_p202701_0076",
+          "id": "u2_p202701_0081",
           "original_id": "u2_q0331",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -2174,7 +2311,32 @@
           "tags": []
         },
         {
-          "id": "u2_p202701_0077",
+          "id": "u2_p202701_0082",
+          "original_id": "u2_q0379",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Does Marcus have any pets, and if so what?",
+          "answer": "cat named Olive",
+          "answer_type": "value",
+          "accept": [
+            "cat named Olive"
+          ],
+          "evidence_days": [
+            330
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 337,
+          "probe_date": "2027-01-31",
+          "probe_month": "2027-01",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "pets"
+          ]
+        },
+        {
+          "id": "u2_p202701_0083",
           "original_id": "u2_q0155",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2200,13 +2362,36 @@
           ]
         },
         {
-          "id": "u2_p202701_0078",
-          "original_id": "u2_q0317",
-          "type": "fact_current",
+          "id": "u2_p202701_0084",
+          "original_id": "u2_q0321",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Marcus's job on 2027-01-16?",
+          "answer": "head of the science department at the same high school",
+          "answer_type": "value",
+          "accept": [
+            "head of the science department at the same high school",
+            "head of the science department at the same high school"
+          ],
+          "evidence_days": [
+            250
+          ],
+          "grading": "exact",
+          "viewpoint_day": 337,
+          "probe_date": "2027-01-31",
+          "probe_month": "2027-01",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202701_0085",
+          "original_id": "u2_q0354",
+          "type": "fact_history",
           "capability": "knowledge_update",
           "domain": "pets",
-          "question": "What are Marcus's current pets?",
-          "answer": "cat named Olive",
+          "question": "How have Marcus's pets changed over time?",
+          "answer": "cat named Olive (2027-01-24 to now)",
           "answer_type": "free_text",
           "accept": [
             "cat named Olive"
@@ -2220,11 +2405,11 @@
           "probe_month": "2027-01",
           "is_retrospective": false,
           "tags": [
-            "set"
+            "multi"
           ]
         },
         {
-          "id": "u2_p202701_0079",
+          "id": "u2_p202701_0086",
           "original_id": "u2_q0322",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -2247,53 +2432,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202701_0080",
-          "original_id": "u2_q0086",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Wednesday, 2027-01-06?",
-          "answer": "run",
-          "answer_type": "value",
-          "accept": [
-            "run"
-          ],
-          "evidence_days": [
-            312
-          ],
-          "grading": "exact",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_r202701_0187",
-          "original_id": "u2_q0036",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Saturday, 2026-08-08?",
-          "answer": "pancakes",
-          "answer_type": "value",
-          "accept": [
-            "pancakes"
-          ],
-          "evidence_days": [
-            161
-          ],
-          "grading": "exact",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202608_0043",
-          "original_probe_month": "2026-08"
-        },
-        {
-          "id": "u2_r202701_0193",
+          "id": "u2_r202701_0188",
           "original_id": "u2_q0185",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
@@ -2317,12 +2456,12 @@
           "tags": [
             "shift"
           ],
-          "retrospective_of": "u2_p202611_0062",
+          "retrospective_of": "u2_p202611_0066",
           "original_probe_month": "2026-11"
         }
       ],
-      "num_questions": 10,
-      "num_retrospective": 2
+      "num_questions": 9,
+      "num_retrospective": 1
     },
     {
       "probe_date": "2027-02-28",
@@ -2330,73 +2469,7 @@
       "viewpoint_day": 365,
       "questions": [
         {
-          "id": "u2_p202702_0081",
-          "original_id": "u2_q0151",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Sunday, 2027-02-14?",
-          "answer": "sitcom reruns",
-          "answer_type": "value",
-          "accept": [
-            "sitcom reruns"
-          ],
-          "evidence_days": [
-            351
-          ],
-          "grading": "exact",
-          "viewpoint_day": 365,
-          "probe_date": "2027-02-28",
-          "probe_month": "2027-02",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202702_0082",
-          "original_id": "u2_q0125",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Wednesday, 2027-02-03?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            340
-          ],
-          "grading": "exact",
-          "viewpoint_day": 365,
-          "probe_date": "2027-02-28",
-          "probe_month": "2027-02",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202702_0083",
-          "original_id": "u2_q0081",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Thursday, 2027-02-04?",
-          "answer": "tennis",
-          "answer_type": "value",
-          "accept": [
-            "tennis"
-          ],
-          "evidence_days": [
-            341
-          ],
-          "grading": "exact",
-          "viewpoint_day": 365,
-          "probe_date": "2027-02-28",
-          "probe_month": "2027-02",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202702_0084",
+          "id": "u2_p202702_0087",
           "original_id": "u2_q0145",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2420,43 +2493,85 @@
           ]
         },
         {
-          "id": "u2_r202702_0162",
-          "original_id": "u2_q0101",
+          "id": "u2_p202702_0088",
+          "original_id": "u2_q0081",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "workout",
-          "question": "What was Marcus's workout on Saturday, 2026-10-31?",
+          "question": "What was Marcus's workout on Thursday, 2027-02-04?",
           "answer": "tennis",
           "answer_type": "value",
           "accept": [
             "tennis"
           ],
           "evidence_days": [
-            245
+            341
           ],
           "grading": "exact",
           "viewpoint_day": 365,
           "probe_date": "2027-02-28",
           "probe_month": "2027-02",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202610_0054",
-          "original_probe_month": "2026-10"
+          "is_retrospective": false,
+          "tags": []
         },
         {
-          "id": "u2_r202702_0169",
-          "original_id": "u2_q0015",
+          "id": "u2_p202702_0089",
+          "original_id": "u2_q0151",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Sunday, 2027-02-14?",
+          "answer": "sitcom reruns",
+          "answer_type": "value",
+          "accept": [
+            "sitcom reruns"
+          ],
+          "evidence_days": [
+            351
+          ],
+          "grading": "exact",
+          "viewpoint_day": 365,
+          "probe_date": "2027-02-28",
+          "probe_month": "2027-02",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202702_0090",
+          "original_id": "u2_q0022",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Sunday, 2026-08-16?",
-          "answer": "pancakes",
+          "question": "What was Marcus's breakfast on Thursday, 2027-02-04?",
+          "answer": "oatmeal",
           "answer_type": "value",
           "accept": [
-            "pancakes"
+            "oatmeal"
           ],
           "evidence_days": [
-            169
+            341
+          ],
+          "grading": "exact",
+          "viewpoint_day": 365,
+          "probe_date": "2027-02-28",
+          "probe_month": "2027-02",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_r202702_0189",
+          "original_id": "u2_q0146",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Sunday, 2026-11-08?",
+          "answer": "sitcom reruns",
+          "answer_type": "value",
+          "accept": [
+            "sitcom reruns"
+          ],
+          "evidence_days": [
+            253
           ],
           "grading": "exact",
           "viewpoint_day": 365,
@@ -2466,7 +2581,34 @@
           "tags": [
             "boundary"
           ],
-          "retrospective_of": "u2_p202608_0040",
+          "retrospective_of": "u2_p202611_0062",
+          "original_probe_month": "2026-11"
+        },
+        {
+          "id": "u2_r202702_0198",
+          "original_id": "u2_q0097",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Sunday, 2026-08-09?",
+          "answer": "rest day",
+          "answer_type": "value",
+          "accept": [
+            "rest day"
+          ],
+          "evidence_days": [
+            148,
+            155
+          ],
+          "grading": "exact",
+          "viewpoint_day": 365,
+          "probe_date": "2027-02-28",
+          "probe_month": "2027-02",
+          "is_retrospective": true,
+          "tags": [
+            "inferred"
+          ],
+          "retrospective_of": "u2_p202608_0041",
           "original_probe_month": "2026-08"
         }
       ],
@@ -2479,29 +2621,7 @@
       "viewpoint_day": 396,
       "questions": [
         {
-          "id": "u2_p202703_0085",
-          "original_id": "u2_q0135",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Monday, 2027-03-08?",
-          "answer": "sitcom reruns",
-          "answer_type": "value",
-          "accept": [
-            "sitcom reruns"
-          ],
-          "evidence_days": [
-            373
-          ],
-          "grading": "exact",
-          "viewpoint_day": 396,
-          "probe_date": "2027-03-31",
-          "probe_month": "2027-03",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202703_0086",
+          "id": "u2_p202703_0091",
           "original_id": "u2_q0041",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2523,7 +2643,73 @@
           "tags": []
         },
         {
-          "id": "u2_p202703_0087",
+          "id": "u2_p202703_0092",
+          "original_id": "u2_q0135",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Monday, 2027-03-08?",
+          "answer": "sitcom reruns",
+          "answer_type": "value",
+          "accept": [
+            "sitcom reruns"
+          ],
+          "evidence_days": [
+            373
+          ],
+          "grading": "exact",
+          "viewpoint_day": 396,
+          "probe_date": "2027-03-31",
+          "probe_month": "2027-03",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202703_0093",
+          "original_id": "u2_q0008",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Monday, 2027-03-29?",
+          "answer": "oatmeal",
+          "answer_type": "value",
+          "accept": [
+            "oatmeal"
+          ],
+          "evidence_days": [
+            394
+          ],
+          "grading": "exact",
+          "viewpoint_day": 396,
+          "probe_date": "2027-03-31",
+          "probe_month": "2027-03",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202703_0094",
+          "original_id": "u2_q0009",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Wednesday, 2027-03-24?",
+          "answer": "protein smoothie",
+          "answer_type": "value",
+          "accept": [
+            "protein smoothie"
+          ],
+          "evidence_days": [
+            389
+          ],
+          "grading": "exact",
+          "viewpoint_day": 396,
+          "probe_date": "2027-03-31",
+          "probe_month": "2027-03",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202703_0095",
           "original_id": "u2_q0356",
           "type": "event_status",
           "capability": "event_tracking",
@@ -2546,80 +2732,10 @@
           "tags": [
             "happened"
           ]
-        },
-        {
-          "id": "u2_p202703_0088",
-          "original_id": "u2_q0009",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Wednesday, 2027-03-24?",
-          "answer": "protein smoothie",
-          "answer_type": "value",
-          "accept": [
-            "protein smoothie"
-          ],
-          "evidence_days": [
-            389
-          ],
-          "grading": "exact",
-          "viewpoint_day": 396,
-          "probe_date": "2027-03-31",
-          "probe_month": "2027-03",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202703_0089",
-          "original_id": "u2_q0104",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Tuesday, 2027-03-16?",
-          "answer": "tennis",
-          "answer_type": "value",
-          "accept": [
-            "tennis"
-          ],
-          "evidence_days": [
-            381
-          ],
-          "grading": "exact",
-          "viewpoint_day": 396,
-          "probe_date": "2027-03-31",
-          "probe_month": "2027-03",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_r202703_0181",
-          "original_id": "u2_q0165",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2026-11-05?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            250
-          ],
-          "grading": "exact",
-          "viewpoint_day": 396,
-          "probe_date": "2027-03-31",
-          "probe_month": "2027-03",
-          "is_retrospective": true,
-          "tags": [
-            "boundary"
-          ],
-          "retrospective_of": "u2_p202611_0066",
-          "original_probe_month": "2026-11"
         }
       ],
-      "num_questions": 6,
-      "num_retrospective": 1
+      "num_questions": 5,
+      "num_retrospective": 0
     },
     {
       "probe_date": "2027-04-30",
@@ -2627,7 +2743,7 @@
       "viewpoint_day": 426,
       "questions": [
         {
-          "id": "u2_p202704_0090",
+          "id": "u2_p202704_0096",
           "original_id": "u2_q0056",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2649,32 +2765,64 @@
           "tags": []
         },
         {
-          "id": "u2_r202704_0190",
-          "original_id": "u2_q0137",
+          "id": "u2_r202704_0187",
+          "original_id": "u2_q0130",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Wednesday, 2026-10-21?",
-          "answer": "nature documentary",
+          "question": "What was Marcus's evening TV show on Monday, 2026-11-16?",
+          "answer": "sitcom reruns",
           "answer_type": "value",
           "accept": [
-            "nature documentary"
+            "sitcom reruns"
           ],
           "evidence_days": [
-            235
+            258,
+            259,
+            260
           ],
           "grading": "exact",
           "viewpoint_day": 426,
           "probe_date": "2027-04-30",
           "probe_month": "2027-04",
           "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202610_0055",
-          "original_probe_month": "2026-10"
+          "tags": [
+            "inferred"
+          ],
+          "retrospective_of": "u2_p202611_0072",
+          "original_probe_month": "2026-11"
+        },
+        {
+          "id": "u2_r202704_0190",
+          "original_id": "u2_q0157",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Monday, 2026-11-09?",
+          "answer": "sitcom reruns",
+          "answer_type": "value",
+          "accept": [
+            "sitcom reruns"
+          ],
+          "evidence_days": [
+            252,
+            253
+          ],
+          "grading": "exact",
+          "viewpoint_day": 426,
+          "probe_date": "2027-04-30",
+          "probe_month": "2027-04",
+          "is_retrospective": true,
+          "tags": [
+            "inferred",
+            "boundary"
+          ],
+          "retrospective_of": "u2_p202611_0067",
+          "original_probe_month": "2026-11"
         }
       ],
-      "num_questions": 2,
-      "num_retrospective": 1
+      "num_questions": 3,
+      "num_retrospective": 2
     },
     {
       "probe_date": "2027-05-31",
@@ -2682,7 +2830,58 @@
       "viewpoint_day": 457,
       "questions": [
         {
-          "id": "u2_p202705_0091",
+          "id": "u2_p202705_0097",
+          "original_id": "u2_q0359",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What was the status of his back injury on 2027-05-15?",
+          "answer": "strained his lower back lifting boxes (happened)",
+          "answer_type": "free_text",
+          "accept": [
+            "strained his lower back lifting boxes"
+          ],
+          "evidence_days": [
+            430
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 457,
+          "probe_date": "2027-05-31",
+          "probe_month": "2027-05",
+          "is_retrospective": false,
+          "tags": [
+            "at_time",
+            "happened"
+          ]
+        },
+        {
+          "id": "u2_p202705_0098",
+          "original_id": "u2_q0290",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "workout",
+          "question": "When did Marcus's workout routine change from the gym weights / rest day / run / tennis routine to physical therapy stretches?",
+          "answer": "2027-05-05",
+          "answer_type": "date",
+          "accept": [
+            "2027-05-05"
+          ],
+          "evidence_days": [
+            430,
+            431
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 457,
+          "probe_date": "2027-05-31",
+          "probe_month": "2027-05",
+          "is_retrospective": false,
+          "tags": [
+            "temporary",
+            "explicit"
+          ]
+        },
+        {
+          "id": "u2_p202705_0099",
           "original_id": "u2_q0070",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2709,7 +2908,29 @@
           ]
         },
         {
-          "id": "u2_p202705_0092",
+          "id": "u2_p202705_0100",
+          "original_id": "u2_q0110",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Friday, 2027-05-14?",
+          "answer": "physical therapy stretches",
+          "answer_type": "value",
+          "accept": [
+            "physical therapy stretches"
+          ],
+          "evidence_days": [
+            440
+          ],
+          "grading": "exact",
+          "viewpoint_day": 457,
+          "probe_date": "2027-05-31",
+          "probe_month": "2027-05",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202705_0101",
           "original_id": "u2_q0192",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
@@ -2735,33 +2956,29 @@
           ]
         },
         {
-          "id": "u2_p202705_0093",
-          "original_id": "u2_q0311",
-          "type": "reversion",
-          "capability": "temporal_change",
-          "domain": "workout",
-          "question": "What did Marcus's workout go back to after the period of physical therapy stretches?",
-          "answer": "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun - by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun",
-          "answer_type": "free_text",
+          "id": "u2_p202705_0102",
+          "original_id": "u2_q0149",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Thursday, 2027-05-13?",
+          "answer": "nature documentary",
+          "answer_type": "value",
           "accept": [
-            "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun"
+            "nature documentary"
           ],
           "evidence_days": [
-            452,
-            454,
-            455
+            439
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 457,
           "probe_date": "2027-05-31",
           "probe_month": "2027-05",
           "is_retrospective": false,
-          "tags": [
-            "temporary"
-          ]
+          "tags": []
         },
         {
-          "id": "u2_p202705_0094",
+          "id": "u2_p202705_0103",
           "original_id": "u2_q0366",
           "type": "duration",
           "capability": "temporal_arithmetic",
@@ -2786,81 +3003,7 @@
           ]
         },
         {
-          "id": "u2_p202705_0095",
-          "original_id": "u2_q0102",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Sunday, 2027-05-23?",
-          "answer": "physical therapy stretches",
-          "answer_type": "value",
-          "accept": [
-            "physical therapy stretches"
-          ],
-          "evidence_days": [
-            449
-          ],
-          "grading": "exact",
-          "viewpoint_day": 457,
-          "probe_date": "2027-05-31",
-          "probe_month": "2027-05",
-          "is_retrospective": false,
-          "tags": [
-            "boundary"
-          ]
-        },
-        {
-          "id": "u2_p202705_0096",
-          "original_id": "u2_q0363",
-          "type": "duration",
-          "capability": "temporal_arithmetic",
-          "domain": "workout",
-          "question": "How long did Marcus's workout stay the gym weights / rest day / run / tennis routine?",
-          "answer": "310 days (2026-06-29 to 2027-05-04)",
-          "answer_type": "free_text",
-          "accept": [
-            "310"
-          ],
-          "evidence_days": [
-            121,
-            430
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 457,
-          "probe_date": "2027-05-31",
-          "probe_month": "2027-05",
-          "is_retrospective": false,
-          "tags": [
-            "shift"
-          ]
-        },
-        {
-          "id": "u2_p202705_0097",
-          "original_id": "u2_q0310",
-          "type": "reversion",
-          "capability": "temporal_change",
-          "domain": "workout",
-          "question": "Is Marcus's workout still physical therapy stretches?",
-          "answer": "No - that lasted from 2027-05-05 to 2027-05-25; then Marcus went back to tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            451,
-            452
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 457,
-          "probe_date": "2027-05-31",
-          "probe_month": "2027-05",
-          "is_retrospective": false,
-          "tags": [
-            "temporary"
-          ]
-        },
-        {
-          "id": "u2_p202705_0098",
+          "id": "u2_p202705_0104",
           "original_id": "u2_q0103",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2884,7 +3027,31 @@
           ]
         },
         {
-          "id": "u2_p202705_0099",
+          "id": "u2_p202705_0105",
+          "original_id": "u2_q0094",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Tuesday, 2027-05-25?",
+          "answer": "physical therapy stretches",
+          "answer_type": "value",
+          "accept": [
+            "physical therapy stretches"
+          ],
+          "evidence_days": [
+            451
+          ],
+          "grading": "exact",
+          "viewpoint_day": 457,
+          "probe_date": "2027-05-31",
+          "probe_month": "2027-05",
+          "is_retrospective": false,
+          "tags": [
+            "boundary"
+          ]
+        },
+        {
+          "id": "u2_p202705_0106",
           "original_id": "u2_q0358",
           "type": "event_status",
           "capability": "event_tracking",
@@ -2909,97 +3076,20 @@
           ]
         },
         {
-          "id": "u2_p202705_0100",
-          "original_id": "u2_q0110",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Friday, 2027-05-14?",
-          "answer": "physical therapy stretches",
+          "id": "u2_r202705_0169",
+          "original_id": "u2_q0331",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Marcus's job on 2027-01-14?",
+          "answer": "head of the science department at the same high school",
           "answer_type": "value",
           "accept": [
-            "physical therapy stretches"
+            "head of the science department at the same high school",
+            "head of the science department at the same high school"
           ],
           "evidence_days": [
-            440
-          ],
-          "grading": "exact",
-          "viewpoint_day": 457,
-          "probe_date": "2027-05-31",
-          "probe_month": "2027-05",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_r202705_0172",
-          "original_id": "u2_q0356",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What happened with the family trip to Japan?",
-          "answer": "went on the family trip to Japan (happened, 2027-03-15)",
-          "answer_type": "free_text",
-          "accept": [
-            "went on the family trip to Japan"
-          ],
-          "evidence_days": [
-            200,
-            380
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 457,
-          "probe_date": "2027-05-31",
-          "probe_month": "2027-05",
-          "is_retrospective": true,
-          "tags": [
-            "happened"
-          ],
-          "retrospective_of": "u2_p202703_0087",
-          "original_probe_month": "2027-03"
-        },
-        {
-          "id": "u2_r202705_0177",
-          "original_id": "u2_q0308",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "evening_show",
-          "question": "On Friday, 2026-11-06, Marcus's evening TV show was sitcom reruns instead of the usual nature documentary. Was that a lasting change?",
-          "answer": "Yes - from 2026-11-06 the routine changed to 5 days sitcom reruns, 2 days nature documentaries.",
-          "answer_type": "yes_no",
-          "accept": [
-            "yes"
-          ],
-          "evidence_days": [
-            251,
-            252,
-            253
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 457,
-          "probe_date": "2027-05-31",
-          "probe_month": "2027-05",
-          "is_retrospective": true,
-          "tags": [
-            "shift",
-            "explicit"
-          ],
-          "retrospective_of": "u2_p202611_0060",
-          "original_probe_month": "2026-11"
-        },
-        {
-          "id": "u2_r202705_0183",
-          "original_id": "u2_q0135",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Monday, 2027-03-08?",
-          "answer": "sitcom reruns",
-          "answer_type": "value",
-          "accept": [
-            "sitcom reruns"
-          ],
-          "evidence_days": [
-            373
+            250
           ],
           "grading": "exact",
           "viewpoint_day": 457,
@@ -3007,62 +3097,36 @@
           "probe_month": "2027-05",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202703_0085",
-          "original_probe_month": "2027-03"
+          "retrospective_of": "u2_p202701_0081",
+          "original_probe_month": "2027-01"
         },
         {
-          "id": "u2_r202705_0189",
-          "original_id": "u2_q0104",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Tuesday, 2027-03-16?",
-          "answer": "tennis",
-          "answer_type": "value",
-          "accept": [
-            "tennis"
-          ],
-          "evidence_days": [
-            381
-          ],
-          "grading": "exact",
-          "viewpoint_day": 457,
-          "probe_date": "2027-05-31",
-          "probe_month": "2027-05",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202703_0089",
-          "original_probe_month": "2027-03"
-        },
-        {
-          "id": "u2_r202705_0195",
-          "original_id": "u2_q0150",
+          "id": "u2_r202705_0194",
+          "original_id": "u2_q0163",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Sunday, 2026-11-01?",
+          "question": "What was Marcus's evening TV show on Wednesday, 2026-11-18?",
           "answer": "nature documentary",
           "answer_type": "value",
           "accept": [
             "nature documentary"
           ],
           "evidence_days": [
-            246
+            263
           ],
           "grading": "exact",
           "viewpoint_day": 457,
           "probe_date": "2027-05-31",
           "probe_month": "2027-05",
           "is_retrospective": true,
-          "tags": [
-            "boundary"
-          ],
-          "retrospective_of": "u2_p202611_0061",
+          "tags": [],
+          "retrospective_of": "u2_p202611_0070",
           "original_probe_month": "2026-11"
         }
       ],
-      "num_questions": 15,
-      "num_retrospective": 5
+      "num_questions": 12,
+      "num_retrospective": 2
     },
     {
       "probe_date": "2027-06-30",
@@ -3070,51 +3134,7 @@
       "viewpoint_day": 487,
       "questions": [
         {
-          "id": "u2_p202706_0101",
-          "original_id": "u2_q0152",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Wednesday, 2027-06-02?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            459
-          ],
-          "grading": "exact",
-          "viewpoint_day": 487,
-          "probe_date": "2027-06-30",
-          "probe_month": "2027-06",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202706_0102",
-          "original_id": "u2_q0121",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2027-06-10?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            467
-          ],
-          "grading": "exact",
-          "viewpoint_day": 487,
-          "probe_date": "2027-06-30",
-          "probe_month": "2027-06",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202706_0103",
+          "id": "u2_p202706_0107",
           "original_id": "u2_q0062",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3138,7 +3158,31 @@
           ]
         },
         {
-          "id": "u2_p202706_0104",
+          "id": "u2_p202706_0108",
+          "original_id": "u2_q0080",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Sunday, 2027-06-06?",
+          "answer": "long walk",
+          "answer_type": "value",
+          "accept": [
+            "long walk"
+          ],
+          "evidence_days": [
+            463
+          ],
+          "grading": "exact",
+          "viewpoint_day": 487,
+          "probe_date": "2027-06-30",
+          "probe_month": "2027-06",
+          "is_retrospective": false,
+          "tags": [
+            "exception"
+          ]
+        },
+        {
+          "id": "u2_p202706_0109",
           "original_id": "u2_q0075",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3163,41 +3207,19 @@
           ]
         },
         {
-          "id": "u2_p202706_0105",
-          "original_id": "u2_q0072",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Thursday, 2027-06-24?",
-          "answer": "tennis",
-          "answer_type": "value",
-          "accept": [
-            "tennis"
-          ],
-          "evidence_days": [
-            481
-          ],
-          "grading": "exact",
-          "viewpoint_day": 487,
-          "probe_date": "2027-06-30",
-          "probe_month": "2027-06",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202706_0106",
-          "original_id": "u2_q0161",
+          "id": "u2_p202706_0110",
+          "original_id": "u2_q0152",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2027-06-24?",
+          "question": "What was Marcus's evening TV show on Wednesday, 2027-06-02?",
           "answer": "nature documentary",
           "answer_type": "value",
           "accept": [
             "nature documentary"
           ],
           "evidence_days": [
-            481
+            459
           ],
           "grading": "exact",
           "viewpoint_day": 487,
@@ -3207,45 +3229,63 @@
           "tags": []
         },
         {
-          "id": "u2_r202706_0184",
-          "original_id": "u2_q0317",
-          "type": "fact_current",
-          "capability": "knowledge_update",
-          "domain": "pets",
-          "question": "What are Marcus's current pets?",
-          "answer": "cat named Olive",
-          "answer_type": "free_text",
-          "accept": [
-            "cat named Olive"
-          ],
-          "evidence_days": [
-            330
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 487,
-          "probe_date": "2027-06-30",
-          "probe_month": "2027-06",
-          "is_retrospective": true,
-          "tags": [
-            "set"
-          ],
-          "retrospective_of": "u2_p202701_0078",
-          "original_probe_month": "2027-01"
-        },
-        {
-          "id": "u2_r202706_0194",
-          "original_id": "u2_q0069",
+          "id": "u2_p202706_0111",
+          "original_id": "u2_q0083",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "workout",
-          "question": "What was Marcus's workout on Thursday, 2026-12-17?",
+          "question": "What was Marcus's workout on Wednesday, 2027-06-23?",
+          "answer": "run",
+          "answer_type": "value",
+          "accept": [
+            "run"
+          ],
+          "evidence_days": [
+            480
+          ],
+          "grading": "exact",
+          "viewpoint_day": 487,
+          "probe_date": "2027-06-30",
+          "probe_month": "2027-06",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202706_0112",
+          "original_id": "u2_q0112",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Saturday, 2027-06-26?",
           "answer": "tennis",
           "answer_type": "value",
           "accept": [
             "tennis"
           ],
           "evidence_days": [
-            292
+            483
+          ],
+          "grading": "exact",
+          "viewpoint_day": 487,
+          "probe_date": "2027-06-30",
+          "probe_month": "2027-06",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_r202706_0162",
+          "original_id": "u2_q0138",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Thursday, 2026-12-24?",
+          "answer": "nature documentary",
+          "answer_type": "value",
+          "accept": [
+            "nature documentary"
+          ],
+          "evidence_days": [
+            299
           ],
           "grading": "exact",
           "viewpoint_day": 487,
@@ -3253,164 +3293,18 @@
           "probe_month": "2027-06",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202612_0070",
+          "retrospective_of": "u2_p202612_0078",
           "original_probe_month": "2026-12"
         }
       ],
-      "num_questions": 8,
-      "num_retrospective": 2
+      "num_questions": 7,
+      "num_retrospective": 1
     },
     {
       "probe_date": "2027-07-31",
       "probe_month": "2027-07",
       "viewpoint_day": 518,
       "questions": [
-        {
-          "id": "u2_p202707_0107",
-          "original_id": "u2_q0117",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Tuesday, 2027-07-13?",
-          "answer": "tennis",
-          "answer_type": "value",
-          "accept": [
-            "tennis"
-          ],
-          "evidence_days": [
-            500
-          ],
-          "grading": "exact",
-          "viewpoint_day": 518,
-          "probe_date": "2027-07-31",
-          "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202707_0108",
-          "original_id": "u2_q0332",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2026-08-06?",
-          "answer": "woodworking, tennis",
-          "answer_type": "free_text",
-          "accept": [
-            "woodworking, tennis"
-          ],
-          "evidence_days": [
-            1,
-            120,
-            500
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 518,
-          "probe_date": "2027-07-31",
-          "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u2_p202707_0109",
-          "original_id": "u2_q0329",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "job",
-          "question": "What was Marcus's job on 2027-07-26?",
-          "answer": "head of the science department at the same high school",
-          "answer_type": "value",
-          "accept": [
-            "head of the science department at the same high school",
-            "head of the science department at the same high school"
-          ],
-          "evidence_days": [
-            250
-          ],
-          "grading": "exact",
-          "viewpoint_day": 518,
-          "probe_date": "2027-07-31",
-          "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202707_0110",
-          "original_id": "u2_q0338",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2026-06-25?",
-          "answer": "woodworking",
-          "answer_type": "free_text",
-          "accept": [
-            "woodworking"
-          ],
-          "evidence_days": [
-            1,
-            500
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 518,
-          "probe_date": "2027-07-31",
-          "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u2_p202707_0111",
-          "original_id": "u2_q0339",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2026-12-01?",
-          "answer": "woodworking, tennis",
-          "answer_type": "free_text",
-          "accept": [
-            "woodworking, tennis"
-          ],
-          "evidence_days": [
-            1,
-            120,
-            500
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 518,
-          "probe_date": "2027-07-31",
-          "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u2_p202707_0112",
-          "original_id": "u2_q0345",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "pets",
-          "question": "What were Marcus's pets on 2027-07-12?",
-          "answer": "cat named Olive",
-          "answer_type": "free_text",
-          "accept": [
-            "cat named Olive"
-          ],
-          "evidence_days": [
-            330
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 518,
-          "probe_date": "2027-07-31",
-          "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
         {
           "id": "u2_p202707_0113",
           "original_id": "u2_q0353",
@@ -3439,98 +3333,114 @@
         },
         {
           "id": "u2_p202707_0114",
-          "original_id": "u2_q0337",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2026-07-13?",
-          "answer": "woodworking, tennis",
-          "answer_type": "free_text",
-          "accept": [
-            "woodworking, tennis"
-          ],
-          "evidence_days": [
-            1,
-            120,
-            500
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 518,
-          "probe_date": "2027-07-31",
-          "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u2_p202707_0115",
-          "original_id": "u2_q0341",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2026-06-09?",
-          "answer": "woodworking",
-          "answer_type": "free_text",
-          "accept": [
-            "woodworking"
-          ],
-          "evidence_days": [
-            1,
-            500
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 518,
-          "probe_date": "2027-07-31",
-          "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u2_r202707_0170",
-          "original_id": "u2_q0070",
+          "original_id": "u2_q0170",
           "type": "recall",
           "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Friday, 2027-05-07?",
-          "answer": "physical therapy stretches",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Wednesday, 2027-07-14?",
+          "answer": "nature documentary",
           "answer_type": "value",
           "accept": [
-            "physical therapy stretches"
+            "nature documentary"
           ],
           "evidence_days": [
-            431,
-            432
+            501
           ],
           "grading": "exact",
           "viewpoint_day": 518,
           "probe_date": "2027-07-31",
           "probe_month": "2027-07",
-          "is_retrospective": true,
-          "tags": [
-            "inferred",
-            "no_session",
-            "boundary"
-          ],
-          "retrospective_of": "u2_p202705_0091",
-          "original_probe_month": "2027-05"
+          "is_retrospective": false,
+          "tags": []
         },
         {
-          "id": "u2_r202707_0191",
-          "original_id": "u2_q0110",
+          "id": "u2_p202707_0115",
+          "original_id": "u2_q0117",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "workout",
-          "question": "What was Marcus's workout on Friday, 2027-05-14?",
-          "answer": "physical therapy stretches",
+          "question": "What was Marcus's workout on Tuesday, 2027-07-13?",
+          "answer": "tennis",
           "answer_type": "value",
           "accept": [
-            "physical therapy stretches"
+            "tennis"
           ],
           "evidence_days": [
-            440
+            500
+          ],
+          "grading": "exact",
+          "viewpoint_day": 518,
+          "probe_date": "2027-07-31",
+          "probe_month": "2027-07",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202707_0116",
+          "original_id": "u2_q0351",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "pets",
+          "question": "What were Marcus's pets on 2027-07-11?",
+          "answer": "cat named Olive",
+          "answer_type": "free_text",
+          "accept": [
+            "cat named Olive"
+          ],
+          "evidence_days": [
+            330
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 518,
+          "probe_date": "2027-07-31",
+          "probe_month": "2027-07",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
+          "id": "u2_r202707_0159",
+          "original_id": "u2_q0188",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show routine in January 2027?",
+          "answer": "a 7-day cycle starting Fri 2026-11-06: sitcom reruns for 5 days, then nature documentary for 2 days, repeating",
+          "answer_type": "free_text",
+          "accept": [
+            "5 days sitcom reruns, 2 days nature documentaries"
+          ],
+          "evidence_days": [
+            251,
+            252,
+            253
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 518,
+          "probe_date": "2027-07-31",
+          "probe_month": "2027-07",
+          "is_retrospective": true,
+          "tags": [
+            "shift"
+          ],
+          "retrospective_of": "u2_p202701_0080",
+          "original_probe_month": "2027-01"
+        },
+        {
+          "id": "u2_r202707_0163",
+          "original_id": "u2_q0041",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Sunday, 2027-03-21?",
+          "answer": "oatmeal",
+          "answer_type": "value",
+          "accept": [
+            "oatmeal"
+          ],
+          "evidence_days": [
+            386
           ],
           "grading": "exact",
           "viewpoint_day": 518,
@@ -3538,12 +3448,38 @@
           "probe_month": "2027-07",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202705_0100",
+          "retrospective_of": "u2_p202703_0091",
+          "original_probe_month": "2027-03"
+        },
+        {
+          "id": "u2_r202707_0197",
+          "original_id": "u2_q0103",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Sunday, 2027-05-30?",
+          "answer": "rest day",
+          "answer_type": "value",
+          "accept": [
+            "rest day"
+          ],
+          "evidence_days": [
+            456
+          ],
+          "grading": "exact",
+          "viewpoint_day": 518,
+          "probe_date": "2027-07-31",
+          "probe_month": "2027-07",
+          "is_retrospective": true,
+          "tags": [
+            "boundary"
+          ],
+          "retrospective_of": "u2_p202705_0104",
           "original_probe_month": "2027-05"
         }
       ],
-      "num_questions": 11,
-      "num_retrospective": 2
+      "num_questions": 7,
+      "num_retrospective": 3
     },
     {
       "probe_date": "2027-08-31",
@@ -3551,7 +3487,7 @@
       "viewpoint_day": 549,
       "questions": [
         {
-          "id": "u2_p202708_0116",
+          "id": "u2_p202708_0117",
           "original_id": "u2_q0095",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3573,73 +3509,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202708_0117",
-          "original_id": "u2_q0019",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Sunday, 2027-08-01?",
-          "answer": "protein smoothie",
-          "answer_type": "value",
-          "accept": [
-            "protein smoothie"
-          ],
-          "evidence_days": [
-            519
-          ],
-          "grading": "exact",
-          "viewpoint_day": 549,
-          "probe_date": "2027-08-31",
-          "probe_month": "2027-08",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
           "id": "u2_p202708_0118",
-          "original_id": "u2_q0131",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Tuesday, 2027-08-31?",
-          "answer": "sitcom reruns",
-          "answer_type": "value",
-          "accept": [
-            "sitcom reruns"
-          ],
-          "evidence_days": [
-            549
-          ],
-          "grading": "exact",
-          "viewpoint_day": 549,
-          "probe_date": "2027-08-31",
-          "probe_month": "2027-08",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202708_0119",
-          "original_id": "u2_q0067",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "workout",
-          "question": "What was Marcus's workout on Monday, 2027-08-30?",
-          "answer": "gym weights",
-          "answer_type": "value",
-          "accept": [
-            "gym weights"
-          ],
-          "evidence_days": [
-            548
-          ],
-          "grading": "exact",
-          "viewpoint_day": 549,
-          "probe_date": "2027-08-31",
-          "probe_month": "2027-08",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202708_0120",
           "original_id": "u2_q0349",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -3663,7 +3533,76 @@
           ]
         },
         {
-          "id": "u2_r202708_0173",
+          "id": "u2_p202708_0119",
+          "original_id": "u2_q0019",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Sunday, 2027-08-01?",
+          "answer": "protein smoothie",
+          "answer_type": "value",
+          "accept": [
+            "protein smoothie"
+          ],
+          "evidence_days": [
+            519
+          ],
+          "grading": "exact",
+          "viewpoint_day": 549,
+          "probe_date": "2027-08-31",
+          "probe_month": "2027-08",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202708_0120",
+          "original_id": "u2_q0067",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Monday, 2027-08-30?",
+          "answer": "gym weights",
+          "answer_type": "value",
+          "accept": [
+            "gym weights"
+          ],
+          "evidence_days": [
+            548
+          ],
+          "grading": "exact",
+          "viewpoint_day": 549,
+          "probe_date": "2027-08-31",
+          "probe_month": "2027-08",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202708_0121",
+          "original_id": "u2_q0301",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "breakfast",
+          "question": "On Friday, 2027-08-27, Marcus's breakfast was diner breakfast instead of the usual protein smoothie. Was that a lasting change?",
+          "answer": "No - it was a one-off (met a friend); the usual routine continued.",
+          "answer_type": "yes_no",
+          "accept": [
+            "no"
+          ],
+          "evidence_days": [
+            545,
+            546
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 549,
+          "probe_date": "2027-08-31",
+          "probe_month": "2027-08",
+          "is_retrospective": false,
+          "tags": [
+            "exception"
+          ]
+        },
+        {
+          "id": "u2_r202708_0199",
           "original_id": "u2_q0151",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3683,7 +3622,7 @@
           "probe_month": "2027-08",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202702_0081",
+          "retrospective_of": "u2_p202702_0089",
           "original_probe_month": "2027-02"
         }
       ],
@@ -3696,7 +3635,7 @@
       "viewpoint_day": 579,
       "questions": [
         {
-          "id": "u2_p202709_0121",
+          "id": "u2_p202709_0122",
           "original_id": "u2_q0360",
           "type": "event_status",
           "capability": "event_tracking",
@@ -3720,7 +3659,7 @@
           ]
         },
         {
-          "id": "u2_p202709_0122",
+          "id": "u2_p202709_0123",
           "original_id": "u2_q0309",
           "type": "exception_vs_shift",
           "capability": "exception_handling",
@@ -3747,7 +3686,7 @@
           ]
         },
         {
-          "id": "u2_p202709_0123",
+          "id": "u2_p202709_0124",
           "original_id": "u2_q0120",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3769,7 +3708,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202709_0124",
+          "id": "u2_p202709_0125",
           "original_id": "u2_q0160",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3793,7 +3732,7 @@
           ]
         },
         {
-          "id": "u2_p202709_0125",
+          "id": "u2_p202709_0126",
           "original_id": "u2_q0299",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -3818,7 +3757,7 @@
           ]
         },
         {
-          "id": "u2_p202709_0126",
+          "id": "u2_p202709_0127",
           "original_id": "u2_q0144",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3842,7 +3781,7 @@
           ]
         },
         {
-          "id": "u2_p202709_0127",
+          "id": "u2_p202709_0128",
           "original_id": "u2_q0162",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3864,7 +3803,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202709_0128",
+          "id": "u2_p202709_0129",
           "original_id": "u2_q0066",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3889,7 +3828,7 @@
           ]
         },
         {
-          "id": "u2_p202709_0129",
+          "id": "u2_p202709_0130",
           "original_id": "u2_q0173",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3911,65 +3850,10 @@
           "tags": [
             "boundary"
           ]
-        },
-        {
-          "id": "u2_r202709_0182",
-          "original_id": "u2_q0341",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2026-06-09?",
-          "answer": "woodworking",
-          "answer_type": "free_text",
-          "accept": [
-            "woodworking"
-          ],
-          "evidence_days": [
-            1,
-            500
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 579,
-          "probe_date": "2027-09-30",
-          "probe_month": "2027-09",
-          "is_retrospective": true,
-          "tags": [
-            "set"
-          ],
-          "retrospective_of": "u2_p202707_0115",
-          "original_probe_month": "2027-07"
-        },
-        {
-          "id": "u2_r202709_0185",
-          "original_id": "u2_q0339",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2026-12-01?",
-          "answer": "woodworking, tennis",
-          "answer_type": "free_text",
-          "accept": [
-            "woodworking, tennis"
-          ],
-          "evidence_days": [
-            1,
-            120,
-            500
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 579,
-          "probe_date": "2027-09-30",
-          "probe_month": "2027-09",
-          "is_retrospective": true,
-          "tags": [
-            "set"
-          ],
-          "retrospective_of": "u2_p202707_0111",
-          "original_probe_month": "2027-07"
         }
       ],
-      "num_questions": 11,
-      "num_retrospective": 2
+      "num_questions": 9,
+      "num_retrospective": 0
     },
     {
       "probe_date": "2027-10-31",
@@ -3977,7 +3861,7 @@
       "viewpoint_day": 610,
       "questions": [
         {
-          "id": "u2_p202710_0130",
+          "id": "u2_p202710_0131",
           "original_id": "u2_q0071",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4003,7 +3887,7 @@
           ]
         },
         {
-          "id": "u2_p202710_0131",
+          "id": "u2_p202710_0132",
           "original_id": "u2_q0058",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4027,7 +3911,7 @@
           ]
         },
         {
-          "id": "u2_p202710_0132",
+          "id": "u2_p202710_0133",
           "original_id": "u2_q0033",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4051,7 +3935,7 @@
           ]
         },
         {
-          "id": "u2_p202710_0133",
+          "id": "u2_p202710_0134",
           "original_id": "u2_q0115",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4073,7 +3957,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202710_0134",
+          "id": "u2_p202710_0135",
           "original_id": "u2_q0335",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -4097,7 +3981,7 @@
           ]
         },
         {
-          "id": "u2_p202710_0135",
+          "id": "u2_p202710_0136",
           "original_id": "u2_q0158",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4119,7 +4003,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202710_0136",
+          "id": "u2_p202710_0137",
           "original_id": "u2_q0024",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4143,7 +4027,7 @@
           ]
         },
         {
-          "id": "u2_p202710_0137",
+          "id": "u2_p202710_0138",
           "original_id": "u2_q0361",
           "type": "event_status",
           "capability": "event_tracking",
@@ -4167,7 +4051,7 @@
           ]
         },
         {
-          "id": "u2_p202710_0138",
+          "id": "u2_p202710_0139",
           "original_id": "u2_q0288",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -4193,7 +4077,7 @@
           ]
         },
         {
-          "id": "u2_p202710_0139",
+          "id": "u2_p202710_0140",
           "original_id": "u2_q0295",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -4218,7 +4102,7 @@
           ]
         },
         {
-          "id": "u2_p202710_0140",
+          "id": "u2_p202710_0141",
           "original_id": "u2_q0049",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4240,60 +4124,10 @@
           "tags": [
             "boundary"
           ]
-        },
-        {
-          "id": "u2_r202710_0178",
-          "original_id": "u2_q0349",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "pets",
-          "question": "What were Marcus's pets on 2027-08-16?",
-          "answer": "cat named Olive",
-          "answer_type": "free_text",
-          "accept": [
-            "cat named Olive"
-          ],
-          "evidence_days": [
-            330
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": true,
-          "tags": [
-            "set"
-          ],
-          "retrospective_of": "u2_p202708_0120",
-          "original_probe_month": "2027-08"
-        },
-        {
-          "id": "u2_r202710_0197",
-          "original_id": "u2_q0121",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2027-06-10?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            467
-          ],
-          "grading": "exact",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202706_0102",
-          "original_probe_month": "2027-06"
         }
       ],
-      "num_questions": 13,
-      "num_retrospective": 2
+      "num_questions": 11,
+      "num_retrospective": 0
     },
     {
       "probe_date": "2027-11-30",
@@ -4301,7 +4135,7 @@
       "viewpoint_day": 640,
       "questions": [
         {
-          "id": "u2_p202711_0141",
+          "id": "u2_p202711_0142",
           "original_id": "u2_q0053",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4323,7 +4157,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202711_0142",
+          "id": "u2_p202711_0143",
           "original_id": "u2_q0153",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4348,7 +4182,7 @@
           ]
         },
         {
-          "id": "u2_p202711_0143",
+          "id": "u2_p202711_0144",
           "original_id": "u2_q0116",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4373,7 +4207,7 @@
           ]
         },
         {
-          "id": "u2_p202711_0144",
+          "id": "u2_p202711_0145",
           "original_id": "u2_q0108",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4395,7 +4229,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202711_0145",
+          "id": "u2_p202711_0146",
           "original_id": "u2_q0018",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4417,7 +4251,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202711_0146",
+          "id": "u2_p202711_0147",
           "original_id": "u2_q0088",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4439,7 +4273,7 @@
           "tags": []
         },
         {
-          "id": "u2_p202711_0147",
+          "id": "u2_p202711_0148",
           "original_id": "u2_q0038",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4464,7 +4298,7 @@
           ]
         },
         {
-          "id": "u2_p202711_0148",
+          "id": "u2_p202711_0149",
           "original_id": "u2_q0039",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4486,81 +4320,64 @@
           "tags": []
         },
         {
-          "id": "u2_r202711_0167",
-          "original_id": "u2_q0162",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Monday, 2027-09-27?",
-          "answer": "sci-fi series",
-          "answer_type": "value",
+          "id": "u2_r202711_0180",
+          "original_id": "u2_q0359",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What was the status of his back injury on 2027-05-15?",
+          "answer": "strained his lower back lifting boxes (happened)",
+          "answer_type": "free_text",
           "accept": [
-            "sci-fi series"
+            "strained his lower back lifting boxes"
           ],
           "evidence_days": [
-            576
+            430
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 640,
           "probe_date": "2027-11-30",
           "probe_month": "2027-11",
           "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202709_0127",
+          "tags": [
+            "at_time",
+            "happened"
+          ],
+          "retrospective_of": "u2_p202705_0097",
+          "original_probe_month": "2027-05"
+        },
+        {
+          "id": "u2_r202711_0181",
+          "original_id": "u2_q0309",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "evening_show",
+          "question": "On Saturday, 2027-09-11, Marcus's evening TV show was sci-fi series instead of the usual sitcom reruns. Was that a lasting change?",
+          "answer": "Yes - from 2027-09-11 the routine changed to alternating weeks of a sci-fi series and sitcom reruns.",
+          "answer_type": "yes_no",
+          "accept": [
+            "yes"
+          ],
+          "evidence_days": [
+            560,
+            561,
+            563
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 640,
+          "probe_date": "2027-11-30",
+          "probe_month": "2027-11",
+          "is_retrospective": true,
+          "tags": [
+            "shift",
+            "explicit"
+          ],
+          "retrospective_of": "u2_p202709_0123",
           "original_probe_month": "2027-09"
-        },
-        {
-          "id": "u2_r202711_0168",
-          "original_id": "u2_q0161",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2027-06-24?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            481
-          ],
-          "grading": "exact",
-          "viewpoint_day": 640,
-          "probe_date": "2027-11-30",
-          "probe_month": "2027-11",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202706_0106",
-          "original_probe_month": "2027-06"
-        },
-        {
-          "id": "u2_r202711_0198",
-          "original_id": "u2_q0329",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "job",
-          "question": "What was Marcus's job on 2027-07-26?",
-          "answer": "head of the science department at the same high school",
-          "answer_type": "value",
-          "accept": [
-            "head of the science department at the same high school",
-            "head of the science department at the same high school"
-          ],
-          "evidence_days": [
-            250
-          ],
-          "grading": "exact",
-          "viewpoint_day": 640,
-          "probe_date": "2027-11-30",
-          "probe_month": "2027-11",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u2_p202707_0109",
-          "original_probe_month": "2027-07"
         }
       ],
-      "num_questions": 11,
-      "num_retrospective": 3
+      "num_questions": 10,
+      "num_retrospective": 2
     },
     {
       "probe_date": "2027-12-31",
@@ -4568,7 +4385,7 @@
       "viewpoint_day": 671,
       "questions": [
         {
-          "id": "u2_p202712_0149",
+          "id": "u2_p202712_0150",
           "original_id": "u2_q0346",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -4592,7 +4409,7 @@
           ]
         },
         {
-          "id": "u2_p202712_0150",
+          "id": "u2_p202712_0151",
           "original_id": "u2_q0013",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4617,67 +4434,19 @@
           ]
         },
         {
-          "id": "u2_p202712_0151",
-          "original_id": "u2_q0128",
+          "id": "u2_r202712_0168",
+          "original_id": "u2_q0115",
           "type": "recall",
           "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Wednesday, 2027-12-29?",
-          "answer": "sitcom reruns",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Sunday, 2027-10-03?",
+          "answer": "rest day",
           "answer_type": "value",
           "accept": [
-            "sitcom reruns"
+            "rest day"
           ],
           "evidence_days": [
-            669
-          ],
-          "grading": "exact",
-          "viewpoint_day": 671,
-          "probe_date": "2027-12-31",
-          "probe_month": "2027-12",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_r202712_0163",
-          "original_id": "u2_q0335",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2027-10-16?",
-          "answer": "tennis",
-          "answer_type": "free_text",
-          "accept": [
-            "tennis"
-          ],
-          "evidence_days": [
-            120
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 671,
-          "probe_date": "2027-12-31",
-          "probe_month": "2027-12",
-          "is_retrospective": true,
-          "tags": [
-            "set"
-          ],
-          "retrospective_of": "u2_p202710_0134",
-          "original_probe_month": "2027-10"
-        },
-        {
-          "id": "u2_r202712_0175",
-          "original_id": "u2_q0152",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Wednesday, 2027-06-02?",
-          "answer": "nature documentary",
-          "answer_type": "value",
-          "accept": [
-            "nature documentary"
-          ],
-          "evidence_days": [
-            459
+            582
           ],
           "grading": "exact",
           "viewpoint_day": 671,
@@ -4685,11 +4454,113 @@
           "probe_month": "2027-12",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202706_0101",
+          "retrospective_of": "u2_p202710_0134",
+          "original_probe_month": "2027-10"
+        },
+        {
+          "id": "u2_r202712_0171",
+          "original_id": "u2_q0361",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What happened with the nutritionist visit?",
+          "answer": "saw a nutritionist who suggested more protein at breakfast (happened, 2027-10-21)",
+          "answer_type": "free_text",
+          "accept": [
+            "saw a nutritionist who suggested more protein at breakfast"
+          ],
+          "evidence_days": [
+            600
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": true,
+          "tags": [
+            "happened"
+          ],
+          "retrospective_of": "u2_p202710_0138",
+          "original_probe_month": "2027-10"
+        },
+        {
+          "id": "u2_r202712_0179",
+          "original_id": "u2_q0062",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Tuesday, 2027-06-01?",
+          "answer": "tennis",
+          "answer_type": "value",
+          "accept": [
+            "tennis"
+          ],
+          "evidence_days": [
+            458
+          ],
+          "grading": "exact",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": true,
+          "tags": [
+            "boundary"
+          ],
+          "retrospective_of": "u2_p202706_0107",
           "original_probe_month": "2027-06"
         },
         {
-          "id": "u2_r202712_0196",
+          "id": "u2_r202712_0182",
+          "original_id": "u2_q0083",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Wednesday, 2027-06-23?",
+          "answer": "run",
+          "answer_type": "value",
+          "accept": [
+            "run"
+          ],
+          "evidence_days": [
+            480
+          ],
+          "grading": "exact",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202706_0111",
+          "original_probe_month": "2027-06"
+        },
+        {
+          "id": "u2_r202712_0191",
+          "original_id": "u2_q0160",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Saturday, 2027-09-11?",
+          "answer": "sci-fi series",
+          "answer_type": "value",
+          "accept": [
+            "sci-fi series"
+          ],
+          "evidence_days": [
+            560
+          ],
+          "grading": "exact",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": true,
+          "tags": [
+            "boundary"
+          ],
+          "retrospective_of": "u2_p202709_0125",
+          "original_probe_month": "2027-09"
+        },
+        {
+          "id": "u2_r202712_0195",
           "original_id": "u2_q0158",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4709,12 +4580,12 @@
           "probe_month": "2027-12",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202710_0135",
+          "retrospective_of": "u2_p202710_0136",
           "original_probe_month": "2027-10"
         }
       ],
-      "num_questions": 6,
-      "num_retrospective": 3
+      "num_questions": 8,
+      "num_retrospective": 6
     },
     {
       "probe_date": "2028-01-31",
@@ -4723,122 +4594,6 @@
       "questions": [
         {
           "id": "u2_p202801_0152",
-          "original_id": "u2_q0136",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2028-01-06?",
-          "answer": "sci-fi series",
-          "answer_type": "value",
-          "accept": [
-            "sci-fi series"
-          ],
-          "evidence_days": [
-            677
-          ],
-          "grading": "exact",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202801_0153",
-          "original_id": "u2_q0186",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast routine in January 2028?",
-          "answer": "by day of week: eggs and toast on Mon/Wed/Sun; protein smoothie on Tue/Thu; bagel on Fri; pancakes on Sat",
-          "answer_type": "free_text",
-          "accept": [
-            "eggs and toast or smoothies on weekdays, bagel Fri, pancakes Sat"
-          ],
-          "evidence_days": [
-            600,
-            602,
-            603
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": [
-            "shift"
-          ]
-        },
-        {
-          "id": "u2_p202801_0154",
-          "original_id": "u2_q0164",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Saturday, 2028-01-29?",
-          "answer": "sci-fi series",
-          "answer_type": "value",
-          "accept": [
-            "sci-fi series"
-          ],
-          "evidence_days": [
-            700
-          ],
-          "grading": "exact",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202801_0155",
-          "original_id": "u2_q0020",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Tuesday, 2028-01-11?",
-          "answer": "protein smoothie",
-          "answer_type": "value",
-          "accept": [
-            "protein smoothie"
-          ],
-          "evidence_days": [
-            682
-          ],
-          "grading": "exact",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u2_p202801_0156",
-          "original_id": "u2_q0344",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Marcus's hobbies on 2028-01-22?",
-          "answer": "tennis",
-          "answer_type": "free_text",
-          "accept": [
-            "tennis"
-          ],
-          "evidence_days": [
-            120
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u2_p202801_0157",
           "original_id": "u2_q0336",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -4862,7 +4617,99 @@
           ]
         },
         {
-          "id": "u2_p202801_0158",
+          "id": "u2_p202801_0153",
+          "original_id": "u2_q0189",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show routine in January 2028?",
+          "answer": "alternates week by week: sci-fi series, then sitcom reruns, repeating (7-day blocks starting Sat 2027-09-11)",
+          "answer_type": "free_text",
+          "accept": [
+            "alternating weeks of a sci-fi series and sitcom reruns"
+          ],
+          "evidence_days": [
+            560,
+            561,
+            563
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": [
+            "shift"
+          ]
+        },
+        {
+          "id": "u2_p202801_0154",
+          "original_id": "u2_q0040",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Saturday, 2028-01-29?",
+          "answer": "pancakes",
+          "answer_type": "value",
+          "accept": [
+            "pancakes"
+          ],
+          "evidence_days": [
+            700
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202801_0155",
+          "original_id": "u2_q0136",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Thursday, 2028-01-06?",
+          "answer": "sci-fi series",
+          "answer_type": "value",
+          "accept": [
+            "sci-fi series"
+          ],
+          "evidence_days": [
+            677
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202801_0156",
+          "original_id": "u2_q0164",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Saturday, 2028-01-29?",
+          "answer": "sci-fi series",
+          "answer_type": "value",
+          "accept": [
+            "sci-fi series"
+          ],
+          "evidence_days": [
+            700
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_p202801_0157",
           "original_id": "u2_q0119",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4884,19 +4731,68 @@
           "tags": []
         },
         {
-          "id": "u2_r202801_0159",
-          "original_id": "u2_q0173",
+          "id": "u2_p202801_0158",
+          "original_id": "u2_q0020",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Tuesday, 2028-01-11?",
+          "answer": "protein smoothie",
+          "answer_type": "value",
+          "accept": [
+            "protein smoothie"
+          ],
+          "evidence_days": [
+            682
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u2_r202801_0166",
+          "original_id": "u2_q0153",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "evening_show",
-          "question": "What was Marcus's evening TV show on Thursday, 2027-09-09?",
-          "answer": "nature documentary",
+          "question": "What was Marcus's evening TV show on Sunday, 2027-11-28?",
+          "answer": "sitcom reruns",
           "answer_type": "value",
           "accept": [
-            "nature documentary"
+            "sitcom reruns"
           ],
           "evidence_days": [
-            558
+            637
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [
+            "inferred",
+            "no_session"
+          ],
+          "retrospective_of": "u2_p202711_0143",
+          "original_probe_month": "2027-11"
+        },
+        {
+          "id": "u2_r202801_0170",
+          "original_id": "u2_q0058",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Saturday, 2027-10-16?",
+          "answer": "oatmeal",
+          "answer_type": "value",
+          "accept": [
+            "oatmeal"
+          ],
+          "evidence_days": [
+            595
           ],
           "grading": "exact",
           "viewpoint_day": 702,
@@ -4906,11 +4802,112 @@
           "tags": [
             "boundary"
           ],
-          "retrospective_of": "u2_p202709_0129",
+          "retrospective_of": "u2_p202710_0132",
+          "original_probe_month": "2027-10"
+        },
+        {
+          "id": "u2_r202801_0173",
+          "original_id": "u2_q0299",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "evening_show",
+          "question": "Why did Marcus's evening TV show routine change around 2027-09-11?",
+          "answer": "signed up for a new streaming service",
+          "answer_type": "free_text",
+          "accept": [
+            "signed up for a new streaming service"
+          ],
+          "evidence_days": [
+            560
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [
+            "explicit",
+            "shift"
+          ],
+          "retrospective_of": "u2_p202709_0126",
           "original_probe_month": "2027-09"
         },
         {
-          "id": "u2_r202801_0160",
+          "id": "u2_r202801_0175",
+          "original_id": "u2_q0349",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "pets",
+          "question": "What were Marcus's pets on 2027-08-16?",
+          "answer": "cat named Olive",
+          "answer_type": "free_text",
+          "accept": [
+            "cat named Olive"
+          ],
+          "evidence_days": [
+            330
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [
+            "set"
+          ],
+          "retrospective_of": "u2_p202708_0118",
+          "original_probe_month": "2027-08"
+        },
+        {
+          "id": "u2_r202801_0176",
+          "original_id": "u2_q0108",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Friday, 2027-11-05?",
+          "answer": "gym weights",
+          "answer_type": "value",
+          "accept": [
+            "gym weights"
+          ],
+          "evidence_days": [
+            615
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202711_0145",
+          "original_probe_month": "2027-11"
+        },
+        {
+          "id": "u2_r202801_0177",
+          "original_id": "u2_q0039",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Monday, 2027-11-01?",
+          "answer": "eggs and toast",
+          "answer_type": "value",
+          "accept": [
+            "eggs and toast"
+          ],
+          "evidence_days": [
+            611
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202711_0149",
+          "original_probe_month": "2027-11"
+        },
+        {
+          "id": "u2_r202801_0178",
           "original_id": "u2_q0117",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4930,49 +4927,48 @@
           "probe_month": "2028-01",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u2_p202707_0107",
+          "retrospective_of": "u2_p202707_0115",
           "original_probe_month": "2027-07"
         },
         {
-          "id": "u2_r202801_0165",
-          "original_id": "u2_q0361",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What happened with the nutritionist visit?",
-          "answer": "saw a nutritionist who suggested more protein at breakfast (happened, 2027-10-21)",
-          "answer_type": "free_text",
-          "accept": [
-            "saw a nutritionist who suggested more protein at breakfast"
-          ],
-          "evidence_days": [
-            600
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": true,
-          "tags": [
-            "happened"
-          ],
-          "retrospective_of": "u2_p202710_0137",
-          "original_probe_month": "2027-10"
-        },
-        {
-          "id": "u2_r202801_0171",
-          "original_id": "u2_q0033",
+          "id": "u2_r202801_0184",
+          "original_id": "u2_q0018",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "breakfast",
-          "question": "What was Marcus's breakfast on Monday, 2027-10-18?",
+          "question": "What was Marcus's breakfast on Tuesday, 2027-11-16?",
           "answer": "protein smoothie",
           "answer_type": "value",
           "accept": [
             "protein smoothie"
           ],
           "evidence_days": [
-            597
+            626
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202711_0146",
+          "original_probe_month": "2027-11"
+        },
+        {
+          "id": "u2_r202801_0192",
+          "original_id": "u2_q0066",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Saturday, 2027-09-18?",
+          "answer": "tennis",
+          "answer_type": "value",
+          "accept": [
+            "tennis"
+          ],
+          "evidence_days": [
+            553,
+            560
           ],
           "grading": "exact",
           "viewpoint_day": 702,
@@ -4980,14 +4976,38 @@
           "probe_month": "2028-01",
           "is_retrospective": true,
           "tags": [
-            "boundary"
+            "inferred"
           ],
-          "retrospective_of": "u2_p202710_0132",
-          "original_probe_month": "2027-10"
+          "retrospective_of": "u2_p202709_0129",
+          "original_probe_month": "2027-09"
+        },
+        {
+          "id": "u2_r202801_0193",
+          "original_id": "u2_q0053",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Tuesday, 2027-11-23?",
+          "answer": "protein smoothie",
+          "answer_type": "value",
+          "accept": [
+            "protein smoothie"
+          ],
+          "evidence_days": [
+            633
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u2_p202711_0142",
+          "original_probe_month": "2027-11"
         }
       ],
-      "num_questions": 11,
-      "num_retrospective": 4
+      "num_questions": 17,
+      "num_retrospective": 10
     }
   ]
 }
