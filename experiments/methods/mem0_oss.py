@@ -42,13 +42,20 @@ class Mem0OSS(MemoryMethod):
         self.llm = make_llm(model, usage)
 
     def ingest(self, session: Session) -> dict:
+        import time
         messages = []
         for t in session.turns:
             role = t.speaker if t.speaker in ("user", "assistant") else "user"
             name = "" if t.speaker in ("user", "assistant") else f"{t.speaker}: "
             messages.append({"role": role, "content": f"[{session.date}] {name}{t.text}"})
-        result = self.memory.add(messages, user_id=self.user_id, metadata={"date": session.date})
-        return {"added": len(result.get("results", []))}
+        for attempt in range(3):
+            try:
+                result = self.memory.add(messages, user_id=self.user_id, metadata={"date": session.date})
+                return {"added": len(result.get("results", []))}
+            except Exception as e:
+                if attempt == 2:
+                    raise
+                time.sleep(5 * (attempt + 1))
 
     def answer(self, q: Question) -> Answer:
         hits = self.memory.search(prompt_for(q), filters={"user_id": self.user_id}, top_k=config.TOP_K)
