@@ -87,14 +87,35 @@ def build_probing_questions(
         if latest_evidence > num_days:
             continue
         effective_day = latest_evidence
-        if q["type"] == "fact_at_time":
-            m = re.search(r"\d{4}-\d{2}-\d{2}", q["question"])
-            if m:
-                qdate = dt.date.fromisoformat(m.group())
-                qday = (qdate - start).days + 1
-                effective_day = max(effective_day, qday)
-                if effective_day > num_days:
-                    continue
+        # Parse any date referenced in the question text — the system can't
+        # be asked about a date/month it hasn't reached yet.
+        # Match "YYYY-MM-DD"
+        for m in re.finditer(r"\d{4}-\d{2}-\d{2}", q["question"]):
+            qdate = dt.date.fromisoformat(m.group())
+            qday = (qdate - start).days + 1
+            effective_day = max(effective_day, qday)
+        # Match "Month YYYY" or "month YYYY" (e.g. "January 2028")
+        _MONTHS = {
+            "january": 1, "february": 2, "march": 3, "april": 4,
+            "may": 5, "june": 6, "july": 7, "august": 8,
+            "september": 9, "october": 10, "november": 11, "december": 12,
+        }
+        for m in re.finditer(
+            r"\b(January|February|March|April|May|June|July|August|"
+            r"September|October|November|December)\s+(\d{4})\b",
+            q["question"],
+        ):
+            mon = _MONTHS[m.group(1).lower()]
+            year = int(m.group(2))
+            # Use last day of that month as the effective date
+            if mon == 12:
+                month_end = dt.date(year + 1, 1, 1) - dt.timedelta(days=1)
+            else:
+                month_end = dt.date(year, mon + 1, 1) - dt.timedelta(days=1)
+            qday = (month_end - start).days + 1
+            effective_day = max(effective_day, qday)
+        if effective_day > num_days:
+            continue
         assigned_month = _day_to_month(effective_day, start)
         if assigned_month not in month_to_probe:
             continue

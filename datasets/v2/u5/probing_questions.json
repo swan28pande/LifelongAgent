@@ -14,58 +14,111 @@
       "questions": [
         {
           "id": "u5_p202603_0001",
-          "original_id": "u5_q0108",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "music",
-          "question": "What was Priya's work music routine in April 2026?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): lo-fi beats; on weekends: jazz vinyl",
-          "answer_type": "free_text",
+          "original_id": "u5_q0264",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Priya's job on 2026-03-27?",
+          "answer": "backend engineer at a fintech startup",
+          "answer_type": "value",
           "accept": [
-            "lo-fi beats on workdays, jazz vinyl on weekends"
+            "backend engineer at a fintech startup",
+            "backend engineer at a fintech startup"
           ],
           "evidence_days": [
-            1,
-            7,
-            18
+            4
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 31,
           "probe_date": "2026-03-31",
           "probe_month": "2026-03",
           "is_retrospective": false,
-          "tags": [
-            "initial"
-          ]
-        },
+          "tags": []
+        }
+      ],
+      "num_questions": 1,
+      "num_retrospective": 0
+    },
+    {
+      "probe_date": "2026-04-30",
+      "probe_month": "2026-04",
+      "viewpoint_day": 61,
+      "questions": [
         {
-          "id": "u5_p202603_0002",
-          "original_id": "u5_q0087",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
+          "id": "u5_p202604_0002",
+          "original_id": "u5_q0071",
+          "type": "recall",
+          "capability": "episodic_recall",
           "domain": "bedtime",
-          "question": "What was Priya's bedtime routine in May 2026?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): 11:30 pm; on weekends: 1:00 am",
-          "answer_type": "free_text",
+          "question": "What was Priya's bedtime on Thursday, 2026-03-26?",
+          "answer": "11:30 pm",
+          "answer_type": "value",
           "accept": [
-            "11:30 pm on workdays, 1:00 am on weekends"
+            "11:30 pm"
           ],
           "evidence_days": [
-            1,
-            4,
-            7
+            19,
+            30,
+            32
           ],
-          "grading": "llm_judge",
-          "viewpoint_day": 31,
-          "probe_date": "2026-03-31",
-          "probe_month": "2026-03",
+          "grading": "exact",
+          "viewpoint_day": 61,
+          "probe_date": "2026-04-30",
+          "probe_month": "2026-04",
           "is_retrospective": false,
           "tags": [
-            "initial"
+            "inferred",
+            "no_session"
           ]
         },
         {
-          "id": "u5_p202603_0003",
+          "id": "u5_p202604_0003",
+          "original_id": "u5_q0029",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "dinner",
+          "question": "What was Priya's dinner on Thursday, 2026-04-23?",
+          "answer": "takeout burrito",
+          "answer_type": "value",
+          "accept": [
+            "takeout burrito"
+          ],
+          "evidence_days": [
+            54
+          ],
+          "grading": "exact",
+          "viewpoint_day": 61,
+          "probe_date": "2026-04-30",
+          "probe_month": "2026-04",
+          "is_retrospective": false,
+          "tags": [
+            "exception"
+          ]
+        },
+        {
+          "id": "u5_p202604_0004",
+          "original_id": "u5_q0062",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "reading",
+          "question": "What was Priya's evening reading on Saturday, 2026-04-04?",
+          "answer": "history nonfiction",
+          "answer_type": "value",
+          "accept": [
+            "history nonfiction"
+          ],
+          "evidence_days": [
+            35
+          ],
+          "grading": "exact",
+          "viewpoint_day": 61,
+          "probe_date": "2026-04-30",
+          "probe_month": "2026-04",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202604_0005",
           "original_id": "u5_q0102",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
@@ -82,50 +135,16 @@
             15
           ],
           "grading": "llm_judge",
-          "viewpoint_day": 31,
-          "probe_date": "2026-03-31",
-          "probe_month": "2026-03",
-          "is_retrospective": false,
-          "tags": [
-            "initial"
-          ]
-        }
-      ],
-      "num_questions": 3,
-      "num_retrospective": 0
-    },
-    {
-      "probe_date": "2026-04-30",
-      "probe_month": "2026-04",
-      "viewpoint_day": 61,
-      "questions": [
-        {
-          "id": "u5_p202604_0004",
-          "original_id": "u5_q0225",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "commute",
-          "question": "On Monday, 2026-04-27, Priya's commute was took a taxi instead of the usual cycling. Was that a lasting change?",
-          "answer": "No - it was a one-off (heavy rain); the usual routine continued.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            58,
-            59
-          ],
-          "grading": "llm_judge",
           "viewpoint_day": 61,
           "probe_date": "2026-04-30",
           "probe_month": "2026-04",
           "is_retrospective": false,
           "tags": [
-            "exception"
+            "initial"
           ]
         },
         {
-          "id": "u5_p202604_0005",
+          "id": "u5_p202604_0006",
           "original_id": "u5_q0059",
           "type": "recall",
           "capability": "episodic_recall",
@@ -151,7 +170,7 @@
           ]
         },
         {
-          "id": "u5_p202604_0006",
+          "id": "u5_p202604_0007",
           "original_id": "u5_q0349",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
@@ -173,41 +192,20 @@
           "tags": []
         },
         {
-          "id": "u5_p202604_0007",
-          "original_id": "u5_q0062",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "reading",
-          "question": "What was Priya's evening reading on Saturday, 2026-04-04?",
-          "answer": "history nonfiction",
-          "answer_type": "value",
-          "accept": [
-            "history nonfiction"
-          ],
-          "evidence_days": [
-            35
-          ],
-          "grading": "exact",
-          "viewpoint_day": 61,
-          "probe_date": "2026-04-30",
-          "probe_month": "2026-04",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
           "id": "u5_p202604_0008",
-          "original_id": "u5_q0366",
-          "type": "other_person",
-          "capability": "entity_disambiguation",
-          "domain": "other_people",
-          "question": "Is Priya's city of residence Seattle, Washington?",
-          "answer": "No - that is Meera (Priya's sister), not Priya.",
+          "original_id": "u5_q0225",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "commute",
+          "question": "On Monday, 2026-04-27, Priya's commute was took a taxi instead of the usual cycling. Was that a lasting change?",
+          "answer": "No - it was a one-off (heavy rain); the usual routine continued.",
           "answer_type": "yes_no",
           "accept": [
             "no"
           ],
           "evidence_days": [
-            40
+            58,
+            59
           ],
           "grading": "llm_judge",
           "viewpoint_day": 61,
@@ -215,36 +213,11 @@
           "probe_month": "2026-04",
           "is_retrospective": false,
           "tags": [
-            "confusable"
-          ]
-        },
-        {
-          "id": "u5_p202604_0009",
-          "original_id": "u5_q0001",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "exercise",
-          "question": "What was Priya's workout on Tuesday, 2026-03-03?",
-          "answer": "bouldering",
-          "answer_type": "value",
-          "accept": [
-            "bouldering"
-          ],
-          "evidence_days": [
-            45
-          ],
-          "grading": "exact",
-          "viewpoint_day": 61,
-          "probe_date": "2026-04-30",
-          "probe_month": "2026-04",
-          "is_retrospective": false,
-          "tags": [
-            "inferred",
-            "no_session"
+            "exception"
           ]
         }
       ],
-      "num_questions": 6,
+      "num_questions": 7,
       "num_retrospective": 0
     },
     {
@@ -253,30 +226,7 @@
       "viewpoint_day": 92,
       "questions": [
         {
-          "id": "u5_p202605_0010",
-          "original_id": "u5_q0279",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "relationship",
-          "question": "What was Priya's relationship status on 2026-05-04?",
-          "answer": "single",
-          "answer_type": "value",
-          "accept": [
-            "single",
-            "single"
-          ],
-          "evidence_days": [
-            4
-          ],
-          "grading": "exact",
-          "viewpoint_day": 92,
-          "probe_date": "2026-05-31",
-          "probe_month": "2026-05",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u5_p202605_0011",
+          "id": "u5_p202605_0009",
           "original_id": "u5_q0006",
           "type": "recall",
           "capability": "episodic_recall",
@@ -301,9 +251,58 @@
             "inferred",
             "no_session"
           ]
+        },
+        {
+          "id": "u5_p202605_0010",
+          "original_id": "u5_q0096",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "dinner",
+          "question": "What was Priya's dinner routine in May 2026?",
+          "answer": "a 2-block rotation of 7-day blocks starting Sun 2026-03-01 - block 1: by day of week: stir-fry on Mon; lentil soup on Tue; salmon bowl on Wed; pasta on Thu; takeout sushi on Fri; dinner with friends on Sat; leftovers on Sun | block 2: by day of week: fish tacos on Mon; lentil soup on Tue; salmon bowl on Wed; curry on Thu; takeout pizza on Fri; dinner with friends on Sat; leftovers on Sun",
+          "answer_type": "free_text",
+          "accept": [
+            "two-week rotation of home-cooked dinners with Friday takeout"
+          ],
+          "evidence_days": [
+            1,
+            14,
+            15
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 92,
+          "probe_date": "2026-05-31",
+          "probe_month": "2026-05",
+          "is_retrospective": false,
+          "tags": [
+            "initial"
+          ]
+        },
+        {
+          "id": "u5_p202605_0011",
+          "original_id": "u5_q0279",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "relationship",
+          "question": "What was Priya's relationship status on 2026-05-04?",
+          "answer": "single",
+          "answer_type": "value",
+          "accept": [
+            "single",
+            "single"
+          ],
+          "evidence_days": [
+            4
+          ],
+          "grading": "exact",
+          "viewpoint_day": 92,
+          "probe_date": "2026-05-31",
+          "probe_month": "2026-05",
+          "is_retrospective": false,
+          "tags": []
         }
       ],
-      "num_questions": 2,
+      "num_questions": 3,
       "num_retrospective": 0
     },
     {
@@ -313,84 +312,34 @@
       "questions": [
         {
           "id": "u5_p202606_0012",
-          "original_id": "u5_q0221",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
+          "original_id": "u5_q0012",
+          "type": "recall",
+          "capability": "episodic_recall",
           "domain": "exercise",
-          "question": "On Monday, 2026-06-01, Priya's workout was skipped workout instead of the usual swim. Was that a lasting change?",
-          "answer": "No - it was a one-off (worked late); the usual routine continued.",
-          "answer_type": "yes_no",
+          "question": "What was Priya's workout on Sunday, 2026-05-31?",
+          "answer": "rest day",
+          "answer_type": "value",
           "accept": [
-            "no"
+            "rest day"
           ],
           "evidence_days": [
-            93,
+            85,
+            91,
             97
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 122,
           "probe_date": "2026-06-30",
           "probe_month": "2026-06",
           "is_retrospective": false,
           "tags": [
-            "exception"
+            "inferred",
+            "no_session",
+            "boundary"
           ]
         },
         {
           "id": "u5_p202606_0013",
-          "original_id": "u5_q0223",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "exercise",
-          "question": "On Saturday, 2026-06-06, Priya's workout was long dog hike instead of the usual bike ride. Was that a lasting change?",
-          "answer": "Yes - from 2026-06-06 the routine changed to dog walks on weekdays, bouldering Tue/Thu, weekend dog hike.",
-          "answer_type": "yes_no",
-          "accept": [
-            "yes"
-          ],
-          "evidence_days": [
-            98,
-            107,
-            116
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": [
-            "shift",
-            "implicit"
-          ]
-        },
-        {
-          "id": "u5_p202606_0014",
-          "original_id": "u5_q0088",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "bedtime",
-          "question": "What was Priya's bedtime routine in July 2026?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): 10:30 pm; on weekends: 11:30 pm",
-          "answer_type": "free_text",
-          "accept": [
-            "10:30 pm on workdays, 11:30 pm on weekends"
-          ],
-          "evidence_days": [
-            100,
-            102,
-            107
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": [
-            "shift"
-          ]
-        },
-        {
-          "id": "u5_p202606_0015",
           "original_id": "u5_q0241",
           "type": "exception_vs_shift",
           "capability": "exception_handling",
@@ -415,73 +364,23 @@
           ]
         },
         {
-          "id": "u5_p202606_0016",
-          "original_id": "u5_q0373",
-          "type": "other_person",
-          "capability": "entity_disambiguation",
-          "domain": "other_people",
-          "question": "Is labrador named Biscuit one of Priya's pets?",
-          "answer": "Yes.",
+          "id": "u5_p202606_0014",
+          "original_id": "u5_q0243",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "bedtime",
+          "question": "On Monday, 2026-06-08, Priya's bedtime was 10:30 pm instead of the usual 11:30 pm. Was that a lasting change?",
+          "answer": "Yes - from 2026-06-08 the routine changed to 10:30 pm on workdays, 11:30 pm on weekends.",
           "answer_type": "yes_no",
           "accept": [
             "yes"
           ],
           "evidence_days": [
-            97
+            100,
+            102,
+            107
           ],
           "grading": "llm_judge",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": [
-            "control"
-          ]
-        },
-        {
-          "id": "u5_p202606_0017",
-          "original_id": "u5_q0191",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "exercise",
-          "question": "Why did Priya's workout routine change around 2026-06-06?",
-          "answer": "adopted a labrador named Biscuit",
-          "answer_type": "free_text",
-          "accept": [
-            "adopted a labrador named Biscuit"
-          ],
-          "evidence_days": [
-            97,
-            98
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": [
-            "implicit",
-            "shift",
-            "cross_domain"
-          ]
-        },
-        {
-          "id": "u5_p202606_0018",
-          "original_id": "u5_q0185",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "bedtime",
-          "question": "When did Priya's bedtime routine change from the 11:30 pm / 1:00 am routine to the 10:30 pm / 11:30 pm routine?",
-          "answer": "2026-06-08",
-          "answer_type": "date",
-          "accept": [
-            "2026-06-08"
-          ],
-          "evidence_days": [
-            98,
-            100
-          ],
-          "grading": "date_exact",
           "viewpoint_day": 122,
           "probe_date": "2026-06-30",
           "probe_month": "2026-06",
@@ -492,45 +391,21 @@
           ]
         },
         {
-          "id": "u5_p202606_0019",
-          "original_id": "u5_q0309",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What happened with the library card?",
-          "answer": "got a library card at the Carnegie Library (happened, 2026-06-28)",
-          "answer_type": "free_text",
-          "accept": [
-            "got a library card at the Carnegie Library"
-          ],
-          "evidence_days": [
-            121
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 122,
-          "probe_date": "2026-06-30",
-          "probe_month": "2026-06",
-          "is_retrospective": false,
-          "tags": [
-            "happened"
-          ]
-        },
-        {
-          "id": "u5_p202606_0020",
-          "original_id": "u5_q0109",
+          "id": "u5_p202606_0015",
+          "original_id": "u5_q0114",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
-          "domain": "music",
-          "question": "What was Priya's work music routine in August 2026?",
-          "answer": "alternates week by week: lo-fi beats, then film scores, repeating (7-day blocks starting Thu 2026-06-18)",
+          "domain": "reading",
+          "question": "What was Priya's evening reading routine in June 2026?",
+          "answer": "a 7-day cycle starting Sun 2026-03-01: sci-fi novel for 5 days, then history nonfiction for 2 days, repeating",
           "answer_type": "free_text",
           "accept": [
-            "alternating weeks of lo-fi beats and film scores"
+            "5 days sci-fi novel, 2 days history nonfiction"
           ],
           "evidence_days": [
-            114,
-            116,
-            118
+            4,
+            7,
+            14
           ],
           "grading": "llm_judge",
           "viewpoint_day": 122,
@@ -538,11 +413,59 @@
           "probe_month": "2026-06",
           "is_retrospective": false,
           "tags": [
-            "shift"
+            "initial"
           ]
         },
         {
-          "id": "u5_p202606_0021",
+          "id": "u5_p202606_0016",
+          "original_id": "u5_q0284",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "diet",
+          "question": "What was Priya's diet on 2026-06-17?",
+          "answer": "pescatarian",
+          "answer_type": "value",
+          "accept": [
+            "pescatarian",
+            "pescatarian"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "exact",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202606_0017",
+          "original_id": "u5_q0337",
+          "type": "duration",
+          "capability": "temporal_arithmetic",
+          "domain": "music",
+          "question": "How long did Priya's work music stay the jazz vinyl / lo-fi beats routine?",
+          "answer": "109 days (2026-03-01 to 2026-06-17)",
+          "answer_type": "free_text",
+          "accept": [
+            "109"
+          ],
+          "evidence_days": [
+            1,
+            107
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": [
+            "initial"
+          ]
+        },
+        {
+          "id": "u5_p202606_0018",
           "original_id": "u5_q0335",
           "type": "duration",
           "capability": "temporal_arithmetic",
@@ -567,7 +490,33 @@
           ]
         },
         {
-          "id": "u5_p202606_0022",
+          "id": "u5_p202606_0019",
+          "original_id": "u5_q0157",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "exercise",
+          "question": "When did Priya's workout routine change from the bike ride / bouldering / evening run / long run etc. routine to the bouldering / long dog hike / morning dog walk / rest day routine?",
+          "answer": "2026-06-06",
+          "answer_type": "date",
+          "accept": [
+            "2026-06-06"
+          ],
+          "evidence_days": [
+            97,
+            98
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": [
+            "shift",
+            "implicit"
+          ]
+        },
+        {
+          "id": "u5_p202606_0020",
           "original_id": "u5_q0330",
           "type": "duration",
           "capability": "temporal_arithmetic",
@@ -590,9 +539,40 @@
           "tags": [
             "initial"
           ]
+        },
+        {
+          "id": "u5_p202606_0021",
+          "original_id": "u5_q0175",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "music",
+          "question": "When did Priya's work music routine change from the jazz vinyl / lo-fi beats routine to the film scores / lo-fi beats routine?",
+          "answer": "2026-06-18 (first observed 2026-06-22)",
+          "answer_type": "date",
+          "accept": [
+            "2026-06-18",
+            "2026-06-19",
+            "2026-06-20",
+            "2026-06-21",
+            "2026-06-22"
+          ],
+          "evidence_days": [
+            107,
+            114
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": false,
+          "tags": [
+            "shift",
+            "uncaused",
+            "bounded"
+          ]
         }
       ],
-      "num_questions": 11,
+      "num_questions": 10,
       "num_retrospective": 0
     },
     {
@@ -601,7 +581,81 @@
       "viewpoint_day": 153,
       "questions": [
         {
+          "id": "u5_p202607_0022",
+          "original_id": "u5_q0180",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "reading",
+          "question": "When did Priya's evening reading routine change from the history nonfiction / sci-fi novel routine to library thrillers?",
+          "answer": "2026-07-03",
+          "answer_type": "date",
+          "accept": [
+            "2026-07-03"
+          ],
+          "evidence_days": [
+            124,
+            125
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 153,
+          "probe_date": "2026-07-31",
+          "probe_month": "2026-07",
+          "is_retrospective": false,
+          "tags": [
+            "shift",
+            "implicit"
+          ]
+        },
+        {
           "id": "u5_p202607_0023",
+          "original_id": "u5_q0088",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "bedtime",
+          "question": "What was Priya's bedtime routine in July 2026?",
+          "answer": "split by workday vs weekend - on workdays (Mon-Fri): 10:30 pm; on weekends: 11:30 pm",
+          "answer_type": "free_text",
+          "accept": [
+            "10:30 pm on workdays, 11:30 pm on weekends"
+          ],
+          "evidence_days": [
+            100,
+            102,
+            107
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 153,
+          "probe_date": "2026-07-31",
+          "probe_month": "2026-07",
+          "is_retrospective": false,
+          "tags": [
+            "shift"
+          ]
+        },
+        {
+          "id": "u5_p202607_0024",
+          "original_id": "u5_q0351",
+          "type": "distractor_probe",
+          "capability": "causal_reasoning",
+          "domain": "dinner",
+          "question": "Around 2026-07-08, a new ramen place opened on her street. Did that lead to any change in Priya's dinner?",
+          "answer": "No - nothing about Priya's dinner changed because of it.",
+          "answer_type": "yes_no",
+          "accept": [
+            "no"
+          ],
+          "evidence_days": [
+            130
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 153,
+          "probe_date": "2026-07-31",
+          "probe_month": "2026-07",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202607_0025",
           "original_id": "u5_q0026",
           "type": "recall",
           "capability": "episodic_recall",
@@ -627,16 +681,41 @@
           ]
         },
         {
-          "id": "u5_p202607_0024",
-          "original_id": "u5_q0115",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
+          "id": "u5_p202607_0026",
+          "original_id": "u5_q0346",
+          "type": "duration",
+          "capability": "temporal_arithmetic",
           "domain": "reading",
-          "question": "What was Priya's evening reading routine in August 2026?",
-          "answer": "library thrillers every day",
+          "question": "How long did Priya's evening reading stay the history nonfiction / sci-fi novel routine?",
+          "answer": "124 days (2026-03-01 to 2026-07-02)",
           "answer_type": "free_text",
           "accept": [
-            "library thrillers every day"
+            "124"
+          ],
+          "evidence_days": [
+            4,
+            124
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 153,
+          "probe_date": "2026-07-31",
+          "probe_month": "2026-07",
+          "is_retrospective": false,
+          "tags": [
+            "initial"
+          ]
+        },
+        {
+          "id": "u5_p202607_0027",
+          "original_id": "u5_q0239",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "reading",
+          "question": "On Friday, 2026-07-03, Priya's evening reading was library thrillers instead of the usual history nonfiction. Was that a lasting change?",
+          "answer": "Yes - from 2026-07-03 the routine changed to library thrillers every day.",
+          "answer_type": "yes_no",
+          "accept": [
+            "yes"
           ],
           "evidence_days": [
             125,
@@ -649,11 +728,12 @@
           "probe_month": "2026-07",
           "is_retrospective": false,
           "tags": [
-            "shift"
+            "shift",
+            "implicit"
           ]
         },
         {
-          "id": "u5_p202607_0025",
+          "id": "u5_p202607_0028",
           "original_id": "u5_q0271",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -674,79 +754,9 @@
           "probe_month": "2026-07",
           "is_retrospective": false,
           "tags": []
-        },
-        {
-          "id": "u5_p202607_0026",
-          "original_id": "u5_q0351",
-          "type": "distractor_probe",
-          "capability": "causal_reasoning",
-          "domain": "dinner",
-          "question": "Around 2026-07-08, a new ramen place opened on her street. Did that lead to any change in Priya's dinner?",
-          "answer": "No - nothing about Priya's dinner changed because of it.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            130
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 153,
-          "probe_date": "2026-07-31",
-          "probe_month": "2026-07",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u5_p202607_0027",
-          "original_id": "u5_q0211",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "reading",
-          "question": "Why did Priya's evening reading routine change around 2026-07-03?",
-          "answer": "got a library card at the Carnegie Library",
-          "answer_type": "free_text",
-          "accept": [
-            "got a library card at the Carnegie Library"
-          ],
-          "evidence_days": [
-            121,
-            125
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 153,
-          "probe_date": "2026-07-31",
-          "probe_month": "2026-07",
-          "is_retrospective": false,
-          "tags": [
-            "implicit",
-            "shift"
-          ]
-        },
-        {
-          "id": "u5_p202607_0028",
-          "original_id": "u5_q0069",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "bedtime",
-          "question": "What was Priya's bedtime on Saturday, 2026-07-04?",
-          "answer": "11:30 pm",
-          "answer_type": "value",
-          "accept": [
-            "11:30 pm"
-          ],
-          "evidence_days": [
-            126
-          ],
-          "grading": "exact",
-          "viewpoint_day": 153,
-          "probe_date": "2026-07-31",
-          "probe_month": "2026-07",
-          "is_retrospective": false,
-          "tags": []
         }
       ],
-      "num_questions": 6,
+      "num_questions": 7,
       "num_retrospective": 0
     },
     {
@@ -756,19 +766,71 @@
       "questions": [
         {
           "id": "u5_p202608_0029",
-          "original_id": "u5_q0364",
+          "original_id": "u5_q0287",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "diet",
+          "question": "What was Priya's diet on 2026-08-28?",
+          "answer": "pescatarian",
+          "answer_type": "value",
+          "accept": [
+            "pescatarian",
+            "pescatarian"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "exact",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202608_0030",
+          "original_id": "u5_q0163",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "commute",
+          "question": "When did Priya's commute routine change from the bus / cycling / no commute routine to the no commute / rideshare routine?",
+          "answer": "2026-08-29 (first observed 2026-08-31)",
+          "answer_type": "date",
+          "accept": [
+            "2026-08-29",
+            "2026-08-30",
+            "2026-08-31"
+          ],
+          "evidence_days": [
+            181,
+            184
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": [
+            "temporary",
+            "implicit",
+            "bounded"
+          ]
+        },
+        {
+          "id": "u5_p202608_0031",
+          "original_id": "u5_q0354",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
-          "domain": "exercise",
-          "question": "Around 2026-08-27, tore a ligament in her knee while bouldering. Did that lead to any change in Priya's workout?",
-          "answer": "Yes - from 2026-08-28 Priya's workout changed to physio exercises every day.",
+          "domain": "commute",
+          "question": "Around 2026-08-27, tore a ligament in her knee while bouldering. Did that lead to any change in Priya's commute?",
+          "answer": "Yes - from 2026-08-29 Priya's commute changed to rideshare on workdays.",
           "answer_type": "yes_no",
           "accept": [
             "yes"
           ],
           "evidence_days": [
             180,
-            181
+            184
           ],
           "grading": "llm_judge",
           "viewpoint_day": 184,
@@ -777,11 +839,11 @@
           "is_retrospective": false,
           "tags": [
             "control",
-            "explicit"
+            "implicit"
           ]
         },
         {
-          "id": "u5_p202608_0030",
+          "id": "u5_p202608_0032",
           "original_id": "u5_q0169",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -809,7 +871,107 @@
           ]
         },
         {
-          "id": "u5_p202608_0031",
+          "id": "u5_p202608_0033",
+          "original_id": "u5_q0331",
+          "type": "duration",
+          "capability": "temporal_arithmetic",
+          "domain": "reading",
+          "question": "How long did Priya's evening reading stay library thrillers?",
+          "answer": "65 days (2026-07-03 to 2026-09-05)",
+          "answer_type": "free_text",
+          "accept": [
+            "65"
+          ],
+          "evidence_days": [
+            125,
+            180
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": [
+            "shift"
+          ]
+        },
+        {
+          "id": "u5_p202608_0034",
+          "original_id": "u5_q0231",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "dinner",
+          "question": "On Wednesday, 2026-08-05, Priya's dinner was stir-fry instead of the usual salmon bowl. Was that a lasting change?",
+          "answer": "Yes - from 2026-08-04 the routine changed to weekly routine with Friday date night and Saturday cooking with Arjun.",
+          "answer_type": "yes_no",
+          "accept": [
+            "yes"
+          ],
+          "evidence_days": [
+            158,
+            165,
+            174
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": [
+            "shift",
+            "implicit"
+          ]
+        },
+        {
+          "id": "u5_p202608_0035",
+          "original_id": "u5_q0266",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Priya's job on 2026-08-06?",
+          "answer": "backend engineer at a fintech startup",
+          "answer_type": "value",
+          "accept": [
+            "backend engineer at a fintech startup",
+            "backend engineer at a fintech startup"
+          ],
+          "evidence_days": [
+            4
+          ],
+          "grading": "exact",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202608_0036",
+          "original_id": "u5_q0342",
+          "type": "duration",
+          "capability": "temporal_arithmetic",
+          "domain": "hobbies",
+          "question": "How long was pottery one of Priya's hobbies?",
+          "answer": "110 days (2026-04-29 to 2026-08-16)",
+          "answer_type": "free_text",
+          "accept": [
+            "110"
+          ],
+          "evidence_days": [
+            68,
+            170
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 184,
+          "probe_date": "2026-08-31",
+          "probe_month": "2026-08",
+          "is_retrospective": false,
+          "tags": [
+            "fact"
+          ]
+        },
+        {
+          "id": "u5_p202608_0037",
           "original_id": "u5_q0192",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -836,116 +998,20 @@
           ]
         },
         {
-          "id": "u5_p202608_0032",
-          "original_id": "u5_q0331",
-          "type": "duration",
-          "capability": "temporal_arithmetic",
-          "domain": "reading",
-          "question": "How long did Priya's evening reading stay library thrillers?",
-          "answer": "65 days (2026-07-03 to 2026-09-05)",
-          "answer_type": "free_text",
-          "accept": [
-            "65"
-          ],
-          "evidence_days": [
-            125,
-            180
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": [
-            "shift"
-          ]
-        },
-        {
-          "id": "u5_p202608_0033",
-          "original_id": "u5_q0266",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "job",
-          "question": "What was Priya's job on 2026-08-06?",
-          "answer": "backend engineer at a fintech startup",
-          "answer_type": "value",
-          "accept": [
-            "backend engineer at a fintech startup",
-            "backend engineer at a fintech startup"
-          ],
-          "evidence_days": [
-            4
-          ],
-          "grading": "exact",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u5_p202608_0034",
-          "original_id": "u5_q0287",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "diet",
-          "question": "What was Priya's diet on 2026-08-28?",
-          "answer": "pescatarian",
-          "answer_type": "value",
-          "accept": [
-            "pescatarian",
-            "pescatarian"
-          ],
-          "evidence_days": [
-            1
-          ],
-          "grading": "exact",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u5_p202608_0035",
-          "original_id": "u5_q0342",
-          "type": "duration",
-          "capability": "temporal_arithmetic",
-          "domain": "hobbies",
-          "question": "How long was pottery one of Priya's hobbies?",
-          "answer": "110 days (2026-04-29 to 2026-08-16)",
-          "answer_type": "free_text",
-          "accept": [
-            "110"
-          ],
-          "evidence_days": [
-            68,
-            170
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": [
-            "fact"
-          ]
-        },
-        {
-          "id": "u5_p202608_0036",
-          "original_id": "u5_q0196",
-          "type": "attribution",
+          "id": "u5_p202608_0038",
+          "original_id": "u5_q0364",
+          "type": "distractor_probe",
           "capability": "causal_reasoning",
-          "domain": "commute",
-          "question": "Why did Priya's commute routine change around 2026-08-29?",
-          "answer": "tore a ligament in her knee while bouldering",
-          "answer_type": "free_text",
+          "domain": "exercise",
+          "question": "Around 2026-08-27, tore a ligament in her knee while bouldering. Did that lead to any change in Priya's workout?",
+          "answer": "Yes - from 2026-08-28 Priya's workout changed to physio exercises every day.",
+          "answer_type": "yes_no",
           "accept": [
-            "tore a ligament in her knee while bouldering"
+            "yes"
           ],
           "evidence_days": [
             180,
-            184
+            181
           ],
           "grading": "llm_judge",
           "viewpoint_day": 184,
@@ -953,58 +1019,8 @@
           "probe_month": "2026-08",
           "is_retrospective": false,
           "tags": [
-            "implicit",
-            "temporary",
-            "cross_domain"
-          ]
-        },
-        {
-          "id": "u5_p202608_0037",
-          "original_id": "u5_q0292",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "pets",
-          "question": "What were Priya's pets on 2026-08-25?",
-          "answer": "labrador named Biscuit",
-          "answer_type": "free_text",
-          "accept": [
-            "labrador named Biscuit"
-          ],
-          "evidence_days": [
-            97
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u5_p202608_0038",
-          "original_id": "u5_q0311",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What was the status of her knee injury on 2026-09-13?",
-          "answer": "tore a ligament in her knee while bouldering (happened)",
-          "answer_type": "free_text",
-          "accept": [
-            "tore a ligament in her knee while bouldering"
-          ],
-          "evidence_days": [
-            180
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": false,
-          "tags": [
-            "at_time",
-            "happened"
+            "control",
+            "explicit"
           ]
         },
         {
@@ -1030,37 +1046,10 @@
           "tags": [
             "boundary"
           ]
-        },
-        {
-          "id": "u5_r202608_0192",
-          "original_id": "u5_q0330",
-          "type": "duration",
-          "capability": "temporal_arithmetic",
-          "domain": "bedtime",
-          "question": "How long did Priya's bedtime stay the 11:30 pm / 1:00 am routine?",
-          "answer": "99 days (2026-03-01 to 2026-06-07)",
-          "answer_type": "free_text",
-          "accept": [
-            "99"
-          ],
-          "evidence_days": [
-            1,
-            98
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 184,
-          "probe_date": "2026-08-31",
-          "probe_month": "2026-08",
-          "is_retrospective": true,
-          "tags": [
-            "initial"
-          ],
-          "retrospective_of": "u5_p202606_0022",
-          "original_probe_month": "2026-06"
         }
       ],
-      "num_questions": 12,
-      "num_retrospective": 1
+      "num_questions": 11,
+      "num_retrospective": 0
     },
     {
       "probe_date": "2026-09-30",
@@ -1069,53 +1058,6 @@
       "questions": [
         {
           "id": "u5_p202609_0040",
-          "original_id": "u5_q0283",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "relationship",
-          "question": "What was Priya's relationship status on 2026-09-12?",
-          "answer": "dating Arjun",
-          "answer_type": "value",
-          "accept": [
-            "dating Arjun",
-            "dating Arjun"
-          ],
-          "evidence_days": [
-            150
-          ],
-          "grading": "exact",
-          "viewpoint_day": 214,
-          "probe_date": "2026-09-30",
-          "probe_month": "2026-09",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u5_p202609_0041",
-          "original_id": "u5_q0312",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What happened with the synthwave concert?",
-          "answer": "saw a live synthwave show with Arjun (happened, 2026-09-11)",
-          "answer_type": "free_text",
-          "accept": [
-            "saw a live synthwave show with Arjun"
-          ],
-          "evidence_days": [
-            196
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 214,
-          "probe_date": "2026-09-30",
-          "probe_month": "2026-09",
-          "is_retrospective": false,
-          "tags": [
-            "happened"
-          ]
-        },
-        {
-          "id": "u5_p202609_0042",
           "original_id": "u5_q0372",
           "type": "other_person",
           "capability": "entity_disambiguation",
@@ -1139,7 +1081,79 @@
           ]
         },
         {
+          "id": "u5_p202609_0041",
+          "original_id": "u5_q0283",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "relationship",
+          "question": "What was Priya's relationship status on 2026-09-12?",
+          "answer": "dating Arjun",
+          "answer_type": "value",
+          "accept": [
+            "dating Arjun",
+            "dating Arjun"
+          ],
+          "evidence_days": [
+            150
+          ],
+          "grading": "exact",
+          "viewpoint_day": 214,
+          "probe_date": "2026-09-30",
+          "probe_month": "2026-09",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202609_0042",
+          "original_id": "u5_q0311",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What was the status of her knee injury on 2026-09-13?",
+          "answer": "tore a ligament in her knee while bouldering (happened)",
+          "answer_type": "free_text",
+          "accept": [
+            "tore a ligament in her knee while bouldering"
+          ],
+          "evidence_days": [
+            180
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 214,
+          "probe_date": "2026-09-30",
+          "probe_month": "2026-09",
+          "is_retrospective": false,
+          "tags": [
+            "at_time",
+            "happened"
+          ]
+        },
+        {
           "id": "u5_p202609_0043",
+          "original_id": "u5_q0371",
+          "type": "other_person",
+          "capability": "entity_disambiguation",
+          "domain": "other_people",
+          "question": "What kind of dog did Priya's coworker Dana adopt?",
+          "answer": "beagle named Pepper",
+          "answer_type": "value",
+          "accept": [
+            "beagle named Pepper"
+          ],
+          "evidence_days": [
+            214
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 214,
+          "probe_date": "2026-09-30",
+          "probe_month": "2026-09",
+          "is_retrospective": false,
+          "tags": [
+            "coworker"
+          ]
+        },
+        {
+          "id": "u5_p202609_0044",
           "original_id": "u5_q0181",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -1168,7 +1182,7 @@
           ]
         },
         {
-          "id": "u5_p202609_0044",
+          "id": "u5_p202609_0045",
           "original_id": "u5_q0212",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -1193,74 +1207,21 @@
           ]
         },
         {
-          "id": "u5_p202609_0045",
-          "original_id": "u5_q0091",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "commute",
-          "question": "What was Priya's commute routine in September 2026?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): rideshare; on weekends: no commute",
-          "answer_type": "free_text",
-          "accept": [
-            "rideshare on workdays"
-          ],
-          "evidence_days": [
-            184,
-            186,
-            192
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 214,
-          "probe_date": "2026-09-30",
-          "probe_month": "2026-09",
-          "is_retrospective": false,
-          "tags": [
-            "temporary"
-          ]
-        },
-        {
           "id": "u5_r202609_0160",
-          "original_id": "u5_q0221",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "exercise",
-          "question": "On Monday, 2026-06-01, Priya's workout was skipped workout instead of the usual swim. Was that a lasting change?",
-          "answer": "No - it was a one-off (worked late); the usual routine continued.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            93,
-            97
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 214,
-          "probe_date": "2026-09-30",
-          "probe_month": "2026-09",
-          "is_retrospective": true,
-          "tags": [
-            "exception"
-          ],
-          "retrospective_of": "u5_p202606_0012",
-          "original_probe_month": "2026-06"
-        },
-        {
-          "id": "u5_r202609_0164",
-          "original_id": "u5_q0026",
+          "original_id": "u5_q0012",
           "type": "recall",
           "capability": "episodic_recall",
-          "domain": "commute",
-          "question": "What was Priya's commute on Friday, 2026-07-03?",
-          "answer": "cycling",
+          "domain": "exercise",
+          "question": "What was Priya's workout on Sunday, 2026-05-31?",
+          "answer": "rest day",
           "answer_type": "value",
           "accept": [
-            "cycling"
+            "rest day"
           ],
           "evidence_days": [
-            116,
-            118,
-            124
+            85,
+            91,
+            97
           ],
           "grading": "exact",
           "viewpoint_day": 214,
@@ -1268,14 +1229,72 @@
           "probe_month": "2026-09",
           "is_retrospective": true,
           "tags": [
-            "inferred"
+            "inferred",
+            "no_session",
+            "boundary"
+          ],
+          "retrospective_of": "u5_p202606_0012",
+          "original_probe_month": "2026-06"
+        },
+        {
+          "id": "u5_r202609_0164",
+          "original_id": "u5_q0088",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "bedtime",
+          "question": "What was Priya's bedtime routine in July 2026?",
+          "answer": "split by workday vs weekend - on workdays (Mon-Fri): 10:30 pm; on weekends: 11:30 pm",
+          "answer_type": "free_text",
+          "accept": [
+            "10:30 pm on workdays, 11:30 pm on weekends"
+          ],
+          "evidence_days": [
+            100,
+            102,
+            107
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 214,
+          "probe_date": "2026-09-30",
+          "probe_month": "2026-09",
+          "is_retrospective": true,
+          "tags": [
+            "shift"
           ],
           "retrospective_of": "u5_p202607_0023",
           "original_probe_month": "2026-07"
+        },
+        {
+          "id": "u5_r202609_0192",
+          "original_id": "u5_q0180",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "reading",
+          "question": "When did Priya's evening reading routine change from the history nonfiction / sci-fi novel routine to library thrillers?",
+          "answer": "2026-07-03",
+          "answer_type": "date",
+          "accept": [
+            "2026-07-03"
+          ],
+          "evidence_days": [
+            124,
+            125
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 214,
+          "probe_date": "2026-09-30",
+          "probe_month": "2026-09",
+          "is_retrospective": true,
+          "tags": [
+            "shift",
+            "implicit"
+          ],
+          "retrospective_of": "u5_p202607_0022",
+          "original_probe_month": "2026-07"
         }
       ],
-      "num_questions": 8,
-      "num_retrospective": 2
+      "num_questions": 9,
+      "num_retrospective": 3
     },
     {
       "probe_date": "2026-10-31",
@@ -1284,6 +1303,28 @@
       "questions": [
         {
           "id": "u5_p202610_0046",
+          "original_id": "u5_q0054",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "music",
+          "question": "What was Priya's work music on Saturday, 2026-10-24?",
+          "answer": "synthwave playlists",
+          "answer_type": "value",
+          "accept": [
+            "synthwave playlists"
+          ],
+          "evidence_days": [
+            238
+          ],
+          "grading": "exact",
+          "viewpoint_day": 245,
+          "probe_date": "2026-10-31",
+          "probe_month": "2026-10",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202610_0047",
           "original_id": "u5_q0164",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -1309,7 +1350,7 @@
           ]
         },
         {
-          "id": "u5_p202610_0047",
+          "id": "u5_p202610_0048",
           "original_id": "u5_q0048",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1336,7 +1377,7 @@
           ]
         },
         {
-          "id": "u5_p202610_0048",
+          "id": "u5_p202610_0049",
           "original_id": "u5_q0057",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1363,7 +1404,7 @@
           ]
         },
         {
-          "id": "u5_p202610_0049",
+          "id": "u5_p202610_0050",
           "original_id": "u5_q0353",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
@@ -1385,7 +1426,7 @@
           "tags": []
         },
         {
-          "id": "u5_p202610_0050",
+          "id": "u5_p202610_0051",
           "original_id": "u5_q0242",
           "type": "exception_vs_shift",
           "capability": "exception_handling",
@@ -1410,7 +1451,7 @@
           ]
         },
         {
-          "id": "u5_p202610_0051",
+          "id": "u5_p202610_0052",
           "original_id": "u5_q0159",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -1433,31 +1474,6 @@
           "tags": [
             "reversion",
             "explicit"
-          ]
-        },
-        {
-          "id": "u5_p202610_0052",
-          "original_id": "u5_q0248",
-          "type": "reversion",
-          "capability": "temporal_change",
-          "domain": "commute",
-          "question": "Is Priya's commute still the no commute / rideshare routine?",
-          "answer": "No - that lasted from 2026-08-29 to 2026-09-30; then Priya went back to bus in winter and cycling otherwise on workdays, no commute on weekends.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            204,
-            215
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 245,
-          "probe_date": "2026-10-31",
-          "probe_month": "2026-10",
-          "is_retrospective": false,
-          "tags": [
-            "temporary"
           ]
         },
         {
@@ -1488,20 +1504,20 @@
         },
         {
           "id": "u5_p202610_0054",
-          "original_id": "u5_q0105",
+          "original_id": "u5_q0097",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
-          "domain": "exercise",
-          "question": "What was Priya's workout routine in October 2026?",
-          "answer": "by day of week: morning dog walk on Mon/Wed/Fri; bouldering on Tue/Thu; long dog hike on Sat; rest day on Sun",
+          "domain": "dinner",
+          "question": "What was Priya's dinner routine in October 2026?",
+          "answer": "by day of week: salmon bowl on Mon; pasta on Tue; stir-fry on Wed; curry on Thu; dinner date out on Fri; cooking with Arjun on Sat; leftovers on Sun",
           "answer_type": "free_text",
           "accept": [
-            "dog walks on weekdays, bouldering Tue/Thu, weekend dog hike"
+            "weekly routine with Friday date night and Saturday cooking with Arjun"
           ],
           "evidence_days": [
-            215,
-            216,
-            230
+            158,
+            165,
+            174
           ],
           "grading": "llm_judge",
           "viewpoint_day": 245,
@@ -1509,32 +1525,35 @@
           "probe_month": "2026-10",
           "is_retrospective": false,
           "tags": [
-            "reversion"
+            "shift"
           ]
         },
         {
           "id": "u5_r202610_0167",
-          "original_id": "u5_q0331",
-          "type": "duration",
-          "capability": "temporal_arithmetic",
-          "domain": "reading",
-          "question": "How long did Priya's evening reading stay library thrillers?",
-          "answer": "65 days (2026-07-03 to 2026-09-05)",
-          "answer_type": "free_text",
+          "original_id": "u5_q0169",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "dinner",
+          "question": "When did Priya's dinner routine change from the curry / dinner with friends / fish tacos / leftovers etc. routine to the cooking with Arjun / curry / dinner date out / leftovers etc. routine?",
+          "answer": "2026-08-04 (first observed 2026-08-05)",
+          "answer_type": "date",
           "accept": [
-            "65"
+            "2026-08-04",
+            "2026-08-05"
           ],
           "evidence_days": [
-            125,
-            180
+            155,
+            158
           ],
-          "grading": "llm_judge",
+          "grading": "date_exact",
           "viewpoint_day": 245,
           "probe_date": "2026-10-31",
           "probe_month": "2026-10",
           "is_retrospective": true,
           "tags": [
-            "shift"
+            "shift",
+            "implicit",
+            "bounded"
           ],
           "retrospective_of": "u5_p202608_0032",
           "original_probe_month": "2026-08"
@@ -1550,32 +1569,6 @@
       "questions": [
         {
           "id": "u5_p202611_0055",
-          "original_id": "u5_q0089",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "bedtime",
-          "question": "What was Priya's bedtime routine in February 2027?",
-          "answer": "11:00 pm every day",
-          "answer_type": "free_text",
-          "accept": [
-            "11:00 pm every night"
-          ],
-          "evidence_days": [
-            262,
-            263,
-            264
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": false,
-          "tags": [
-            "shift"
-          ]
-        },
-        {
-          "id": "u5_p202611_0056",
           "original_id": "u5_q0280",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -1596,6 +1589,31 @@
           "probe_month": "2026-11",
           "is_retrospective": false,
           "tags": []
+        },
+        {
+          "id": "u5_p202611_0056",
+          "original_id": "u5_q0217",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "bedtime",
+          "question": "Why did Priya's bedtime routine change around 2026-11-15?",
+          "answer": "No reason was stated.",
+          "answer_type": "abstain",
+          "accept": [
+            "no reason was stated"
+          ],
+          "evidence_days": [
+            262
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 275,
+          "probe_date": "2026-11-30",
+          "probe_month": "2026-11",
+          "is_retrospective": false,
+          "tags": [
+            "uncaused",
+            "shift"
+          ]
         },
         {
           "id": "u5_p202611_0057",
@@ -1625,40 +1643,16 @@
           ]
         },
         {
-          "id": "u5_p202611_0058",
-          "original_id": "u5_q0024",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "commute",
-          "question": "What was Priya's commute on Thursday, 2026-11-19?",
-          "answer": "walked",
-          "answer_type": "value",
-          "accept": [
-            "walked"
-          ],
-          "evidence_days": [
-            264
-          ],
-          "grading": "exact",
-          "viewpoint_day": 275,
-          "probe_date": "2026-11-30",
-          "probe_month": "2026-11",
-          "is_retrospective": false,
-          "tags": [
-            "exception"
-          ]
-        },
-        {
           "id": "u5_r202611_0173",
-          "original_id": "u5_q0088",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
+          "original_id": "u5_q0243",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
           "domain": "bedtime",
-          "question": "What was Priya's bedtime routine in July 2026?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): 10:30 pm; on weekends: 11:30 pm",
-          "answer_type": "free_text",
+          "question": "On Monday, 2026-06-08, Priya's bedtime was 10:30 pm instead of the usual 11:30 pm. Was that a lasting change?",
+          "answer": "Yes - from 2026-06-08 the routine changed to 10:30 pm on workdays, 11:30 pm on weekends.",
+          "answer_type": "yes_no",
           "accept": [
-            "10:30 pm on workdays, 11:30 pm on weekends"
+            "yes"
           ],
           "evidence_days": [
             100,
@@ -1671,58 +1665,55 @@
           "probe_month": "2026-11",
           "is_retrospective": true,
           "tags": [
-            "shift"
+            "shift",
+            "implicit"
           ],
           "retrospective_of": "u5_p202606_0014",
           "original_probe_month": "2026-06"
         },
         {
           "id": "u5_r202611_0189",
-          "original_id": "u5_q0181",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "reading",
-          "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
-          "answer": "2026-09-06 (first observed 2026-09-08)",
-          "answer_type": "date",
+          "original_id": "u5_q0371",
+          "type": "other_person",
+          "capability": "entity_disambiguation",
+          "domain": "other_people",
+          "question": "What kind of dog did Priya's coworker Dana adopt?",
+          "answer": "beagle named Pepper",
+          "answer_type": "value",
           "accept": [
-            "2026-09-06",
-            "2026-09-07",
-            "2026-09-08"
+            "beagle named Pepper"
           ],
           "evidence_days": [
-            180,
-            192
+            214
           ],
-          "grading": "date_exact",
+          "grading": "llm_judge",
           "viewpoint_day": 275,
           "probe_date": "2026-11-30",
           "probe_month": "2026-11",
           "is_retrospective": true,
           "tags": [
-            "shift",
-            "uncaused",
-            "bounded"
+            "coworker"
           ],
           "retrospective_of": "u5_p202609_0043",
           "original_probe_month": "2026-09"
         },
         {
           "id": "u5_r202611_0191",
-          "original_id": "u5_q0169",
+          "original_id": "u5_q0163",
           "type": "change_detection",
           "capability": "temporal_change",
-          "domain": "dinner",
-          "question": "When did Priya's dinner routine change from the curry / dinner with friends / fish tacos / leftovers etc. routine to the cooking with Arjun / curry / dinner date out / leftovers etc. routine?",
-          "answer": "2026-08-04 (first observed 2026-08-05)",
+          "domain": "commute",
+          "question": "When did Priya's commute routine change from the bus / cycling / no commute routine to the no commute / rideshare routine?",
+          "answer": "2026-08-29 (first observed 2026-08-31)",
           "answer_type": "date",
           "accept": [
-            "2026-08-04",
-            "2026-08-05"
+            "2026-08-29",
+            "2026-08-30",
+            "2026-08-31"
           ],
           "evidence_days": [
-            155,
-            158
+            181,
+            184
           ],
           "grading": "date_exact",
           "viewpoint_day": 275,
@@ -1730,7 +1721,7 @@
           "probe_month": "2026-11",
           "is_retrospective": true,
           "tags": [
-            "shift",
+            "temporary",
             "implicit",
             "bounded"
           ],
@@ -1738,7 +1729,7 @@
           "original_probe_month": "2026-08"
         }
       ],
-      "num_questions": 7,
+      "num_questions": 6,
       "num_retrospective": 3
     },
     {
@@ -1747,7 +1738,53 @@
       "viewpoint_day": 306,
       "questions": [
         {
+          "id": "u5_p202612_0058",
+          "original_id": "u5_q0367",
+          "type": "other_person",
+          "capability": "entity_disambiguation",
+          "domain": "other_people",
+          "question": "Is Priya's city of residence Denver, Colorado?",
+          "answer": "Yes.",
+          "answer_type": "yes_no",
+          "accept": [
+            "yes"
+          ],
+          "evidence_days": [
+            301
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": false,
+          "tags": [
+            "control"
+          ]
+        },
+        {
           "id": "u5_p202612_0059",
+          "original_id": "u5_q0355",
+          "type": "distractor_probe",
+          "capability": "causal_reasoning",
+          "domain": "music",
+          "question": "Around 2026-12-10, a new jazz club opened downtown. Did that lead to any change in Priya's work music?",
+          "answer": "No - nothing about Priya's work music changed because of it.",
+          "answer_type": "yes_no",
+          "accept": [
+            "no"
+          ],
+          "evidence_days": [
+            286
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202612_0060",
           "original_id": "u5_q0197",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -1774,20 +1811,47 @@
           ]
         },
         {
-          "id": "u5_p202612_0060",
-          "original_id": "u5_q0259",
-          "type": "fact_current",
-          "capability": "knowledge_update",
-          "domain": "relationship",
-          "question": "What is Priya's current relationship status?",
-          "answer": "living with her partner Arjun",
+          "id": "u5_p202612_0061",
+          "original_id": "u5_q0010",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "exercise",
+          "question": "What was Priya's workout on Sunday, 2026-12-06?",
+          "answer": "morning dog walk",
           "answer_type": "value",
           "accept": [
-            "living with her partner Arjun",
-            "living with her partner Arjun"
+            "morning dog walk"
           ],
           "evidence_days": [
-            306
+            263,
+            264,
+            294
+          ],
+          "grading": "exact",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": false,
+          "tags": [
+            "inferred",
+            "no_session"
+          ]
+        },
+        {
+          "id": "u5_p202612_0062",
+          "original_id": "u5_q0282",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "relationship",
+          "question": "What was Priya's relationship status on 2026-12-13?",
+          "answer": "dating Arjun",
+          "answer_type": "value",
+          "accept": [
+            "dating Arjun",
+            "dating Arjun"
+          ],
+          "evidence_days": [
+            150
           ],
           "grading": "exact",
           "viewpoint_day": 306,
@@ -1797,33 +1861,7 @@
           "tags": []
         },
         {
-          "id": "u5_p202612_0061",
-          "original_id": "u5_q0165",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "commute",
-          "question": "When did Priya's commute routine change from the bus / cycling / no commute routine to the light rail / no commute routine?",
-          "answer": "2026-12-29",
-          "answer_type": "date",
-          "accept": [
-            "2026-12-29"
-          ],
-          "evidence_days": [
-            302,
-            304
-          ],
-          "grading": "date_exact",
-          "viewpoint_day": 306,
-          "probe_date": "2026-12-31",
-          "probe_month": "2026-12",
-          "is_retrospective": false,
-          "tags": [
-            "shift",
-            "explicit"
-          ]
-        },
-        {
-          "id": "u5_p202612_0062",
+          "id": "u5_p202612_0063",
           "original_id": "u5_q0038",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1847,21 +1885,21 @@
           ]
         },
         {
-          "id": "u5_p202612_0063",
-          "original_id": "u5_q0018",
+          "id": "u5_p202612_0064",
+          "original_id": "u5_q0049",
           "type": "recall",
           "capability": "episodic_recall",
-          "domain": "commute",
-          "question": "What was Priya's commute on Wednesday, 2026-12-23?",
-          "answer": "bus",
+          "domain": "music",
+          "question": "What was Priya's work music on Wednesday, 2026-12-23?",
+          "answer": "synthwave playlists",
           "answer_type": "value",
           "accept": [
-            "bus"
+            "synthwave playlists"
           ],
           "evidence_days": [
-            282,
-            283,
-            297
+            294,
+            302,
+            304
           ],
           "grading": "exact",
           "viewpoint_day": 306,
@@ -1870,83 +1908,11 @@
           "is_retrospective": false,
           "tags": [
             "inferred",
-            "no_session",
-            "boundary"
+            "no_session"
           ]
-        },
-        {
-          "id": "u5_p202612_0064",
-          "original_id": "u5_q0258",
-          "type": "fact_current",
-          "capability": "knowledge_update",
-          "domain": "city",
-          "question": "What is Priya's current city of residence?",
-          "answer": "Denver, Colorado",
-          "answer_type": "value",
-          "accept": [
-            "Denver, Colorado",
-            "Denver"
-          ],
-          "evidence_days": [
-            301
-          ],
-          "grading": "exact",
-          "viewpoint_day": 306,
-          "probe_date": "2026-12-31",
-          "probe_month": "2026-12",
-          "is_retrospective": false,
-          "tags": []
         },
         {
           "id": "u5_p202612_0065",
-          "original_id": "u5_q0276",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "city",
-          "question": "What was Priya's city of residence on 2026-12-20?",
-          "answer": "Pittsburgh, Pennsylvania",
-          "answer_type": "value",
-          "accept": [
-            "Pittsburgh, Pennsylvania",
-            "Pittsburgh"
-          ],
-          "evidence_days": [
-            1
-          ],
-          "grading": "exact",
-          "viewpoint_day": 306,
-          "probe_date": "2026-12-31",
-          "probe_month": "2026-12",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u5_p202612_0066",
-          "original_id": "u5_q0304",
-          "type": "fact_history",
-          "capability": "knowledge_update",
-          "domain": "city",
-          "question": "How has Priya's city of residence changed over time?",
-          "answer": "Pittsburgh, Pennsylvania (2026-03-01 to 2026-12-24); Denver, Colorado (2026-12-25 to now)",
-          "answer_type": "free_text",
-          "accept": [
-            "Denver, Colorado"
-          ],
-          "evidence_days": [
-            1,
-            301
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 306,
-          "probe_date": "2026-12-31",
-          "probe_month": "2026-12",
-          "is_retrospective": false,
-          "tags": [
-            "single"
-          ]
-        },
-        {
-          "id": "u5_p202612_0067",
           "original_id": "u5_q0033",
           "type": "recall",
           "capability": "episodic_recall",
@@ -1969,10 +1935,91 @@
           "tags": [
             "inferred"
           ]
+        },
+        {
+          "id": "u5_p202612_0066",
+          "original_id": "u5_q0313",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What happened with the Denver transfer?",
+          "answer": "accepted the Denver transfer (happened, 2026-12-21)",
+          "answer_type": "free_text",
+          "accept": [
+            "accepted the Denver transfer"
+          ],
+          "evidence_days": [
+            270,
+            296
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": false,
+          "tags": [
+            "happened"
+          ]
+        },
+        {
+          "id": "u5_r202612_0199",
+          "original_id": "u5_q0364",
+          "type": "distractor_probe",
+          "capability": "causal_reasoning",
+          "domain": "exercise",
+          "question": "Around 2026-08-27, tore a ligament in her knee while bouldering. Did that lead to any change in Priya's workout?",
+          "answer": "Yes - from 2026-08-28 Priya's workout changed to physio exercises every day.",
+          "answer_type": "yes_no",
+          "accept": [
+            "yes"
+          ],
+          "evidence_days": [
+            180,
+            181
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": true,
+          "tags": [
+            "control",
+            "explicit"
+          ],
+          "retrospective_of": "u5_p202608_0038",
+          "original_probe_month": "2026-08"
+        },
+        {
+          "id": "u5_r202612_0200",
+          "original_id": "u5_q0026",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "commute",
+          "question": "What was Priya's commute on Friday, 2026-07-03?",
+          "answer": "cycling",
+          "answer_type": "value",
+          "accept": [
+            "cycling"
+          ],
+          "evidence_days": [
+            116,
+            118,
+            124
+          ],
+          "grading": "exact",
+          "viewpoint_day": 306,
+          "probe_date": "2026-12-31",
+          "probe_month": "2026-12",
+          "is_retrospective": true,
+          "tags": [
+            "inferred"
+          ],
+          "retrospective_of": "u5_p202607_0025",
+          "original_probe_month": "2026-07"
         }
       ],
-      "num_questions": 9,
-      "num_retrospective": 0
+      "num_questions": 11,
+      "num_retrospective": 2
     },
     {
       "probe_date": "2027-01-31",
@@ -1980,20 +2027,19 @@
       "viewpoint_day": 337,
       "questions": [
         {
-          "id": "u5_p202701_0068",
-          "original_id": "u5_q0281",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "relationship",
-          "question": "What was Priya's relationship status on 2027-01-14?",
-          "answer": "living with her partner Arjun",
+          "id": "u5_p202701_0067",
+          "original_id": "u5_q0063",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "reading",
+          "question": "What was Priya's evening reading on Tuesday, 2027-01-05?",
+          "answer": "poetry collections",
           "answer_type": "value",
           "accept": [
-            "living with her partner Arjun",
-            "living with her partner Arjun"
+            "poetry collections"
           ],
           "evidence_days": [
-            306
+            311
           ],
           "grading": "exact",
           "viewpoint_day": 337,
@@ -2003,7 +2049,57 @@
           "tags": []
         },
         {
+          "id": "u5_p202701_0068",
+          "original_id": "u5_q0291",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "pets",
+          "question": "What were Priya's pets on 2027-01-15?",
+          "answer": "labrador named Biscuit",
+          "answer_type": "free_text",
+          "accept": [
+            "labrador named Biscuit"
+          ],
+          "evidence_days": [
+            97
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 337,
+          "probe_date": "2027-01-31",
+          "probe_month": "2027-01",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
           "id": "u5_p202701_0069",
+          "original_id": "u5_q0110",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "music",
+          "question": "What was Priya's work music routine in January 2027?",
+          "answer": "synthwave playlists every day",
+          "answer_type": "free_text",
+          "accept": [
+            "synthwave playlists every day"
+          ],
+          "evidence_days": [
+            203,
+            204,
+            215
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 337,
+          "probe_date": "2027-01-31",
+          "probe_month": "2027-01",
+          "is_retrospective": false,
+          "tags": [
+            "shift"
+          ]
+        },
+        {
+          "id": "u5_p202701_0070",
           "original_id": "u5_q0343",
           "type": "duration",
           "capability": "temporal_arithmetic",
@@ -2028,7 +2124,7 @@
           ]
         },
         {
-          "id": "u5_p202701_0070",
+          "id": "u5_p202701_0071",
           "original_id": "u5_q0007",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2055,105 +2151,46 @@
           ]
         },
         {
-          "id": "u5_p202701_0071",
-          "original_id": "u5_q0170",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "dinner",
-          "question": "When did Priya's dinner routine change from the cooking with Arjun / curry / dinner date out / leftovers etc. routine to the home-cooked curry / meal-kit dinner routine?",
-          "answer": "2027-01-01 (first observed 2027-01-05)",
-          "answer_type": "date",
-          "accept": [
-            "2027-01-01",
-            "2027-01-02",
-            "2027-01-03",
-            "2027-01-04",
-            "2027-01-05"
-          ],
-          "evidence_days": [
-            306,
-            311
-          ],
-          "grading": "date_exact",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": false,
-          "tags": [
-            "shift",
-            "implicit",
-            "bounded"
-          ]
-        },
-        {
           "id": "u5_p202701_0072",
-          "original_id": "u5_q0182",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "reading",
-          "question": "When did Priya's evening reading routine change from the library thrillers / poetry collections routine to the book club novel / graphic novels routine?",
-          "answer": "2027-01-16 (first observed 2027-01-18)",
-          "answer_type": "date",
+          "original_id": "u5_q0070",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "bedtime",
+          "question": "What was Priya's bedtime on Wednesday, 2027-01-13?",
+          "answer": "11:00 pm",
+          "answer_type": "value",
           "accept": [
-            "2027-01-16",
-            "2027-01-17",
-            "2027-01-18"
+            "11:00 pm"
           ],
           "evidence_days": [
-            321,
-            324
+            314,
+            315,
+            327
           ],
-          "grading": "date_exact",
+          "grading": "exact",
           "viewpoint_day": 337,
           "probe_date": "2027-01-31",
           "probe_month": "2027-01",
           "is_retrospective": false,
           "tags": [
-            "shift",
-            "explicit",
-            "bounded"
+            "inferred"
           ]
         },
         {
           "id": "u5_p202701_0073",
-          "original_id": "u5_q0315",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What happened with the book club?",
-          "answer": "joined a neighborhood book club in Denver (happened, 2027-01-12)",
+          "original_id": "u5_q0334",
+          "type": "duration",
+          "capability": "temporal_arithmetic",
+          "domain": "exercise",
+          "question": "How long did Priya's workout stay the home HIIT workout / morning dog walk routine?",
+          "answer": "73 days (2026-11-17 to 2027-01-28)",
           "answer_type": "free_text",
           "accept": [
-            "joined a neighborhood book club in Denver"
+            "73"
           ],
           "evidence_days": [
-            319
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": false,
-          "tags": [
-            "happened"
-          ]
-        },
-        {
-          "id": "u5_p202701_0074",
-          "original_id": "u5_q0092",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "commute",
-          "question": "What was Priya's commute routine in February 2027?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): light rail; on weekends: no commute",
-          "answer_type": "free_text",
-          "accept": [
-            "light rail on workdays"
-          ],
-          "evidence_days": [
-            304,
-            312,
-            316
+            262,
+            333
           ],
           "grading": "llm_judge",
           "viewpoint_day": 337,
@@ -2162,6 +2199,31 @@
           "is_retrospective": false,
           "tags": [
             "shift"
+          ]
+        },
+        {
+          "id": "u5_p202701_0074",
+          "original_id": "u5_q0233",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "music",
+          "question": "On Friday, 2027-01-08, Priya's work music was classical radio instead of the usual synthwave playlists. Was that a lasting change?",
+          "answer": "No - it was a one-off (her headphones broke); the usual routine continued.",
+          "answer_type": "yes_no",
+          "accept": [
+            "no"
+          ],
+          "evidence_days": [
+            314,
+            316
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 337,
+          "probe_date": "2027-01-31",
+          "probe_month": "2027-01",
+          "is_retrospective": false,
+          "tags": [
+            "exception"
           ]
         },
         {
@@ -2191,111 +2253,29 @@
         },
         {
           "id": "u5_p202701_0076",
-          "original_id": "u5_q0262",
-          "type": "fact_current",
-          "capability": "knowledge_update",
-          "domain": "hobbies",
-          "question": "What are Priya's current hobbies?",
-          "answer": "bouldering, trail running",
-          "answer_type": "free_text",
+          "original_id": "u5_q0281",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "relationship",
+          "question": "What was Priya's relationship status on 2027-01-14?",
+          "answer": "living with her partner Arjun",
+          "answer_type": "value",
           "accept": [
-            "bouldering, trail running"
+            "living with her partner Arjun",
+            "living with her partner Arjun"
           ],
           "evidence_days": [
-            1,
-            331
+            306
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 337,
           "probe_date": "2027-01-31",
           "probe_month": "2027-01",
           "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u5_p202701_0077",
-          "original_id": "u5_q0213",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "reading",
-          "question": "Why did Priya's evening reading routine change around 2027-01-16?",
-          "answer": "joined a neighborhood book club in Denver",
-          "answer_type": "free_text",
-          "accept": [
-            "joined a neighborhood book club in Denver"
-          ],
-          "evidence_days": [
-            319,
-            324
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": false,
-          "tags": [
-            "explicit",
-            "shift"
-          ]
+          "tags": []
         },
         {
           "id": "u5_r202701_0166",
-          "original_id": "u5_q0115",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "reading",
-          "question": "What was Priya's evening reading routine in August 2026?",
-          "answer": "library thrillers every day",
-          "answer_type": "free_text",
-          "accept": [
-            "library thrillers every day"
-          ],
-          "evidence_days": [
-            125,
-            126,
-            130
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": true,
-          "tags": [
-            "shift"
-          ],
-          "retrospective_of": "u5_p202607_0024",
-          "original_probe_month": "2026-07"
-        },
-        {
-          "id": "u5_r202701_0186",
-          "original_id": "u5_q0292",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "pets",
-          "question": "What were Priya's pets on 2026-08-25?",
-          "answer": "labrador named Biscuit",
-          "answer_type": "free_text",
-          "accept": [
-            "labrador named Biscuit"
-          ],
-          "evidence_days": [
-            97
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": true,
-          "tags": [
-            "set"
-          ],
-          "retrospective_of": "u5_p202608_0037",
-          "original_probe_month": "2026-08"
-        },
-        {
-          "id": "u5_r202701_0195",
           "original_id": "u5_q0351",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
@@ -2315,23 +2295,24 @@
           "probe_month": "2027-01",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u5_p202607_0026",
+          "retrospective_of": "u5_p202607_0024",
           "original_probe_month": "2026-07"
         },
         {
-          "id": "u5_r202701_0199",
-          "original_id": "u5_q0311",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What was the status of her knee injury on 2026-09-13?",
-          "answer": "tore a ligament in her knee while bouldering (happened)",
+          "id": "u5_r202701_0186",
+          "original_id": "u5_q0192",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "exercise",
+          "question": "Why did Priya's workout routine change around 2026-08-28?",
+          "answer": "tore a ligament in her knee while bouldering",
           "answer_type": "free_text",
           "accept": [
             "tore a ligament in her knee while bouldering"
           ],
           "evidence_days": [
-            180
+            180,
+            181
           ],
           "grading": "llm_judge",
           "viewpoint_day": 337,
@@ -2339,40 +2320,16 @@
           "probe_month": "2027-01",
           "is_retrospective": true,
           "tags": [
-            "at_time",
-            "happened"
+            "explicit",
+            "temporary",
+            "cross_domain"
           ],
-          "retrospective_of": "u5_p202608_0038",
+          "retrospective_of": "u5_p202608_0037",
           "original_probe_month": "2026-08"
-        },
-        {
-          "id": "u5_r202701_0200",
-          "original_id": "u5_q0271",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "city",
-          "question": "What was Priya's city of residence on 2026-07-23?",
-          "answer": "Pittsburgh, Pennsylvania",
-          "answer_type": "value",
-          "accept": [
-            "Pittsburgh, Pennsylvania",
-            "Pittsburgh"
-          ],
-          "evidence_days": [
-            1
-          ],
-          "grading": "exact",
-          "viewpoint_day": 337,
-          "probe_date": "2027-01-31",
-          "probe_month": "2027-01",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u5_p202607_0025",
-          "original_probe_month": "2026-07"
         }
       ],
-      "num_questions": 15,
-      "num_retrospective": 5
+      "num_questions": 12,
+      "num_retrospective": 2
     },
     {
       "probe_date": "2027-02-28",
@@ -2380,7 +2337,56 @@
       "viewpoint_day": 365,
       "questions": [
         {
+          "id": "u5_p202702_0077",
+          "original_id": "u5_q0089",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "bedtime",
+          "question": "What was Priya's bedtime routine in February 2027?",
+          "answer": "11:00 pm every day",
+          "answer_type": "free_text",
+          "accept": [
+            "11:00 pm every night"
+          ],
+          "evidence_days": [
+            262,
+            263,
+            264
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 365,
+          "probe_date": "2027-02-28",
+          "probe_month": "2027-02",
+          "is_retrospective": false,
+          "tags": [
+            "shift"
+          ]
+        },
+        {
           "id": "u5_p202702_0078",
+          "original_id": "u5_q0286",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "diet",
+          "question": "What was Priya's diet on 2027-02-01?",
+          "answer": "pescatarian",
+          "answer_type": "value",
+          "accept": [
+            "pescatarian",
+            "pescatarian"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "exact",
+          "viewpoint_day": 365,
+          "probe_date": "2027-02-28",
+          "probe_month": "2027-02",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202702_0079",
           "original_id": "u5_q0208",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -2404,29 +2410,6 @@
             "implicit",
             "shift"
           ]
-        },
-        {
-          "id": "u5_p202702_0079",
-          "original_id": "u5_q0286",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "diet",
-          "question": "What was Priya's diet on 2027-02-01?",
-          "answer": "pescatarian",
-          "answer_type": "value",
-          "accept": [
-            "pescatarian",
-            "pescatarian"
-          ],
-          "evidence_days": [
-            1
-          ],
-          "grading": "exact",
-          "viewpoint_day": 365,
-          "probe_date": "2027-02-28",
-          "probe_month": "2027-02",
-          "is_retrospective": false,
-          "tags": []
         },
         {
           "id": "u5_p202702_0080",
@@ -2456,97 +2439,46 @@
         },
         {
           "id": "u5_p202702_0081",
-          "original_id": "u5_q0111",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
+          "original_id": "u5_q0044",
+          "type": "recall",
+          "capability": "episodic_recall",
           "domain": "music",
-          "question": "What was Priya's work music routine in April 2027?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): synthwave playlists; on weekends: running playlists",
-          "answer_type": "free_text",
+          "question": "What was Priya's work music on Friday, 2027-02-19?",
+          "answer": "synthwave playlists",
+          "answer_type": "value",
           "accept": [
-            "synthwave on workdays, running playlists on weekends"
+            "synthwave playlists"
           ],
           "evidence_days": [
-            345,
-            351,
-            352
+            352,
+            361,
+            362
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 365,
           "probe_date": "2027-02-28",
           "probe_month": "2027-02",
           "is_retrospective": false,
           "tags": [
-            "shift"
+            "inferred",
+            "no_session"
           ]
         },
         {
-          "id": "u5_p202702_0082",
-          "original_id": "u5_q0237",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "reading",
-          "question": "On Sunday, 2027-01-31, Priya's evening reading was no reading instead of the usual book club novel. Was that a lasting change?",
-          "answer": "No - it was a one-off (fell asleep early); the usual routine continued.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            337,
-            342
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 365,
-          "probe_date": "2027-02-28",
-          "probe_month": "2027-02",
-          "is_retrospective": false,
-          "tags": [
-            "exception"
-          ]
-        },
-        {
-          "id": "u5_p202702_0083",
-          "original_id": "u5_q0224",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "exercise",
-          "question": "On Sunday, 2027-02-07, Priya's workout was morning dog walk instead of the usual home HIIT workout. Was that a lasting change?",
-          "answer": "Yes - from 2027-01-29 the routine changed to trail runs Mon/Wed/Sat, dog walks Tue/Thu/Sun.",
+          "id": "u5_r202702_0196",
+          "original_id": "u5_q0354",
+          "type": "distractor_probe",
+          "capability": "causal_reasoning",
+          "domain": "commute",
+          "question": "Around 2026-08-27, tore a ligament in her knee while bouldering. Did that lead to any change in Priya's commute?",
+          "answer": "Yes - from 2026-08-29 Priya's commute changed to rideshare on workdays.",
           "answer_type": "yes_no",
           "accept": [
             "yes"
           ],
           "evidence_days": [
-            337,
-            344,
-            351
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 365,
-          "probe_date": "2027-02-28",
-          "probe_month": "2027-02",
-          "is_retrospective": false,
-          "tags": [
-            "shift",
-            "implicit"
-          ]
-        },
-        {
-          "id": "u5_r202702_0196",
-          "original_id": "u5_q0192",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "exercise",
-          "question": "Why did Priya's workout routine change around 2026-08-28?",
-          "answer": "tore a ligament in her knee while bouldering",
-          "answer_type": "free_text",
-          "accept": [
-            "tore a ligament in her knee while bouldering"
-          ],
-          "evidence_days": [
             180,
-            181
+            184
           ],
           "grading": "llm_judge",
           "viewpoint_day": 365,
@@ -2554,15 +2486,14 @@
           "probe_month": "2027-02",
           "is_retrospective": true,
           "tags": [
-            "explicit",
-            "temporary",
-            "cross_domain"
+            "control",
+            "implicit"
           ],
           "retrospective_of": "u5_p202608_0031",
           "original_probe_month": "2026-08"
         }
       ],
-      "num_questions": 7,
+      "num_questions": 6,
       "num_retrospective": 1
     },
     {
@@ -2571,7 +2502,32 @@
       "viewpoint_day": 396,
       "questions": [
         {
-          "id": "u5_p202703_0084",
+          "id": "u5_p202703_0082",
+          "original_id": "u5_q0238",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "reading",
+          "question": "On Wednesday, 2027-03-03, Priya's evening reading was a magazine instead of the usual book club novel. Was that a lasting change?",
+          "answer": "No - it was a one-off (picked one up at the dentist); the usual routine continued.",
+          "answer_type": "yes_no",
+          "accept": [
+            "no"
+          ],
+          "evidence_days": [
+            368,
+            374
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 396,
+          "probe_date": "2027-03-31",
+          "probe_month": "2027-03",
+          "is_retrospective": false,
+          "tags": [
+            "exception"
+          ]
+        },
+        {
+          "id": "u5_p202703_0083",
           "original_id": "u5_q0076",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2597,7 +2553,7 @@
           ]
         },
         {
-          "id": "u5_p202703_0085",
+          "id": "u5_p202703_0084",
           "original_id": "u5_q0028",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2623,32 +2579,29 @@
           ]
         },
         {
-          "id": "u5_p202703_0086",
-          "original_id": "u5_q0238",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "reading",
-          "question": "On Wednesday, 2027-03-03, Priya's evening reading was a magazine instead of the usual book club novel. Was that a lasting change?",
-          "answer": "No - it was a one-off (picked one up at the dentist); the usual routine continued.",
+          "id": "u5_p202703_0085",
+          "original_id": "u5_q0357",
+          "type": "distractor_probe",
+          "capability": "causal_reasoning",
+          "domain": "commute",
+          "question": "Around 2027-03-05, Arjun bought a new bike. Did that lead to any change in Priya's commute?",
+          "answer": "No - nothing about Priya's commute changed because of it.",
           "answer_type": "yes_no",
           "accept": [
             "no"
           ],
           "evidence_days": [
-            368,
-            374
+            373
           ],
           "grading": "llm_judge",
           "viewpoint_day": 396,
           "probe_date": "2027-03-31",
           "probe_month": "2027-03",
           "is_retrospective": false,
-          "tags": [
-            "exception"
-          ]
+          "tags": []
         },
         {
-          "id": "u5_p202703_0087",
+          "id": "u5_p202703_0086",
           "original_id": "u5_q0047",
           "type": "recall",
           "capability": "episodic_recall",
@@ -2671,33 +2624,29 @@
         },
         {
           "id": "u5_r202703_0163",
-          "original_id": "u5_q0170",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "dinner",
-          "question": "When did Priya's dinner routine change from the cooking with Arjun / curry / dinner date out / leftovers etc. routine to the home-cooked curry / meal-kit dinner routine?",
-          "answer": "2027-01-01 (first observed 2027-01-05)",
-          "answer_type": "date",
+          "original_id": "u5_q0007",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "exercise",
+          "question": "What was Priya's workout on Friday, 2027-01-22?",
+          "answer": "home HIIT workout",
+          "answer_type": "value",
           "accept": [
-            "2027-01-01",
-            "2027-01-02",
-            "2027-01-03",
-            "2027-01-04",
-            "2027-01-05"
+            "home HIIT workout"
           ],
           "evidence_days": [
-            306,
-            311
+            312,
+            315,
+            327
           ],
-          "grading": "date_exact",
+          "grading": "exact",
           "viewpoint_day": 396,
           "probe_date": "2027-03-31",
           "probe_month": "2027-03",
           "is_retrospective": true,
           "tags": [
-            "shift",
-            "implicit",
-            "bounded"
+            "inferred",
+            "boundary"
           ],
           "retrospective_of": "u5_p202701_0071",
           "original_probe_month": "2027-01"
@@ -2731,19 +2680,18 @@
         },
         {
           "id": "u5_r202703_0176",
-          "original_id": "u5_q0092",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "commute",
-          "question": "What was Priya's commute routine in February 2027?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): light rail; on weekends: no commute",
-          "answer_type": "free_text",
+          "original_id": "u5_q0233",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "music",
+          "question": "On Friday, 2027-01-08, Priya's work music was classical radio instead of the usual synthwave playlists. Was that a lasting change?",
+          "answer": "No - it was a one-off (her headphones broke); the usual routine continued.",
+          "answer_type": "yes_no",
           "accept": [
-            "light rail on workdays"
+            "no"
           ],
           "evidence_days": [
-            304,
-            312,
+            314,
             316
           ],
           "grading": "llm_judge",
@@ -2752,13 +2700,13 @@
           "probe_month": "2027-03",
           "is_retrospective": true,
           "tags": [
-            "shift"
+            "exception"
           ],
           "retrospective_of": "u5_p202701_0074",
           "original_probe_month": "2027-01"
         }
       ],
-      "num_questions": 7,
+      "num_questions": 8,
       "num_retrospective": 3
     },
     {
@@ -2767,7 +2715,7 @@
       "viewpoint_day": 426,
       "questions": [
         {
-          "id": "u5_p202704_0088",
+          "id": "u5_p202704_0087",
           "original_id": "u5_q0301",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -2795,7 +2743,7 @@
           ]
         },
         {
-          "id": "u5_p202704_0089",
+          "id": "u5_p202704_0088",
           "original_id": "u5_q0297",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -2821,7 +2769,7 @@
           ]
         },
         {
-          "id": "u5_p202704_0090",
+          "id": "u5_p202704_0089",
           "original_id": "u5_q0298",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -2847,7 +2795,7 @@
           ]
         },
         {
-          "id": "u5_p202704_0091",
+          "id": "u5_p202704_0090",
           "original_id": "u5_q0344",
           "type": "duration",
           "capability": "temporal_arithmetic",
@@ -2872,7 +2820,7 @@
           ]
         },
         {
-          "id": "u5_p202704_0092",
+          "id": "u5_p202704_0091",
           "original_id": "u5_q0166",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -2901,7 +2849,7 @@
           ]
         },
         {
-          "id": "u5_p202704_0093",
+          "id": "u5_p202704_0092",
           "original_id": "u5_q0308",
           "type": "fact_history",
           "capability": "knowledge_update",
@@ -2931,27 +2879,26 @@
         },
         {
           "id": "u5_r202704_0172",
-          "original_id": "u5_q0038",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "dinner",
-          "question": "What was Priya's dinner on Thursday, 2026-10-01?",
-          "answer": "curry",
+          "original_id": "u5_q0282",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "relationship",
+          "question": "What was Priya's relationship status on 2026-12-13?",
+          "answer": "dating Arjun",
           "answer_type": "value",
           "accept": [
-            "curry"
+            "dating Arjun",
+            "dating Arjun"
           ],
           "evidence_days": [
-            306
+            150
           ],
           "grading": "exact",
           "viewpoint_day": 426,
           "probe_date": "2027-04-30",
           "probe_month": "2027-04",
           "is_retrospective": true,
-          "tags": [
-            "inferred"
-          ],
+          "tags": [],
           "retrospective_of": "u5_p202612_0062",
           "original_probe_month": "2026-12"
         }
@@ -2965,7 +2912,7 @@
       "viewpoint_day": 457,
       "questions": [
         {
-          "id": "u5_p202705_0094",
+          "id": "u5_p202705_0093",
           "original_id": "u5_q0359",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
@@ -2989,7 +2936,7 @@
           ]
         },
         {
-          "id": "u5_p202705_0095",
+          "id": "u5_p202705_0094",
           "original_id": "u5_q0209",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -3015,7 +2962,7 @@
           ]
         },
         {
-          "id": "u5_p202705_0096",
+          "id": "u5_p202705_0095",
           "original_id": "u5_q0263",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -3038,21 +2985,21 @@
           "tags": []
         },
         {
-          "id": "u5_p202705_0097",
-          "original_id": "u5_q0025",
+          "id": "u5_p202705_0096",
+          "original_id": "u5_q0039",
           "type": "recall",
           "capability": "episodic_recall",
-          "domain": "commute",
-          "question": "What was Priya's commute on Tuesday, 2027-04-13?",
-          "answer": "work from home",
+          "domain": "dinner",
+          "question": "What was Priya's dinner on Saturday, 2027-05-01?",
+          "answer": "meal-kit dinner",
           "answer_type": "value",
           "accept": [
-            "work from home"
+            "meal-kit dinner"
           ],
           "evidence_days": [
-            402,
-            423,
-            437
+            421,
+            422,
+            434
           ],
           "grading": "exact",
           "viewpoint_day": 457,
@@ -3065,7 +3012,7 @@
           ]
         },
         {
-          "id": "u5_p202705_0098",
+          "id": "u5_p202705_0097",
           "original_id": "u5_q0235",
           "type": "exception_vs_shift",
           "capability": "exception_handling",
@@ -3092,30 +3039,29 @@
           ]
         },
         {
-          "id": "u5_p202705_0099",
-          "original_id": "u5_q0039",
-          "type": "recall",
-          "capability": "episodic_recall",
+          "id": "u5_p202705_0098",
+          "original_id": "u5_q0098",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
           "domain": "dinner",
-          "question": "What was Priya's dinner on Saturday, 2027-05-01?",
-          "answer": "meal-kit dinner",
-          "answer_type": "value",
+          "question": "What was Priya's dinner routine in May 2027?",
+          "answer": "a 7-day cycle starting Fri 2027-01-01: meal-kit dinner for 4 days, then home-cooked curry for 3 days, repeating",
+          "answer_type": "free_text",
           "accept": [
-            "meal-kit dinner"
+            "4 days meal-kit dinner, 3 days home-cooked curry"
           ],
           "evidence_days": [
-            421,
-            422,
-            434
+            311,
+            312,
+            314
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 457,
           "probe_date": "2027-05-31",
           "probe_month": "2027-05",
           "is_retrospective": false,
           "tags": [
-            "inferred",
-            "no_session"
+            "shift"
           ]
         }
       ],
@@ -3128,7 +3074,7 @@
       "viewpoint_day": 487,
       "questions": [
         {
-          "id": "u5_p202706_0100",
+          "id": "u5_p202706_0099",
           "original_id": "u5_q0376",
           "type": "other_person",
           "capability": "entity_disambiguation",
@@ -3152,7 +3098,7 @@
           ]
         },
         {
-          "id": "u5_p202706_0101",
+          "id": "u5_p202706_0100",
           "original_id": "u5_q0203",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -3177,7 +3123,7 @@
           ]
         },
         {
-          "id": "u5_p202706_0102",
+          "id": "u5_p202706_0101",
           "original_id": "u5_q0232",
           "type": "exception_vs_shift",
           "capability": "exception_handling",
@@ -3204,7 +3150,7 @@
           ]
         },
         {
-          "id": "u5_p202706_0103",
+          "id": "u5_p202706_0102",
           "original_id": "u5_q0073",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3226,21 +3172,21 @@
           "tags": []
         },
         {
-          "id": "u5_p202706_0104",
-          "original_id": "u5_q0116",
+          "id": "u5_p202706_0103",
+          "original_id": "u5_q0112",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
-          "domain": "reading",
-          "question": "What was Priya's evening reading routine in August 2027?",
-          "answer": "audiobooks every day",
+          "domain": "music",
+          "question": "What was Priya's work music routine in June 2027?",
+          "answer": "a 7-day cycle starting Tue 2027-05-04: jazz vinyl for 3 days, then synthwave playlists for 4 days, repeating",
           "answer_type": "free_text",
           "accept": [
-            "audiobooks every day"
+            "3 days jazz vinyl, 4 days synthwave playlists"
           ],
           "evidence_days": [
-            456,
-            458,
-            459
+            434,
+            437,
+            448
           ],
           "grading": "llm_judge",
           "viewpoint_day": 487,
@@ -3252,7 +3198,7 @@
           ]
         },
         {
-          "id": "u5_p202706_0105",
+          "id": "u5_p202706_0104",
           "original_id": "u5_q0352",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
@@ -3277,7 +3223,7 @@
           ]
         },
         {
-          "id": "u5_p202706_0106",
+          "id": "u5_p202706_0105",
           "original_id": "u5_q0171",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -3305,7 +3251,7 @@
           ]
         },
         {
-          "id": "u5_p202706_0107",
+          "id": "u5_p202706_0106",
           "original_id": "u5_q0306",
           "type": "fact_history",
           "capability": "knowledge_update",
@@ -3331,6 +3277,30 @@
         },
         {
           "id": "u5_r202706_0169",
+          "original_id": "u5_q0355",
+          "type": "distractor_probe",
+          "capability": "causal_reasoning",
+          "domain": "music",
+          "question": "Around 2026-12-10, a new jazz club opened downtown. Did that lead to any change in Priya's work music?",
+          "answer": "No - nothing about Priya's work music changed because of it.",
+          "answer_type": "yes_no",
+          "accept": [
+            "no"
+          ],
+          "evidence_days": [
+            286
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 487,
+          "probe_date": "2027-06-30",
+          "probe_month": "2027-06",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u5_p202612_0059",
+          "original_probe_month": "2026-12"
+        },
+        {
+          "id": "u5_r202706_0182",
           "original_id": "u5_q0197",
           "type": "attribution",
           "capability": "causal_reasoning",
@@ -3355,36 +3325,11 @@
             "shift",
             "cross_domain"
           ],
-          "retrospective_of": "u5_p202612_0059",
-          "original_probe_month": "2026-12"
-        },
-        {
-          "id": "u5_r202706_0182",
-          "original_id": "u5_q0259",
-          "type": "fact_current",
-          "capability": "knowledge_update",
-          "domain": "relationship",
-          "question": "What is Priya's current relationship status?",
-          "answer": "living with her partner Arjun",
-          "answer_type": "value",
-          "accept": [
-            "living with her partner Arjun",
-            "living with her partner Arjun"
-          ],
-          "evidence_days": [
-            306
-          ],
-          "grading": "exact",
-          "viewpoint_day": 487,
-          "probe_date": "2027-06-30",
-          "probe_month": "2027-06",
-          "is_retrospective": true,
-          "tags": [],
           "retrospective_of": "u5_p202612_0060",
           "original_probe_month": "2026-12"
         },
         {
-          "id": "u5_r202706_0188",
+          "id": "u5_r202706_0194",
           "original_id": "u5_q0033",
           "type": "recall",
           "capability": "episodic_recall",
@@ -3407,37 +3352,12 @@
           "tags": [
             "inferred"
           ],
-          "retrospective_of": "u5_p202612_0067",
-          "original_probe_month": "2026-12"
-        },
-        {
-          "id": "u5_r202706_0194",
-          "original_id": "u5_q0276",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "city",
-          "question": "What was Priya's city of residence on 2026-12-20?",
-          "answer": "Pittsburgh, Pennsylvania",
-          "answer_type": "value",
-          "accept": [
-            "Pittsburgh, Pennsylvania",
-            "Pittsburgh"
-          ],
-          "evidence_days": [
-            1
-          ],
-          "grading": "exact",
-          "viewpoint_day": 487,
-          "probe_date": "2027-06-30",
-          "probe_month": "2027-06",
-          "is_retrospective": true,
-          "tags": [],
           "retrospective_of": "u5_p202612_0065",
           "original_probe_month": "2026-12"
         }
       ],
-      "num_questions": 12,
-      "num_retrospective": 4
+      "num_questions": 11,
+      "num_retrospective": 3
     },
     {
       "probe_date": "2027-07-31",
@@ -3445,16 +3365,41 @@
       "viewpoint_day": 518,
       "questions": [
         {
-          "id": "u5_p202707_0108",
-          "original_id": "u5_q0321",
+          "id": "u5_p202707_0107",
+          "original_id": "u5_q0320",
           "type": "event_status",
           "capability": "event_tracking",
           "domain": "events",
-          "question": "What was the status of the engineering manager job search on 2027-07-20?",
-          "answer": "interviewing for an engineering manager role at a climate-tech company (planned)",
+          "question": "What happened with the engineering manager job search?",
+          "answer": "accepted the engineering manager offer at the climate-tech company (happened, 2027-07-28)",
           "answer_type": "free_text",
           "accept": [
-            "interviewing for an engineering manager role at a climate-tech company"
+            "accepted the engineering manager offer at the climate-tech company"
+          ],
+          "evidence_days": [
+            501,
+            516
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 518,
+          "probe_date": "2027-07-31",
+          "probe_month": "2027-07",
+          "is_retrospective": false,
+          "tags": [
+            "happened"
+          ]
+        },
+        {
+          "id": "u5_p202707_0108",
+          "original_id": "u5_q0374",
+          "type": "other_person",
+          "capability": "entity_disambiguation",
+          "domain": "other_people",
+          "question": "Which diet did Priya's coworker Dana switch to?",
+          "answer": "vegan",
+          "answer_type": "value",
+          "accept": [
+            "vegan"
           ],
           "evidence_days": [
             501
@@ -3465,8 +3410,7 @@
           "probe_month": "2027-07",
           "is_retrospective": false,
           "tags": [
-            "at_time",
-            "planned"
+            "coworker"
           ]
         },
         {
@@ -3499,26 +3443,29 @@
         },
         {
           "id": "u5_p202707_0110",
-          "original_id": "u5_q0269",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "job",
-          "question": "What was Priya's job on 2027-07-26?",
-          "answer": "senior backend engineer at the fintech startup",
-          "answer_type": "value",
+          "original_id": "u5_q0099",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "dinner",
+          "question": "What was Priya's dinner routine in July 2027?",
+          "answer": "by day of week: veggie stir-fry on Mon; lentil soup on Tue; black bean tacos on Wed; veggie curry on Thu; takeout pizza on Fri; cooking with Arjun on Sat; leftovers on Sun",
+          "answer_type": "free_text",
           "accept": [
-            "senior backend engineer at the fintech startup",
-            "senior backend engineer at the fintech startup"
+            "vegetarian weekly routine"
           ],
           "evidence_days": [
-            240
+            476,
+            479,
+            480
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 518,
           "probe_date": "2027-07-31",
           "probe_month": "2027-07",
           "is_retrospective": false,
-          "tags": []
+          "tags": [
+            "shift"
+          ]
         },
         {
           "id": "u5_p202707_0111",
@@ -3543,41 +3490,65 @@
           "tags": []
         },
         {
-          "id": "u5_p202707_0112",
-          "original_id": "u5_q0005",
+          "id": "u5_r202707_0188",
+          "original_id": "u5_q0063",
           "type": "recall",
           "capability": "episodic_recall",
-          "domain": "exercise",
-          "question": "What was Priya's workout on Tuesday, 2027-06-15?",
-          "answer": "morning dog walk",
+          "domain": "reading",
+          "question": "What was Priya's evening reading on Tuesday, 2027-01-05?",
+          "answer": "poetry collections",
           "answer_type": "value",
           "accept": [
-            "morning dog walk"
+            "poetry collections"
           ],
           "evidence_days": [
-            444,
-            479,
-            493
+            311
           ],
           "grading": "exact",
           "viewpoint_day": 518,
           "probe_date": "2027-07-31",
           "probe_month": "2027-07",
-          "is_retrospective": false,
-          "tags": [
-            "inferred",
-            "no_session"
-          ]
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u5_p202701_0067",
+          "original_probe_month": "2027-01"
         }
       ],
-      "num_questions": 5,
-      "num_retrospective": 0
+      "num_questions": 6,
+      "num_retrospective": 1
     },
     {
       "probe_date": "2027-08-31",
       "probe_month": "2027-08",
       "viewpoint_day": 549,
       "questions": [
+        {
+          "id": "u5_p202708_0112",
+          "original_id": "u5_q0227",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "commute",
+          "question": "On Monday, 2027-08-09, Priya's commute was cycling instead of the usual light rail. Was that a lasting change?",
+          "answer": "Yes - from 2027-08-07 the routine changed to cycling Mon/Tue/Thu, home Wed/Fri.",
+          "answer_type": "yes_no",
+          "accept": [
+            "yes"
+          ],
+          "evidence_days": [
+            527,
+            529,
+            547
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 549,
+          "probe_date": "2027-08-31",
+          "probe_month": "2027-08",
+          "is_retrospective": false,
+          "tags": [
+            "shift",
+            "implicit"
+          ]
+        },
         {
           "id": "u5_p202708_0113",
           "original_id": "u5_q0358",
@@ -3632,59 +3603,6 @@
         },
         {
           "id": "u5_p202708_0115",
-          "original_id": "u5_q0218",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "bedtime",
-          "question": "Why did Priya's bedtime routine change around 2027-08-05?",
-          "answer": "started a new job as engineering manager at a climate-tech company",
-          "answer_type": "free_text",
-          "accept": [
-            "started a new job as engineering manager at a climate-tech company"
-          ],
-          "evidence_days": [
-            520,
-            527
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 549,
-          "probe_date": "2027-08-31",
-          "probe_month": "2027-08",
-          "is_retrospective": false,
-          "tags": [
-            "implicit",
-            "shift",
-            "cross_domain"
-          ]
-        },
-        {
-          "id": "u5_p202708_0116",
-          "original_id": "u5_q0094",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "commute",
-          "question": "What was Priya's commute routine in September 2027?",
-          "answer": "by day of week: cycling on Mon/Tue/Thu; work from home on Wed/Fri; no commute on Sat/Sun",
-          "answer_type": "free_text",
-          "accept": [
-            "cycling Mon/Tue/Thu, home Wed/Fri"
-          ],
-          "evidence_days": [
-            527,
-            529,
-            547
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 549,
-          "probe_date": "2027-08-31",
-          "probe_month": "2027-08",
-          "is_retrospective": false,
-          "tags": [
-            "shift"
-          ]
-        },
-        {
-          "id": "u5_p202708_0117",
           "original_id": "u5_q0303",
           "type": "fact_history",
           "capability": "knowledge_update",
@@ -3710,34 +3628,53 @@
           ]
         },
         {
-          "id": "u5_p202708_0118",
-          "original_id": "u5_q0199",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "commute",
-          "question": "Why did Priya's commute routine change around 2027-08-07?",
-          "answer": "started a new job as engineering manager at a climate-tech company",
-          "answer_type": "free_text",
+          "id": "u5_p202708_0116",
+          "original_id": "u5_q0265",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Priya's job on 2027-08-30?",
+          "answer": "engineering manager at a climate-tech company",
+          "answer_type": "value",
           "accept": [
-            "started a new job as engineering manager at a climate-tech company"
+            "engineering manager at a climate-tech company",
+            "engineering manager at a climate-tech company"
           ],
           "evidence_days": [
-            520,
-            527
+            520
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 549,
           "probe_date": "2027-08-31",
           "probe_month": "2027-08",
           "is_retrospective": false,
-          "tags": [
-            "implicit",
-            "shift",
-            "cross_domain"
-          ]
+          "tags": []
         },
         {
-          "id": "u5_p202708_0119",
+          "id": "u5_p202708_0117",
+          "original_id": "u5_q0257",
+          "type": "fact_current",
+          "capability": "knowledge_update",
+          "domain": "job",
+          "question": "What is Priya's current job?",
+          "answer": "engineering manager at a climate-tech company",
+          "answer_type": "value",
+          "accept": [
+            "engineering manager at a climate-tech company",
+            "engineering manager at a climate-tech company"
+          ],
+          "evidence_days": [
+            520
+          ],
+          "grading": "exact",
+          "viewpoint_day": 549,
+          "probe_date": "2027-08-31",
+          "probe_month": "2027-08",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202708_0118",
           "original_id": "u5_q0167",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -3766,65 +3703,74 @@
           ]
         },
         {
-          "id": "u5_p202708_0120",
-          "original_id": "u5_q0268",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "job",
-          "question": "What was Priya's job on 2027-08-22?",
-          "answer": "engineering manager at a climate-tech company",
-          "answer_type": "value",
+          "id": "u5_p202708_0119",
+          "original_id": "u5_q0116",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "reading",
+          "question": "What was Priya's evening reading routine in August 2027?",
+          "answer": "audiobooks every day",
+          "answer_type": "free_text",
           "accept": [
-            "engineering manager at a climate-tech company",
-            "engineering manager at a climate-tech company"
+            "audiobooks every day"
           ],
           "evidence_days": [
-            520
+            456,
+            458,
+            459
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 549,
           "probe_date": "2027-08-31",
           "probe_month": "2027-08",
           "is_retrospective": false,
-          "tags": []
+          "tags": [
+            "shift"
+          ]
         },
         {
-          "id": "u5_p202708_0121",
-          "original_id": "u5_q0272",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "city",
-          "question": "What was Priya's city of residence on 2027-08-25?",
-          "answer": "Denver, Colorado",
-          "answer_type": "value",
+          "id": "u5_p202708_0120",
+          "original_id": "u5_q0199",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "commute",
+          "question": "Why did Priya's commute routine change around 2027-08-07?",
+          "answer": "started a new job as engineering manager at a climate-tech company",
+          "answer_type": "free_text",
           "accept": [
-            "Denver, Colorado",
-            "Denver"
+            "started a new job as engineering manager at a climate-tech company"
           ],
           "evidence_days": [
-            301
+            520,
+            527
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 549,
           "probe_date": "2027-08-31",
           "probe_month": "2027-08",
           "is_retrospective": false,
-          "tags": []
+          "tags": [
+            "implicit",
+            "shift",
+            "cross_domain"
+          ]
         },
         {
           "id": "u5_r202708_0165",
-          "original_id": "u5_q0203",
-          "type": "attribution",
-          "capability": "causal_reasoning",
+          "original_id": "u5_q0232",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
           "domain": "dinner",
-          "question": "Why did Priya's dinner routine change around 2027-06-18?",
-          "answer": "switched to a vegetarian diet",
-          "answer_type": "free_text",
+          "question": "On Saturday, 2027-06-19, Priya's dinner was cooking with Arjun instead of the usual meal-kit dinner. Was that a lasting change?",
+          "answer": "Yes - from 2027-06-18 the routine changed to vegetarian weekly routine.",
+          "answer_type": "yes_no",
           "accept": [
-            "switched to a vegetarian diet"
+            "yes"
           ],
           "evidence_days": [
-            476
+            476,
+            479,
+            480
           ],
           "grading": "llm_judge",
           "viewpoint_day": 549,
@@ -3832,8 +3778,8 @@
           "probe_month": "2027-08",
           "is_retrospective": true,
           "tags": [
-            "explicit",
-            "shift"
+            "shift",
+            "explicit"
           ],
           "retrospective_of": "u5_p202706_0101",
           "original_probe_month": "2027-06"
@@ -3876,32 +3822,38 @@
       "viewpoint_day": 579,
       "questions": [
         {
-          "id": "u5_p202709_0122",
-          "original_id": "u5_q0234",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "music",
-          "question": "On Sunday, 2027-08-29, Priya's work music was true-crime podcast instead of the usual synthwave playlists. Was that a lasting change?",
-          "answer": "No - it was a one-off (a friend recommended an episode); the usual routine continued.",
-          "answer_type": "yes_no",
+          "id": "u5_p202709_0121",
+          "original_id": "u5_q0172",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "dinner",
+          "question": "When did Priya's dinner routine change from the black bean tacos / cooking with Arjun / leftovers / lentil soup etc. routine to soup and smoothies?",
+          "answer": "2027-09-07 (first observed 2027-09-11)",
+          "answer_type": "date",
           "accept": [
-            "no"
+            "2027-09-07",
+            "2027-09-08",
+            "2027-09-09",
+            "2027-09-10",
+            "2027-09-11"
           ],
           "evidence_days": [
-            547,
-            550
+            551,
+            560
           ],
-          "grading": "llm_judge",
+          "grading": "date_exact",
           "viewpoint_day": 579,
           "probe_date": "2027-09-30",
           "probe_month": "2027-09",
           "is_retrospective": false,
           "tags": [
-            "exception"
+            "temporary",
+            "explicit",
+            "bounded"
           ]
         },
         {
-          "id": "u5_p202709_0123",
+          "id": "u5_p202709_0122",
           "original_id": "u5_q0162",
           "type": "change_detection",
           "capability": "temporal_change",
@@ -3924,6 +3876,32 @@
           "tags": [
             "shift",
             "implicit"
+          ]
+        },
+        {
+          "id": "u5_p202709_0123",
+          "original_id": "u5_q0100",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "dinner",
+          "question": "What was Priya's dinner routine around 2027-09-15?",
+          "answer": "soup and smoothies every day",
+          "answer_type": "free_text",
+          "accept": [
+            "soup and smoothies every day"
+          ],
+          "evidence_days": [
+            560,
+            563,
+            564
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 579,
+          "probe_date": "2027-09-30",
+          "probe_month": "2027-09",
+          "is_retrospective": false,
+          "tags": [
+            "temporary"
           ]
         },
         {
@@ -4002,20 +3980,18 @@
         },
         {
           "id": "u5_p202709_0127",
-          "original_id": "u5_q0107",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "exercise",
-          "question": "What was Priya's workout routine in November 2027?",
-          "answer": "split by workday vs weekend - on workdays (Mon-Fri): morning dog walk; on weekends: group hike",
+          "original_id": "u5_q0322",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What happened with the hiking group?",
+          "answer": "joined a weekend hiking group (happened, 2027-09-04)",
           "answer_type": "free_text",
           "accept": [
-            "dog walks on workdays, group hikes on weekends"
+            "joined a weekend hiking group"
           ],
           "evidence_days": [
-            560,
-            565,
-            567
+            554
           ],
           "grading": "llm_judge",
           "viewpoint_day": 579,
@@ -4023,7 +3999,7 @@
           "probe_month": "2027-09",
           "is_retrospective": false,
           "tags": [
-            "shift"
+            "happened"
           ]
         },
         {
@@ -4051,48 +4027,20 @@
           ]
         },
         {
-          "id": "u5_p202709_0129",
-          "original_id": "u5_q0204",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "dinner",
-          "question": "Why did Priya's dinner routine change around 2027-09-07?",
-          "answer": "had her wisdom teeth removed",
-          "answer_type": "free_text",
-          "accept": [
-            "had her wisdom teeth removed"
-          ],
-          "evidence_days": [
-            555,
-            560
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 579,
-          "probe_date": "2027-09-30",
-          "probe_month": "2027-09",
-          "is_retrospective": false,
-          "tags": [
-            "explicit",
-            "temporary"
-          ]
-        },
-        {
           "id": "u5_r202709_0177",
-          "original_id": "u5_q0301",
+          "original_id": "u5_q0297",
           "type": "fact_at_time",
           "capability": "temporal_fact",
           "domain": "hobbies",
-          "question": "What were Priya's hobbies on 2026-08-06?",
-          "answer": "bouldering, piano, pottery",
+          "question": "What were Priya's hobbies on 2026-12-26?",
+          "answer": "bouldering, piano",
           "answer_type": "free_text",
           "accept": [
-            "bouldering, piano, pottery"
+            "bouldering, piano"
           ],
           "evidence_days": [
             1,
             4,
-            68,
-            170,
             420
           ],
           "grading": "llm_judge",
@@ -4108,27 +4056,31 @@
         },
         {
           "id": "u5_r202709_0184",
-          "original_id": "u5_q0344",
-          "type": "duration",
-          "capability": "temporal_arithmetic",
+          "original_id": "u5_q0166",
+          "type": "change_detection",
+          "capability": "temporal_change",
           "domain": "commute",
-          "question": "How long did Priya's commute stay the light rail / no commute routine?",
-          "answer": "96 days (2026-12-29 to 2027-04-03)",
-          "answer_type": "free_text",
+          "question": "When did Priya's commute routine change from the light rail / no commute routine to the light rail / no commute / work from home routine?",
+          "answer": "2027-04-04 (first observed 2027-04-06)",
+          "answer_type": "date",
           "accept": [
-            "96"
+            "2027-04-04",
+            "2027-04-05",
+            "2027-04-06"
           ],
           "evidence_days": [
-            304,
-            399
+            399,
+            402
           ],
-          "grading": "llm_judge",
+          "grading": "date_exact",
           "viewpoint_day": 579,
           "probe_date": "2027-09-30",
           "probe_month": "2027-09",
           "is_retrospective": true,
           "tags": [
-            "shift"
+            "shift",
+            "uncaused",
+            "bounded"
           ],
           "retrospective_of": "u5_p202704_0091",
           "original_probe_month": "2027-04"
@@ -4143,30 +4095,7 @@
       "viewpoint_day": 610,
       "questions": [
         {
-          "id": "u5_p202710_0130",
-          "original_id": "u5_q0289",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "diet",
-          "question": "What was Priya's diet on 2027-10-10?",
-          "answer": "vegetarian",
-          "answer_type": "value",
-          "accept": [
-            "vegetarian",
-            "vegetarian"
-          ],
-          "evidence_days": [
-            476
-          ],
-          "grading": "exact",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u5_p202710_0131",
+          "id": "u5_p202710_0129",
           "original_id": "u5_q0080",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4193,7 +4122,131 @@
           ]
         },
         {
+          "id": "u5_p202710_0130",
+          "original_id": "u5_q0296",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "pets",
+          "question": "What were Priya's pets on 2027-10-19?",
+          "answer": "labrador named Biscuit",
+          "answer_type": "free_text",
+          "accept": [
+            "labrador named Biscuit"
+          ],
+          "evidence_days": [
+            97
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
+          "id": "u5_p202710_0131",
+          "original_id": "u5_q0090",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "bedtime",
+          "question": "What was Priya's bedtime routine in October 2027?",
+          "answer": "by day of week: 10:00 pm on Mon/Tue/Thu; 10:30 pm on Wed/Sun; 12:00 am on Fri/Sat",
+          "answer_type": "free_text",
+          "accept": [
+            "10:00 pm most weeknights, midnight Fri/Sat"
+          ],
+          "evidence_days": [
+            527,
+            533,
+            536
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": false,
+          "tags": [
+            "shift"
+          ]
+        },
+        {
           "id": "u5_p202710_0132",
+          "original_id": "u5_q0387",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Does Priya have any pets, and if so what?",
+          "answer": "labrador named Biscuit, cat named Mochi",
+          "answer_type": "value",
+          "accept": [
+            "labrador named Biscuit, cat named Mochi"
+          ],
+          "evidence_days": [
+            97,
+            600
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "pets"
+          ]
+        },
+        {
+          "id": "u5_p202710_0133",
+          "original_id": "u5_q0289",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "diet",
+          "question": "What was Priya's diet on 2027-10-10?",
+          "answer": "vegetarian",
+          "answer_type": "value",
+          "accept": [
+            "vegetarian",
+            "vegetarian"
+          ],
+          "evidence_days": [
+            476
+          ],
+          "grading": "exact",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202710_0134",
+          "original_id": "u5_q0261",
+          "type": "fact_current",
+          "capability": "knowledge_update",
+          "domain": "pets",
+          "question": "What are Priya's current pets?",
+          "answer": "labrador named Biscuit, cat named Mochi",
+          "answer_type": "free_text",
+          "accept": [
+            "labrador named Biscuit, cat named Mochi"
+          ],
+          "evidence_days": [
+            97,
+            600
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
+          "id": "u5_p202710_0135",
           "original_id": "u5_q0356",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
@@ -4219,56 +4272,7 @@
           ]
         },
         {
-          "id": "u5_p202710_0133",
-          "original_id": "u5_q0299",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Priya's hobbies on 2027-10-12?",
-          "answer": "bouldering, trail running",
-          "answer_type": "free_text",
-          "accept": [
-            "bouldering, trail running"
-          ],
-          "evidence_days": [
-            1,
-            331
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u5_p202710_0134",
-          "original_id": "u5_q0296",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "pets",
-          "question": "What were Priya's pets on 2027-10-19?",
-          "answer": "labrador named Biscuit",
-          "answer_type": "free_text",
-          "accept": [
-            "labrador named Biscuit"
-          ],
-          "evidence_days": [
-            97
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": false,
-          "tags": [
-            "set"
-          ]
-        },
-        {
-          "id": "u5_p202710_0135",
+          "id": "u5_p202710_0136",
           "original_id": "u5_q0307",
           "type": "fact_history",
           "capability": "knowledge_update",
@@ -4293,224 +4297,34 @@
           ]
         },
         {
-          "id": "u5_p202710_0136",
-          "original_id": "u5_q0215",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "reading",
-          "question": "Why did Priya's evening reading routine change around 2027-10-11?",
-          "answer": "bought an e-reader",
-          "answer_type": "free_text",
+          "id": "u5_p202710_0137",
+          "original_id": "u5_q0236",
+          "type": "exception_vs_shift",
+          "capability": "exception_handling",
+          "domain": "music",
+          "question": "On Friday, 2027-10-29, Priya's work music was vinyl records instead of the usual synthwave playlists. Was that a lasting change?",
+          "answer": "Yes - from 2027-10-29 the routine changed to vinyl records every day.",
+          "answer_type": "yes_no",
           "accept": [
-            "bought an e-reader"
+            "yes"
           ],
           "evidence_days": [
-            585,
-            592
+            608,
+            609,
+            610
           ],
           "grading": "llm_judge",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": false,
-          "tags": [
-            "implicit",
-            "shift"
-          ]
-        },
-        {
-          "id": "u5_p202710_0137",
-          "original_id": "u5_q0184",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "reading",
-          "question": "When did Priya's evening reading routine change from audiobooks to the book club novel / e-reader fantasy series routine?",
-          "answer": "2027-10-11 (first observed 2027-10-13)",
-          "answer_type": "date",
-          "accept": [
-            "2027-10-11",
-            "2027-10-12",
-            "2027-10-13"
-          ],
-          "evidence_days": [
-            586,
-            592
-          ],
-          "grading": "date_exact",
           "viewpoint_day": 610,
           "probe_date": "2027-10-31",
           "probe_month": "2027-10",
           "is_retrospective": false,
           "tags": [
             "shift",
-            "implicit",
-            "bounded"
-          ]
-        },
-        {
-          "id": "u5_p202710_0138",
-          "original_id": "u5_q0333",
-          "type": "duration",
-          "capability": "temporal_arithmetic",
-          "domain": "music",
-          "question": "How long did Priya's work music stay the jazz vinyl / synthwave playlists routine?",
-          "answer": "178 days (2027-05-04 to 2027-10-28)",
-          "answer_type": "free_text",
-          "accept": [
-            "178"
-          ],
-          "evidence_days": [
-            434,
-            607
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": false,
-          "tags": [
-            "shift"
+            "explicit"
           ]
         },
         {
           "id": "u5_r202710_0162",
-          "original_id": "u5_q0268",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "job",
-          "question": "What was Priya's job on 2027-08-22?",
-          "answer": "engineering manager at a climate-tech company",
-          "answer_type": "value",
-          "accept": [
-            "engineering manager at a climate-tech company",
-            "engineering manager at a climate-tech company"
-          ],
-          "evidence_days": [
-            520
-          ],
-          "grading": "exact",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u5_p202708_0120",
-          "original_probe_month": "2027-08"
-        },
-        {
-          "id": "u5_r202710_0174",
-          "original_id": "u5_q0171",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "dinner",
-          "question": "When did Priya's dinner routine change from the home-cooked curry / meal-kit dinner routine to the black bean tacos / cooking with Arjun / leftovers / lentil soup etc. routine?",
-          "answer": "2027-06-18 (first observed 2027-06-19)",
-          "answer_type": "date",
-          "accept": [
-            "2027-06-18",
-            "2027-06-19"
-          ],
-          "evidence_days": [
-            469,
-            476
-          ],
-          "grading": "date_exact",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": true,
-          "tags": [
-            "shift",
-            "explicit",
-            "bounded"
-          ],
-          "retrospective_of": "u5_p202706_0106",
-          "original_probe_month": "2027-06"
-        },
-        {
-          "id": "u5_r202710_0183",
-          "original_id": "u5_q0094",
-          "type": "pattern_at_time",
-          "capability": "pattern_abstraction",
-          "domain": "commute",
-          "question": "What was Priya's commute routine in September 2027?",
-          "answer": "by day of week: cycling on Mon/Tue/Thu; work from home on Wed/Fri; no commute on Sat/Sun",
-          "answer_type": "free_text",
-          "accept": [
-            "cycling Mon/Tue/Thu, home Wed/Fri"
-          ],
-          "evidence_days": [
-            527,
-            529,
-            547
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": true,
-          "tags": [
-            "shift"
-          ],
-          "retrospective_of": "u5_p202708_0116",
-          "original_probe_month": "2027-08"
-        },
-        {
-          "id": "u5_r202710_0190",
-          "original_id": "u5_q0298",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "hobbies",
-          "question": "What were Priya's hobbies on 2026-10-02?",
-          "answer": "bouldering, piano",
-          "answer_type": "free_text",
-          "accept": [
-            "bouldering, piano"
-          ],
-          "evidence_days": [
-            1,
-            4,
-            420
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": true,
-          "tags": [
-            "set"
-          ],
-          "retrospective_of": "u5_p202704_0090",
-          "original_probe_month": "2027-04"
-        },
-        {
-          "id": "u5_r202710_0193",
-          "original_id": "u5_q0359",
-          "type": "distractor_probe",
-          "capability": "causal_reasoning",
-          "domain": "reading",
-          "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
-          "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            448
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 610,
-          "probe_date": "2027-10-31",
-          "probe_month": "2027-10",
-          "is_retrospective": true,
-          "tags": [
-            "confounder"
-          ],
-          "retrospective_of": "u5_p202705_0094",
-          "original_probe_month": "2027-05"
-        },
-        {
-          "id": "u5_r202710_0198",
           "original_id": "u5_q0116",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
@@ -4534,12 +4348,119 @@
           "tags": [
             "shift"
           ],
-          "retrospective_of": "u5_p202706_0104",
+          "retrospective_of": "u5_p202708_0119",
+          "original_probe_month": "2027-08"
+        },
+        {
+          "id": "u5_r202710_0174",
+          "original_id": "u5_q0306",
+          "type": "fact_history",
+          "capability": "knowledge_update",
+          "domain": "diet",
+          "question": "How has Priya's diet changed over time?",
+          "answer": "pescatarian (2026-03-01 to 2027-06-12); vegetarian (2027-06-13 to now)",
+          "answer_type": "free_text",
+          "accept": [
+            "vegetarian"
+          ],
+          "evidence_days": [
+            1,
+            476
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": true,
+          "tags": [
+            "single"
+          ],
+          "retrospective_of": "u5_p202706_0106",
           "original_probe_month": "2027-06"
+        },
+        {
+          "id": "u5_r202710_0183",
+          "original_id": "u5_q0265",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Priya's job on 2027-08-30?",
+          "answer": "engineering manager at a climate-tech company",
+          "answer_type": "value",
+          "accept": [
+            "engineering manager at a climate-tech company",
+            "engineering manager at a climate-tech company"
+          ],
+          "evidence_days": [
+            520
+          ],
+          "grading": "exact",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u5_p202708_0116",
+          "original_probe_month": "2027-08"
+        },
+        {
+          "id": "u5_r202710_0190",
+          "original_id": "u5_q0344",
+          "type": "duration",
+          "capability": "temporal_arithmetic",
+          "domain": "commute",
+          "question": "How long did Priya's commute stay the light rail / no commute routine?",
+          "answer": "96 days (2026-12-29 to 2027-04-03)",
+          "answer_type": "free_text",
+          "accept": [
+            "96"
+          ],
+          "evidence_days": [
+            304,
+            399
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": true,
+          "tags": [
+            "shift"
+          ],
+          "retrospective_of": "u5_p202704_0090",
+          "original_probe_month": "2027-04"
+        },
+        {
+          "id": "u5_r202710_0193",
+          "original_id": "u5_q0209",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "music",
+          "question": "Why did Priya's work music routine change around 2027-05-04?",
+          "answer": "stopped playing piano - no time for lessons after the move",
+          "answer_type": "free_text",
+          "accept": [
+            "stopped playing piano - no time for lessons after the move"
+          ],
+          "evidence_days": [
+            420,
+            434
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": true,
+          "tags": [
+            "implicit",
+            "shift"
+          ],
+          "retrospective_of": "u5_p202705_0094",
+          "original_probe_month": "2027-05"
         }
       ],
-      "num_questions": 15,
-      "num_retrospective": 6
+      "num_questions": 14,
+      "num_retrospective": 5
     },
     {
       "probe_date": "2027-11-30",
@@ -4547,30 +4468,83 @@
       "viewpoint_day": 640,
       "questions": [
         {
-          "id": "u5_p202711_0139",
-          "original_id": "u5_q0278",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "relationship",
-          "question": "What was Priya's relationship status on 2027-11-13?",
-          "answer": "living with her partner Arjun",
-          "answer_type": "value",
+          "id": "u5_p202711_0138",
+          "original_id": "u5_q0219",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "bedtime",
+          "question": "Why did Priya's bedtime routine change around 2027-11-21?",
+          "answer": "started an on-call rotation for a product launch",
+          "answer_type": "free_text",
           "accept": [
-            "living with her partner Arjun",
-            "living with her partner Arjun"
+            "started an on-call rotation for a product launch"
           ],
           "evidence_days": [
-            306
+            630,
+            637
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 640,
+          "probe_date": "2027-11-30",
+          "probe_month": "2027-11",
+          "is_retrospective": false,
+          "tags": [
+            "explicit",
+            "temporary"
+          ]
+        },
+        {
+          "id": "u5_p202711_0139",
+          "original_id": "u5_q0107",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "exercise",
+          "question": "What was Priya's workout routine in November 2027?",
+          "answer": "split by workday vs weekend - on workdays (Mon-Fri): morning dog walk; on weekends: group hike",
+          "answer_type": "free_text",
+          "accept": [
+            "dog walks on workdays, group hikes on weekends"
+          ],
+          "evidence_days": [
+            560,
+            565,
+            567
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 640,
+          "probe_date": "2027-11-30",
+          "probe_month": "2027-11",
+          "is_retrospective": false,
+          "tags": [
+            "shift"
+          ]
+        },
+        {
+          "id": "u5_p202711_0140",
+          "original_id": "u5_q0027",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "commute",
+          "question": "What was Priya's commute on Wednesday, 2027-11-03?",
+          "answer": "walked",
+          "answer_type": "value",
+          "accept": [
+            "walked"
+          ],
+          "evidence_days": [
+            613
           ],
           "grading": "exact",
           "viewpoint_day": 640,
           "probe_date": "2027-11-30",
           "probe_month": "2027-11",
           "is_retrospective": false,
-          "tags": []
+          "tags": [
+            "exception"
+          ]
         },
         {
-          "id": "u5_p202711_0140",
+          "id": "u5_p202711_0141",
           "original_id": "u5_q0329",
           "type": "duration",
           "capability": "temporal_arithmetic",
@@ -4595,77 +4569,21 @@
           ]
         },
         {
-          "id": "u5_p202711_0141",
-          "original_id": "u5_q0188",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "bedtime",
-          "question": "When did Priya's bedtime routine change from the 10:00 pm / 10:30 pm / 12:00 am routine to 2:00 am?",
-          "answer": "2027-11-21 (first observed 2027-11-27)",
-          "answer_type": "date",
-          "accept": [
-            "2027-11-21",
-            "2027-11-22",
-            "2027-11-23",
-            "2027-11-24",
-            "2027-11-25",
-            "2027-11-26",
-            "2027-11-27"
-          ],
-          "evidence_days": [
-            629,
-            637
-          ],
-          "grading": "date_exact",
-          "viewpoint_day": 640,
-          "probe_date": "2027-11-30",
-          "probe_month": "2027-11",
-          "is_retrospective": false,
-          "tags": [
-            "temporary",
-            "explicit",
-            "bounded"
-          ]
-        },
-        {
           "id": "u5_p202711_0142",
-          "original_id": "u5_q0230",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "dinner",
-          "question": "On Saturday, 2027-11-13, Priya's dinner was cereal instead of the usual cooking with Arjun. Was that a lasting change?",
-          "answer": "No - it was a one-off (got home very late); the usual routine continued.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            623,
-            625
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 640,
-          "probe_date": "2027-11-30",
-          "probe_month": "2027-11",
-          "is_retrospective": false,
-          "tags": [
-            "exception"
-          ]
-        },
-        {
-          "id": "u5_p202711_0143",
-          "original_id": "u5_q0027",
+          "original_id": "u5_q0079",
           "type": "recall",
           "capability": "episodic_recall",
-          "domain": "commute",
-          "question": "What was Priya's commute on Wednesday, 2027-11-03?",
-          "answer": "walked",
+          "domain": "bedtime",
+          "question": "What was Priya's bedtime on Wednesday, 2027-11-03?",
+          "answer": "10:30 pm",
           "answer_type": "value",
           "accept": [
-            "walked"
+            "10:30 pm"
           ],
           "evidence_days": [
-            613
+            536,
+            550,
+            599
           ],
           "grading": "exact",
           "viewpoint_day": 640,
@@ -4673,35 +4591,30 @@
           "probe_month": "2027-11",
           "is_retrospective": false,
           "tags": [
-            "exception"
+            "inferred"
           ]
         },
         {
           "id": "u5_r202711_0175",
-          "original_id": "u5_q0232",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "dinner",
-          "question": "On Saturday, 2027-06-19, Priya's dinner was cooking with Arjun instead of the usual meal-kit dinner. Was that a lasting change?",
-          "answer": "Yes - from 2027-06-18 the routine changed to vegetarian weekly routine.",
-          "answer_type": "yes_no",
+          "original_id": "u5_q0073",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "bedtime",
+          "question": "What was Priya's bedtime on Friday, 2027-06-25?",
+          "answer": "11:00 pm",
+          "answer_type": "value",
           "accept": [
-            "yes"
+            "11:00 pm"
           ],
           "evidence_days": [
-            476,
-            479,
-            480
+            482
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 640,
           "probe_date": "2027-11-30",
           "probe_month": "2027-11",
           "is_retrospective": true,
-          "tags": [
-            "shift",
-            "explicit"
-          ],
+          "tags": [],
           "retrospective_of": "u5_p202706_0102",
           "original_probe_month": "2027-06"
         }
@@ -4715,7 +4628,57 @@
       "viewpoint_day": 671,
       "questions": [
         {
+          "id": "u5_p202712_0143",
+          "original_id": "u5_q0300",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "hobbies",
+          "question": "What were Priya's hobbies on 2027-12-19?",
+          "answer": "bouldering, trail running",
+          "answer_type": "free_text",
+          "accept": [
+            "bouldering, trail running"
+          ],
+          "evidence_days": [
+            1,
+            331
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": false,
+          "tags": [
+            "set"
+          ]
+        },
+        {
           "id": "u5_p202712_0144",
+          "original_id": "u5_q0200",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "commute",
+          "question": "Why did Priya's commute routine change around 2027-11-30?",
+          "answer": "No reason was stated.",
+          "answer_type": "abstain",
+          "accept": [
+            "no reason was stated"
+          ],
+          "evidence_days": [
+            641
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": false,
+          "tags": [
+            "uncaused",
+            "shift"
+          ]
+        },
+        {
+          "id": "u5_p202712_0145",
           "original_id": "u5_q0095",
           "type": "pattern_at_time",
           "capability": "pattern_abstraction",
@@ -4741,59 +4704,58 @@
           ]
         },
         {
-          "id": "u5_p202712_0145",
-          "original_id": "u5_q0228",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "commute",
-          "question": "On Wednesday, 2027-12-01, Priya's commute was bus instead of the usual work from home. Was that a lasting change?",
-          "answer": "Yes - from 2027-11-30 the routine changed to bus in winter and e-bike otherwise on workdays.",
-          "answer_type": "yes_no",
-          "accept": [
-            "yes"
-          ],
-          "evidence_days": [
-            641,
-            643,
-            646
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 671,
-          "probe_date": "2027-12-31",
-          "probe_month": "2027-12",
-          "is_retrospective": false,
-          "tags": [
-            "shift",
-            "uncaused"
-          ]
-        },
-        {
           "id": "u5_p202712_0146",
-          "original_id": "u5_q0326",
-          "type": "event_status",
-          "capability": "event_tracking",
-          "domain": "events",
-          "question": "What happened with the product-launch on-call rotation?",
-          "answer": "the product launch wrapped up and the on-call rotation ended (happened, 2027-12-19)",
-          "answer_type": "free_text",
+          "original_id": "u5_q0030",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "dinner",
+          "question": "What was Priya's dinner on Monday, 2027-12-06?",
+          "answer": "veggie stir-fry",
+          "answer_type": "value",
           "accept": [
-            "the product launch wrapped up and the on-call rotation ended"
+            "veggie stir-fry"
           ],
           "evidence_days": [
-            630,
-            659
+            597,
+            611,
+            625
           ],
-          "grading": "llm_judge",
+          "grading": "exact",
           "viewpoint_day": 671,
           "probe_date": "2027-12-31",
           "probe_month": "2027-12",
           "is_retrospective": false,
           "tags": [
-            "happened"
+            "inferred"
           ]
         },
         {
           "id": "u5_p202712_0147",
+          "original_id": "u5_q0327",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What was the status of the product-launch on-call rotation on 2027-12-04?",
+          "answer": "started an on-call rotation for a product launch (happened)",
+          "answer_type": "free_text",
+          "accept": [
+            "started an on-call rotation for a product launch"
+          ],
+          "evidence_days": [
+            630
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": false,
+          "tags": [
+            "at_time",
+            "happened"
+          ]
+        },
+        {
+          "id": "u5_p202712_0148",
           "original_id": "u5_q0295",
           "type": "fact_at_time",
           "capability": "temporal_fact",
@@ -4818,7 +4780,7 @@
           ]
         },
         {
-          "id": "u5_p202712_0148",
+          "id": "u5_p202712_0149",
           "original_id": "u5_q0000",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4845,35 +4807,33 @@
           ]
         },
         {
-          "id": "u5_p202712_0149",
-          "original_id": "u5_q0168",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "commute",
-          "question": "When did Priya's commute routine change from the cycling / no commute / work from home routine to the bus / e-bike / no commute routine?",
-          "answer": "2027-11-30 (first observed 2027-12-01)",
-          "answer_type": "date",
+          "id": "u5_p202712_0150",
+          "original_id": "u5_q0113",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "music",
+          "question": "What was Priya's work music routine in December 2027?",
+          "answer": "vinyl records every day",
+          "answer_type": "free_text",
           "accept": [
-            "2027-11-30",
-            "2027-12-01"
+            "vinyl records every day"
           ],
           "evidence_days": [
-            639,
-            641
+            608,
+            609,
+            610
           ],
-          "grading": "date_exact",
+          "grading": "llm_judge",
           "viewpoint_day": 671,
           "probe_date": "2027-12-31",
           "probe_month": "2027-12",
           "is_retrospective": false,
           "tags": [
-            "shift",
-            "uncaused",
-            "bounded"
+            "shift"
           ]
         },
         {
-          "id": "u5_p202712_0150",
+          "id": "u5_p202712_0151",
           "original_id": "u5_q0016",
           "type": "recall",
           "capability": "episodic_recall",
@@ -4899,43 +4859,16 @@
           ]
         },
         {
-          "id": "u5_p202712_0151",
-          "original_id": "u5_q0065",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "reading",
-          "question": "What was Priya's evening reading on Monday, 2027-12-20?",
-          "answer": "e-reader fantasy series",
-          "answer_type": "value",
-          "accept": [
-            "e-reader fantasy series"
-          ],
-          "evidence_days": [
-            646,
-            649,
-            662
-          ],
-          "grading": "exact",
-          "viewpoint_day": 671,
-          "probe_date": "2027-12-31",
-          "probe_month": "2027-12",
-          "is_retrospective": false,
-          "tags": [
-            "inferred",
-            "no_session"
-          ]
-        },
-        {
           "id": "u5_r202712_0161",
-          "original_id": "u5_q0376",
-          "type": "other_person",
-          "capability": "entity_disambiguation",
-          "domain": "other_people",
-          "question": "Is Priya's diet vegetarian?",
-          "answer": "Yes.",
-          "answer_type": "yes_no",
+          "original_id": "u5_q0203",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "dinner",
+          "question": "Why did Priya's dinner routine change around 2027-06-18?",
+          "answer": "switched to a vegetarian diet",
+          "answer_type": "free_text",
           "accept": [
-            "yes"
+            "switched to a vegetarian diet"
           ],
           "evidence_days": [
             476
@@ -4946,34 +4879,39 @@
           "probe_month": "2027-12",
           "is_retrospective": true,
           "tags": [
-            "control"
+            "explicit",
+            "shift"
           ],
           "retrospective_of": "u5_p202706_0100",
           "original_probe_month": "2027-06"
         },
         {
           "id": "u5_r202712_0168",
-          "original_id": "u5_q0272",
-          "type": "fact_at_time",
-          "capability": "temporal_fact",
-          "domain": "city",
-          "question": "What was Priya's city of residence on 2027-08-25?",
-          "answer": "Denver, Colorado",
-          "answer_type": "value",
+          "original_id": "u5_q0199",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "commute",
+          "question": "Why did Priya's commute routine change around 2027-08-07?",
+          "answer": "started a new job as engineering manager at a climate-tech company",
+          "answer_type": "free_text",
           "accept": [
-            "Denver, Colorado",
-            "Denver"
+            "started a new job as engineering manager at a climate-tech company"
           ],
           "evidence_days": [
-            301
+            520,
+            527
           ],
-          "grading": "exact",
+          "grading": "llm_judge",
           "viewpoint_day": 671,
           "probe_date": "2027-12-31",
           "probe_month": "2027-12",
           "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u5_p202708_0121",
+          "tags": [
+            "implicit",
+            "shift",
+            "cross_domain"
+          ],
+          "retrospective_of": "u5_p202708_0120",
           "original_probe_month": "2027-08"
         },
         {
@@ -5006,19 +4944,70 @@
         },
         {
           "id": "u5_r202712_0179",
-          "original_id": "u5_q0356",
+          "original_id": "u5_q0090",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "bedtime",
+          "question": "What was Priya's bedtime routine in October 2027?",
+          "answer": "by day of week: 10:00 pm on Mon/Tue/Thu; 10:30 pm on Wed/Sun; 12:00 am on Fri/Sat",
+          "answer_type": "free_text",
+          "accept": [
+            "10:00 pm most weeknights, midnight Fri/Sat"
+          ],
+          "evidence_days": [
+            527,
+            533,
+            536
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": true,
+          "tags": [
+            "shift"
+          ],
+          "retrospective_of": "u5_p202710_0131",
+          "original_probe_month": "2027-10"
+        },
+        {
+          "id": "u5_r202712_0181",
+          "original_id": "u5_q0042",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "music",
+          "question": "What was Priya's work music on Tuesday, 2027-09-21?",
+          "answer": "jazz vinyl",
+          "answer_type": "value",
+          "accept": [
+            "jazz vinyl"
+          ],
+          "evidence_days": [
+            570
+          ],
+          "grading": "exact",
+          "viewpoint_day": 671,
+          "probe_date": "2027-12-31",
+          "probe_month": "2027-12",
+          "is_retrospective": true,
+          "tags": [],
+          "retrospective_of": "u5_p202709_0124",
+          "original_probe_month": "2027-09"
+        },
+        {
+          "id": "u5_r202712_0198",
+          "original_id": "u5_q0352",
           "type": "distractor_probe",
           "capability": "causal_reasoning",
-          "domain": "music",
-          "question": "Around 2027-10-26, Arjun gave her a record player as a gift. Did that lead to any change in Priya's work music?",
-          "answer": "Yes - from 2027-10-29 Priya's work music changed to vinyl records every day.",
+          "domain": "dinner",
+          "question": "Around 2027-06-13, switched to a vegetarian diet. Did that lead to any change in Priya's dinner?",
+          "answer": "Yes - from 2027-06-18 Priya's dinner changed to vegetarian weekly routine.",
           "answer_type": "yes_no",
           "accept": [
             "yes"
           ],
           "evidence_days": [
-            605,
-            608
+            476
           ],
           "grading": "llm_judge",
           "viewpoint_day": 671,
@@ -5029,40 +5018,12 @@
             "control",
             "explicit"
           ],
-          "retrospective_of": "u5_p202710_0132",
-          "original_probe_month": "2027-10"
-        },
-        {
-          "id": "u5_r202712_0181",
-          "original_id": "u5_q0252",
-          "type": "reversion",
-          "capability": "temporal_change",
-          "domain": "dinner",
-          "question": "What did Priya's dinner go back to after the period of soup and smoothies?",
-          "answer": "vegetarian weekly routine - by day of week: veggie stir-fry on Mon; lentil soup on Tue; black bean tacos on Wed; veggie curry on Thu; takeout pizza on Fri; cooking with Arjun on Sat; leftovers on Sun",
-          "answer_type": "free_text",
-          "accept": [
-            "vegetarian weekly routine"
-          ],
-          "evidence_days": [
-            573,
-            574,
-            576
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 671,
-          "probe_date": "2027-12-31",
-          "probe_month": "2027-12",
-          "is_retrospective": true,
-          "tags": [
-            "temporary"
-          ],
-          "retrospective_of": "u5_p202709_0125",
-          "original_probe_month": "2027-09"
+          "retrospective_of": "u5_p202706_0104",
+          "original_probe_month": "2027-06"
         }
       ],
-      "num_questions": 13,
-      "num_retrospective": 5
+      "num_questions": 15,
+      "num_retrospective": 6
     },
     {
       "probe_date": "2028-01-31",
@@ -5071,62 +5032,11 @@
       "questions": [
         {
           "id": "u5_p202801_0152",
-          "original_id": "u5_q0174",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "dinner",
-          "question": "When did Priya's dinner routine change from the black bean tacos / cooking with Arjun / leftovers / lentil soup etc. routine to the black bean tacos / veggie stir-fry routine?",
-          "answer": "2028-01-09",
-          "answer_type": "date",
-          "accept": [
-            "2028-01-09"
-          ],
-          "evidence_days": [
-            669,
-            680
-          ],
-          "grading": "date_exact",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": [
-            "shift",
-            "uncaused"
-          ]
-        },
-        {
-          "id": "u5_p202801_0153",
-          "original_id": "u5_q0205",
-          "type": "attribution",
-          "capability": "causal_reasoning",
-          "domain": "dinner",
-          "question": "Why did Priya's dinner routine change around 2028-01-09?",
-          "answer": "No reason was stated.",
-          "answer_type": "abstain",
-          "accept": [
-            "no reason was stated"
-          ],
-          "evidence_days": [
-            680
-          ],
-          "grading": "llm_judge",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": [
-            "uncaused",
-            "shift"
-          ]
-        },
-        {
-          "id": "u5_p202801_0154",
-          "original_id": "u5_q0290",
+          "original_id": "u5_q0288",
           "type": "fact_at_time",
           "capability": "temporal_fact",
           "domain": "diet",
-          "question": "What was Priya's diet on 2028-01-13?",
+          "question": "What was Priya's diet on 2028-01-23?",
           "answer": "vegetarian",
           "answer_type": "value",
           "accept": [
@@ -5144,29 +5054,7 @@
           "tags": []
         },
         {
-          "id": "u5_p202801_0155",
-          "original_id": "u5_q0031",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "dinner",
-          "question": "What was Priya's dinner on Friday, 2028-01-21?",
-          "answer": "black bean tacos",
-          "answer_type": "value",
-          "accept": [
-            "black bean tacos"
-          ],
-          "evidence_days": [
-            692
-          ],
-          "grading": "exact",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": []
-        },
-        {
-          "id": "u5_p202801_0156",
+          "id": "u5_p202801_0153",
           "original_id": "u5_q0051",
           "type": "recall",
           "capability": "episodic_recall",
@@ -5193,21 +5081,117 @@
           ]
         },
         {
+          "id": "u5_p202801_0154",
+          "original_id": "u5_q0174",
+          "type": "change_detection",
+          "capability": "temporal_change",
+          "domain": "dinner",
+          "question": "When did Priya's dinner routine change from the black bean tacos / cooking with Arjun / leftovers / lentil soup etc. routine to the black bean tacos / veggie stir-fry routine?",
+          "answer": "2028-01-09",
+          "answer_type": "date",
+          "accept": [
+            "2028-01-09"
+          ],
+          "evidence_days": [
+            669,
+            680
+          ],
+          "grading": "date_exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": [
+            "shift",
+            "uncaused"
+          ]
+        },
+        {
+          "id": "u5_p202801_0155",
+          "original_id": "u5_q0205",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "dinner",
+          "question": "Why did Priya's dinner routine change around 2028-01-09?",
+          "answer": "No reason was stated.",
+          "answer_type": "abstain",
+          "accept": [
+            "no reason was stated"
+          ],
+          "evidence_days": [
+            680
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": [
+            "uncaused",
+            "shift"
+          ]
+        },
+        {
+          "id": "u5_p202801_0156",
+          "original_id": "u5_q0267",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "job",
+          "question": "What was Priya's job on 2028-01-15?",
+          "answer": "engineering manager at a climate-tech company",
+          "answer_type": "value",
+          "accept": [
+            "engineering manager at a climate-tech company",
+            "engineering manager at a climate-tech company"
+          ],
+          "evidence_days": [
+            520
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
           "id": "u5_p202801_0157",
-          "original_id": "u5_q0035",
+          "original_id": "u5_q0031",
           "type": "recall",
           "capability": "episodic_recall",
           "domain": "dinner",
-          "question": "What was Priya's dinner on Tuesday, 2028-01-11?",
-          "answer": "veggie stir-fry",
+          "question": "What was Priya's dinner on Friday, 2028-01-21?",
+          "answer": "black bean tacos",
           "answer_type": "value",
           "accept": [
-            "veggie stir-fry"
+            "black bean tacos"
           ],
           "evidence_days": [
-            680,
-            681,
-            684
+            692
+          ],
+          "grading": "exact",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": false,
+          "tags": []
+        },
+        {
+          "id": "u5_p202801_0158",
+          "original_id": "u5_q0037",
+          "type": "recall",
+          "capability": "episodic_recall",
+          "domain": "dinner",
+          "question": "What was Priya's dinner on Sunday, 2028-01-02?",
+          "answer": "leftovers",
+          "answer_type": "value",
+          "accept": [
+            "leftovers"
+          ],
+          "evidence_days": [
+            582,
+            596,
+            659
           ],
           "grading": "exact",
           "viewpoint_day": 702,
@@ -5216,104 +5200,24 @@
           "is_retrospective": false,
           "tags": [
             "inferred",
+            "no_session",
             "boundary"
           ]
         },
         {
-          "id": "u5_p202801_0158",
-          "original_id": "u5_q0055",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "reading",
-          "question": "What was Priya's evening reading on Friday, 2028-01-28?",
-          "answer": "book club novel",
-          "answer_type": "value",
-          "accept": [
-            "book club novel"
-          ],
-          "evidence_days": [
-            695,
-            698,
-            701
-          ],
-          "grading": "exact",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": false,
-          "tags": [
-            "inferred",
-            "no_session"
-          ]
-        },
-        {
           "id": "u5_r202801_0159",
-          "original_id": "u5_q0080",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "bedtime",
-          "question": "What was Priya's bedtime on Tuesday, 2027-09-07?",
-          "answer": "10:00 pm",
-          "answer_type": "value",
+          "original_id": "u5_q0296",
+          "type": "fact_at_time",
+          "capability": "temporal_fact",
+          "domain": "pets",
+          "question": "What were Priya's pets on 2027-10-19?",
+          "answer": "labrador named Biscuit",
+          "answer_type": "free_text",
           "accept": [
-            "10:00 pm"
+            "labrador named Biscuit"
           ],
           "evidence_days": [
-            570,
-            577,
-            584
-          ],
-          "grading": "exact",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": true,
-          "tags": [
-            "inferred",
-            "no_session"
-          ],
-          "retrospective_of": "u5_p202710_0131",
-          "original_probe_month": "2027-10"
-        },
-        {
-          "id": "u5_r202801_0171",
-          "original_id": "u5_q0042",
-          "type": "recall",
-          "capability": "episodic_recall",
-          "domain": "music",
-          "question": "What was Priya's work music on Tuesday, 2027-09-21?",
-          "answer": "jazz vinyl",
-          "answer_type": "value",
-          "accept": [
-            "jazz vinyl"
-          ],
-          "evidence_days": [
-            570
-          ],
-          "grading": "exact",
-          "viewpoint_day": 702,
-          "probe_date": "2028-01-31",
-          "probe_month": "2028-01",
-          "is_retrospective": true,
-          "tags": [],
-          "retrospective_of": "u5_p202709_0124",
-          "original_probe_month": "2027-09"
-        },
-        {
-          "id": "u5_r202801_0180",
-          "original_id": "u5_q0230",
-          "type": "exception_vs_shift",
-          "capability": "exception_handling",
-          "domain": "dinner",
-          "question": "On Saturday, 2027-11-13, Priya's dinner was cereal instead of the usual cooking with Arjun. Was that a lasting change?",
-          "answer": "No - it was a one-off (got home very late); the usual routine continued.",
-          "answer_type": "yes_no",
-          "accept": [
-            "no"
-          ],
-          "evidence_days": [
-            623,
-            625
+            97
           ],
           "grading": "llm_judge",
           "viewpoint_day": 702,
@@ -5321,61 +5225,81 @@
           "probe_month": "2028-01",
           "is_retrospective": true,
           "tags": [
-            "exception"
+            "set"
           ],
-          "retrospective_of": "u5_p202711_0142",
-          "original_probe_month": "2027-11"
+          "retrospective_of": "u5_p202710_0130",
+          "original_probe_month": "2027-10"
         },
         {
-          "id": "u5_r202801_0185",
-          "original_id": "u5_q0188",
-          "type": "change_detection",
-          "capability": "temporal_change",
-          "domain": "bedtime",
-          "question": "When did Priya's bedtime routine change from the 10:00 pm / 10:30 pm / 12:00 am routine to 2:00 am?",
-          "answer": "2027-11-21 (first observed 2027-11-27)",
-          "answer_type": "date",
+          "id": "u5_r202801_0171",
+          "original_id": "u5_q0100",
+          "type": "pattern_at_time",
+          "capability": "pattern_abstraction",
+          "domain": "dinner",
+          "question": "What was Priya's dinner routine around 2027-09-15?",
+          "answer": "soup and smoothies every day",
+          "answer_type": "free_text",
           "accept": [
-            "2027-11-21",
-            "2027-11-22",
-            "2027-11-23",
-            "2027-11-24",
-            "2027-11-25",
-            "2027-11-26",
-            "2027-11-27"
+            "soup and smoothies every day"
           ],
           "evidence_days": [
-            629,
-            637
+            560,
+            563,
+            564
           ],
-          "grading": "date_exact",
+          "grading": "llm_judge",
           "viewpoint_day": 702,
           "probe_date": "2028-01-31",
           "probe_month": "2028-01",
           "is_retrospective": true,
           "tags": [
-            "temporary",
-            "explicit",
-            "bounded"
+            "temporary"
+          ],
+          "retrospective_of": "u5_p202709_0123",
+          "original_probe_month": "2027-09"
+        },
+        {
+          "id": "u5_r202801_0180",
+          "original_id": "u5_q0329",
+          "type": "duration",
+          "capability": "temporal_arithmetic",
+          "domain": "bedtime",
+          "question": "How long did Priya's bedtime stay the 10:00 pm / 10:30 pm / 12:00 am routine?",
+          "answer": "108 days (2027-08-05 to 2027-11-20)",
+          "answer_type": "free_text",
+          "accept": [
+            "108"
+          ],
+          "evidence_days": [
+            527,
+            629
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [
+            "shift"
           ],
           "retrospective_of": "u5_p202711_0141",
           "original_probe_month": "2027-11"
         },
         {
-          "id": "u5_r202801_0187",
-          "original_id": "u5_q0278",
+          "id": "u5_r202801_0185",
+          "original_id": "u5_q0289",
           "type": "fact_at_time",
           "capability": "temporal_fact",
-          "domain": "relationship",
-          "question": "What was Priya's relationship status on 2027-11-13?",
-          "answer": "living with her partner Arjun",
+          "domain": "diet",
+          "question": "What was Priya's diet on 2027-10-10?",
+          "answer": "vegetarian",
           "answer_type": "value",
           "accept": [
-            "living with her partner Arjun",
-            "living with her partner Arjun"
+            "vegetarian",
+            "vegetarian"
           ],
           "evidence_days": [
-            306
+            476
           ],
           "grading": "exact",
           "viewpoint_day": 702,
@@ -5383,12 +5307,66 @@
           "probe_month": "2028-01",
           "is_retrospective": true,
           "tags": [],
-          "retrospective_of": "u5_p202711_0139",
+          "retrospective_of": "u5_p202710_0133",
+          "original_probe_month": "2027-10"
+        },
+        {
+          "id": "u5_r202801_0187",
+          "original_id": "u5_q0219",
+          "type": "attribution",
+          "capability": "causal_reasoning",
+          "domain": "bedtime",
+          "question": "Why did Priya's bedtime routine change around 2027-11-21?",
+          "answer": "started an on-call rotation for a product launch",
+          "answer_type": "free_text",
+          "accept": [
+            "started an on-call rotation for a product launch"
+          ],
+          "evidence_days": [
+            630,
+            637
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [
+            "explicit",
+            "temporary"
+          ],
+          "retrospective_of": "u5_p202711_0138",
           "original_probe_month": "2027-11"
+        },
+        {
+          "id": "u5_r202801_0195",
+          "original_id": "u5_q0322",
+          "type": "event_status",
+          "capability": "event_tracking",
+          "domain": "events",
+          "question": "What happened with the hiking group?",
+          "answer": "joined a weekend hiking group (happened, 2027-09-04)",
+          "answer_type": "free_text",
+          "accept": [
+            "joined a weekend hiking group"
+          ],
+          "evidence_days": [
+            554
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 702,
+          "probe_date": "2028-01-31",
+          "probe_month": "2028-01",
+          "is_retrospective": true,
+          "tags": [
+            "happened"
+          ],
+          "retrospective_of": "u5_p202709_0127",
+          "original_probe_month": "2027-09"
         }
       ],
-      "num_questions": 12,
-      "num_retrospective": 5
+      "num_questions": 13,
+      "num_retrospective": 6
     }
   ]
 }
