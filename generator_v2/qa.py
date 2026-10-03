@@ -177,6 +177,11 @@ class QABuilder:
                 else:
                     tags.append("inferred")
                     evidence = self._nearest_mentions(reg, day.day)
+                    # Ensure evidence doesn't come after the question date
+                    before = [d for d in evidence if d <= day.day]
+                    if not before:
+                        continue
+                    evidence = before
                 if p.is_exception:
                     tags.append("exception")
                 if not day.has_session:
@@ -373,6 +378,9 @@ class QABuilder:
             vals = last[f.entity]
             noun = f.label
             ev = sorted({d for v in vals for d in self._fact_evidence(f.entity, v)}) or [1]
+            # Skip facts with "none" answer and no real evidence
+            if not vals and ev == [1]:
+                continue
             if f.cardinality == "single":
                 v = vals[0]
                 self.add(Draft("fact_current", f.entity, f"What is {self.name}'s current {noun}?", v, "value",
@@ -415,6 +423,11 @@ class QABuilder:
                 if not vals:
                     tags.append("empty")
                 ev = sorted({d for v in vals for d in self._fact_evidence(f.entity, v)}) or [1]
+                # Skip "none" answers backed only by the day-1 fallback — no
+                # conversation ever discussed this entity, so the question is
+                # unanswerable from dialogue evidence.
+                if not vals and ev == [1]:
+                    continue
                 if f.cardinality == "single":
                     q = f"What was {self.name}'s {f.label} on {day.date.isoformat()}?"
                     self.add(Draft("fact_at_time", f.entity, q, answer, "value", [answer, answer.split(",")[0]],
@@ -430,12 +443,18 @@ class QABuilder:
                            f"{final.text} ({final.status}, {self.date(final.day).isoformat()})", "free_text",
                            [final.text], [self.stated_day(s.id) for s in e.states], "llm_judge", [final.status]))
             for a, b in zip(e.states, e.states[1:]):
+                # Pick a probe day after state `a` is mentioned but before state `b`
+                ev_day = self.stated_day(a.id)
                 mid = (a.day + b.day) // 2
                 if mid <= a.day:
                     continue
+                # Ensure the question date isn't before the evidence
+                probe_day = max(mid, ev_day)
+                if probe_day >= b.day:
+                    continue
                 self.add(Draft("event_status", "events",
-                               f"What was the status of {e.title} on {self.date(mid).isoformat()}?",
-                               f"{a.text} ({a.status})", "free_text", [a.text], [self.stated_day(a.id)],
+                               f"What was the status of {e.title} on {self.date(probe_day).isoformat()}?",
+                               f"{a.text} ({a.status})", "free_text", [a.text], [ev_day],
                                "llm_judge", ["at_time", a.status]))
 
     def durations(self) -> None:
