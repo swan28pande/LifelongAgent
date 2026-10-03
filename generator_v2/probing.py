@@ -87,10 +87,12 @@ def build_probing_questions(
         if latest_evidence > num_days:
             continue
         effective_day = latest_evidence
-        # Parse any date referenced in the question text — the system can't
-        # be asked about a date/month it hasn't reached yet.
+        # Parse any date referenced in question or answer text — the system
+        # can't be asked about (or answer with) a date it hasn't reached yet.
+        _texts = [q["question"], q["answer"]] + q.get("accept", [])
+        _combined = " ".join(str(t) for t in _texts)
         # Match "YYYY-MM-DD"
-        for m in re.finditer(r"\d{4}-\d{2}-\d{2}", q["question"]):
+        for m in re.finditer(r"\d{4}-\d{2}-\d{2}", _combined):
             qdate = dt.date.fromisoformat(m.group())
             qday = (qdate - start).days + 1
             effective_day = max(effective_day, qday)
@@ -103,7 +105,7 @@ def build_probing_questions(
         for m in re.finditer(
             r"\b(January|February|March|April|May|June|July|August|"
             r"September|October|November|December)\s+(\d{4})\b",
-            q["question"],
+            _combined,
         ):
             mon = _MONTHS[m.group(1).lower()]
             year = int(m.group(2))
