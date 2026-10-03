@@ -86,10 +86,15 @@ updates summaries by default. Incremental generation rebuilds only the affected 
 whose source hashes changed. To rebuild summaries created by the earlier version,
 call `build_summaries(force=True)` once.
 
-Optional distillation creates four documents per speaker: relationships, identity,
+Distillation maintains four documents per speaker: relationships, identity,
 patterns, and timeline. Use `build_summaries(distill=True)` after batch ingestion, or
-`distill_knowledge()` after updating summaries. Distillation is explicit and is not
-automatically refreshed by `flush()`.
+`distill_knowledge()` for an explicit full-hierarchy refresh. Batch distillation
+remains opt-in. With `ingest(update_summaries=True)` or the default live `flush()`,
+summary generation is followed by continual distillation for each stored speaker.
+Existing documents receive only the affected week and month summaries, together
+with their current text, so updates can preserve dated history and transitions.
+Initial creation and missing themes use the full hierarchy. Setting
+`update_summaries=False` skips both summary and distilled-document updates.
 
 The planner is instructed to start memory retrieval with `semantic_retrieve_memory`,
 then answer or select one specific follow-up. It can still answer from current
@@ -138,7 +143,7 @@ the public answer text.
 | [tools.py](tools.py) | Six read tools, argument validation, coverage markers |
 | [prompts.py](prompts.py) | Planning/answer guidance and updated extraction, summary, and distillation prompts |
 | [ingest.py](ingest.py), [store.py](store.py), [summarizer.py](summarizer.py) | Multi-speaker write pipeline, SQLite/FAISS storage, hierarchical summaries |
-| [distill.py](distill.py) | Optional themed knowledge documents generated from summaries |
+| [distill.py](distill.py) | Themed knowledge documents with full builds and continual updates from affected summaries |
 | [tests/](tests/) | Compiled-graph enforcement, generation/retrieval integration, tool validation, mocked providers |
 
 The reader uses LangGraph 1.x, LangChain Core 1.x, and Pydantic 2, with the existing

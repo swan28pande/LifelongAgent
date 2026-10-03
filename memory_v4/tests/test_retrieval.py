@@ -116,9 +116,11 @@ def test_zero_retrieval_answer_is_terminal():
     assert result["decisions"] == [{"action": "answer", "answer": "already known"}]
 
 
+@pytest.mark.parametrize("incremental", [False, True])
 def test_generated_hierarchy_is_retrieved_through_public_planned_reader(
     agent_factory,
     conversations,
+    incremental,
 ):
     model = ScriptedModel(
         [
@@ -131,8 +133,11 @@ def test_generated_hierarchy_is_retrieved_through_public_planned_reader(
         ]
     )
     agent = agent_factory(model)
-    agent.ingest("2026-03-02", conversations)
-    agent.build_summaries(distill=True)
+    agent.ingest("2026-03-02", conversations, update_summaries=incremental)
+    if incremental:
+        agent.ingest("2026-03-03", conversations, update_summaries=True)
+    else:
+        agent.build_summaries(distill=True)
     result = agent.chat_with_trace("What are the recorded hobbies?")
     assert result["answer"] == "Camping is a hobby."
     assert result["num_tool_calls"] == 1 and result["num_model_calls"] == 2
@@ -148,6 +153,8 @@ def test_generated_hierarchy_is_retrieved_through_public_planned_reader(
     assert [output.index(header) for header in headers] == sorted(
         output.index(header) for header in headers
     )
+    if incremental:
+        assert "Updated" in output
     assert "REMAINING RETRIEVAL CALLS: 4" in model.requests[1][1][0].content
     assert "semantic_retrieve_memory" in model.requests[0][1][0].content
     assert "semantic_search_summaries" not in agent.tool_names()

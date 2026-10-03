@@ -58,7 +58,7 @@ def test_ingestion_and_summary_chain_are_per_speaker_and_incremental(
         report = agent.ingest(date, conversations, update_summaries=True)
         assert report.added == 3 and report.errors == []
     docs = list(agent.store._summary_store.docstore._dict.values())
-    assert len(docs) == 8
+    assert len(docs) == 16
     assert {doc.metadata["speaker"] for doc in docs} == {"alice", "bob"}
     for speaker in ("alice", "bob"):
         week = agent.store.get_summary(f"week:2026-W10:{speaker}")
@@ -68,6 +68,9 @@ def test_ingestion_and_summary_chain_are_per_speaker_and_incremental(
         assert "Monthly narrative." in month and "Key facts: hobby: camping" in month
         assert "Facts: hobby: camping" in year
         assert "Camping" in agent.store.get_lifetime_summary(speaker)
+        for theme in ("relationships", "identity", "patterns", "timeline"):
+            document = agent.store.get_summary(f"distilled:{theme}:{speaker}")
+            assert "Updated" in document
     assert "camp trip" in agent.store.get_summary("week:2026-W10:alice")
     assert "camp trip" not in agent.store.get_summary("week:2026-W10:bob")
     requests = len(summary_model.requests)
@@ -107,13 +110,40 @@ def test_batch_defaults_and_optional_distillation(agent_factory, conversations):
     assert len(agent.store._summary_store.docstore._dict) == 16
 
 
-def test_flush_updates_hierarchy_by_default(agent_factory):
+def test_flush_updates_hierarchy_and_distillation_by_default(agent_factory):
     agent = agent_factory()
     agent._pending = [{"speaker": "Alice", "text": "Camping is my hobby."}]
     assert agent.flush("2026-03-02").errors == []
     assert agent.pending_turns == 0
     assert agent.store.get_lifetime_summary("alice")
+    for speaker in ("alice", "bob"):
+        for theme in ("relationships", "identity", "patterns", "timeline"):
+            assert agent.store.get_summary(f"distilled:{theme}:{speaker}")
     assert agent.flush("2026-03-02") is None
+
+
+def test_disabled_ingest_and_flush_preserve_existing_summaries_and_documents(
+    agent_factory, conversations, summary_model
+):
+    agent = agent_factory()
+    agent.ingest("2026-03-02", conversations, update_summaries=True)
+    original_documents = {
+        doc.metadata["identifier"]: doc.page_content
+        for doc in agent.store._summary_store.docstore._dict.values()
+    }
+    request_count = len(summary_model.requests)
+    assert agent.ingest("2026-03-03", conversations).errors == []
+    agent._pending = [{"speaker": "Alice", "text": "I still enjoy camping."}]
+    assert agent.flush("2026-03-04", update_summaries=False).errors == []
+    assert agent.pending_turns == 0
+    assert all(
+        "TRANSCRIPT:" in request[-1].content
+        for request in summary_model.requests[request_count:]
+    )
+    assert {
+        doc.metadata["identifier"]: doc.page_content
+        for doc in agent.store._summary_store.docstore._dict.values()
+    } == original_documents
 
 
 @pytest.mark.parametrize(

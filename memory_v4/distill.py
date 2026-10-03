@@ -21,10 +21,15 @@ reasoning over summaries, not simple aggregation.
     raw memories (DB)
         → hierarchical summaries (weekly/monthly/yearly/lifetime)
             → distilled knowledge documents (reasoned, multi-theme)
+
+After a day's summaries are rebuilt, continual updates merge the affected
+week/month summaries into existing documents. Initial creation and explicit
+distillation use the full hierarchy.
 """
 
 from __future__ import annotations
 
+from datetime import date as calendar_date
 from typing import Dict
 
 from langchain_core.output_parsers import JsonOutputParser
@@ -43,6 +48,46 @@ class KnowledgeDistiller:
     def __init__(self, store: MemoryStore, llm):
         self.store = store
         self.llm = llm
+
+    def update_after_ingest(self, speaker: str, date: str) -> dict[str, str]:
+        """Merge the affected week/month into a speaker's knowledge documents.
+
+        Use the full hierarchy for initial creation or a missing theme; existing
+        documents receive only the summaries affected by this ingestion date.
+        """
+        if not any(self._load(speaker, theme) for theme in THEMES):
+            return self.distill(speaker)
+
+        summaries = self._gather_changed(speaker, date)
+        if not summaries:
+            return {}
+
+        results = {}
+        for theme in THEMES:
+            current = self._load(speaker, theme)
+            if current:
+                updated = self._update(speaker, theme, current, summaries)
+            else:
+                updated = self._create(
+                    speaker, theme, self._gather_summaries(speaker)
+                )
+            if updated:
+                self._save(speaker, theme, updated)
+                results[theme] = updated
+                print(f"  ✓ Updated: {theme}:{speaker}")
+        return results
+
+    def _gather_changed(self, speaker: str, date: str) -> str:
+        """Collect only the containing ISO week and calendar month."""
+        year, week, _ = calendar_date.fromisoformat(date).isocalendar()
+        week_id = f"{year}-W{week:02d}"
+        month_id = date[:7]
+        sections = []
+        for level, period in (("week", week_id), ("month", month_id)):
+            content = self._get(f"{level}:{period}:{speaker}")
+            if content:
+                sections.append(f"=== {level.upper()} {period} ===\n{content}")
+        return "\n\n".join(sections)
 
     def distill(self, speaker: str) -> Dict[str, str]:
         """
