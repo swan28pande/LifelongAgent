@@ -52,16 +52,15 @@ def _day_to_month(day: int, start: dt.date) -> str:
     return d.strftime("%Y-%m")
 
 
-def build_probing_questions(user_id: str, retro_fraction: float = 0.3) -> dict:
+def build_probing_questions(
+    user_id: str, retro_fraction: float = 0.3, max_questions: int = 200,
+) -> dict:
     """Build monthly probing questions for one user.
 
-    Takes the full QA pool (qa_pool.json) and the curated set (qa_pairs.json),
-    assigns each to the earliest valid monthly probe, and creates retrospective
-    copies of some questions at later probes.
-
-    Args:
-        user_id: e.g. "u1"
-        retro_fraction: fraction of questions to also ask retrospectively at a later probe
+    Takes the full QA pool (qa_pool.json), assigns each to the earliest valid
+    monthly probe, samples down to max_questions (distributed proportionally
+    across months with at least 1 per month that has any), and creates
+    retrospective copies of some questions at later probes.
     """
     base = config.OUTPUT_DIR / user_id
     qa_pool = json.loads((base / "qa_pool.json").read_text())
@@ -101,9 +100,39 @@ def build_probing_questions(user_id: str, retro_fraction: float = 0.3) -> dict:
             continue
         by_month[assigned_month].append(q)
 
+    # Downsample to fit primary + retrospective within max_questions.
+    primary_budget = max_questions - round(max_questions * retro_fraction / (1 + retro_fraction))
+    total_available = sum(len(v) for v in by_month.values())
+    # Over-allocate primary slightly since some retro slots can't be filled
+    # (candidates near timeline end can't be placed 2+ months later)
+    primary_budget = min(primary_budget + 4, total_available)
+    if total_available > primary_budget:
+        non_empty = [m for m in probe_months if by_month.get(m)]
+        # Allocate proportionally, guarantee at least 1 per non-empty month
+        month_budgets = {}
+        for m in non_empty:
+            month_budgets[m] = max(1, round(primary_budget * len(by_month[m]) / total_available))
+        # Adjust to hit exact budget
+        allocated = sum(month_budgets.values())
+        diff = allocated - primary_budget
+        adjustable = sorted(non_empty, key=lambda m: len(by_month[m]), reverse=(diff > 0))
+        for m in adjustable:
+            if diff == 0:
+                break
+            if diff > 0 and month_budgets[m] > 1:
+                month_budgets[m] -= 1
+                diff -= 1
+            elif diff < 0 and month_budgets[m] < len(by_month[m]):
+                month_budgets[m] += 1
+                diff += 1
+        for m in non_empty:
+            pool = by_month[m]
+            if len(pool) > month_budgets[m]:
+                by_month[m] = rng.sample(pool, month_budgets[m])
+
     # Build probes with assigned questions
     result_probes = []
-    all_assigned = []  # track for retrospective selection
+    all_assigned = []
     qid_counter = 0
 
     for probe in probes:
@@ -147,15 +176,20 @@ def build_probing_questions(user_id: str, retro_fraction: float = 0.3) -> dict:
     retro_candidates = [(m, q) for m, q in all_assigned
                         if probe_idx.get(m, len(probes)) < len(probes) - 1]
 
-    n_retro = int(len(retro_candidates) * retro_fraction)
+    primary_total = sum(len(p["questions"]) for p in result_probes)
+    retro_budget = max_questions - primary_total
+    n_retro = min(int(len(retro_candidates) * retro_fraction), retro_budget)
     if retro_candidates and n_retro > 0:
-        retro_selected = rng.sample(retro_candidates, min(n_retro, len(retro_candidates)))
-        for orig_month, orig_q in retro_selected:
+        # Over-sample candidates to account for those that can't be placed
+        rng.shuffle(retro_candidates)
+        added = 0
+        for orig_month, orig_q in retro_candidates:
+            if added >= n_retro:
+                break
             orig_idx = probe_idx[orig_month]
-            # Pick a later probe: 2-6 months later
-            offset = rng.randint(2, min(6, len(probes) - orig_idx - 1)) if len(probes) - orig_idx - 1 >= 2 else None
-            if offset is None:
+            if len(probes) - orig_idx - 1 < 2:
                 continue
+            offset = rng.randint(2, min(6, len(probes) - orig_idx - 1))
             target_idx = orig_idx + offset
             target_probe = result_probes[target_idx]
 
@@ -171,6 +205,7 @@ def build_probing_questions(user_id: str, retro_fraction: float = 0.3) -> dict:
                 "original_probe_month": orig_month,
             }
             target_probe["questions"].append(retro_q)
+            added += 1
 
     # Compute counts
     total = 0
