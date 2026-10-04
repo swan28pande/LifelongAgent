@@ -212,66 +212,6 @@ QA:
   abstention           3
   highest top-answer shares: 
 
-  20 random QA items:
-  • (pattern_current/bedtime) [shift]
-    Q: What is Priya's current bedtime routine?
-    A: 10:30 pm every day (since 2028-01-29)
-  • (prediction/reading) [horizon_59d]
-    Q: What will Priya's evening reading most likely be on Thursday, 2028-04-27? Explain the reasoning.
-    A: e-reader fantasy series. Reasoning: since 2027-10-11 the routine has been alternates week by week: e-reader fantasy series, then book club novel, repeating (7-day blocks starting Mon 2027-10-11). 2028-04-27 is in 7-day block 29 since the anchor (block index 28 mod 2 = 0), so e-reader fantasy series.
-  • (change_detection/dinner) [temporary, explicit, bounded]
-    Q: When did Priya's dinner routine change from the black bean tacos / cooking with Arjun / leftovers / lentil soup etc. routine to soup and smoothies?
-    A: 2027-09-07 (first observed 2027-09-11)
-  • (change_detection/exercise) [temporary, explicit]
-    Q: When did Priya's workout routine change from the bouldering / long dog hike / morning dog walk / rest day routine to physio exercises?
-    A: 2026-08-28
-  • (attribution/exercise) [implicit, shift]
-    Q: Why did Priya's workout routine change around 2027-01-29?
-    A: took up trail running
-  • (distractor_probe/exercise)
-    Q: Around 2027-12-25, her gym changed its opening hours. Did that lead to any change in Priya's workout?
-    A: No - nothing about Priya's workout changed because of it.
-  • (reversion/bedtime) [temporary]
-    Q: What did Priya's bedtime go back to after the period of 2:00 am?
-    A: 10:00 pm most weeknights, midnight Fri/Sat - by day of week: 10:00 pm on Mon/Tue/Thu; 10:30 pm on Wed/Sun; 12:00 am on Fri/Sat
-  • (change_detection/commute) [temporary, implicit, bounded]
-    Q: When did Priya's commute routine change from the bus / cycling / no commute routine to the no commute / rideshare routine?
-    A: 2026-08-29 (first observed 2026-08-31)
-  • (fact_at_time/relationship)
-    Q: What was Priya's relationship status on 2026-09-12?
-    A: dating Arjun
-  • (duration/job) [fact]
-    Q: How long was Priya's job senior backend engineer at the fintech startup?
-    A: 280 days (2026-10-26 to 2027-08-01)
-  • (attribution/dinner) [uncaused, shift]
-    Q: Why did Priya's dinner routine change around 2028-01-09?
-    A: No reason was stated.
-  • (recall/dinner) [inferred, boundary]
-    Q: What was Priya's dinner on Tuesday, 2028-01-11?
-    A: veggie stir-fry
-  • (exception_vs_shift/commute) [shift, uncaused]
-    Q: On Wednesday, 2027-12-01, Priya's commute was bus instead of the usual work from home. Was that a lasting change?
-    A: Yes - from 2027-11-30 the routine changed to bus in winter and e-bike otherwise on workdays.
-  • (attribution/bedtime) [implicit, shift, cross_domain]
-    Q: Why did Priya's bedtime routine change around 2026-06-08?
-    A: adopted a labrador named Biscuit
-  • (event_status/events) [happened]
-    Q: What happened with the engineering manager job search?
-    A: accepted the engineering manager offer at the climate-tech company (happened, 2027-07-28)
-  • (recall/bedtime) [boundary]
-    Q: What was Priya's bedtime on Monday, 2026-06-08?
-    A: 10:30 pm
-  • (other_person/other_people) [control]
-    Q: Is labrador named Biscuit one of Priya's pets?
-    A: Yes.
-  • (reversion/dinner) [control]
-    Q: Is Priya's dinner still the black bean tacos / veggie stir-fry routine?
-    A: Yes - since 2028-01-09.
-  • (prediction/commute) [horizon_26d]
-    Q: What will Priya's commute most likely be on Saturday, 2028-03-25? Explain the reasoning.
-    A: no commute. Reasoning: since 2027-11-30 the routine has been split by workday vs weekend - on workdays (Mon-Fri): split by season - in winter: bus; otherwise: e-bike; on weekends: no commute. 2028-03-25 is a weekend day; so it is no commute.
-  • (fact_history/pets) [multi]
-    Q: How have Priya's pets changed over time?
-    A: labrador named Biscuit (2026-06-03 to now); cat named Mochi (2027-10-21 to now)
+  0 random QA items:
 
 ✓ all checks passed - wrote datasets/v2/u5/

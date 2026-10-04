@@ -60,10 +60,8 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "statement_missing: flu.0 ([her flu] came down with the flu (happened) (this happened on 2026-07-18))"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "morning_drink": "ginger tea",
@@ -72,7 +70,7 @@
       "podcast": "health news podcast"
     },
     "statements": {
-      "flu.0": false
+      "flu.0": true
     },
     "causes": {
       "c0": {
@@ -85,5 +83,35 @@
   },
   "first_try_failures": [
     "statement_missing: flu.0 ([her flu] came down with the flu (happened) (this happened on 2026-07-18))"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:08.830104+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "3fbb13263cc527c128cb548534d0fe600ccaa77c88ce98db62a45b18077486c0",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "statement_missing: flu.0 ([her flu] came down with the flu (happened) (this happened on 2026-07-18))"
+      ],
+      "extracted": {
+        "preferences": {
+          "morning_drink": "ginger tea",
+          "lunch": "packed leftovers",
+          "commute": "no commute",
+          "podcast": "health news podcast"
+        },
+        "statements": {
+          "flu.0": false
+        },
+        "causes": {
+          "c0": {
+            "event_mentioned": true,
+            "linked": true,
+            "reason_given": true
+          }
+        },
+        "inventions": []
+      }
+    }
+  }
 }

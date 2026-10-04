@@ -161,66 +161,6 @@ QA:
   abstention           3
   highest top-answer shares: 
 
-  20 random QA items:
-  • (recall/dinner)
-    Q: What was Daniel's dinner on Saturday, 2026-12-12?
-    A: steak
-  • (attribution/dinner) [implicit, temporary]
-    Q: Why did Daniel's dinner routine change around 2027-08-23?
-    A: started a huge design competition deadline at work
-  • (recall/breakfast) [inferred]
-    Q: What was Daniel's breakfast on Friday, 2026-12-11?
-    A: granola
-  • (fact_at_time/city)
-    Q: What was Daniel's city of residence on 2026-07-02?
-    A: Minneapolis, Minnesota
-  • (abstention/abstention) [control, diet]
-    Q: Do you know Daniel's diet?
-    A: pescatarian
-  • (distractor_probe/breakfast) [control, implicit]
-    Q: Around 2027-11-06, started holding 7 am client calls at the studio. Did that lead to any change in Daniel's breakfast?
-    A: Yes - from 2027-11-10 Daniel's breakfast changed to 3 days overnight oats, 2 days smoked salmon bagel.
-  • (fact_history/hobbies) [multi]
-    Q: How have Daniel's hobbies changed over time?
-    A: cycling (2026-03-01 to 2027-01-23); photography (2026-03-01 to now); rock climbing (2026-06-28 to now); chess (2027-08-02 to now)
-  • (recall/dinner) [exception]
-    Q: What was Daniel's dinner on Friday, 2027-10-29?
-    A: skipped dinner
-  • (attribution/breakfast) [implicit, shift]
-    Q: Why did Daniel's breakfast routine change around 2027-11-10?
-    A: started holding 7 am client calls at the studio
-  • (pattern_current/workout) [shift]
-    Q: What is Daniel's current workout routine?
-    A: a 2-block rotation of 7-day blocks starting Fri 2027-04-09 - block 1: by day of week: lakefront run on Mon; climbing gym on Tue/Thu; running on Wed; rest day on Fri; long run on Sat; yoga on Sun | block 2: by day of week: lakefront run on Mon; swim on Tue/Thu; running on Wed; rest day on Fri/Sun; long run on Sat (since 2027-04-09)
-  • (abstention/abstention) [control, city]
-    Q: Do you know Daniel's city of residence?
-    A: Chicago, Illinois
-  • (duration/dinner) [initial]
-    Q: How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?
-    A: 152 days (2026-03-01 to 2026-07-30)
-  • (recall/breakfast) [boundary]
-    Q: What was Daniel's breakfast on Monday, 2027-05-31?
-    A: smoothie bowl
-  • (reversion/music) [temporary]
-    Q: What did Daniel's work music go back to after the period of audiobooks?
-    A: 3 days jazz records, 4 days indie rock - a 7-day cycle starting Mon 2026-12-28: jazz records for 3 days, then indie rock for 4 days, repeating
-  • (other_person/other_people) [brother]
-    Q: What did Daniel's brother Kwame start training for?
-    A: marathon running
-  • (fact_at_time/relationship)
-    Q: What was Daniel's relationship status on 2026-03-28?
-    A: dating Leah
-  • (abstention/abstention) [favorite_movie]
-    Q: What is Daniel's favorite movie?
-    A: Not known - this was never mentioned.
-  • (pattern_at_time/outfit) [shift]
-    Q: What was Daniel's work outfit routine in July 2027?
-    A: alternates week by week: flannel and jeans, then button-down and chinos, repeating (7-day blocks starting Wed 2027-04-14)
-  • (fact_current/hobbies) [set]
-    Q: What are Daniel's current hobbies?
-    A: photography, rock climbing, chess
-  • (distractor_probe/outfit)
-    Q: Around 2027-07-13, a coworker started wearing suits every day. Did that lead to any change in Daniel's work outfit?
-    A: No - nothing about Daniel's work outfit changed because of it.
+  0 random QA items:
 
 ✓ all checks passed - wrote datasets/v2/u4/

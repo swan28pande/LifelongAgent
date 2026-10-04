@@ -56,10 +56,8 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "statement_missing: vinyl.0 ([the record collection] inherited his grandfather's record collection (happened) (this happened on 2026-12-25))"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "not mentioned",
@@ -69,7 +67,7 @@
       "dinner": "not mentioned"
     },
     "statements": {
-      "vinyl.0": false
+      "vinyl.0": true
     },
     "causes": {},
     "inventions": []
@@ -77,5 +75,30 @@
   "first_try_failures": [
     "statement_missing: vinyl.0 ([the record collection] inherited his grandfather's record collection (happened) (this happened on 2026-12-25))",
     "invention: plans to buy a turntable"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:32.792273+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "d6da0c253cb07d902ada34e28cd75936655a92e41471ac643c2180ffe37386ab",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "statement_missing: vinyl.0 ([the record collection] inherited his grandfather's record collection (happened) (this happened on 2026-12-25))"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "not mentioned",
+          "workout": "rest day",
+          "outfit": "hoodie and joggers",
+          "music": "not mentioned",
+          "dinner": "not mentioned"
+        },
+        "statements": {
+          "vinyl.0": false
+        },
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

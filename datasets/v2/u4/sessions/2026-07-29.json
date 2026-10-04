@@ -56,10 +56,8 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "statement_missing: cooking_class.0 ([the Thai cooking class] took a Thai cooking class (happened) (this happened on 2026-07-28))"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "oatmeal",
@@ -69,12 +67,37 @@
       "dinner": "stir-fry"
     },
     "statements": {
-      "cooking_class.0": false
+      "cooking_class.0": true
     },
     "causes": {},
     "inventions": []
   },
   "first_try_failures": [
     "statement_missing: cooking_class.0 ([the Thai cooking class] took a Thai cooking class (happened) (this happened on 2026-07-28))"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:27.978194+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "5010e0243a15627f79853b1ec332aef6eaae07f12cf957579e8ca6e228037c65",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "statement_missing: cooking_class.0 ([the Thai cooking class] took a Thai cooking class (happened) (this happened on 2026-07-28))"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "oatmeal",
+          "workout": "cycling",
+          "outfit": "not mentioned",
+          "music": "lo-fi beats",
+          "dinner": "stir-fry"
+        },
+        "statements": {
+          "cooking_class.0": false
+        },
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

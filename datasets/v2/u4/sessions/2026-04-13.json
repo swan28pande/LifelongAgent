@@ -22,19 +22,19 @@
     },
     {
       "speaker": "assistant",
-      "text": "It’s great that you were able to find that zone of deep focus when you needed it. Hopefully the schematics turned out well! Did you manage to get a break over the weekend to recharge? Maybe a bike ride around Minneapolis?"
+      "text": "It's great that you were able to find that zone of deep focus when you needed it. Hopefully the schematics turned out well! Did you get any time for photography yesterday?"
     },
     {
       "speaker": "user",
-      "text": "I did, actually! I took my bike out for a long ride around the Chain of Lakes yesterday. The Minneapolis spring weather is finally starting to show up, which was great."
+      "text": "I did, actually! I took some photos around the Chain of Lakes yesterday. The Minneapolis spring weather is finally starting to show up, which was great."
     },
     {
       "speaker": "assistant",
-      "text": "That sounds like a perfect weekend activity. Did Leah tag along with you on the ride?"
+      "text": "That sounds like a lovely afternoon. Did Leah join you?"
     },
     {
       "speaker": "user",
-      "text": "No, she had some family things to attend to, so it was just a solo trek. But I brought my camera along and stopped a few times to take some pictures."
+      "text": "No, she had some family things to attend to, so it was just me and my camera."
     },
     {
       "speaker": "assistant",
@@ -56,14 +56,12 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "not mentioned",
-      "workout": "other",
+      "workout": "not mentioned",
       "outfit": "not mentioned",
       "music": "silence",
       "dinner": "not mentioned"
@@ -74,5 +72,28 @@
   },
   "first_try_failures": [
     "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:22.028717+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "a9b9cc9824b47214f6ea160f139853db01fe60480a6057edc7e2e39dc2af7d35",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "not mentioned",
+          "workout": "other",
+          "outfit": "not mentioned",
+          "music": "silence",
+          "dinner": "not mentioned"
+        },
+        "statements": {},
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

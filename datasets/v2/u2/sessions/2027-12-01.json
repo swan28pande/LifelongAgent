@@ -22,15 +22,15 @@
     },
     {
       "speaker": "assistant",
-      "text": "I can imagine the pre-break energy is quite high! Have you had any time to get out on the tennis court lately to blow off some steam?"
+      "text": "I can imagine the pre-break energy is quite high! Have you had any quiet time at home to unwind today?"
     },
     {
       "speaker": "user",
-      "text": "I actually played a couple of sets yesterday afternoon. It was great to get out there and hit some balls, even if my serve was a little rusty."
+      "text": "A little this afternoon, thankfully. It was nice to take a breather after getting through the grading."
     },
     {
       "speaker": "assistant",
-      "text": "Glad you got some court time in! What are your plans for this evening? Just relaxing at home?"
+      "text": "I'm glad you got a breather! What are your plans for this evening? Just relaxing at home?"
     },
     {
       "speaker": "user",
@@ -56,14 +56,12 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "eggs and toast",
-      "workout": "other",
+      "workout": "not mentioned",
       "evening_show": "sitcom reruns"
     },
     "statements": {},
@@ -72,5 +70,26 @@
   },
   "first_try_failures": [
     "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:09.343745+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "f45c51a9eba803a3eb1fb962ad778a514de3a770397dc430aaba5e5637e98bf1",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "eggs and toast",
+          "workout": "other",
+          "evening_show": "sitcom reruns"
+        },
+        "statements": {},
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

@@ -26,7 +26,7 @@
     },
     {
       "speaker": "user",
-      "text": "We just did a quick toast at home, but we'll probably do a proper celebration next weekend. Today was straight to business anyway; I had to be out of the door incredibly early for an on-site inspection, so I actually ended up completely bypassing my morning meal. Usually, I'd have my blended fruit bowl, but there just wasn't time."
+      "text": "We just did a quick toast at home. Today was straight to business anyway; I had to be out of the door incredibly early for an on-site inspection, so I actually ended up completely bypassing my morning meal. Usually, I'd have my blended fruit bowl, but there just wasn't time."
     },
     {
       "speaker": "assistant",
@@ -64,10 +64,8 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "invention: Daniel and Leah plan to have a proper celebration for his promotion next weekend."
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "skipped breakfast",
@@ -86,9 +84,7 @@
         "reason_given": true
       }
     },
-    "inventions": [
-      "Daniel and Leah plan to have a proper celebration for his promotion next weekend."
-    ]
+    "inventions": []
   },
   "first_try_failures": [
     "pref_wrong: workout should be 'cycling', conversation gives 'long ride'",
@@ -96,5 +92,38 @@
     "pref_absent: music should be 'lo-fi beats', conversation gives 'missing'",
     "statement_missing: job.project_lead (was promoted to project lead at the design firm (this happened on 2026-11-15))",
     "invention: Daniel was promoted to project lead yesterday."
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:33.285793+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "83af1d6eaa4ecdc7262c117393e7cab7c14ddc9c0966857df6c0647016c3d879",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "invention: Daniel and Leah plan to have a proper celebration for his promotion next weekend."
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "skipped breakfast",
+          "workout": "cycling",
+          "outfit": "button-down and chinos",
+          "music": "lo-fi beats",
+          "dinner": "not mentioned"
+        },
+        "statements": {
+          "job.project_lead": true
+        },
+        "causes": {
+          "c0": {
+            "event_mentioned": true,
+            "linked": false,
+            "reason_given": true
+          }
+        },
+        "inventions": [
+          "Daniel and Leah plan to have a proper celebration for his promotion next weekend."
+        ]
+      }
+    }
+  }
 }

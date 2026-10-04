@@ -22,11 +22,11 @@
     },
     {
       "speaker": "assistant",
-      "text": "Definitely, safety first in the lab! Have you had any time for tennis lately, or has the back-to-school rush taken over your free time?"
+      "text": "Definitely, safety first in the lab! Has the back-to-school rush left you any time to unwind?"
     },
     {
       "speaker": "user",
-      "text": "The schedule is pretty packed right now, so I haven't been out on the courts recently. Grace and I are just trying to unwind in the evenings."
+      "text": "The schedule is pretty packed right now, so downtime has been limited. Grace and I are just trying to unwind in the evenings."
     },
     {
       "speaker": "assistant",
@@ -68,14 +68,12 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "oatmeal",
-      "workout": "other",
+      "workout": "not mentioned",
       "evening_show": "cooking competition show"
     },
     "statements": {},
@@ -85,5 +83,26 @@
   "first_try_failures": [
     "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
     "invention: started building a small side table a while ago"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:01.619304+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "eea3c3d7fb93b787acf057f30f79e3fd4a1397a7c81d27e86c5a262c56f866cc",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "oatmeal",
+          "workout": "other",
+          "evening_show": "cooking competition show"
+        },
+        "statements": {},
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

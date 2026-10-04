@@ -64,10 +64,8 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "invention: The user joined a tennis club over the weekend."
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "not mentioned",
@@ -82,11 +80,38 @@
         "reason_given": false
       }
     },
-    "inventions": [
-      "The user joined a tennis club over the weekend."
-    ]
+    "inventions": []
   },
   "first_try_failures": [
     "invention: The user joined a tennis club over the weekend."
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:04.534635+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "ba3e255f65529ac7aaba7a2832838b726147d6a5acdd730f24a9515a66c10b93",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "invention: The user joined a tennis club over the weekend."
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "not mentioned",
+          "workout": "gym weights",
+          "evening_show": "not mentioned"
+        },
+        "statements": {},
+        "causes": {
+          "c0": {
+            "event_mentioned": true,
+            "linked": false,
+            "reason_given": false
+          }
+        },
+        "inventions": [
+          "The user joined a tennis club over the weekend."
+        ]
+      }
+    }
+  }
 }

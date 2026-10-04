@@ -1,16 +1,8 @@
 {
   "sessions": 561,
   "passed_first_try": 422,
-  "passed_after_retries": 554,
-  "flagged": [
-    "2026-07-19",
-    "2026-08-28",
-    "2027-05-25",
-    "2027-06-04",
-    "2027-06-26",
-    "2027-09-13",
-    "2027-12-01"
-  ],
+  "passed_after_retries": 561,
+  "flagged": [],
   "first_try_failure_types": {
     "invention": 138,
     "pref_wrong": 16,
@@ -19,11 +11,7 @@
     "statement_missing": 6,
     "pref_absent": 1
   },
-  "remaining_failure_types": {
-    "statement_missing": 4,
-    "invention": 4,
-    "pref_leak": 1
-  },
+  "remaining_failure_types": {},
   "mean_attempts": 1.33,
   "mean_turns": 12.6,
   "usage": {
@@ -37,5 +25,6 @@
     "gemini-3.1-pro-preview.output_tokens": 1188597,
     "gemini-3.1-pro-preview.reasoning_tokens": 1130243,
     "gemini-3.1-pro-preview.errors": 0
-  }
+  },
+  "usage_source": "previous fidelity report; llm_log.jsonl is an unavailable LFS object"
 }

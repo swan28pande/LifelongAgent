@@ -42,7 +42,7 @@
     },
     {
       "speaker": "user",
-      "text": "Yes, I'm still keeping up with it! I usually do a quick twenty-minute lesson in the evenings. I'm starting to learn how to order food, which is making me very excited for our future trip."
+      "text": "Yes, I'm still keeping up with it! I usually do a quick twenty-minute lesson in the evenings. I'm starting to learn how to order food, which makes the lessons fun."
     },
     {
       "speaker": "assistant",
@@ -64,10 +64,8 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "invention: planning a future trip"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "morning_drink": "drip coffee",
@@ -77,11 +75,33 @@
     },
     "statements": {},
     "causes": {},
-    "inventions": [
-      "planning a future trip"
-    ]
+    "inventions": []
   },
   "first_try_failures": [
     "invention: planning a future trip"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:12.211231+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "ca02bd8e97184993165d0abd7bdf99b9dec953b39cff3589d446e6a6a2164f08",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "invention: planning a future trip"
+      ],
+      "extracted": {
+        "preferences": {
+          "morning_drink": "drip coffee",
+          "lunch": "not mentioned",
+          "commute": "driving",
+          "podcast": "not mentioned"
+        },
+        "statements": {},
+        "causes": {},
+        "inventions": [
+          "planning a future trip"
+        ]
+      }
+    }
+  }
 }

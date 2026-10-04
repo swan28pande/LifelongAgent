@@ -56,10 +56,8 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "statement_missing: deadline.0 ([the design competition] started a huge design competition deadline at work (happened) (this happened on 2027-08-22))"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "smoked salmon bagel",
@@ -69,7 +67,7 @@
       "dinner": "delivery sushi"
     },
     "statements": {
-      "deadline.0": false
+      "deadline.0": true
     },
     "causes": {
       "c0": {
@@ -87,5 +85,41 @@
   },
   "first_try_failures": [
     "statement_missing: deadline.0 ([the design competition] started a huge design competition deadline at work (happened) (this happened on 2027-08-22))"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:38.643109+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "5820c9f62228d055c10d3eba37df9840fe3836dc0d21e1128dc82524409c3832",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "statement_missing: deadline.0 ([the design competition] started a huge design competition deadline at work (happened) (this happened on 2027-08-22))"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "smoked salmon bagel",
+          "workout": "not mentioned",
+          "outfit": "flannel and jeans",
+          "music": "jazz records",
+          "dinner": "delivery sushi"
+        },
+        "statements": {
+          "deadline.0": false
+        },
+        "causes": {
+          "c0": {
+            "event_mentioned": true,
+            "linked": false,
+            "reason_given": true
+          },
+          "c1": {
+            "event_mentioned": true,
+            "linked": false,
+            "reason_given": true
+          }
+        },
+        "inventions": []
+      }
+    }
+  }
 }

@@ -115,20 +115,26 @@
       "date_exact": 4
     },
     "tags": {
-      "inferred": 4,
-      "boundary": 3,
+      "boundary": 1,
+      "inferred": 3,
       "no_session": 2,
       "exception": 2,
-      "shift": 13,
-      "reversion": 2,
-      "temporary": 5,
-      "horizon_14d": 1,
-      "horizon_48d": 1,
+      "shift": 16,
+      "regime:breakfast.r2": 1,
+      "reversion": 1,
+      "regime:music.r2.revert": 1,
+      "regime:outfit.r1": 2,
       "horizon_23d": 1,
-      "horizon_40d": 1,
-      "implicit": 6,
-      "uncaused": 4,
-      "bounded": 2,
+      "horizon_52d": 1,
+      "horizon_45d": 1,
+      "horizon_48d": 1,
+      "implicit": 7,
+      "regime:breakfast.r1": 1,
+      "bounded": 4,
+      "regime:music.r3": 1,
+      "temporary": 4,
+      "regime:dinner.r3": 1,
+      "uncaused": 3,
       "explicit": 2,
       "set": 3,
       "single": 1,
@@ -136,13 +142,14 @@
       "at_time": 1,
       "planned": 1,
       "happened": 1,
-      "initial": 1,
+      "regime:music.r4": 1,
+      "regime:dinner.r2": 1,
       "control": 3,
       "brother": 1,
       "confusable": 1,
-      "favorite_movie": 1,
-      "city": 1,
-      "diet": 1
+      "languages": 1,
+      "diet": 1,
+      "job": 1
     },
     "answer_distribution": {
       "abstention/abstention": {
@@ -182,7 +189,7 @@
       },
       "change_detection/breakfast": {
         "n": 1,
-        "top_answer": "2026-08-30",
+        "top_answer": "2026-08-28",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -196,14 +203,14 @@
       },
       "change_detection/music": {
         "n": 1,
-        "top_answer": "2027-07-02",
+        "top_answer": "2027-10-24",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "change_detection/outfit": {
         "n": 1,
-        "top_answer": "2028-01-19",
+        "top_answer": "2026-11-17",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -224,14 +231,14 @@
       },
       "duration/dinner": {
         "n": 1,
-        "top_answer": "152",
+        "top_answer": "89",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "duration/music": {
         "n": 1,
-        "top_answer": "168",
+        "top_answer": "71",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -266,14 +273,14 @@
       },
       "fact_at_time/city": {
         "n": 1,
-        "top_answer": "minneapolis, minnesota",
+        "top_answer": "chicago, illinois",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "fact_at_time/hobbies": {
         "n": 2,
-        "top_answer": "photography, cycling, rock climbing",
+        "top_answer": "photography, cycling",
         "top_share": 0.5,
         "entropy_bits": 1.0,
         "distinct": 2
@@ -320,23 +327,23 @@
         "entropy_bits": 1.0,
         "distinct": 2
       },
-      "pattern_at_time/dinner": {
+      "pattern_at_time/breakfast": {
         "n": 1,
-        "top_answer": "pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon",
+        "top_answer": "alternating weeks of bakery croissants and smoothie bowls",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/music": {
+        "n": 1,
+        "top_answer": "3 days jazz records, 4 days indie rock",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "pattern_at_time/outfit": {
         "n": 1,
-        "top_answer": "alternating weeks of flannel and jeans and button-down and chinos",
-        "top_share": 1.0,
-        "entropy_bits": -0.0,
-        "distinct": 1
-      },
-      "pattern_at_time/workout": {
-        "n": 1,
-        "top_answer": "stationary bike every day",
+        "top_answer": "blazer mon/wed, button-down tue/thu, sweater fri, hoodie on weekends",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -371,7 +378,7 @@
       },
       "prediction/music": {
         "n": 1,
-        "top_answer": "classical",
+        "top_answer": "ambient electronic",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -385,45 +392,45 @@
       },
       "prediction/workout": {
         "n": 1,
-        "top_answer": "rest day",
+        "top_answer": "swim",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "recall/breakfast": {
-        "n": 2,
-        "top_answer": "granola",
-        "top_share": 0.5,
-        "entropy_bits": 1.0,
-        "distinct": 2
-      },
-      "recall/dinner": {
-        "n": 2,
-        "top_answer": "steak",
-        "top_share": 0.5,
-        "entropy_bits": 1.0,
-        "distinct": 2
-      },
-      "recall/music": {
         "n": 1,
-        "top_answer": "indie rock",
+        "top_answer": "bakery croissant",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
+      "recall/dinner": {
+        "n": 1,
+        "top_answer": "pasta",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "recall/music": {
+        "n": 2,
+        "top_answer": "lo-fi beats",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
+      },
       "recall/outfit": {
         "n": 1,
-        "top_answer": "sweater and jeans",
+        "top_answer": "rain jacket and jeans",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "recall/workout": {
-        "n": 1,
-        "top_answer": "rest day",
-        "top_share": 1.0,
-        "entropy_bits": -0.0,
-        "distinct": 1
+        "n": 2,
+        "top_answer": "cycling",
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
       },
       "reversion/music": {
         "n": 1,
@@ -442,11 +449,11 @@
     }
   },
   "qa_pool": {
-    "total": 390,
+    "total": 389,
     "by_type": {
       "recall": 114,
       "pattern_current": 5,
-      "pattern_at_time": 28,
+      "pattern_at_time": 27,
       "prediction": 57,
       "change_detection": 23,
       "attribution": 20,

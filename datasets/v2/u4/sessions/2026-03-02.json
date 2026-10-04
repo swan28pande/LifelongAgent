@@ -34,15 +34,15 @@
     },
     {
       "speaker": "user",
-      "text": "I did! The weather was decent, so I spent a good chunk of yesterday out on my road bike. I've taken up cycling as a hobby, and it's been a great way to get some fresh air."
+      "text": "I did get some downtime. Oh, and I should mention that cycling is one of my hobbies."
     },
     {
       "speaker": "assistant",
-      "text": "That's awesome. Cycling is a great way to explore the area. Do you have a favorite route you like to take, or do you mostly ride solo?"
+      "text": "Thanks for telling me. Is there any other personal news you'd like to share?"
     },
     {
       "speaker": "user",
-      "text": "I've been exploring some of the lake trails. I actually went out with Leah, the wonderful woman I'm dating now. She's a big fan of riding too, so it's a fun thing for us to do together."
+      "text": "Yes! I'm dating Leah now, and things are going really well."
     },
     {
       "speaker": "assistant",
@@ -64,14 +64,12 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "granola",
-      "workout": "other",
+      "workout": "not mentioned",
       "outfit": "hoodie and joggers",
       "music": "indie rock",
       "dinner": "pasta"
@@ -86,5 +84,32 @@
   },
   "first_try_failures": [
     "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:14.955530+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "53c6d3294df4b1cfa8c81fe93fd67708c21ff1ca7040c5c54b52a95aa6f95b15",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "granola",
+          "workout": "other",
+          "outfit": "hoodie and joggers",
+          "music": "indie rock",
+          "dinner": "pasta"
+        },
+        "statements": {
+          "job.0": true,
+          "relationship.0": true,
+          "hobbies.1": true
+        },
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

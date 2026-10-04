@@ -67,66 +67,6 @@ QA:
   abstention           4
   highest top-answer shares: abstention/abstention 50% (n=4), recall/lunch 25% (n=4)
 
-  20 random QA items:
-  • (fact_at_time/city)
-    Q: What was Leo's city of residence on 2027-06-03?
-    A: Austin, Texas
-  • (pattern_current/lunch) [shift]
-    Q: What is Leo's current lunch routine?
-    A: a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating (since 2027-06-23)
-  • (fact_at_time/job)
-    Q: What was Leo's job on 2026-08-18?
-    A: account coordinator at a logistics firm
-  • (prediction/lunch) [horizon_38d]
-    Q: What will Leo's lunch most likely be on Thursday, 2028-04-06? Explain the reasoning.
-    A: meal-prep burrito bowl. Reasoning: since 2027-06-23 the routine has been a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating. It is day 2 of the 7-day cycle, so meal-prep burrito bowl.
-  • (fact_current/job)
-    Q: What is Leo's current job?
-    A: account manager at the logistics firm
-  • (recall/clothing)
-    Q: What was Leo's outfit on Saturday, 2026-04-04?
-    A: oversized hoodie
-  • (event_status/events) [happened]
-    Q: What happened with the annual check-up?
-    A: had a check-up and the doctor advised cutting back on caffeine (happened, 2026-09-21)
-  • (fact_at_time/job)
-    Q: What was Leo's job on 2027-07-16?
-    A: account manager at the logistics firm
-  • (pattern_at_time/clothing) [initial]
-    Q: What was Leo's outfit routine in July 2026?
-    A: a 6-day cycle starting Sun 2026-03-01: fitted t-shirt for 3 days, then oversized hoodie for 3 days, repeating
-  • (fact_history/job) [single]
-    Q: How has Leo's job changed over time?
-    A: account coordinator at a logistics firm (2026-03-01 to 2027-01-13); account manager at the logistics firm (2027-01-14 to now)
-  • (pattern_at_time/clothing) [shift]
-    Q: What was Leo's outfit routine in January 2028?
-    A: a 7-day cycle starting Thu 2027-01-14: button-down shirt for 5 days, then polo shirt for 2 days, repeating
-  • (prediction/coffee) [horizon_30d]
-    Q: What will Leo's morning coffee most likely be on Wednesday, 2028-03-29? Explain the reasoning.
-    A: decaf americano. Reasoning: since 2026-09-21 the routine has been alternates week by week: matcha latte, then decaf americano, repeating (7-day blocks starting Mon 2026-09-21). 2028-03-29 is in 7-day block 80 since the anchor (block index 79 mod 2 = 1), so decaf americano.
-  • (fact_current/hobbies) [set]
-    Q: What are Leo's current hobbies?
-    A: rock climbing, guitar
-  • (event_status/events) [at_time, planned]
-    Q: What was the status of the half marathon on 2026-04-30?
-    A: signed up for the Austin half marathon in May (planned)
-  • (prediction/lunch) [horizon_14d]
-    Q: What will Leo's lunch most likely be on Monday, 2028-03-13? Explain the reasoning.
-    A: ramen. Reasoning: since 2027-06-23 the routine has been a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating. It is day 6 of the 7-day cycle, so ramen.
-  • (attribution/lunch) [explicit, shift]
-    Q: Why did Leo's lunch routine change around 2027-06-23?
-    A: moved to Chicago after transferring to the Chicago branch
-  • (recall/clothing) [boundary]
-    Q: What was Leo's outfit on Friday, 2027-01-08?
-    A: fitted t-shirt
-  • (pattern_at_time/lunch) [shift]
-    Q: What was Leo's lunch routine in October 2027?
-    A: a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating
-  • (abstention/abstention) [control, living_situation]
-    Q: Do you know Leo's living situation?
-    A: lives with a roommate named Sam
-  • (recall/clothing) [boundary]
-    Q: What was Leo's outfit on Saturday, 2027-01-16?
-    A: button-down shirt
+  0 random QA items:
 
 ✓ all checks passed - wrote datasets/v2/u1/

@@ -30,15 +30,15 @@
     },
     {
       "speaker": "assistant",
-      "text": "It definitely is. Did you manage to get on the tennis court at all today, or is it a rest day?"
+      "text": "It definitely is. Has it been a quiet afternoon at home?"
     },
     {
       "speaker": "user",
-      "text": "I actually did play a singles match this afternoon. My back felt completely fine, which is always a relief after that strain a while back."
+      "text": "Yes, it's been lovely to have a quiet afternoon after such a busy week."
     },
     {
       "speaker": "assistant",
-      "text": "That's fantastic news! It's great to hear your back is fully recovered and you're playing without any issues. How are things going at the high school lately?"
+      "text": "I'm glad you've had some downtime. How are things going at the high school lately?"
     },
     {
       "speaker": "user",
@@ -64,14 +64,12 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "pref_leak: workout should be 'not mentioned', conversation gives 'tennis'"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "not mentioned",
-      "workout": "tennis",
+      "workout": "not mentioned",
       "evening_show": "sitcom reruns"
     },
     "statements": {},
@@ -80,5 +78,26 @@
   },
   "first_try_failures": [
     "pref_leak: workout should be 'not mentioned', conversation gives 'tennis'"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:04.532738+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "770cf11fbb41a61a79c6c59d76d3cfc550a08146d024bea44c9a2c3c25d3e365",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "pref_leak: workout should be 'not mentioned', conversation gives 'tennis'"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "not mentioned",
+          "workout": "tennis",
+          "evening_show": "sitcom reruns"
+        },
+        "statements": {},
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

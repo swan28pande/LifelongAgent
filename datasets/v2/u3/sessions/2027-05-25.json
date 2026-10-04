@@ -26,7 +26,7 @@
     },
     {
       "speaker": "user",
-      "text": "It's a mystery thriller set in New England. It's really gripping so far! Oh, by the way, a new sandwich shop just opened up right down the street from the clinic."
+      "text": "It's a mystery thriller set in New England. It's really gripping so far! Oh, by the way, a new sandwich shop opened up right down the street from the clinic yesterday, May 24."
     },
     {
       "speaker": "assistant",
@@ -60,10 +60,8 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "statement_missing: distractor1 (a new sandwich shop opened near her work (this happened on 2027-05-24))"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "morning_drink": "not mentioned",
@@ -72,12 +70,36 @@
       "podcast": "an audiobook"
     },
     "statements": {
-      "distractor1": false
+      "distractor1": true
     },
     "causes": {},
     "inventions": []
   },
   "first_try_failures": [
     "statement_missing: distractor1 (a new sandwich shop opened near her work (this happened on 2027-05-24))"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:09.649607+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "ddcfcebeb4e66df844710b53e1029247bd737560d3da72b160fe4fe1a938b078",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "statement_missing: distractor1 (a new sandwich shop opened near her work (this happened on 2027-05-24))"
+      ],
+      "extracted": {
+        "preferences": {
+          "morning_drink": "not mentioned",
+          "lunch": "not mentioned",
+          "commute": "driving",
+          "podcast": "an audiobook"
+        },
+        "statements": {
+          "distractor1": false
+        },
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

@@ -114,31 +114,38 @@
     },
     "tags": {
       "boundary": 3,
-      "inferred": 3,
-      "no_session": 2,
-      "exception": 2,
-      "shift": 14,
-      "reversion": 2,
-      "initial": 2,
-      "horizon_18d": 1,
-      "horizon_30d": 1,
-      "horizon_13d": 1,
-      "horizon_27d": 1,
+      "exception": 3,
+      "inferred": 2,
+      "no_session": 1,
+      "shift": 16,
+      "reversion": 1,
+      "regime:lunch.r1": 2,
+      "regime:morning_drink.r2": 2,
+      "regime:podcast.r2": 1,
+      "horizon_3d": 1,
+      "horizon_24d": 1,
+      "horizon_56d": 1,
+      "horizon_15d": 1,
       "uncaused": 2,
-      "bounded": 2,
-      "explicit": 5,
+      "regime:morning_drink.r3": 1,
+      "bounded": 4,
       "implicit": 6,
+      "regime:commute.r1": 1,
+      "explicit": 5,
+      "regime:podcast.r3": 1,
       "temporary": 4,
       "cross_domain": 1,
       "set": 3,
       "single": 1,
       "multi": 1,
-      "at_time": 1,
-      "happened": 2,
+      "planned": 1,
+      "happened": 1,
+      "initial": 1,
+      "regime:commute.r0": 1,
       "control": 3,
-      "shoe_size": 1,
-      "job": 1,
-      "hobbies": 1
+      "university": 1,
+      "pets": 1,
+      "city": 1
     },
     "answer_distribution": {
       "abstention/abstention": {
@@ -178,14 +185,14 @@
       },
       "change_detection/commute": {
         "n": 1,
-        "top_answer": "2026-10-07",
+        "top_answer": "2026-10-06",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "change_detection/lunch": {
         "n": 1,
-        "top_answer": "2027-06-26",
+        "top_answer": "2026-05-30",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -206,14 +213,14 @@
       },
       "distractor_probe/lunch": {
         "n": 1,
-        "top_answer": "yes",
+        "top_answer": "no",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
-      "distractor_probe/podcast": {
+      "distractor_probe/morning_drink": {
         "n": 1,
-        "top_answer": "no",
+        "top_answer": "yes",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -225,16 +232,16 @@
         "entropy_bits": -0.0,
         "distinct": 1
       },
-      "duration/lunch": {
+      "duration/morning_drink": {
         "n": 1,
-        "top_answer": "248",
+        "top_answer": "278",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "event_status/events": {
         "n": 2,
-        "top_answer": "came down with the flu",
+        "top_answer": "set a wedding date for summer 2028",
         "top_share": 0.5,
         "entropy_bits": 1.0,
         "distinct": 2
@@ -260,9 +267,16 @@
         "entropy_bits": -0.0,
         "distinct": 1
       },
+      "fact_at_time/city": {
+        "n": 1,
+        "top_answer": "tucson, arizona",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
       "fact_at_time/hobbies": {
         "n": 1,
-        "top_answer": "sourdough baking",
+        "top_answer": "salsa dancing",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -281,13 +295,6 @@
         "entropy_bits": -0.0,
         "distinct": 1
       },
-      "fact_at_time/relationship": {
-        "n": 1,
-        "top_answer": "dating tom",
-        "top_share": 1.0,
-        "entropy_bits": -0.0,
-        "distinct": 1
-      },
       "fact_current/hobbies": {
         "n": 1,
         "top_answer": "sourdough baking",
@@ -302,13 +309,6 @@
         "entropy_bits": -0.0,
         "distinct": 1
       },
-      "fact_history/city": {
-        "n": 1,
-        "top_answer": "tucson, arizona",
-        "top_share": 1.0,
-        "entropy_bits": -0.0,
-        "distinct": 1
-      },
       "fact_history/hobbies": {
         "n": 1,
         "top_answer": "sourdough baking",
@@ -316,9 +316,16 @@
         "entropy_bits": -0.0,
         "distinct": 1
       },
-      "pattern_at_time/commute": {
+      "fact_history/job": {
         "n": 1,
-        "top_answer": "driving on weekdays",
+        "top_answer": "day-shift nurse at an outpatient clinic",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
+      },
+      "pattern_at_time/lunch": {
+        "n": 1,
+        "top_answer": "sourdough sandwiches mon/wed/fri, leftovers tue/thu/sun, brunch out sat",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -332,7 +339,7 @@
       },
       "pattern_at_time/podcast": {
         "n": 1,
-        "top_answer": "alternating weeks of a health news podcast and a comedy podcast",
+        "top_answer": "italian lessons podcast every day",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -360,56 +367,56 @@
       },
       "prediction/commute": {
         "n": 1,
-        "top_answer": "no commute",
+        "top_answer": "driving",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "prediction/lunch": {
         "n": 1,
-        "top_answer": "sourdough sandwich",
+        "top_answer": "homemade burrito bowl",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "prediction/morning_drink": {
         "n": 1,
-        "top_answer": "matcha latte",
+        "top_answer": "iced americano",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "prediction/podcast": {
         "n": 1,
-        "top_answer": "comedy podcast",
+        "top_answer": "true-crime podcast",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "recall/commute": {
         "n": 2,
-        "top_answer": "night bus",
+        "top_answer": "no commute",
         "top_share": 0.5,
         "entropy_bits": 1.0,
         "distinct": 2
       },
       "recall/lunch": {
         "n": 2,
-        "top_answer": "cafeteria salad",
+        "top_answer": "sourdough sandwich",
         "top_share": 0.5,
         "entropy_bits": 1.0,
         "distinct": 2
       },
       "recall/morning_drink": {
         "n": 2,
-        "top_answer": "chai latte",
+        "top_answer": "cold brew",
         "top_share": 0.5,
         "entropy_bits": 1.0,
         "distinct": 2
       },
       "recall/podcast": {
         "n": 2,
-        "top_answer": "dog training podcast",
+        "top_answer": "true-crime podcast",
         "top_share": 0.5,
         "entropy_bits": 1.0,
         "distinct": 2
@@ -431,18 +438,18 @@
     }
   },
   "qa_pool": {
-    "total": 390,
+    "total": 389,
     "by_type": {
-      "recall": 150,
+      "recall": 154,
       "pattern_current": 4,
       "pattern_at_time": 18,
-      "prediction": 75,
+      "prediction": 77,
       "change_detection": 14,
       "attribution": 12,
       "exception_vs_shift": 20,
       "reversion": 6,
       "fact_current": 5,
-      "fact_at_time": 40,
+      "fact_at_time": 33,
       "fact_history": 5,
       "event_status": 8,
       "duration": 16,

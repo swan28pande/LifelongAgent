@@ -18,11 +18,11 @@
     },
     {
       "speaker": "user",
-      "text": "They definitely did. I got everything submitted right before five. I even had some energy left to take my bike out for a quick spin around the chain of lakes afterward. Captured a couple of really nice shots of the sunset reflection on the water too."
+      "text": "They definitely did. I got everything submitted right before five. I even had some time afterward to take a couple of photos of the sunset reflection on the water near the Chain of Lakes."
     },
     {
       "speaker": "assistant",
-      "text": "That sounds like a beautiful evening ride! Minneapolis has some of the best lake views for photography. Are you and Leah doing anything special to celebrate the weekend?"
+      "text": "That sounds like a beautiful scene! Minneapolis has some of the best lake views for photography. Are you and Leah doing anything special to celebrate the weekend?"
     },
     {
       "speaker": "user",
@@ -56,14 +56,12 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "not mentioned",
-      "workout": "cycling",
+      "workout": "not mentioned",
       "outfit": "not mentioned",
       "music": "lo-fi beats",
       "dinner": "takeout burgers"
@@ -74,5 +72,28 @@
   },
   "first_try_failures": [
     "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:24.125153+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "7e3f92d62fead3cb869809ccb02e308c2dc0e640b4b57338285044c647b35764",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "not mentioned",
+          "workout": "cycling",
+          "outfit": "not mentioned",
+          "music": "lo-fi beats",
+          "dinner": "takeout burgers"
+        },
+        "statements": {},
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }

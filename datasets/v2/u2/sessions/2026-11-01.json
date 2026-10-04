@@ -14,11 +14,11 @@
     },
     {
       "speaker": "assistant",
-      "text": "Oatmeal is the perfect way to warm up on a chilly Portland morning. Have you had any time to get out on the tennis courts or do some woodworking this weekend?"
+      "text": "Oatmeal is the perfect way to warm up on a chilly Portland morning. Have you had any time for woodworking today?"
     },
     {
       "speaker": "user",
-      "text": "No tennis today, but I actually spent a couple of hours out in the garage doing some woodworking. I've been sanding down some birch for a small spice rack I'm making for Grace."
+      "text": "I actually spent a couple of hours out in the garage doing some woodworking. I've been sanding down some birch for a small spice rack I'm making for Grace."
     },
     {
       "speaker": "assistant",
@@ -56,14 +56,12 @@
   "model": "gemini-3.5-flash",
   "validator_model": "gemini-3.1-pro-preview",
   "attempts": 5,
-  "passed_validation": false,
-  "failures": [
-    "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ],
+  "passed_validation": true,
+  "failures": [],
   "extracted": {
     "preferences": {
       "breakfast": "oatmeal",
-      "workout": "other",
+      "workout": "not mentioned",
       "evening_show": "nature documentary"
     },
     "statements": {},
@@ -72,5 +70,26 @@
   },
   "first_try_failures": [
     "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
-  ]
+  ],
+  "repair_validation": {
+    "checked_utc": "2026-10-04T00:25:01.252981+00:00",
+    "model": "gemini-3.1-pro-preview",
+    "prompt_sha256": "1b9f3918d31169d1a007f11edb57224e7ed6f01535663ef8d8db75dd7e4a851e",
+    "previous_validation": {
+      "passed_validation": false,
+      "failures": [
+        "pref_leak: workout should be 'not mentioned', conversation gives 'other'"
+      ],
+      "extracted": {
+        "preferences": {
+          "breakfast": "oatmeal",
+          "workout": "other",
+          "evening_show": "nature documentary"
+        },
+        "statements": {},
+        "causes": {},
+        "inventions": []
+      }
+    }
+  }
 }
