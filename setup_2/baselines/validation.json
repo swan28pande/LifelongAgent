@@ -1,0 +1,81 @@
+{
+  "offline_tests_passed": 51,
+  "test_runtime_seconds": 11.47,
+  "schedule_equivalence": [
+    "ours_v4d",
+    "timem",
+    "naive_rag",
+    "full_context"
+  ],
+  "users": 5,
+  "checkpoints_per_user": 24,
+  "sessions": 2738,
+  "distinct_questions": 1000,
+  "cumulative_answer_instances_per_method": 11721,
+  "original_files_unchanged": 4055,
+  "full_context_preflight": {
+    "u1": {
+      "characters": 1296397,
+      "estimated_tokens": 324100,
+      "within_budget": true
+    },
+    "u2": {
+      "characters": 1183587,
+      "estimated_tokens": 295897,
+      "within_budget": true
+    },
+    "u3": {
+      "characters": 1140504,
+      "estimated_tokens": 285126,
+      "within_budget": true
+    },
+    "u4": {
+      "characters": 1016352,
+      "estimated_tokens": 254088,
+      "within_budget": true
+    },
+    "u5": {
+      "characters": 902760,
+      "estimated_tokens": 225690,
+      "within_budget": true
+    }
+  },
+  "copied_timem_compatibility_changes": [
+    "setup_2/baselines/TiMem/source/llm/__init__.py",
+    "setup_2/baselines/TiMem/source/llm/gemini_adapter.py",
+    "setup_2/baselines/TiMem/source/timem/memory/memory_generator.py",
+    "setup_2/baselines/TiMem/source/timem/utils/config_manager.py"
+  ],
+  "runtime_versions": {
+    "qdrant-client": "1.19.1",
+    "faiss-cpu": "1.15.1",
+    "langchain-core": "1.6.6",
+    "langchain-google-genai": "4.4.0",
+    "langchain-community": "0.4.2",
+    "pydantic": "2.13.5"
+  },
+  "live_model_calls": 0,
+  "verified_utc": "2026-10-04T22:49:18.814557+00:00",
+  "input_hashes": {
+    "u1": {
+      "conversations.json": "09bdf11976fc6bb0ea9eb9d2fe4d3750abae36e65b978b6c8c5feddc6bea4f29",
+      "probing_questions.json": "53466226a9d2bb7b0868b556d930a6075f2ca58532c17f164a3e2e73c88fb728"
+    },
+    "u2": {
+      "conversations.json": "8940427573333033cc0a74d4e2f436fdb44801767e6874a9900a3debbaf99e03",
+      "probing_questions.json": "45b9782e1e1bc501f104f23fb8b790ffdbfdd141bb6c62b20b1301dbb56002ec"
+    },
+    "u3": {
+      "conversations.json": "0a4a0778b1438952cd725990612584a51cc987c3057ab4f6c849845055e99727",
+      "probing_questions.json": "695e20b21bffe9a2dbc4a854c7e640e9b662ff0a97648f339a1153d6edade63e"
+    },
+    "u4": {
+      "conversations.json": "678e9f3f113950a170eaa13557c852de803e7d40c86058875ae8baa4ddfcdd6a",
+      "probing_questions.json": "693ed5a75ec198e86e22a84bccb032d250066c796b534b2489b376f199fd1cb9"
+    },
+    "u5": {
+      "conversations.json": "cd9f98547ae78a4bfd6d15891dc712914b3725647cb57588276764675034a116",
+      "probing_questions.json": "792e4f39052fcbf74fa867660c1126fb4b3d6c20a44c4383ec50c5842a798317"
+    }
+  }
+}

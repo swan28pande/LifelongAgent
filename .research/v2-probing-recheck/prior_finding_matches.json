@@ -1,0 +1,5280 @@
+[
+  {
+    "baseline_id": "u1_p202609_0051",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u1_p202609_0051",
+      "original_id": "u1_q0210",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "coffee",
+      "question": "What was Leo's morning coffee routine in January 2028?",
+      "answer": "alternates week by week: matcha latte, then decaf americano, repeating (7-day blocks starting Mon 2026-09-21)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating matcha latte and decaf americano weeks"
+      ],
+      "evidence_days": [
+        205,
+        206,
+        207
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 214,
+      "probe_date": "2026-09-30",
+      "probe_month": "2026-09",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u1"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u1_q0210",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "coffee",
+        "question": "What was Leo's morning coffee routine in January 2028?",
+        "answer": "alternates week by week: matcha latte, then decaf americano, repeating (7-day blocks starting Mon 2026-09-21)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating matcha latte and decaf americano weeks"
+        ],
+        "evidence_days": [
+          205,
+          206,
+          207
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u1_p202706_0111",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u1_p202706_0111",
+      "original_id": "u1_q0212",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "lunch",
+      "question": "What was Leo's lunch routine in October 2027?",
+      "answer": "a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating",
+      "answer_type": "free_text",
+      "accept": [
+        "4 days meal-prep burrito bowl, 3 days ramen"
+      ],
+      "evidence_days": [
+        480,
+        481,
+        482
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 487,
+      "probe_date": "2027-06-30",
+      "probe_month": "2027-06",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u1"
+    },
+    "current_matches": [
+      {
+        "id": "u1_p202710_0136",
+        "original_id": "u1_q0212",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "lunch",
+        "question": "What was Leo's lunch routine in October 2027?",
+        "answer": "a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "4 days meal-prep burrito bowl, 3 days ramen"
+        ],
+        "evidence_days": [
+          480,
+          481,
+          482
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 610,
+        "probe_date": "2027-10-31",
+        "probe_month": "2027-10",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u1",
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3946
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u1_q0212",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "lunch",
+        "question": "What was Leo's lunch routine in October 2027?",
+        "answer": "a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "4 days meal-prep burrito bowl, 3 days ramen"
+        ],
+        "evidence_days": [
+          480,
+          481,
+          482
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u2_p202603_0001",
+    "categories": [
+      "empty_fact_has_no_negative_statement"
+    ],
+    "baseline": {
+      "id": "u2_p202603_0001",
+      "original_id": "u2_q0355",
+      "type": "fact_at_time",
+      "capability": "temporal_fact",
+      "domain": "pets",
+      "question": "What were Marcus's pets on 2026-03-15?",
+      "answer": "none",
+      "answer_type": "free_text",
+      "accept": [
+        "none"
+      ],
+      "evidence_days": [
+        1
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 31,
+      "probe_date": "2026-03-31",
+      "probe_month": "2026-03",
+      "is_retrospective": false,
+      "tags": [
+        "set",
+        "empty"
+      ],
+      "user_id": "u2"
+    },
+    "current_matches": [],
+    "current_pool_matches": [],
+    "selection_status": "absent_from_current_pool"
+  },
+  {
+    "baseline_id": "u2_p202607_0033",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u2_p202607_0033",
+      "original_id": "u2_q0192",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "workout",
+      "question": "What was Marcus's workout routine in October 2026?",
+      "answer": "by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun"
+      ],
+      "evidence_days": [
+        121,
+        122,
+        123
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 153,
+      "probe_date": "2026-07-31",
+      "probe_month": "2026-07",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u2"
+    },
+    "current_matches": [
+      {
+        "id": "u2_p202610_0055",
+        "original_id": "u2_q0191",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "workout",
+        "question": "What was Marcus's workout routine in October 2026?",
+        "answer": "by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun"
+        ],
+        "evidence_days": [
+          121,
+          122,
+          123
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 245,
+        "probe_date": "2026-10-31",
+        "probe_month": "2026-10",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u2",
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1488
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u2_q0191",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "workout",
+        "question": "What was Marcus's workout routine in October 2026?",
+        "answer": "by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun"
+        ],
+        "evidence_days": [
+          121,
+          122,
+          123
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u2_p202608_0038",
+    "categories": [
+      "empty_fact_has_no_negative_statement"
+    ],
+    "baseline": {
+      "id": "u2_p202608_0038",
+      "original_id": "u2_q0351",
+      "type": "fact_at_time",
+      "capability": "temporal_fact",
+      "domain": "pets",
+      "question": "What were Marcus's pets on 2026-08-27?",
+      "answer": "none",
+      "answer_type": "free_text",
+      "accept": [
+        "none"
+      ],
+      "evidence_days": [
+        1
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 184,
+      "probe_date": "2026-08-31",
+      "probe_month": "2026-08",
+      "is_retrospective": false,
+      "tags": [
+        "set",
+        "empty"
+      ],
+      "user_id": "u2"
+    },
+    "current_matches": [],
+    "current_pool_matches": [],
+    "selection_status": "absent_from_current_pool"
+  },
+  {
+    "baseline_id": "u2_p202609_0049",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u2_p202609_0049",
+      "original_id": "u2_q0362",
+      "type": "event_status",
+      "capability": "event_tracking",
+      "domain": "events",
+      "question": "What was the status of the family trip to Japan on 2026-12-15?",
+      "answer": "planning a family trip to Japan next spring (planned)",
+      "answer_type": "free_text",
+      "accept": [
+        "planning a family trip to Japan next spring"
+      ],
+      "evidence_days": [
+        200
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 214,
+      "probe_date": "2026-09-30",
+      "probe_month": "2026-09",
+      "is_retrospective": false,
+      "tags": [
+        "at_time",
+        "planned"
+      ],
+      "user_id": "u2"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u2_q0357",
+        "type": "event_status",
+        "capability": "event_tracking",
+        "domain": "events",
+        "question": "What was the status of the family trip to Japan on 2026-12-15?",
+        "answer": "planning a family trip to Japan next spring (planned)",
+        "answer_type": "free_text",
+        "accept": [
+          "planning a family trip to Japan next spring"
+        ],
+        "evidence_days": [
+          200
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "at_time",
+          "planned"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u2_p202611_0068",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u2_p202611_0068",
+      "original_id": "u2_q0189",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "evening_show",
+      "question": "What was Marcus's evening TV show routine in January 2027?",
+      "answer": "a 7-day cycle starting Fri 2026-11-06: sitcom reruns for 5 days, then nature documentary for 2 days, repeating",
+      "answer_type": "free_text",
+      "accept": [
+        "5 days sitcom reruns, 2 days nature documentaries"
+      ],
+      "evidence_days": [
+        251,
+        252,
+        253
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 275,
+      "probe_date": "2026-11-30",
+      "probe_month": "2026-11",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u2"
+    },
+    "current_matches": [
+      {
+        "id": "u2_p202701_0080",
+        "original_id": "u2_q0188",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "evening_show",
+        "question": "What was Marcus's evening TV show routine in January 2027?",
+        "answer": "a 7-day cycle starting Fri 2026-11-06: sitcom reruns for 5 days, then nature documentary for 2 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "5 days sitcom reruns, 2 days nature documentaries"
+        ],
+        "evidence_days": [
+          251,
+          252,
+          253
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 337,
+        "probe_date": "2027-01-31",
+        "probe_month": "2027-01",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u2",
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 2270
+      },
+      {
+        "id": "u2_r202707_0159",
+        "original_id": "u2_q0188",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "evening_show",
+        "question": "What was Marcus's evening TV show routine in January 2027?",
+        "answer": "a 7-day cycle starting Fri 2026-11-06: sitcom reruns for 5 days, then nature documentary for 2 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "5 days sitcom reruns, 2 days nature documentaries"
+        ],
+        "evidence_days": [
+          251,
+          252,
+          253
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 518,
+        "probe_date": "2027-07-31",
+        "probe_month": "2027-07",
+        "is_retrospective": true,
+        "tags": [
+          "shift"
+        ],
+        "retrospective_of": "u2_p202701_0080",
+        "original_probe_month": "2027-01",
+        "user_id": "u2",
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3408
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u2_q0188",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "evening_show",
+        "question": "What was Marcus's evening TV show routine in January 2027?",
+        "answer": "a 7-day cycle starting Fri 2026-11-06: sitcom reruns for 5 days, then nature documentary for 2 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "5 days sitcom reruns, 2 days nature documentaries"
+        ],
+        "evidence_days": [
+          251,
+          252,
+          253
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u2_r202702_0188",
+    "categories": [
+      "empty_fact_has_no_negative_statement"
+    ],
+    "baseline": {
+      "id": "u2_r202702_0188",
+      "original_id": "u2_q0351",
+      "type": "fact_at_time",
+      "capability": "temporal_fact",
+      "domain": "pets",
+      "question": "What were Marcus's pets on 2026-08-27?",
+      "answer": "none",
+      "answer_type": "free_text",
+      "accept": [
+        "none"
+      ],
+      "evidence_days": [
+        1
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 365,
+      "probe_date": "2027-02-28",
+      "probe_month": "2027-02",
+      "is_retrospective": true,
+      "tags": [
+        "set",
+        "empty"
+      ],
+      "retrospective_of": "u2_p202608_0038",
+      "original_probe_month": "2026-08",
+      "user_id": "u2"
+    },
+    "current_matches": [],
+    "current_pool_matches": [],
+    "selection_status": "absent_from_current_pool"
+  },
+  {
+    "baseline_id": "u2_p202709_0128",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u2_p202709_0128",
+      "original_id": "u2_q0190",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "evening_show",
+      "question": "What was Marcus's evening TV show routine in January 2028?",
+      "answer": "alternates week by week: sci-fi series, then sitcom reruns, repeating (7-day blocks starting Sat 2027-09-11)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of a sci-fi series and sitcom reruns"
+      ],
+      "evidence_days": [
+        560,
+        561,
+        563
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 579,
+      "probe_date": "2027-09-30",
+      "probe_month": "2027-09",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u2"
+    },
+    "current_matches": [
+      {
+        "id": "u2_p202801_0153",
+        "original_id": "u2_q0189",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "evening_show",
+        "question": "What was Marcus's evening TV show routine in January 2028?",
+        "answer": "alternates week by week: sci-fi series, then sitcom reruns, repeating (7-day blocks starting Sat 2027-09-11)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of a sci-fi series and sitcom reruns"
+        ],
+        "evidence_days": [
+          560,
+          561,
+          563
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 702,
+        "probe_date": "2028-01-31",
+        "probe_month": "2028-01",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u2",
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 4625
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u2_q0189",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "evening_show",
+        "question": "What was Marcus's evening TV show routine in January 2028?",
+        "answer": "alternates week by week: sci-fi series, then sitcom reruns, repeating (7-day blocks starting Sat 2027-09-11)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of a sci-fi series and sitcom reruns"
+        ],
+        "evidence_days": [
+          560,
+          561,
+          563
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u3_p202603_0001",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202603_0001",
+      "original_id": "u3_q0154",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "commute",
+      "question": "What was Sofia's commute routine in May 2026?",
+      "answer": "by day of week: night bus on Mon/Tue/Wed; rideshare on Thu/Fri; no commute on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "night bus Mon-Wed, rideshare Thu/Fri, no commute on weekends"
+      ],
+      "evidence_days": [
+        1,
+        3,
+        4
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 31,
+      "probe_date": "2026-03-31",
+      "probe_month": "2026-03",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [
+      {
+        "id": "u3_p202605_0012",
+        "original_id": "u3_q0147",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Sofia's commute routine in May 2026?",
+        "answer": "by day of week: night bus on Mon/Tue/Wed; rideshare on Thu/Fri; no commute on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "night bus Mon-Wed, rideshare Thu/Fri, no commute on weekends"
+        ],
+        "evidence_days": [
+          1,
+          3,
+          4
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 92,
+        "probe_date": "2026-05-31",
+        "probe_month": "2026-05",
+        "is_retrospective": false,
+        "tags": [
+          "initial"
+        ],
+        "user_id": "u3",
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 305
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0147",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Sofia's commute routine in May 2026?",
+        "answer": "by day of week: night bus on Mon/Tue/Wed; rideshare on Thu/Fri; no commute on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "night bus Mon-Wed, rideshare Thu/Fri, no commute on weekends"
+        ],
+        "evidence_days": [
+          1,
+          3,
+          4
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u3_p202603_0002",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202603_0002",
+      "original_id": "u3_q0168",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "podcast",
+      "question": "What was Sofia's podcast routine in June 2026?",
+      "answer": "alternates week by week: health news podcast, then comedy podcast, repeating (7-day blocks starting Sun 2026-03-01)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of a health news podcast and a comedy podcast"
+      ],
+      "evidence_days": [
+        4,
+        5,
+        7
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 31,
+      "probe_date": "2026-03-31",
+      "probe_month": "2026-03",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [
+      {
+        "id": "u3_p202606_0020",
+        "original_id": "u3_q0161",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "podcast",
+        "question": "What was Sofia's podcast routine in June 2026?",
+        "answer": "alternates week by week: health news podcast, then comedy podcast, repeating (7-day blocks starting Sun 2026-03-01)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of a health news podcast and a comedy podcast"
+        ],
+        "evidence_days": [
+          4,
+          5,
+          7
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 122,
+        "probe_date": "2026-06-30",
+        "probe_month": "2026-06",
+        "is_retrospective": false,
+        "tags": [
+          "initial"
+        ],
+        "user_id": "u3",
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 505
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0161",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "podcast",
+        "question": "What was Sofia's podcast routine in June 2026?",
+        "answer": "alternates week by week: health news podcast, then comedy podcast, repeating (7-day blocks starting Sun 2026-03-01)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of a health news podcast and a comedy podcast"
+        ],
+        "evidence_days": [
+          4,
+          5,
+          7
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u3_p202604_0007",
+    "categories": [
+      "empty_fact_has_no_negative_statement"
+    ],
+    "baseline": {
+      "id": "u3_p202604_0007",
+      "original_id": "u3_q0341",
+      "type": "fact_at_time",
+      "capability": "temporal_fact",
+      "domain": "pets",
+      "question": "What were Sofia's pets on 2026-04-15?",
+      "answer": "none",
+      "answer_type": "free_text",
+      "accept": [
+        "none"
+      ],
+      "evidence_days": [
+        1
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 61,
+      "probe_date": "2026-04-30",
+      "probe_month": "2026-04",
+      "is_retrospective": false,
+      "tags": [
+        "set",
+        "empty"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [],
+    "current_pool_matches": [],
+    "selection_status": "absent_from_current_pool"
+  },
+  {
+    "baseline_id": "u3_p202606_0017",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202606_0017",
+      "original_id": "u3_q0160",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "lunch",
+      "question": "What was Sofia's lunch routine in July 2026?",
+      "answer": "by day of week: sourdough sandwich on Mon/Wed/Fri; packed leftovers on Tue/Thu/Sun; brunch out on Sat",
+      "answer_type": "free_text",
+      "accept": [
+        "sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat"
+      ],
+      "evidence_days": [
+        93,
+        94,
+        95
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 122,
+      "probe_date": "2026-06-30",
+      "probe_month": "2026-06",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [
+      {
+        "id": "u3_p202607_0027",
+        "original_id": "u3_q0153",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "lunch",
+        "question": "What was Sofia's lunch routine in July 2026?",
+        "answer": "by day of week: sourdough sandwich on Mon/Wed/Fri; packed leftovers on Tue/Thu/Sun; brunch out on Sat",
+        "answer_type": "free_text",
+        "accept": [
+          "sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat"
+        ],
+        "evidence_days": [
+          93,
+          94,
+          95
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 153,
+        "probe_date": "2026-07-31",
+        "probe_month": "2026-07",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u3",
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 686
+      },
+      {
+        "id": "u3_r202609_0194",
+        "original_id": "u3_q0153",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "lunch",
+        "question": "What was Sofia's lunch routine in July 2026?",
+        "answer": "by day of week: sourdough sandwich on Mon/Wed/Fri; packed leftovers on Tue/Thu/Sun; brunch out on Sat",
+        "answer_type": "free_text",
+        "accept": [
+          "sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat"
+        ],
+        "evidence_days": [
+          93,
+          94,
+          95
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 214,
+        "probe_date": "2026-09-30",
+        "probe_month": "2026-09",
+        "is_retrospective": true,
+        "tags": [
+          "shift"
+        ],
+        "retrospective_of": "u3_p202607_0027",
+        "original_probe_month": "2026-07",
+        "user_id": "u3",
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1201
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0153",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "lunch",
+        "question": "What was Sofia's lunch routine in July 2026?",
+        "answer": "by day of week: sourdough sandwich on Mon/Wed/Fri; packed leftovers on Tue/Thu/Sun; brunch out on Sat",
+        "answer_type": "free_text",
+        "accept": [
+          "sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat"
+        ],
+        "evidence_days": [
+          93,
+          94,
+          95
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u3_p202608_0036",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202608_0036",
+      "original_id": "u3_q0165",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "morning_drink",
+      "question": "What was Sofia's morning drink routine in September 2026?",
+      "answer": "by day of week: cold brew on Mon/Tue/Thu; chai latte on Wed/Fri; hot chocolate on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends"
+      ],
+      "evidence_days": [
+        155,
+        156,
+        157
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 184,
+      "probe_date": "2026-08-31",
+      "probe_month": "2026-08",
+      "is_retrospective": false,
+      "tags": [
+        "reversion"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [
+      {
+        "id": "u3_p202609_0042",
+        "original_id": "u3_q0158",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "morning_drink",
+        "question": "What was Sofia's morning drink routine in September 2026?",
+        "answer": "by day of week: cold brew on Mon/Tue/Thu; chai latte on Wed/Fri; hot chocolate on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends"
+        ],
+        "evidence_days": [
+          155,
+          156,
+          157
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 214,
+        "probe_date": "2026-09-30",
+        "probe_month": "2026-09",
+        "is_retrospective": false,
+        "tags": [
+          "reversion"
+        ],
+        "user_id": "u3",
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1153
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0158",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "morning_drink",
+        "question": "What was Sofia's morning drink routine in September 2026?",
+        "answer": "by day of week: cold brew on Mon/Tue/Thu; chai latte on Wed/Fri; hot chocolate on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends"
+        ],
+        "evidence_days": [
+          155,
+          156,
+          157
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "reversion"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u3_p202610_0049",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202610_0049",
+      "original_id": "u3_q0166",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "morning_drink",
+      "question": "What was Sofia's morning drink routine in May 2027?",
+      "answer": "alternates week by week: drip coffee, then matcha latte, repeating (7-day blocks starting Thu 2026-10-08)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of drip coffee and matcha lattes"
+      ],
+      "evidence_days": [
+        222,
+        226,
+        227
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 245,
+      "probe_date": "2026-10-31",
+      "probe_month": "2026-10",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0159",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "morning_drink",
+        "question": "What was Sofia's morning drink routine in May 2027?",
+        "answer": "alternates week by week: drip coffee, then matcha latte, repeating (7-day blocks starting Thu 2026-10-08)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of drip coffee and matcha lattes"
+        ],
+        "evidence_days": [
+          222,
+          226,
+          227
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u3_p202702_0078",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202702_0078",
+      "original_id": "u3_q0161",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "lunch",
+      "question": "What was Sofia's lunch routine in May 2027?",
+      "answer": "a 5-day cycle starting Mon 2027-02-15: lunch with Tom for 2 days, then sourdough sandwich for 3 days, repeating",
+      "answer_type": "free_text",
+      "accept": [
+        "2 days lunch with Tom, 3 days sourdough sandwich"
+      ],
+      "evidence_days": [
+        353,
+        354,
+        357
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 365,
+      "probe_date": "2027-02-28",
+      "probe_month": "2027-02",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [
+      {
+        "id": "u3_p202705_0093",
+        "original_id": "u3_q0154",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "lunch",
+        "question": "What was Sofia's lunch routine in May 2027?",
+        "answer": "a 5-day cycle starting Mon 2027-02-15: lunch with Tom for 2 days, then sourdough sandwich for 3 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "2 days lunch with Tom, 3 days sourdough sandwich"
+        ],
+        "evidence_days": [
+          353,
+          354,
+          357
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 457,
+        "probe_date": "2027-05-31",
+        "probe_month": "2027-05",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u3",
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2930
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0154",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "lunch",
+        "question": "What was Sofia's lunch routine in May 2027?",
+        "answer": "a 5-day cycle starting Mon 2027-02-15: lunch with Tom for 2 days, then sourdough sandwich for 3 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "2 days lunch with Tom, 3 days sourdough sandwich"
+        ],
+        "evidence_days": [
+          353,
+          354,
+          357
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u3_p202704_0089",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202704_0089",
+      "original_id": "u3_q0156",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "commute",
+      "question": "What was Sofia's commute routine in August 2027?",
+      "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "driving on weekdays"
+      ],
+      "evidence_days": [
+        401,
+        402,
+        405
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 426,
+      "probe_date": "2027-04-30",
+      "probe_month": "2027-04",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0149",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Sofia's commute routine in August 2027?",
+        "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "driving on weekdays"
+        ],
+        "evidence_days": [
+          401,
+          402,
+          405
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u3_p202707_0111",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202707_0111",
+      "original_id": "u3_q0167",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "morning_drink",
+      "question": "What was Sofia's morning drink routine in October 2027?",
+      "answer": "by day of week: drip coffee on Mon/Wed; iced americano on Tue/Thu; matcha latte on Fri; hot chocolate on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "drip coffee Mon/Wed, iced americano Tue/Thu, matcha Fri, hot chocolate weekends"
+      ],
+      "evidence_days": [
+        501,
+        503,
+        504
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 518,
+      "probe_date": "2027-07-31",
+      "probe_month": "2027-07",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0160",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "morning_drink",
+        "question": "What was Sofia's morning drink routine in October 2027?",
+        "answer": "by day of week: drip coffee on Mon/Wed; iced americano on Tue/Thu; matcha latte on Fri; hot chocolate on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "drip coffee Mon/Wed, iced americano Tue/Thu, matcha Fri, hot chocolate weekends"
+        ],
+        "evidence_days": [
+          501,
+          503,
+          504
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u3_p202707_0115",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202707_0115",
+      "original_id": "u3_q0162",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "lunch",
+      "question": "What was Sofia's lunch routine in November 2027?",
+      "answer": "alternates week by week: homemade burrito bowl, then sourdough sandwich, repeating (7-day blocks starting Sat 2027-06-26)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of homemade burrito bowls and sourdough sandwiches"
+      ],
+      "evidence_days": [
+        483,
+        488,
+        490
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 518,
+      "probe_date": "2027-07-31",
+      "probe_month": "2027-07",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0155",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "lunch",
+        "question": "What was Sofia's lunch routine in November 2027?",
+        "answer": "alternates week by week: homemade burrito bowl, then sourdough sandwich, repeating (7-day blocks starting Sat 2027-06-26)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of homemade burrito bowls and sourdough sandwiches"
+        ],
+        "evidence_days": [
+          483,
+          488,
+          490
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u3_p202710_0126",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202710_0126",
+      "original_id": "u3_q0171",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "podcast",
+      "question": "What was Sofia's podcast routine in January 2028?",
+      "answer": "by day of week: dog training podcast on Mon/Wed; true-crime podcast on Tue/Thu; comedy podcast on Fri/Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "dog training podcast Mon/Wed, true crime Tue/Thu, comedy Fri-Sun"
+      ],
+      "evidence_days": [
+        604,
+        605,
+        606
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 610,
+      "probe_date": "2027-10-31",
+      "probe_month": "2027-10",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0164",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "podcast",
+        "question": "What was Sofia's podcast routine in January 2028?",
+        "answer": "by day of week: dog training podcast on Mon/Wed; true-crime podcast on Tue/Thu; comedy podcast on Fri/Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "dog training podcast Mon/Wed, true crime Tue/Thu, comedy Fri-Sun"
+        ],
+        "evidence_days": [
+          604,
+          605,
+          606
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u3_p202711_0136",
+    "categories": [
+      "duration_completion_not_observed"
+    ],
+    "baseline": {
+      "id": "u3_p202711_0136",
+      "original_id": "u3_q0361",
+      "type": "duration",
+      "capability": "temporal_arithmetic",
+      "domain": "commute",
+      "question": "How long did Sofia's commute stay the driving / no commute routine?",
+      "answer": "240 days (2027-04-05 to 2027-11-30)",
+      "answer_type": "free_text",
+      "accept": [
+        "240"
+      ],
+      "evidence_days": [
+        401,
+        639
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 640,
+      "probe_date": "2027-11-30",
+      "probe_month": "2027-11",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0351",
+        "type": "duration",
+        "capability": "temporal_arithmetic",
+        "domain": "commute",
+        "question": "How long did Sofia's commute stay the driving / no commute routine?",
+        "answer": "240 days (2027-04-05 to 2027-11-30)",
+        "answer_type": "free_text",
+        "accept": [
+          "240"
+        ],
+        "evidence_days": [
+          401,
+          639
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u3_p202711_0137",
+    "categories": [
+      "unobserved_shift_boundary"
+    ],
+    "baseline": {
+      "id": "u3_p202711_0137",
+      "original_id": "u3_q0130",
+      "type": "recall",
+      "capability": "episodic_recall",
+      "domain": "podcast",
+      "question": "What was Sofia's podcast on Sunday, 2027-10-24?",
+      "answer": "comedy podcast",
+      "answer_type": "value",
+      "accept": [
+        "comedy podcast"
+      ],
+      "evidence_days": [
+        610,
+        624,
+        631
+      ],
+      "grading": "exact",
+      "viewpoint_day": 640,
+      "probe_date": "2027-11-30",
+      "probe_month": "2027-11",
+      "is_retrospective": false,
+      "tags": [
+        "inferred",
+        "no_session",
+        "boundary"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [],
+    "current_pool_matches": [],
+    "selection_status": "absent_from_current_pool"
+  },
+  {
+    "baseline_id": "u3_p202712_0142",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u3_p202712_0142",
+      "original_id": "u3_q0158",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "commute",
+      "question": "What was Sofia's commute routine in January 2028?",
+      "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "driving on weekdays"
+      ],
+      "evidence_days": [
+        668,
+        669,
+        670
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 671,
+      "probe_date": "2027-12-31",
+      "probe_month": "2027-12",
+      "is_retrospective": false,
+      "tags": [
+        "reversion"
+      ],
+      "user_id": "u3"
+    },
+    "current_matches": [
+      {
+        "id": "u3_p202801_0151",
+        "original_id": "u3_q0151",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Sofia's commute routine in January 2028?",
+        "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "driving on weekdays"
+        ],
+        "evidence_days": [
+          668,
+          669,
+          670
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 702,
+        "probe_date": "2028-01-31",
+        "probe_month": "2028-01",
+        "is_retrospective": false,
+        "tags": [
+          "reversion"
+        ],
+        "user_id": "u3",
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4924
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u3_q0151",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Sofia's commute routine in January 2028?",
+        "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "driving on weekdays"
+        ],
+        "evidence_days": [
+          668,
+          669,
+          670
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "reversion"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202603_0004",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202603_0004",
+      "original_id": "u4_q0119",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "breakfast",
+      "question": "What was Daniel's breakfast routine in April 2026?",
+      "answer": "a 2-block rotation of 7-day blocks starting Sun 2026-03-01 - block 1: by day of week: granola on Mon/Wed/Fri; eggs on toast on Tue/Thu; waffles on Sat; bacon and eggs on Sun | block 2: by day of week: oatmeal on Mon/Wed/Fri; eggs on toast on Tue/Thu; waffles on Sat; bacon and eggs on Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "two-week rotation of granola or oatmeal with eggs, waffles and a weekend fry-up"
+      ],
+      "evidence_days": [
+        1,
+        2,
+        3
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 31,
+      "probe_date": "2026-03-31",
+      "probe_month": "2026-03",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0106",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast routine in April 2026?",
+        "answer": "a 2-block rotation of 7-day blocks starting Sun 2026-03-01 - block 1: by day of week: granola on Mon/Wed/Fri; eggs on toast on Tue/Thu; waffles on Sat; bacon and eggs on Sun | block 2: by day of week: oatmeal on Mon/Wed/Fri; eggs on toast on Tue/Thu; waffles on Sat; bacon and eggs on Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "two-week rotation of granola or oatmeal with eggs, waffles and a weekend fry-up"
+        ],
+        "evidence_days": [
+          1,
+          2,
+          3
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u4_p202603_0005",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202603_0005",
+      "original_id": "u4_q0130",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "music",
+      "question": "What was Daniel's work music routine in October 2026?",
+      "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of indie rock and lo-fi beats"
+      ],
+      "evidence_days": [
+        1,
+        2,
+        3
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 31,
+      "probe_date": "2026-03-31",
+      "probe_month": "2026-03",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202610_0038",
+        "original_id": "u4_q0117",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Daniel's work music routine in October 2026?",
+        "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of indie rock and lo-fi beats"
+        ],
+        "evidence_days": [
+          1,
+          2,
+          3
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 245,
+        "probe_date": "2026-10-31",
+        "probe_month": "2026-10",
+        "is_retrospective": false,
+        "tags": [
+          "initial"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1049
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0117",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Daniel's work music routine in October 2026?",
+        "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of indie rock and lo-fi beats"
+        ],
+        "evidence_days": [
+          1,
+          2,
+          3
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202604_0008",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202604_0008",
+      "original_id": "u4_q0327",
+      "type": "event_status",
+      "capability": "event_tracking",
+      "domain": "events",
+      "question": "What was the status of the spring 10K on 2026-05-19?",
+      "answer": "signed up for a spring 10K (planned)",
+      "answer_type": "free_text",
+      "accept": [
+        "signed up for a spring 10K"
+      ],
+      "evidence_days": [
+        60
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 61,
+      "probe_date": "2026-04-30",
+      "probe_month": "2026-04",
+      "is_retrospective": false,
+      "tags": [
+        "at_time",
+        "planned"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0314",
+        "type": "event_status",
+        "capability": "event_tracking",
+        "domain": "events",
+        "question": "What was the status of the spring 10K on 2026-05-19?",
+        "answer": "signed up for a spring 10K (planned)",
+        "answer_type": "free_text",
+        "accept": [
+          "signed up for a spring 10K"
+        ],
+        "evidence_days": [
+          60
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "at_time",
+          "planned"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u4_p202605_0012",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202605_0012",
+      "original_id": "u4_q0015",
+      "type": "recall",
+      "capability": "episodic_recall",
+      "domain": "breakfast",
+      "question": "What was Daniel's breakfast on Sunday, 2026-08-23?",
+      "answer": "bacon and eggs",
+      "answer_type": "value",
+      "accept": [
+        "bacon and eggs"
+      ],
+      "evidence_days": [
+        92
+      ],
+      "grading": "exact",
+      "viewpoint_day": 92,
+      "probe_date": "2026-05-31",
+      "probe_month": "2026-05",
+      "is_retrospective": false,
+      "tags": [
+        "inferred",
+        "no_session",
+        "boundary"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202608_0026",
+        "original_id": "u4_q0014",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast on Sunday, 2026-08-23?",
+        "answer": "bacon and eggs",
+        "answer_type": "value",
+        "accept": [
+          "bacon and eggs"
+        ],
+        "evidence_days": [
+          92
+        ],
+        "grading": "exact",
+        "viewpoint_day": 184,
+        "probe_date": "2026-08-31",
+        "probe_month": "2026-08",
+        "is_retrospective": false,
+        "tags": [
+          "inferred",
+          "no_session",
+          "boundary"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 659
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0014",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast on Sunday, 2026-08-23?",
+        "answer": "bacon and eggs",
+        "answer_type": "value",
+        "accept": [
+          "bacon and eggs"
+        ],
+        "evidence_days": [
+          92
+        ],
+        "grading": "exact",
+        "tags": [
+          "inferred",
+          "no_session",
+          "boundary"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202606_0016",
+    "categories": [
+      "duration_completion_not_observed"
+    ],
+    "baseline": {
+      "id": "u4_p202606_0016",
+      "original_id": "u4_q0349",
+      "type": "duration",
+      "capability": "temporal_arithmetic",
+      "domain": "workout",
+      "question": "How long did Daniel's workout stay the cycling / gym / long ride / rest day / yoga routine?",
+      "answer": "122 days (2026-03-01 to 2026-06-30)",
+      "answer_type": "free_text",
+      "accept": [
+        "122"
+      ],
+      "evidence_days": [
+        3,
+        121
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 122,
+      "probe_date": "2026-06-30",
+      "probe_month": "2026-06",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0336",
+        "type": "duration",
+        "capability": "temporal_arithmetic",
+        "domain": "workout",
+        "question": "How long did Daniel's workout stay the cycling / gym / long ride / rest day / yoga routine?",
+        "answer": "122 days (2026-03-01 to 2026-06-30)",
+        "answer_type": "free_text",
+        "accept": [
+          "122"
+        ],
+        "evidence_days": [
+          3,
+          121
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u4_p202607_0019",
+    "categories": [
+      "duration_completion_not_observed"
+    ],
+    "baseline": {
+      "id": "u4_p202607_0019",
+      "original_id": "u4_q0353",
+      "type": "duration",
+      "capability": "temporal_arithmetic",
+      "domain": "dinner",
+      "question": "How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?",
+      "answer": "152 days (2026-03-01 to 2026-07-30)",
+      "answer_type": "free_text",
+      "accept": [
+        "152"
+      ],
+      "evidence_days": [
+        1,
+        151
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 153,
+      "probe_date": "2026-07-31",
+      "probe_month": "2026-07",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202607_0020",
+        "original_id": "u4_q0340",
+        "type": "duration",
+        "capability": "temporal_arithmetic",
+        "domain": "dinner",
+        "question": "How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?",
+        "answer": "152 days (2026-03-01 to 2026-07-30)",
+        "answer_type": "free_text",
+        "accept": [
+          "152"
+        ],
+        "evidence_days": [
+          1,
+          151
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 153,
+        "probe_date": "2026-07-31",
+        "probe_month": "2026-07",
+        "is_retrospective": false,
+        "tags": [
+          "initial"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 501
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0340",
+        "type": "duration",
+        "capability": "temporal_arithmetic",
+        "domain": "dinner",
+        "question": "How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?",
+        "answer": "152 days (2026-03-01 to 2026-07-30)",
+        "answer_type": "free_text",
+        "accept": [
+          "152"
+        ],
+        "evidence_days": [
+          1,
+          151
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_r202607_0173",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_r202607_0173",
+      "original_id": "u4_q0130",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "music",
+      "question": "What was Daniel's work music routine in October 2026?",
+      "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of indie rock and lo-fi beats"
+      ],
+      "evidence_days": [
+        1,
+        2,
+        3
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 153,
+      "probe_date": "2026-07-31",
+      "probe_month": "2026-07",
+      "is_retrospective": true,
+      "tags": [
+        "initial"
+      ],
+      "retrospective_of": "u4_p202603_0005",
+      "original_probe_month": "2026-03",
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202610_0038",
+        "original_id": "u4_q0117",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Daniel's work music routine in October 2026?",
+        "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of indie rock and lo-fi beats"
+        ],
+        "evidence_days": [
+          1,
+          2,
+          3
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 245,
+        "probe_date": "2026-10-31",
+        "probe_month": "2026-10",
+        "is_retrospective": false,
+        "tags": [
+          "initial"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1049
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0117",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Daniel's work music routine in October 2026?",
+        "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of indie rock and lo-fi beats"
+        ],
+        "evidence_days": [
+          1,
+          2,
+          3
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202609_0035",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202609_0035",
+      "original_id": "u4_q0330",
+      "type": "event_status",
+      "capability": "event_tracking",
+      "domain": "events",
+      "question": "What was the status of his wrist fracture on 2026-10-13?",
+      "answer": "fractured his wrist climbing (happened)",
+      "answer_type": "free_text",
+      "accept": [
+        "fractured his wrist climbing"
+      ],
+      "evidence_days": [
+        210
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 214,
+      "probe_date": "2026-09-30",
+      "probe_month": "2026-09",
+      "is_retrospective": false,
+      "tags": [
+        "at_time",
+        "happened"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0317",
+        "type": "event_status",
+        "capability": "event_tracking",
+        "domain": "events",
+        "question": "What was the status of his wrist fracture on 2026-10-13?",
+        "answer": "fractured his wrist climbing (happened)",
+        "answer_type": "free_text",
+        "accept": [
+          "fractured his wrist climbing"
+        ],
+        "evidence_days": [
+          210
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "at_time",
+          "happened"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u4_p202609_0037",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202609_0037",
+      "original_id": "u4_q0120",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "breakfast",
+      "question": "What was Daniel's breakfast routine in March 2027?",
+      "answer": "by day of week: smoothie bowl on Mon/Wed; eggs on toast on Tue/Thu; granola on Fri; brunch with Leah on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "smoothie bowls and eggs on weekdays, weekend brunch with Leah"
+      ],
+      "evidence_days": [
+        183,
+        184,
+        185
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 214,
+      "probe_date": "2026-09-30",
+      "probe_month": "2026-09",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0107",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast routine in March 2027?",
+        "answer": "by day of week: smoothie bowl on Mon/Wed; eggs on toast on Tue/Thu; granola on Fri; brunch with Leah on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "smoothie bowls and eggs on weekdays, weekend brunch with Leah"
+        ],
+        "evidence_days": [
+          183,
+          184,
+          185
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u4_p202611_0042",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202611_0042",
+      "original_id": "u4_q0137",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "outfit",
+      "question": "What was Daniel's work outfit routine in December 2026?",
+      "answer": "by day of week: blazer and slacks on Mon/Wed; button-down and chinos on Tue/Thu; sweater and jeans on Fri; hoodie and joggers on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "blazer Mon/Wed, button-down Tue/Thu, sweater Fri, hoodie on weekends"
+      ],
+      "evidence_days": [
+        263,
+        270,
+        272
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 275,
+      "probe_date": "2026-11-30",
+      "probe_month": "2026-11",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202612_0053",
+        "original_id": "u4_q0124",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "outfit",
+        "question": "What was Daniel's work outfit routine in December 2026?",
+        "answer": "by day of week: blazer and slacks on Mon/Wed; button-down and chinos on Tue/Thu; sweater and jeans on Fri; hoodie and joggers on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "blazer Mon/Wed, button-down Tue/Thu, sweater Fri, hoodie on weekends"
+        ],
+        "evidence_days": [
+          263,
+          270,
+          272
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 306,
+        "probe_date": "2026-12-31",
+        "probe_month": "2026-12",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1495
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0124",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "outfit",
+        "question": "What was Daniel's work outfit routine in December 2026?",
+        "answer": "by day of week: blazer and slacks on Mon/Wed; button-down and chinos on Tue/Thu; sweater and jeans on Fri; hoodie and joggers on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "blazer Mon/Wed, button-down Tue/Thu, sweater Fri, hoodie on weekends"
+        ],
+        "evidence_days": [
+          263,
+          270,
+          272
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202704_0077",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202704_0077",
+      "original_id": "u4_q0138",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "outfit",
+      "question": "What was Daniel's work outfit routine in July 2027?",
+      "answer": "alternates week by week: flannel and jeans, then button-down and chinos, repeating (7-day blocks starting Wed 2027-04-14)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of flannel and jeans and button-down and chinos"
+      ],
+      "evidence_days": [
+        410,
+        414,
+        416
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 426,
+      "probe_date": "2027-04-30",
+      "probe_month": "2027-04",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202707_0099",
+        "original_id": "u4_q0125",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "outfit",
+        "question": "What was Daniel's work outfit routine in July 2027?",
+        "answer": "alternates week by week: flannel and jeans, then button-down and chinos, repeating (7-day blocks starting Wed 2027-04-14)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of flannel and jeans and button-down and chinos"
+        ],
+        "evidence_days": [
+          410,
+          414,
+          416
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 518,
+        "probe_date": "2027-07-31",
+        "probe_month": "2027-07",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2961
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0125",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "outfit",
+        "question": "What was Daniel's work outfit routine in July 2027?",
+        "answer": "alternates week by week: flannel and jeans, then button-down and chinos, repeating (7-day blocks starting Wed 2027-04-14)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of flannel and jeans and button-down and chinos"
+        ],
+        "evidence_days": [
+          410,
+          414,
+          416
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202705_0087",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202705_0087",
+      "original_id": "u4_q0126",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "dinner",
+      "question": "What was Daniel's dinner routine in July 2027?",
+      "answer": "by day of week: shrimp pad thai on Mon; fish tacos on Tue; tofu green curry on Wed; pasta on Thu; fish and chips on Fri; grilled salmon on Sat; roast vegetables on Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon"
+      ],
+      "evidence_days": [
+        454,
+        455,
+        457
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 457,
+      "probe_date": "2027-05-31",
+      "probe_month": "2027-05",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202707_0101",
+        "original_id": "u4_q0113",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner routine in July 2027?",
+        "answer": "by day of week: shrimp pad thai on Mon; fish tacos on Tue; tofu green curry on Wed; pasta on Thu; fish and chips on Fri; grilled salmon on Sat; roast vegetables on Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon"
+        ],
+        "evidence_days": [
+          454,
+          455,
+          457
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 518,
+        "probe_date": "2027-07-31",
+        "probe_month": "2027-07",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3011
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0113",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner routine in July 2027?",
+        "answer": "by day of week: shrimp pad thai on Mon; fish tacos on Tue; tofu green curry on Wed; pasta on Thu; fish and chips on Fri; grilled salmon on Sat; roast vegetables on Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon"
+        ],
+        "evidence_days": [
+          454,
+          455,
+          457
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202706_0097",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202706_0097",
+      "original_id": "u4_q0122",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "breakfast",
+      "question": "What was Daniel's breakfast routine in July 2027?",
+      "answer": "by day of week: smoothie bowl on Mon/Wed; smoked salmon bagel on Tue/Thu; bakery croissant on Fri; brunch with Leah on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "smoothie bowls and salmon bagels on weekdays, weekend brunch with Leah"
+      ],
+      "evidence_days": [
+        460,
+        465,
+        468
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 487,
+      "probe_date": "2027-06-30",
+      "probe_month": "2027-06",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202707_0097",
+        "original_id": "u4_q0109",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast routine in July 2027?",
+        "answer": "by day of week: smoothie bowl on Mon/Wed; smoked salmon bagel on Tue/Thu; bakery croissant on Fri; brunch with Leah on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "smoothie bowls and salmon bagels on weekdays, weekend brunch with Leah"
+        ],
+        "evidence_days": [
+          460,
+          465,
+          468
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 518,
+        "probe_date": "2027-07-31",
+        "probe_month": "2027-07",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2910
+      },
+      {
+        "id": "u4_r202709_0160",
+        "original_id": "u4_q0109",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast routine in July 2027?",
+        "answer": "by day of week: smoothie bowl on Mon/Wed; smoked salmon bagel on Tue/Thu; bakery croissant on Fri; brunch with Leah on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "smoothie bowls and salmon bagels on weekdays, weekend brunch with Leah"
+        ],
+        "evidence_days": [
+          460,
+          465,
+          468
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 579,
+        "probe_date": "2027-09-30",
+        "probe_month": "2027-09",
+        "is_retrospective": true,
+        "tags": [
+          "shift"
+        ],
+        "retrospective_of": "u4_p202707_0097",
+        "original_probe_month": "2027-07",
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3719
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0109",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast routine in July 2027?",
+        "answer": "by day of week: smoothie bowl on Mon/Wed; smoked salmon bagel on Tue/Thu; bakery croissant on Fri; brunch with Leah on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "smoothie bowls and salmon bagels on weekdays, weekend brunch with Leah"
+        ],
+        "evidence_days": [
+          460,
+          465,
+          468
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202706_0100",
+    "categories": [
+      "future_completed_duration_in_gold"
+    ],
+    "baseline": {
+      "id": "u4_p202706_0100",
+      "original_id": "u4_q0357",
+      "type": "duration",
+      "capability": "temporal_arithmetic",
+      "domain": "music",
+      "question": "How long did Daniel's work music stay audiobooks?",
+      "answer": "18 days (2027-06-14 to 2027-07-01)",
+      "answer_type": "free_text",
+      "accept": [
+        "18"
+      ],
+      "evidence_days": [
+        472,
+        484
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 487,
+      "probe_date": "2027-06-30",
+      "probe_month": "2027-06",
+      "is_retrospective": false,
+      "tags": [
+        "temporary"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202707_0104",
+        "original_id": "u4_q0344",
+        "type": "duration",
+        "capability": "temporal_arithmetic",
+        "domain": "music",
+        "question": "How long did Daniel's work music stay audiobooks?",
+        "answer": "18 days (2027-06-14 to 2027-07-01)",
+        "answer_type": "free_text",
+        "accept": [
+          "18"
+        ],
+        "evidence_days": [
+          472,
+          484
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 518,
+        "probe_date": "2027-07-31",
+        "probe_month": "2027-07",
+        "is_retrospective": false,
+        "tags": [
+          "temporary"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3085
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0344",
+        "type": "duration",
+        "capability": "temporal_arithmetic",
+        "domain": "music",
+        "question": "How long did Daniel's work music stay audiobooks?",
+        "answer": "18 days (2027-06-14 to 2027-07-01)",
+        "answer_type": "free_text",
+        "accept": [
+          "18"
+        ],
+        "evidence_days": [
+          472,
+          484
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "temporary"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202707_0101",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202707_0101",
+      "original_id": "u4_q0133",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "music",
+      "question": "What was Daniel's work music routine in August 2027?",
+      "answer": "a 7-day cycle starting Mon 2026-12-28: jazz records for 3 days, then indie rock for 4 days, repeating",
+      "answer_type": "free_text",
+      "accept": [
+        "3 days jazz records, 4 days indie rock"
+      ],
+      "evidence_days": [
+        489,
+        490,
+        493
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 518,
+      "probe_date": "2027-07-31",
+      "probe_month": "2027-07",
+      "is_retrospective": false,
+      "tags": [
+        "reversion"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0120",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Daniel's work music routine in August 2027?",
+        "answer": "a 7-day cycle starting Mon 2026-12-28: jazz records for 3 days, then indie rock for 4 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "3 days jazz records, 4 days indie rock"
+        ],
+        "evidence_days": [
+          489,
+          490,
+          493
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "reversion"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u4_p202707_0104",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202707_0104",
+      "original_id": "u4_q0108",
+      "type": "recall",
+      "capability": "episodic_recall",
+      "domain": "dinner",
+      "question": "What was Daniel's dinner on Friday, 2027-08-20?",
+      "answer": "fish and chips",
+      "answer_type": "value",
+      "accept": [
+        "fish and chips"
+      ],
+      "evidence_days": [
+        454,
+        489
+      ],
+      "grading": "exact",
+      "viewpoint_day": 518,
+      "probe_date": "2027-07-31",
+      "probe_month": "2027-07",
+      "is_retrospective": false,
+      "tags": [
+        "inferred",
+        "no_session",
+        "boundary"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202708_0112",
+        "original_id": "u4_q0095",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner on Friday, 2027-08-20?",
+        "answer": "fish and chips",
+        "answer_type": "value",
+        "accept": [
+          "fish and chips"
+        ],
+        "evidence_days": [
+          454,
+          489
+        ],
+        "grading": "exact",
+        "viewpoint_day": 549,
+        "probe_date": "2027-08-31",
+        "probe_month": "2027-08",
+        "is_retrospective": false,
+        "tags": [
+          "inferred",
+          "no_session",
+          "boundary"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3355
+      },
+      {
+        "id": "u4_r202801_0170",
+        "original_id": "u4_q0095",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner on Friday, 2027-08-20?",
+        "answer": "fish and chips",
+        "answer_type": "value",
+        "accept": [
+          "fish and chips"
+        ],
+        "evidence_days": [
+          454,
+          489
+        ],
+        "grading": "exact",
+        "viewpoint_day": 702,
+        "probe_date": "2028-01-31",
+        "probe_month": "2028-01",
+        "is_retrospective": true,
+        "tags": [
+          "inferred",
+          "no_session",
+          "boundary"
+        ],
+        "retrospective_of": "u4_p202708_0112",
+        "original_probe_month": "2027-08",
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5153
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0095",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner on Friday, 2027-08-20?",
+        "answer": "fish and chips",
+        "answer_type": "value",
+        "accept": [
+          "fish and chips"
+        ],
+        "evidence_days": [
+          454,
+          489
+        ],
+        "grading": "exact",
+        "tags": [
+          "inferred",
+          "no_session",
+          "boundary"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202708_0111",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202708_0111",
+      "original_id": "u4_q0337",
+      "type": "event_status",
+      "capability": "event_tracking",
+      "domain": "events",
+      "question": "What was the status of the design competition on 2027-09-08?",
+      "answer": "started a huge design competition deadline at work (happened)",
+      "answer_type": "free_text",
+      "accept": [
+        "started a huge design competition deadline at work"
+      ],
+      "evidence_days": [
+        542
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 549,
+      "probe_date": "2027-08-31",
+      "probe_month": "2027-08",
+      "is_retrospective": false,
+      "tags": [
+        "at_time",
+        "happened"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202709_0113",
+        "original_id": "u4_q0324",
+        "type": "event_status",
+        "capability": "event_tracking",
+        "domain": "events",
+        "question": "What was the status of the design competition on 2027-09-08?",
+        "answer": "started a huge design competition deadline at work (happened)",
+        "answer_type": "free_text",
+        "accept": [
+          "started a huge design competition deadline at work"
+        ],
+        "evidence_days": [
+          542
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 579,
+        "probe_date": "2027-09-30",
+        "probe_month": "2027-09",
+        "is_retrospective": false,
+        "tags": [
+          "at_time",
+          "happened"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3498
+      },
+      {
+        "id": "u4_r202711_0165",
+        "original_id": "u4_q0324",
+        "type": "event_status",
+        "capability": "event_tracking",
+        "domain": "events",
+        "question": "What was the status of the design competition on 2027-09-08?",
+        "answer": "started a huge design competition deadline at work (happened)",
+        "answer_type": "free_text",
+        "accept": [
+          "started a huge design competition deadline at work"
+        ],
+        "evidence_days": [
+          542
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 640,
+        "probe_date": "2027-11-30",
+        "probe_month": "2027-11",
+        "is_retrospective": true,
+        "tags": [
+          "at_time",
+          "happened"
+        ],
+        "retrospective_of": "u4_p202709_0113",
+        "original_probe_month": "2027-09",
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4471
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0324",
+        "type": "event_status",
+        "capability": "event_tracking",
+        "domain": "events",
+        "question": "What was the status of the design competition on 2027-09-08?",
+        "answer": "started a huge design competition deadline at work (happened)",
+        "answer_type": "free_text",
+        "accept": [
+          "started a huge design competition deadline at work"
+        ],
+        "evidence_days": [
+          542
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "at_time",
+          "happened"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202708_0113",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202708_0113",
+      "original_id": "u4_q0127",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "dinner",
+      "question": "What was Daniel's dinner routine around 2027-09-08?",
+      "answer": "delivery sushi every day",
+      "answer_type": "free_text",
+      "accept": [
+        "delivery sushi every night"
+      ],
+      "evidence_days": [
+        542,
+        543,
+        548
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 549,
+      "probe_date": "2027-08-31",
+      "probe_month": "2027-08",
+      "is_retrospective": false,
+      "tags": [
+        "temporary"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202709_0114",
+        "original_id": "u4_q0114",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner routine around 2027-09-08?",
+        "answer": "delivery sushi every day",
+        "answer_type": "free_text",
+        "accept": [
+          "delivery sushi every night"
+        ],
+        "evidence_days": [
+          542,
+          543,
+          548
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 579,
+        "probe_date": "2027-09-30",
+        "probe_month": "2027-09",
+        "is_retrospective": false,
+        "tags": [
+          "temporary"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3523
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0114",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner routine around 2027-09-08?",
+        "answer": "delivery sushi every day",
+        "answer_type": "free_text",
+        "accept": [
+          "delivery sushi every night"
+        ],
+        "evidence_days": [
+          542,
+          543,
+          548
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "temporary"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202710_0129",
+    "categories": [
+      "change_citations_do_not_observe_change",
+      "non_unique_change_date_rejected_by_grader"
+    ],
+    "baseline": {
+      "id": "u4_p202710_0129",
+      "original_id": "u4_q0220",
+      "type": "change_detection",
+      "capability": "temporal_change",
+      "domain": "music",
+      "question": "When did Daniel's work music routine change from the indie rock / jazz records routine to the ambient electronic / indie rock / jazz records routine?",
+      "answer": "2027-10-26",
+      "answer_type": "date",
+      "accept": [
+        "2027-10-26"
+      ],
+      "evidence_days": [
+        602,
+        605
+      ],
+      "grading": "date_exact",
+      "viewpoint_day": 610,
+      "probe_date": "2027-10-31",
+      "probe_month": "2027-10",
+      "is_retrospective": false,
+      "tags": [
+        "shift",
+        "implicit"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202710_0126",
+        "original_id": "u4_q0207",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "music",
+        "question": "When did Daniel's work music routine change from the indie rock / jazz records routine to the ambient electronic / indie rock / jazz records routine?",
+        "answer": "2027-10-26",
+        "answer_type": "date",
+        "accept": [
+          "2027-10-26"
+        ],
+        "evidence_days": [
+          602,
+          605
+        ],
+        "grading": "date_exact",
+        "viewpoint_day": 610,
+        "probe_date": "2027-10-31",
+        "probe_month": "2027-10",
+        "is_retrospective": false,
+        "tags": [
+          "shift",
+          "implicit"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3989
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0207",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "music",
+        "question": "When did Daniel's work music routine change from the indie rock / jazz records routine to the ambient electronic / indie rock / jazz records routine?",
+        "answer": "2027-10-26",
+        "answer_type": "date",
+        "accept": [
+          "2027-10-26"
+        ],
+        "evidence_days": [
+          602,
+          605
+        ],
+        "grading": "date_exact",
+        "tags": [
+          "shift",
+          "implicit"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202710_0132",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202710_0132",
+      "original_id": "u4_q0072",
+      "type": "recall",
+      "capability": "episodic_recall",
+      "domain": "music",
+      "question": "What was Daniel's work music on Tuesday, 2027-12-14?",
+      "answer": "jazz records",
+      "answer_type": "value",
+      "accept": [
+        "jazz records"
+      ],
+      "evidence_days": [
+        605
+      ],
+      "grading": "exact",
+      "viewpoint_day": 610,
+      "probe_date": "2027-10-31",
+      "probe_month": "2027-10",
+      "is_retrospective": false,
+      "tags": [
+        "inferred",
+        "no_session",
+        "boundary"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0060",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "music",
+        "question": "What was Daniel's work music on Tuesday, 2027-12-14?",
+        "answer": "jazz records",
+        "answer_type": "value",
+        "accept": [
+          "jazz records"
+        ],
+        "evidence_days": [
+          605
+        ],
+        "grading": "exact",
+        "tags": [
+          "inferred",
+          "no_session",
+          "boundary"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u4_p202711_0136",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202711_0136",
+      "original_id": "u4_q0123",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "breakfast",
+      "question": "What was Daniel's breakfast routine in January 2028?",
+      "answer": "a 5-day cycle starting Wed 2027-11-10: overnight oats for 3 days, then smoked salmon bagel for 2 days, repeating",
+      "answer_type": "free_text",
+      "accept": [
+        "3 days overnight oats, 2 days smoked salmon bagel"
+      ],
+      "evidence_days": [
+        620,
+        621,
+        622
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 640,
+      "probe_date": "2027-11-30",
+      "probe_month": "2027-11",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202801_0156",
+        "original_id": "u4_q0110",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast routine in January 2028?",
+        "answer": "a 5-day cycle starting Wed 2027-11-10: overnight oats for 3 days, then smoked salmon bagel for 2 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "3 days overnight oats, 2 days smoked salmon bagel"
+        ],
+        "evidence_days": [
+          620,
+          621,
+          622
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 702,
+        "probe_date": "2028-01-31",
+        "probe_month": "2028-01",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5075
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0110",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "breakfast",
+        "question": "What was Daniel's breakfast routine in January 2028?",
+        "answer": "a 5-day cycle starting Wed 2027-11-10: overnight oats for 3 days, then smoked salmon bagel for 2 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "3 days overnight oats, 2 days smoked salmon bagel"
+        ],
+        "evidence_days": [
+          620,
+          621,
+          622
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202712_0146",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202712_0146",
+      "original_id": "u4_q0135",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "music",
+      "question": "What was Daniel's work music routine in January 2028?",
+      "answer": "alternates week by week: ambient electronic, then classical, repeating (7-day blocks starting Mon 2027-12-20)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of ambient electronic and classical"
+      ],
+      "evidence_days": [
+        661,
+        662,
+        664
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 671,
+      "probe_date": "2027-12-31",
+      "probe_month": "2027-12",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202801_0153",
+        "original_id": "u4_q0122",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Daniel's work music routine in January 2028?",
+        "answer": "alternates week by week: ambient electronic, then classical, repeating (7-day blocks starting Mon 2027-12-20)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of ambient electronic and classical"
+        ],
+        "evidence_days": [
+          661,
+          662,
+          664
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 702,
+        "probe_date": "2028-01-31",
+        "probe_month": "2028-01",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4998
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0122",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Daniel's work music routine in January 2028?",
+        "answer": "alternates week by week: ambient electronic, then classical, repeating (7-day blocks starting Mon 2027-12-20)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of ambient electronic and classical"
+        ],
+        "evidence_days": [
+          661,
+          662,
+          664
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202712_0147",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202712_0147",
+      "original_id": "u4_q0129",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "dinner",
+      "question": "What was Daniel's dinner routine in January 2028?",
+      "answer": "a 7-day cycle starting Wed 2027-12-15: grilled salmon for 3 days, then veggie chili for 4 days, repeating",
+      "answer_type": "free_text",
+      "accept": [
+        "3 days grilled salmon, 4 days veggie chili"
+      ],
+      "evidence_days": [
+        657,
+        659,
+        661
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 671,
+      "probe_date": "2027-12-31",
+      "probe_month": "2027-12",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [
+      {
+        "id": "u4_p202801_0155",
+        "original_id": "u4_q0116",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner routine in January 2028?",
+        "answer": "a 7-day cycle starting Wed 2027-12-15: grilled salmon for 3 days, then veggie chili for 4 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "3 days grilled salmon, 4 days veggie chili"
+        ],
+        "evidence_days": [
+          657,
+          659,
+          661
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 702,
+        "probe_date": "2028-01-31",
+        "probe_month": "2028-01",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u4",
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5049
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0116",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "dinner",
+        "question": "What was Daniel's dinner routine in January 2028?",
+        "answer": "a 7-day cycle starting Wed 2027-12-15: grilled salmon for 3 days, then veggie chili for 4 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "3 days grilled salmon, 4 days veggie chili"
+        ],
+        "evidence_days": [
+          657,
+          659,
+          661
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u4_p202801_0153",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202801_0153",
+      "original_id": "u4_q0029",
+      "type": "recall",
+      "capability": "episodic_recall",
+      "domain": "workout",
+      "question": "What was Daniel's workout on Friday, 2028-02-04?",
+      "answer": "rest day",
+      "answer_type": "value",
+      "accept": [
+        "rest day"
+      ],
+      "evidence_days": [
+        622,
+        664,
+        678
+      ],
+      "grading": "exact",
+      "viewpoint_day": 702,
+      "probe_date": "2028-01-31",
+      "probe_month": "2028-01",
+      "is_retrospective": false,
+      "tags": [
+        "inferred"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0023",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "workout",
+        "question": "What was Daniel's workout on Friday, 2028-02-04?",
+        "answer": "rest day",
+        "answer_type": "value",
+        "accept": [
+          "rest day"
+        ],
+        "evidence_days": [
+          622,
+          664,
+          678
+        ],
+        "grading": "exact",
+        "tags": [
+          "inferred"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u4_p202801_0154",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u4_p202801_0154",
+      "original_id": "u4_q0140",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "outfit",
+      "question": "What was Daniel's work outfit routine around 2028-02-08?",
+      "answer": "a 7-day cycle starting Wed 2028-01-19: black t-shirt and jeans for 5 days, then sweater and jeans for 2 days, repeating",
+      "answer_type": "free_text",
+      "accept": [
+        "5 days black t-shirt and jeans, 2 days sweater and jeans"
+      ],
+      "evidence_days": [
+        691,
+        693,
+        696
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 702,
+      "probe_date": "2028-01-31",
+      "probe_month": "2028-01",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u4"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u4_q0127",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "outfit",
+        "question": "What was Daniel's work outfit routine around 2028-02-08?",
+        "answer": "a 7-day cycle starting Wed 2028-01-19: black t-shirt and jeans for 5 days, then sweater and jeans for 2 days, repeating",
+        "answer_type": "free_text",
+        "accept": [
+          "5 days black t-shirt and jeans, 2 days sweater and jeans"
+        ],
+        "evidence_days": [
+          691,
+          693,
+          696
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202603_0001",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202603_0001",
+      "original_id": "u5_q0108",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "music",
+      "question": "What was Priya's work music routine in April 2026?",
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): lo-fi beats; on weekends: jazz vinyl",
+      "answer_type": "free_text",
+      "accept": [
+        "lo-fi beats on workdays, jazz vinyl on weekends"
+      ],
+      "evidence_days": [
+        1,
+        7,
+        18
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 31,
+      "probe_date": "2026-03-31",
+      "probe_month": "2026-03",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0100",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Priya's work music routine in April 2026?",
+        "answer": "split by workday vs weekend - on workdays (Mon-Fri): lo-fi beats; on weekends: jazz vinyl",
+        "answer_type": "free_text",
+        "accept": [
+          "lo-fi beats on workdays, jazz vinyl on weekends"
+        ],
+        "evidence_days": [
+          1,
+          7,
+          18
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202603_0002",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202603_0002",
+      "original_id": "u5_q0087",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "bedtime",
+      "question": "What was Priya's bedtime routine in May 2026?",
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): 11:30 pm; on weekends: 1:00 am",
+      "answer_type": "free_text",
+      "accept": [
+        "11:30 pm on workdays, 1:00 am on weekends"
+      ],
+      "evidence_days": [
+        1,
+        4,
+        7
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 31,
+      "probe_date": "2026-03-31",
+      "probe_month": "2026-03",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202605_0007",
+        "original_id": "u5_q0079",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "bedtime",
+        "question": "What was Priya's bedtime routine in May 2026?",
+        "answer": "split by workday vs weekend - on workdays (Mon-Fri): 11:30 pm; on weekends: 1:00 am",
+        "answer_type": "free_text",
+        "accept": [
+          "11:30 pm on workdays, 1:00 am on weekends"
+        ],
+        "evidence_days": [
+          1,
+          4,
+          7
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 92,
+        "probe_date": "2026-05-31",
+        "probe_month": "2026-05",
+        "is_retrospective": false,
+        "tags": [
+          "initial"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 189
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0079",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "bedtime",
+        "question": "What was Priya's bedtime routine in May 2026?",
+        "answer": "split by workday vs weekend - on workdays (Mon-Fri): 11:30 pm; on weekends: 1:00 am",
+        "answer_type": "free_text",
+        "accept": [
+          "11:30 pm on workdays, 1:00 am on weekends"
+        ],
+        "evidence_days": [
+          1,
+          4,
+          7
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_p202603_0003",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202603_0003",
+      "original_id": "u5_q0102",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "exercise",
+      "question": "What was Priya's workout routine in April 2026?",
+      "answer": "a 2-block rotation of 7-day blocks starting Sun 2026-03-01 - block 1: by day of week: evening run on Mon/Wed; bouldering on Tue/Thu; yoga class on Fri; long run on Sat; rest day on Sun | block 2: by day of week: swim on Mon/Wed; bouldering on Tue/Thu; yoga class on Fri; bike ride on Sat; rest day on Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "two-week rotation of runs/swims, bouldering and yoga"
+      ],
+      "evidence_days": [
+        1,
+        7,
+        15
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 31,
+      "probe_date": "2026-03-31",
+      "probe_month": "2026-03",
+      "is_retrospective": false,
+      "tags": [
+        "initial"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202604_0003",
+        "original_id": "u5_q0094",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "exercise",
+        "question": "What was Priya's workout routine in April 2026?",
+        "answer": "a 2-block rotation of 7-day blocks starting Sun 2026-03-01 - block 1: by day of week: evening run on Mon/Wed; bouldering on Tue/Thu; yoga class on Fri; long run on Sat; rest day on Sun | block 2: by day of week: swim on Mon/Wed; bouldering on Tue/Thu; yoga class on Fri; bike ride on Sat; rest day on Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "two-week rotation of runs/swims, bouldering and yoga"
+        ],
+        "evidence_days": [
+          1,
+          7,
+          15
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 61,
+        "probe_date": "2026-04-30",
+        "probe_month": "2026-04",
+        "is_retrospective": false,
+        "tags": [
+          "initial"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 79
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0094",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "exercise",
+        "question": "What was Priya's workout routine in April 2026?",
+        "answer": "a 2-block rotation of 7-day blocks starting Sun 2026-03-01 - block 1: by day of week: evening run on Mon/Wed; bouldering on Tue/Thu; yoga class on Fri; long run on Sat; rest day on Sun | block 2: by day of week: swim on Mon/Wed; bouldering on Tue/Thu; yoga class on Fri; bike ride on Sat; rest day on Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "two-week rotation of runs/swims, bouldering and yoga"
+        ],
+        "evidence_days": [
+          1,
+          7,
+          15
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "initial"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_p202605_0011",
+    "categories": [
+      "unobserved_answer_phase"
+    ],
+    "baseline": {
+      "id": "u5_p202605_0011",
+      "original_id": "u5_q0006",
+      "type": "recall",
+      "capability": "episodic_recall",
+      "domain": "exercise",
+      "question": "What was Priya's workout on Saturday, 2026-05-09?",
+      "answer": "bike ride",
+      "answer_type": "value",
+      "accept": [
+        "bike ride"
+      ],
+      "evidence_days": [
+        68,
+        77,
+        79
+      ],
+      "grading": "exact",
+      "viewpoint_day": 92,
+      "probe_date": "2026-05-31",
+      "probe_month": "2026-05",
+      "is_retrospective": false,
+      "tags": [
+        "inferred",
+        "no_session"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202605_0008",
+        "original_id": "u5_q0005",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "exercise",
+        "question": "What was Priya's workout on Saturday, 2026-05-09?",
+        "answer": "bike ride",
+        "answer_type": "value",
+        "accept": [
+          "bike ride"
+        ],
+        "evidence_days": [
+          68
+        ],
+        "grading": "exact",
+        "viewpoint_day": 92,
+        "probe_date": "2026-05-31",
+        "probe_month": "2026-05",
+        "is_retrospective": false,
+        "tags": [
+          "inferred",
+          "no_session"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 215
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0005",
+        "type": "recall",
+        "capability": "episodic_recall",
+        "domain": "exercise",
+        "question": "What was Priya's workout on Saturday, 2026-05-09?",
+        "answer": "bike ride",
+        "answer_type": "value",
+        "accept": [
+          "bike ride"
+        ],
+        "evidence_days": [
+          68
+        ],
+        "grading": "exact",
+        "tags": [
+          "inferred",
+          "no_session"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_p202606_0014",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202606_0014",
+      "original_id": "u5_q0088",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "bedtime",
+      "question": "What was Priya's bedtime routine in July 2026?",
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): 10:30 pm; on weekends: 11:30 pm",
+      "answer_type": "free_text",
+      "accept": [
+        "10:30 pm on workdays, 11:30 pm on weekends"
+      ],
+      "evidence_days": [
+        100,
+        102,
+        107
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 122,
+      "probe_date": "2026-06-30",
+      "probe_month": "2026-06",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0080",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "bedtime",
+        "question": "What was Priya's bedtime routine in July 2026?",
+        "answer": "split by workday vs weekend - on workdays (Mon-Fri): 10:30 pm; on weekends: 11:30 pm",
+        "answer_type": "free_text",
+        "accept": [
+          "10:30 pm on workdays, 11:30 pm on weekends"
+        ],
+        "evidence_days": [
+          100,
+          102,
+          107
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202606_0020",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202606_0020",
+      "original_id": "u5_q0109",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "music",
+      "question": "What was Priya's work music routine in August 2026?",
+      "answer": "alternates week by week: lo-fi beats, then film scores, repeating (7-day blocks starting Thu 2026-06-18)",
+      "answer_type": "free_text",
+      "accept": [
+        "alternating weeks of lo-fi beats and film scores"
+      ],
+      "evidence_days": [
+        114,
+        116,
+        118
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 122,
+      "probe_date": "2026-06-30",
+      "probe_month": "2026-06",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0101",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Priya's work music routine in August 2026?",
+        "answer": "alternates week by week: lo-fi beats, then film scores, repeating (7-day blocks starting Thu 2026-06-18)",
+        "answer_type": "free_text",
+        "accept": [
+          "alternating weeks of lo-fi beats and film scores"
+        ],
+        "evidence_days": [
+          114,
+          116,
+          118
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202607_0024",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202607_0024",
+      "original_id": "u5_q0115",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "reading",
+      "question": "What was Priya's evening reading routine in August 2026?",
+      "answer": "library thrillers every day",
+      "answer_type": "free_text",
+      "accept": [
+        "library thrillers every day"
+      ],
+      "evidence_days": [
+        125,
+        126,
+        130
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 153,
+      "probe_date": "2026-07-31",
+      "probe_month": "2026-07",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0107",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "reading",
+        "question": "What was Priya's evening reading routine in August 2026?",
+        "answer": "library thrillers every day",
+        "answer_type": "free_text",
+        "accept": [
+          "library thrillers every day"
+        ],
+        "evidence_days": [
+          125,
+          126,
+          130
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202608_0032",
+    "categories": [
+      "future_completed_duration_in_gold"
+    ],
+    "baseline": {
+      "id": "u5_p202608_0032",
+      "original_id": "u5_q0331",
+      "type": "duration",
+      "capability": "temporal_arithmetic",
+      "domain": "reading",
+      "question": "How long did Priya's evening reading stay library thrillers?",
+      "answer": "65 days (2026-07-03 to 2026-09-05)",
+      "answer_type": "free_text",
+      "accept": [
+        "65"
+      ],
+      "evidence_days": [
+        125,
+        180
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 184,
+      "probe_date": "2026-08-31",
+      "probe_month": "2026-08",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0322",
+        "type": "duration",
+        "capability": "temporal_arithmetic",
+        "domain": "reading",
+        "question": "How long did Priya's evening reading stay library thrillers?",
+        "answer": "65 days (2026-07-03 to 2026-09-05)",
+        "answer_type": "free_text",
+        "accept": [
+          "65"
+        ],
+        "evidence_days": [
+          125,
+          180
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202608_0038",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202608_0038",
+      "original_id": "u5_q0311",
+      "type": "event_status",
+      "capability": "event_tracking",
+      "domain": "events",
+      "question": "What was the status of her knee injury on 2026-09-13?",
+      "answer": "tore a ligament in her knee while bouldering (happened)",
+      "answer_type": "free_text",
+      "accept": [
+        "tore a ligament in her knee while bouldering"
+      ],
+      "evidence_days": [
+        180
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 184,
+      "probe_date": "2026-08-31",
+      "probe_month": "2026-08",
+      "is_retrospective": false,
+      "tags": [
+        "at_time",
+        "happened"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0302",
+        "type": "event_status",
+        "capability": "event_tracking",
+        "domain": "events",
+        "question": "What was the status of her knee injury on 2026-09-13?",
+        "answer": "tore a ligament in her knee while bouldering (happened)",
+        "answer_type": "free_text",
+        "accept": [
+          "tore a ligament in her knee while bouldering"
+        ],
+        "evidence_days": [
+          180
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "at_time",
+          "happened"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202609_0043",
+    "categories": [
+      "change_citations_do_not_observe_change",
+      "non_unique_change_date_rejected_by_grader"
+    ],
+    "baseline": {
+      "id": "u5_p202609_0043",
+      "original_id": "u5_q0181",
+      "type": "change_detection",
+      "capability": "temporal_change",
+      "domain": "reading",
+      "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+      "answer": "2026-09-06 (first observed 2026-09-08)",
+      "answer_type": "date",
+      "accept": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "evidence_days": [
+        180,
+        192
+      ],
+      "grading": "date_exact",
+      "viewpoint_day": 214,
+      "probe_date": "2026-09-30",
+      "probe_month": "2026-09",
+      "is_retrospective": false,
+      "tags": [
+        "shift",
+        "uncaused",
+        "bounded"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0174",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "reading",
+        "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+        "answer": "2026-09-06 (first observed 2026-09-08)",
+        "answer_type": "date",
+        "accept": [
+          "2026-09-06",
+          "2026-09-07",
+          "2026-09-08"
+        ],
+        "evidence_days": [
+          180,
+          192
+        ],
+        "grading": "date_exact",
+        "tags": [
+          "shift",
+          "uncaused",
+          "bounded"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202610_0047",
+    "categories": [
+      "unobserved_shift_boundary"
+    ],
+    "baseline": {
+      "id": "u5_p202610_0047",
+      "original_id": "u5_q0048",
+      "type": "recall",
+      "capability": "episodic_recall",
+      "domain": "music",
+      "question": "What was Priya's work music on Thursday, 2026-09-17?",
+      "answer": "synthwave playlists",
+      "answer_type": "value",
+      "accept": [
+        "synthwave playlists"
+      ],
+      "evidence_days": [
+        203,
+        204,
+        215
+      ],
+      "grading": "exact",
+      "viewpoint_day": 245,
+      "probe_date": "2026-10-31",
+      "probe_month": "2026-10",
+      "is_retrospective": false,
+      "tags": [
+        "inferred",
+        "boundary"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [],
+    "selection_status": "absent_from_current_pool"
+  },
+  {
+    "baseline_id": "u5_p202611_0055",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202611_0055",
+      "original_id": "u5_q0089",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "bedtime",
+      "question": "What was Priya's bedtime routine in February 2027?",
+      "answer": "11:00 pm every day",
+      "answer_type": "free_text",
+      "accept": [
+        "11:00 pm every night"
+      ],
+      "evidence_days": [
+        262,
+        263,
+        264
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 275,
+      "probe_date": "2026-11-30",
+      "probe_month": "2026-11",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202702_0080",
+        "original_id": "u5_q0081",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "bedtime",
+        "question": "What was Priya's bedtime routine in February 2027?",
+        "answer": "11:00 pm every day",
+        "answer_type": "free_text",
+        "accept": [
+          "11:00 pm every night"
+        ],
+        "evidence_days": [
+          262,
+          263,
+          264
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 365,
+        "probe_date": "2027-02-28",
+        "probe_month": "2027-02",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2403
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0081",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "bedtime",
+        "question": "What was Priya's bedtime routine in February 2027?",
+        "answer": "11:00 pm every day",
+        "answer_type": "free_text",
+        "accept": [
+          "11:00 pm every night"
+        ],
+        "evidence_days": [
+          262,
+          263,
+          264
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_r202611_0189",
+    "categories": [
+      "change_citations_do_not_observe_change",
+      "non_unique_change_date_rejected_by_grader"
+    ],
+    "baseline": {
+      "id": "u5_r202611_0189",
+      "original_id": "u5_q0181",
+      "type": "change_detection",
+      "capability": "temporal_change",
+      "domain": "reading",
+      "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+      "answer": "2026-09-06 (first observed 2026-09-08)",
+      "answer_type": "date",
+      "accept": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "evidence_days": [
+        180,
+        192
+      ],
+      "grading": "date_exact",
+      "viewpoint_day": 275,
+      "probe_date": "2026-11-30",
+      "probe_month": "2026-11",
+      "is_retrospective": true,
+      "tags": [
+        "shift",
+        "uncaused",
+        "bounded"
+      ],
+      "retrospective_of": "u5_p202609_0043",
+      "original_probe_month": "2026-09",
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0174",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "reading",
+        "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+        "answer": "2026-09-06 (first observed 2026-09-08)",
+        "answer_type": "date",
+        "accept": [
+          "2026-09-06",
+          "2026-09-07",
+          "2026-09-08"
+        ],
+        "evidence_days": [
+          180,
+          192
+        ],
+        "grading": "date_exact",
+        "tags": [
+          "shift",
+          "uncaused",
+          "bounded"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202701_0074",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202701_0074",
+      "original_id": "u5_q0092",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "commute",
+      "question": "What was Priya's commute routine in February 2027?",
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): light rail; on weekends: no commute",
+      "answer_type": "free_text",
+      "accept": [
+        "light rail on workdays"
+      ],
+      "evidence_days": [
+        304,
+        312,
+        316
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 337,
+      "probe_date": "2027-01-31",
+      "probe_month": "2027-01",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202702_0079",
+        "original_id": "u5_q0084",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Priya's commute routine in February 2027?",
+        "answer": "split by workday vs weekend - on workdays (Mon-Fri): light rail; on weekends: no commute",
+        "answer_type": "free_text",
+        "accept": [
+          "light rail on workdays"
+        ],
+        "evidence_days": [
+          304,
+          312,
+          316
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 365,
+        "probe_date": "2027-02-28",
+        "probe_month": "2027-02",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2377
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0084",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Priya's commute routine in February 2027?",
+        "answer": "split by workday vs weekend - on workdays (Mon-Fri): light rail; on weekends: no commute",
+        "answer_type": "free_text",
+        "accept": [
+          "light rail on workdays"
+        ],
+        "evidence_days": [
+          304,
+          312,
+          316
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_p202701_0076",
+    "categories": [
+      "accepted_answer_mismatch_at_probe",
+      "gold_answer_mismatch_at_probe"
+    ],
+    "baseline": {
+      "id": "u5_p202701_0076",
+      "original_id": "u5_q0262",
+      "type": "fact_current",
+      "capability": "knowledge_update",
+      "domain": "hobbies",
+      "question": "What are Priya's current hobbies?",
+      "answer": "bouldering, trail running",
+      "answer_type": "free_text",
+      "accept": [
+        "bouldering, trail running"
+      ],
+      "evidence_days": [
+        1,
+        331
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 337,
+      "probe_date": "2027-01-31",
+      "probe_month": "2027-01",
+      "is_retrospective": false,
+      "tags": [
+        "set"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202701_0073",
+        "original_id": "u5_q0255",
+        "type": "fact_current",
+        "capability": "knowledge_update",
+        "domain": "hobbies",
+        "question": "What are Priya's current hobbies?",
+        "answer": "bouldering, trail running",
+        "answer_type": "free_text",
+        "accept": [
+          "bouldering, trail running"
+        ],
+        "evidence_days": [
+          1,
+          331
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 337,
+        "probe_date": "2027-01-31",
+        "probe_month": "2027-01",
+        "is_retrospective": false,
+        "tags": [
+          "set"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2138
+      },
+      {
+        "id": "u5_r202707_0192",
+        "original_id": "u5_q0255",
+        "type": "fact_current",
+        "capability": "knowledge_update",
+        "domain": "hobbies",
+        "question": "What are Priya's current hobbies?",
+        "answer": "bouldering, trail running",
+        "answer_type": "free_text",
+        "accept": [
+          "bouldering, trail running"
+        ],
+        "evidence_days": [
+          1,
+          331
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 518,
+        "probe_date": "2027-07-31",
+        "probe_month": "2027-07",
+        "is_retrospective": true,
+        "tags": [
+          "set"
+        ],
+        "retrospective_of": "u5_p202701_0073",
+        "original_probe_month": "2027-01",
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3503
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0255",
+        "type": "fact_current",
+        "capability": "knowledge_update",
+        "domain": "hobbies",
+        "question": "What are Priya's current hobbies?",
+        "answer": "bouldering, trail running",
+        "answer_type": "free_text",
+        "accept": [
+          "bouldering, trail running"
+        ],
+        "evidence_days": [
+          1,
+          331
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "set"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_p202702_0080",
+    "categories": [
+      "change_citations_do_not_observe_change",
+      "non_unique_change_date_rejected_by_grader"
+    ],
+    "baseline": {
+      "id": "u5_p202702_0080",
+      "original_id": "u5_q0177",
+      "type": "change_detection",
+      "capability": "temporal_change",
+      "domain": "music",
+      "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+      "answer": "2027-02-08",
+      "answer_type": "date",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ],
+      "grading": "date_exact",
+      "viewpoint_day": 365,
+      "probe_date": "2027-02-28",
+      "probe_month": "2027-02",
+      "is_retrospective": false,
+      "tags": [
+        "shift",
+        "implicit"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202702_0078",
+        "original_id": "u5_q0170",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "music",
+        "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+        "answer": "2027-02-08",
+        "answer_type": "date",
+        "accept": [
+          "2027-02-08"
+        ],
+        "evidence_days": [
+          344,
+          345
+        ],
+        "grading": "date_exact",
+        "viewpoint_day": 365,
+        "probe_date": "2027-02-28",
+        "probe_month": "2027-02",
+        "is_retrospective": false,
+        "tags": [
+          "shift",
+          "implicit"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2351
+      },
+      {
+        "id": "u5_r202708_0189",
+        "original_id": "u5_q0170",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "music",
+        "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+        "answer": "2027-02-08",
+        "answer_type": "date",
+        "accept": [
+          "2027-02-08"
+        ],
+        "evidence_days": [
+          344,
+          345
+        ],
+        "grading": "date_exact",
+        "viewpoint_day": 549,
+        "probe_date": "2027-08-31",
+        "probe_month": "2027-08",
+        "is_retrospective": true,
+        "tags": [
+          "shift",
+          "implicit"
+        ],
+        "retrospective_of": "u5_p202702_0078",
+        "original_probe_month": "2027-02",
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3832
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0170",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "music",
+        "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+        "answer": "2027-02-08",
+        "answer_type": "date",
+        "accept": [
+          "2027-02-08"
+        ],
+        "evidence_days": [
+          344,
+          345
+        ],
+        "grading": "date_exact",
+        "tags": [
+          "shift",
+          "implicit"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_p202702_0081",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202702_0081",
+      "original_id": "u5_q0111",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "music",
+      "question": "What was Priya's work music routine in April 2027?",
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): synthwave playlists; on weekends: running playlists",
+      "answer_type": "free_text",
+      "accept": [
+        "synthwave on workdays, running playlists on weekends"
+      ],
+      "evidence_days": [
+        345,
+        351,
+        352
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 365,
+      "probe_date": "2027-02-28",
+      "probe_month": "2027-02",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0103",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "music",
+        "question": "What was Priya's work music routine in April 2027?",
+        "answer": "split by workday vs weekend - on workdays (Mon-Fri): synthwave playlists; on weekends: running playlists",
+        "answer_type": "free_text",
+        "accept": [
+          "synthwave on workdays, running playlists on weekends"
+        ],
+        "evidence_days": [
+          345,
+          351,
+          352
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202705_0094",
+    "categories": [
+      "confounder_change_not_cited"
+    ],
+    "baseline": {
+      "id": "u5_p202705_0094",
+      "original_id": "u5_q0359",
+      "type": "distractor_probe",
+      "capability": "causal_reasoning",
+      "domain": "reading",
+      "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
+      "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
+      "answer_type": "yes_no",
+      "accept": [
+        "no"
+      ],
+      "evidence_days": [
+        448
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 457,
+      "probe_date": "2027-05-31",
+      "probe_month": "2027-05",
+      "is_retrospective": false,
+      "tags": [
+        "confounder"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0350",
+        "type": "distractor_probe",
+        "capability": "causal_reasoning",
+        "domain": "reading",
+        "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
+        "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
+        "answer_type": "yes_no",
+        "accept": [
+          "no"
+        ],
+        "evidence_days": [
+          448
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "confounder"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202706_0104",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202706_0104",
+      "original_id": "u5_q0116",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "reading",
+      "question": "What was Priya's evening reading routine in August 2027?",
+      "answer": "audiobooks every day",
+      "answer_type": "free_text",
+      "accept": [
+        "audiobooks every day"
+      ],
+      "evidence_days": [
+        456,
+        458,
+        459
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 487,
+      "probe_date": "2027-06-30",
+      "probe_month": "2027-06",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0108",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "reading",
+        "question": "What was Priya's evening reading routine in August 2027?",
+        "answer": "audiobooks every day",
+        "answer_type": "free_text",
+        "accept": [
+          "audiobooks every day"
+        ],
+        "evidence_days": [
+          456,
+          458,
+          459
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_p202708_0116",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202708_0116",
+      "original_id": "u5_q0094",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "commute",
+      "question": "What was Priya's commute routine in September 2027?",
+      "answer": "by day of week: cycling on Mon/Tue/Thu; work from home on Wed/Fri; no commute on Sat/Sun",
+      "answer_type": "free_text",
+      "accept": [
+        "cycling Mon/Tue/Thu, home Wed/Fri"
+      ],
+      "evidence_days": [
+        527,
+        529,
+        547
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 549,
+      "probe_date": "2027-08-31",
+      "probe_month": "2027-08",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202709_0125",
+        "original_id": "u5_q0086",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Priya's commute routine in September 2027?",
+        "answer": "by day of week: cycling on Mon/Tue/Thu; work from home on Wed/Fri; no commute on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "cycling Mon/Tue/Thu, home Wed/Fri"
+        ],
+        "evidence_days": [
+          527,
+          529,
+          547
+        ],
+        "grading": "llm_judge",
+        "viewpoint_day": 579,
+        "probe_date": "2027-09-30",
+        "probe_month": "2027-09",
+        "is_retrospective": false,
+        "tags": [
+          "shift"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3998
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0086",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "commute",
+        "question": "What was Priya's commute routine in September 2027?",
+        "answer": "by day of week: cycling on Mon/Tue/Thu; work from home on Wed/Fri; no commute on Sat/Sun",
+        "answer_type": "free_text",
+        "accept": [
+          "cycling Mon/Tue/Thu, home Wed/Fri"
+        ],
+        "evidence_days": [
+          527,
+          529,
+          547
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_r202708_0197",
+    "categories": [
+      "change_citations_do_not_observe_change",
+      "non_unique_change_date_rejected_by_grader"
+    ],
+    "baseline": {
+      "id": "u5_r202708_0197",
+      "original_id": "u5_q0177",
+      "type": "change_detection",
+      "capability": "temporal_change",
+      "domain": "music",
+      "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+      "answer": "2027-02-08",
+      "answer_type": "date",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ],
+      "grading": "date_exact",
+      "viewpoint_day": 549,
+      "probe_date": "2027-08-31",
+      "probe_month": "2027-08",
+      "is_retrospective": true,
+      "tags": [
+        "shift",
+        "implicit"
+      ],
+      "retrospective_of": "u5_p202702_0080",
+      "original_probe_month": "2027-02",
+      "user_id": "u5"
+    },
+    "current_matches": [
+      {
+        "id": "u5_p202702_0078",
+        "original_id": "u5_q0170",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "music",
+        "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+        "answer": "2027-02-08",
+        "answer_type": "date",
+        "accept": [
+          "2027-02-08"
+        ],
+        "evidence_days": [
+          344,
+          345
+        ],
+        "grading": "date_exact",
+        "viewpoint_day": 365,
+        "probe_date": "2027-02-28",
+        "probe_month": "2027-02",
+        "is_retrospective": false,
+        "tags": [
+          "shift",
+          "implicit"
+        ],
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2351
+      },
+      {
+        "id": "u5_r202708_0189",
+        "original_id": "u5_q0170",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "music",
+        "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+        "answer": "2027-02-08",
+        "answer_type": "date",
+        "accept": [
+          "2027-02-08"
+        ],
+        "evidence_days": [
+          344,
+          345
+        ],
+        "grading": "date_exact",
+        "viewpoint_day": 549,
+        "probe_date": "2027-08-31",
+        "probe_month": "2027-08",
+        "is_retrospective": true,
+        "tags": [
+          "shift",
+          "implicit"
+        ],
+        "retrospective_of": "u5_p202702_0078",
+        "original_probe_month": "2027-02",
+        "user_id": "u5",
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3832
+      }
+    ],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0170",
+        "type": "change_detection",
+        "capability": "temporal_change",
+        "domain": "music",
+        "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+        "answer": "2027-02-08",
+        "answer_type": "date",
+        "accept": [
+          "2027-02-08"
+        ],
+        "evidence_days": [
+          344,
+          345
+        ],
+        "grading": "date_exact",
+        "tags": [
+          "shift",
+          "implicit"
+        ]
+      }
+    ],
+    "selection_status": "still_selected"
+  },
+  {
+    "baseline_id": "u5_p202709_0127",
+    "categories": [
+      "explicit_future_target"
+    ],
+    "baseline": {
+      "id": "u5_p202709_0127",
+      "original_id": "u5_q0107",
+      "type": "pattern_at_time",
+      "capability": "pattern_abstraction",
+      "domain": "exercise",
+      "question": "What was Priya's workout routine in November 2027?",
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): morning dog walk; on weekends: group hike",
+      "answer_type": "free_text",
+      "accept": [
+        "dog walks on workdays, group hikes on weekends"
+      ],
+      "evidence_days": [
+        560,
+        565,
+        567
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 579,
+      "probe_date": "2027-09-30",
+      "probe_month": "2027-09",
+      "is_retrospective": false,
+      "tags": [
+        "shift"
+      ],
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0099",
+        "type": "pattern_at_time",
+        "capability": "pattern_abstraction",
+        "domain": "exercise",
+        "question": "What was Priya's workout routine in November 2027?",
+        "answer": "split by workday vs weekend - on workdays (Mon-Fri): morning dog walk; on weekends: group hike",
+        "answer_type": "free_text",
+        "accept": [
+          "dog walks on workdays, group hikes on weekends"
+        ],
+        "evidence_days": [
+          560,
+          565,
+          567
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "shift"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  },
+  {
+    "baseline_id": "u5_r202710_0193",
+    "categories": [
+      "confounder_change_not_cited"
+    ],
+    "baseline": {
+      "id": "u5_r202710_0193",
+      "original_id": "u5_q0359",
+      "type": "distractor_probe",
+      "capability": "causal_reasoning",
+      "domain": "reading",
+      "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
+      "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
+      "answer_type": "yes_no",
+      "accept": [
+        "no"
+      ],
+      "evidence_days": [
+        448
+      ],
+      "grading": "llm_judge",
+      "viewpoint_day": 610,
+      "probe_date": "2027-10-31",
+      "probe_month": "2027-10",
+      "is_retrospective": true,
+      "tags": [
+        "confounder"
+      ],
+      "retrospective_of": "u5_p202705_0094",
+      "original_probe_month": "2027-05",
+      "user_id": "u5"
+    },
+    "current_matches": [],
+    "current_pool_matches": [
+      {
+        "id": "u5_q0350",
+        "type": "distractor_probe",
+        "capability": "causal_reasoning",
+        "domain": "reading",
+        "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
+        "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
+        "answer_type": "yes_no",
+        "accept": [
+          "no"
+        ],
+        "evidence_days": [
+          448
+        ],
+        "grading": "llm_judge",
+        "tags": [
+          "confounder"
+        ]
+      }
+    ],
+    "selection_status": "pool_only"
+  }
+]

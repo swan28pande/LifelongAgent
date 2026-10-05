@@ -1,0 +1,417 @@
+[
+  {
+    "id": "u3_p202606_0022",
+    "question_source": {
+      "file": "datasets/v2/u3/probing_questions.json",
+      "line": 555,
+      "pointer": "/probes/3/questions/6/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2026-05-30",
+    "accepted": [
+      "2026-06-01"
+    ],
+    "probe_date": "2026-06-30",
+    "rationale": "May29 starts baking and still packs leftovers. May31 gives no lunch choice. June1 reports sourdough sandwich, without announcing a dated routine switch. May30/31 alternatives keep all declared lunch choices and permitted cause lags.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u3_r202610_0166",
+    "question_source": {
+      "file": "datasets/v2/u3/probing_questions.json",
+      "line": 1531,
+      "pointer": "/probes/7/questions/12/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2026-05-30",
+    "accepted": [
+      "2026-06-01"
+    ],
+    "probe_date": "2026-10-31",
+    "rationale": "May29 starts baking and still packs leftovers. May31 gives no lunch choice. June1 reports sourdough sandwich, without announcing a dated routine switch. May30/31 alternatives keep all declared lunch choices and permitted cause lags.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u3_p202712_0144",
+    "question_source": {
+      "file": "datasets/v2/u3/probing_questions.json",
+      "line": 4661,
+      "pointer": "/probes/21/questions/5/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-11-30",
+    "accepted": [
+      "2027-12-01"
+    ],
+    "probe_date": "2027-12-31",
+    "rationale": "Dec1 reports spraining ankle yesterday and taking a Lyft today. There is no Nov30 commute report or dated announcement of starting rideshare. Same-day injury-to-change lag0 is permitted by U3; Nov30 remains a compatible boundary.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u4_p202701_0060",
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line": 1705,
+      "pointer": "/probes/10/questions/2/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-01-25",
+    "accepted": [
+      "2027-01-28"
+    ],
+    "probe_date": "2027-01-31",
+    "rationale": "Jan24 sells bicycle and gives up cycling; Jan26 and Jan28 report bouldering, Jan31 yoga. These are shared old/new weekday choices. No dated new workout announcement appears. Earlier or Jan29 boundary respects cause lags and choices.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u4_p202706_0096",
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line": 2769,
+      "pointer": "/probes/15/questions/7/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-06-02",
+    "accepted": [
+      "2027-06-03"
+    ],
+    "probe_date": "2027-06-30",
+    "rationale": "June1 reports smoothie bowl; June2 has no session; June3 reports bagel with salmon. June3 does not announce starting a new routine. Starting June2 preserves all declared breakfast choices.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u4_p202707_0102",
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line": 3037,
+      "pointer": "/probes/16/questions/5/question"
+    },
+    "status": "contested_condition_link",
+    "example_rejected_boundary": null,
+    "accepted": [
+      "2027-07-02"
+    ],
+    "probe_date": "2027-07-31",
+    "rationale": "July2 explicitly reports testing negative that morning and complete recovery, then return to design work and alternative music. Earlier music boundaries preserve choices, but moving an illness-linked reversion before stated recovery relies on separating listening choice from the specified temporary condition. Keep outside counted credible limits.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u4_r202708_0197",
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line": 3461,
+      "pointer": "/probes/17/questions/10/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-06-02",
+    "accepted": [
+      "2027-06-03"
+    ],
+    "probe_date": "2027-08-31",
+    "rationale": "June1 reports smoothie bowl; June2 has no session; June3 reports bagel with salmon. June3 does not announce starting a new routine. Starting June2 preserves all declared breakfast choices.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u4_p202710_0126",
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line": 3989,
+      "pointer": "/probes/19/questions/4/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-10-24",
+    "accepted": [
+      "2027-10-26"
+    ],
+    "probe_date": "2027-10-31",
+    "rationale": "Oct26 mentions jazz vinyl without dated switch announcement; Oct27 first reports ambient electronic. Oct24/25 respect job-change lag and all declared music observations. This is the prior narrow case.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u4_r202710_0179",
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line": 4208,
+      "pointer": "/probes/19/questions/13/question"
+    },
+    "status": "contested_condition_link",
+    "example_rejected_boundary": null,
+    "accepted": [
+      "2027-07-02"
+    ],
+    "probe_date": "2027-10-31",
+    "rationale": "July2 explicitly reports testing negative that morning and complete recovery, then return to design work and alternative music. Earlier music boundaries preserve choices, but moving an illness-linked reversion before stated recovery relies on separating listening choice from the specified temporary condition. Keep outside counted credible limits.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202606_0016",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 423,
+      "pointer": "/probes/3/questions/5/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2026-06-07",
+    "accepted": [
+      "2026-06-08"
+    ],
+    "probe_date": "2026-06-30",
+    "rationale": "June6 reports 1am weekend bedtime; June7 has no bedtime report; June8 plans 10:30pm without declaring first use. June7 fits dog-adoption lag and all declared bedtime choices.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202606_0017",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 449,
+      "pointer": "/probes/3/questions/6/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2026-06-25",
+    "accepted": [
+      "2026-06-18",
+      "2026-06-19",
+      "2026-06-20",
+      "2026-06-21",
+      "2026-06-22"
+    ],
+    "probe_date": "2026-06-30",
+    "rationale": "June22/24 report lo-fi, June26 film scores; no dated switch announcement. Rotating weekly order with a June25/26 start preserves all declared choices, including the later continuing cycle.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202608_0028",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 745,
+      "pointer": "/probes/5/questions/1/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2026-07-29",
+    "accepted": [
+      "2026-08-04",
+      "2026-08-05"
+    ],
+    "probe_date": "2026-08-31",
+    "rationale": "July28 starts dating Arjun but eats lentil soup separately. August2 reports leftovers and August5 stir-fry, shared old/new choices. July29 onward candidates after relationship change preserve every declared dinner value; no dated dinner-routine announcement.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202609_0043",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 1127,
+      "pointer": "/probes/6/questions/7/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2026-09-13",
+    "accepted": [
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-19"
+    ],
+    "probe_date": "2026-09-30",
+    "rationale": "Sept12 dates concert yesterday but still listens to lo-fi; Sept19 first reports synthwave. No Sept13-18 music choice is stated or exact switch date announced. Sept13/14/15 respect concert cause lag and full declared choices.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202611_0053",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 1420,
+      "pointer": "/probes/8/questions/0/question"
+    },
+    "status": "contested_decision_wording",
+    "example_rejected_boundary": null,
+    "accepted": [
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17"
+    ],
+    "probe_date": "2026-11-30",
+    "rationale": "Nov17 says they chatted about sleep goals today and 'I've decided' on eleven. A Nov14 start matches modeled bedtime values but this decision wording can be read as pinning adoption to Nov17, which is already accepted. Do not count rejected Nov14 as a credible full-text counterexample.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_r202611_0159",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 1524,
+      "pointer": "/probes/8/questions/4/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2026-09-13",
+    "accepted": [
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-19"
+    ],
+    "probe_date": "2026-11-30",
+    "rationale": "Sept12 dates concert yesterday but still listens to lo-fi; Sept19 first reports synthwave. No Sept13-18 music choice is stated or exact switch date announced. Sept13/14/15 respect concert cause lag and full declared choices.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202701_0068",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 2005,
+      "pointer": "/probes/10/questions/1/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-01-28",
+    "accepted": [
+      "2027-01-29",
+      "2027-01-30",
+      "2027-01-31"
+    ],
+    "probe_date": "2027-01-31",
+    "rationale": "Jan27/31 report morning dog walks shared by old/new rules; taking up trail running as a hobby is dated separately from the weekday workout schedule. Jan28 is pre-probe, satisfies lag4 and all declared choices. Future February alternatives in the baseline narrow algorithm are explicitly not needed for this finding.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202702_0078",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 2351,
+      "pointer": "/probes/11/questions/1/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-02-09",
+    "accepted": [
+      "2027-02-08"
+    ],
+    "probe_date": "2027-02-28",
+    "rationale": "Feb8 reports synthwave without announcing switch; Feb14 reports running playlists. Feb9-13 preserve all choices and allowed marathon-related cause lags. Prior narrow primary/retrospective case.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202704_0087",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 2648,
+      "pointer": "/probes/13/questions/0/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-03-26",
+    "accepted": [
+      "2027-04-04",
+      "2027-04-05",
+      "2027-04-06"
+    ],
+    "probe_date": "2027-04-30",
+    "rationale": "March25/31 report light rail, shared old/new weekday choices. March28 unusual Sunday office trip mentions planned bike but usual no-commute exception is unchanged in both worlds. April6 first work-at-home choice does not announce a start date. March26 onward shifts preserve declared choices; no dated schedule transition is given.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202705_0093",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 2866,
+      "pointer": "/probes/14/questions/0/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-05-27",
+    "accepted": [
+      "2027-05-29",
+      "2027-05-30"
+    ],
+    "probe_date": "2027-05-31",
+    "rationale": "May26 reads book club paperback; May27-29 have no reading choice; May30 listens to narrated novel without first-use declaration. May27/28 remain compatible boundaries.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202708_0114",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 3618,
+      "pointer": "/probes/17/questions/3/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-08-06",
+    "accepted": [
+      "2027-08-07",
+      "2027-08-08",
+      "2027-08-09"
+    ],
+    "probe_date": "2027-08-31",
+    "rationale": "Aug2 job starts, Aug4 train, Aug5 work at home, Aug9 bike. Aug6 has no commute report. Aug6 satisfies cause lag4 and choices, without conflict with any near-boundary dated transition statement.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202708_0117",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 3698,
+      "pointer": "/probes/17/questions/6/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-08-03",
+    "accepted": [
+      "2027-08-05",
+      "2027-08-06",
+      "2027-08-07",
+      "2027-08-08",
+      "2027-08-09"
+    ],
+    "probe_date": "2027-08-31",
+    "rationale": "Aug2 reports eleven, Aug3-4 no bedtime choice, Aug9 reports ten. The new management job is dated Aug2; Aug3/4 bedtime changes respect cause lags and all declared choices. Aug9 does not date first adoption.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_r202708_0189",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 3832,
+      "pointer": "/probes/17/questions/11/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-02-09",
+    "accepted": [
+      "2027-02-08"
+    ],
+    "probe_date": "2027-08-31",
+    "rationale": "Feb8 reports synthwave without announcing switch; Feb14 reports running playlists. Feb9-13 preserve all choices and allowed marathon-related cause lags. Prior narrow primary/retrospective case.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  },
+  {
+    "id": "u5_p202709_0122",
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line": 3921,
+      "pointer": "/probes/18/questions/2/question"
+    },
+    "status": "credible_bounded_observability_limit",
+    "example_rejected_boundary": "2027-09-07",
+    "accepted": [
+      "2027-09-11"
+    ],
+    "probe_date": "2027-09-30",
+    "rationale": "Sept5 dates hiking-group membership yesterday, Sept6 reports trail run, Sept11 first group hike without first-hike announcement. Sept7-10 starts respect cause lag and all declared choices; no earlier hike/routine-change date is stated.",
+    "primary_evidence": "broader_boundary_candidates.json contains full source-indexed user-turn extracts and complete declared-choice comparison counts.",
+    "scope_limit": "Manual review of near-boundary full text plus declared-choice counterexample; no exhaustive natural-language entailment proof or paid judge result."
+  }
+]

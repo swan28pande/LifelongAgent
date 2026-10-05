@@ -1,0 +1,27 @@
+{
+  "model": "gemini-3.5-flash",
+  "prompt_sha256": "38d59031078ae2f0ecf73e08b0d615d91e785eda8364c099d9f5f705c586efa1",
+  "prompt_chars": 2110,
+  "timeout_seconds": 45,
+  "retry_attempts": 1,
+  "wall_seconds": 42.76091183799872,
+  "logical_requests": [
+    {
+      "kind": "logical",
+      "utc": "2026-10-04T23:36:16.897062+00:00",
+      "stage": "stream",
+      "condition": "diagnostic",
+      "ok": true,
+      "seconds": 12.733912390000114
+    },
+    {
+      "kind": "logical",
+      "utc": "2026-10-04T23:36:46.913639+00:00",
+      "stage": "sync",
+      "condition": "diagnostic",
+      "ok": false,
+      "seconds": 42.759607893000066,
+      "error": "GoogleAPIError: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}"
+    }
+  ]
+}

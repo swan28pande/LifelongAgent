@@ -1,0 +1,1127 @@
+{
+  "scope": "Fresh raw-input checks plus independent counterexample arithmetic; saved structural-ledger count is independently recounted, not a second semantic proof.",
+  "failures": [],
+  "structural_ledger": {
+    "checks": 13484,
+    "failed": 0,
+    "current_questions": 1000,
+    "unique_ids": 1000
+  },
+  "types": {
+    "abstention": 16,
+    "recall": 496,
+    "fact_current": 15,
+    "fact_at_time": 128,
+    "event_status": 36,
+    "pattern_at_time": 52,
+    "attribution": 46,
+    "fact_history": 13,
+    "exception_vs_shift": 59,
+    "change_detection": 54,
+    "duration": 33,
+    "distractor_probe": 24,
+    "reversion": 14,
+    "other_person": 14
+  },
+  "fresh_raw_invariants": {
+    "errors": [],
+    "future_dates_three_fields": []
+  },
+  "builder_reproduction": {
+    "u1": true,
+    "u2": true,
+    "u3": true,
+    "u4": true,
+    "u5": true
+  },
+  "pool_payloads": {
+    "canonical_matches": 1000,
+    "canonical_mismatches": [],
+    "stale_experiment_mismatch_count": 786,
+    "stale_experiment_mismatch_by_user": {
+      "u2": 196,
+      "u3": 191,
+      "u4": 199,
+      "u5": 200
+    }
+  },
+  "copy_pairs": {
+    "checked": 35,
+    "equal": 30,
+    "mismatches": [
+      {
+        "canonical": "datasets/v2/u1/qa_pool.json",
+        "experiment": "experiments/data/synthetic_v2/u1/qa_pool.json",
+        "byte_equal": false
+      },
+      {
+        "canonical": "datasets/v2/u2/qa_pool.json",
+        "experiment": "experiments/data/synthetic_v2/u2/qa_pool.json",
+        "byte_equal": false
+      },
+      {
+        "canonical": "datasets/v2/u3/qa_pool.json",
+        "experiment": "experiments/data/synthetic_v2/u3/qa_pool.json",
+        "byte_equal": false
+      },
+      {
+        "canonical": "datasets/v2/u4/qa_pool.json",
+        "experiment": "experiments/data/synthetic_v2/u4/qa_pool.json",
+        "byte_equal": false
+      },
+      {
+        "canonical": "datasets/v2/u5/qa_pool.json",
+        "experiment": "experiments/data/synthetic_v2/u5/qa_pool.json",
+        "byte_equal": false
+      }
+    ]
+  },
+  "source_identity": {
+    "checked": 2738,
+    "changed": [],
+    "aggregate_projection_mismatches": []
+  },
+  "retained_source_contract": {
+    "confirmed_occurrences": 19,
+    "confirmed_sessions": 19,
+    "current_citation_exposure_count": 38,
+    "current_citation_exposure_ids": [
+      "u2_p202609_0052",
+      "u2_p202611_0065",
+      "u3_p202706_0099",
+      "u3_p202706_0103",
+      "u3_p202707_0106",
+      "u3_p202709_0118",
+      "u3_p202709_0120",
+      "u3_p202712_0142",
+      "u3_p202712_0143",
+      "u3_p202712_0144",
+      "u3_p202712_0145",
+      "u3_p202712_0146",
+      "u3_p202801_0158",
+      "u3_r202708_0186",
+      "u3_r202712_0165",
+      "u4_p202603_0001",
+      "u4_p202603_0002",
+      "u4_p202604_0005",
+      "u4_p202606_0016",
+      "u4_p202608_0029",
+      "u4_p202609_0032",
+      "u4_p202609_0033",
+      "u4_p202610_0038",
+      "u4_p202611_0042",
+      "u4_p202611_0043",
+      "u4_p202611_0044",
+      "u4_p202611_0045",
+      "u4_p202612_0050",
+      "u4_p202612_0051",
+      "u4_p202702_0064",
+      "u4_p202703_0070",
+      "u4_p202708_0107",
+      "u4_r202608_0177",
+      "u4_r202608_0184",
+      "u4_r202612_0199",
+      "u4_r202702_0164",
+      "u4_r202702_0175",
+      "u4_r202708_0171"
+    ],
+    "quotation_mismatches": [],
+    "wrong_gold_inference": "No wrong selected answer inferred from citation exposure."
+  },
+  "coverage": {
+    "unknown_pool": 30,
+    "unknown_selected": [],
+    "answerable_abstention_controls": 16,
+    "prediction_selected": 0,
+    "current_pattern_selected": 0
+  },
+  "setup_2_schedule": {
+    "users": [
+      {
+        "user": "u1",
+        "checkpoints": 24,
+        "sessions": 730,
+        "all_sessions_once": true,
+        "late_sessions": [],
+        "final_cutoff": "2028-02-28",
+        "final_questions": 200,
+        "final_new_questions": 0,
+        "input_hash_files": [
+          "conversations.json",
+          "probing_questions.json"
+        ]
+      },
+      {
+        "user": "u2",
+        "checkpoints": 24,
+        "sessions": 657,
+        "all_sessions_once": true,
+        "late_sessions": [],
+        "final_cutoff": "2028-02-28",
+        "final_questions": 200,
+        "final_new_questions": 0,
+        "input_hash_files": [
+          "conversations.json",
+          "probing_questions.json"
+        ]
+      },
+      {
+        "user": "u3",
+        "checkpoints": 24,
+        "sessions": 561,
+        "all_sessions_once": true,
+        "late_sessions": [],
+        "final_cutoff": "2028-02-28",
+        "final_questions": 200,
+        "final_new_questions": 0,
+        "input_hash_files": [
+          "conversations.json",
+          "probing_questions.json"
+        ]
+      },
+      {
+        "user": "u4",
+        "checkpoints": 24,
+        "sessions": 437,
+        "all_sessions_once": true,
+        "late_sessions": [],
+        "final_cutoff": "2028-02-28",
+        "final_questions": 200,
+        "final_new_questions": 0,
+        "input_hash_files": [
+          "conversations.json",
+          "probing_questions.json"
+        ]
+      },
+      {
+        "user": "u5",
+        "checkpoints": 24,
+        "sessions": 353,
+        "all_sessions_once": true,
+        "late_sessions": [],
+        "final_cutoff": "2028-02-28",
+        "final_questions": 200,
+        "final_new_questions": 0,
+        "input_hash_files": [
+          "conversations.json",
+          "probing_questions.json"
+        ]
+      }
+    ],
+    "total_sessions": 2738,
+    "repeated_answer_instances": 11934,
+    "network_or_model_run": false
+  },
+  "wrong_current_hobbies": [
+    {
+      "id": "u5_p202701_0069",
+      "question": "Does Priya have any hobbies, and if so what?",
+      "answer": "bouldering, trail running",
+      "accepted": [
+        "bouldering, trail running"
+      ],
+      "expected": [
+        "bouldering",
+        "piano",
+        "trail running"
+      ],
+      "omitted": [
+        "piano"
+      ]
+    },
+    {
+      "id": "u5_p202701_0073",
+      "question": "What are Priya's current hobbies?",
+      "answer": "bouldering, trail running",
+      "accepted": [
+        "bouldering, trail running"
+      ],
+      "expected": [
+        "bouldering",
+        "piano",
+        "trail running"
+      ],
+      "omitted": [
+        "piano"
+      ]
+    }
+  ],
+  "piano_removal": {
+    "id": "hobby.piano_stop",
+    "kind": "fact_change",
+    "text": "stopped playing piano - no time for lessons after the move",
+    "entity": "hobbies",
+    "op": "remove",
+    "value": "piano",
+    "effective_day": 420,
+    "stated_day": 420,
+    "retrospective": false,
+    "is_cause": true
+  },
+  "january_piano_turns": [
+    {
+      "date": "2027-01-13",
+      "text": "Yes, I sat down at the piano for a bit yesterday. It's a nice way to relax after a long day of backend engineering work at the startup."
+    },
+    {
+      "date": "2027-01-22",
+      "text": "I did! It was a very satisfying end to the work week. Now I can fully relax this weekend. I might even spend some time practicing the piano tomorrow."
+    },
+    {
+      "date": "2027-01-26",
+      "text": "I didn't get a chance to play the piano today, actually. I've been trying to finish up the assigned fiction selection for our local neighborhood group's next meeting, so I spent my evening reading that. Arjun was reading a biography on his tablet while I did that."
+    },
+    {
+      "date": "2027-01-28",
+      "text": "Hey! Biscuit is doing great, he had tons of energy today. My day at the startup was pretty intense with coding, but I managed to stay focused by putting on some of those retro-futuristic, 80s-style instrumental electronic tracks while I worked. Arjun was actually listening to classical piano in the other room, which is a totally different vibe, but my synth-heavy tracks did the trick for me."
+    }
+  ],
+  "recall_raw_hidden_truth": {
+    "checked": 496,
+    "mismatches": []
+  },
+  "retained_unseen_phase": {
+    "question_id": "u5_p202605_0008",
+    "bike_phase_days_whole_regime": [
+      14,
+      28,
+      42,
+      56,
+      70,
+      84
+    ],
+    "bike_phase_observations": [],
+    "evidence_days": [
+      68
+    ],
+    "cited_values": [
+      "bouldering"
+    ]
+  },
+  "daniel_boundary": {
+    "id": "u4_p202712_0152",
+    "gold": "jazz records",
+    "observed_domain_choices": 22,
+    "counterfactuals": [
+      {
+        "start_day": 658,
+        "start_date": "2027-12-18",
+        "target_value": "ambient electronic",
+        "mismatch_days": [
+          665
+        ]
+      },
+      {
+        "start_day": 659,
+        "start_date": "2027-12-19",
+        "target_value": "ambient electronic",
+        "mismatch_days": []
+      },
+      {
+        "start_day": 660,
+        "start_date": "2027-12-20",
+        "target_value": "jazz records",
+        "mismatch_days": []
+      },
+      {
+        "start_day": 661,
+        "start_date": "2027-12-21",
+        "target_value": "jazz records",
+        "mismatch_days": [
+          667
+        ]
+      }
+    ],
+    "target_session_omits_modeled_music": true,
+    "cause": null
+  },
+  "diet_citation_witness": {
+    "id": "u5_p202706_0105",
+    "reference": "vegetarian",
+    "evidence": [
+      1
+    ],
+    "evidence_day_1_truth": [
+      "pescatarian"
+    ],
+    "target_truth": [
+      "vegetarian"
+    ],
+    "supporting_date": "2027-06-19",
+    "dated_switch_turns": [
+      "Definitely. Actually, my dinner routine has changed quite a bit recently. Six days ago, on June 13th, I officially made the switch to a vegetarian diet, and because of that, Arjun and I have started preparing meals from scratch together in our kitchen. We're doing that tonight."
+    ],
+    "full_prefix_has_support": true
+  },
+  "broader_counterexample_arithmetic": {
+    "candidate_instances": 23,
+    "status_counts": {
+      "credible_bounded_observability_limit": 20,
+      "contested_condition_link": 2,
+      "contested_decision_wording": 1
+    },
+    "checks": [
+      {
+        "id": "u3_p202606_0022",
+        "all_declared_old_new_choices_checked": 79,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2026-05-30",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-05-31",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u3_r202610_0166",
+        "all_declared_old_new_choices_checked": 156,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2026-05-30",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-05-31",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u3_p202712_0144",
+        "all_declared_old_new_choices_checked": 158,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-11-30",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u4_p202701_0060",
+        "all_declared_old_new_choices_checked": 38,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-01-25",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-01-26",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-01-27",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-01-29",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u4_p202706_0096",
+        "all_declared_old_new_choices_checked": 36,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-06-02",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u4_p202707_0102",
+        "all_declared_old_new_choices_checked": 21,
+        "manual_status": "contested_condition_link",
+        "alternatives": [
+          {
+            "date": "2027-06-28",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-06-29",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-06-30",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-07-01",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u4_r202708_0197",
+        "all_declared_old_new_choices_checked": 57,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-06-02",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u4_p202710_0126",
+        "all_declared_old_new_choices_checked": 53,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-10-24",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-10-25",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u4_r202710_0179",
+        "all_declared_old_new_choices_checked": 58,
+        "manual_status": "contested_condition_link",
+        "alternatives": [
+          {
+            "date": "2027-06-28",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-06-29",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-06-30",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-07-01",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202606_0016",
+        "all_declared_old_new_choices_checked": 41,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2026-06-07",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202606_0017",
+        "all_declared_old_new_choices_checked": 34,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2026-06-25",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-06-26",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202608_0028",
+        "all_declared_old_new_choices_checked": 53,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2026-07-29",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-07-30",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-07-31",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-08-01",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-08-02",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-08-03",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202609_0043",
+        "all_declared_old_new_choices_checked": 28,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2026-09-13",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-09-14",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-09-15",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202611_0053",
+        "all_declared_old_new_choices_checked": 59,
+        "manual_status": "contested_decision_wording",
+        "alternatives": [
+          {
+            "date": "2026-11-14",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_r202611_0159",
+        "all_declared_old_new_choices_checked": 47,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2026-09-13",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-09-14",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2026-09-15",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202701_0068",
+        "all_declared_old_new_choices_checked": 23,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-01-28",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202702_0078",
+        "all_declared_old_new_choices_checked": 46,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-02-09",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-02-10",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-02-11",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-02-12",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-02-13",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202704_0087",
+        "all_declared_old_new_choices_checked": 40,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-03-26",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-03-27",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-03-28",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-03-29",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-03-30",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-03-31",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-04-01",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-04-02",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-04-03",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202705_0093",
+        "all_declared_old_new_choices_checked": 44,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-05-27",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-05-28",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202708_0114",
+        "all_declared_old_new_choices_checked": 38,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-08-06",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202708_0117",
+        "all_declared_old_new_choices_checked": 81,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-08-03",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-08-04",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_r202708_0189",
+        "all_declared_old_new_choices_checked": 68,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-02-09",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-02-10",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-02-11",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-02-12",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-02-13",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      },
+      {
+        "id": "u5_p202709_0122",
+        "all_declared_old_new_choices_checked": 76,
+        "manual_status": "credible_bounded_observability_limit",
+        "alternatives": [
+          {
+            "date": "2027-09-07",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-09-08",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-09-09",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          },
+          {
+            "date": "2027-09-10",
+            "value_mismatch_days": [],
+            "before_or_at_probe": true,
+            "lag_valid": true,
+            "outside_accept": true,
+            "reversion_anchor_valid": true
+          }
+        ]
+      }
+    ],
+    "manual_near_boundary_text_is_separate": true
+  },
+  "date_limit_overlap": {
+    "narrow_count": 6,
+    "credible_broader_count": 20,
+    "narrow_inside_broader": [
+      "u4_p202701_0060",
+      "u4_p202710_0126",
+      "u5_p202606_0017",
+      "u5_p202701_0068",
+      "u5_p202702_0078",
+      "u5_r202708_0189"
+    ],
+    "narrow_outside_broader": [],
+    "union_count": 20
+  },
+  "corrected_narrow_witness_cutoffs": {
+    "post_probe_alternatives": [],
+    "root_january_workout_witnesses": [
+      {
+        "start_day": 334,
+        "start_date": "2027-01-28",
+        "rule_variant": "same_rule",
+        "cause_lag_days": 4,
+        "accepted_by_date_exact": false
+      }
+    ]
+  },
+  "broader_actual_prefix_excerpts": {
+    "checked": 1286,
+    "source_pointer_or_cutoff_errors": []
+  },
+  "consolidated_counts": {
+    "coverage_rows": 1000,
+    "unique_ids": 1000,
+    "payload_mismatches": [],
+    "classes": {
+      "citation_limit": 8,
+      "uncertainty": 3,
+      "observation_limit": 22,
+      "confirmed_reference_error": 2
+    },
+    "reference_error_ids_match": true,
+    "citation_ids_match": true,
+    "observation_ids_match": true,
+    "uncertainty_ids_match": true,
+    "reference_truth_matches": 998,
+    "baseline_style_union": 15,
+    "additional_broader": 14,
+    "expanded_union": 29,
+    "ledger_union_matches": true
+  },
+  "current_input_stability": {
+    "checked": 40,
+    "changed": []
+  },
+  "prior_semantic_match_check": {
+    "baseline_blobs_match_audit_hashes": {
+      "u1": true,
+      "u2": true,
+      "u3": true,
+      "u4": true,
+      "u5": true
+    },
+    "checked_findings": 71,
+    "statuses": {
+      "pool_only": 30,
+      "still_selected": 35,
+      "absent_from_current_pool": 6
+    },
+    "mismatches": [],
+    "matching_key": "user plus question text/type/domain; compare answer/evidence after matching; IDs are not semantic keys"
+  }
+}

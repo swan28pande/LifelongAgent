@@ -40,7 +40,7 @@ def writer_prompt(spec: PersonaSpec, world: WorldState, day: DayState, feedback:
     lines += known or ["- (nothing yet — this is one of the first conversations)"]
     earlier = known_events(world, day)
     if earlier:
-        lines += ["", "EVENTS FROM EARLIER CONVERSATIONS (known; may be referred to, never changed):"]
+        lines += ["", "UPDATES FROM EARLIER CONVERSATIONS (known; may be referred to, never changed):"]
         lines += [f"- {t}" for t in earlier]
 
     lines += ["", "TODAY'S CHOICES — the user mentions each:"]
@@ -56,6 +56,9 @@ def writer_prompt(spec: PersonaSpec, world: WorldState, day: DayState, feedback:
     if absent:
         lines.append("Neither speaker may mention, ask about, or allude to these topics, "
                      "including a past or future choice or another person's choice. "
+                     "The sole exception is the exact content of today's REQUIRED UPDATES, "
+                     "NEWS ABOUT OTHER PEOPLE or DISTRACTORS: state those without adding "
+                     "a daily choice, activity history, or follow-up about the absent topic. "
                      "Known hobbies and jobs do not grant permission to discuss an absent topic.")
     lines.append("Keep each of today's choices distinct from similar choices: do not add "
                  "details that change the specified value into another option. In particular, "
@@ -99,8 +102,9 @@ def writer_prompt(spec: PersonaSpec, world: WorldState, day: DayState, feedback:
         lines += ["", "NEWS ABOUT OTHER PEOPLE (clearly about them, not the user):"]
         lines += [f"- {s.text}" for s in day.other_people_today]
     if day.distractors_today:
-        lines += ["", "DISTRACTORS (small talk, never connected to the user's routines):"]
-        lines += [f"- {s.text}" for s in day.distractors_today]
+        lines += ["", "DISTRACTORS (the user states each, never connected to their routines):"]
+        lines += [f"- {statement_text(spec, s)} — give its date: {spec.date_of(s.effective_day).isoformat()}"
+                  for s in day.distractors_today]
     if day.followup_candidates:
         lines += ["", "FOLLOW-UP TOPICS the assistant may ask about:"]
         lines += [f"- {f}" for f in day.followup_candidates]
@@ -203,15 +207,23 @@ def fidelity(user_id: str) -> dict:
     first = Counter(f.split(":")[0] for s in sessions for f in s.get("first_try_failures", []))
     log = config.OUTPUT_DIR / user_id / "llm_log.jsonl"
     usage = Counter()
+    usage_source = "llm_log.jsonl"
     if log.exists():
-        for line in log.read_text().splitlines():
-            r = json.loads(line)
-            key = r["model"]
-            usage[f"{key}.calls"] += 1
-            usage[f"{key}.input_tokens"] += r["input_tokens"]
-            usage[f"{key}.output_tokens"] += r["output_tokens"]
-            usage[f"{key}.reasoning_tokens"] += r["reasoning_tokens"]
-            usage[f"{key}.errors"] += bool(r["error"])
+        text = log.read_text()
+        if text.startswith("version https://git-lfs.github.com/spec/v1\n"):
+            previous = config.OUTPUT_DIR / user_id / "fidelity.json"
+            if previous.exists():
+                usage.update(json.loads(previous.read_text()).get("usage", {}))
+            usage_source = "previous fidelity report; llm_log.jsonl is an unavailable LFS object"
+        else:
+            for line in text.splitlines():
+                r = json.loads(line)
+                key = r["model"]
+                usage[f"{key}.calls"] += 1
+                usage[f"{key}.input_tokens"] += r["input_tokens"]
+                usage[f"{key}.output_tokens"] += r["output_tokens"]
+                usage[f"{key}.reasoning_tokens"] += r["reasoning_tokens"]
+                usage[f"{key}.errors"] += bool(r["error"])
     n = len(sessions)
     return {
         "sessions": n,
@@ -223,6 +235,7 @@ def fidelity(user_id: str) -> dict:
         "mean_attempts": round(sum(s["attempts"] for s in sessions) / n, 2) if n else 0,
         "mean_turns": round(sum(len(s["turns"]) for s in sessions) / n, 1) if n else 0,
         "usage": dict(usage),
+        "usage_source": usage_source,
     }
 
 

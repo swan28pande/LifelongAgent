@@ -1,0 +1,47 @@
+{
+  "project": "stb-prj-symb-reg-ai-rfbe",
+  "quota_project": "stb-prj-symb-reg-ai-rfbe",
+  "location": "global",
+  "model": "gemini-3.5-flash",
+  "judge_model": "gemini-3.1-pro-preview",
+  "dataset_hashes": {
+    "conversations.json": "cd9f98547ae78a4bfd6d15891dc712914b3725647cb57588276764675034a116",
+    "probing_questions.json": "792e4f39052fcbf74fa867660c1126fb4b3d6c20a44c4383ec50c5842a798317"
+  },
+  "user": "u5",
+  "month": "2026-03",
+  "sessions": 13,
+  "questions": 6,
+  "rounds": 1,
+  "answer_workers_per_method": 8,
+  "judge_concurrency_per_method": 16,
+  "resumed_preparation_from": "u5_march_20261004_b",
+  "preparation_transport_override": {
+    "fresh_client_per_summary": true,
+    "timeout_seconds": 45,
+    "sdk_retry_attempts": 3
+  },
+  "effective_answer_concurrency": 6,
+  "effective_judge_concurrency": 6,
+  "source_hashes": {
+    "experiments/config.py": "dbbbda5d94c19e5b419647e0d2f1d706b0aca64542eba0b305a22c62d2413e6c",
+    "experiments/core/grading.py": "c88a2a15ad36225ebb3eec916d7116f7de90c7a08f9778d6c139e8f4990f775f",
+    "generator_v2/llm.py": "4f5cf071255bed05ff6870bc6f8051a8f51c574b13e5f7c8414b37455c83ebb1",
+    "setup_2/loader.py": "f5cfa3acaef1126b3d0782f0f26ddd5dba25da63d6114854ea401694918bc6b7",
+    "setup_2/runner.py": "3a63f2211cf15a8f20c5b08a9b21b7fae90aaf94f4f3b89fb1f0d3d1525f52e4",
+    "setup_2/baselines/_common.py": "55ab0f34637263b9707bd7690ef1acf83f7fc0c9d345491a7846630bbdcdbb8f",
+    "setup_2/baselines/TiMem/method.py": "a97a41997bf4bef546ab72939e7e6cd2d9fcdf60ee10936d6322c3090806ee3a",
+    "setup_2/baselines/NaiveRAG/method.py": "23b096cce33b2a996857b34edd3ad1d4188200021dbbaad0d96b2422232eb9ab",
+    "setup_2/baselines/DirectPrompting/method.py": "c9ae89dbe1699f4ff93136977ef357fc5e984e86c693c0a285006a8dd0389584"
+  },
+  "execution": "local; one process with independent baseline stores and model clients",
+  "judge_inputs": "fixed responses from first solitary answer condition",
+  "limitation": "Partial TiMem nodes; warmed-order bias; three requests, not 120/240; no accuracy benchmark",
+  "purpose": "ASAP short API probe; one real prompt per stream",
+  "source_run": "u5_march_20261004_c",
+  "combined_concurrency": 3,
+  "question_id": "u5_p202603_0001",
+  "timeout_seconds": 20,
+  "sdk_attempts": 1,
+  "timem_preparation_complete": false
+}

@@ -1,4 +1,8 @@
+import json
+
 from generator_v2 import conversation, validator
+from generator_v2.tests.conftest import make_spec
+from generator_v2.simulator import simulate
 
 
 def good_extraction(check):
@@ -81,3 +85,31 @@ def test_shape_errors():
     assert any("5 turns" in e for e in conversation.shape_errors(turns))
     turns = [{"speaker": "bot", "text": "hi"}] * 14
     assert any("speaker" in e for e in conversation.shape_errors(turns))
+
+
+def test_validator_has_the_session_date_and_disclosed_fact_change_history():
+    spec = make_spec("u2")
+    world = simulate(spec)
+    day = world.days[120]  # June 29, following the June 28 tennis-club update
+    check = validator.build_check(spec, world, day)
+    prompt = validator.validator_prompt(spec, check, [])
+    assert "DATE: 2026-06-29" in prompt
+    assert "joined a tennis club (happened on 2026-06-28)" in prompt
+
+
+def test_fidelity_preserves_known_usage_when_the_log_is_an_lfs_pointer(tmp_path, monkeypatch):
+    monkeypatch.setattr(conversation.config, "OUTPUT_DIR", tmp_path)
+    base = tmp_path / "u1"
+    (base / "sessions").mkdir(parents=True)
+    (base / "sessions/2026-03-01.json").write_text(json.dumps({
+        "date": "2026-03-01", "turns": [], "passed_validation": True,
+        "attempts": 5, "failures": [], "first_try_failures": ["pref_wrong: old failure"],
+    }))
+    (base / "llm_log.jsonl").write_text("version https://git-lfs.github.com/spec/v1\noid sha256:abc\nsize 100\n")
+    (base / "fidelity.json").write_text(json.dumps({"usage": {"gemini.calls": 42}}))
+    result = conversation.fidelity("u1")
+    assert result["flagged"] == []
+    assert result["passed_after_retries"] == 1
+    assert result["passed_first_try"] == 0
+    assert result["usage"] == {"gemini.calls": 42}
+    assert "unavailable LFS" in result["usage_source"]

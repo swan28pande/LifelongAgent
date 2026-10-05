@@ -1,0 +1,152 @@
+{
+  "questions_checked": 1000,
+  "gold_mismatches": 0,
+  "future_historical_targets": 0,
+  "unsupported_recall_phases": 0,
+  "uncited_duration_closures": 0,
+  "stale_duplicate_files": 0,
+  "duplicate_files_checked": 40,
+  "world_states_unchanged": true,
+  "sessions_with_text_repairs": 21,
+  "sessions_revalidated_with_gemini": 26,
+  "remaining_flagged_sessions": 0,
+  "users": {
+    "u1": {
+      "questions": 200,
+      "probes": 24,
+      "sessions": 730,
+      "unknown_questions": 7,
+      "current_patterns": 1,
+      "by_type": {
+        "recall": 117,
+        "fact_current": 5,
+        "abstention": 14,
+        "fact_at_time": 34,
+        "event_status": 8,
+        "pattern_at_time": 5,
+        "change_detection": 3,
+        "attribution": 3,
+        "duration": 6,
+        "fact_history": 4,
+        "pattern_current": 1
+      }
+    },
+    "u2": {
+      "questions": 200,
+      "probes": 24,
+      "sessions": 657,
+      "unknown_questions": 8,
+      "current_patterns": 2,
+      "by_type": {
+        "recall": 100,
+        "fact_current": 8,
+        "abstention": 14,
+        "exception_vs_shift": 11,
+        "pattern_at_time": 7,
+        "change_detection": 6,
+        "attribution": 5,
+        "fact_at_time": 22,
+        "duration": 10,
+        "event_status": 9,
+        "fact_history": 3,
+        "distractor_probe": 2,
+        "reversion": 1,
+        "pattern_current": 2
+      }
+    },
+    "u3": {
+      "questions": 200,
+      "probes": 24,
+      "sessions": 561,
+      "unknown_questions": 8,
+      "current_patterns": 2,
+      "by_type": {
+        "abstention": 15,
+        "recall": 75,
+        "fact_at_time": 24,
+        "pattern_at_time": 13,
+        "exception_vs_shift": 17,
+        "fact_current": 3,
+        "attribution": 8,
+        "duration": 11,
+        "change_detection": 10,
+        "event_status": 8,
+        "reversion": 3,
+        "distractor_probe": 4,
+        "fact_history": 7,
+        "pattern_current": 2
+      }
+    },
+    "u4": {
+      "questions": 200,
+      "probes": 24,
+      "sessions": 437,
+      "unknown_questions": 8,
+      "current_patterns": 4,
+      "by_type": {
+        "recall": 57,
+        "abstention": 14,
+        "fact_at_time": 24,
+        "other_person": 4,
+        "pattern_at_time": 18,
+        "distractor_probe": 7,
+        "attribution": 16,
+        "event_status": 9,
+        "change_detection": 11,
+        "exception_vs_shift": 11,
+        "fact_history": 2,
+        "duration": 15,
+        "reversion": 6,
+        "fact_current": 2,
+        "pattern_current": 4
+      }
+    },
+    "u5": {
+      "questions": 200,
+      "probes": 24,
+      "sessions": 353,
+      "unknown_questions": 10,
+      "current_patterns": 3,
+      "by_type": {
+        "abstention": 18,
+        "recall": 34,
+        "exception_vs_shift": 15,
+        "other_person": 6,
+        "fact_at_time": 27,
+        "change_detection": 22,
+        "attribution": 18,
+        "duration": 11,
+        "pattern_at_time": 8,
+        "distractor_probe": 12,
+        "event_status": 12,
+        "reversion": 7,
+        "fact_current": 3,
+        "fact_history": 4,
+        "pattern_current": 3
+      }
+    }
+  },
+  "schedule": {
+    "u1": {
+      "checkpoints": 24,
+      "answer_instances": 2467
+    },
+    "u2": {
+      "checkpoints": 24,
+      "answer_instances": 2464
+    },
+    "u3": {
+      "checkpoints": 24,
+      "answer_instances": 2335
+    },
+    "u4": {
+      "checkpoints": 24,
+      "answer_instances": 2144
+    },
+    "u5": {
+      "checkpoints": 24,
+      "answer_instances": 2311
+    }
+  },
+  "limits": "Synthetic truth and the audited observation limits are checked; no exhaustive proof of natural-language entailment or unique causal/rule identifiability is claimed."
+}

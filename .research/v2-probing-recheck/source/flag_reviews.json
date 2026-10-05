@@ -1,0 +1,3843 @@
+{
+  "summary": {
+    "baseline_source_sha256": "bb64c995a788140d813a292658fb88d77edd0db7d371a359cb6dc62d00d52853",
+    "individual_session_files_checked": 2738,
+    "changed_individual_session_files": [],
+    "missing_individual_sessions": [],
+    "baseline_reviewed_flag_occurrences": 28,
+    "quoted_evidence_mismatches": [],
+    "confirmed_source_contract_occurrences": 19,
+    "confirmed_source_contract_session_count": 19,
+    "classification_counts": {
+      "refuted_by_world_and_prior_transcript": 1,
+      "confirmed_avoidable_absent_topic_mention": 12,
+      "refuted_by_verbatim_correct_relative_date": 5,
+      "refuted_by_required_world_statement": 1,
+      "content_present_date_underspecified": 2,
+      "confirmed_unmodeled_persistent_detail": 4,
+      "confirmed_required_absent_topic_conflict": 3
+    },
+    "all_retained_flags_current_citation_exposure_count": 57,
+    "confirmed_source_contract_current_citation_exposure_count": 38,
+    "confirmed_source_contract_current_citation_exposure_ids": [
+      "u2_p202609_0052",
+      "u2_p202611_0065",
+      "u3_p202706_0099",
+      "u3_p202706_0103",
+      "u3_p202707_0106",
+      "u3_p202709_0118",
+      "u3_p202709_0120",
+      "u3_p202712_0142",
+      "u3_p202712_0143",
+      "u3_p202712_0144",
+      "u3_p202712_0145",
+      "u3_p202712_0146",
+      "u3_p202801_0158",
+      "u3_r202708_0186",
+      "u3_r202712_0165",
+      "u4_p202603_0001",
+      "u4_p202603_0002",
+      "u4_p202604_0005",
+      "u4_p202606_0016",
+      "u4_p202608_0029",
+      "u4_p202609_0032",
+      "u4_p202609_0033",
+      "u4_p202610_0038",
+      "u4_p202611_0042",
+      "u4_p202611_0043",
+      "u4_p202611_0044",
+      "u4_p202611_0045",
+      "u4_p202612_0050",
+      "u4_p202612_0051",
+      "u4_p202702_0064",
+      "u4_p202703_0070",
+      "u4_p202708_0107",
+      "u4_r202608_0177",
+      "u4_r202608_0184",
+      "u4_r202612_0199",
+      "u4_r202702_0164",
+      "u4_r202702_0175",
+      "u4_r202708_0171"
+    ],
+    "avoidable_mention_or_unmodeled_detail_current_citation_exposure_count": 16,
+    "unmodeled_detail_current_citation_exposure_count": 14,
+    "source_workstream_wrong_gold_proved_count": 0,
+    "limit": "Current citation exposure is not a count of wrong questions. Unchanged source hashes allow reusing earlier focused transcript review; unflagged turn semantics are not exhaustively re-audited."
+  },
+  "failure_reviews": [
+    {
+      "user": "u2",
+      "day": 121,
+      "date": "2026-06-29",
+      "failure_index": 0,
+      "recorded_failure": "invention: The user joined a tennis club over the weekend.",
+      "recorded_failure_type": "invention",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2026-06-29.json",
+        "line": 68
+      },
+      "classification": "refuted_by_world_and_prior_transcript",
+      "reasoning": "Joining the club is existing world statement hobby.tennis, effective/stated day 120 (Sunday June 28); the prior day's user also explicitly says 'I joined a tennis club today!'. 'This weekend' on Monday June 29 is consistent. The validator's known input retains only hobbies: tennis, losing fact-change narrative history.",
+      "raw_evidence": [
+        {
+          "turn_number": 8,
+          "speaker": "user",
+          "text": "We did! Grace and I went for a nice walk around the neighborhood. Also, I finally joined a tennis club this weekend.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2026-06-29.json",
+            "line": 37
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 12292
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "oatmeal",
+          "base_value": "oatmeal",
+          "regime_id": "breakfast.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "workout": {
+          "value": "gym weights",
+          "base_value": "gym weights",
+          "regime_id": "workout.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "evening_show": {
+          "value": "nature documentary",
+          "base_value": "nature documentary",
+          "regime_id": "evening_show.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "counter_evidence": [
+        {
+          "file": "datasets/v2/u2/world_state.json",
+          "line": 2110
+        },
+        {
+          "file": "datasets/v2/u2/sessions/2026-06-28.json",
+          "line": 29
+        }
+      ],
+      "baseline_cited_by_probe_ids": [
+        "u2_p202606_0023",
+        "u2_p202607_0032",
+        "u2_p202607_0033",
+        "u2_p202705_0103"
+      ],
+      "cited_by_current_probe_ids": [
+        "u2_p202606_0024",
+        "u2_p202606_0029",
+        "u2_p202610_0055"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u2_p202606_0024",
+          "original_id": "u2_q0289",
+          "source": {
+            "file": "datasets/v2/u2/probing_questions.json",
+            "line": 579
+          },
+          "type": "change_detection",
+          "domain": "workout",
+          "question": "When did Marcus's workout routine change from the gym weights / run routine to the gym weights / rest day / run / tennis routine?",
+          "answer": "2026-06-29",
+          "probe_date": "2026-06-30",
+          "evidence_days": [
+            120,
+            121
+          ]
+        },
+        {
+          "id": "u2_p202606_0029",
+          "original_id": "u2_q0098",
+          "source": {
+            "file": "datasets/v2/u2/probing_questions.json",
+            "line": 699
+          },
+          "type": "recall",
+          "domain": "workout",
+          "question": "What was Marcus's workout on Monday, 2026-06-29?",
+          "answer": "gym weights",
+          "probe_date": "2026-06-30",
+          "evidence_days": [
+            121
+          ]
+        },
+        {
+          "id": "u2_p202610_0055",
+          "original_id": "u2_q0191",
+          "source": {
+            "file": "datasets/v2/u2/probing_questions.json",
+            "line": 1483
+          },
+          "type": "pattern_at_time",
+          "domain": "workout",
+          "question": "What was Marcus's workout routine in October 2026?",
+          "answer": "by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun",
+          "probe_date": "2026-10-31",
+          "evidence_days": [
+            121,
+            122,
+            123
+          ]
+        }
+      ],
+      "status": "unchanged_prior_flag_interpretation"
+    },
+    {
+      "user": "u2",
+      "day": 185,
+      "date": "2026-09-01",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2026-09-01.json",
+        "line": 72
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; assistant asks about tennis and user discusses recent court time. Historical/negative discussion still violates the absent-topic rule.",
+      "raw_evidence": [
+        {
+          "turn_number": 5,
+          "speaker": "assistant",
+          "text": "Definitely, safety first in the lab! Have you had any time for tennis lately, or has the back-to-school rush taken over your free time?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2026-09-01.json",
+            "line": 25
+          }
+        },
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "The schedule is pretty packed right now, so I haven't been out on the courts recently. Grace and I are just trying to unwind in the evenings.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2026-09-01.json",
+            "line": 29
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 17775
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "oatmeal",
+          "base_value": "oatmeal",
+          "regime_id": "breakfast.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "tennis",
+          "base_value": "tennis",
+          "regime_id": "workout.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "cooking competition show",
+          "base_value": "cooking competition show",
+          "regime_id": "evening_show.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u2_p202609_0053"
+      ],
+      "cited_by_current_probe_ids": [
+        "u2_p202609_0052"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u2_p202609_0052",
+          "original_id": "u2_q0016",
+          "source": {
+            "file": "datasets/v2/u2/probing_questions.json",
+            "line": 1357
+          },
+          "type": "recall",
+          "domain": "breakfast",
+          "question": "What was Marcus's breakfast on Tuesday, 2026-09-01?",
+          "answer": "oatmeal",
+          "probe_date": "2026-09-30",
+          "evidence_days": [
+            185
+          ]
+        }
+      ],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u2",
+      "day": 195,
+      "date": "2026-09-11",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2026-09-11.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; assistant and user discuss possible tennis this weekend. A future plan still mentions the topic.",
+      "raw_evidence": [
+        {
+          "turn_number": 5,
+          "speaker": "assistant",
+          "text": "That's wonderful to hear. Are you hoping to get some downtime this weekend? Maybe some tennis or time in your woodworking shop?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2026-09-11.json",
+            "line": 25
+          }
+        },
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "I'd love to get out and play some tennis, but honestly, I might just focus on some woodworking in the garage. The weather in Portland has been nice, but I'm pretty exhausted.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2026-09-11.json",
+            "line": 29
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 18637
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "protein smoothie",
+          "base_value": "protein smoothie",
+          "regime_id": "breakfast.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "gym weights",
+          "base_value": "gym weights",
+          "regime_id": "workout.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "nature documentary",
+          "base_value": "nature documentary",
+          "regime_id": "evening_show.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u2_p202609_0051"
+      ],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u2",
+      "day": 246,
+      "date": "2026-11-01",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2026-11-01.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; assistant asks about tennis and user says no tennis today.",
+      "raw_evidence": [
+        {
+          "turn_number": 3,
+          "speaker": "assistant",
+          "text": "Oatmeal is the perfect way to warm up on a chilly Portland morning. Have you had any time to get out on the tennis courts or do some woodworking this weekend?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2026-11-01.json",
+            "line": 17
+          }
+        },
+        {
+          "turn_number": 4,
+          "speaker": "user",
+          "text": "No tennis today, but I actually spent a couple of hours out in the garage doing some woodworking. I've been sanding down some birch for a small spice rack I'm making for Grace.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2026-11-01.json",
+            "line": 21
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 22937
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "oatmeal",
+          "base_value": "oatmeal",
+          "regime_id": "breakfast.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "rest day",
+          "base_value": "rest day",
+          "regime_id": "workout.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "nature documentary",
+          "base_value": "nature documentary",
+          "regime_id": "evening_show.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [
+        "u2_p202611_0065"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u2_p202611_0065",
+          "original_id": "u2_q0150",
+          "source": {
+            "file": "datasets/v2/u2/probing_questions.json",
+            "line": 1811
+          },
+          "type": "recall",
+          "domain": "evening_show",
+          "question": "What was Marcus's evening TV show on Sunday, 2026-11-01?",
+          "answer": "nature documentary",
+          "probe_date": "2026-11-30",
+          "evidence_days": [
+            246
+          ]
+        }
+      ],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u2",
+      "day": 512,
+      "date": "2027-07-25",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2027-07-25.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; tennis last Thursday is nevertheless discussed.",
+      "raw_evidence": [
+        {
+          "turn_number": 5,
+          "speaker": "assistant",
+          "text": "That sounds lovely. Have you managed to get out on the tennis courts recently, or are you keeping things low-key?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-07-25.json",
+            "line": 25
+          }
+        },
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "I'm keeping it pretty low-key today, but I played a couple of sets of tennis last Thursday. My back felt completely fine, so it's great to be fully back in action.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-07-25.json",
+            "line": 29
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 46312
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "oatmeal",
+          "base_value": "oatmeal",
+          "regime_id": "breakfast.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "rest day",
+          "base_value": "rest day",
+          "regime_id": "workout.r2.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "sitcom reruns",
+          "base_value": "sitcom reruns",
+          "regime_id": "evening_show.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u2",
+      "day": 555,
+      "date": "2027-09-06",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2027-09-06.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; tennis on the weekend is nevertheless discussed.",
+      "raw_evidence": [
+        {
+          "turn_number": 3,
+          "speaker": "assistant",
+          "text": "I'm doing great, thanks for asking! A protein smoothie is a solid way to kick off a busy day. Have you had any time to get out on the tennis courts lately, or has school kept you too busy?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-09-06.json",
+            "line": 17
+          }
+        },
+        {
+          "turn_number": 4,
+          "speaker": "user",
+          "text": "I actually managed to play a couple of sets over the weekend! My back felt completely fine, so it's great to be back on the court without any of that old stiffness.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-09-06.json",
+            "line": 21
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 50019
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "protein smoothie",
+          "base_value": "protein smoothie",
+          "regime_id": "breakfast.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "gym weights",
+          "base_value": "gym weights",
+          "regime_id": "workout.r2.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "sitcom reruns",
+          "base_value": "sitcom reruns",
+          "regime_id": "evening_show.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u2",
+      "day": 625,
+      "date": "2027-11-15",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2027-11-15.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; Saturday court activity is nevertheless discussed.",
+      "raw_evidence": [
+        {
+          "turn_number": 3,
+          "speaker": "assistant",
+          "text": "That sounds like a great, solid breakfast to kick off the school week. Did you get a chance to play any tennis over the weekend, or was it mostly prep for the classes?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-11-15.json",
+            "line": 17
+          }
+        },
+        {
+          "turn_number": 4,
+          "speaker": "user",
+          "text": "I did manage to get on the court for a bit on Saturday. It was nice to play a few games, though the weather was a bit damp. Mostly, Grace and I just tried to keep things low-key.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-11-15.json",
+            "line": 21
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 56155
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "eggs and toast",
+          "base_value": "eggs and toast",
+          "regime_id": "breakfast.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "gym weights",
+          "base_value": "gym weights",
+          "regime_id": "workout.r2.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "sitcom reruns",
+          "base_value": "sitcom reruns",
+          "regime_id": "evening_show.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u2_p202712_0153"
+      ],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u2",
+      "day": 641,
+      "date": "2027-12-01",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2027-12-01.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; yesterday's tennis is nevertheless discussed.",
+      "raw_evidence": [
+        {
+          "turn_number": 5,
+          "speaker": "assistant",
+          "text": "I can imagine the pre-break energy is quite high! Have you had any time to get out on the tennis court lately to blow off some steam?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-12-01.json",
+            "line": 25
+          }
+        },
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "I actually played a couple of sets yesterday afternoon. It was great to get out there and hit some balls, even if my serve was a little rusty.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-12-01.json",
+            "line": 29
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 57527
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "eggs and toast",
+          "base_value": "eggs and toast",
+          "regime_id": "breakfast.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "run",
+          "base_value": "run",
+          "regime_id": "workout.r2.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "sitcom reruns",
+          "base_value": "sitcom reruns",
+          "regime_id": "evening_show.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u2",
+      "day": 651,
+      "date": "2027-12-11",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'tennis'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2027-12-11.json",
+        "line": 68
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; user explicitly reports today's singles match. The value tennis is correct, but this is an extra observation outside planned mention sampling.",
+      "raw_evidence": [
+        {
+          "turn_number": 7,
+          "speaker": "assistant",
+          "text": "It definitely is. Did you manage to get on the tennis court at all today, or is it a rest day?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-12-11.json",
+            "line": 33
+          }
+        },
+        {
+          "turn_number": 8,
+          "speaker": "user",
+          "text": "I actually did play a singles match this afternoon. My back felt completely fine, which is always a relief after that strain a while back.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-12-11.json",
+            "line": 37
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 58408
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "pancakes",
+          "base_value": "pancakes",
+          "regime_id": "breakfast.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "workout": {
+          "value": "tennis",
+          "base_value": "tennis",
+          "regime_id": "workout.r2.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "sitcom reruns",
+          "base_value": "sitcom reruns",
+          "regime_id": "evening_show.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u2",
+      "day": 671,
+      "date": "2027-12-31",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u2/sessions/2027-12-31.json",
+        "line": 64
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; assistant and user discuss tennis a couple of days ago.",
+      "raw_evidence": [
+        {
+          "turn_number": 7,
+          "speaker": "assistant",
+          "text": "I'm sure Olive is absolutely thrilled to have her favorite human home. Have you been able to get out and play any tennis during the break, or has the Portland winter weather kept you indoors?",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-12-31.json",
+            "line": 33
+          }
+        },
+        {
+          "turn_number": 8,
+          "speaker": "user",
+          "text": "The weather hasn't been great, but I did manage to get on an indoor court for some tennis a couple of days ago. It felt really good to run around, especially since my back is completely fine now.",
+          "source": {
+            "file": "datasets/v2/u2/sessions/2027-12-31.json",
+            "line": 37
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 60145
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "bagel",
+          "base_value": "bagel",
+          "regime_id": "breakfast.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "gym weights",
+          "base_value": "gym weights",
+          "regime_id": "workout.r2.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "evening_show": {
+          "value": "sitcom reruns",
+          "base_value": "sitcom reruns",
+          "regime_id": "evening_show.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u3",
+      "day": 141,
+      "date": "2026-07-19",
+      "failure_index": 0,
+      "recorded_failure": "statement_missing: flu.0 ([her flu] came down with the flu (happened) (this happened on 2026-07-18))",
+      "recorded_failure_type": "statement_missing",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2026-07-19.json",
+        "line": 64
+      },
+      "classification": "refuted_by_verbatim_correct_relative_date",
+      "reasoning": "The user says 'I came down with a really nasty case of the flu yesterday.' July 19 minus one day is July 18, effective day 140. Event and cause link are present.",
+      "raw_evidence": [
+        {
+          "turn_number": 2,
+          "speaker": "user",
+          "text": "Hey! Actually, I didn't have to make any journey to or from work today, which is a massive relief because I've been feeling absolutely terrible. I came down with a really nasty case of the flu yesterday.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2026-07-19.json",
+            "line": 13
+          }
+        },
+        {
+          "turn_number": 4,
+          "speaker": "user",
+          "text": "I'm surviving, but definitely miserable. I actually had to change up my usual morning drink routine today because of this flu; I brewed a hot mug of freshly steeped ginger root to help soothe my throat and stomach instead of my normal drink.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2026-07-19.json",
+            "line": 21
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 15232
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "ginger tea",
+          "base_value": "ginger tea",
+          "regime_id": "morning_drink.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "regime_start"
+        },
+        "lunch": {
+          "value": "packed leftovers",
+          "base_value": "packed leftovers",
+          "regime_id": "lunch.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "commute": {
+          "value": "no commute",
+          "base_value": "no commute",
+          "regime_id": "commute.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "podcast": {
+          "value": "health news podcast",
+          "base_value": "health news podcast",
+          "regime_id": "podcast.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "flu.0",
+          "kind": "event_update",
+          "text": "[her flu] came down with the flu (happened)",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 140,
+          "stated_day": 141,
+          "retrospective": true,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u3_p202607_0029",
+        "u3_p202607_0032",
+        "u3_r202612_0198"
+      ],
+      "cited_by_current_probe_ids": [
+        "u3_p202607_0026",
+        "u3_p202607_0028",
+        "u3_p202608_0033",
+        "u3_r202701_0176"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u3_p202607_0026",
+          "original_id": "u3_q0241",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 655
+          },
+          "type": "change_detection",
+          "domain": "morning_drink",
+          "question": "When did Sofia's morning drink routine change from the chai latte / cold brew / hot chocolate routine to ginger tea?",
+          "answer": "2026-07-19",
+          "probe_date": "2026-07-31",
+          "evidence_days": [
+            139,
+            141
+          ]
+        },
+        {
+          "id": "u3_p202607_0028",
+          "original_id": "u3_q0340",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 707
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What was the status of her flu on 2026-07-25?",
+          "answer": "came down with the flu (happened)",
+          "probe_date": "2026-07-31",
+          "evidence_days": [
+            141
+          ]
+        },
+        {
+          "id": "u3_p202608_0033",
+          "original_id": "u3_q0359",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 839
+          },
+          "type": "duration",
+          "domain": "morning_drink",
+          "question": "How long did Sofia's morning drink stay ginger tea?",
+          "answer": "14 days (2026-07-19 to 2026-08-01)",
+          "probe_date": "2026-08-31",
+          "evidence_days": [
+            141,
+            153
+          ]
+        },
+        {
+          "id": "u3_r202701_0176",
+          "original_id": "u3_q0340",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 2127
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What was the status of her flu on 2026-07-25?",
+          "answer": "came down with the flu (happened)",
+          "probe_date": "2027-01-31",
+          "evidence_days": [
+            141
+          ]
+        }
+      ],
+      "status": "unchanged_prior_flag_interpretation"
+    },
+    {
+      "user": "u3",
+      "day": 181,
+      "date": "2026-08-28",
+      "failure_index": 0,
+      "recorded_failure": "invention: has a roommate",
+      "recorded_failure_type": "invention",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2026-08-28.json",
+        "line": 60
+      },
+      "classification": "refuted_by_required_world_statement",
+      "reasoning": "Required distractor0 literally says 'her roommate bought a new espresso machine'; having a roommate is entailed by that statement, not newly invented. Exact purchase date is underspecified but not the saved invention allegation.",
+      "raw_evidence": [
+        {
+          "turn_number": 4,
+          "speaker": "user",
+          "text": "Not this one, he's been busy with work, but I'll save some for him. Oh, by the way, my roommate just bought a brand new espresso machine, so the kitchen has been smelling incredible all morning.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2026-08-28.json",
+            "line": 21
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 18973
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "chai latte",
+          "base_value": "chai latte",
+          "regime_id": "morning_drink.r1.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "lunch": {
+          "value": "sourdough sandwich",
+          "base_value": "sourdough sandwich",
+          "regime_id": "lunch.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "commute": {
+          "value": "rideshare",
+          "base_value": "rideshare",
+          "regime_id": "commute.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "podcast": {
+          "value": "comedy podcast",
+          "base_value": "comedy podcast",
+          "regime_id": "podcast.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "distractor0",
+          "kind": "distractor",
+          "text": "her roommate bought a new espresso machine",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 180,
+          "stated_day": 181,
+          "retrospective": true,
+          "is_cause": false
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u3_p202608_0035",
+        "u3_r202611_0181"
+      ],
+      "cited_by_current_probe_ids": [
+        "u3_p202608_0036"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u3_p202608_0036",
+          "original_id": "u3_q0363",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 912
+          },
+          "type": "distractor_probe",
+          "domain": "morning_drink",
+          "question": "Around 2026-08-27, her roommate bought a new espresso machine. Did that lead to any change in Sofia's morning drink?",
+          "answer": "No - nothing about Sofia's morning drink changed because of it.",
+          "probe_date": "2026-08-31",
+          "evidence_days": [
+            181
+          ]
+        }
+      ],
+      "status": "unchanged_prior_flag_interpretation"
+    },
+    {
+      "user": "u3",
+      "day": 451,
+      "date": "2027-05-25",
+      "failure_index": 0,
+      "recorded_failure": "statement_missing: distractor1 (a new sandwich shop opened near her work (this happened on 2027-05-24))",
+      "recorded_failure_type": "statement_missing",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2027-05-25.json",
+        "line": 64
+      },
+      "classification": "content_present_date_underspecified",
+      "reasoning": "The user explicitly states a new sandwich shop just opened near the clinic. The precise effective date May 24 is not pinned down by 'just'; no different day is clearly stated. Missing event content is not established.",
+      "raw_evidence": [
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "It's a mystery thriller set in New England. It's really gripping so far! Oh, by the way, a new sandwich shop just opened up right down the street from the clinic.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-05-25.json",
+            "line": 29
+          }
+        },
+        {
+          "turn_number": 8,
+          "speaker": "user",
+          "text": "Yeah, a couple of the other nurses went today. They said the line was out the door but the food was amazing. I might have to walk over and try it one of these days.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-05-25.json",
+            "line": 37
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 43773
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "drip coffee",
+          "base_value": "drip coffee",
+          "regime_id": "morning_drink.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "lunch": {
+          "value": "sourdough sandwich",
+          "base_value": "sourdough sandwich",
+          "regime_id": "lunch.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "commute": {
+          "value": "driving",
+          "base_value": "driving",
+          "regime_id": "commute.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "podcast": {
+          "value": "an audiobook",
+          "base_value": "Italian lessons podcast",
+          "regime_id": "podcast.r2",
+          "is_exception": true,
+          "exception_reason": "a friend lent her one",
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "distractor1",
+          "kind": "distractor",
+          "text": "a new sandwich shop opened near her work",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 450,
+          "stated_day": 451,
+          "retrospective": true,
+          "is_cause": false
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [
+        "u3_p202706_0105"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u3_p202706_0105",
+          "original_id": "u3_q0081",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3287
+          },
+          "type": "recall",
+          "domain": "commute",
+          "question": "What was Sofia's commute on Tuesday, 2027-06-08?",
+          "answer": "driving",
+          "probe_date": "2027-06-30",
+          "evidence_days": [
+            451,
+            458
+          ]
+        }
+      ],
+      "status": "unchanged_prior_flag_interpretation"
+    },
+    {
+      "user": "u3",
+      "day": 461,
+      "date": "2027-06-04",
+      "failure_index": 0,
+      "recorded_failure": "invention: planning a future trip",
+      "recorded_failure_type": "invention",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2027-06-04.json",
+        "line": 68
+      },
+      "classification": "confirmed_unmodeled_persistent_detail",
+      "reasoning": "The user refers to 'our future trip'. World statements include an online Italian course, but no trip. A future trip beyond today violates the writer's no-new-trips/plans instruction; it does not contradict the day's correct commute answer.",
+      "raw_evidence": [
+        {
+          "turn_number": 10,
+          "speaker": "user",
+          "text": "Yes, I'm still keeping up with it! I usually do a quick twenty-minute lesson in the evenings. I'm starting to learn how to order food, which is making me very excited for our future trip.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-06-04.json",
+            "line": 45
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 44692
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "drip coffee",
+          "base_value": "drip coffee",
+          "regime_id": "morning_drink.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "lunch": {
+          "value": "sourdough sandwich",
+          "base_value": "sourdough sandwich",
+          "regime_id": "lunch.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "commute": {
+          "value": "driving",
+          "base_value": "driving",
+          "regime_id": "commute.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "podcast": {
+          "value": "Italian lessons podcast",
+          "base_value": "Italian lessons podcast",
+          "regime_id": "podcast.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u3_p202706_0105"
+      ],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u3",
+      "day": 483,
+      "date": "2027-06-26",
+      "failure_index": 0,
+      "recorded_failure": "invention: Previously focused on Phoenix for wedding venues",
+      "recorded_failure_type": "invention",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2027-06-26.json",
+        "line": 68
+      },
+      "classification": "confirmed_unmodeled_persistent_detail",
+      "reasoning": "'Instead of focusing on Phoenix' adds prior wedding-venue planning history absent from the world. The earlier May 25 transcript also mentions venue browsing/Phoenix, so this is an unmodeled embellishment rather than an internal conversation contradiction. The Tucson move and its Wednesday date are correctly stated.",
+      "raw_evidence": [
+        {
+          "turn_number": 12,
+          "speaker": "user",
+          "text": "We haven't done any deep planning yet, but we'll probably start looking at some local Tucson venues soon instead of focusing on Phoenix. It's actually really exciting to think about!",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-06-26.json",
+            "line": 53
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 46671
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "matcha latte",
+          "base_value": "matcha latte",
+          "regime_id": "morning_drink.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "lunch": {
+          "value": "homemade burrito bowl",
+          "base_value": "homemade burrito bowl",
+          "regime_id": "lunch.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "commute": {
+          "value": "no commute",
+          "base_value": "no commute",
+          "regime_id": "commute.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "podcast": {
+          "value": "Italian lessons podcast",
+          "base_value": "Italian lessons podcast",
+          "regime_id": "podcast.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        }
+      },
+      "required_statements": [
+        {
+          "id": "city.tucson",
+          "kind": "fact_change",
+          "text": "moved to Tucson to be closer to her parents",
+          "entity": "city",
+          "op": "set",
+          "value": "Tucson, Arizona",
+          "effective_day": 480,
+          "stated_day": 483,
+          "retrospective": true,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u3_p202706_0100",
+        "u3_p202706_0104",
+        "u3_p202706_0108",
+        "u3_p202707_0115",
+        "u3_p202708_0117",
+        "u3_r202708_0176",
+        "u3_r202709_0197",
+        "u3_p202801_0153"
+      ],
+      "cited_by_current_probe_ids": [
+        "u3_p202706_0099",
+        "u3_p202706_0103",
+        "u3_p202707_0106",
+        "u3_r202708_0186",
+        "u3_p202801_0158"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u3_p202706_0099",
+          "original_id": "u3_q0260",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3139
+          },
+          "type": "attribution",
+          "domain": "lunch",
+          "question": "Why did Sofia's lunch routine change around 2027-06-26?",
+          "answer": "moved to Tucson to be closer to her parents",
+          "probe_date": "2027-06-30",
+          "evidence_days": [
+            483
+          ]
+        },
+        {
+          "id": "u3_p202706_0103",
+          "original_id": "u3_q0247",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3239
+          },
+          "type": "change_detection",
+          "domain": "lunch",
+          "question": "When did Sofia's lunch routine change from the lunch with Tom / sourdough sandwich routine to the homemade burrito bowl / sourdough sandwich routine?",
+          "answer": "2027-06-26",
+          "probe_date": "2027-06-30",
+          "evidence_days": [
+            479,
+            483
+          ]
+        },
+        {
+          "id": "u3_p202707_0106",
+          "original_id": "u3_q0276",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3321
+          },
+          "type": "exception_vs_shift",
+          "domain": "lunch",
+          "question": "On Saturday, 2027-06-26, Sofia's lunch was homemade burrito bowl instead of the usual lunch with Tom. Was that a lasting change?",
+          "answer": "Yes - from 2027-06-26 the routine changed to alternating weeks of homemade burrito bowls and sourdough sandwiches.",
+          "probe_date": "2027-07-31",
+          "evidence_days": [
+            483,
+            488,
+            490
+          ]
+        },
+        {
+          "id": "u3_r202708_0186",
+          "original_id": "u3_q0260",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3759
+          },
+          "type": "attribution",
+          "domain": "lunch",
+          "question": "Why did Sofia's lunch routine change around 2027-06-26?",
+          "answer": "moved to Tucson to be closer to her parents",
+          "probe_date": "2027-08-31",
+          "evidence_days": [
+            483
+          ]
+        },
+        {
+          "id": "u3_p202801_0158",
+          "original_id": "u3_q0310",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 5080
+          },
+          "type": "fact_at_time",
+          "domain": "city",
+          "question": "What was Sofia's city of residence on 2028-01-07?",
+          "answer": "Tucson, Arizona",
+          "probe_date": "2028-01-31",
+          "evidence_days": [
+            483
+          ]
+        }
+      ],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u3",
+      "day": 562,
+      "date": "2027-09-13",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: podcast should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2027-09-13.json",
+        "line": 60
+      },
+      "classification": "confirmed_required_absent_topic_conflict",
+      "reasoning": "The world requires distractor2, a podcast host's book tour, while podcast.mentioned is false. Literal required content intrinsically raises the supposedly absent topic. The observed topic mention is real; assigning the entire failure to discretionary writer leakage ignores contradictory instructions.",
+      "raw_evidence": [
+        {
+          "turn_number": 7,
+          "speaker": "assistant",
+          "text": "You've got this. Oh, by the way, I saw some news this morning and thought of you—the host of that true-crime audio show you like just announced a book tour! I think they might be stopping in Arizona.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-09-13.json",
+            "line": 33
+          }
+        },
+        {
+          "turn_number": 8,
+          "speaker": "user",
+          "text": "Oh, wow! Really? I'll definitely have to look up the dates. I'd love to see them if they come to Tucson or even Phoenix.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-09-13.json",
+            "line": 37
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 53814
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "drip coffee",
+          "base_value": "drip coffee",
+          "regime_id": "morning_drink.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "lunch": {
+          "value": "sourdough sandwich",
+          "base_value": "sourdough sandwich",
+          "regime_id": "lunch.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "commute": {
+          "value": "driving",
+          "base_value": "driving",
+          "regime_id": "commute.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "podcast": {
+          "value": "Italian lessons podcast",
+          "base_value": "Italian lessons podcast",
+          "regime_id": "podcast.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        }
+      },
+      "required_statements": [
+        {
+          "id": "distractor2",
+          "kind": "distractor",
+          "text": "her favorite podcast host announced a book tour",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 560,
+          "stated_day": 562,
+          "retrospective": true,
+          "is_cause": false
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u3_p202709_0122"
+      ],
+      "cited_by_current_probe_ids": [
+        "u3_p202709_0118",
+        "u3_p202709_0120",
+        "u3_r202712_0165"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u3_p202709_0118",
+          "original_id": "u3_q0367",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3819
+          },
+          "type": "distractor_probe",
+          "domain": "podcast",
+          "question": "Around 2027-09-11, her favorite podcast host announced a book tour. Did that lead to any change in Sofia's podcast?",
+          "answer": "No - nothing about Sofia's podcast changed because of it.",
+          "probe_date": "2027-09-30",
+          "evidence_days": [
+            562
+          ]
+        },
+        {
+          "id": "u3_p202709_0120",
+          "original_id": "u3_q0094",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3863
+          },
+          "type": "recall",
+          "domain": "commute",
+          "question": "What was Sofia's commute on Monday, 2027-09-27?",
+          "answer": "driving",
+          "probe_date": "2027-09-30",
+          "evidence_days": [
+            562,
+            569
+          ]
+        },
+        {
+          "id": "u3_r202712_0165",
+          "original_id": "u3_q0367",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4836
+          },
+          "type": "distractor_probe",
+          "domain": "podcast",
+          "question": "Around 2027-09-11, her favorite podcast host announced a book tour. Did that lead to any change in Sofia's podcast?",
+          "answer": "No - nothing about Sofia's podcast changed because of it.",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            562
+          ]
+        }
+      ],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u3",
+      "day": 562,
+      "date": "2027-09-13",
+      "failure_index": 1,
+      "recorded_failure": "statement_missing: distractor2 (her favorite podcast host announced a book tour (this happened on 2027-09-11))",
+      "recorded_failure_type": "statement_missing",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2027-09-13.json",
+        "line": 60
+      },
+      "classification": "content_present_date_underspecified",
+      "reasoning": "The assistant states the book-tour news; the user reacts as if newly learning it. Event content is present. 'I saw some news this morning' specifies when the assistant saw news, not unambiguously when it was announced. No definite wrong event date is established. Distractors are a separate writer block from REQUIRED UPDATES (conversation.py:65,101); the distractor rules allow natural small talk and do not explicitly require a user statement, so speaker attribution alone is not a confirmed contract defect.",
+      "raw_evidence": [
+        {
+          "turn_number": 7,
+          "speaker": "assistant",
+          "text": "You've got this. Oh, by the way, I saw some news this morning and thought of you—the host of that true-crime audio show you like just announced a book tour! I think they might be stopping in Arizona.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-09-13.json",
+            "line": 33
+          }
+        },
+        {
+          "turn_number": 8,
+          "speaker": "user",
+          "text": "Oh, wow! Really? I'll definitely have to look up the dates. I'd love to see them if they come to Tucson or even Phoenix.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-09-13.json",
+            "line": 37
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 53814
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "drip coffee",
+          "base_value": "drip coffee",
+          "regime_id": "morning_drink.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "lunch": {
+          "value": "sourdough sandwich",
+          "base_value": "sourdough sandwich",
+          "regime_id": "lunch.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "commute": {
+          "value": "driving",
+          "base_value": "driving",
+          "regime_id": "commute.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "podcast": {
+          "value": "Italian lessons podcast",
+          "base_value": "Italian lessons podcast",
+          "regime_id": "podcast.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        }
+      },
+      "required_statements": [
+        {
+          "id": "distractor2",
+          "kind": "distractor",
+          "text": "her favorite podcast host announced a book tour",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 560,
+          "stated_day": 562,
+          "retrospective": true,
+          "is_cause": false
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u3_p202709_0122"
+      ],
+      "cited_by_current_probe_ids": [
+        "u3_p202709_0118",
+        "u3_p202709_0120",
+        "u3_r202712_0165"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u3_p202709_0118",
+          "original_id": "u3_q0367",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3819
+          },
+          "type": "distractor_probe",
+          "domain": "podcast",
+          "question": "Around 2027-09-11, her favorite podcast host announced a book tour. Did that lead to any change in Sofia's podcast?",
+          "answer": "No - nothing about Sofia's podcast changed because of it.",
+          "probe_date": "2027-09-30",
+          "evidence_days": [
+            562
+          ]
+        },
+        {
+          "id": "u3_p202709_0120",
+          "original_id": "u3_q0094",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 3863
+          },
+          "type": "recall",
+          "domain": "commute",
+          "question": "What was Sofia's commute on Monday, 2027-09-27?",
+          "answer": "driving",
+          "probe_date": "2027-09-30",
+          "evidence_days": [
+            562,
+            569
+          ]
+        },
+        {
+          "id": "u3_r202712_0165",
+          "original_id": "u3_q0367",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4836
+          },
+          "type": "distractor_probe",
+          "domain": "podcast",
+          "question": "Around 2027-09-11, her favorite podcast host announced a book tour. Did that lead to any change in Sofia's podcast?",
+          "answer": "No - nothing about Sofia's podcast changed because of it.",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            562
+          ]
+        }
+      ],
+      "status": "unchanged_prior_flag_interpretation"
+    },
+    {
+      "user": "u3",
+      "day": 641,
+      "date": "2027-12-01",
+      "failure_index": 0,
+      "recorded_failure": "statement_missing: ankle.0 ([her sprained ankle] sprained her ankle on a hike (happened) (this happened on 2027-11-30))",
+      "recorded_failure_type": "statement_missing",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2027-12-01.json",
+        "line": 60
+      },
+      "classification": "refuted_by_verbatim_correct_relative_date",
+      "reasoning": "The user says 'I sprained my ankle yesterday while I was out on a hike.' December 1 minus one day is November 30, effective day 640. The ankle content and date are present.",
+      "raw_evidence": [
+        {
+          "turn_number": 2,
+          "speaker": "user",
+          "text": "Hi! It's been a bit of a rough couple of days, actually. I sprained my ankle yesterday while I was out on a hike.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-12-01.json",
+            "line": 13
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 61110
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "drip coffee",
+          "base_value": "drip coffee",
+          "regime_id": "morning_drink.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "lunch": {
+          "value": "homemade burrito bowl",
+          "base_value": "homemade burrito bowl",
+          "regime_id": "lunch.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "commute": {
+          "value": "rideshare",
+          "base_value": "rideshare",
+          "regime_id": "commute.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "podcast": {
+          "value": "dog training podcast",
+          "base_value": "dog training podcast",
+          "regime_id": "podcast.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "ankle.0",
+          "kind": "event_update",
+          "text": "[her sprained ankle] sprained her ankle on a hike (happened)",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 640,
+          "stated_day": 641,
+          "retrospective": true,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u3_p202712_0143",
+        "u3_p202712_0147",
+        "u3_p202712_0150"
+      ],
+      "cited_by_current_probe_ids": [
+        "u3_p202712_0142",
+        "u3_p202712_0143",
+        "u3_p202712_0144",
+        "u3_p202712_0145",
+        "u3_p202712_0146"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u3_p202712_0142",
+          "original_id": "u3_q0346",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4605
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What was the status of her sprained ankle on 2027-12-14?",
+          "answer": "sprained her ankle on a hike (happened)",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            641
+          ]
+        },
+        {
+          "id": "u3_p202712_0143",
+          "original_id": "u3_q0150",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4630
+          },
+          "type": "pattern_at_time",
+          "domain": "commute",
+          "question": "What was Sofia's commute routine around 2027-12-14?",
+          "answer": "by day of week: rideshare on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            641,
+            642,
+            643
+          ]
+        },
+        {
+          "id": "u3_p202712_0144",
+          "original_id": "u3_q0250",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4656
+          },
+          "type": "change_detection",
+          "domain": "commute",
+          "question": "When did Sofia's commute routine change from the driving / no commute routine to the no commute / rideshare routine?",
+          "answer": "2027-12-01",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            639,
+            641
+          ]
+        },
+        {
+          "id": "u3_p202712_0145",
+          "original_id": "u3_q0263",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4682
+          },
+          "type": "attribution",
+          "domain": "commute",
+          "question": "Why did Sofia's commute routine change around 2027-12-01?",
+          "answer": "sprained her ankle on a hike",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            641
+          ]
+        },
+        {
+          "id": "u3_p202712_0146",
+          "original_id": "u3_q0347",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4707
+          },
+          "type": "duration",
+          "domain": "commute",
+          "question": "How long did Sofia's commute stay the no commute / rideshare routine?",
+          "answer": "27 days (2027-12-01 to 2027-12-27)",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            641,
+            667
+          ]
+        }
+      ],
+      "status": "unchanged_prior_flag_interpretation"
+    },
+    {
+      "user": "u3",
+      "day": 641,
+      "date": "2027-12-01",
+      "failure_index": 1,
+      "recorded_failure": "invention: Dash gets excited on walks and pulls on the leash",
+      "recorded_failure_type": "invention",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u3/sessions/2027-12-01.json",
+        "line": 60
+      },
+      "classification": "confirmed_unmodeled_persistent_detail",
+      "reasoning": "Dash being excited on walks and needing leash-pulling training adds behavior/backstory not present in the world, which states only adoption of a rescue greyhound named Dash. This violates no-new-details-about-known-pets; the sprain and rideshare still appear.",
+      "raw_evidence": [
+        {
+          "turn_number": 10,
+          "speaker": "user",
+          "text": "Yes, they discussed positive reinforcement techniques for leash pulling. Dash still gets pretty excited on our walks, so Tom and I want to try some of those methods.",
+          "source": {
+            "file": "datasets/v2/u3/sessions/2027-12-01.json",
+            "line": 45
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 61110
+      },
+      "world_preferences": {
+        "morning_drink": {
+          "value": "drip coffee",
+          "base_value": "drip coffee",
+          "regime_id": "morning_drink.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "lunch": {
+          "value": "homemade burrito bowl",
+          "base_value": "homemade burrito bowl",
+          "regime_id": "lunch.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "commute": {
+          "value": "rideshare",
+          "base_value": "rideshare",
+          "regime_id": "commute.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "podcast": {
+          "value": "dog training podcast",
+          "base_value": "dog training podcast",
+          "regime_id": "podcast.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "ankle.0",
+          "kind": "event_update",
+          "text": "[her sprained ankle] sprained her ankle on a hike (happened)",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 640,
+          "stated_day": 641,
+          "retrospective": true,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u3_p202712_0143",
+        "u3_p202712_0147",
+        "u3_p202712_0150"
+      ],
+      "cited_by_current_probe_ids": [
+        "u3_p202712_0142",
+        "u3_p202712_0143",
+        "u3_p202712_0144",
+        "u3_p202712_0145",
+        "u3_p202712_0146"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u3_p202712_0142",
+          "original_id": "u3_q0346",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4605
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What was the status of her sprained ankle on 2027-12-14?",
+          "answer": "sprained her ankle on a hike (happened)",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            641
+          ]
+        },
+        {
+          "id": "u3_p202712_0143",
+          "original_id": "u3_q0150",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4630
+          },
+          "type": "pattern_at_time",
+          "domain": "commute",
+          "question": "What was Sofia's commute routine around 2027-12-14?",
+          "answer": "by day of week: rideshare on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            641,
+            642,
+            643
+          ]
+        },
+        {
+          "id": "u3_p202712_0144",
+          "original_id": "u3_q0250",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4656
+          },
+          "type": "change_detection",
+          "domain": "commute",
+          "question": "When did Sofia's commute routine change from the driving / no commute routine to the no commute / rideshare routine?",
+          "answer": "2027-12-01",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            639,
+            641
+          ]
+        },
+        {
+          "id": "u3_p202712_0145",
+          "original_id": "u3_q0263",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4682
+          },
+          "type": "attribution",
+          "domain": "commute",
+          "question": "Why did Sofia's commute routine change around 2027-12-01?",
+          "answer": "sprained her ankle on a hike",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            641
+          ]
+        },
+        {
+          "id": "u3_p202712_0146",
+          "original_id": "u3_q0347",
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 4707
+          },
+          "type": "duration",
+          "domain": "commute",
+          "question": "How long did Sofia's commute stay the no commute / rideshare routine?",
+          "answer": "27 days (2027-12-01 to 2027-12-27)",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            641,
+            667
+          ]
+        }
+      ],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u4",
+      "day": 2,
+      "date": "2026-03-02",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2026-03-02.json",
+        "line": 68
+      },
+      "classification": "confirmed_required_absent_topic_conflict",
+      "reasoning": "Required hobbies.1 explicitly introduces cycling, while workout.mentioned is false. The forced hobby overlaps the absent workout topic; historical cycling is observable but the generator's literal obligations conflict.",
+      "raw_evidence": [
+        {
+          "turn_number": 8,
+          "speaker": "user",
+          "text": "I did! The weather was decent, so I spent a good chunk of yesterday out on my road bike. I've taken up cycling as a hobby, and it's been a great way to get some fresh air.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-03-02.json",
+            "line": 37
+          }
+        },
+        {
+          "turn_number": 9,
+          "speaker": "assistant",
+          "text": "That's awesome. Cycling is a great way to explore the area. Do you have a favorite route you like to take, or do you mostly ride solo?",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-03-02.json",
+            "line": 41
+          }
+        },
+        {
+          "turn_number": 10,
+          "speaker": "user",
+          "text": "I've been exploring some of the lake trails. I actually went out with Leah, the wonderful woman I'm dating now. She's a big fan of riding too, so it's a fun thing for us to do together.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-03-02.json",
+            "line": 45
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 2765
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "granola",
+          "base_value": "granola",
+          "regime_id": "breakfast.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "cycling",
+          "base_value": "cycling",
+          "regime_id": "workout.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "outfit": {
+          "value": "hoodie and joggers",
+          "base_value": "button-down and chinos",
+          "regime_id": "outfit.r0",
+          "is_exception": true,
+          "exception_reason": "working from home",
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "music": {
+          "value": "indie rock",
+          "base_value": "indie rock",
+          "regime_id": "music.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "dinner": {
+          "value": "pasta",
+          "base_value": "pasta",
+          "regime_id": "dinner.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "job.0",
+          "kind": "background_fact",
+          "text": "job is now junior architect at a design firm",
+          "entity": "job",
+          "op": "set",
+          "value": "junior architect at a design firm",
+          "effective_day": 1,
+          "stated_day": 2,
+          "retrospective": false,
+          "is_cause": false
+        },
+        {
+          "id": "relationship.0",
+          "kind": "background_fact",
+          "text": "relationship status is now dating Leah",
+          "entity": "relationship",
+          "op": "set",
+          "value": "dating Leah",
+          "effective_day": 1,
+          "stated_day": 2,
+          "retrospective": false,
+          "is_cause": false
+        },
+        {
+          "id": "hobbies.1",
+          "kind": "background_fact",
+          "text": "hobbies now include cycling",
+          "entity": "hobbies",
+          "op": "add",
+          "value": "cycling",
+          "effective_day": 1,
+          "stated_day": 2,
+          "retrospective": false,
+          "is_cause": false
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u4_p202603_0001",
+        "u4_p202603_0003",
+        "u4_p202603_0004",
+        "u4_p202603_0005",
+        "u4_p202604_0007",
+        "u4_r202607_0173",
+        "u4_p202701_0057",
+        "u4_p202701_0058",
+        "u4_p202701_0060",
+        "u4_p202701_0062"
+      ],
+      "cited_by_current_probe_ids": [
+        "u4_p202603_0001",
+        "u4_p202603_0002",
+        "u4_p202604_0005",
+        "u4_p202606_0016",
+        "u4_p202608_0029",
+        "u4_r202608_0177",
+        "u4_r202608_0184",
+        "u4_p202610_0038",
+        "u4_p202611_0042",
+        "u4_p202611_0043",
+        "u4_p202612_0050",
+        "u4_p202612_0051",
+        "u4_r202702_0164",
+        "u4_r202702_0175",
+        "u4_p202708_0107"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u4_p202603_0001",
+          "original_id": "u4_q0291",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 16
+          },
+          "type": "fact_at_time",
+          "domain": "relationship",
+          "question": "What was Daniel's relationship status on 2026-03-28?",
+          "answer": "dating Leah",
+          "probe_date": "2026-03-31",
+          "evidence_days": [
+            2
+          ]
+        },
+        {
+          "id": "u4_p202603_0002",
+          "original_id": "u4_q0290",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 39
+          },
+          "type": "fact_at_time",
+          "domain": "relationship",
+          "question": "What was Daniel's relationship status on 2026-03-15?",
+          "answer": "dating Leah",
+          "probe_date": "2026-03-31",
+          "evidence_days": [
+            2
+          ]
+        },
+        {
+          "id": "u4_p202604_0005",
+          "original_id": "u4_q0288",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 117
+          },
+          "type": "fact_at_time",
+          "domain": "relationship",
+          "question": "What was Daniel's relationship status on 2026-04-12?",
+          "answer": "dating Leah",
+          "probe_date": "2026-04-30",
+          "evidence_days": [
+            2
+          ]
+        },
+        {
+          "id": "u4_p202606_0016",
+          "original_id": "u4_q0111",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 390
+          },
+          "type": "pattern_at_time",
+          "domain": "dinner",
+          "question": "What was Daniel's dinner routine in June 2026?",
+          "answer": "by day of week: pasta on Mon/Thu; tacos on Tue; stir-fry on Wed; takeout burgers on Fri; steak on Sat; roast chicken on Sun",
+          "probe_date": "2026-06-30",
+          "evidence_days": [
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "u4_p202608_0029",
+          "original_id": "u4_q0310",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 729
+          },
+          "type": "fact_history",
+          "domain": "relationship",
+          "question": "How has Daniel's relationship status changed over time?",
+          "answer": "dating Leah (2026-03-01 to 2026-08-26); living with his partner Leah (2026-08-27 to now)",
+          "probe_date": "2026-08-31",
+          "evidence_days": [
+            2,
+            183
+          ]
+        },
+        {
+          "id": "u4_r202608_0177",
+          "original_id": "u4_q0111",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 826
+          },
+          "type": "pattern_at_time",
+          "domain": "dinner",
+          "question": "What was Daniel's dinner routine in June 2026?",
+          "answer": "by day of week: pasta on Mon/Thu; tacos on Tue; stir-fry on Wed; takeout burgers on Fri; steak on Sat; roast chicken on Sun",
+          "probe_date": "2026-08-31",
+          "evidence_days": [
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "u4_r202608_0184",
+          "original_id": "u4_q0288",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 854
+          },
+          "type": "fact_at_time",
+          "domain": "relationship",
+          "question": "What was Daniel's relationship status on 2026-04-12?",
+          "answer": "dating Leah",
+          "probe_date": "2026-08-31",
+          "evidence_days": [
+            2
+          ]
+        },
+        {
+          "id": "u4_p202610_0038",
+          "original_id": "u4_q0117",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1044
+          },
+          "type": "pattern_at_time",
+          "domain": "music",
+          "question": "What was Daniel's work music routine in October 2026?",
+          "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+          "probe_date": "2026-10-31",
+          "evidence_days": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "u4_p202611_0042",
+          "original_id": "u4_q0268",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1205
+          },
+          "type": "fact_at_time",
+          "domain": "job",
+          "question": "What was Daniel's job on 2026-11-04?",
+          "answer": "junior architect at a design firm",
+          "probe_date": "2026-11-30",
+          "evidence_days": [
+            2
+          ]
+        },
+        {
+          "id": "u4_p202611_0043",
+          "original_id": "u4_q0269",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1228
+          },
+          "type": "fact_at_time",
+          "domain": "job",
+          "question": "What was Daniel's job on 2026-11-09?",
+          "answer": "junior architect at a design firm",
+          "probe_date": "2026-11-30",
+          "evidence_days": [
+            2
+          ]
+        },
+        {
+          "id": "u4_p202612_0050",
+          "original_id": "u4_q0303",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1413
+          },
+          "type": "fact_at_time",
+          "domain": "hobbies",
+          "question": "What were Daniel's hobbies on 2026-12-27?",
+          "answer": "photography, cycling, rock climbing",
+          "probe_date": "2026-12-31",
+          "evidence_days": [
+            1,
+            2,
+            120
+          ]
+        },
+        {
+          "id": "u4_p202612_0051",
+          "original_id": "u4_q0302",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1439
+          },
+          "type": "fact_at_time",
+          "domain": "hobbies",
+          "question": "What were Daniel's hobbies on 2026-12-21?",
+          "answer": "photography, cycling, rock climbing",
+          "probe_date": "2026-12-31",
+          "evidence_days": [
+            1,
+            2,
+            120
+          ]
+        },
+        {
+          "id": "u4_r202702_0164",
+          "original_id": "u4_q0269",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1858
+          },
+          "type": "fact_at_time",
+          "domain": "job",
+          "question": "What was Daniel's job on 2026-11-09?",
+          "answer": "junior architect at a design firm",
+          "probe_date": "2027-02-28",
+          "evidence_days": [
+            2
+          ]
+        },
+        {
+          "id": "u4_r202702_0175",
+          "original_id": "u4_q0268",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1883
+          },
+          "type": "fact_at_time",
+          "domain": "job",
+          "question": "What was Daniel's job on 2026-11-04?",
+          "answer": "junior architect at a design firm",
+          "probe_date": "2027-02-28",
+          "evidence_days": [
+            2
+          ]
+        },
+        {
+          "id": "u4_p202708_0107",
+          "original_id": "u4_q0312",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3218
+          },
+          "type": "fact_history",
+          "domain": "hobbies",
+          "question": "How have Daniel's hobbies changed over time?",
+          "answer": "cycling (2026-03-01 to 2027-01-23); photography (2026-03-01 to now); rock climbing (2026-06-28 to now); chess (2027-08-02 to now)",
+          "probe_date": "2027-08-31",
+          "evidence_days": [
+            1,
+            2,
+            120,
+            330,
+            522
+          ]
+        }
+      ],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u4",
+      "day": 44,
+      "date": "2026-04-13",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2026-04-13.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; assistant and user discuss yesterday's long bike ride.",
+      "raw_evidence": [
+        {
+          "turn_number": 5,
+          "speaker": "assistant",
+          "text": "It’s great that you were able to find that zone of deep focus when you needed it. Hopefully the schematics turned out well! Did you manage to get a break over the weekend to recharge? Maybe a bike ride around Minneapolis?",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-04-13.json",
+            "line": 25
+          }
+        },
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "I did, actually! I took my bike out for a long ride around the Chain of Lakes yesterday. The Minneapolis spring weather is finally starting to show up, which was great.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-04-13.json",
+            "line": 29
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 7171
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "granola",
+          "base_value": "granola",
+          "regime_id": "breakfast.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "workout": {
+          "value": "cycling",
+          "base_value": "cycling",
+          "regime_id": "workout.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "outfit": {
+          "value": "button-down and chinos",
+          "base_value": "button-down and chinos",
+          "regime_id": "outfit.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "music": {
+          "value": "silence",
+          "base_value": "indie rock",
+          "regime_id": "music.r0",
+          "is_exception": true,
+          "exception_reason": "deep focus work",
+          "mentioned": true,
+          "mention_reason": "exception"
+        },
+        "dinner": {
+          "value": "pasta",
+          "base_value": "pasta",
+          "regime_id": "dinner.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u4",
+      "day": 59,
+      "date": "2026-04-28",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2026-04-28.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; assistant asks about bike activity and user discusses recent cycling.",
+      "raw_evidence": [
+        {
+          "turn_number": 5,
+          "speaker": "assistant",
+          "text": "That sounds like the perfect soundtrack for getting into a creative flow. Have you been able to get out on your bike lately, or has work been keeping you too busy?",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-04-28.json",
+            "line": 25
+          }
+        },
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "I haven't had much time for cycling this week, unfortunately. But I'm planning to make a nice meal tonight to wind down. I've got some ground meat and fresh cilantro, and I'm planning to assemble some seasoned fillings inside warm, folded corn tortillas.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-04-28.json",
+            "line": 29
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 8722
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "eggs on toast",
+          "base_value": "eggs on toast",
+          "regime_id": "breakfast.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "gym",
+          "base_value": "gym",
+          "regime_id": "workout.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "outfit": {
+          "value": "button-down and chinos",
+          "base_value": "button-down and chinos",
+          "regime_id": "outfit.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "music": {
+          "value": "indie rock",
+          "base_value": "indie rock",
+          "regime_id": "music.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "dinner": {
+          "value": "tacos",
+          "base_value": "tacos",
+          "regime_id": "dinner.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u4",
+      "day": 111,
+      "date": "2026-06-19",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2026-06-19.json",
+        "line": 60
+      },
+      "classification": "confirmed_avoidable_absent_topic_mention",
+      "reasoning": "Workout is marked unmentioned; user reports today's bike ride. The saved extractor selects cycling, while the world value is rest day. The pref_leak branch masks that value disagreement because its expected value is not mentioned. A reader could distinguish a leisure ride from the modeled workout, so the strongest independent finding is a real extra cycling observation plus a recorded-extraction/world discrepancy; no probing question directly cites this day.",
+      "raw_evidence": [
+        {
+          "turn_number": 4,
+          "speaker": "user",
+          "text": "They definitely did. I got everything submitted right before five. I even had some energy left to take my bike out for a quick spin around the chain of lakes afterward. Captured a couple of really nice shots of the sunset reflection on the water too.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-06-19.json",
+            "line": 21
+          }
+        },
+        {
+          "turn_number": 5,
+          "speaker": "assistant",
+          "text": "That sounds like a beautiful evening ride! Minneapolis has some of the best lake views for photography. Are you and Leah doing anything special to celebrate the weekend?",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-06-19.json",
+            "line": 25
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 14204
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "oatmeal",
+          "base_value": "oatmeal",
+          "regime_id": "breakfast.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "workout": {
+          "value": "rest day",
+          "base_value": "rest day",
+          "regime_id": "workout.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "outfit": {
+          "value": "sweater and jeans",
+          "base_value": "sweater and jeans",
+          "regime_id": "outfit.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "music": {
+          "value": "lo-fi beats",
+          "base_value": "lo-fi beats",
+          "regime_id": "music.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "dinner": {
+          "value": "takeout burgers",
+          "base_value": "takeout burgers",
+          "regime_id": "dinner.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u4",
+      "day": 151,
+      "date": "2026-07-29",
+      "failure_index": 0,
+      "recorded_failure": "statement_missing: cooking_class.0 ([the Thai cooking class] took a Thai cooking class (happened) (this happened on 2026-07-28))",
+      "recorded_failure_type": "statement_missing",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2026-07-29.json",
+        "line": 60
+      },
+      "classification": "refuted_by_verbatim_correct_relative_date",
+      "reasoning": "The user says 'last night' they attended an instructional session preparing traditional culinary dishes from Thailand. July 29 minus one day is July 28, effective day 150. Paraphrase states the Thai cooking class.",
+      "raw_evidence": [
+        {
+          "turn_number": 4,
+          "speaker": "user",
+          "text": "She's doing great! Actually, last night we did something really fun together—we attended a hands-on instructional session on preparing traditional culinary dishes from Thailand.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-07-29.json",
+            "line": 21
+          }
+        },
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "We focused on a green curry and some hand-rolled spring rolls. Leah is really enjoying doing more hands-on activities lately, especially with her pottery class, so this was right up her alley.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-07-29.json",
+            "line": 29
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 18461
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "oatmeal",
+          "base_value": "oatmeal",
+          "regime_id": "breakfast.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "cycling",
+          "base_value": "cycling",
+          "regime_id": "workout.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "outfit": {
+          "value": "button-down and chinos",
+          "base_value": "button-down and chinos",
+          "regime_id": "outfit.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "music": {
+          "value": "lo-fi beats",
+          "base_value": "lo-fi beats",
+          "regime_id": "music.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "dinner": {
+          "value": "stir-fry",
+          "base_value": "stir-fry",
+          "regime_id": "dinner.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "cooking_class.0",
+          "kind": "event_update",
+          "text": "[the Thai cooking class] took a Thai cooking class (happened)",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 150,
+          "stated_day": 151,
+          "retrospective": true,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u4_p202607_0019",
+        "u4_p202607_0021",
+        "u4_p202608_0026",
+        "u4_p202608_0029",
+        "u4_r202610_0177"
+      ],
+      "cited_by_current_probe_ids": [
+        "u4_p202607_0018",
+        "u4_p202607_0020"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u4_p202607_0018",
+          "original_id": "u4_q0315",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 447
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What happened with the Thai cooking class?",
+          "answer": "took a Thai cooking class (happened, 2026-07-28)",
+          "probe_date": "2026-07-31",
+          "evidence_days": [
+            151
+          ]
+        },
+        {
+          "id": "u4_p202607_0020",
+          "original_id": "u4_q0340",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 496
+          },
+          "type": "duration",
+          "domain": "dinner",
+          "question": "How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?",
+          "answer": "152 days (2026-03-01 to 2026-07-30)",
+          "probe_date": "2026-07-31",
+          "evidence_days": [
+            1,
+            151
+          ]
+        }
+      ],
+      "status": "unchanged_prior_flag_interpretation"
+    },
+    {
+      "user": "u4",
+      "day": 210,
+      "date": "2026-09-26",
+      "failure_index": 0,
+      "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+      "recorded_failure_type": "pref_leak",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2026-09-26.json",
+        "line": 60
+      },
+      "classification": "confirmed_required_absent_topic_conflict",
+      "reasoning": "Required wrist.0 says fractured his wrist climbing, while workout.mentioned is false. Stating the mandated cause overlaps the absent topic. The assistant also independently asks about cycling in turn 1. The fracture content is present and dated today.",
+      "raw_evidence": [
+        {
+          "turn_number": 1,
+          "speaker": "assistant",
+          "text": "Hi Daniel! Happy Saturday. How is your weekend in Minneapolis starting out? Have you been doing any photography or getting out on your bike?",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-09-26.json",
+            "line": 9
+          }
+        },
+        {
+          "turn_number": 2,
+          "speaker": "user",
+          "text": "Hey! Actually, my Saturday took a pretty painful turn. I was scaling a route earlier today and took a bad fall, and I ended up cracking a bone in my arm right above my hand.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-09-26.json",
+            "line": 13
+          }
+        },
+        {
+          "turn_number": 7,
+          "speaker": "assistant",
+          "text": "I'm glad you two got to enjoy that late-morning meal together before the accident. Did you head straight to climb after that?",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-09-26.json",
+            "line": 33
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 24688
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "brunch with Leah",
+          "base_value": "brunch with Leah",
+          "regime_id": "breakfast.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "long ride",
+          "base_value": "long ride",
+          "regime_id": "workout.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "outfit": {
+          "value": "sweater and jeans",
+          "base_value": "sweater and jeans",
+          "regime_id": "outfit.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "music": {
+          "value": "lo-fi beats",
+          "base_value": "lo-fi beats",
+          "regime_id": "music.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "dinner": {
+          "value": "steak",
+          "base_value": "steak",
+          "regime_id": "dinner.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "wrist.0",
+          "kind": "event_update",
+          "text": "[his wrist fracture] fractured his wrist climbing (happened)",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 210,
+          "stated_day": 210,
+          "retrospective": false,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u4_p202609_0033",
+        "u4_p202609_0034",
+        "u4_p202609_0035"
+      ],
+      "cited_by_current_probe_ids": [
+        "u4_p202609_0032",
+        "u4_p202609_0033",
+        "u4_p202611_0044",
+        "u4_r202612_0199"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u4_p202609_0032",
+          "original_id": "u4_q0219",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 888
+          },
+          "type": "attribution",
+          "domain": "workout",
+          "question": "Why did Daniel's workout routine change around 2026-09-27?",
+          "answer": "fractured his wrist climbing",
+          "probe_date": "2026-09-30",
+          "evidence_days": [
+            210,
+            211
+          ]
+        },
+        {
+          "id": "u4_p202609_0033",
+          "original_id": "u4_q0350",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 914
+          },
+          "type": "distractor_probe",
+          "domain": "workout",
+          "question": "Around 2026-09-26, fractured his wrist climbing. Did that lead to any change in Daniel's workout?",
+          "answer": "Yes - from 2026-09-27 Daniel's workout changed to stationary bike every day.",
+          "probe_date": "2026-09-30",
+          "evidence_days": [
+            210,
+            211
+          ]
+        },
+        {
+          "id": "u4_p202611_0044",
+          "original_id": "u4_q0316",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1251
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What happened with his wrist fracture?",
+          "answer": "his cast came off and the wrist healed (happened, 2026-10-31)",
+          "probe_date": "2026-11-30",
+          "evidence_days": [
+            210,
+            246
+          ]
+        },
+        {
+          "id": "u4_r202612_0199",
+          "original_id": "u4_q0219",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1612
+          },
+          "type": "attribution",
+          "domain": "workout",
+          "question": "Why did Daniel's workout routine change around 2026-09-27?",
+          "answer": "fractured his wrist climbing",
+          "probe_date": "2026-12-31",
+          "evidence_days": [
+            210,
+            211
+          ]
+        }
+      ],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u4",
+      "day": 261,
+      "date": "2026-11-16",
+      "failure_index": 0,
+      "recorded_failure": "invention: Daniel and Leah plan to have a proper celebration for his promotion next weekend.",
+      "recorded_failure_type": "invention",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2026-11-16.json",
+        "line": 68
+      },
+      "classification": "confirmed_unmodeled_persistent_detail",
+      "reasoning": "'We'll probably do a proper celebration next weekend' adds a beyond-today plan absent from world statements. This violates the strict writer instruction; it is a plausible embellishment and does not make the promotion false.",
+      "raw_evidence": [
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "We just did a quick toast at home, but we'll probably do a proper celebration next weekend. Today was straight to business anyway; I had to be out of the door incredibly early for an on-site inspection, so I actually ended up completely bypassing my morning meal. Usually, I'd have my blended fruit bowl, but there just wasn't time.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-11-16.json",
+            "line": 29
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 30134
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "skipped breakfast",
+          "base_value": "smoothie bowl",
+          "regime_id": "breakfast.r1",
+          "is_exception": true,
+          "exception_reason": "an early site visit",
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "cycling",
+          "base_value": "cycling",
+          "regime_id": "workout.r2.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "outfit": {
+          "value": "button-down and chinos",
+          "base_value": "button-down and chinos",
+          "regime_id": "outfit.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "music": {
+          "value": "lo-fi beats",
+          "base_value": "lo-fi beats",
+          "regime_id": "music.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "dinner": {
+          "value": "pad thai",
+          "base_value": "pad thai",
+          "regime_id": "dinner.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        }
+      },
+      "required_statements": [
+        {
+          "id": "job.project_lead",
+          "kind": "fact_change",
+          "text": "was promoted to project lead at the design firm",
+          "entity": "job",
+          "op": "set",
+          "value": "project lead at the design firm",
+          "effective_day": 260,
+          "stated_day": 261,
+          "retrospective": true,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u4_p202611_0049",
+        "u4_p202702_0069",
+        "u4_p202703_0074",
+        "u4_r202705_0191"
+      ],
+      "cited_by_current_probe_ids": [
+        "u4_p202611_0045",
+        "u4_p202702_0064",
+        "u4_p202703_0070",
+        "u4_r202708_0171"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u4_p202611_0045",
+          "original_id": "u4_q0222",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1276
+          },
+          "type": "attribution",
+          "domain": "outfit",
+          "question": "Why did Daniel's work outfit routine change around 2026-11-18?",
+          "answer": "was promoted to project lead at the design firm",
+          "probe_date": "2026-11-30",
+          "evidence_days": [
+            261,
+            263
+          ]
+        },
+        {
+          "id": "u4_p202702_0064",
+          "original_id": "u4_q0274",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 1809
+          },
+          "type": "fact_at_time",
+          "domain": "job",
+          "question": "What was Daniel's job on 2027-02-28?",
+          "answer": "project lead at the design firm",
+          "probe_date": "2027-02-28",
+          "evidence_days": [
+            261
+          ]
+        },
+        {
+          "id": "u4_p202703_0070",
+          "original_id": "u4_q0273",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 2012
+          },
+          "type": "fact_at_time",
+          "domain": "job",
+          "question": "What was Daniel's job on 2027-03-20?",
+          "answer": "project lead at the design firm",
+          "probe_date": "2027-03-31",
+          "evidence_days": [
+            261
+          ]
+        },
+        {
+          "id": "u4_r202708_0171",
+          "original_id": "u4_q0273",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3431
+          },
+          "type": "fact_at_time",
+          "domain": "job",
+          "question": "What was Daniel's job on 2027-03-20?",
+          "answer": "project lead at the design firm",
+          "probe_date": "2027-08-31",
+          "evidence_days": [
+            261
+          ]
+        }
+      ],
+      "status": "unchanged_source_contract_finding"
+    },
+    {
+      "user": "u4",
+      "day": 301,
+      "date": "2026-12-26",
+      "failure_index": 0,
+      "recorded_failure": "statement_missing: vinyl.0 ([the record collection] inherited his grandfather's record collection (happened) (this happened on 2026-12-25))",
+      "recorded_failure_type": "statement_missing",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2026-12-26.json",
+        "line": 60
+      },
+      "classification": "refuted_by_verbatim_correct_relative_date",
+      "reasoning": "The user says 'Yesterday' they inherited grandfather's vinyl compilation, clarifies it is a massive stack of albums, and says they sorted it yesterday evening. December 26 minus one day is December 25, effective day 300.",
+      "raw_evidence": [
+        {
+          "turn_number": 6,
+          "speaker": "user",
+          "text": "It was quiet but meaningful. Yesterday, I actually inherited my late grandfather's old vinyl compilation.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-12-26.json",
+            "line": 29
+          }
+        },
+        {
+          "turn_number": 8,
+          "speaker": "user",
+          "text": "They are actually in really great shape. It's a pretty massive stack of vintage physical albums, and looking through all of them is quite a nostalgic journey.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-12-26.json",
+            "line": 37
+          }
+        },
+        {
+          "turn_number": 10,
+          "speaker": "user",
+          "text": "Yes, she helped me carefully unbox and sort through them yesterday evening. Today she's busy working on some of her projects for her pottery class, so it's just been me relaxing with the boxes.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2026-12-26.json",
+            "line": 45
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 34419
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "brunch with Leah",
+          "base_value": "brunch with Leah",
+          "regime_id": "breakfast.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "workout": {
+          "value": "rest day",
+          "base_value": "long ride",
+          "regime_id": "workout.r2.revert",
+          "is_exception": true,
+          "exception_reason": "felt run down",
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "outfit": {
+          "value": "hoodie and joggers",
+          "base_value": "hoodie and joggers",
+          "regime_id": "outfit.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "music": {
+          "value": "indie rock",
+          "base_value": "indie rock",
+          "regime_id": "music.r0",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "dinner": {
+          "value": "steak",
+          "base_value": "steak",
+          "regime_id": "dinner.r1",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        }
+      },
+      "required_statements": [
+        {
+          "id": "vinyl.0",
+          "kind": "event_update",
+          "text": "[the record collection] inherited his grandfather's record collection (happened)",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 300,
+          "stated_day": 301,
+          "retrospective": true,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u4_p202612_0050"
+      ],
+      "cited_by_current_probe_ids": [],
+      "current_citation_payloads": [],
+      "status": "unchanged_prior_flag_interpretation"
+    },
+    {
+      "user": "u4",
+      "day": 542,
+      "date": "2027-08-24",
+      "failure_index": 0,
+      "recorded_failure": "statement_missing: deadline.0 ([the design competition] started a huge design competition deadline at work (happened) (this happened on 2027-08-22))",
+      "recorded_failure_type": "statement_missing",
+      "previously_reported": true,
+      "failure_source": {
+        "file": "datasets/v2/u4/sessions/2027-08-24.json",
+        "line": 60
+      },
+      "classification": "refuted_by_verbatim_correct_relative_date",
+      "reasoning": "The user says 'Two days ago, we officially kicked off a massive design competition deadline'. August 24 minus two days is August 22, effective day 540. The entire required event and date are present.",
+      "raw_evidence": [
+        {
+          "turn_number": 4,
+          "speaker": "user",
+          "text": "Well, it's pretty high-pressure right now. Two days ago, we officially kicked off a massive design competition deadline, so the whole team is in overdrive.",
+          "source": {
+            "file": "datasets/v2/u4/sessions/2027-08-24.json",
+            "line": 21
+          }
+        }
+      ],
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 59520
+      },
+      "world_preferences": {
+        "breakfast": {
+          "value": "smoked salmon bagel",
+          "base_value": "smoked salmon bagel",
+          "regime_id": "breakfast.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "workout": {
+          "value": "swim",
+          "base_value": "swim",
+          "regime_id": "workout.r4",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": false,
+          "mention_reason": null
+        },
+        "outfit": {
+          "value": "flannel and jeans",
+          "base_value": "flannel and jeans",
+          "regime_id": "outfit.r2",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "music": {
+          "value": "jazz records",
+          "base_value": "jazz records",
+          "regime_id": "music.r2.revert",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        },
+        "dinner": {
+          "value": "delivery sushi",
+          "base_value": "delivery sushi",
+          "regime_id": "dinner.r3",
+          "is_exception": false,
+          "exception_reason": null,
+          "mentioned": true,
+          "mention_reason": "sampled"
+        }
+      },
+      "required_statements": [
+        {
+          "id": "deadline.0",
+          "kind": "event_update",
+          "text": "[the design competition] started a huge design competition deadline at work (happened)",
+          "entity": null,
+          "op": null,
+          "value": null,
+          "effective_day": 540,
+          "stated_day": 542,
+          "retrospective": true,
+          "is_cause": true
+        }
+      ],
+      "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only.",
+      "baseline_cited_by_probe_ids": [
+        "u4_p202708_0111",
+        "u4_p202708_0112",
+        "u4_p202708_0113",
+        "u4_p202709_0118",
+        "u4_r202711_0196",
+        "u4_r202801_0170"
+      ],
+      "cited_by_current_probe_ids": [
+        "u4_p202708_0106",
+        "u4_p202709_0113",
+        "u4_p202709_0114",
+        "u4_p202709_0117",
+        "u4_p202709_0118",
+        "u4_r202711_0165",
+        "u4_r202712_0174",
+        "u4_r202712_0189"
+      ],
+      "current_citation_payloads": [
+        {
+          "id": "u4_p202708_0106",
+          "original_id": "u4_q0211",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3190
+          },
+          "type": "change_detection",
+          "domain": "dinner",
+          "question": "When did Daniel's dinner routine change from the fish and chips / fish tacos / grilled salmon / pasta etc. routine to delivery sushi?",
+          "answer": "2027-08-23 (first observed 2027-08-24)",
+          "probe_date": "2027-08-31",
+          "evidence_days": [
+            537,
+            542
+          ]
+        },
+        {
+          "id": "u4_p202709_0113",
+          "original_id": "u4_q0324",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3493
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What was the status of the design competition on 2027-09-08?",
+          "answer": "started a huge design competition deadline at work (happened)",
+          "probe_date": "2027-09-30",
+          "evidence_days": [
+            542
+          ]
+        },
+        {
+          "id": "u4_p202709_0114",
+          "original_id": "u4_q0114",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3518
+          },
+          "type": "pattern_at_time",
+          "domain": "dinner",
+          "question": "What was Daniel's dinner routine around 2027-09-08?",
+          "answer": "delivery sushi every day",
+          "probe_date": "2027-09-30",
+          "evidence_days": [
+            542,
+            543,
+            548
+          ]
+        },
+        {
+          "id": "u4_p202709_0117",
+          "original_id": "u4_q0339",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3592
+          },
+          "type": "duration",
+          "domain": "dinner",
+          "question": "How long did Daniel's dinner stay delivery sushi?",
+          "answer": "34 days (2027-08-23 to 2027-09-25)",
+          "probe_date": "2027-09-30",
+          "evidence_days": [
+            542,
+            574
+          ]
+        },
+        {
+          "id": "u4_p202709_0118",
+          "original_id": "u4_q0323",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3617
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What happened with the design competition?",
+          "answer": "submitted the design competition entry (happened, 2027-09-26)",
+          "probe_date": "2027-09-30",
+          "evidence_days": [
+            542,
+            575
+          ]
+        },
+        {
+          "id": "u4_r202711_0165",
+          "original_id": "u4_q0324",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 4466
+          },
+          "type": "event_status",
+          "domain": "events",
+          "question": "What was the status of the design competition on 2027-09-08?",
+          "answer": "started a huge design competition deadline at work (happened)",
+          "probe_date": "2027-11-30",
+          "evidence_days": [
+            542
+          ]
+        },
+        {
+          "id": "u4_r202712_0174",
+          "original_id": "u4_q0339",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 4898
+          },
+          "type": "duration",
+          "domain": "dinner",
+          "question": "How long did Daniel's dinner stay delivery sushi?",
+          "answer": "34 days (2027-08-23 to 2027-09-25)",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            542,
+            574
+          ]
+        },
+        {
+          "id": "u4_r202712_0189",
+          "original_id": "u4_q0211",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 4925
+          },
+          "type": "change_detection",
+          "domain": "dinner",
+          "question": "When did Daniel's dinner routine change from the fish and chips / fish tacos / grilled salmon / pasta etc. routine to delivery sushi?",
+          "answer": "2027-08-23 (first observed 2027-08-24)",
+          "probe_date": "2027-12-31",
+          "evidence_days": [
+            537,
+            542
+          ]
+        }
+      ],
+      "status": "unchanged_prior_flag_interpretation"
+    }
+  ],
+  "masked_absent_topic_value_disagreements": [
+    {
+      "user": "u4",
+      "day": 111,
+      "date": "2026-06-19",
+      "domain": "workout",
+      "stored_world_value": "rest day",
+      "saved_extracted_value": "cycling",
+      "world_day_source": {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 14204
+      },
+      "recorded_failures": [
+        "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'"
+      ],
+      "raw_evidence": {
+        "speaker": "user",
+        "text": "They definitely did. I got everything submitted right before five. I even had some energy left to take my bike out for a quick spin around the chain of lakes afterward. Captured a couple of really nice shots of the sunset reflection on the water too.",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-06-19.json",
+          "line": 21
+        }
+      },
+      "limit": "The text describes a real bicycle ride; distinguishing leisure cycling from the modeled workout is a semantic limitation. This does not prove a wrong probe gold.",
+      "baseline_cited_by_probe_ids": [],
+      "cited_by_current_probe_ids": []
+    }
+  ]
+}

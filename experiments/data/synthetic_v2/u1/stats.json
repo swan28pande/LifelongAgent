@@ -108,8 +108,12 @@
     },
     "tags": {
       "boundary": 5,
-      "shift": 12,
-      "initial": 4,
+      "shift": 11,
+      "initial": 5,
+      "regime:clothing.r0": 2,
+      "regime:clothing.r1": 2,
+      "regime:coffee.r0": 1,
+      "regime:lunch.r0": 2,
       "horizon_52d": 1,
       "horizon_30d": 1,
       "horizon_43d": 1,
@@ -117,6 +121,8 @@
       "horizon_14d": 1,
       "horizon_38d": 1,
       "explicit": 6,
+      "regime:coffee.r1": 2,
+      "regime:lunch.r1": 1,
       "set": 1,
       "single": 2,
       "happened": 2,
@@ -271,7 +277,7 @@
       },
       "pattern_at_time/lunch": {
         "n": 1,
-        "top_answer": "4 days meal-prep burrito bowl, 3 days ramen",
+        "top_answer": "alternating homemade salad and deli sandwich weeks",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1

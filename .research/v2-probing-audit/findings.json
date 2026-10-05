@@ -1,0 +1,4522 @@
+[
+  {
+    "user": "u1",
+    "id": "u1_p202609_0051",
+    "type": "pattern_at_time",
+    "question": "What was Leo's morning coffee routine in January 2028?",
+    "probe_date": "2026-09-30",
+    "target_dates": [
+      "January 2028"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u1/probing_questions.json",
+    "line": 1333,
+    "observed": "2026-09-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u1_p202609_0051",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u1",
+    "id": "u1_p202706_0111",
+    "type": "pattern_at_time",
+    "question": "What was Leo's lunch routine in October 2027?",
+    "probe_date": "2027-06-30",
+    "target_dates": [
+      "October 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u1/probing_questions.json",
+    "line": 3164,
+    "observed": "2027-06-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u1_p202706_0111",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u2",
+    "id": "u2_p202607_0033",
+    "type": "pattern_at_time",
+    "question": "What was Marcus's workout routine in October 2026?",
+    "probe_date": "2026-07-31",
+    "target_dates": [
+      "October 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u2/probing_questions.json",
+    "line": 825,
+    "observed": "2026-07-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u2_p202607_0033",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u2",
+    "id": "u2_p202609_0049",
+    "type": "event_status",
+    "question": "What was the status of the family trip to Japan on 2026-12-15?",
+    "probe_date": "2026-09-30",
+    "target_dates": [
+      "2026-12-15"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u2/probing_questions.json",
+    "line": 1296,
+    "observed": "2026-09-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u2_p202609_0049",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u2",
+    "id": "u2_p202611_0068",
+    "type": "pattern_at_time",
+    "question": "What was Marcus's evening TV show routine in January 2027?",
+    "probe_date": "2026-11-30",
+    "target_dates": [
+      "January 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u2/probing_questions.json",
+    "line": 1831,
+    "observed": "2026-11-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u2_p202611_0068",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u2",
+    "id": "u2_p202709_0128",
+    "type": "pattern_at_time",
+    "question": "What was Marcus's evening TV show routine in January 2028?",
+    "probe_date": "2027-09-30",
+    "target_dates": [
+      "January 2028"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u2/probing_questions.json",
+    "line": 3875,
+    "observed": "2027-09-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u2_p202709_0128",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202603_0001",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's commute routine in May 2026?",
+    "probe_date": "2026-03-31",
+    "target_dates": [
+      "May 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 21,
+    "observed": "2026-03-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202603_0001",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202603_0002",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's podcast routine in June 2026?",
+    "probe_date": "2026-03-31",
+    "target_dates": [
+      "June 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 47,
+    "observed": "2026-03-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202603_0002",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202606_0017",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's lunch routine in July 2026?",
+    "probe_date": "2026-06-30",
+    "target_dates": [
+      "July 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 441,
+    "observed": "2026-06-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202606_0017",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202608_0036",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's morning drink routine in September 2026?",
+    "probe_date": "2026-08-31",
+    "target_dates": [
+      "September 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 938,
+    "observed": "2026-08-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202608_0036",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202610_0049",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's morning drink routine in May 2027?",
+    "probe_date": "2026-10-31",
+    "target_dates": [
+      "May 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 1368,
+    "observed": "2026-10-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202610_0049",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202702_0078",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's lunch routine in May 2027?",
+    "probe_date": "2027-02-28",
+    "target_dates": [
+      "May 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 2302,
+    "observed": "2027-02-28",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202702_0078",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202704_0089",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's commute routine in August 2027?",
+    "probe_date": "2027-04-30",
+    "target_dates": [
+      "August 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 2709,
+    "observed": "2027-04-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202704_0089",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202707_0111",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's morning drink routine in October 2027?",
+    "probe_date": "2027-07-31",
+    "target_dates": [
+      "October 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 3513,
+    "observed": "2027-07-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202707_0111",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202707_0115",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's lunch routine in November 2027?",
+    "probe_date": "2027-07-31",
+    "target_dates": [
+      "November 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 3616,
+    "observed": "2027-07-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202707_0115",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202710_0126",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's podcast routine in January 2028?",
+    "probe_date": "2027-10-31",
+    "target_dates": [
+      "January 2028"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 4119,
+    "observed": "2027-10-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202710_0126",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u3",
+    "id": "u3_p202712_0142",
+    "type": "pattern_at_time",
+    "question": "What was Sofia's commute routine in January 2028?",
+    "probe_date": "2027-12-31",
+    "target_dates": [
+      "January 2028"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u3/probing_questions.json",
+    "line": 4636,
+    "observed": "2027-12-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u3_p202712_0142",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202603_0004",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's breakfast routine in April 2026?",
+    "probe_date": "2026-03-31",
+    "target_dates": [
+      "April 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 91,
+    "observed": "2026-03-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202603_0004",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202603_0005",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's work music routine in October 2026?",
+    "probe_date": "2026-03-31",
+    "target_dates": [
+      "October 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 117,
+    "observed": "2026-03-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202603_0005",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202604_0008",
+    "type": "event_status",
+    "question": "What was the status of the spring 10K on 2026-05-19?",
+    "probe_date": "2026-04-30",
+    "target_dates": [
+      "2026-05-19"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 197,
+    "observed": "2026-04-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202604_0008",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202605_0012",
+    "type": "recall",
+    "question": "What was Daniel's breakfast on Sunday, 2026-08-23?",
+    "probe_date": "2026-05-31",
+    "target_dates": [
+      "2026-08-23"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 301,
+    "observed": "2026-05-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202605_0012",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_r202607_0173",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's work music routine in October 2026?",
+    "probe_date": "2026-07-31",
+    "target_dates": [
+      "October 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 665,
+    "observed": "2026-07-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_r202607_0173",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202609_0035",
+    "type": "event_status",
+    "question": "What was the status of his wrist fracture on 2026-10-13?",
+    "probe_date": "2026-09-30",
+    "target_dates": [
+      "2026-10-13"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 968,
+    "observed": "2026-09-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202609_0035",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202609_0037",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's breakfast routine in March 2027?",
+    "probe_date": "2026-09-30",
+    "target_dates": [
+      "March 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 1017,
+    "observed": "2026-09-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202609_0037",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202611_0042",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's work outfit routine in December 2026?",
+    "probe_date": "2026-11-30",
+    "target_dates": [
+      "December 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 1247,
+    "observed": "2026-11-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202611_0042",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202704_0077",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's work outfit routine in July 2027?",
+    "probe_date": "2027-04-30",
+    "target_dates": [
+      "July 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 2374,
+    "observed": "2027-04-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202704_0077",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202705_0087",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's dinner routine in July 2027?",
+    "probe_date": "2027-05-31",
+    "target_dates": [
+      "July 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 2682,
+    "observed": "2027-05-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202705_0087",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202706_0097",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's breakfast routine in July 2027?",
+    "probe_date": "2027-06-30",
+    "target_dates": [
+      "July 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 3002,
+    "observed": "2027-06-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202706_0097",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202707_0101",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's work music routine in August 2027?",
+    "probe_date": "2027-07-31",
+    "target_dates": [
+      "August 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 3191,
+    "observed": "2027-07-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202707_0101",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202707_0104",
+    "type": "recall",
+    "question": "What was Daniel's dinner on Friday, 2027-08-20?",
+    "probe_date": "2027-07-31",
+    "target_dates": [
+      "2027-08-20"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 3269,
+    "observed": "2027-07-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202707_0104",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202708_0111",
+    "type": "event_status",
+    "question": "What was the status of the design competition on 2027-09-08?",
+    "probe_date": "2027-08-31",
+    "target_dates": [
+      "2027-09-08"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 3482,
+    "observed": "2027-08-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202708_0111",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202708_0113",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's dinner routine around 2027-09-08?",
+    "probe_date": "2027-08-31",
+    "target_dates": [
+      "2027-09-08"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 3532,
+    "observed": "2027-08-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202708_0113",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202710_0132",
+    "type": "recall",
+    "question": "What was Daniel's work music on Tuesday, 2027-12-14?",
+    "probe_date": "2027-10-31",
+    "target_dates": [
+      "2027-12-14"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 4119,
+    "observed": "2027-10-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202710_0132",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202711_0136",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's breakfast routine in January 2028?",
+    "probe_date": "2027-11-30",
+    "target_dates": [
+      "January 2028"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 4264,
+    "observed": "2027-11-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202711_0136",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202712_0146",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's work music routine in January 2028?",
+    "probe_date": "2027-12-31",
+    "target_dates": [
+      "January 2028"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 4694,
+    "observed": "2027-12-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202712_0146",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202712_0147",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's dinner routine in January 2028?",
+    "probe_date": "2027-12-31",
+    "target_dates": [
+      "January 2028"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 4720,
+    "observed": "2027-12-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202712_0147",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202801_0153",
+    "type": "recall",
+    "question": "What was Daniel's workout on Friday, 2028-02-04?",
+    "probe_date": "2028-01-31",
+    "target_dates": [
+      "2028-02-04"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 5017,
+    "observed": "2028-01-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202801_0153",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u4",
+    "id": "u4_p202801_0154",
+    "type": "pattern_at_time",
+    "question": "What was Daniel's work outfit routine around 2028-02-08?",
+    "probe_date": "2028-01-31",
+    "target_dates": [
+      "2028-02-08"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u4/probing_questions.json",
+    "line": 5043,
+    "observed": "2028-01-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u4_p202801_0154",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202603_0001",
+    "type": "pattern_at_time",
+    "question": "What was Priya's work music routine in April 2026?",
+    "probe_date": "2026-03-31",
+    "target_dates": [
+      "April 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 21,
+    "observed": "2026-03-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202603_0001",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202603_0002",
+    "type": "pattern_at_time",
+    "question": "What was Priya's bedtime routine in May 2026?",
+    "probe_date": "2026-03-31",
+    "target_dates": [
+      "May 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 47,
+    "observed": "2026-03-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202603_0002",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202603_0003",
+    "type": "pattern_at_time",
+    "question": "What was Priya's workout routine in April 2026?",
+    "probe_date": "2026-03-31",
+    "target_dates": [
+      "April 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 73,
+    "observed": "2026-03-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202603_0003",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202606_0014",
+    "type": "pattern_at_time",
+    "question": "What was Priya's bedtime routine in July 2026?",
+    "probe_date": "2026-06-30",
+    "target_dates": [
+      "July 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 372,
+    "observed": "2026-06-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202606_0014",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202606_0020",
+    "type": "pattern_at_time",
+    "question": "What was Priya's work music routine in August 2026?",
+    "probe_date": "2026-06-30",
+    "target_dates": [
+      "August 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 524,
+    "observed": "2026-06-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202606_0020",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202607_0024",
+    "type": "pattern_at_time",
+    "question": "What was Priya's evening reading routine in August 2026?",
+    "probe_date": "2026-07-31",
+    "target_dates": [
+      "August 2026"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 635,
+    "observed": "2026-07-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202607_0024",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202608_0038",
+    "type": "event_status",
+    "question": "What was the status of her knee injury on 2026-09-13?",
+    "probe_date": "2026-08-31",
+    "target_dates": [
+      "2026-09-13"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 991,
+    "observed": "2026-08-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202608_0038",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202611_0055",
+    "type": "pattern_at_time",
+    "question": "What was Priya's bedtime routine in February 2027?",
+    "probe_date": "2026-11-30",
+    "target_dates": [
+      "February 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 1557,
+    "observed": "2026-11-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202611_0055",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202701_0074",
+    "type": "pattern_at_time",
+    "question": "What was Priya's commute routine in February 2027?",
+    "probe_date": "2027-01-31",
+    "target_dates": [
+      "February 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 2147,
+    "observed": "2027-01-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202701_0074",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202702_0081",
+    "type": "pattern_at_time",
+    "question": "What was Priya's work music routine in April 2027?",
+    "probe_date": "2027-02-28",
+    "target_dates": [
+      "April 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 2463,
+    "observed": "2027-02-28",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202702_0081",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202706_0104",
+    "type": "pattern_at_time",
+    "question": "What was Priya's evening reading routine in August 2027?",
+    "probe_date": "2027-06-30",
+    "target_dates": [
+      "August 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 3234,
+    "observed": "2027-06-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202706_0104",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202708_0116",
+    "type": "pattern_at_time",
+    "question": "What was Priya's commute routine in September 2027?",
+    "probe_date": "2027-08-31",
+    "target_dates": [
+      "September 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 3666,
+    "observed": "2027-08-31",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202708_0116",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "user": "u5",
+    "id": "u5_p202709_0127",
+    "type": "pattern_at_time",
+    "question": "What was Priya's workout routine in November 2027?",
+    "probe_date": "2027-09-30",
+    "target_dates": [
+      "November 2027"
+    ],
+    "category": "explicit_future_target",
+    "confidence": "confirmed",
+    "file": "datasets/v2/u5/probing_questions.json",
+    "line": 4009,
+    "observed": "2027-09-30",
+    "expected": "A historical target must not be later than the probe cutoff.",
+    "question_id": "u5_p202709_0127",
+    "class": "confirmed_error",
+    "evidence_artifact": "calendar_issues.json"
+  },
+  {
+    "id": "u4_p202706_0100",
+    "user_id": "u4",
+    "original_id": "u4_q0357",
+    "type": "duration",
+    "category": "future_completed_duration_in_gold",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-06-30",
+    "viewpoint_day": 487,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3071,
+        "pointer": "/probes/15/questions/7/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3076,
+        "pointer": "/probes/15/questions/7/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3077,
+        "pointer": "/probes/15/questions/7/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3078,
+        "pointer": "/probes/15/questions/7/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3079,
+        "pointer": "/probes/15/questions/7/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3082,
+        "pointer": "/probes/15/questions/7/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3087,
+        "pointer": "/probes/15/questions/7/viewpoint_day"
+      }
+    },
+    "question": "How long did Daniel's work music stay audiobooks?",
+    "observed": {
+      "answer": "18 days (2027-06-14 to 2027-07-01)",
+      "accept": [
+        "18"
+      ],
+      "evidence_days": [
+        472,
+        484
+      ]
+    },
+    "expected": {
+      "status": "routine has not ended by the probe",
+      "elapsed_days": 17,
+      "final_duration": "not established as a completed historical total at the probe",
+      "interval_end_date": "2027-07-01"
+    },
+    "rationale": "The gold asserts a completed total and ending date after the probe, while the question contains no future date. Correct synthetic eventual duration is not an available historical answer at this probe.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1530,
+        "pointer": "/regimes/18/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1533,
+        "pointer": "/regimes/18/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1534,
+        "pointer": "/regimes/18/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1536,
+        "pointer": "/regimes/18/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1548,
+        "pointer": "/regimes/18/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1560,
+        "pointer": "/regimes/19/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1563,
+        "pointer": "/regimes/19/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1564,
+        "pointer": "/regimes/19/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1566,
+        "pointer": "/regimes/19/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1587,
+        "pointer": "/regimes/19/first_mention_day"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 441
+      },
+      {
+        "file": "generator_v2/probing.py",
+        "line": 89
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate.",
+    "question_id": "u4_p202706_0100",
+    "class": "confirmed_error",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u4_p202710_0129",
+    "user_id": "u4",
+    "original_id": "u4_q0220",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-10-31",
+    "viewpoint_day": 610,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4038,
+        "pointer": "/probes/19/questions/7/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4043,
+        "pointer": "/probes/19/questions/7/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4044,
+        "pointer": "/probes/19/questions/7/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4045,
+        "pointer": "/probes/19/questions/7/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4046,
+        "pointer": "/probes/19/questions/7/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4049,
+        "pointer": "/probes/19/questions/7/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4054,
+        "pointer": "/probes/19/questions/7/viewpoint_day"
+      }
+    },
+    "question": "When did Daniel's work music routine change from the indie rock / jazz records routine to the ambient electronic / indie rock / jazz records routine?",
+    "observed": {
+      "answer": "2027-10-26",
+      "accept": [
+        "2027-10-26"
+      ],
+      "evidence_days": [
+        602,
+        605
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 606,
+      "first_distinguishing_date": "2027-10-27"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1641,
+        "pointer": "/regimes/20/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/20/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1645,
+        "pointer": "/regimes/20/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1647,
+        "pointer": "/regimes/20/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1667,
+        "pointer": "/regimes/20/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u4_p202710_0129",
+    "class": "citation_limit",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_p202608_0032",
+    "user_id": "u5",
+    "original_id": "u5_q0331",
+    "type": "duration",
+    "category": "future_completed_duration_in_gold",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-08-31",
+    "viewpoint_day": 184,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 839,
+        "pointer": "/probes/5/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 844,
+        "pointer": "/probes/5/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 845,
+        "pointer": "/probes/5/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 846,
+        "pointer": "/probes/5/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 847,
+        "pointer": "/probes/5/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 850,
+        "pointer": "/probes/5/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 855,
+        "pointer": "/probes/5/questions/3/viewpoint_day"
+      }
+    },
+    "question": "How long did Priya's evening reading stay library thrillers?",
+    "observed": {
+      "answer": "65 days (2026-07-03 to 2026-09-05)",
+      "accept": [
+        "65"
+      ],
+      "evidence_days": [
+        125,
+        180
+      ]
+    },
+    "expected": {
+      "status": "routine has not ended by the probe",
+      "elapsed_days": 60,
+      "final_duration": "not established as a completed historical total at the probe",
+      "interval_end_date": "2026-09-05"
+    },
+    "rationale": "The gold asserts a completed total and ending date after the probe, while the question contains no future date. Correct synthetic eventual duration is not an available historical answer at this probe.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1582,
+        "pointer": "/regimes/28/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1585,
+        "pointer": "/regimes/28/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1586,
+        "pointer": "/regimes/28/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1588,
+        "pointer": "/regimes/28/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1600,
+        "pointer": "/regimes/28/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1623,
+        "pointer": "/regimes/29/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1626,
+        "pointer": "/regimes/29/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1627,
+        "pointer": "/regimes/29/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1629,
+        "pointer": "/regimes/29/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/29/first_mention_day"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 441
+      },
+      {
+        "file": "generator_v2/probing.py",
+        "line": 89
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate.",
+    "question_id": "u5_p202608_0032",
+    "class": "confirmed_error",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_p202609_0043",
+    "user_id": "u5",
+    "original_id": "u5_q0181",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2026-09-30",
+    "viewpoint_day": 214,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1142,
+        "pointer": "/probes/6/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1147,
+        "pointer": "/probes/6/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1148,
+        "pointer": "/probes/6/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1149,
+        "pointer": "/probes/6/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1150,
+        "pointer": "/probes/6/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1155,
+        "pointer": "/probes/6/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1160,
+        "pointer": "/probes/6/questions/3/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+    "observed": {
+      "answer": "2026-09-06 (first observed 2026-09-08)",
+      "accept": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "evidence_days": [
+        180,
+        192
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 197,
+      "first_distinguishing_date": "2026-09-13"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1623,
+        "pointer": "/regimes/29/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1626,
+        "pointer": "/regimes/29/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1627,
+        "pointer": "/regimes/29/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1629,
+        "pointer": "/regimes/29/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/29/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_p202609_0043",
+    "class": "citation_limit",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_r202611_0189",
+    "user_id": "u5",
+    "original_id": "u5_q0181",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2026-11-30",
+    "viewpoint_day": 275,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1680,
+        "pointer": "/probes/8/questions/5/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1685,
+        "pointer": "/probes/8/questions/5/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1686,
+        "pointer": "/probes/8/questions/5/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1687,
+        "pointer": "/probes/8/questions/5/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1688,
+        "pointer": "/probes/8/questions/5/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1693,
+        "pointer": "/probes/8/questions/5/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1698,
+        "pointer": "/probes/8/questions/5/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+    "observed": {
+      "answer": "2026-09-06 (first observed 2026-09-08)",
+      "accept": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "evidence_days": [
+        180,
+        192
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 197,
+      "first_distinguishing_date": "2026-09-13"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1623,
+        "pointer": "/regimes/29/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1626,
+        "pointer": "/regimes/29/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1627,
+        "pointer": "/regimes/29/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1629,
+        "pointer": "/regimes/29/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/29/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_r202611_0189",
+    "class": "citation_limit",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_p202701_0076",
+    "user_id": "u5",
+    "original_id": "u5_q0262",
+    "type": "fact_current",
+    "category": "gold_answer_mismatch_at_probe",
+    "kind": "reference_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2193,
+        "pointer": "/probes/10/questions/8/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2198,
+        "pointer": "/probes/10/questions/8/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2199,
+        "pointer": "/probes/10/questions/8/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2200,
+        "pointer": "/probes/10/questions/8/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2201,
+        "pointer": "/probes/10/questions/8/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2204,
+        "pointer": "/probes/10/questions/8/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2209,
+        "pointer": "/probes/10/questions/8/viewpoint_day"
+      }
+    },
+    "question": "What are Priya's current hobbies?",
+    "observed": {
+      "answer": "bouldering, trail running",
+      "accept": [
+        "bouldering, trail running"
+      ],
+      "evidence_days": [
+        1,
+        331
+      ]
+    },
+    "expected": {
+      "answer": "bouldering, piano, trail running",
+      "accept": [
+        "bouldering, piano, trail running"
+      ]
+    },
+    "rationale": "Gold was generated for the final world but this relative/current question is asked at an earlier probe. The per-day active facts define the correct list at that viewpoint.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 42526,
+        "pointer": "/days/336/active_facts/hobbies"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 370
+      },
+      {
+        "file": "generator_v2/probing.py",
+        "line": 145
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_p202701_0076",
+    "class": "confirmed_error",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_p202701_0076",
+    "user_id": "u5",
+    "original_id": "u5_q0262",
+    "type": "fact_current",
+    "category": "accepted_answer_mismatch_at_probe",
+    "kind": "reference_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2193,
+        "pointer": "/probes/10/questions/8/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2198,
+        "pointer": "/probes/10/questions/8/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2199,
+        "pointer": "/probes/10/questions/8/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2200,
+        "pointer": "/probes/10/questions/8/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2201,
+        "pointer": "/probes/10/questions/8/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2204,
+        "pointer": "/probes/10/questions/8/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2209,
+        "pointer": "/probes/10/questions/8/viewpoint_day"
+      }
+    },
+    "question": "What are Priya's current hobbies?",
+    "observed": [
+      "bouldering, trail running"
+    ],
+    "expected": {
+      "accept": [
+        "bouldering, piano, trail running"
+      ]
+    },
+    "rationale": "The acceptance list encodes the same stale/mismatched reference at this changed viewpoint.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 42526,
+        "pointer": "/days/336/active_facts/hobbies"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_p202701_0076",
+    "class": "confirmed_error",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_p202702_0080",
+    "user_id": "u5",
+    "original_id": "u5_q0177",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-02-28",
+    "viewpoint_day": 365,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2432,
+        "pointer": "/probes/11/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2437,
+        "pointer": "/probes/11/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2438,
+        "pointer": "/probes/11/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2439,
+        "pointer": "/probes/11/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2440,
+        "pointer": "/probes/11/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2443,
+        "pointer": "/probes/11/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2448,
+        "pointer": "/probes/11/questions/2/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 351,
+      "first_distinguishing_date": "2027-02-14"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_p202702_0080",
+    "class": "citation_limit",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_p202705_0094",
+    "user_id": "u5",
+    "original_id": "u5_q0359",
+    "type": "distractor_probe",
+    "category": "confounder_change_not_cited",
+    "kind": "evidence_gap",
+    "probe_date": "2027-05-31",
+    "viewpoint_day": 457,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2968,
+        "pointer": "/probes/14/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2973,
+        "pointer": "/probes/14/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2974,
+        "pointer": "/probes/14/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2975,
+        "pointer": "/probes/14/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2976,
+        "pointer": "/probes/14/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2979,
+        "pointer": "/probes/14/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2983,
+        "pointer": "/probes/14/questions/0/viewpoint_day"
+      }
+    },
+    "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
+    "observed": {
+      "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
+      "accept": [
+        "no"
+      ],
+      "evidence_days": [
+        448
+      ]
+    },
+    "expected": {
+      "change_observation_day": 456
+    },
+    "rationale": "Gold's explanation correctly describes a nearby change, but the evidence list contains only the distractor statement. The actual change is available elsewhere in the prefix.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 2806,
+        "pointer": "/statements/47"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1740,
+        "pointer": "/regimes/31/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1743,
+        "pointer": "/regimes/31/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1744,
+        "pointer": "/regimes/31/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1746,
+        "pointer": "/regimes/31/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1758,
+        "pointer": "/regimes/31/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_p202705_0094",
+    "class": "citation_limit",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_r202708_0197",
+    "user_id": "u5",
+    "original_id": "u5_q0177",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-08-31",
+    "viewpoint_day": 549,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3842,
+        "pointer": "/probes/17/questions/10/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3847,
+        "pointer": "/probes/17/questions/10/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3848,
+        "pointer": "/probes/17/questions/10/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3849,
+        "pointer": "/probes/17/questions/10/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3850,
+        "pointer": "/probes/17/questions/10/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3853,
+        "pointer": "/probes/17/questions/10/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3858,
+        "pointer": "/probes/17/questions/10/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 351,
+      "first_distinguishing_date": "2027-02-14"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_r202708_0197",
+    "class": "citation_limit",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "id": "u5_r202710_0193",
+    "user_id": "u5",
+    "original_id": "u5_q0359",
+    "type": "distractor_probe",
+    "category": "confounder_change_not_cited",
+    "kind": "evidence_gap",
+    "probe_date": "2027-10-31",
+    "viewpoint_day": 610,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4487,
+        "pointer": "/probes/19/questions/13/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4492,
+        "pointer": "/probes/19/questions/13/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4493,
+        "pointer": "/probes/19/questions/13/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4494,
+        "pointer": "/probes/19/questions/13/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4495,
+        "pointer": "/probes/19/questions/13/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4498,
+        "pointer": "/probes/19/questions/13/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4502,
+        "pointer": "/probes/19/questions/13/viewpoint_day"
+      }
+    },
+    "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
+    "observed": {
+      "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
+      "accept": [
+        "no"
+      ],
+      "evidence_days": [
+        448
+      ]
+    },
+    "expected": {
+      "change_observation_day": 456
+    },
+    "rationale": "Gold's explanation correctly describes a nearby change, but the evidence list contains only the distractor statement. The actual change is available elsewhere in the prefix.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 2806,
+        "pointer": "/statements/47"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1740,
+        "pointer": "/regimes/31/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1743,
+        "pointer": "/regimes/31/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1744,
+        "pointer": "/regimes/31/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1746,
+        "pointer": "/regimes/31/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1758,
+        "pointer": "/regimes/31/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_r202710_0193",
+    "class": "citation_limit",
+    "evidence_artifact": "gold/issues.json"
+  },
+  {
+    "question_id": "u3_p202711_0137",
+    "original_id": "u3_q0130",
+    "user_id": "u3",
+    "question": "What was Sofia's podcast on Sunday, 2027-10-24?",
+    "reference_answer": "comedy podcast",
+    "accepted_values": [
+      "comedy podcast"
+    ],
+    "synthetic_gold_correct": true,
+    "target_date": "2027-10-24",
+    "target_day": 603,
+    "probe_date": "2027-11-30",
+    "viewpoint_day": 640,
+    "sources": [
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line_start": 4397,
+        "line_end": 4397,
+        "json_pointer": "/probes/20/questions/3/question",
+        "excerpt": "          \"question\": \"What was Sofia's podcast on Sunday, 2027-10-24?\","
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line_start": 4398,
+        "line_end": 4398,
+        "json_pointer": "/probes/20/questions/3/answer",
+        "excerpt": "          \"answer\": \"comedy podcast\","
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line_start": 4400,
+        "line_end": 4402,
+        "json_pointer": "/probes/20/questions/3/accept",
+        "excerpt": "          \"accept\": [\n            \"comedy podcast\"\n          ],"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line_start": 4409,
+        "line_end": 4409,
+        "json_pointer": "/probes/20/questions/3/viewpoint_day",
+        "excerpt": "          \"viewpoint_day\": 640,"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line_start": 57604,
+        "line_end": 57604,
+        "json_pointer": "/days/602/preferences/podcast/value",
+        "excerpt": "          \"value\": \"comedy podcast\","
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line_start": 57609,
+        "line_end": 57609,
+        "json_pointer": "/days/602/preferences/podcast/mentioned",
+        "excerpt": "          \"mentioned\": false,"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line_start": 2050,
+        "line_end": 2050,
+        "json_pointer": "/regimes/17/start",
+        "excerpt": "      \"start\": 603,"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line_start": 2073,
+        "line_end": 2073,
+        "json_pointer": "/regimes/17/first_mention_day",
+        "excerpt": "      \"first_mention_day\": 604,"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line_start": 57422,
+        "line_end": 57422,
+        "json_pointer": "/days/600/preferences/podcast/value",
+        "excerpt": "          \"value\": \"Italian lessons podcast\","
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line_start": 57689,
+        "line_end": 57689,
+        "json_pointer": "/days/603/preferences/podcast/value",
+        "excerpt": "          \"value\": \"dog training podcast\","
+      }
+    ],
+    "category": "unobserved_shift_boundary",
+    "confidence": "confirmed_answerability_limitation",
+    "observed": {
+      "target": 603,
+      "world_regime_start": 603,
+      "last_old_observation": 601,
+      "first_new_observation": 604,
+      "generator_change_date_acceptance_days": [
+        603,
+        604
+      ],
+      "alternative_if_change_occurred_after_target": "Italian lessons podcast",
+      "rule_type": "day_of_week",
+      "counterfactual_start_checks": [
+        {
+          "candidate_start_day": 603,
+          "candidate_start_date": "2027-10-24",
+          "observed_days_checked": [
+            333,
+            336,
+            338,
+            339,
+            341,
+            342,
+            344,
+            345,
+            346,
+            349,
+            350,
+            353,
+            354,
+            356,
+            357,
+            360,
+            361,
+            367,
+            368,
+            370,
+            371,
+            372,
+            374,
+            376,
+            378,
+            379,
+            382,
+            385,
+            387,
+            389,
+            391,
+            392,
+            398,
+            399,
+            401,
+            402,
+            403,
+            405,
+            406,
+            407,
+            408,
+            409,
+            410,
+            412,
+            416,
+            418,
+            419,
+            422,
+            423,
+            424,
+            426,
+            427,
+            429,
+            432,
+            436,
+            439,
+            440,
+            441,
+            442,
+            443,
+            444,
+            446,
+            451,
+            453,
+            455,
+            457,
+            460,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468,
+            471,
+            476,
+            488,
+            489,
+            490,
+            493,
+            497,
+            499,
+            501,
+            502,
+            503,
+            505,
+            506,
+            507,
+            508,
+            510,
+            512,
+            513,
+            514,
+            515,
+            516,
+            520,
+            521,
+            522,
+            523,
+            524,
+            526,
+            527,
+            531,
+            532,
+            533,
+            534,
+            538,
+            541,
+            542,
+            543,
+            544,
+            545,
+            546,
+            547,
+            548,
+            551,
+            552,
+            553,
+            554,
+            555,
+            557,
+            559,
+            564,
+            566,
+            567,
+            570,
+            571,
+            572,
+            573,
+            574,
+            576,
+            577,
+            578,
+            580,
+            581,
+            582,
+            584,
+            585,
+            586,
+            588,
+            589,
+            592,
+            593,
+            595,
+            596,
+            599,
+            600,
+            601,
+            604,
+            605,
+            606,
+            608,
+            610,
+            613,
+            614,
+            615,
+            616,
+            622,
+            624,
+            626,
+            630,
+            631,
+            633,
+            634,
+            636
+          ],
+          "observed_base_mismatch_days": [],
+          "target_answer": "comedy podcast",
+          "compatible_with_all_available_observed_choices": true
+        },
+        {
+          "candidate_start_day": 604,
+          "candidate_start_date": "2027-10-25",
+          "observed_days_checked": [
+            333,
+            336,
+            338,
+            339,
+            341,
+            342,
+            344,
+            345,
+            346,
+            349,
+            350,
+            353,
+            354,
+            356,
+            357,
+            360,
+            361,
+            367,
+            368,
+            370,
+            371,
+            372,
+            374,
+            376,
+            378,
+            379,
+            382,
+            385,
+            387,
+            389,
+            391,
+            392,
+            398,
+            399,
+            401,
+            402,
+            403,
+            405,
+            406,
+            407,
+            408,
+            409,
+            410,
+            412,
+            416,
+            418,
+            419,
+            422,
+            423,
+            424,
+            426,
+            427,
+            429,
+            432,
+            436,
+            439,
+            440,
+            441,
+            442,
+            443,
+            444,
+            446,
+            451,
+            453,
+            455,
+            457,
+            460,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468,
+            471,
+            476,
+            488,
+            489,
+            490,
+            493,
+            497,
+            499,
+            501,
+            502,
+            503,
+            505,
+            506,
+            507,
+            508,
+            510,
+            512,
+            513,
+            514,
+            515,
+            516,
+            520,
+            521,
+            522,
+            523,
+            524,
+            526,
+            527,
+            531,
+            532,
+            533,
+            534,
+            538,
+            541,
+            542,
+            543,
+            544,
+            545,
+            546,
+            547,
+            548,
+            551,
+            552,
+            553,
+            554,
+            555,
+            557,
+            559,
+            564,
+            566,
+            567,
+            570,
+            571,
+            572,
+            573,
+            574,
+            576,
+            577,
+            578,
+            580,
+            581,
+            582,
+            584,
+            585,
+            586,
+            588,
+            589,
+            592,
+            593,
+            595,
+            596,
+            599,
+            600,
+            601,
+            604,
+            605,
+            606,
+            608,
+            610,
+            613,
+            614,
+            615,
+            616,
+            622,
+            624,
+            626,
+            630,
+            631,
+            633,
+            634,
+            636
+          ],
+          "observed_base_mismatch_days": [],
+          "target_answer": "Italian lessons podcast",
+          "compatible_with_all_available_observed_choices": true
+        }
+      ]
+    },
+    "expected": "Either establish that the new regime began by the target day, or permit the old-regime value / uncertainty at the unresolved boundary.",
+    "source_interpretation": "The gold is correct in hidden truth, but actual observations do not date the shift precisely. Choosing a later change within the generator's own accepted date interval changes this target's answer.",
+    "generator_source": {
+      "file": "generator_v2/qa.py",
+      "line_start": 262,
+      "line_end": 264,
+      "excerpt": "            accept = [self.date(d).isoformat() for d in range(reg.start, first + 1)]\n            tags = [reg.kind, reg.visibility] + ([\"bounded\"] if first > reg.start else [])\n            self.add(Draft(\"change_detection\", reg.domain,"
+    },
+    "transcript_sources": [
+      {
+        "file": "datasets/v2/u3/sessions/2027-10-22.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"Actually, yes! I'm going to play an episode of an Italian language lesson podcast. I really want to practice my pronunciation while I commute.\""
+      },
+      {
+        "file": "datasets/v2/u3/sessions/2027-10-25.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"Actually, my podcast routine has completely changed recently. Since we adopted Dash, our rescue greyhound, I've started listening to a show focused on dog training and canine behavior instead.\""
+      }
+    ],
+    "limitations": "The hidden effective change day is known to the audit, not the evaluated agent. A plausible inferential guess may still match the gold. This is not a wrong synthetic answer.",
+    "class": "observation_limit",
+    "evidence_artifact": "recall/issues.json"
+  },
+  {
+    "question_id": "u5_p202605_0011",
+    "original_id": "u5_q0006",
+    "user_id": "u5",
+    "question": "What was Priya's workout on Saturday, 2026-05-09?",
+    "reference_answer": "bike ride",
+    "accepted_values": [
+      "bike ride"
+    ],
+    "synthetic_gold_correct": true,
+    "target_date": "2026-05-09",
+    "target_day": 70,
+    "probe_date": "2026-05-31",
+    "viewpoint_day": 92,
+    "sources": [
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 284,
+        "line_end": 284,
+        "json_pointer": "/probes/2/questions/1/question",
+        "excerpt": "          \"question\": \"What was Priya's workout on Saturday, 2026-05-09?\","
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 285,
+        "line_end": 285,
+        "json_pointer": "/probes/2/questions/1/answer",
+        "excerpt": "          \"answer\": \"bike ride\","
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 287,
+        "line_end": 289,
+        "json_pointer": "/probes/2/questions/1/accept",
+        "excerpt": "          \"accept\": [\n            \"bike ride\"\n          ],"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 296,
+        "line_end": 296,
+        "json_pointer": "/probes/2/questions/1/viewpoint_day",
+        "excerpt": "          \"viewpoint_day\": 92,"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 10734,
+        "line_end": 10734,
+        "json_pointer": "/days/69/preferences/exercise/value",
+        "excerpt": "          \"value\": \"bike ride\","
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 290,
+        "line_end": 294,
+        "json_pointer": "/probes/2/questions/1/evidence_days",
+        "excerpt": "          \"evidence_days\": [\n            68,\n            77,\n            79\n          ],"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 15,
+        "line_end": 44,
+        "json_pointer": "/regimes/0/rule",
+        "excerpt": "      \"rule\": {\n        \"type\": \"nested\",\n        \"block_days\": 7,\n        \"blocks\": [\n          {\n            \"type\": \"day_of_week\",\n            \"map\": {\n              \"mon\": \"evening run\",\n              \"tue\": \"bouldering\",\n              \"wed\": \"evening run\",\n              \"thu\": \"bouldering\",\n              \"fri\": \"yoga class\",\n              \"sat\": \"long run\",\n              \"sun\": \"rest day\"\n            }\n          },\n          {\n            \"type\": \"day_of_week\",\n            \"map\": {\n              \"mon\": \"swim\",\n              \"tue\": \"bouldering\",\n              \"wed\": \"swim\",\n              \"thu\": \"bouldering\",\n              \"fri\": \"yoga class\",\n              \"sat\": \"bike ride\",\n              \"sun\": \"rest day\"\n            }\n          }\n        ]\n      },"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 10490,
+        "line_end": 10490,
+        "json_pointer": "/days/67/preferences/exercise/value",
+        "excerpt": "          \"value\": \"bouldering\","
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 11522,
+        "line_end": 11522,
+        "json_pointer": "/days/76/preferences/exercise/value",
+        "excerpt": "          \"value\": \"long run\","
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 11753,
+        "line_end": 11753,
+        "json_pointer": "/days/78/preferences/exercise/value",
+        "excerpt": "          \"value\": \"swim\","
+      }
+    ],
+    "category": "unobserved_answer_phase",
+    "confidence": "confirmed",
+    "observed": {
+      "cited_values": [
+        "bouldering",
+        "long run",
+        "swim"
+      ],
+      "same_phase_observations_in_entire_regime": [],
+      "regime_observed_values_by_probe": [
+        "bouldering",
+        "evening run",
+        "long run",
+        "rest day",
+        "swim",
+        "yoga class"
+      ]
+    },
+    "expected": "An inferred exact answer needs observations or an explicit stated rule that support its target phase; unrelated phases do not identify an unseen choice.",
+    "source_interpretation": "No bike-ride workout was reported in the entire initial regime. Pre-probe cycling language is attributed to commuting or other people, not this workout phase.",
+    "transcript_sources": [
+      {
+        "file": "datasets/v2/u5/sessions/2026-05-07.json",
+        "line_start": 45,
+        "line_end": 45,
+        "json_pointer": "/turns/9/text",
+        "excerpt": "      \"text\": \"I actually headed to the gym right after work. Some other folks there were doing heavy weight training, but I spent my session climbing on the short walls with crash pads and no harness.\""
+      },
+      {
+        "file": "datasets/v2/u5/sessions/2026-05-16.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"She is! In fact, her workout today was a grueling open-water swim at the lake. For my own exercise, I decided to do some serious mileage on foot around the local parks after I left the office—I ended up jogging for nearly two hours. I'm definitely feeling it now!\""
+      },
+      {
+        "file": "datasets/v2/u5/sessions/2026-05-18.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"She's doing incredibly well. She actually did a long run this evening to get her miles in. As for me, I opted for a different kind of exercise after work. I went to do laps in the indoor pool, focusing on my breaststroke and freestyle.\""
+      },
+      {
+        "file": "datasets/v2/u5/sessions/2026-05-07.json",
+        "line_start": 13,
+        "line_end": 13,
+        "json_pointer": "/turns/1/text",
+        "excerpt": "      \"text\": \"Hey! Yes, I got lucky. My coworker Dana actually took the bus because she was tired from her triathlon training, but I decided to pedal my bicycle to the office today. The fresh air was really nice.\""
+      },
+      {
+        "file": "datasets/v2/u5/sessions/2026-05-18.json",
+        "line_start": 13,
+        "line_end": 13,
+        "json_pointer": "/turns/1/text",
+        "excerpt": "      \"text\": \"Hey! It's going well. I actually found a nice little seafood bistro near my office that has amazing grilled salmon. Aside from that, I changed up how I got to work today. Instead of my usual routine, I ended up using one of those public bikeshare rentals to pedal to the office. It was nice to be out in the morning air.\""
+      },
+      {
+        "file": "datasets/v2/u5/sessions/2026-05-24.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"No, today was strictly a non-active day. I decided to completely avoid any physical exercise and just give my muscles a full break from bouldering. On the other hand, my coworker Dana, who is still hard at work training for her upcoming triathlon, messaged me that she did a brutal three-hour cycling session in the rain today.\""
+      },
+      {
+        "file": "datasets/v2/u5/sessions/2026-05-30.json",
+        "line_start": 13,
+        "line_end": 13,
+        "json_pointer": "/turns/1/text",
+        "excerpt": "      \"text\": \"Hi! It's been a really nice, relaxing Saturday so far. I actually didn't have to travel to an office or do any commuting today, which was a fantastic change of pace. Instead, I kicked off my morning by going for a really long jog around the neighborhood. My coworker Dana, who is training for that triathlon, did a cycling session today, but I preferred just hitting the pavement.\""
+      }
+    ],
+    "generator_source": {
+      "file": "generator_v2/qa.py",
+      "line_start": 193,
+      "line_end": 194,
+      "excerpt": "        pool = same or reg.mention_days\n        return sorted(sorted(pool, key=lambda d: abs(d - day))[:n])"
+    },
+    "limitations": "Absence of an observed exact phrase alone was not used. The full pre-probe transcript was reviewed for bicycle/pedaling/rotation language and attribution.",
+    "class": "observation_limit",
+    "evidence_artifact": "recall/issues.json"
+  },
+  {
+    "question_id": "u5_p202610_0047",
+    "original_id": "u5_q0048",
+    "user_id": "u5",
+    "question": "What was Priya's work music on Thursday, 2026-09-17?",
+    "reference_answer": "synthwave playlists",
+    "accepted_values": [
+      "synthwave playlists"
+    ],
+    "synthetic_gold_correct": true,
+    "target_date": "2026-09-17",
+    "target_day": 201,
+    "probe_date": "2026-10-31",
+    "viewpoint_day": 245,
+    "sources": [
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 1317,
+        "line_end": 1317,
+        "json_pointer": "/probes/7/questions/1/question",
+        "excerpt": "          \"question\": \"What was Priya's work music on Thursday, 2026-09-17?\","
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 1318,
+        "line_end": 1318,
+        "json_pointer": "/probes/7/questions/1/answer",
+        "excerpt": "          \"answer\": \"synthwave playlists\","
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 1320,
+        "line_end": 1322,
+        "json_pointer": "/probes/7/questions/1/accept",
+        "excerpt": "          \"accept\": [\n            \"synthwave playlists\"\n          ],"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line_start": 1329,
+        "line_end": 1329,
+        "json_pointer": "/probes/7/questions/1/viewpoint_day",
+        "excerpt": "          \"viewpoint_day\": 245,"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 26359,
+        "line_end": 26359,
+        "json_pointer": "/days/200/preferences/music/value",
+        "excerpt": "          \"value\": \"synthwave playlists\","
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 26364,
+        "line_end": 26364,
+        "json_pointer": "/days/200/preferences/music/mentioned",
+        "excerpt": "          \"mentioned\": false,"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 1299,
+        "line_end": 1299,
+        "json_pointer": "/regimes/23/start",
+        "excerpt": "      \"start\": 200,"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 1314,
+        "line_end": 1314,
+        "json_pointer": "/regimes/23/first_mention_day",
+        "excerpt": "      \"first_mention_day\": 203,"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 25735,
+        "line_end": 25735,
+        "json_pointer": "/days/195/preferences/music/value",
+        "excerpt": "          \"value\": \"lo-fi beats\","
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line_start": 26604,
+        "line_end": 26604,
+        "json_pointer": "/days/202/preferences/music/value",
+        "excerpt": "          \"value\": \"synthwave playlists\","
+      }
+    ],
+    "category": "unobserved_shift_boundary",
+    "confidence": "confirmed_answerability_limitation",
+    "observed": {
+      "target": 201,
+      "world_regime_start": 200,
+      "last_old_observation": 196,
+      "first_new_observation": 203,
+      "generator_change_date_acceptance_days": [
+        200,
+        201,
+        202,
+        203
+      ],
+      "alternative_if_change_occurred_after_target": "film scores",
+      "rule_type": "constant",
+      "counterfactual_start_checks": [
+        {
+          "candidate_start_day": 200,
+          "candidate_start_date": "2026-09-16",
+          "observed_days_checked": [
+            114,
+            116,
+            118,
+            122,
+            125,
+            130,
+            134,
+            137,
+            139,
+            149,
+            150,
+            155,
+            158,
+            165,
+            167,
+            170,
+            172,
+            174,
+            175,
+            178,
+            180,
+            181,
+            186,
+            193,
+            196,
+            203,
+            204,
+            205,
+            215,
+            216,
+            219,
+            224,
+            230,
+            232,
+            233,
+            234,
+            235,
+            238,
+            239,
+            240,
+            242,
+            245
+          ],
+          "observed_base_mismatch_days": [],
+          "target_answer": "synthwave playlists",
+          "compatible_with_all_available_observed_choices": true
+        },
+        {
+          "candidate_start_day": 201,
+          "candidate_start_date": "2026-09-17",
+          "observed_days_checked": [
+            114,
+            116,
+            118,
+            122,
+            125,
+            130,
+            134,
+            137,
+            139,
+            149,
+            150,
+            155,
+            158,
+            165,
+            167,
+            170,
+            172,
+            174,
+            175,
+            178,
+            180,
+            181,
+            186,
+            193,
+            196,
+            203,
+            204,
+            205,
+            215,
+            216,
+            219,
+            224,
+            230,
+            232,
+            233,
+            234,
+            235,
+            238,
+            239,
+            240,
+            242,
+            245
+          ],
+          "observed_base_mismatch_days": [],
+          "target_answer": "synthwave playlists",
+          "compatible_with_all_available_observed_choices": true
+        },
+        {
+          "candidate_start_day": 202,
+          "candidate_start_date": "2026-09-18",
+          "observed_days_checked": [
+            114,
+            116,
+            118,
+            122,
+            125,
+            130,
+            134,
+            137,
+            139,
+            149,
+            150,
+            155,
+            158,
+            165,
+            167,
+            170,
+            172,
+            174,
+            175,
+            178,
+            180,
+            181,
+            186,
+            193,
+            196,
+            203,
+            204,
+            205,
+            215,
+            216,
+            219,
+            224,
+            230,
+            232,
+            233,
+            234,
+            235,
+            238,
+            239,
+            240,
+            242,
+            245
+          ],
+          "observed_base_mismatch_days": [],
+          "target_answer": "film scores",
+          "compatible_with_all_available_observed_choices": true
+        },
+        {
+          "candidate_start_day": 203,
+          "candidate_start_date": "2026-09-19",
+          "observed_days_checked": [
+            114,
+            116,
+            118,
+            122,
+            125,
+            130,
+            134,
+            137,
+            139,
+            149,
+            150,
+            155,
+            158,
+            165,
+            167,
+            170,
+            172,
+            174,
+            175,
+            178,
+            180,
+            181,
+            186,
+            193,
+            196,
+            203,
+            204,
+            205,
+            215,
+            216,
+            219,
+            224,
+            230,
+            232,
+            233,
+            234,
+            235,
+            238,
+            239,
+            240,
+            242,
+            245
+          ],
+          "observed_base_mismatch_days": [],
+          "target_answer": "film scores",
+          "compatible_with_all_available_observed_choices": true
+        }
+      ]
+    },
+    "expected": "Either establish that the new regime began by the target day, or permit the old-regime value / uncertainty at the unresolved boundary.",
+    "source_interpretation": "The gold is correct in hidden truth, but actual observations do not date the shift precisely. Choosing a later change within the generator's own accepted date interval changes this target's answer.",
+    "generator_source": {
+      "file": "generator_v2/qa.py",
+      "line_start": 262,
+      "line_end": 264,
+      "excerpt": "            accept = [self.date(d).isoformat() for d in range(reg.start, first + 1)]\n            tags = [reg.kind, reg.visibility] + ([\"bounded\"] if first > reg.start else [])\n            self.add(Draft(\"change_detection\", reg.domain,"
+    },
+    "transcript_sources": [
+      {
+        "file": "datasets/v2/u5/sessions/2026-09-12.json",
+        "line_start": 37,
+        "line_end": 37,
+        "json_pointer": "/turns/7/text",
+        "excerpt": "      \"text\": \"I did do a few hours of coding this morning to fix some database issues. To keep my focus, I had some relaxed, wordless instrumental hip-hop tracks playing in the background. Arjun was working on his own project while listening to loud heavy metal, but I definitely needed those chill, repetitive beats to concentrate.\""
+      },
+      {
+        "file": "datasets/v2/u5/sessions/2026-09-19.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"I did! I got into a really solid groove. To help me focus, I put on some upbeat instrumental tracks filled with retro-futuristic electronic synthesizer beats. Arjun was working nearby on his own projects, but he was listening to traditional acoustic jazz.\""
+      }
+    ],
+    "limitations": "The hidden effective change day is known to the audit, not the evaluated agent. A plausible inferential guess may still match the gold. This is not a wrong synthetic answer.",
+    "class": "observation_limit",
+    "evidence_artifact": "recall/issues.json"
+  },
+  {
+    "id": "u2_p202603_0001",
+    "user_id": "u2",
+    "original_id": "u2_q0355",
+    "type": "fact_at_time",
+    "category": "empty_fact_has_no_negative_statement",
+    "kind": "observation_limit",
+    "probe_date": "2026-03-31",
+    "viewpoint_day": 31,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 16,
+        "pointer": "/probes/0/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 21,
+        "pointer": "/probes/0/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 22,
+        "pointer": "/probes/0/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 23,
+        "pointer": "/probes/0/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 24,
+        "pointer": "/probes/0/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 27,
+        "pointer": "/probes/0/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 31,
+        "pointer": "/probes/0/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What were Marcus's pets on 2026-03-15?",
+    "observed": {
+      "answer": "none",
+      "accept": [
+        "none"
+      ],
+      "evidence_days": [
+        1
+      ]
+    },
+    "expected": {
+      "evidence": "An explicit pet-free statement, or an explicit closed-world task convention."
+    },
+    "rationale": "The empty set is correct synthetic truth, but evidence [1] is a fallback. No background/fact-change statement asserts the empty set, so absence of mention is not observational proof of no pets.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 3514,
+        "pointer": "/days/14/active_facts/pets"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 417
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u2_p202603_0001",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u2_p202608_0038",
+    "user_id": "u2",
+    "original_id": "u2_q0351",
+    "type": "fact_at_time",
+    "category": "empty_fact_has_no_negative_statement",
+    "kind": "observation_limit",
+    "probe_date": "2026-08-31",
+    "viewpoint_day": 184,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 997,
+        "pointer": "/probes/5/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1002,
+        "pointer": "/probes/5/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1003,
+        "pointer": "/probes/5/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1004,
+        "pointer": "/probes/5/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1005,
+        "pointer": "/probes/5/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1008,
+        "pointer": "/probes/5/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1012,
+        "pointer": "/probes/5/questions/1/viewpoint_day"
+      }
+    },
+    "question": "What were Marcus's pets on 2026-08-27?",
+    "observed": {
+      "answer": "none",
+      "accept": [
+        "none"
+      ],
+      "evidence_days": [
+        1
+      ]
+    },
+    "expected": {
+      "evidence": "An explicit pet-free statement, or an explicit closed-world task convention."
+    },
+    "rationale": "The empty set is correct synthetic truth, but evidence [1] is a fallback. No background/fact-change statement asserts the empty set, so absence of mention is not observational proof of no pets.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 17392,
+        "pointer": "/days/179/active_facts/pets"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 417
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u2_p202608_0038",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u2_r202702_0188",
+    "user_id": "u2",
+    "original_id": "u2_q0351",
+    "type": "fact_at_time",
+    "category": "empty_fact_has_no_negative_statement",
+    "kind": "observation_limit",
+    "probe_date": "2027-02-28",
+    "viewpoint_day": 365,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 2496,
+        "pointer": "/probes/11/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 2501,
+        "pointer": "/probes/11/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 2502,
+        "pointer": "/probes/11/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 2503,
+        "pointer": "/probes/11/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 2504,
+        "pointer": "/probes/11/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 2507,
+        "pointer": "/probes/11/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 2511,
+        "pointer": "/probes/11/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What were Marcus's pets on 2026-08-27?",
+    "observed": {
+      "answer": "none",
+      "accept": [
+        "none"
+      ],
+      "evidence_days": [
+        1
+      ]
+    },
+    "expected": {
+      "evidence": "An explicit pet-free statement, or an explicit closed-world task convention."
+    },
+    "rationale": "The empty set is correct synthetic truth, but evidence [1] is a fallback. No background/fact-change statement asserts the empty set, so absence of mention is not observational proof of no pets.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 17392,
+        "pointer": "/days/179/active_facts/pets"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 417
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u2_r202702_0188",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u3_p202604_0007",
+    "user_id": "u3",
+    "original_id": "u3_q0341",
+    "type": "fact_at_time",
+    "category": "empty_fact_has_no_negative_statement",
+    "kind": "observation_limit",
+    "probe_date": "2026-04-30",
+    "viewpoint_day": 61,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 173,
+        "pointer": "/probes/1/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 178,
+        "pointer": "/probes/1/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 179,
+        "pointer": "/probes/1/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 180,
+        "pointer": "/probes/1/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 181,
+        "pointer": "/probes/1/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 184,
+        "pointer": "/probes/1/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 188,
+        "pointer": "/probes/1/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What were Sofia's pets on 2026-04-15?",
+    "observed": {
+      "answer": "none",
+      "accept": [
+        "none"
+      ],
+      "evidence_days": [
+        1
+      ]
+    },
+    "expected": {
+      "evidence": "An explicit pet-free statement, or an explicit closed-world task convention."
+    },
+    "rationale": "The empty set is correct synthetic truth, but evidence [1] is a fallback. No background/fact-change statement asserts the empty set, so absence of mention is not observational proof of no pets.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 6611,
+        "pointer": "/days/45/active_facts/pets"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 417
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u3_p202604_0007",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u4_p202710_0129",
+    "user_id": "u4",
+    "original_id": "u4_q0220",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2027-10-31",
+    "viewpoint_day": 610,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4038,
+        "pointer": "/probes/19/questions/7/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4043,
+        "pointer": "/probes/19/questions/7/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4044,
+        "pointer": "/probes/19/questions/7/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4045,
+        "pointer": "/probes/19/questions/7/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4046,
+        "pointer": "/probes/19/questions/7/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4049,
+        "pointer": "/probes/19/questions/7/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4054,
+        "pointer": "/probes/19/questions/7/viewpoint_day"
+      }
+    },
+    "question": "When did Daniel's work music routine change from the indie rock / jazz records routine to the ambient electronic / indie rock / jazz records routine?",
+    "observed": {
+      "answer": "2027-10-26",
+      "accept": [
+        "2027-10-26"
+      ],
+      "evidence_days": [
+        602,
+        605
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 603,
+          "start_date": "2027-10-24",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 3,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 604,
+          "start_date": "2027-10-25",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 4,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 4
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1641,
+        "pointer": "/regimes/20/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/20/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1645,
+        "pointer": "/regimes/20/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1647,
+        "pointer": "/regimes/20/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1667,
+        "pointer": "/regimes/20/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1560,
+        "pointer": "/regimes/19/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1563,
+        "pointer": "/regimes/19/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1564,
+        "pointer": "/regimes/19/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1566,
+        "pointer": "/regimes/19/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1587,
+        "pointer": "/regimes/19/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u4_p202710_0129",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u5_p202609_0043",
+    "user_id": "u5",
+    "original_id": "u5_q0181",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2026-09-30",
+    "viewpoint_day": 214,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1142,
+        "pointer": "/probes/6/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1147,
+        "pointer": "/probes/6/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1148,
+        "pointer": "/probes/6/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1149,
+        "pointer": "/probes/6/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1150,
+        "pointer": "/probes/6/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1155,
+        "pointer": "/probes/6/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1160,
+        "pointer": "/probes/6/questions/3/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+    "observed": {
+      "answer": "2026-09-06 (first observed 2026-09-08)",
+      "accept": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "evidence_days": [
+        180,
+        192
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 197,
+          "start_date": "2026-09-13",
+          "rule_variant": "rotated_weekly_value_order",
+          "cause_lag_days": null,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 9
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1623,
+        "pointer": "/regimes/29/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1626,
+        "pointer": "/regimes/29/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1627,
+        "pointer": "/regimes/29/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1629,
+        "pointer": "/regimes/29/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/29/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1582,
+        "pointer": "/regimes/28/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1585,
+        "pointer": "/regimes/28/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1586,
+        "pointer": "/regimes/28/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1588,
+        "pointer": "/regimes/28/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1600,
+        "pointer": "/regimes/28/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_p202609_0043",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u5_r202611_0189",
+    "user_id": "u5",
+    "original_id": "u5_q0181",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2026-11-30",
+    "viewpoint_day": 275,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1680,
+        "pointer": "/probes/8/questions/5/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1685,
+        "pointer": "/probes/8/questions/5/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1686,
+        "pointer": "/probes/8/questions/5/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1687,
+        "pointer": "/probes/8/questions/5/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1688,
+        "pointer": "/probes/8/questions/5/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1693,
+        "pointer": "/probes/8/questions/5/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1698,
+        "pointer": "/probes/8/questions/5/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+    "observed": {
+      "answer": "2026-09-06 (first observed 2026-09-08)",
+      "accept": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "evidence_days": [
+        180,
+        192
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 197,
+          "start_date": "2026-09-13",
+          "rule_variant": "rotated_weekly_value_order",
+          "cause_lag_days": null,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 21
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1623,
+        "pointer": "/regimes/29/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1626,
+        "pointer": "/regimes/29/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1627,
+        "pointer": "/regimes/29/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1629,
+        "pointer": "/regimes/29/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/29/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1582,
+        "pointer": "/regimes/28/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1585,
+        "pointer": "/regimes/28/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1586,
+        "pointer": "/regimes/28/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1588,
+        "pointer": "/regimes/28/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1600,
+        "pointer": "/regimes/28/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_r202611_0189",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u5_p202702_0080",
+    "user_id": "u5",
+    "original_id": "u5_q0177",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2027-02-28",
+    "viewpoint_day": 365,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2432,
+        "pointer": "/probes/11/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2437,
+        "pointer": "/probes/11/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2438,
+        "pointer": "/probes/11/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2439,
+        "pointer": "/probes/11/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2440,
+        "pointer": "/probes/11/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2443,
+        "pointer": "/probes/11/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2448,
+        "pointer": "/probes/11/questions/2/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 346,
+          "start_date": "2027-02-09",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 6,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 347,
+          "start_date": "2027-02-10",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 7,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 348,
+          "start_date": "2027-02-11",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 8,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 349,
+          "start_date": "2027-02-12",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 9,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 350,
+          "start_date": "2027-02-13",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 10,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 7
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1296,
+        "pointer": "/regimes/23/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1299,
+        "pointer": "/regimes/23/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1300,
+        "pointer": "/regimes/23/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1302,
+        "pointer": "/regimes/23/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1314,
+        "pointer": "/regimes/23/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_p202702_0080",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u5_r202708_0197",
+    "user_id": "u5",
+    "original_id": "u5_q0177",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2027-08-31",
+    "viewpoint_day": 549,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3842,
+        "pointer": "/probes/17/questions/10/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3847,
+        "pointer": "/probes/17/questions/10/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3848,
+        "pointer": "/probes/17/questions/10/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3849,
+        "pointer": "/probes/17/questions/10/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3850,
+        "pointer": "/probes/17/questions/10/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3853,
+        "pointer": "/probes/17/questions/10/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3858,
+        "pointer": "/probes/17/questions/10/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 346,
+          "start_date": "2027-02-09",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 6,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 347,
+          "start_date": "2027-02-10",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 7,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 348,
+          "start_date": "2027-02-11",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 8,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 349,
+          "start_date": "2027-02-12",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 9,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 350,
+          "start_date": "2027-02-13",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 10,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 29
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1296,
+        "pointer": "/regimes/23/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1299,
+        "pointer": "/regimes/23/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1300,
+        "pointer": "/regimes/23/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1302,
+        "pointer": "/regimes/23/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1314,
+        "pointer": "/regimes/23/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u5_r202708_0197",
+    "class": "observation_limit",
+    "evidence_artifact": "gold/observation_limits.json"
+  },
+  {
+    "id": "u3_p202711_0136",
+    "user_id": "u3",
+    "original_id": "u3_q0361",
+    "type": "duration",
+    "category": "duration_completion_not_observed",
+    "kind": "uncertainty",
+    "probe_date": "2027-11-30",
+    "viewpoint_day": 640,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4367,
+        "pointer": "/probes/20/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4372,
+        "pointer": "/probes/20/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4373,
+        "pointer": "/probes/20/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4374,
+        "pointer": "/probes/20/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4375,
+        "pointer": "/probes/20/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4378,
+        "pointer": "/probes/20/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4383,
+        "pointer": "/probes/20/questions/2/viewpoint_day"
+      }
+    },
+    "question": "How long did Sofia's commute stay the driving / no commute routine?",
+    "observed": {
+      "answer": "240 days (2027-04-05 to 2027-11-30)",
+      "accept": [
+        "240"
+      ],
+      "evidence_days": [
+        401,
+        639
+      ]
+    },
+    "expected": {
+      "synthetic_interval_days": 240,
+      "elapsed_if_assumed_ongoing_at_probe": 240,
+      "closing_first_mention_date": "2027-12-01"
+    },
+    "rationale": "The next regime has not been observed by the probe. The gold interval is correct synthetic truth, but its completed framing is not established by the cited old-routine observations. For two rows the endpoint is the probe itself, making the number also the correct elapsed duration; the third ends one day earlier with its transition first mentioned in the next month.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/11/id"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/11/start"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1361,
+        "pointer": "/regimes/11/end"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1363,
+        "pointer": "/regimes/11/rule"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1383,
+        "pointer": "/regimes/11/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1517,
+        "pointer": "/regimes/12/id"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1520,
+        "pointer": "/regimes/12/start"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1521,
+        "pointer": "/regimes/12/end"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1523,
+        "pointer": "/regimes/12/rule"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 1543,
+        "pointer": "/regimes/12/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u3_p202711_0136",
+    "class": "uncertainty",
+    "evidence_artifact": "gold/uncertainties.json"
+  },
+  {
+    "id": "u4_p202606_0016",
+    "user_id": "u4",
+    "original_id": "u4_q0349",
+    "type": "duration",
+    "category": "duration_completion_not_observed",
+    "kind": "uncertainty",
+    "probe_date": "2026-06-30",
+    "viewpoint_day": 122,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 402,
+        "pointer": "/probes/3/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 407,
+        "pointer": "/probes/3/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 408,
+        "pointer": "/probes/3/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 409,
+        "pointer": "/probes/3/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 410,
+        "pointer": "/probes/3/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 413,
+        "pointer": "/probes/3/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 418,
+        "pointer": "/probes/3/questions/2/viewpoint_day"
+      }
+    },
+    "question": "How long did Daniel's workout stay the cycling / gym / long ride / rest day / yoga routine?",
+    "observed": {
+      "answer": "122 days (2026-03-01 to 2026-06-30)",
+      "accept": [
+        "122"
+      ],
+      "evidence_days": [
+        3,
+        121
+      ]
+    },
+    "expected": {
+      "synthetic_interval_days": 122,
+      "elapsed_if_assumed_ongoing_at_probe": 122,
+      "closing_first_mention_date": "2026-07-01"
+    },
+    "rationale": "The next regime has not been observed by the probe. The gold interval is correct synthetic truth, but its completed framing is not established by the cited old-routine observations. For two rows the endpoint is the probe itself, making the number also the correct elapsed duration; the third ends one day earlier with its transition first mentioned in the next month.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 442,
+        "pointer": "/regimes/5/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 445,
+        "pointer": "/regimes/5/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 446,
+        "pointer": "/regimes/5/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 448,
+        "pointer": "/regimes/5/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 468,
+        "pointer": "/regimes/5/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 526,
+        "pointer": "/regimes/6/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 529,
+        "pointer": "/regimes/6/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 530,
+        "pointer": "/regimes/6/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 532,
+        "pointer": "/regimes/6/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 552,
+        "pointer": "/regimes/6/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u4_p202606_0016",
+    "class": "uncertainty",
+    "evidence_artifact": "gold/uncertainties.json"
+  },
+  {
+    "id": "u4_p202607_0019",
+    "user_id": "u4",
+    "original_id": "u4_q0353",
+    "type": "duration",
+    "category": "duration_completion_not_observed",
+    "kind": "uncertainty",
+    "probe_date": "2026-07-31",
+    "viewpoint_day": 153,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 488,
+        "pointer": "/probes/4/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 493,
+        "pointer": "/probes/4/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 494,
+        "pointer": "/probes/4/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 495,
+        "pointer": "/probes/4/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 496,
+        "pointer": "/probes/4/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 499,
+        "pointer": "/probes/4/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 504,
+        "pointer": "/probes/4/questions/0/viewpoint_day"
+      }
+    },
+    "question": "How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?",
+    "observed": {
+      "answer": "152 days (2026-03-01 to 2026-07-30)",
+      "accept": [
+        "152"
+      ],
+      "evidence_days": [
+        1,
+        151
+      ]
+    },
+    "expected": {
+      "synthetic_interval_days": 152,
+      "elapsed_if_assumed_ongoing_at_probe": 153,
+      "closing_first_mention_date": "2026-08-01"
+    },
+    "rationale": "The next regime has not been observed by the probe. The gold interval is correct synthetic truth, but its completed framing is not established by the cited old-routine observations. For two rows the endpoint is the probe itself, making the number also the correct elapsed duration; the third ends one day earlier with its transition first mentioned in the next month.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1740,
+        "pointer": "/regimes/22/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1743,
+        "pointer": "/regimes/22/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1744,
+        "pointer": "/regimes/22/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1746,
+        "pointer": "/regimes/22/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1766,
+        "pointer": "/regimes/22/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1839,
+        "pointer": "/regimes/23/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1842,
+        "pointer": "/regimes/23/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1843,
+        "pointer": "/regimes/23/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1845,
+        "pointer": "/regimes/23/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1865,
+        "pointer": "/regimes/23/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed",
+    "question_id": "u4_p202607_0019",
+    "class": "uncertainty",
+    "evidence_artifact": "gold/uncertainties.json"
+  }
+]

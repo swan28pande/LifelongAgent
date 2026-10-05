@@ -1,0 +1,5 @@
+{"kind": "http", "utc": "2026-10-04T23:36:15.979683+00:00", "stage": "stream", "condition": "diagnostic", "method": "stream", "model": "gemini-3.5-flash", "status": 200, "seconds": 11.714631170998473}
+{"kind": "tokens", "utc": "2026-10-04T23:36:16.896761+00:00", "stage": "stream", "condition": "diagnostic", "input_tokens": 464, "output_tokens": 2199, "total_tokens": 2663, "input_token_details": {"cache_read": 0}, "output_token_details": {"reasoning": 1936}}
+{"kind": "logical", "utc": "2026-10-04T23:36:16.897062+00:00", "stage": "stream", "condition": "diagnostic", "ok": true, "seconds": 12.733912390000114}
+{"kind": "http", "utc": "2026-10-04T23:36:46.905728+00:00", "stage": "sync", "condition": "diagnostic", "method": "sync", "model": "gemini-3.5-flash", "status": 504, "seconds": 42.647328536000714, "error": "ServerError"}
+{"kind": "logical", "utc": "2026-10-04T23:36:46.913639+00:00", "stage": "sync", "condition": "diagnostic", "ok": false, "seconds": 42.759607893000066, "error": "GoogleAPIError: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}"}

@@ -1,0 +1,359 @@
+[
+  {
+    "id": "u3_p202605_0011",
+    "user_id": "u3",
+    "original_id": "u3_q0352",
+    "type": "duration",
+    "category": "duration_completion_not_observed",
+    "kind": "uncertainty",
+    "probe_date": "2026-05-31",
+    "viewpoint_day": 92,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 275,
+        "pointer": "/probes/2/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 280,
+        "pointer": "/probes/2/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 281,
+        "pointer": "/probes/2/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 282,
+        "pointer": "/probes/2/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 283,
+        "pointer": "/probes/2/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 286,
+        "pointer": "/probes/2/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 291,
+        "pointer": "/probes/2/questions/3/viewpoint_day"
+      }
+    },
+    "question": "How long did Sofia's lunch stay the cafeteria salad / packed leftovers routine?",
+    "observed": {
+      "answer": "92 days (2026-03-01 to 2026-05-31)",
+      "accept": [
+        "92"
+      ],
+      "evidence_days": [
+        1,
+        90
+      ]
+    },
+    "expected": {
+      "synthetic_interval_days": 92,
+      "elapsed_if_assumed_ongoing_at_probe": 92,
+      "closing_first_mention_date": "2026-06-01"
+    },
+    "rationale": "The next regime has not been observed by the probe. The gold interval is correct synthetic truth, but its completed framing is not established by the cited old-routine observations. For two rows the endpoint is the probe itself, making the number also the correct elapsed duration; the third ends one day earlier with its transition first mentioned in the next month.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 549,
+        "pointer": "/regimes/5/id"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 552,
+        "pointer": "/regimes/5/start"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 553,
+        "pointer": "/regimes/5/end"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 555,
+        "pointer": "/regimes/5/rule"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 576,
+        "pointer": "/regimes/5/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 632,
+        "pointer": "/regimes/6/id"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 635,
+        "pointer": "/regimes/6/start"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 636,
+        "pointer": "/regimes/6/end"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 638,
+        "pointer": "/regimes/6/rule"
+      },
+      {
+        "file": "datasets/v2/u3/world_state.json",
+        "line": 658,
+        "pointer": "/regimes/6/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u4_p202607_0020",
+    "user_id": "u4",
+    "original_id": "u4_q0340",
+    "type": "duration",
+    "category": "duration_completion_not_observed",
+    "kind": "uncertainty",
+    "probe_date": "2026-07-31",
+    "viewpoint_day": 153,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 496,
+        "pointer": "/probes/4/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 501,
+        "pointer": "/probes/4/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 502,
+        "pointer": "/probes/4/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 503,
+        "pointer": "/probes/4/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 504,
+        "pointer": "/probes/4/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 507,
+        "pointer": "/probes/4/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 512,
+        "pointer": "/probes/4/questions/2/viewpoint_day"
+      }
+    },
+    "question": "How long did Daniel's dinner stay the pasta / roast chicken / steak / stir-fry etc. routine?",
+    "observed": {
+      "answer": "152 days (2026-03-01 to 2026-07-30)",
+      "accept": [
+        "152"
+      ],
+      "evidence_days": [
+        1,
+        151
+      ]
+    },
+    "expected": {
+      "synthetic_interval_days": 152,
+      "elapsed_if_assumed_ongoing_at_probe": 153,
+      "closing_first_mention_date": "2026-08-01"
+    },
+    "rationale": "The next regime has not been observed by the probe. The gold interval is correct synthetic truth, but its completed framing is not established by the cited old-routine observations. For two rows the endpoint is the probe itself, making the number also the correct elapsed duration; the third ends one day earlier with its transition first mentioned in the next month.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1740,
+        "pointer": "/regimes/22/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1743,
+        "pointer": "/regimes/22/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1744,
+        "pointer": "/regimes/22/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1746,
+        "pointer": "/regimes/22/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1766,
+        "pointer": "/regimes/22/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1839,
+        "pointer": "/regimes/23/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1842,
+        "pointer": "/regimes/23/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1843,
+        "pointer": "/regimes/23/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1845,
+        "pointer": "/regimes/23/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1865,
+        "pointer": "/regimes/23/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202609_0041",
+    "user_id": "u5",
+    "original_id": "u5_q0327",
+    "type": "duration",
+    "category": "duration_completion_not_observed",
+    "kind": "uncertainty",
+    "probe_date": "2026-09-30",
+    "viewpoint_day": 214,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1073,
+        "pointer": "/probes/6/questions/5/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1078,
+        "pointer": "/probes/6/questions/5/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1079,
+        "pointer": "/probes/6/questions/5/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1080,
+        "pointer": "/probes/6/questions/5/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1081,
+        "pointer": "/probes/6/questions/5/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1084,
+        "pointer": "/probes/6/questions/5/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1089,
+        "pointer": "/probes/6/questions/5/viewpoint_day"
+      }
+    },
+    "question": "How long did Priya's workout stay physio exercises?",
+    "observed": {
+      "answer": "34 days (2026-08-28 to 2026-09-30)",
+      "accept": [
+        "34"
+      ],
+      "evidence_days": [
+        181,
+        203
+      ]
+    },
+    "expected": {
+      "synthetic_interval_days": 34,
+      "elapsed_if_assumed_ongoing_at_probe": 34,
+      "closing_first_mention_date": "2026-10-01"
+    },
+    "rationale": "The next regime has not been observed by the probe. The gold interval is correct synthetic truth, but its completed framing is not established by the cited old-routine observations. For two rows the endpoint is the probe itself, making the number also the correct elapsed duration; the third ends one day earlier with its transition first mentioned in the next month.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 127,
+        "pointer": "/regimes/2/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 130,
+        "pointer": "/regimes/2/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 131,
+        "pointer": "/regimes/2/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 133,
+        "pointer": "/regimes/2/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 145,
+        "pointer": "/regimes/2/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 157,
+        "pointer": "/regimes/3/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 160,
+        "pointer": "/regimes/3/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 161,
+        "pointer": "/regimes/3/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 163,
+        "pointer": "/regimes/3/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 183,
+        "pointer": "/regimes/3/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  }
+]

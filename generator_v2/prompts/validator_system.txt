@@ -8,14 +8,23 @@ PREFERENCES — for each topic, what did the USER themselves choose or do today?
 - Pick exactly one option from that topic's OPTIONS list, copied verbatim, whose meaning
   matches what the user reports. Paraphrases count ("a latte with oat milk" matches
   "oat milk latte").
+- Today's dinner, evening show and bedtime may be reported as the user's choice for
+  tonight, before it takes place. Count that as today's choice. A hypothetical choice
+  or a choice assigned to another day is still "other".
 - Answer "not mentioned" if the topic does not come up at all, by either speaker.
+- Also answer "not mentioned" when its only occurrence is the exact required content
+  of a listed STATEMENT (for example, a cycling hobby, a climbing injury or news about a
+  podcast host), without a report of the user's daily choice, extra activity history or
+  a discretionary topic follow-up. Those mandatory facts are not daily observations.
 - Answer "other" if the topic comes up but no option matches what the user did today,
   or if it only comes up as a question, a past day, a plan, or someone else's choice.
 
 STATEMENTS — for each id, is this information clearly stated in the conversation?
 - true only if a reader would learn this specific fact from the conversation.
 - If the statement gives a date, it is false when the conversation clearly places the
-  event on a different day (e.g. "last Sunday" when it happened today).
+  event on a different day (e.g. "last Sunday" when it happened today) or leaves a
+  required historical date unspecified. Resolve relative dates against DATE above;
+  "yesterday" and "two days ago" are sufficient when their dates match.
 
 CAUSES — for each id you are given a topic and an event.
 - event_mentioned: does the event itself come up in the conversation?

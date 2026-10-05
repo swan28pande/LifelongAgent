@@ -223,8 +223,7 @@
     ],
     "evidence_days": [
       205,
-      206,
-      729,
+      212,
       730
     ],
     "recency_distance_days": 1,
@@ -248,8 +247,7 @@
     ],
     "evidence_days": [
       320,
-      321,
-      729,
+      325,
       730
     ],
     "recency_distance_days": 1,
@@ -273,8 +271,7 @@
     ],
     "evidence_days": [
       480,
-      481,
-      729,
+      484,
       730
     ],
     "recency_distance_days": 1,
@@ -298,14 +295,15 @@
     ],
     "evidence_days": [
       1,
-      2,
-      3
+      4,
+      319
     ],
-    "recency_distance_days": 728,
+    "recency_distance_days": 412,
     "grading": "llm_judge",
     "viewpoint_day": 731,
     "tags": [
-      "initial"
+      "initial",
+      "regime:clothing.r0"
     ]
   },
   {
@@ -322,14 +320,15 @@
     ],
     "evidence_days": [
       320,
-      321,
-      322
+      325,
+      730
     ],
-    "recency_distance_days": 409,
+    "recency_distance_days": 1,
     "grading": "llm_judge",
     "viewpoint_day": 731,
     "tags": [
-      "shift"
+      "shift",
+      "regime:clothing.r1"
     ]
   },
   {
@@ -346,38 +345,40 @@
     ],
     "evidence_days": [
       1,
-      2,
-      3
+      8,
+      204
     ],
-    "recency_distance_days": 728,
+    "recency_distance_days": 527,
     "grading": "llm_judge",
     "viewpoint_day": 731,
     "tags": [
-      "initial"
+      "initial",
+      "regime:coffee.r0"
     ]
   },
   {
-    "id": "u1_q0212",
+    "id": "u1_q0211",
     "type": "pattern_at_time",
     "capability": "pattern_abstraction",
     "domain": "lunch",
     "difficulty_user": 1,
-    "question": "What was Leo's lunch routine in October 2027?",
-    "answer": "a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating",
+    "question": "What was Leo's lunch routine in March 2026?",
+    "answer": "alternates week by week: homemade salad, then deli sandwich, repeating (7-day blocks starting Sun 2026-03-01)",
     "answer_type": "free_text",
     "accept": [
-      "4 days meal-prep burrito bowl, 3 days ramen"
+      "alternating homemade salad and deli sandwich weeks"
     ],
     "evidence_days": [
-      480,
-      481,
-      482
+      1,
+      8,
+      479
     ],
-    "recency_distance_days": 249,
+    "recency_distance_days": 252,
     "grading": "llm_judge",
     "viewpoint_day": 731,
     "tags": [
-      "shift"
+      "initial",
+      "regime:lunch.r0"
     ]
   },
   {
@@ -545,7 +546,8 @@
     "viewpoint_day": 731,
     "tags": [
       "shift",
-      "explicit"
+      "explicit",
+      "regime:coffee.r1"
     ]
   },
   {
@@ -569,7 +571,8 @@
     "viewpoint_day": 731,
     "tags": [
       "shift",
-      "explicit"
+      "explicit",
+      "regime:clothing.r1"
     ]
   },
   {
@@ -593,7 +596,8 @@
     "viewpoint_day": 731,
     "tags": [
       "shift",
-      "explicit"
+      "explicit",
+      "regime:lunch.r1"
     ]
   },
   {
@@ -679,6 +683,7 @@
       "account manager at the logistics firm"
     ],
     "evidence_days": [
+      2,
       320
     ],
     "recency_distance_days": 411,
@@ -744,6 +749,7 @@
       "account manager at the logistics firm"
     ],
     "evidence_days": [
+      2,
       320
     ],
     "recency_distance_days": 411,
@@ -765,6 +771,7 @@
       "account manager at the logistics firm"
     ],
     "evidence_days": [
+      2,
       320
     ],
     "recency_distance_days": 411,
@@ -807,6 +814,7 @@
       "Chicago"
     ],
     "evidence_days": [
+      1,
       480
     ],
     "recency_distance_days": 251,
@@ -984,13 +992,15 @@
     ],
     "evidence_days": [
       1,
-      319
+      319,
+      320
     ],
-    "recency_distance_days": 412,
+    "recency_distance_days": 411,
     "grading": "llm_judge",
     "viewpoint_day": 731,
     "tags": [
-      "initial"
+      "initial",
+      "regime:clothing.r0"
     ]
   },
   {
@@ -1007,13 +1017,15 @@
     ],
     "evidence_days": [
       1,
-      479
+      479,
+      480
     ],
-    "recency_distance_days": 252,
+    "recency_distance_days": 251,
     "grading": "llm_judge",
     "viewpoint_day": 731,
     "tags": [
-      "initial"
+      "initial",
+      "regime:lunch.r0"
     ]
   },
   {
@@ -1036,7 +1048,8 @@
     "grading": "llm_judge",
     "viewpoint_day": 731,
     "tags": [
-      "shift"
+      "shift",
+      "regime:coffee.r1"
     ]
   },
   {
@@ -1115,6 +1128,7 @@
       "account manager at the logistics firm"
     ],
     "evidence_days": [
+      2,
       320
     ],
     "recency_distance_days": 411,

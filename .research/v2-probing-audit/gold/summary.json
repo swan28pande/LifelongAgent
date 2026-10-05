@@ -1,0 +1,238 @@
+{
+  "total_probing_rows_enumerated": 1000,
+  "non_recall_rows_checked": 511,
+  "recall_rows_delegated": 489,
+  "by_user": {
+    "u1": 48,
+    "u2": 73,
+    "u3": 102,
+    "u4": 128,
+    "u5": 160
+  },
+  "by_type": {
+    "abstention": 13,
+    "fact_current": 16,
+    "fact_at_time": 132,
+    "event_status": 31,
+    "attribution": 57,
+    "pattern_at_time": 59,
+    "change_detection": 52,
+    "fact_history": 11,
+    "duration": 41,
+    "exception_vs_shift": 53,
+    "distractor_probe": 23,
+    "reversion": 12,
+    "other_person": 11
+  },
+  "gold_matches_synthetic_truth": 510,
+  "gold_mismatch_rows": 1,
+  "metadata_mismatch_rows": 0,
+  "acceptance_mismatch_rows": 1,
+  "issue_record_count": 58,
+  "issue_counts_by_category": {
+    "explicit_future_target": 47,
+    "future_completed_duration_in_gold": 2,
+    "change_citations_do_not_observe_change": 5,
+    "gold_answer_mismatch_at_probe": 1,
+    "accepted_answer_mismatch_at_probe": 1,
+    "confounder_change_not_cited": 2
+  },
+  "issue_distinct_question_count": 57,
+  "distinct_questions_with_issue_or_observation_limit": 61,
+  "distinct_ids_by_kind": {
+    "evidence_gap": [
+      "u4_p202710_0129",
+      "u5_p202609_0043",
+      "u5_p202702_0080",
+      "u5_p202705_0094",
+      "u5_r202611_0189",
+      "u5_r202708_0197",
+      "u5_r202710_0193"
+    ],
+    "reference_error": [
+      "u5_p202701_0076"
+    ],
+    "temporal_eligibility_error": [
+      "u1_p202609_0051",
+      "u1_p202706_0111",
+      "u2_p202607_0033",
+      "u2_p202609_0049",
+      "u2_p202611_0068",
+      "u2_p202709_0128",
+      "u3_p202603_0001",
+      "u3_p202603_0002",
+      "u3_p202606_0017",
+      "u3_p202608_0036",
+      "u3_p202610_0049",
+      "u3_p202702_0078",
+      "u3_p202704_0089",
+      "u3_p202707_0111",
+      "u3_p202707_0115",
+      "u3_p202710_0126",
+      "u3_p202712_0142",
+      "u4_p202603_0004",
+      "u4_p202603_0005",
+      "u4_p202604_0008",
+      "u4_p202609_0035",
+      "u4_p202609_0037",
+      "u4_p202611_0042",
+      "u4_p202704_0077",
+      "u4_p202705_0087",
+      "u4_p202706_0097",
+      "u4_p202706_0100",
+      "u4_p202707_0101",
+      "u4_p202708_0111",
+      "u4_p202708_0113",
+      "u4_p202711_0136",
+      "u4_p202712_0146",
+      "u4_p202712_0147",
+      "u4_p202801_0154",
+      "u4_r202607_0173",
+      "u5_p202603_0001",
+      "u5_p202603_0002",
+      "u5_p202603_0003",
+      "u5_p202606_0014",
+      "u5_p202606_0020",
+      "u5_p202607_0024",
+      "u5_p202608_0032",
+      "u5_p202608_0038",
+      "u5_p202611_0055",
+      "u5_p202701_0074",
+      "u5_p202702_0081",
+      "u5_p202706_0104",
+      "u5_p202708_0116",
+      "u5_p202709_0127"
+    ]
+  },
+  "uncertainty_counts_by_category": {
+    "duration_completion_not_observed": 3
+  },
+  "observation_limit_counts_by_category": {
+    "empty_fact_has_no_negative_statement": 4,
+    "non_unique_change_date_rejected_by_grader": 5
+  },
+  "diagnostic_counts_by_category": {
+    "pattern_value_coverage": 59,
+    "duration_closure_not_cited": 40,
+    "fact_cites_later_value_update": 22,
+    "uncited_fact_removals": 8
+  },
+  "unknown_abstention_pool_items_excluded": 30,
+  "answerable_abstention_controls_in_probes": 13,
+  "future_dates_in_gold_or_accept": [
+    {
+      "id": "u4_p202706_0100",
+      "source": {
+        "id": {
+          "file": "datasets/v2/u4/probing_questions.json",
+          "line": 3071,
+          "pointer": "/probes/15/questions/7/id"
+        },
+        "question": {
+          "file": "datasets/v2/u4/probing_questions.json",
+          "line": 3076,
+          "pointer": "/probes/15/questions/7/question"
+        },
+        "answer": {
+          "file": "datasets/v2/u4/probing_questions.json",
+          "line": 3077,
+          "pointer": "/probes/15/questions/7/answer"
+        },
+        "answer_type": {
+          "file": "datasets/v2/u4/probing_questions.json",
+          "line": 3078,
+          "pointer": "/probes/15/questions/7/answer_type"
+        },
+        "accept": {
+          "file": "datasets/v2/u4/probing_questions.json",
+          "line": 3079,
+          "pointer": "/probes/15/questions/7/accept"
+        },
+        "evidence_days": {
+          "file": "datasets/v2/u4/probing_questions.json",
+          "line": 3082,
+          "pointer": "/probes/15/questions/7/evidence_days"
+        },
+        "viewpoint_day": {
+          "file": "datasets/v2/u4/probing_questions.json",
+          "line": 3087,
+          "pointer": "/probes/15/questions/7/viewpoint_day"
+        }
+      },
+      "future_text": {
+        "answer": [
+          {
+            "text": "2027-07-01",
+            "date": "2027-07-01",
+            "offset": 23,
+            "format": "iso_date"
+          }
+        ],
+        "accept": []
+      }
+    },
+    {
+      "id": "u5_p202608_0032",
+      "source": {
+        "id": {
+          "file": "datasets/v2/u5/probing_questions.json",
+          "line": 839,
+          "pointer": "/probes/5/questions/3/id"
+        },
+        "question": {
+          "file": "datasets/v2/u5/probing_questions.json",
+          "line": 844,
+          "pointer": "/probes/5/questions/3/question"
+        },
+        "answer": {
+          "file": "datasets/v2/u5/probing_questions.json",
+          "line": 845,
+          "pointer": "/probes/5/questions/3/answer"
+        },
+        "answer_type": {
+          "file": "datasets/v2/u5/probing_questions.json",
+          "line": 846,
+          "pointer": "/probes/5/questions/3/answer_type"
+        },
+        "accept": {
+          "file": "datasets/v2/u5/probing_questions.json",
+          "line": 847,
+          "pointer": "/probes/5/questions/3/accept"
+        },
+        "evidence_days": {
+          "file": "datasets/v2/u5/probing_questions.json",
+          "line": 850,
+          "pointer": "/probes/5/questions/3/evidence_days"
+        },
+        "viewpoint_day": {
+          "file": "datasets/v2/u5/probing_questions.json",
+          "line": 855,
+          "pointer": "/probes/5/questions/3/viewpoint_day"
+        }
+      },
+      "future_text": {
+        "answer": [
+          {
+            "text": "2026-09-05",
+            "date": "2026-09-05",
+            "offset": 23,
+            "format": "iso_date"
+          }
+        ],
+        "accept": []
+      }
+    }
+  ],
+  "patterns_with_uncited_rule_values": 36,
+  "missing_probe_families": [
+    "pattern_current",
+    "prediction"
+  ],
+  "limitations": [
+    "Truth and temporal eligibility are separate verdicts.",
+    "Evidence gaps do not by themselves prove a wrong reference or an unanswerable full prefix.",
+    "Implicit causation and rule abstraction are legitimate intended inference; a formal identifiability proof was not attempted.",
+    "Pool provenance equality is checked separately from synthetic truth at the probe.",
+    "No network, paid model, or saved-session revalidation is used."
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "source_integrity": {
+    "sessions": 2738,
+    "probes": 1000,
+    "flagged_sessions": 26,
+    "remaining_failure_occurrences": 28,
+    "remaining_failure_types": {
+      "invention": 6,
+      "pref_leak": 15,
+      "statement_missing": 7
+    },
+    "questions_citing_flagged_sessions": 57,
+    "questions_citing_unsampled_evidence_days": 0,
+    "copy_mismatches": 5,
+    "shape_failure_sessions": 0
+  },
+  "session_comparison": {
+    "checked": 2738,
+    "changed": 0,
+    "missing": 0
+  },
+  "copy_comparison": {
+    "compared": 35,
+    "byte_equal": 30,
+    "json_equal": 30,
+    "changed_canonical_files": [
+      "datasets/v2/u1/probing_questions.json",
+      "datasets/v2/u1/qa_pool.json",
+      "datasets/v2/u2/probing_questions.json",
+      "datasets/v2/u2/qa_pool.json",
+      "datasets/v2/u3/probing_questions.json",
+      "datasets/v2/u3/qa_pool.json",
+      "datasets/v2/u4/probing_questions.json",
+      "datasets/v2/u4/qa_pool.json",
+      "datasets/v2/u5/probing_questions.json",
+      "datasets/v2/u5/qa_pool.json"
+    ]
+  },
+  "native_world": {
+    "days_schema_validated": 3650,
+    "preference_cells_checked": 15330,
+    "exception_cells_checked": 516,
+    "native_spec_errors": 0,
+    "native_world_errors": 0,
+    "native_knob_errors": 0,
+    "base_regime_mismatches": 0,
+    "exception_value_reason_mismatches": 0,
+    "world_regeneration_equal_users": 5,
+    "recorded_validator_replay_sessions": 2738,
+    "recorded_validator_replay_mismatches": 0,
+    "required_statement_occurrences_checked": 136,
+    "native_shape_failure_sessions": 0
+  },
+  "native_source_hash_comparison": {
+    "checked": 22,
+    "changes": {}
+  },
+  "source_contract": {
+    "baseline_source_sha256": "bb64c995a788140d813a292658fb88d77edd0db7d371a359cb6dc62d00d52853",
+    "individual_session_files_checked": 2738,
+    "changed_individual_session_files": [],
+    "missing_individual_sessions": [],
+    "baseline_reviewed_flag_occurrences": 28,
+    "quoted_evidence_mismatches": [],
+    "confirmed_source_contract_occurrences": 19,
+    "confirmed_source_contract_session_count": 19,
+    "classification_counts": {
+      "refuted_by_world_and_prior_transcript": 1,
+      "confirmed_avoidable_absent_topic_mention": 12,
+      "refuted_by_verbatim_correct_relative_date": 5,
+      "refuted_by_required_world_statement": 1,
+      "content_present_date_underspecified": 2,
+      "confirmed_unmodeled_persistent_detail": 4,
+      "confirmed_required_absent_topic_conflict": 3
+    },
+    "all_retained_flags_current_citation_exposure_count": 57,
+    "confirmed_source_contract_current_citation_exposure_count": 38,
+    "confirmed_source_contract_current_citation_exposure_ids": [
+      "u2_p202609_0052",
+      "u2_p202611_0065",
+      "u3_p202706_0099",
+      "u3_p202706_0103",
+      "u3_p202707_0106",
+      "u3_p202709_0118",
+      "u3_p202709_0120",
+      "u3_p202712_0142",
+      "u3_p202712_0143",
+      "u3_p202712_0144",
+      "u3_p202712_0145",
+      "u3_p202712_0146",
+      "u3_p202801_0158",
+      "u3_r202708_0186",
+      "u3_r202712_0165",
+      "u4_p202603_0001",
+      "u4_p202603_0002",
+      "u4_p202604_0005",
+      "u4_p202606_0016",
+      "u4_p202608_0029",
+      "u4_p202609_0032",
+      "u4_p202609_0033",
+      "u4_p202610_0038",
+      "u4_p202611_0042",
+      "u4_p202611_0043",
+      "u4_p202611_0044",
+      "u4_p202611_0045",
+      "u4_p202612_0050",
+      "u4_p202612_0051",
+      "u4_p202702_0064",
+      "u4_p202703_0070",
+      "u4_p202708_0107",
+      "u4_r202608_0177",
+      "u4_r202608_0184",
+      "u4_r202612_0199",
+      "u4_r202702_0164",
+      "u4_r202702_0175",
+      "u4_r202708_0171"
+    ],
+    "avoidable_mention_or_unmodeled_detail_current_citation_exposure_count": 16,
+    "unmodeled_detail_current_citation_exposure_count": 14,
+    "source_workstream_wrong_gold_proved_count": 0,
+    "limit": "Current citation exposure is not a count of wrong questions. Unchanged source hashes allow reusing earlier focused transcript review; unflagged turn semantics are not exhaustively re-audited."
+  },
+  "coverage": {
+    "unknown_abstention_pool_count": 30,
+    "unknown_abstention_probe_count": 0,
+    "answerable_abstention_probe_control_count": 16,
+    "prediction_pool_count": 369,
+    "pattern_current_pool_count": 21,
+    "prediction_probe_count": 0,
+    "pattern_current_probe_count": 0,
+    "unprobed_tail_session_count": 100
+  }
+}

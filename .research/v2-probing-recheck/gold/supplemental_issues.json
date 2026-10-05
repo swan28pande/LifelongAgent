@@ -1,0 +1,72 @@
+[
+  {
+    "id": "u5_p202706_0105",
+    "user_id": "u5",
+    "original_id": "u5_q0278",
+    "type": "fact_at_time",
+    "category": "fact_fallback_citation_does_not_support_value",
+    "kind": "evidence_gap",
+    "question": "What was Priya's diet on 2027-06-15?",
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3234,
+        "pointer": "/probes/15/questions/6/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3239,
+        "pointer": "/probes/15/questions/6/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3240,
+        "pointer": "/probes/15/questions/6/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3241,
+        "pointer": "/probes/15/questions/6/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3242,
+        "pointer": "/probes/15/questions/6/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3246,
+        "pointer": "/probes/15/questions/6/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3250,
+        "pointer": "/probes/15/questions/6/viewpoint_day"
+      }
+    },
+    "probe_date": "2027-06-30",
+    "observed": {
+      "answer": "vegetarian",
+      "evidence_days": [
+        1
+      ]
+    },
+    "expected": {
+      "supporting_statement_day": 476,
+      "supporting_turns": [
+        {
+          "date": "2027-06-19",
+          "text": "Definitely. Actually, my dinner routine has changed quite a bit recently. Six days ago, on June 13th, I officially made the switch to a vegetarian diet, and because of that, Arjun and I have started preparing meals from scratch together in our kitchen. We're doing that tonight.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 12822,
+            "pointer": "/sessions/2027-06-19/turns/3/text"
+          }
+        }
+      ]
+    },
+    "synthetic_reference_correct": true,
+    "full_prefix_answerable": true,
+    "rationale": "Filtering statement evidence to the historical target removes the delayed retrospective declaration. The [1] fallback cites pescatarian, not vegetarian. June19 is available at the June30 probe and explicitly dates the vegetarian switch to June13."
+  }
+]

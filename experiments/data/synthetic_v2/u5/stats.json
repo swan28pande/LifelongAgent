@@ -115,33 +115,39 @@
       "date_exact": 4
     },
     "tags": {
-      "inferred": 4,
+      "inferred": 3,
       "no_session": 2,
-      "boundary": 3,
-      "exception": 2,
+      "exception": 3,
+      "boundary": 2,
       "shift": 12,
+      "regime:bedtime.r2": 1,
       "temporary": 5,
+      "regime:dinner.r4": 2,
       "initial": 1,
-      "small_answer_space": 1,
-      "horizon_50d": 1,
-      "horizon_18d": 1,
-      "horizon_26d": 1,
-      "horizon_59d": 1,
+      "regime:music.r0": 1,
+      "small_answer_space": 2,
+      "horizon_54d": 1,
+      "horizon_52d": 1,
+      "horizon_1d": 1,
+      "horizon_11d": 1,
       "explicit": 5,
+      "regime:exercise.r2": 1,
       "implicit": 4,
+      "regime:commute.r1": 1,
       "bounded": 3,
       "reversion": 1,
+      "regime:bedtime.r4.revert": 1,
       "uncaused": 3,
       "cross_domain": 1,
       "control": 5,
       "set": 3,
-      "empty": 1,
       "single": 1,
       "multi": 1,
       "at_time": 1,
       "planned": 1,
       "happened": 1,
       "fact": 1,
+      "regime:music.r4": 1,
       "coworker": 1,
       "favorite_color": 1,
       "job": 1,
@@ -290,7 +296,7 @@
       },
       "fact_at_time/pets": {
         "n": 1,
-        "top_answer": "none",
+        "top_answer": "labrador named biscuit, cat named mochi",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -337,23 +343,23 @@
         "entropy_bits": 1.0,
         "distinct": 2
       },
-      "pattern_at_time/commute": {
+      "pattern_at_time/bedtime": {
         "n": 1,
-        "top_answer": "rideshare on workdays",
+        "top_answer": "11:00 pm every night",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
-      "pattern_at_time/exercise": {
+      "pattern_at_time/dinner": {
         "n": 1,
-        "top_answer": "two-week rotation of runs/swims, bouldering and yoga",
+        "top_answer": "soup and smoothies every day",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "pattern_at_time/music": {
         "n": 1,
-        "top_answer": "synthwave playlists every day",
+        "top_answer": "lo-fi beats on workdays, jazz vinyl on weekends",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -372,16 +378,16 @@
         "entropy_bits": -0.0,
         "distinct": 1
       },
-      "pattern_current/reading": {
+      "pattern_current/music": {
         "n": 1,
-        "top_answer": "alternating weeks of an e-reader fantasy series and the book club novel",
+        "top_answer": "vinyl records every day",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
-      "prediction/commute": {
+      "prediction/bedtime": {
         "n": 1,
-        "top_answer": "no commute",
+        "top_answer": "10:30 pm",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
@@ -402,52 +408,52 @@
       },
       "prediction/reading": {
         "n": 1,
-        "top_answer": "e-reader fantasy series",
+        "top_answer": "book club novel",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "recall/bedtime": {
         "n": 1,
-        "top_answer": "10:30 pm",
+        "top_answer": "10:00 pm",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "recall/commute": {
         "n": 1,
-        "top_answer": "cycling",
+        "top_answer": "light rail",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "recall/dinner": {
-        "n": 2,
-        "top_answer": "black bean tacos",
-        "top_share": 0.5,
-        "entropy_bits": 1.0,
-        "distinct": 2
+        "n": 1,
+        "top_answer": "home-cooked curry",
+        "top_share": 1.0,
+        "entropy_bits": -0.0,
+        "distinct": 1
       },
       "recall/exercise": {
         "n": 1,
-        "top_answer": "bouldering",
+        "top_answer": "evening run",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "recall/music": {
         "n": 1,
-        "top_answer": "synthwave playlists",
+        "top_answer": "true-crime podcast",
         "top_share": 1.0,
         "entropy_bits": -0.0,
         "distinct": 1
       },
       "recall/reading": {
-        "n": 1,
+        "n": 2,
         "top_answer": "no reading",
-        "top_share": 1.0,
-        "entropy_bits": -0.0,
-        "distinct": 1
+        "top_share": 0.5,
+        "entropy_bits": 1.0,
+        "distinct": 2
       },
       "reversion/bedtime": {
         "n": 1,
@@ -468,10 +474,10 @@
   "qa_pool": {
     "total": 389,
     "by_type": {
-      "recall": 81,
-      "pattern_current": 6,
-      "pattern_at_time": 30,
-      "prediction": 40,
+      "recall": 83,
+      "pattern_current": 5,
+      "pattern_at_time": 28,
+      "prediction": 41,
       "change_detection": 34,
       "attribution": 30,
       "exception_vs_shift": 24,

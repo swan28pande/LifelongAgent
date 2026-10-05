@@ -1,0 +1,21 @@
+# Independent review evidence
+
+This review reads canonical files and the completed workstream artifacts. It writes only under this directory. It makes no network/model calls and does not rerun mutation-producing upstream scripts.
+
+| Evidence | Independent check | Result | Scope limit |
+| --- | --- | --- | --- |
+| Canonical probing IDs and both family coverage files | Enumerated IDs, checked duplicates, partition and record type | Exactly 1,000 IDs: 489 recall and 511 other, 200 per user; no gap or overlap | Coverage is not proof of all natural-language entailments |
+| Root manifest and canonical/experiment copies | Rehashed all manifest inputs; compared all 35 paired JSON files byte-for-byte | No manifest drift; all comparisons agree | Matching copies and deterministic reproduction establish provenance/consistency, not semantic correctness |
+| Daily preference states and resolved rules | Separate dictionary-based evaluator for all used rule types | All 15,330 base cells agree; all 489 recall gold/accept values agree with target-day truth | Synthetic truth and available conversation text are separate evidence sources |
+| Current/at-time fact questions | Recomputed daily fact lists at their actual semantic targets | Sole mismatch is `u5_p202701_0076`: piano remains active and known on January 31 | Other families additionally rely on the gold workstream's reconstruction |
+| Two future duration answers | Independently recomputed inclusive completed and prefix-elapsed totals | 18 versus 17 days; 65 versus 60 days | Both differences are inside the judge's approximate 10% duration tolerance; a failing reasonable answer is not established |
+| Three recall limits | Counterfactual rule/start replay and targeted raw transcript inspection | Missing Saturday workout value can be replaced by long run with zero observed mismatches; both alternative boundaries preserve every modeled observation and change the requested value | The alternative models are bounded counterexamples, not a census of every possible routine |
+| Five change-date limits | Replayed candidate starts and rotated reading values; called actual `strict_check` | Every reported alternative fits observed base choices and is rejected by current accepted dates; causal alternatives respect allowed lag bounds | The date judge specification also requires accepted dates; no actual LLM verdict was run |
+| Four empty-pet references | Inspected day-1 sessions, all pet world statements and full-prefix vocabulary matches | Primary prefixes have no user pet statements; later adoption does not assert a first pet | No-pet gold is correct hidden truth; absence of mention alone does not prove absence |
+| Saved fidelity flag reviews | Recomputed classified-session and cited-probe set unions | 28 failures in 26 sessions; 19 confirmed source-contract sessions expose 33 probes; any saved flag exposes 54 probes | Those exposure sets do not count wrong questions; seven flags are refuted and two remain unconfirmed |
+| Actual benchmark loader and runner/grader code | Called read-only loader; inspected ingestion/grading flow and offline reproduction | Loads 250 legacy questions, zero monthly IDs; runner ingests before answering; headline metric uses judge | Demonstrates a future integration requirement/potential leakage path, not an observed contaminated monthly run |
+| Consolidated findings and coverage | Independently reconstructed class ID sets and checked root summary | 54 scheduling/reference errors; 12 observation limits; 7 citation limits overlapping the five date rows; 3 uncertainties; 71 distinct IDs | The 71-instance union deliberately excludes broad diagnostics, selection omissions and source exposure |
+
+Machine-readable results and the exact replayed counterfactuals are in [independent_checks.json](independent_checks.json). Reproduce with `PYTHONDONTWRITEBYTECODE=1 python .research/v2-probing-audit/review/independent_checks.py` from the project root.
+
+Focused transcript review covered day-1 pet omissions, Olive's adoption, Priya's missing bike-workout phase and attribution, and the first/current observations around the podcast/music/reading boundaries. Earlier modeled observations were also checked by the independent replay. Neither this review nor the workstream scripts freshly semantically validate every unflagged conversation turn.

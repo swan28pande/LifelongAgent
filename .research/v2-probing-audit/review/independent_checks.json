@@ -1,0 +1,1156 @@
+{
+  "scope": "Independent read-only review of canonical input facts and workstream artifacts; no network or LLM calls.",
+  "coverage": {
+    "canonical_ids": 1000,
+    "recall_ids": 489,
+    "other_ids": 511,
+    "missing_ids": [],
+    "duplicate_ids": [],
+    "cross_workstream_overlap": [],
+    "per_user_counts": {
+      "u1": 200,
+      "u2": 200,
+      "u3": 200,
+      "u4": 200,
+      "u5": 200
+    },
+    "per_type_counts": {
+      "abstention": 13,
+      "recall": 489,
+      "fact_current": 16,
+      "fact_at_time": 132,
+      "event_status": 31,
+      "attribution": 57,
+      "pattern_at_time": 59,
+      "change_detection": 52,
+      "fact_history": 11,
+      "duration": 41,
+      "exception_vs_shift": 53,
+      "distractor_probe": 23,
+      "reversion": 12,
+      "other_person": 11
+    }
+  },
+  "manifest_hash_mismatches": [],
+  "compared_identical_json_files": 35,
+  "independent_base_cells_checked": 15330,
+  "base_mismatches": [],
+  "recall_gold_mismatches": [],
+  "fact_reference_mismatches": [
+    {
+      "id": "u5_p202701_0076",
+      "reference": "bouldering, trail running",
+      "expected": "bouldering, piano, trail running"
+    }
+  ],
+  "stale_hobby_review": {
+    "id": "u5_p202701_0076",
+    "active": [
+      "bouldering",
+      "piano",
+      "trail running"
+    ],
+    "known": [
+      "bouldering",
+      "piano",
+      "trail running"
+    ],
+    "hobby_statements": [
+      {
+        "id": "hobbies.0",
+        "kind": "background_fact",
+        "text": "hobbies now include bouldering",
+        "entity": "hobbies",
+        "op": "add",
+        "value": "bouldering",
+        "effective_day": 1,
+        "stated_day": 1,
+        "retrospective": false,
+        "is_cause": false
+      },
+      {
+        "id": "hobbies.1",
+        "kind": "background_fact",
+        "text": "hobbies now include piano",
+        "entity": "hobbies",
+        "op": "add",
+        "value": "piano",
+        "effective_day": 1,
+        "stated_day": 4,
+        "retrospective": false,
+        "is_cause": false
+      },
+      {
+        "id": "hobby.pottery",
+        "kind": "fact_change",
+        "text": "started a pottery class",
+        "entity": "hobbies",
+        "op": "add",
+        "value": "pottery",
+        "effective_day": 60,
+        "stated_day": 68,
+        "retrospective": true,
+        "is_cause": false
+      },
+      {
+        "id": "hobby.pottery_stop",
+        "kind": "fact_change",
+        "text": "quit pottery - the class ended and she lost interest",
+        "entity": "hobbies",
+        "op": "remove",
+        "value": "pottery",
+        "effective_day": 170,
+        "stated_day": 170,
+        "retrospective": false,
+        "is_cause": false
+      },
+      {
+        "id": "hobby.trail",
+        "kind": "fact_change",
+        "text": "took up trail running",
+        "entity": "hobbies",
+        "op": "add",
+        "value": "trail running",
+        "effective_day": 330,
+        "stated_day": 331,
+        "retrospective": true,
+        "is_cause": true
+      },
+      {
+        "id": "hobby.piano_stop",
+        "kind": "fact_change",
+        "text": "stopped playing piano - no time for lessons after the move",
+        "entity": "hobbies",
+        "op": "remove",
+        "value": "piano",
+        "effective_day": 420,
+        "stated_day": 420,
+        "retrospective": false,
+        "is_cause": true
+      }
+    ]
+  },
+  "future_gold_durations": [
+    {
+      "id": "u4_p202706_0100",
+      "start": "2027-06-14",
+      "end": "2027-07-01",
+      "completed": 18,
+      "elapsed": 17,
+      "elapsed_relative_error": 0.05555555555555555,
+      "within_judge_approx_ten_percent": true
+    },
+    {
+      "id": "u5_p202608_0032",
+      "start": "2026-07-03",
+      "end": "2026-09-05",
+      "completed": 65,
+      "elapsed": 60,
+      "elapsed_relative_error": 0.07692307692307693,
+      "within_judge_approx_ten_percent": true
+    }
+  ],
+  "counterfactuals": [
+    {
+      "id": "u3_p202711_0137",
+      "candidate_start": 603,
+      "candidate_date": "2027-10-24",
+      "observations_checked": 165,
+      "mismatch_days": [],
+      "target_answer": "comedy podcast",
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 3
+    },
+    {
+      "id": "u3_p202711_0137",
+      "candidate_start": 604,
+      "candidate_date": "2027-10-25",
+      "observations_checked": 165,
+      "mismatch_days": [],
+      "target_answer": "Italian lessons podcast",
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 4
+    },
+    {
+      "id": "u5_p202610_0047",
+      "candidate_start": 200,
+      "candidate_date": "2026-09-16",
+      "observations_checked": 42,
+      "mismatch_days": [],
+      "target_answer": "synthwave playlists",
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 5
+    },
+    {
+      "id": "u5_p202610_0047",
+      "candidate_start": 201,
+      "candidate_date": "2026-09-17",
+      "observations_checked": 42,
+      "mismatch_days": [],
+      "target_answer": "synthwave playlists",
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 6
+    },
+    {
+      "id": "u5_p202610_0047",
+      "candidate_start": 202,
+      "candidate_date": "2026-09-18",
+      "observations_checked": 42,
+      "mismatch_days": [],
+      "target_answer": "film scores",
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 7
+    },
+    {
+      "id": "u5_p202610_0047",
+      "candidate_start": 203,
+      "candidate_date": "2026-09-19",
+      "observations_checked": 42,
+      "mismatch_days": [],
+      "target_answer": "film scores",
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 8
+    },
+    {
+      "id": "u4_p202710_0129",
+      "candidate_start": 603,
+      "candidate_date": "2027-10-24",
+      "observations_checked": 53,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 3
+    },
+    {
+      "id": "u4_p202710_0129",
+      "candidate_start": 604,
+      "candidate_date": "2027-10-25",
+      "observations_checked": 53,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 4
+    },
+    {
+      "id": "u4_p202710_0129",
+      "candidate_start": 605,
+      "candidate_date": "2027-10-26",
+      "observations_checked": 53,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": true,
+      "changed_rule_order": false,
+      "candidate_lag": 5
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_start": 345,
+      "candidate_date": "2027-02-08",
+      "observations_checked": 46,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": true,
+      "changed_rule_order": false,
+      "candidate_lag": 5
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_start": 346,
+      "candidate_date": "2027-02-09",
+      "observations_checked": 46,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 6
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_start": 347,
+      "candidate_date": "2027-02-10",
+      "observations_checked": 46,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 7
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_start": 348,
+      "candidate_date": "2027-02-11",
+      "observations_checked": 46,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 8
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_start": 349,
+      "candidate_date": "2027-02-12",
+      "observations_checked": 46,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 9
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_start": 350,
+      "candidate_date": "2027-02-13",
+      "observations_checked": 46,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 10
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_start": 345,
+      "candidate_date": "2027-02-08",
+      "observations_checked": 68,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": true,
+      "changed_rule_order": false,
+      "candidate_lag": 5
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_start": 346,
+      "candidate_date": "2027-02-09",
+      "observations_checked": 68,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 6
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_start": 347,
+      "candidate_date": "2027-02-10",
+      "observations_checked": 68,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 7
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_start": 348,
+      "candidate_date": "2027-02-11",
+      "observations_checked": 68,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 8
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_start": 349,
+      "candidate_date": "2027-02-12",
+      "observations_checked": 68,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 9
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_start": 350,
+      "candidate_date": "2027-02-13",
+      "observations_checked": 68,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": false,
+      "candidate_lag": 10
+    },
+    {
+      "id": "u5_p202609_0043",
+      "candidate_start": 190,
+      "candidate_date": "2026-09-06",
+      "observations_checked": 28,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": true,
+      "changed_rule_order": false,
+      "candidate_lag": null
+    },
+    {
+      "id": "u5_p202609_0043",
+      "candidate_start": 197,
+      "candidate_date": "2026-09-13",
+      "observations_checked": 28,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": true,
+      "candidate_lag": null
+    },
+    {
+      "id": "u5_r202611_0189",
+      "candidate_start": 190,
+      "candidate_date": "2026-09-06",
+      "observations_checked": 40,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": true,
+      "changed_rule_order": false,
+      "candidate_lag": null
+    },
+    {
+      "id": "u5_r202611_0189",
+      "candidate_start": 197,
+      "candidate_date": "2026-09-13",
+      "observations_checked": 40,
+      "mismatch_days": [],
+      "target_answer": null,
+      "date_in_current_accept": false,
+      "changed_rule_order": true,
+      "candidate_lag": null
+    }
+  ],
+  "date_grading": [
+    {
+      "id": "u4_p202710_0129",
+      "candidate_date": "2027-10-24",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u4_p202710_0129",
+      "candidate_date": "2027-10-25",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u4_p202710_0129",
+      "candidate_date": "2027-10-26",
+      "strict_result": true,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_date": "2027-02-08",
+      "strict_result": true,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_date": "2027-02-09",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_date": "2027-02-10",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_date": "2027-02-11",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_date": "2027-02-12",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_p202702_0080",
+      "candidate_date": "2027-02-13",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_date": "2027-02-08",
+      "strict_result": true,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_date": "2027-02-09",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_date": "2027-02-10",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_date": "2027-02-11",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_date": "2027-02-12",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_r202708_0197",
+      "candidate_date": "2027-02-13",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_p202609_0043",
+      "candidate_date": "2026-09-06",
+      "strict_result": true,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_p202609_0043",
+      "candidate_date": "2026-09-13",
+      "strict_result": false,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_r202611_0189",
+      "candidate_date": "2026-09-06",
+      "strict_result": true,
+      "observations_compatible": true
+    },
+    {
+      "id": "u5_r202611_0189",
+      "candidate_date": "2026-09-13",
+      "strict_result": false,
+      "observations_compatible": true
+    }
+  ],
+  "unobserved_phase_counterfactual": {
+    "id": "u5_p202605_0011",
+    "gold": "bike ride",
+    "alternative": "long run",
+    "observations_checked": 22,
+    "mismatch_days": [],
+    "affected_phase_days": [
+      14,
+      28,
+      42,
+      56,
+      70,
+      84
+    ],
+    "scope": "Modeled exercise observations, challenged separately with transcript attribution review."
+  },
+  "empty_pet_reviews": [
+    {
+      "id": "u2_p202603_0001",
+      "gold": "none",
+      "evidence": [
+        1
+      ],
+      "user_hit_count": 0,
+      "all_hits": [],
+      "all_pet_statements": [
+        {
+          "id": "pet.olive",
+          "kind": "fact_change",
+          "text": "adopted a cat named Olive",
+          "entity": "pets",
+          "op": "add",
+          "value": "cat named Olive",
+          "effective_day": 330,
+          "stated_day": 330,
+          "retrospective": false,
+          "is_cause": false
+        }
+      ],
+      "limitation": "Keyword checks plus review of hits and day-1/adoption text; no closed-world guarantee is in the assistant task."
+    },
+    {
+      "id": "u2_p202608_0038",
+      "gold": "none",
+      "evidence": [
+        1
+      ],
+      "user_hit_count": 0,
+      "all_hits": [
+        {
+          "date": "2026-04-05",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "A nature documentary sounds like the perfect low-key way to end the weekend. Is it about a particular habitat or animal?"
+        },
+        {
+          "date": "2026-04-25",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "A nature documentary sounds incredibly relaxing. Is it one of those deep-ocean ones, or is it focused on land animals?"
+        },
+        {
+          "date": "2026-07-02",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "That sounds like a wonderfully cozy way to wind down. Is it about a particular habitat or animal?"
+        }
+      ],
+      "all_pet_statements": [
+        {
+          "id": "pet.olive",
+          "kind": "fact_change",
+          "text": "adopted a cat named Olive",
+          "entity": "pets",
+          "op": "add",
+          "value": "cat named Olive",
+          "effective_day": 330,
+          "stated_day": 330,
+          "retrospective": false,
+          "is_cause": false
+        }
+      ],
+      "limitation": "Keyword checks plus review of hits and day-1/adoption text; no closed-world guarantee is in the assistant task."
+    },
+    {
+      "id": "u2_r202702_0188",
+      "gold": "none",
+      "evidence": [
+        1
+      ],
+      "user_hit_count": 22,
+      "all_hits": [
+        {
+          "date": "2026-04-05",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "A nature documentary sounds like the perfect low-key way to end the weekend. Is it about a particular habitat or animal?"
+        },
+        {
+          "date": "2026-04-25",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "A nature documentary sounds incredibly relaxing. Is it one of those deep-ocean ones, or is it focused on land animals?"
+        },
+        {
+          "date": "2026-07-02",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "That sounds like a wonderfully cozy way to wind down. Is it about a particular habitat or animal?"
+        },
+        {
+          "date": "2026-09-25",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "A nature documentary is perfect for a rainy Friday night. Is it about a particular region or animal? Also, how are the plans coming along for your family trip to Japan next spring?"
+        },
+        {
+          "date": "2027-01-24",
+          "turn": 4,
+          "speaker": "user",
+          "text": "We adopted a cat named Olive today! She is officially part of the family now."
+        },
+        {
+          "date": "2027-01-24",
+          "turn": 5,
+          "speaker": "assistant",
+          "text": "Oh, wonderful! Congratulations on adopting Olive! How is she settling into her new home so far?"
+        },
+        {
+          "date": "2027-01-24",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "That is so sweet. I'm sure Olive is going to love living with you both. Are you getting any woodworking or tennis in today, or is it a bit of a quiet Sunday?"
+        },
+        {
+          "date": "2027-01-24",
+          "turn": 8,
+          "speaker": "user",
+          "text": "Actually, today is a rest day for me. No tennis or woodworking, just enjoying the quiet time and hanging out with Olive."
+        },
+        {
+          "date": "2027-01-24",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "A rest day sounds perfect, especially with a new cat to bond with. How are the plans for your family trip to Japan next spring coming along?"
+        },
+        {
+          "date": "2027-01-24",
+          "turn": 13,
+          "speaker": "assistant",
+          "text": "That makes sense! Well, enjoy the rest of your relaxing Sunday with Grace and Olive."
+        },
+        {
+          "date": "2027-01-25",
+          "turn": 1,
+          "speaker": "assistant",
+          "text": "Hi Marcus! Happy Monday. How is your week starting off in Portland? Did you get a chance to hang out with Olive or work on any woodworking this weekend?"
+        },
+        {
+          "date": "2027-01-25",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Hey! The weekend was nice and relaxing, thanks. Olive spent most of it curled up on my lap. Today, I had a protein smoothie for breakfast."
+        },
+        {
+          "date": "2027-01-27",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "Hopefully you get a clear day for a match soon! How is Olive doing? Is she keeping you company tonight?"
+        },
+        {
+          "date": "2027-01-27",
+          "turn": 10,
+          "speaker": "user",
+          "text": "Olive is doing great. She's currently curled up right next to my laptop, making it a bit challenging to type, but I don't mind."
+        },
+        {
+          "date": "2027-01-29",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "That sounds like the perfect low-key Friday night. Sometimes putting on classic sitcom reruns is the best way to decompress. I imagine Olive will be happy to join you on the couch?"
+        },
+        {
+          "date": "2027-01-29",
+          "turn": 10,
+          "speaker": "user",
+          "text": "Oh, absolutely. Olive is always the first one to claim a spot on the couch when we sit down. Right now, she's curled up on top of one of my woodworking magazines."
+        },
+        {
+          "date": "2027-01-29",
+          "turn": 13,
+          "speaker": "assistant",
+          "text": "Completely understandable. Enjoy the sitcoms, the couch cuddle with Olive and Grace, and have a wonderful, relaxing weekend!"
+        },
+        {
+          "date": "2027-01-30",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "Sitcom reruns sound like the perfect, low-key way to spend a Saturday evening. I hope Olive joins you for some lap time while you watch."
+        },
+        {
+          "date": "2027-01-31",
+          "turn": 1,
+          "speaker": "assistant",
+          "text": "Good morning, Marcus! I hope you're having a relaxing Sunday up in Portland. How is Olive doing today?"
+        },
+        {
+          "date": "2027-01-31",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Hey! Olive is doing great, she's actually curled up right next to me. I just finished up a protein smoothie for breakfast, so we're both having a pretty lazy morning."
+        },
+        {
+          "date": "2027-02-01",
+          "turn": 5,
+          "speaker": "assistant",
+          "text": "Lifting weights is a great way to clear your head after school budget meetings! Did Olive greet you when you got back home?"
+        },
+        {
+          "date": "2027-02-02",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "It sounds incredibly exciting. Is Olive helping you map out the route, or is she mostly just lounging around?"
+        },
+        {
+          "date": "2027-02-02",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "Sounds like standard cat behavior! I hope you get some time to just relax tonight after a busy day of teaching, tennis, and trip planning."
+        },
+        {
+          "date": "2027-02-03",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "It sounds like it's going to be an incredible trip! How is Olive doing? Is she helping you plan, or just sleeping on the travel brochures?"
+        },
+        {
+          "date": "2027-02-04",
+          "turn": 10,
+          "speaker": "user",
+          "text": "It's about rainforests, actually. Olive is already curled up on the rug waiting for us to turn the TV on."
+        },
+        {
+          "date": "2027-02-04",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "Haha, Olive knows when it's relaxation time. How is your neighbor's vegetable garden doing, by the way? Have they been working on it lately?"
+        },
+        {
+          "date": "2027-02-05",
+          "turn": 1,
+          "speaker": "assistant",
+          "text": "Happy Friday, Marcus! How is everything going over in Portland today? How is Olive doing?"
+        },
+        {
+          "date": "2027-02-05",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Hey! Everything is good here. It's a bit rainy in Portland today, but Olive is happily curled up near the heater. I started my morning right with a warm bowl of oatmeal, so I'm feeling good."
+        },
+        {
+          "date": "2027-02-07",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Hi! It's going well, pretty quiet so far. I just finished a bowl of oatmeal and a cup of coffee while Olive napped on my lap."
+        },
+        {
+          "date": "2027-02-08",
+          "turn": 1,
+          "speaker": "assistant",
+          "text": "Hi Marcus! Happy Monday. How is everything going in Portland today? How is Olive doing?"
+        },
+        {
+          "date": "2027-02-08",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Hey there. It's a bit of a rainy day here in Portland, but Olive is cozy sleeping on my desk. I'm a bit sluggish today myself—started the morning with just a quick protein smoothie for breakfast."
+        },
+        {
+          "date": "2027-02-09",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "Hey, any court time is good practice! How is Olive doing? Did she greet you at the door when you got home?"
+        },
+        {
+          "date": "2027-02-10",
+          "turn": 6,
+          "speaker": "user",
+          "text": "Oh, I just braved the rain. It's not too bad once you get moving. Plus, Olive was waiting by the door to greet me when I got back, so that was a nice bonus."
+        },
+        {
+          "date": "2027-02-10",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "Olive always knows how to welcome you home! How is Grace doing? Have you two had any more time to look into planning that Japan trip for next spring?"
+        },
+        {
+          "date": "2027-02-11",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "Researching is half the fun! It's going to be an incredible trip. How is Olive doing? Is she helping you 'inspect' your travel guides?"
+        },
+        {
+          "date": "2027-02-11",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "Classic cat behavior! Well, it sounds like you've had a productive and active Thursday. Do you have any plans to unwind for the rest of the evening?"
+        },
+        {
+          "date": "2027-02-12",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "It's always fun to have a big trip like that to look forward to. I hope you and Grace get a chance to relax this weekend. How is Olive doing?"
+        },
+        {
+          "date": "2027-02-12",
+          "turn": 12,
+          "speaker": "user",
+          "text": "Olive is doing great, just sleeping on her favorite chair as usual. I'm definitely looking forward to a relaxing weekend with her and Grace."
+        },
+        {
+          "date": "2027-02-13",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Hey! It's going pretty well. Just spent the morning cleaning up around the house. Olive was supervising me the whole time, of course."
+        },
+        {
+          "date": "2027-02-13",
+          "turn": 3,
+          "speaker": "assistant",
+          "text": "Olive always makes sure the job is done right! Did you manage to get any woodworking done today, or are you taking a break from the workshop?"
+        },
+        {
+          "date": "2027-02-14",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Morning! It's starting off pretty quiet. I'm just having a protein smoothie while Olive hangs out nearby."
+        },
+        {
+          "date": "2027-02-14",
+          "turn": 3,
+          "speaker": "assistant",
+          "text": "That sounds like a nice, peaceful start. Give Olive a scratch behind the ears for me! Do you have any plans to play some tennis or work on a woodworking project today?"
+        },
+        {
+          "date": "2027-02-15",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "Kyoto is beautiful in the spring! How is Olive doing? Is she still keeping you company when you work on your woodworking projects?"
+        },
+        {
+          "date": "2027-02-16",
+          "turn": 9,
+          "speaker": "assistant",
+          "text": "Planning is half the excitement! It gives you so much to look forward to. How is Olive doing today? Is she still keeping you company when you're at home?"
+        },
+        {
+          "date": "2027-02-16",
+          "turn": 10,
+          "speaker": "user",
+          "text": "Olive is doing great, just sleeping in her usual spots. Once I get home from tennis, the plan is to just relax on the couch with her and Grace."
+        },
+        {
+          "date": "2027-02-16",
+          "turn": 13,
+          "speaker": "assistant",
+          "text": "Sitcom reruns are absolutely perfect for a low-key night. I hope you have a great match on the court and a relaxing evening with Grace and Olive, Marcus!"
+        },
+        {
+          "date": "2027-02-17",
+          "turn": 5,
+          "speaker": "assistant",
+          "text": "An early run is a fantastic way to clear your head. Did Olive try to join you, or was she busy napping?"
+        },
+        {
+          "date": "2027-02-17",
+          "turn": 6,
+          "speaker": "user",
+          "text": "Oh, Olive was definitely fast asleep on the sofa when I left. She barely even opened an eye."
+        },
+        {
+          "date": "2027-02-17",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "Classic cat behavior! Have you and Grace had any more time to work on planning your family trip to Japan for next spring?"
+        },
+        {
+          "date": "2027-02-18",
+          "turn": 3,
+          "speaker": "assistant",
+          "text": "Oatmeal is definitely a great way to fuel a busy morning. How is Olive doing? Is she still keeping you company when you're grading papers at home?"
+        },
+        {
+          "date": "2027-02-18",
+          "turn": 4,
+          "speaker": "user",
+          "text": "Oh, absolutely. Olive is currently curled up on the rug in my study. She's been super cuddly lately, which is nice when I'm trying to get through lesson plans."
+        },
+        {
+          "date": "2027-02-19",
+          "turn": 3,
+          "speaker": "assistant",
+          "text": "That's a great way to kick off the weekend! It must feel good to burn off some of that weekday stress. How is Olive doing today? Did she greet you when you got back?"
+        },
+        {
+          "date": "2027-02-19",
+          "turn": 4,
+          "speaker": "user",
+          "text": "Oh, you know Olive. She was curled up on the couch and barely opened an eye when I walked in. Grace says she slept there most of the afternoon."
+        },
+        {
+          "date": "2027-02-19",
+          "turn": 5,
+          "speaker": "assistant",
+          "text": "Classic cat behavior, saving up her energy. Have you and Grace had any more thoughts lately about the Japan trip you're planning for next spring?"
+        },
+        {
+          "date": "2027-02-20",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Morning! It's starting out pretty quiet. I just had a warm bowl of oatmeal, and now I'm just planning out the rest of my day. Olive is curled up next to me."
+        },
+        {
+          "date": "2027-02-20",
+          "turn": 3,
+          "speaker": "assistant",
+          "text": "That sounds like a cozy start. Olive always knows the best spots to relax. Do you have any plans to get active today, or is it mostly a lazy Saturday?"
+        },
+        {
+          "date": "2027-02-21",
+          "turn": 1,
+          "speaker": "assistant",
+          "text": "Hi Marcus! Happy Sunday. How is your morning going? Did Olive let you sleep in today?"
+        },
+        {
+          "date": "2027-02-21",
+          "turn": 2,
+          "speaker": "user",
+          "text": "Hey there! Olive actually slept fine, but I ended up oversleeping anyway. I was running so late this morning that I skipped breakfast entirely, which is a big change from my usual oatmeal."
+        },
+        {
+          "date": "2027-02-21",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "Sitcom reruns are the ultimate cozy Sunday night vibe. Will Olive be joining you guys on the couch?"
+        },
+        {
+          "date": "2027-02-23",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "Sitcom reruns are perfect for a relaxing night. Easy viewing where you don't have to think too much. I hope Olive doesn't hog the best spot on the couch!"
+        },
+        {
+          "date": "2027-02-24",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "A nature documentary sounds like the perfect way to spend a Wednesday evening. I imagine Olive will probably join you on the couch for that?"
+        },
+        {
+          "date": "2027-02-25",
+          "turn": 5,
+          "speaker": "assistant",
+          "text": "That's a great way to escape the drizzle. How is Olive doing today? Was she waiting by the door when you got back?"
+        },
+        {
+          "date": "2027-02-25",
+          "turn": 11,
+          "speaker": "assistant",
+          "text": "That sounds like a perfect, low-key way to spend a wet Thursday evening. Is it on a specific region or animal?"
+        },
+        {
+          "date": "2027-02-27",
+          "turn": 5,
+          "speaker": "assistant",
+          "text": "Absolutely, any time on the court is time well spent! How is Olive doing today? Is she keeping you company after your game?"
+        },
+        {
+          "date": "2027-02-27",
+          "turn": 6,
+          "speaker": "user",
+          "text": "Oh, you know Olive. She's currently napping in a patch of sunlight on the living room rug. She barely even opened an eye when I walked back into the house."
+        },
+        {
+          "date": "2027-02-27",
+          "turn": 7,
+          "speaker": "assistant",
+          "text": "Typical cat life! She really knows how to relax. Have you and Grace had any more time to look into plans for your Japan trip next spring?"
+        },
+        {
+          "date": "2027-02-28",
+          "turn": 4,
+          "speaker": "user",
+          "text": "Not too much, kept it simple. I just whipped up a protein smoothie for breakfast and drank that while hanging out with Olive."
+        }
+      ],
+      "all_pet_statements": [
+        {
+          "id": "pet.olive",
+          "kind": "fact_change",
+          "text": "adopted a cat named Olive",
+          "entity": "pets",
+          "op": "add",
+          "value": "cat named Olive",
+          "effective_day": 330,
+          "stated_day": 330,
+          "retrospective": false,
+          "is_cause": false
+        }
+      ],
+      "limitation": "Keyword checks plus review of hits and day-1/adoption text; no closed-world guarantee is in the assistant task."
+    },
+    {
+      "id": "u3_p202604_0007",
+      "gold": "none",
+      "evidence": [
+        1
+      ],
+      "user_hit_count": 0,
+      "all_hits": [],
+      "all_pet_statements": [
+        {
+          "id": "pet.dash",
+          "kind": "fact_change",
+          "text": "adopted a rescue greyhound named Dash",
+          "entity": "pets",
+          "op": "add",
+          "value": "rescue greyhound named Dash",
+          "effective_day": 600,
+          "stated_day": 600,
+          "retrospective": false,
+          "is_cause": true
+        }
+      ],
+      "limitation": "Keyword checks plus review of hits and day-1/adoption text; no closed-world guarantee is in the assistant task."
+    }
+  ],
+  "saved_flag_review_counts": {
+    "failure_classification_counts": {
+      "refuted_by_world_and_prior_transcript": 1,
+      "confirmed_avoidable_absent_topic_mention": 12,
+      "refuted_by_verbatim_correct_relative_date": 5,
+      "refuted_by_required_world_statement": 1,
+      "content_present_date_underspecified": 2,
+      "confirmed_unmodeled_persistent_detail": 4,
+      "confirmed_required_absent_topic_conflict": 3
+    },
+    "reviewed_failures": 28,
+    "reviewed_sessions": 26,
+    "raw_flag_probe_exposure": 54,
+    "confirmed_source_contract_sessions": 19,
+    "confirmed_source_contract_probe_exposure": 33,
+    "avoidable_or_unmodeled_sessions": 16,
+    "avoidable_or_unmodeled_probe_exposure": 19
+  },
+  "loader": {
+    "instances": 5,
+    "questions": 250,
+    "monthly_ids_loaded": []
+  },
+  "llm_log_formats": {
+    "u1": "lfs_pointer",
+    "u2": "lfs_pointer",
+    "u3": "lfs_pointer",
+    "u4": "lfs_pointer",
+    "u5": "actual_jsonl"
+  },
+  "final_aggregate_reconciliation": {
+    "distinct_per_class": {
+      "confirmed_error": 54,
+      "observation_limit": 12,
+      "citation_limit": 7,
+      "uncertainty": 3
+    },
+    "observation_citation_overlap": [
+      "u4_p202710_0129",
+      "u5_p202609_0043",
+      "u5_p202702_0080",
+      "u5_r202611_0189",
+      "u5_r202708_0197"
+    ],
+    "additional_observation_or_citation_union": 14,
+    "narrow_union": 71,
+    "aggregate_coverage_ids_verified": 1000
+  },
+  "candidate_consolidated_counts": {
+    "per_category": {
+      "explicit_future_target": 51,
+      "wrong_current_gold": 1,
+      "future_gold_endpoint": 2,
+      "recall_answerability": 3,
+      "unsupported_empty_pet": 4,
+      "underinclusive_change_dates": 5,
+      "citation_only": 2,
+      "closure_uncertainty": 3
+    },
+    "union": 71,
+    "overlaps": [],
+    "explicit_future_partition": {
+      "recall": 4,
+      "other": 47
+    },
+    "note": "Categories are separate; no exhaustive natural-language correctness claim."
+  },
+  "limits": [
+    "Dictionary rule checks validate modeled truth, not observed entailment.",
+    "Counterfactual numeric checks cover modeled base observations and preserve stored one-off exceptions; transcript attribution/timing must be reviewed separately.",
+    "Provenance equality does not prove truth at a changed viewpoint.",
+    "Flag citation exposure does not establish a wrong question.",
+    "The normal runner does not currently load monthly questions; code and offline reproduction show a potential monthly leakage path, not an actual completed leaky monthly run."
+  ]
+}

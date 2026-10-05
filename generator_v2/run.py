@@ -17,6 +17,8 @@ from collections import Counter
 from pathlib import Path
 
 from . import checks, config, qa, simulator
+from .outputs import sync_outputs
+from .probing import build_probes
 from .schema import PersonaSpec, WorldState, load_ladder, load_spec
 
 
@@ -143,6 +145,7 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
         write_json(out / "world_state.json", world.model_dump(mode="json"))
     write_json(out / "qa_pairs.json", [q.model_dump() for q in items])
     write_json(out / "qa_pool.json", [q.model_dump() for q in pool])
+    write_json(out / "probing_questions.json", build_probes(spec, world, pool))
     session_days = [d for d in world.days if d.has_session]
     write_json(out / "stats.json", {
         "user_id": spec.user_id,
@@ -157,6 +160,7 @@ def run_user(path: Path, ladder, write_world: bool, n_samples: int) -> bool:
     })
     say(f"\n✓ all checks passed - wrote {out.relative_to(config.REPO_DIR)}/")
     (out / "simulate_report.txt").write_text("\n".join(report) + "\n")
+    sync_outputs(spec.user_id)
     print("\n".join(report))
     return True
 
@@ -167,6 +171,7 @@ def write_fidelity(spec: PersonaSpec) -> dict:
     fid = conversation.fidelity(spec.user_id)
     write_json(out / "fidelity.json", fid)
     write_json(out / "conversations.json", conversation.merge(spec))
+    sync_outputs(spec.user_id)
     print(json.dumps({k: v for k, v in fid.items() if k != "flagged"}, indent=2))
     if fid["flagged"]:
         print(f"flagged sessions ({len(fid['flagged'])}): {', '.join(fid['flagged'][:20])}")

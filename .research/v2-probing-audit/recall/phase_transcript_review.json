@@ -1,0 +1,1960 @@
+[
+  {
+    "question_id": "u5_p202605_0011",
+    "original_id": "u5_q0006",
+    "all_monthly_copies": [
+      {
+        "question_id": "u5_p202605_0011",
+        "probe_date": "2026-05-31"
+      }
+    ],
+    "rule": {
+      "type": "nested",
+      "block_days": 7,
+      "blocks": [
+        {
+          "type": "day_of_week",
+          "map": {
+            "mon": "evening run",
+            "tue": "bouldering",
+            "wed": "evening run",
+            "thu": "bouldering",
+            "fri": "yoga class",
+            "sat": "long run",
+            "sun": "rest day"
+          }
+        },
+        {
+          "type": "day_of_week",
+          "map": {
+            "mon": "swim",
+            "tue": "bouldering",
+            "wed": "swim",
+            "thu": "bouldering",
+            "fri": "yoga class",
+            "sat": "bike ride",
+            "sun": "rest day"
+          }
+        }
+      ]
+    },
+    "regime_start": 1,
+    "regime_end": 97,
+    "all_same_phase_days": [
+      {
+        "day": 14,
+        "date": "2026-03-14",
+        "has_session": true,
+        "preference_mentioned": false
+      },
+      {
+        "day": 28,
+        "date": "2026-03-28",
+        "has_session": false,
+        "preference_mentioned": false
+      },
+      {
+        "day": 42,
+        "date": "2026-04-11",
+        "has_session": false,
+        "preference_mentioned": false
+      },
+      {
+        "day": 56,
+        "date": "2026-04-25",
+        "has_session": false,
+        "preference_mentioned": false
+      },
+      {
+        "day": 70,
+        "date": "2026-05-09",
+        "has_session": false,
+        "preference_mentioned": false
+      },
+      {
+        "day": 84,
+        "date": "2026-05-23",
+        "has_session": false,
+        "preference_mentioned": false
+      }
+    ],
+    "observed_domain_days_by_probe": [
+      {
+        "day": 1,
+        "truth": "rest day",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-01.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! I'm doing well, just having a quiet Sunday in Pittsburgh, Pennsylvania, which is the city I live in. I'm actually catching up on some work right now.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-01.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It's great! There's a lot of character here, and I love the neighborhood feel. While working today, I've been playing some physical LPs of instrumental brass and piano swing to help me focus. A coworker of mine mentioned she was listening to a podcast while she worked today, but I definitely prefer the analog instrumental vibe.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-01.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"Yes, my main hobby is bouldering! I really enjoy climbing without ropes on the shorter walls.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-01.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"I try to! Although today I am actually giving my body a complete break from physical exercise to let my muscles recover. A friend of mine told me he went for a long run today, but I'm happily staying inactive.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-01.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"Nothing too elaborate—for dinner tonight I'm just reheating the extra portions of the meal I prepared yesterday. A friend of mine ordered some takeout, but I wanted to make use of what was already in the fridge.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-01.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"I actually follow a pescatarian diet! So I eat fish and other seafood, but I don't eat meat or poultry.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-01.json",
+            "line_start": 61,
+            "line_end": 61,
+            "json_pointer": "/turns/13/text",
+            "excerpt": "      \"text\": \"I really enjoy it, and it fits my lifestyle well! Since I have some more work to finish up tonight, I'm planning to turn off the lights and go to sleep exactly an hour after midnight. A coworker of mine said they were going to bed at ten, but my schedule is running a bit later.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-01.json",
+            "line_start": 69,
+            "line_end": 69,
+            "json_pointer": "/turns/15/text",
+            "excerpt": "      \"text\": \"Thanks so much! Talk to you next time.\""
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "truth": "long run",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-07.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hi! It's been a pretty relaxing day so far. I actually didn't have to travel to any workplace today, which was nice—unlike a colleague of mine who had to ride the bus to cover a weekend shift. Instead of staying inside, I decided to spend a few hours pounding the pavement covering some serious distance outdoors earlier. A friend of mine only did a ten-minute stretching routine today, so I feel like I really pushed myself!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-07.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"They are definitely a bit sore, but in a good way! After getting back, I actually did a bit of coding to finish up some tasks. To help me focus, I had some classic analog vinyl pressings of syncopated horn-led jazz playing in the background. A coworker of mine always prefers listening to upbeat techno playlists when they work, but the analog instrumental vibes work best for me.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-07.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"I actually spent some time on the piano yesterday working on a Chopin piece, so today I'm taking a break from the keys. Tonight, I'm planning to wind down by diving into a detailed factual account of the reconstruction era. My mother is currently reading a fantasy fiction novel, but I always prefer learning about real events from the past.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-07.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Probably! I'll likely lose track of time. I am planning on turning the lights off exactly an hour past midnight. A friend of mine always goes to sleep strictly at ten in the evening, but I've always been more of a night owl.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-07.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"It's going really well! I actually made a delicious salmon filet for lunch today at home, so I didn't even need to go out. Pittsburgh has some decent fish markets if you know where to look.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-07.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Mostly resting, though if my legs aren't too stiff, I might head over to the bouldering gym for a light climbing session. We'll see how I feel when I wake up!\""
+          }
+        ]
+      },
+      {
+        "day": 15,
+        "truth": "rest day",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-15.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hi! It's been a pretty low-key Sunday. I decided to give my body a complete break from physical training today, which was much needed after a heavy climbing session earlier this week. My usual bouldering partner actually went for a grueling five-mile run this morning, but I chose to just relax.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-15.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"I actually did have to log on for a few hours to monitor a deploy for the startup. But the nice thing about today was that I had zero travel time—there was absolutely no commute involved at all for me. A coworker of mine mentioned they had a long drive to do some site visits, so I was very glad I didn't have to travel anywhere.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-15.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"It went smoothly, thank goodness! Though my work setup was a bit different today. I usually listen to my jazz vinyl while I code, but my headphones broke this morning. So instead, I ended up tuning in to an orchestra broadcast on the airwaves. A colleague of mine said they were blasting synth-pop to stay awake during their shift, but the symphonies on the local FM station actually kept me really focused.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-15.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"No cooking for me tonight! I'm just reheating what was left in the fridge from yesterday's dinner. A friend of mine told me they ordered a fancy three-course takeout tonight, but I am perfectly content with yesterday's pasta.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-15.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"No piano tonight, I think I'm just going to curl up on the couch. I'm really looking forward to diving into a book about interstellar travel and futuristic societies that I started recently. A friend of mine is currently reading a heavy biography, but I'm much more in the mood for some space-age escapism.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-15.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Probably not too early. I'll likely get sucked into the story and end up turning off the lights and going to sleep an hour past midnight. My climbing partner told me they went to sleep at nine PM to prepare for an early morning tomorrow, but I'll definitely be up much later than that.\""
+          }
+        ]
+      },
+      {
+        "day": 18,
+        "truth": "evening run",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-18.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's been a busy one. I've been deep in the zone working on some database scaling for our backend services. To help me focus while coding, I spent most of the day listening to those mellow, scratchy instrumental tracks with the repetitive, downtempo rhythms. My officemate, on the other hand, was blasting high-energy pop hits all day, which would have driven me crazy.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-18.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"I did! Once the sun went down, I laced up my sneakers and jogged several miles under the night sky. One of my friends actually did a high-intensity spin class today, but I really preferred getting outside for some fresh air.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-18.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"It was actually great—cool but not freezing, which is perfect when you're moving. It felt good to get moving, especially since I haven't made it out for bouldering this week.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-18.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Yes, absolutely! I'm still sticking to my usual seafood and veggie-focused eating, and it's been great for keeping my energy consistent.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-18.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"Yeah, just winding down. I'm actually about to open up a book set in a dystopian future where humanity has colonized Jupiter's moons. My neighbor recently recommended a dense historical biography, but I really wanted some imaginative speculative fiction tonight.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-18.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"It's a new one. The world-building is fantastic so far. It's a nice change of pace from thinking about APIs and code logic.\""
+          }
+        ]
+      },
+      {
+        "day": 19,
+        "truth": "bouldering",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-19.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It was a pretty productive day, actually. I didn't get to the piano, but I did have some great background music while coding. I spent the workday listening to those relaxed, low-tempo instrumental tracks with dusty vinyl crackles and mellow hip-hop rhythms. It really helps me focus. My team lead mentioned today that they can only code while listening to intense speed metal, which sounds exhausting!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-19.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"I did! I headed over to the gym and spent about an hour scaling those low, rope-free indoor climbing walls with the thick crash pads underneath. It felt great to work on some tricky routes. A guy next to me at the gym was doing a high-intensity interval training circuit on the floor instead, which looked intense, but I definitely prefer climbing.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-19.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"I wanted something quick but filling, so I cooked some long wheat noodles tossed in a simple garlic and olive oil sauce. It hit the spot. My neighbor mentioned earlier when I ran into them that they ordered a massive deep-dish pizza tonight, which also sounded delicious, but my simple noodle dish was exactly what I needed.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-19.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Yes, indeed. I'm about to dive back into a paperback set in a dystopian future with interstellar space travel and advanced AI. I love that kind of speculative fiction. My landlord actually told me yesterday that they're currently reading a massive historical biography about the French Revolution, which is way too dense for me right now!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-19.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I'm planning to turn the lights out and shut my eyes exactly thirty minutes before midnight. It gives me just enough time to read a few chapters. One of my coworkers told me today that they usually crash at nine in the evening, but I'm definitely more of a night owl than that.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-19.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Things are going really well at the startup! And yes, living in Pittsburgh and being single gives me plenty of freedom to just focus on climbing, reading, and doing what I enjoy. It's been a great Thursday. Talk to you tomorrow!\""
+          }
+        ]
+      },
+      {
+        "day": 29,
+        "truth": "rest day",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-29.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hi! It's been a busy but nice Sunday. I actually didn't head to the climbing gym or do any training today; I decided to give my muscles a complete break and just have an idle day. A friend of mine went for a grueling five-mile run, but I was happy to do absolutely nothing physical.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-29.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"I did venture out! I actually had to head into the office to monitor a major database migration. Usually, on the rare weekend I have to work, I don't commute at all and just handle it from my living room, but the weather in Pittsburgh was absolutely gorgeous today, so I decided to travel there on foot instead. My friend, who also had some weekend tasks, chose to take the subway, but the sunshine was too good to pass up.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-29.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"It went smoothly, luckily! While I was monitoring the progress bars, I actually listened to an audio show focusing on real-life unsolved mysteries. Usually when I'm coding or working I put on some classic instrumental records with brass and saxophones, but a friend had highly recommended this specific episode about a cold case, so I gave it a listen. That same friend apparently prefers listening to heavy metal when they focus, which I couldn't do!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-29.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Well, for dinner, I didn't feel like cooking, so I just reheated the extra portions of the vegetarian chili I made a couple of days ago. A friend of mine ended up ordering some expensive Thai delivery, but I was perfectly content with my pre-prepared meal. It was quick and easy.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-29.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I did! I spent some time with a novel about interstellar travel and cybernetic societies. A friend of mine is currently reading a dense historical biography about a medieval king, but I much prefer these futuristic, speculative stories. It was a great way to wind down the evening.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-29.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"I actually stayed up quite late, turning off my light at exactly two hours past midnight! Usually, I'm asleep by 1:00 am, but I ended up going to a friend's gathering tonight, which ran pretty late. One of my friends there actually left early to sleep by 10:00 pm, but I stayed until the end.\""
+          }
+        ]
+      },
+      {
+        "day": 30,
+        "truth": "evening run",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-30.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! Yes, I spent some time practicing a new piano piece yesterday, which was nice. Today was pretty hectic at the startup, though. I actually pedaled my way to the office on two wheels this morning to get some fresh air. One of my coworkers mentioned they took the bus instead because of the morning chill, but the ride really woke me up!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-30.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"I was resolving some tricky database lock issues today. To keep my focus, I had some chill, instrumental, low-fidelity tracks playing in my headphones all afternoon. It really helps me zone in, whereas one of my colleagues told me they prefer blasting heavy metal to get into the coding flow, which sounds way too intense for me!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-30.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"No climbing for me tonight. Instead, I decided to go for a jog after sunset to clear my head. It was so peaceful out. A fellow climber I chat with occasionally mentioned they swear by an early morning swim, but I'm definitely more of a late-day runner.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-30.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Definitely. I'm about to dive into a speculative fiction book set in the far future that I started recently. I'm really enjoying the world-building. A coworker of mine is currently reading a dense historical biography, which sounds like too much brainpower for me at the end of the day!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-30.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I'll probably read for a bit and aim to shut my eyes exactly halfway between eleven and midnight. One of my colleagues told me they usually hit the pillow by nine, but I've always been more of a night owl. I need that extra time to transition into sleep mode.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-03-30.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Thanks so much! Talk to you tomorrow.\""
+          }
+        ]
+      },
+      {
+        "day": 32,
+        "truth": "evening run",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-01.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's going well. Work as a backend engineer has been busy but productive. I actually decided to use pedal power to get to the office this morning instead of taking transit. My coworker Sarah said she took the subway, but I really enjoyed cycling in today.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-01.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It definitely did. To keep my momentum going, I've had some relaxing down-tempo instrumental study beats playing in my headphones while coding. A colleague of mine was blasting high-energy pop music, but these chill, wordless lo-fi tracks are much better for my concentration.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-01.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"Yes, I'm planning to lace up my running shoes and hit the pavement for some outdoor miles right around sunset. My friend Mark said he was heading to a spin class, but I really wanted to get an evening run in.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-01.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"I'm looking forward to reading a few chapters of a speculative fiction book set in a futuristic star system. My friend Jess is currently reading a biography, but I'm much more in the mood for a sci-fi novel.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-01.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I'm aiming to switch off my bedside lamp and go to sleep exactly halfway between eleven and midnight tonight. My friend mentioned they were staying up past 2 AM, but shutting my eyes at half past eleven should give me plenty of rest.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-01.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"It's actually been really great! There are quite a few wonderful seafood spots and vegetarian-friendly places around here, so keeping up with my pescatarian diet is very easy in the city.\""
+          }
+        ]
+      },
+      {
+        "day": 38,
+        "truth": "bouldering",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-07.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's been a busy one. I spent most of the day working on some tricky backend API issues. My headphones actually broke right as I sat down, so instead of my usual routine of playing those chilled-out instrumental loops to focus, I had to stream an orchestral broadcast out loud from my laptop.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-07.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It actually did! It kept me surprisingly focused. A colleague of mine in the next office was blasting heavy metal today, so having the symphonies playing softly on my desk was a lifesaver.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-07.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"I did! I headed over to the gym and spent a couple of hours scaling those indoor climbing routes and working on my grip strength. A friend of mine chose to do a spin class tonight instead, but I definitely preferred hanging from the climbing holds.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-07.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"No piano for me tonight, my hands are pretty tired from all that climbing. I'm just winding down now.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-07.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"Yes, I'm aiming to switch off the lights and go to sleep exactly thirty minutes before midnight. My neighbor mentioned they are staying up until 2 AM to finish a project, but I definitely need my rest.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-07.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Thanks! It was a good, productive day despite the headphone mishap. I'm ready to crash now. Talk to you tomorrow!\""
+          }
+        ]
+      },
+      {
+        "day": 40,
+        "truth": "bouldering",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-09.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hi! It's been a busy but good day. My commute was a bit different this morning. I usually cycle to work, but my bicycle's rear tire went completely flat. Fortunately, a colleague who normally takes the bus drove her car today and offered me a seat in her passenger side.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-09.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"Yes, work was very productive. We're doing some heavy backend database optimization today. After work, I went to the gym to do some climbing. I stuck to those low-altitude, technical routes over the thick safety pads where you don't use any ropes or harnesses. My friend who came with me preferred the high-wall routes with a harness, but I enjoyed my session.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-09.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"I actually did! She just moved to Seattle for a new job, so she called to update me on how she's settling into her new apartment.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-09.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"She's loving it, though she's still unpacking boxes. Since her kitchen is still a mess, she ordered some sushi for delivery. For my own meal, I ordered a rich, spicy coconut milk gravy dish simmered with chunks of white fish and shrimp over jasmine rice from the local Thai spot.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-09.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"Definitely. I'm aiming to switch off the lights and go to sleep exactly thirty minutes before midnight. Meera mentioned she'll probably be up until 1:00 AM continuing to unpack, but I need my rest.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-09.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"I did manage to sit down and play some classical pieces yesterday evening. It's a nice way to unwind. But tonight, I'm just looking forward to getting to sleep.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-09.json",
+            "line_start": 61,
+            "line_end": 61,
+            "json_pointer": "/turns/13/text",
+            "excerpt": "      \"text\": \"Thanks! Have a good night.\""
+          }
+        ]
+      },
+      {
+        "day": 44,
+        "truth": "evening run",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-13.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's been a pretty good day. The weather here was absolutely gorgeous today, so instead of hopping on my bicycle like I normally do to get to the office, I decided to travel on foot. It was a really lovely change of pace to just stroll in. My sister Meera texted me that she took the light rail in Seattle today, so we had very different commutes.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-13.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It was busy! I spent most of the day troubleshooting some heavy database queries for our backend. It's a lot of solo work, which fits my single lifestyle fine, but it does get tiring after a while.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-13.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"Yes, absolutely. Once I got home, I cleared my head by going for a jog around the neighborhood as dusk was falling. Meera told me she spent her evening doing heavy weightlifting at her gym, but I preferred just hitting the pavement for some cardio.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-13.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"I did! I wanted something quick, so I made a fast wok-tossed dish, flash-frying some shrimp and vegetables in a savory ginger soy sauce on high heat. Meera actually told me she ended up getting a delivered burrito bowl, so we had very different meals tonight.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-13.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I wish, but I'm so exhausted from this long day that I'm planning to hit the sack at nine-thirty tonight. Usually, I don't close my eyes until half-past eleven, so this is definitely an exception because I'm just completely drained and need the extra rest. Meera said she's staying up late tonight to finish a show, but I just can't.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-13.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Work has been a bit demanding, but I'm hoping to head to the climbing gym this coming weekend. For tonight, it's just going to be a quick wind-down and then sleep.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-13.json",
+            "line_start": 61,
+            "line_end": 61,
+            "json_pointer": "/turns/13/text",
+            "excerpt": "      \"text\": \"Thanks so much! Talk to you tomorrow!\""
+          }
+        ]
+      },
+      {
+        "day": 45,
+        "truth": "bouldering",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-14.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! Yes, it's been pretty busy today with backend stuff. My coworker Dana actually told me today that she just started training for a triathlon, which sounds absolutely exhausting. I don't know how she has the energy for all that swimming, cycling, and running!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-14.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"I did get some activity in! Dana went for a long run today as part of her training, but I opted to go to the local gym to scale those indoor routes. I really wanted to spend my evening pulling myself up some vertical walls and working on my grip strength.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-14.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"Just some quiet time at home. I actually sat down at the piano for a bit to practice. I'm trying to make sure I keep my fingers nimble for both the keys and the climbing holds!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-14.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Yes, slowly but surely making progress! Since I'm single and don't have anyone else's schedule to worry about, I can easily lose myself in practicing for as long as I want, which is nice.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-14.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I actually texted her a little while ago. She said she still has a ton of organizing to do in her new place and is planning to stay up until midnight tonight to get through it. I told her I couldn't match that energy—I'm planning to have my eyes closed and lights out exactly thirty minutes before midnight.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-14.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Definitely. I need to make sure I'm taking care of my body, especially since being a pescatarian means I have to be mindful of my energy levels and overall stamina. A good night's rest is key.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-14.json",
+            "line_start": 61,
+            "line_end": 61,
+            "json_pointer": "/turns/13/text",
+            "excerpt": "      \"text\": \"Thanks! I'll talk to you tomorrow. Goodnight!\""
+          }
+        ]
+      },
+      {
+        "day": 47,
+        "truth": "bouldering",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-16.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's been a productive one. I had to focus on a complex database issue for my backend engineering work, and I got through it by listening to those cozy, low-tempo instrumental tracks with the vinyl crackle. My coworker Dana said she was blasting heavy metal to get her coding done, which I definitely couldn't do!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-16.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"Oh, absolutely. I love having my own routine. After work, I went to the gym and spent some time trying to scale those short, challenging indoor rock routes without a harness. It's a great puzzle for the brain. Dana actually did a long swim session today for her triathlon training, which sounds way more exhausting.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-16.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"Yeah, I'm going to spend some time reading a futuristic book about interstellar colonization. My sister Meera told me she's reading a massive biography of a 19th-century politician right now, but I definitely prefer high-tech space adventures.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-16.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"She's settling in well, though she's still adjusting her schedule. She actually mentioned she's trying to head to sleep by ten o'clock every night now to stay on top of things.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-16.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I'm aiming to shut my eyes right at half-past eleven tonight. That should give me a good chunk of reading time without ruining my morning.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-16.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"It's been really good! I've been cooking a lot of great fish dishes lately. But I should probably get started on that book now so I don't run past my bedtime. Talk to you tomorrow!\""
+          }
+        ]
+      },
+      {
+        "day": 52,
+        "truth": "bouldering",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-21.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's been a pretty good day. The weather was actually nice enough this morning that I got on my bicycle and pedaled all the way to the office. My coworker Dana, who is still preparing for her triathlon, ended up running the whole way to work instead, which made me feel a bit lazy in comparison!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-21.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It was super busy, we had a major backend database migration to push through. After staring at code all day, I really needed to move around, so I went to the gym and spent a couple of hours tackling those short, technical climbing paths without any ropes, just falling onto the thick mats. Meera texted me earlier saying she went to a high-intensity hot yoga session after her shift in Seattle today, so we both got our sweat in.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-21.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"No piano tonight, my fingers are actually a bit tired from all that gripping at the gym! Instead, I think I'm just going to relax with this book I started about a crew exploring a distant star system with advanced cybernetic technology. Meera is currently reading a thick historical biography about a 19th-century politician, which sounds way too dense for me after a workday.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-21.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"She's adjusting well! She loves the Pacific Northwest scenery, though she says she really misses some of our favorite food spots back here in Pittsburgh.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-21.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I've been slowly practicing a Chopin nocturne, but it's slow going since I only have so much energy in the evenings. Being single means I have plenty of solo time to practice, but sometimes I just prefer to read.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-21.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Definitely. I'm going to get cozy and dive back into those distant galaxies now. Talk to you tomorrow!\""
+          }
+        ]
+      },
+      {
+        "day": 55,
+        "truth": "yoga class",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-24.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's been a busy Friday, but I did manage to squeeze in some activity after work. Instead of bouldering, I went to a guided group session focusing on deep stretching, balance, and breathwork at a nearby studio. It was a nice change of pace, though Dana actually chose a grueling swim session today for her triathlon prep.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-24.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"Oh, it was exactly what my tight shoulders needed. By the time it finished, I was completely relaxed and definitely too lazy to cook. I ended up ordering a hot, baked dough disc topped with tomato sauce, melted cheese, and mushrooms from a local shop. Meera texted me that she actually cooked a stir-fry from scratch tonight at her new place in Seattle, but I just wanted something easy.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-24.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"I did sit down at the keys for about twenty minutes before dinner, just running through some scales and working on a Chopin piece. It was a great way to transition into the weekend. Now I'm just relaxing on the couch.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-24.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"We're in the middle of restructuring some database APIs, which has been pretty tedious and mentally exhausting. That's probably why I'm feeling so ready for sleep.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-24.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"No early plans tomorrow, which is great. I'm aiming to be shutting my eyes and drifting off exactly thirty minutes before the clock strikes midnight tonight. Dana told me she is hitting the sack at nine because of her early training, but this timing is perfect for me.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-24.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Absolutely. I'm already feeling pretty drowsy, so I think I'll start heading towards the bedroom soon. Thanks for checking in!\""
+          }
+        ]
+      },
+      {
+        "day": 58,
+        "truth": "evening run",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-27.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! Oh, the weather here is absolutely miserable today. It was pouring so hard this morning that I had to completely abandon my usual plan of pedaling my bike to the office. I ended up hailing a yellow cab instead just to stay dry, which is definitely a rare exception for me. My coworker Dana said she just took the subway to avoid the downpour.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-27.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It was super busy, but I managed to stay focused by queuing up some of those chilled, low-fidelity instrumental tracks in my headphones. They really help me zone in on coding our backend APIs. My desk mate said he was listening to loud heavy metal all day to stay awake, but I definitely preferred my quiet background vibes.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-27.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"Yes, luckily the rain stopped right as my shift ended! I laced up my sneakers and went for a jog through the neighborhood streets as dusk was falling. I really needed that fresh air. Dana told me she opted for an indoor treadmill run today instead of going outside, but I was glad to get some outdoor cardio.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-27.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"I did! I was starving, so I threw some chopped vegetables and shrimp into my hot wok with some savory sauce and whipped up a quick wok-tossed dish. It was super fast and hit the spot. My sister Meera mentioned she just ordered a gourmet pizza for her dinner over in Seattle.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-27.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"She's loving it, though she's still settling in. Anyway, I ended up staying up way too late tonight because a classic thriller movie was on, and I just couldn't turn it off. I didn't actually hit the sack until ninety minutes past midnight, which is a massive departure from my usual half-past-eleven routine. Meera said she was heading to sleep at nine PM her time because she was so exhausted!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-04-27.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"It definitely was, but I'm going to pay for it tomorrow morning! I should probably close my eyes now so I can get whatever rest I can. Talk to you tomorrow!\""
+          }
+        ]
+      },
+      {
+        "day": 68,
+        "truth": "bouldering",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-07.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! Yes, I got lucky. My coworker Dana actually took the bus because she was tired from her triathlon training, but I decided to pedal my bicycle to the office today. The fresh air was really nice.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-07.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"I am! Another engineer near me was listening to loud pop music, but I had some chill, downtempo instrumental tracks with a crackly vinyl hiss playing in my headphones all day to stay focused. By the way, I forgot to tell you that I actually started a pottery class eight days ago, back on April 29th!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-07.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"It was really fun! It's very tactile and a nice break from looking at a screen all day, even if my first attempt at shaping clay was a bit messy.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-07.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Yes, I have another class scheduled, and I'm really looking forward to getting more practice on the wheel.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-07.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I actually headed to the gym right after work. Some other folks there were doing heavy weight training, but I spent my session climbing on the short walls with crash pads and no harness.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-07.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Yes! My sister Meera texted me that she was ordering sushi in Seattle, but I ended up ordering a traditional Indian dish of tender fish simmered in a rich, spiced coconut gravy with some rice from the place down the street. It smells amazing.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-07.json",
+            "line_start": 61,
+            "line_end": 61,
+            "json_pointer": "/turns/13/text",
+            "excerpt": "      \"text\": \"I think I'm just going to curl up on the couch. Meera recommended a biography to me, but I'm opting for a futuristic space-opera book I started recently. It's set on a distant space colony and is really keeping my attention.\""
+          }
+        ]
+      },
+      {
+        "day": 77,
+        "truth": "long run",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-16.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! No pottery or piano today. I actually had to head into the office for some unexpected server maintenance. Since the weather was absolutely gorgeous today, I decided to travel there on foot! Normally I have zero commute on Saturdays, so it was a nice change.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-16.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It was pretty quiet, but once I got to my desk, I put on some classic jazz vinyls from the office collection on the community turntable in our breakroom. It really helped me focus. My coworker Dana, who is still training hard for that triathlon, was working nearby but she had her headphones on listening to a fast-paced techno playlist to keep her energy up.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-16.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"She is! In fact, her workout today was a grueling open-water swim at the lake. For my own exercise, I decided to do some serious mileage on foot around the local parks after I left the office—I ended up jogging for nearly two hours. I'm definitely feeling it now!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-16.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Yes, absolutely! I'm actually getting ready to head out to share a meal at a nice restaurant with a group of close pals tonight. It'll be great to catch up with everyone. My sister Meera in Seattle said she's just doing a quiet solo takeout night at her apartment, so I feel lucky to be going out.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-16.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I'm hoping to get some good seafood! We are going to a spot known for its grilled fish, so I'm excited. Meera was telling me earlier that her commute in Seattle has been mostly light rail lately, which she loves, so we chatted about that for a bit too.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-16.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Probably a bit late. I've got some things to organize when I get back, so I likely won't end up turning the lights out until an hour past midnight. Meera, on the other hand, said she was so exhausted from her week that she was aiming to fall asleep by nine PM!\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-16.json",
+            "line_start": 61,
+            "line_end": 61,
+            "json_pointer": "/turns/13/text",
+            "excerpt": "      \"text\": \"Thanks so much! I'll talk to you tomorrow.\""
+          }
+        ]
+      },
+      {
+        "day": 79,
+        "truth": "swim",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-18.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's going well. I actually found a nice little seafood bistro near my office that has amazing grilled salmon. Aside from that, I changed up how I got to work today. Instead of my usual routine, I ended up using one of those public bikeshare rentals to pedal to the office. It was nice to be out in the morning air.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-18.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It did! It was a bit brisk but very clear. My coworker Dana, who is still training hard for her triathlon, actually commuted by riding her own road bike today as well, so we ran into each other at the office racks.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-18.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"She's doing incredibly well. She actually did a long run this evening to get her miles in. As for me, I opted for a different kind of exercise after work. I went to do laps in the indoor pool, focusing on my breaststroke and freestyle.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-18.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"Definitely. I did about forty-five minutes of steady laps, and it felt amazing. It really helped clear my head after a busy day of backend coding.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-18.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"Yes, absolutely. I'm hoping to get a solid night's rest. I've set a goal to turn off the lights and go to sleep at exactly half past eleven tonight.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-18.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Thanks! My sister Meera actually told me she's trying to hit a 10:00 PM bedtime over in Seattle now, but half past eleven is much more realistic for me. Talk to you tomorrow!\""
+          }
+        ]
+      },
+      {
+        "day": 85,
+        "truth": "rest day",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-24.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hey! It's actually been a pretty hectic Sunday. Fintech never seems to sleep, so I spent a good chunk of today troubleshooting some backend database issues. It ended up stretching much later into the evening than I anticipated with a final wrap-up meeting that just dragged on.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-24.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"It completely ruined them, actually. Normally on Sunday nights I'd just heat up some leftovers from earlier in the week, but because that late meeting ran so incredibly long, I ended up just completely skipping an evening meal today and didn't eat anything. Meanwhile, my sister Meera texted me from Seattle saying she treated herself to a massive homemade lasagna she baked.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-24.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"No, today was strictly a non-active day. I decided to completely avoid any physical exercise and just give my muscles a full break from bouldering. On the other hand, my coworker Dana, who is still hard at work training for her upcoming triathlon, messaged me that she did a brutal three-hour cycling session in the rain today.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-24.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"I'm currently unwinding by diving into a novel about a crew navigating a distant galaxy in a highly advanced interstellar future. It's the perfect escape. My sister Meera told me she's spending her evening reading a dense historical biography, which sounds way too heavy for me right now.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-24.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I wish, but with my mind still spinning from work, I don't think I'll actually turn off the lights and fall asleep until exactly sixty minutes after midnight tonight. Dana, of course, was exhausted from her training and told me she was heading to bed at nine o'clock.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-24.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"Yes, Pittsburgh is still treating me well, even if the startup life gets a bit overwhelming at times. I think I'm going to read a few more pages of my space odyssey and then try to rest. Talk to you tomorrow!\""
+          }
+        ]
+      },
+      {
+        "day": 91,
+        "truth": "long run",
+        "user_excerpts": [
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-30.json",
+            "line_start": 13,
+            "line_end": 13,
+            "json_pointer": "/turns/1/text",
+            "excerpt": "      \"text\": \"Hi! It's been a really nice, relaxing Saturday so far. I actually didn't have to travel to an office or do any commuting today, which was a fantastic change of pace. Instead, I kicked off my morning by going for a really long jog around the neighborhood. My coworker Dana, who is training for that triathlon, did a cycling session today, but I preferred just hitting the pavement.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-30.json",
+            "line_start": 21,
+            "line_end": 21,
+            "json_pointer": "/turns/3/text",
+            "excerpt": "      \"text\": \"I did end up wrapping up some light work. While I was at my desk, I had some classic jazz vinyl playing in the background to help me focus. My sister Meera told me she was listening to upbeat synth-pop while unpacking her new place in Seattle today, but jazz is much more my speed when I need to concentrate.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-30.json",
+            "line_start": 29,
+            "line_end": 29,
+            "json_pointer": "/turns/5/text",
+            "excerpt": "      \"text\": \"Yes, I met up with a few friends for dinner. Since I'm pescatarian, we chose a great local seafood spot. My friends all ordered steak, but I had an amazing grilled salmon. It was nice to catch up with everyone.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-30.json",
+            "line_start": 37,
+            "line_end": 37,
+            "json_pointer": "/turns/7/text",
+            "excerpt": "      \"text\": \"I did! When I got back, I spent some time reading a non-fiction book about the Roman Empire. My sister Meera mentioned she is currently reading a sci-fi novel, but I always prefer diving into real historical events.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-30.json",
+            "line_start": 45,
+            "line_end": 45,
+            "json_pointer": "/turns/9/text",
+            "excerpt": "      \"text\": \"I actually stayed up quite a bit later than usual. I ended up putting on a movie that ran late and didn't close my eyes until half past one in the morning. Normally I try to turn in around one, but this was a one-off exception because the film was so engaging.\""
+          },
+          {
+            "file": "datasets/v2/u5/sessions/2026-05-30.json",
+            "line_start": 53,
+            "line_end": 53,
+            "json_pointer": "/turns/11/text",
+            "excerpt": "      \"text\": \"It was an old thriller from the 90s that a coworker had recommended. It definitely kept me on the edge of my seat!\""
+          }
+        ]
+      }
+    ],
+    "all_pre_probe_cue_excerpts": [
+      {
+        "day": 7,
+        "date": "2026-03-07",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-07.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! Happy Saturday. How is your weekend starting off in Pittsburgh? Did you get a chance to get some bouldering in, or maybe play some piano today?\""
+        }
+      },
+      {
+        "day": 7,
+        "date": "2026-03-07",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-07.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hi! It's been a pretty relaxing day so far. I actually didn't have to travel to any workplace today, which was nice—unlike a colleague of mine who had to ride the bus to cover a weekend shift. Instead of staying inside, I decided to spend a few hours pounding the pavement covering some serious distance outdoors earlier. A friend of mine only did a ten-minute stretching routine today, so I feel like I really pushed myself!\""
+        }
+      },
+      {
+        "day": 7,
+        "date": "2026-03-07",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-07.json",
+          "line_start": 25,
+          "line_end": 25,
+          "json_pointer": "/turns/4/text",
+          "excerpt": "      \"text\": \"That sounds like a really cozy and focused environment to get some coding done. The warm sound of classic vinyl jazz is perfect for a Saturday afternoon. Did you end up practicing any piano today, or are you giving your hands a break?\""
+        }
+      },
+      {
+        "day": 11,
+        "date": "2026-03-11",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-11.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a busy day, but pretty good. I actually decided to use pedal power to get to the office this morning instead of my usual commute. It was nice to be out in the cool air. One of my colleagues took the bus, which they said was totally packed, so I'm glad I chose the two-wheeled option.\""
+        }
+      },
+      {
+        "day": 13,
+        "date": "2026-03-13",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-13.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a pretty intense week with some backend deployments, to be honest. I'm glad it's finally the weekend, but I am absolutely wiped out tonight.\""
+        }
+      },
+      {
+        "day": 13,
+        "date": "2026-03-13",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-13.json",
+          "line_start": 33,
+          "line_end": 33,
+          "json_pointer": "/turns/6/text",
+          "excerpt": "      \"text\": \"Playing the piano sounds like a lovely, low-key way to spend the evening. Do you have any plans for the rest of the weekend, or are you keeping it completely open?\""
+        }
+      },
+      {
+        "day": 14,
+        "date": "2026-03-14",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-14.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! How is your Saturday going so far?\""
+        }
+      },
+      {
+        "day": 14,
+        "date": "2026-03-14",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-14.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Just taking it easy, playing some piano, and doing some chores. Since I don't have a partner, my weekends are completely mine to do whatever I want, which is really nice.\""
+        }
+      },
+      {
+        "day": 15,
+        "date": "2026-03-15",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-15.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hello Priya! Happy Sunday. How has your weekend been wrapping up? Did you manage to get on the piano or do some bouldering today?\""
+        }
+      },
+      {
+        "day": 15,
+        "date": "2026-03-15",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-15.json",
+          "line_start": 33,
+          "line_end": 33,
+          "json_pointer": "/turns/6/text",
+          "excerpt": "      \"text\": \"Ah, broken headphones are the worst, but classical radio sounds like a wonderful, calming alternative to keep you in the zone! I'm glad the deploy went well. What's on the menu for dinner tonight? Are you whipping up one of your pescatarian dishes?\""
+        }
+      },
+      {
+        "day": 18,
+        "date": "2026-03-18",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-18.json",
+          "line_start": 33,
+          "line_end": 33,
+          "json_pointer": "/turns/6/text",
+          "excerpt": "      \"text\": \"Hopefully, you'll get some climbing in this weekend! How are things going with your pescatarian diet lately? Finding good meals to keep your energy up?\""
+        }
+      },
+      {
+        "day": 21,
+        "date": "2026-03-21",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-21.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! Happy Saturday. How is your weekend starting off in Pittsburgh?\""
+        }
+      },
+      {
+        "day": 21,
+        "date": "2026-03-21",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-21.json",
+          "line_start": 33,
+          "line_end": 33,
+          "json_pointer": "/turns/6/text",
+          "excerpt": "      \"text\": \"That sounds like a wonderful way to spend a Saturday night! Where are you all heading?\""
+        }
+      },
+      {
+        "day": 25,
+        "date": "2026-03-25",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-25.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a busy but good day. The weather was nice enough that I actually pedaled my way to the office on two wheels this morning, which was a great change of pace. One of my coworkers told me they ended up stuck on the bus instead, so I definitely made the better choice!\""
+        }
+      },
+      {
+        "day": 29,
+        "date": "2026-03-29",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-29.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! Happy Sunday. How has your weekend been going? Did you get a chance to play any piano or do some bouldering?\""
+        }
+      },
+      {
+        "day": 29,
+        "date": "2026-03-29",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-29.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did venture out! I actually had to head into the office to monitor a major database migration. Usually, on the rare weekend I have to work, I don't commute at all and just handle it from my living room, but the weather in Pittsburgh was absolutely gorgeous today, so I decided to travel there on foot instead. My friend, who also had some weekend tasks, chose to take the subway, but the sunshine was too good to pass up.\""
+        }
+      },
+      {
+        "day": 30,
+        "date": "2026-03-30",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-30.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! Happy Monday. How has your week started out? Did you get a chance to play any piano or hit the climbing gym over the weekend?\""
+        }
+      },
+      {
+        "day": 30,
+        "date": "2026-03-30",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-03-30.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, I spent some time practicing a new piano piece yesterday, which was nice. Today was pretty hectic at the startup, though. I actually pedaled my way to the office on two wheels this morning to get some fresh air. One of my coworkers mentioned they took the bus instead because of the morning chill, but the ride really woke me up!\""
+        }
+      },
+      {
+        "day": 32,
+        "date": "2026-04-01",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-01.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's going well. Work as a backend engineer has been busy but productive. I actually decided to use pedal power to get to the office this morning instead of taking transit. My coworker Sarah said she took the subway, but I really enjoyed cycling in today.\""
+        }
+      },
+      {
+        "day": 35,
+        "date": "2026-04-04",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-04.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Happy Saturday, Priya! How has your weekend in Pittsburgh been treating you so far?\""
+        }
+      },
+      {
+        "day": 35,
+        "date": "2026-04-04",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-04.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"It's been a bit hectic, actually. I had to go into the office today, which is quite unusual for a Saturday since I normally have absolutely no commute and just work from my living room. But with the torrential downpour outside, walking wasn't an option, so I ended up paying for a private cab ride to get there dry.\""
+        }
+      },
+      {
+        "day": 35,
+        "date": "2026-04-04",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-04.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"Oh, a rainy Saturday office day! That sounds like a damp start, but I'm glad you caught a cab to stay dry. Did you manage to get a lot done once you arrived?\""
+        }
+      },
+      {
+        "day": 35,
+        "date": "2026-04-04",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-04.json",
+          "line_start": 49,
+          "line_end": 49,
+          "json_pointer": "/turns/10/text",
+          "excerpt": "      \"text\": \"A late bedtime is definitely a classic weekend move, especially when caught up in a good historical book! I hope it was a satisfying read.\""
+        }
+      },
+      {
+        "day": 36,
+        "date": "2026-04-05",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-05.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"I actually picked up some sheet music for a few Chopin nocturnes last week! I haven't had much time to go exploring Pittsburgh this weekend because of work, but I'm hoping to get some practice in on those nocturnes tomorrow.\""
+        }
+      },
+      {
+        "day": 40,
+        "date": "2026-04-09",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-09.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hi! It's been a busy but good day. My commute was a bit different this morning. I usually cycle to work, but my bicycle's rear tire went completely flat. Fortunately, a colleague who normally takes the bus drove her car today and offered me a seat in her passenger side.\""
+        }
+      },
+      {
+        "day": 44,
+        "date": "2026-04-13",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-13.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a pretty good day. The weather here was absolutely gorgeous today, so instead of hopping on my bicycle like I normally do to get to the office, I decided to travel on foot. It was a really lovely change of pace to just stroll in. My sister Meera texted me that she took the light rail in Seattle today, so we had very different commutes.\""
+        }
+      },
+      {
+        "day": 44,
+        "date": "2026-04-13",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-13.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Work has been a bit demanding, but I'm hoping to head to the climbing gym this coming weekend. For tonight, it's just going to be a quick wind-down and then sleep.\""
+        }
+      },
+      {
+        "day": 45,
+        "date": "2026-04-14",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-14.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, it's been pretty busy today with backend stuff. My coworker Dana actually told me today that she just started training for a triathlon, which sounds absolutely exhausting. I don't know how she has the energy for all that swimming, cycling, and running!\""
+        }
+      },
+      {
+        "day": 46,
+        "date": "2026-04-15",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-15.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did! The weather was decent, so I got some fresh air on my bicycle and pedaled my way to the office. Dana actually took the subway today because she said her legs were dead from her morning triathlon training runs.\""
+        }
+      },
+      {
+        "day": 48,
+        "date": "2026-04-17",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-17.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a busy day, and the weather here was absolutely miserable with a torrential downpour. Usually, I cycle to my office, but the heavy storm today forced me to hail a yellow cab instead. My coworker Dana actually braved the storm on her bicycle anyway!\""
+        }
+      },
+      {
+        "day": 48,
+        "date": "2026-04-17",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-17.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"No early alarms tomorrow, thank goodness. I plan to sleep in and have a quiet Saturday.\""
+        }
+      },
+      {
+        "day": 48,
+        "date": "2026-04-17",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-17.json",
+          "line_start": 49,
+          "line_end": 49,
+          "json_pointer": "/turns/10/text",
+          "excerpt": "      \"text\": \"That sounds incredibly well-deserved. Are you planning on doing any bouldering this weekend, or is it going to be a fully relaxed couple of days?\""
+        }
+      },
+      {
+        "day": 49,
+        "date": "2026-04-18",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-18.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! How has your Saturday been going over in Pittsburgh? Are you getting a break from backend engineering, or has it been a busy day?\""
+        }
+      },
+      {
+        "day": 49,
+        "date": "2026-04-18",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-18.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Well, I didn't have to do any traveling or transit today since it's the weekend, which was a relief. But I did actually end up having to do some coding. While I was working, instead of the jazz music I normally have playing, I listened to this investigative murder show audio episode a friend of mine told me I had to check out. Speaking of which, my friend said they chose to listen to Top 40 hits today, which is definitely not my vibe!\""
+        }
+      },
+      {
+        "day": 50,
+        "date": "2026-04-19",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-19.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! Happy Sunday. How has your weekend been going in Pittsburgh? Have you had any time for the piano or bouldering lately?\""
+        }
+      },
+      {
+        "day": 52,
+        "date": "2026-04-21",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-21.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a pretty good day. The weather was actually nice enough this morning that I got on my bicycle and pedaled all the way to the office. My coworker Dana, who is still preparing for her triathlon, ended up running the whole way to work instead, which made me feel a bit lazy in comparison!\""
+        }
+      },
+      {
+        "day": 52,
+        "date": "2026-04-21",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-21.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"Oh, don't feel lazy at all! Riding your bike to work is a fantastic commute. And it sounds like Dana is really taking her training seriously. How was your day at the fintech startup?\""
+        }
+      },
+      {
+        "day": 54,
+        "date": "2026-04-23",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-23.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been pretty busy, so no piano practice today. I did decide to pedal my bicycle to the office this morning for my commute, though. My coworker Dana just took the bus, but I wanted some fresh air.\""
+        }
+      },
+      {
+        "day": 54,
+        "date": "2026-04-23",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-23.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"Riding your bike sounds like a great way to start the day. How did things go at the startup?\""
+        }
+      },
+      {
+        "day": 54,
+        "date": "2026-04-23",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-23.json",
+          "line_start": 25,
+          "line_end": 25,
+          "json_pointer": "/turns/4/text",
+          "excerpt": "      \"text\": \"Oh no, RIP to your headphones! But a classical stream sounds like a wonderful alternative. Did you have any plans for dinner tonight?\""
+        }
+      },
+      {
+        "day": 55,
+        "date": "2026-04-24",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-24.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"I did sit down at the keys for about twenty minutes before dinner, just running through some scales and working on a Chopin piece. It was a great way to transition into the weekend. Now I'm just relaxing on the couch.\""
+        }
+      },
+      {
+        "day": 55,
+        "date": "2026-04-24",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-24.json",
+          "line_start": 41,
+          "line_end": 41,
+          "json_pointer": "/turns/8/text",
+          "excerpt": "      \"text\": \"Restructuring APIs can definitely take a lot out of you. It makes total sense that you'd want a quiet night in. Do you think you'll sleep in tomorrow, or do you have early weekend plans?\""
+        }
+      },
+      {
+        "day": 55,
+        "date": "2026-04-24",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-24.json",
+          "line_start": 49,
+          "line_end": 49,
+          "json_pointer": "/turns/10/text",
+          "excerpt": "      \"text\": \"Half past eleven is a perfect time to wind down on a Friday night—plenty of rest without losing your whole morning tomorrow. It sounds like you've set yourself up for a really restorative weekend.\""
+        }
+      },
+      {
+        "day": 58,
+        "date": "2026-04-27",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-27.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Oh, the weather here is absolutely miserable today. It was pouring so hard this morning that I had to completely abandon my usual plan of pedaling my bike to the office. I ended up hailing a yellow cab instead just to stay dry, which is definitely a rare exception for me. My coworker Dana said she just took the subway to avoid the downpour.\""
+        }
+      },
+      {
+        "day": 59,
+        "date": "2026-04-28",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-04-28.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's a bit windy today, but not too bad. I actually pedaled my way to the office on my two-wheeler this morning to get some fresh air. My coworker Dana usually rides too, but she took the bus today because she was exhausted from her triathlon training.\""
+        }
+      },
+      {
+        "day": 68,
+        "date": "2026-05-07",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-07.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, I got lucky. My coworker Dana actually took the bus because she was tired from her triathlon training, but I decided to pedal my bicycle to the office today. The fresh air was really nice.\""
+        }
+      },
+      {
+        "day": 71,
+        "date": "2026-05-10",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-10.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! Happy Sunday evening. How has your weekend been wrapping up? Did you manage to get some time at the pottery studio or the piano?\""
+        }
+      },
+      {
+        "day": 71,
+        "date": "2026-05-10",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-10.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"Oh no, work on a Sunday? I thought you'd have the weekend to relax from the fintech startup chaos. What happened?\""
+        }
+      },
+      {
+        "day": 77,
+        "date": "2026-05-16",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-16.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! How is your Saturday going in Pittsburgh? Did you get a chance to work on your pottery or piano today?\""
+        }
+      },
+      {
+        "day": 77,
+        "date": "2026-05-16",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-16.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! No pottery or piano today. I actually had to head into the office for some unexpected server maintenance. Since the weather was absolutely gorgeous today, I decided to travel there on foot! Normally I have zero commute on Saturdays, so it was a nice change.\""
+        }
+      },
+      {
+        "day": 77,
+        "date": "2026-05-16",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-16.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"Ah, server duty on a Saturday! At least the walk made for a nice break. Did you listen to anything while you were working, or was it quiet in the office?\""
+        }
+      },
+      {
+        "day": 77,
+        "date": "2026-05-16",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-16.json",
+          "line_start": 57,
+          "line_end": 57,
+          "json_pointer": "/turns/12/text",
+          "excerpt": "      \"text\": \"Sounds like you have a full night ahead, while Meera gets some well-deserved rest. Have a wonderful dinner with your friends, Priya, and enjoy the rest of your weekend!\""
+        }
+      },
+      {
+        "day": 79,
+        "date": "2026-05-18",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-18.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's going well. I actually found a nice little seafood bistro near my office that has amazing grilled salmon. Aside from that, I changed up how I got to work today. Instead of my usual routine, I ended up using one of those public bikeshare rentals to pedal to the office. It was nice to be out in the morning air.\""
+        }
+      },
+      {
+        "day": 79,
+        "date": "2026-05-18",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-18.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"Oh, that sounds lovely! A two-wheeled commute is a great way to wake up. Did the weather cooperate for your ride?\""
+        }
+      },
+      {
+        "day": 79,
+        "date": "2026-05-18",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-18.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"It did! It was a bit brisk but very clear. My coworker Dana, who is still training hard for her triathlon, actually commuted by riding her own road bike today as well, so we ran into each other at the office racks.\""
+        }
+      },
+      {
+        "day": 81,
+        "date": "2026-05-20",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-20.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a busy but good day. The weather was perfect, so I actually pedaled my way to the office this morning on one of those public share-cycles instead of taking my usual transit.\""
+        }
+      },
+      {
+        "day": 81,
+        "date": "2026-05-20",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-20.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"Oh, nice! A two-wheeled commute is a great way to start the day. Did things stay busy once you got to the fintech office?\""
+        }
+      },
+      {
+        "day": 85,
+        "date": "2026-05-24",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-24.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! How has your Sunday been in Pittsburgh? Have you had any time to step away from your backend engineering work at the startup, or has it been a busy weekend?\""
+        }
+      },
+      {
+        "day": 85,
+        "date": "2026-05-24",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-24.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"No, today was strictly a non-active day. I decided to completely avoid any physical exercise and just give my muscles a full break from bouldering. On the other hand, my coworker Dana, who is still hard at work training for her upcoming triathlon, messaged me that she did a brutal three-hour cycling session in the rain today.\""
+        }
+      },
+      {
+        "day": 85,
+        "date": "2026-05-24",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-24.json",
+          "line_start": 49,
+          "line_end": 49,
+          "json_pointer": "/turns/10/text",
+          "excerpt": "      \"text\": \"A 1:00 AM bedtime is rough when you have work the next day! I hope you can sleep soundly once you do shut your eyes. Despite the hectic weekend, is everything else going well for you in Pittsburgh?\""
+        }
+      },
+      {
+        "day": 90,
+        "date": "2026-05-29",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-29.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, it's been a busy but good Friday. I actually decided to pedal my two-wheeler into the office today to get some fresh air. My coworker Dana usually joins me on her own bike, but she ended up taking the city bus today because she's so exhausted from her triathlon training.\""
+        }
+      },
+      {
+        "day": 90,
+        "date": "2026-05-29",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-29.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"Oh wow, I can imagine triathlon training takes a serious toll! It's great you still got to ride in, though. How are things looking on the backend engineering front today? Any major deployments before the weekend?\""
+        }
+      },
+      {
+        "day": 90,
+        "date": "2026-05-29",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-29.json",
+          "line_start": 33,
+          "line_end": 33,
+          "json_pointer": "/turns/6/text",
+          "excerpt": "      \"text\": \"Ha, homemade ramen is quite the project! Ordering some fresh sushi to enjoy on the couch sounds like the perfect way to unwind after a long week. Do you have any plans to play some piano this weekend, or is it going to be a completely lazy couple of days?\""
+        }
+      },
+      {
+        "day": 90,
+        "date": "2026-05-29",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-29.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"I'll probably spend a little time at the keys tomorrow. I've been trying to smooth out a tricky transition in a classical piece I've been practicing, so a quiet Saturday morning with some coffee and the piano sounds perfect.\""
+        }
+      },
+      {
+        "day": 90,
+        "date": "2026-05-29",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-29.json",
+          "line_start": 41,
+          "line_end": 41,
+          "json_pointer": "/turns/8/text",
+          "excerpt": "      \"text\": \"That sounds like a wonderful, peaceful Saturday morning. Is it a piece you've been working on for a while?\""
+        }
+      },
+      {
+        "day": 91,
+        "date": "2026-05-30",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-30.json",
+          "line_start": 9,
+          "line_end": 9,
+          "json_pointer": "/turns/0/text",
+          "excerpt": "      \"text\": \"Hi Priya! How is your Saturday going over in Pittsburgh? Did you get a chance to play some piano or head over to the bouldering gym today?\""
+        }
+      },
+      {
+        "day": 91,
+        "date": "2026-05-30",
+        "speaker": "user",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-30.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hi! It's been a really nice, relaxing Saturday so far. I actually didn't have to travel to an office or do any commuting today, which was a fantastic change of pace. Instead, I kicked off my morning by going for a really long jog around the neighborhood. My coworker Dana, who is training for that triathlon, did a cycling session today, but I preferred just hitting the pavement.\""
+        }
+      },
+      {
+        "day": 91,
+        "date": "2026-05-30",
+        "speaker": "assistant",
+        "text_source": {
+          "file": "datasets/v2/u5/sessions/2026-05-30.json",
+          "line_start": 17,
+          "line_end": 17,
+          "json_pointer": "/turns/2/text",
+          "excerpt": "      \"text\": \"A long jog sounds like a wonderful way to start the weekend, and skipping the commute is always a plus. Did you end up doing any coding or did you mostly focus on your hobbies today?\""
+        }
+      }
+    ],
+    "agent_attribution_review": "User cycling cues are work commutes; workout cycling cues are about coworker Dana. No target-phase workout or stated exercise rotation specifies bike rides."
+  }
+]

@@ -1,0 +1,1015 @@
+[
+  {
+    "id": "u2_p202606_0024",
+    "user_id": "u2",
+    "original_id": "u2_q0289",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2026-06-30",
+    "viewpoint_day": 122,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 579,
+        "pointer": "/probes/3/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 584,
+        "pointer": "/probes/3/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 585,
+        "pointer": "/probes/3/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 586,
+        "pointer": "/probes/3/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 587,
+        "pointer": "/probes/3/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 590,
+        "pointer": "/probes/3/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 595,
+        "pointer": "/probes/3/questions/3/viewpoint_day"
+      }
+    },
+    "question": "When did Marcus's workout routine change from the gym weights / run routine to the gym weights / rest day / run / tennis routine?",
+    "observed": {
+      "answer": "2026-06-29",
+      "accept": [
+        "2026-06-29"
+      ],
+      "evidence_days": [
+        120,
+        121
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 122,
+      "first_distinguishing_date": "2026-06-30"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 798,
+        "pointer": "/regimes/4/id"
+      },
+      {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 801,
+        "pointer": "/regimes/4/start"
+      },
+      {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 802,
+        "pointer": "/regimes/4/end"
+      },
+      {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 804,
+        "pointer": "/regimes/4/rule"
+      },
+      {
+        "file": "datasets/v2/u2/world_state.json",
+        "line": 824,
+        "pointer": "/regimes/4/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u4_p202701_0060",
+    "user_id": "u4",
+    "original_id": "u4_q0198",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1700,
+        "pointer": "/probes/10/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1705,
+        "pointer": "/probes/10/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1706,
+        "pointer": "/probes/10/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1707,
+        "pointer": "/probes/10/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1708,
+        "pointer": "/probes/10/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1711,
+        "pointer": "/probes/10/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1716,
+        "pointer": "/probes/10/questions/2/viewpoint_day"
+      }
+    },
+    "question": "When did Daniel's workout routine change from the climbing gym / cycling / long ride / rest day / yoga routine to the climbing gym / long run / rest day / running / yoga routine?",
+    "observed": {
+      "answer": "2027-01-28",
+      "accept": [
+        "2027-01-28"
+      ],
+      "evidence_days": [
+        332,
+        334
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 345,
+      "first_distinguishing_date": "2027-02-08"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 686,
+        "pointer": "/regimes/9/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 689,
+        "pointer": "/regimes/9/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 690,
+        "pointer": "/regimes/9/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 692,
+        "pointer": "/regimes/9/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 712,
+        "pointer": "/regimes/9/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u4_p202710_0126",
+    "user_id": "u4",
+    "original_id": "u4_q0207",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-10-31",
+    "viewpoint_day": 610,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3984,
+        "pointer": "/probes/19/questions/4/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3989,
+        "pointer": "/probes/19/questions/4/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3990,
+        "pointer": "/probes/19/questions/4/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3991,
+        "pointer": "/probes/19/questions/4/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3992,
+        "pointer": "/probes/19/questions/4/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3995,
+        "pointer": "/probes/19/questions/4/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4000,
+        "pointer": "/probes/19/questions/4/viewpoint_day"
+      }
+    },
+    "question": "When did Daniel's work music routine change from the indie rock / jazz records routine to the ambient electronic / indie rock / jazz records routine?",
+    "observed": {
+      "answer": "2027-10-26",
+      "accept": [
+        "2027-10-26"
+      ],
+      "evidence_days": [
+        602,
+        605
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 606,
+      "first_distinguishing_date": "2027-10-27"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1641,
+        "pointer": "/regimes/20/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/20/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1645,
+        "pointer": "/regimes/20/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1647,
+        "pointer": "/regimes/20/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1667,
+        "pointer": "/regimes/20/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202606_0017",
+    "user_id": "u5",
+    "original_id": "u5_q0168",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2026-06-30",
+    "viewpoint_day": 122,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 444,
+        "pointer": "/probes/3/questions/6/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 449,
+        "pointer": "/probes/3/questions/6/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 450,
+        "pointer": "/probes/3/questions/6/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 451,
+        "pointer": "/probes/3/questions/6/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 452,
+        "pointer": "/probes/3/questions/6/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 459,
+        "pointer": "/probes/3/questions/6/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 464,
+        "pointer": "/probes/3/questions/6/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from the jazz vinyl / lo-fi beats routine to the film scores / lo-fi beats routine?",
+    "observed": {
+      "answer": "2026-06-18 (first observed 2026-06-22)",
+      "accept": [
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-21",
+        "2026-06-22"
+      ],
+      "evidence_days": [
+        107,
+        114
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 118,
+      "first_distinguishing_date": "2026-06-26"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1247,
+        "pointer": "/regimes/22/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1250,
+        "pointer": "/regimes/22/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1251,
+        "pointer": "/regimes/22/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1253,
+        "pointer": "/regimes/22/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1268,
+        "pointer": "/regimes/22/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202701_0068",
+    "user_id": "u5",
+    "original_id": "u5_q0154",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2000,
+        "pointer": "/probes/10/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2005,
+        "pointer": "/probes/10/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2006,
+        "pointer": "/probes/10/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2007,
+        "pointer": "/probes/10/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2008,
+        "pointer": "/probes/10/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2013,
+        "pointer": "/probes/10/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2018,
+        "pointer": "/probes/10/questions/1/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's workout routine change from the home HIIT workout / morning dog walk routine to the long trail run / morning dog walk / rest day / trail run routine?",
+    "observed": {
+      "answer": "2027-01-29 (first observed 2027-01-31)",
+      "accept": [
+        "2027-01-29",
+        "2027-01-30",
+        "2027-01-31"
+      ],
+      "evidence_days": [
+        333,
+        337
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 344,
+      "first_distinguishing_date": "2027-02-07"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 245,
+        "pointer": "/regimes/5/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 248,
+        "pointer": "/regimes/5/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 249,
+        "pointer": "/regimes/5/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 251,
+        "pointer": "/regimes/5/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 271,
+        "pointer": "/regimes/5/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202701_0069",
+    "user_id": "u5",
+    "original_id": "u5_q0379",
+    "type": "abstention",
+    "category": "gold_answer_mismatch_at_probe",
+    "kind": "reference_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2029,
+        "pointer": "/probes/10/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2034,
+        "pointer": "/probes/10/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2035,
+        "pointer": "/probes/10/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2036,
+        "pointer": "/probes/10/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2037,
+        "pointer": "/probes/10/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2040,
+        "pointer": "/probes/10/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2045,
+        "pointer": "/probes/10/questions/2/viewpoint_day"
+      }
+    },
+    "question": "Does Priya have any hobbies, and if so what?",
+    "observed": {
+      "answer": "bouldering, trail running",
+      "accept": [
+        "bouldering, trail running"
+      ],
+      "evidence_days": [
+        1,
+        331
+      ]
+    },
+    "expected": {
+      "answer": "bouldering, piano, trail running",
+      "accept": [
+        "bouldering, piano, trail running"
+      ]
+    },
+    "rationale": "Gold was generated for the final world but this relative/current question is asked at an earlier probe. The per-day active facts define the correct list at that viewpoint.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 42526,
+        "pointer": "/days/336/active_facts/hobbies"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 370
+      },
+      {
+        "file": "generator_v2/probing.py",
+        "line": 145
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202701_0069",
+    "user_id": "u5",
+    "original_id": "u5_q0379",
+    "type": "abstention",
+    "category": "accepted_answer_mismatch_at_probe",
+    "kind": "reference_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2029,
+        "pointer": "/probes/10/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2034,
+        "pointer": "/probes/10/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2035,
+        "pointer": "/probes/10/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2036,
+        "pointer": "/probes/10/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2037,
+        "pointer": "/probes/10/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2040,
+        "pointer": "/probes/10/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2045,
+        "pointer": "/probes/10/questions/2/viewpoint_day"
+      }
+    },
+    "question": "Does Priya have any hobbies, and if so what?",
+    "observed": [
+      "bouldering, trail running"
+    ],
+    "expected": {
+      "accept": [
+        "bouldering, piano, trail running"
+      ]
+    },
+    "rationale": "The acceptance list encodes the same stale/mismatched reference at this changed viewpoint.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 42526,
+        "pointer": "/days/336/active_facts/hobbies"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202701_0073",
+    "user_id": "u5",
+    "original_id": "u5_q0255",
+    "type": "fact_current",
+    "category": "gold_answer_mismatch_at_probe",
+    "kind": "reference_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2133,
+        "pointer": "/probes/10/questions/6/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2138,
+        "pointer": "/probes/10/questions/6/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2139,
+        "pointer": "/probes/10/questions/6/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2140,
+        "pointer": "/probes/10/questions/6/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2141,
+        "pointer": "/probes/10/questions/6/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2144,
+        "pointer": "/probes/10/questions/6/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2149,
+        "pointer": "/probes/10/questions/6/viewpoint_day"
+      }
+    },
+    "question": "What are Priya's current hobbies?",
+    "observed": {
+      "answer": "bouldering, trail running",
+      "accept": [
+        "bouldering, trail running"
+      ],
+      "evidence_days": [
+        1,
+        331
+      ]
+    },
+    "expected": {
+      "answer": "bouldering, piano, trail running",
+      "accept": [
+        "bouldering, piano, trail running"
+      ]
+    },
+    "rationale": "Gold was generated for the final world but this relative/current question is asked at an earlier probe. The per-day active facts define the correct list at that viewpoint.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 42526,
+        "pointer": "/days/336/active_facts/hobbies"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 370
+      },
+      {
+        "file": "generator_v2/probing.py",
+        "line": 145
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202701_0073",
+    "user_id": "u5",
+    "original_id": "u5_q0255",
+    "type": "fact_current",
+    "category": "accepted_answer_mismatch_at_probe",
+    "kind": "reference_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2133,
+        "pointer": "/probes/10/questions/6/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2138,
+        "pointer": "/probes/10/questions/6/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2139,
+        "pointer": "/probes/10/questions/6/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2140,
+        "pointer": "/probes/10/questions/6/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2141,
+        "pointer": "/probes/10/questions/6/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2144,
+        "pointer": "/probes/10/questions/6/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2149,
+        "pointer": "/probes/10/questions/6/viewpoint_day"
+      }
+    },
+    "question": "What are Priya's current hobbies?",
+    "observed": [
+      "bouldering, trail running"
+    ],
+    "expected": {
+      "accept": [
+        "bouldering, piano, trail running"
+      ]
+    },
+    "rationale": "The acceptance list encodes the same stale/mismatched reference at this changed viewpoint.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 42526,
+        "pointer": "/days/336/active_facts/hobbies"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202702_0078",
+    "user_id": "u5",
+    "original_id": "u5_q0170",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-02-28",
+    "viewpoint_day": 365,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2346,
+        "pointer": "/probes/11/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2351,
+        "pointer": "/probes/11/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2352,
+        "pointer": "/probes/11/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2353,
+        "pointer": "/probes/11/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2354,
+        "pointer": "/probes/11/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2357,
+        "pointer": "/probes/11/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2362,
+        "pointer": "/probes/11/questions/1/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 351,
+      "first_distinguishing_date": "2027-02-14"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_r202708_0189",
+    "user_id": "u5",
+    "original_id": "u5_q0170",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-08-31",
+    "viewpoint_day": 549,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3827,
+        "pointer": "/probes/17/questions/11/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3832,
+        "pointer": "/probes/17/questions/11/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3833,
+        "pointer": "/probes/17/questions/11/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3834,
+        "pointer": "/probes/17/questions/11/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3835,
+        "pointer": "/probes/17/questions/11/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3838,
+        "pointer": "/probes/17/questions/11/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3843,
+        "pointer": "/probes/17/questions/11/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 351,
+      "first_distinguishing_date": "2027-02-14"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  }
+]

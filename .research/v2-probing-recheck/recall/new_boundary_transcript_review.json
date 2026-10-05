@@ -1,0 +1,1918 @@
+{
+  "question_id": "u4_p202712_0152",
+  "record": {
+    "question_id": "u4_p202712_0152",
+    "original_id": "u4_q0071",
+    "user_id": "u4",
+    "probe_date": "2027-12-31",
+    "viewpoint_day": 671,
+    "target_date": "2027-12-19",
+    "target_day": 659,
+    "domain": "music",
+    "question": "What was Daniel's work music on Sunday, 2027-12-19?",
+    "reference_answer": "jazz records",
+    "accept": [
+      "jazz records"
+    ],
+    "target_truth": "jazz records",
+    "independent_base": "jazz records",
+    "target_phase": [
+      "sun"
+    ],
+    "regime_id": "music.r3",
+    "regime_start_day": 605,
+    "regime_end_day": 659,
+    "first_observation_day": 605,
+    "target_mentioned": false,
+    "target_has_session": true,
+    "exception": false,
+    "tags": [
+      "inferred",
+      "boundary"
+    ],
+    "is_retrospective": false,
+    "evidence_days": [
+      617,
+      631,
+      652
+    ],
+    "expected_evidence_days": [
+      617,
+      631,
+      652
+    ],
+    "same_phase_observed_days": [
+      617,
+      631,
+      652
+    ],
+    "same_phase_observed_by_probe": [
+      617,
+      631,
+      652
+    ],
+    "evidence_method": "same_phase",
+    "direct_transcript_support": null,
+    "checks": {
+      "weekday_matches_date": true,
+      "independent_rule_equals_world_base": true,
+      "nonexception_value_equals_rule": true,
+      "exception_differs_from_base": true,
+      "exception_in_persona": true,
+      "gold_equals_world_truth": true,
+      "accepted_values_equal_truth": true,
+      "copied_fields_match_original": true,
+      "tags_match_world": true,
+      "evidence_matches_updated_generator": true,
+      "nonempty_evidence": true,
+      "viewpoint_matches_probe": true,
+      "viewpoint_matches_date": true,
+      "target_not_after_viewpoint": true,
+      "evidence_not_after_target": true,
+      "evidence_not_after_viewpoint": true
+    },
+    "record_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line_start": 4814,
+      "line_end": 4840,
+      "json_pointer": "/probes/21/questions/9"
+    },
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line_start": 4820,
+      "line_end": 4820,
+      "json_pointer": "/probes/21/questions/9/question",
+      "excerpt": "          \"question\": \"What was Daniel's work music on Sunday, 2027-12-19?\","
+    },
+    "answer_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line_start": 4821,
+      "line_end": 4821,
+      "json_pointer": "/probes/21/questions/9/answer",
+      "excerpt": "          \"answer\": \"jazz records\","
+    },
+    "evidence_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line_start": 4826,
+      "line_end": 4830,
+      "json_pointer": "/probes/21/questions/9/evidence_days",
+      "excerpt": "          \"evidence_days\": [\n            617,\n            631,\n            652\n          ],"
+    },
+    "target_source": {
+      "file": "datasets/v2/u4/world_state.json",
+      "line_start": 72020,
+      "line_end": 72028,
+      "json_pointer": "/days/658/preferences/music",
+      "excerpt": "        \"music\": {\n          \"value\": \"jazz records\",\n          \"base_value\": \"jazz records\",\n          \"regime_id\": \"music.r3\",\n          \"is_exception\": false,\n          \"exception_reason\": null,\n          \"mentioned\": false,\n          \"mention_reason\": null\n        },"
+    },
+    "rule_source": {
+      "file": "datasets/v2/u4/world_state.json",
+      "line_start": 1647,
+      "line_end": 1658,
+      "json_pointer": "/regimes/20/rule",
+      "excerpt": "      \"rule\": {\n        \"type\": \"day_of_week\",\n        \"map\": {\n          \"mon\": \"jazz records\",\n          \"tue\": \"jazz records\",\n          \"wed\": \"ambient electronic\",\n          \"thu\": \"ambient electronic\",\n          \"fri\": \"indie rock\",\n          \"sat\": \"jazz records\",\n          \"sun\": \"jazz records\"\n        }\n      },"
+    }
+  },
+  "boundary_counterfactuals": {
+    "question_id": "u4_p202712_0152",
+    "user_id": "u4",
+    "domain": "music",
+    "target_day": 659,
+    "answer": "jazz records",
+    "old_regime_id": "music.r3",
+    "new_regime_id": "music.r4",
+    "last_old_observation": 657,
+    "hidden_new_start": 660,
+    "first_new_observation": 661,
+    "observed_days_checked": [
+      605,
+      606,
+      608,
+      616,
+      617,
+      618,
+      620,
+      621,
+      627,
+      631,
+      635,
+      639,
+      641,
+      646,
+      650,
+      652,
+      657,
+      661,
+      662,
+      664,
+      665,
+      667
+    ],
+    "counterfactual_starts": [
+      {
+        "candidate_start_day": 658,
+        "target_answer": "ambient electronic",
+        "mismatch_days": [
+          665
+        ]
+      },
+      {
+        "candidate_start_day": 659,
+        "target_answer": "ambient electronic",
+        "mismatch_days": []
+      },
+      {
+        "candidate_start_day": 660,
+        "target_answer": "jazz records",
+        "mismatch_days": []
+      },
+      {
+        "candidate_start_day": 661,
+        "target_answer": "jazz records",
+        "mismatch_days": [
+          667
+        ]
+      }
+    ],
+    "different_compatible_answer": true,
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line_start": 4820,
+      "line_end": 4820,
+      "json_pointer": "/probes/21/questions/9/question",
+      "excerpt": "          \"question\": \"What was Daniel's work music on Sunday, 2027-12-19?\","
+    },
+    "boundary_user_turns": [
+      {
+        "day": 657,
+        "turn_index": 1,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Actually, the studio has been pretty hectic, so no climbing gym for me lately. In fact, today is a complete break from my training. I'm just letting my muscles recover, with absolutely no physical exercise or running.\""
+        }
+      },
+      {
+        "day": 657,
+        "turn_index": 3,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did! But my morning routine was a bit different today. Usually, I just grab my jar of oats that I let soak overnight, but because I had to meet a prospective client face-to-face first thing, we ended up going to a local greasy spoon. I had a massive plate of scrambled eggs, crispy hash browns, and sourdough toast instead. Definitely a heavy detour from my normal breakfast, but it was a nice treat.\""
+        }
+      },
+      {
+        "day": 657,
+        "turn_index": 5,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"It did! I spent most of the afternoon drafting some concepts. To keep my focus, I put on a playlist full of lo-fi, underground guitar bands—you know, that classic independent, melodic college-radio sound from the late nineties. It's the perfect background noise for drawing.\""
+        }
+      },
+      {
+        "day": 657,
+        "turn_index": 7,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"We're staying in, and I'm actually making us dinner tonight. Ever since I got that wonderful cookbook filled with seafood and vegetarian recipes as a gift, I've completely overhauled my evening cooking routine. Tonight, I'm preparing a fresh fillet of salmon, getting it nice and charred on the grill pan.\""
+        }
+      },
+      {
+        "day": 657,
+        "turn_index": 9,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"Yeah, quite a few! Leah's been loving them too. It has a great section on marinades that really elevates the fish dishes. It's been fun experimenting after a long day of work.\""
+        }
+      },
+      {
+        "day": 657,
+        "turn_index": 11,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Oh, they're still practicing, but luckily they seem to stick to the late afternoons now, so it doesn't interrupt our dinner. Well, I should probably go start prepping the grill. Catch you later!\""
+        }
+      },
+      {
+        "day": 659,
+        "turn_index": 1,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-19.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a pretty relaxing Sunday. I spent the morning doing some mindful stretching and holding various poses on my mat to work on my flexibility and core. My body definitely needed that gentle flow after a busy week at the studio.\""
+        }
+      },
+      {
+        "day": 659,
+        "turn_index": 3,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-19.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Just did it in our living room here in Chicago. And the wrist actually felt completely fine! Since the cast came off and it fully healed, I've been careful, but today it didn't give me any trouble at all during planks or downward dogs.\""
+        }
+      },
+      {
+        "day": 659,
+        "turn_index": 5,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-19.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"She's actually resting today—her schedule at the hospital has been pretty demanding lately. But she did show me a clay bowl she made in her pottery class yesterday, which was cool to see!\""
+        }
+      },
+      {
+        "day": 659,
+        "turn_index": 7,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-19.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"She's really enjoying it. The bowl actually turned out pretty well, even if she thinks it's a bit lopsided. It'll be perfect for holding keys or small things by the door.\""
+        }
+      },
+      {
+        "day": 659,
+        "turn_index": 9,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-19.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"I actually played a couple of chess games online earlier, but mostly I've just been taking it easy. I'm actually about to start prepping dinner for Leah and me. I've got a big pot on the stove for a slow-simmered spicy bean stew packed with tomatoes and peppers, but completely free of meat.\""
+        }
+      },
+      {
+        "day": 659,
+        "turn_index": 11,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-19.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"It's actually my own recipe that I've tweaked over the years, though I did glance at the cookbook for some spice inspiration. I love letting it simmer for hours so all the flavors really build up.\""
+        }
+      },
+      {
+        "day": 659,
+        "turn_index": 13,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-19.json",
+          "line_start": 61,
+          "line_end": 61,
+          "json_pointer": "/turns/13/text",
+          "excerpt": "      \"text\": \"Thanks! Yeah, we have some client meetings lined up, but thankfully no more of those super early 7 am calls for now. It should be a nice, normal pace. Have a good evening!\""
+        }
+      },
+      {
+        "day": 661,
+        "turn_index": 1,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, it's definitely freezing out there. I stayed cozy inside this morning though. I had prepped some rolled oats in a jar with oat milk and chia seeds in the fridge last night, so I just grabbed that and ate it cold before heading out. Super quick and easy.\""
+        }
+      },
+      {
+        "day": 661,
+        "turn_index": 3,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"No early calls today, thankfully! I got to dress down quite a bit too. I just threw on a plain, pitch-black short-sleeve tee and my favorite pair of blue denim trousers before walking out the door.\""
+        }
+      },
+      {
+        "day": 661,
+        "turn_index": 5,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Definitely. I've had some texture-heavy, beatless synthesizer soundscapes looping in my headphones for the last few hours.\""
+        }
+      },
+      {
+        "day": 661,
+        "turn_index": 7,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"It feels totally back to normal! In fact, I actually took a break midday and headed over to the indoor facility to scale some synthetic bouldering routes. It felt so good to get back on the wall.\""
+        }
+      },
+      {
+        "day": 661,
+        "turn_index": 9,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"She is doing great, but yes, her pediatric shifts are pretty exhausting. Since she's working late tonight, I'm taking charge of dinner. I'm going to simmer a big pot of spiced, slow-cooked bean and tomato stew with jalapeños and bell peppers, completely meatless.\""
+        }
+      },
+      {
+        "day": 661,
+        "turn_index": 11,
+        "source": {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"I'm actually just winging it with my own spices this time, but I did flip through that book for some inspiration earlier. I think I'll have a hot bowl waiting for Leah when she gets home, and maybe sneak in a quick game of chess online while I wait.\""
+        }
+      }
+    ]
+  },
+  "all_22_observed_domain_days": [
+    {
+      "day": 605,
+      "date": "2027-10-26",
+      "base_value": "jazz records",
+      "value": "jazz records",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-26.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey there! It's going pretty well. I started the morning on a high note with a toasted hole-in-the-middle roll topped with cream cheese and some cold-cured pink fish. Definitely hit the spot. Now I'm just sitting at my desk keeping things low-key in a plain dark, short-sleeved cotton tee and my trusty blue denim trousers.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-26.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"We're actually making some headway on a new client proposal. To help me focus while sketching out some layout ideas, I've been spinning some old vinyl of syncopated, horn-heavy improvisational tunes on the turntable. It keeps the atmosphere in the room really relaxed.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-26.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Absolutely, I actually have plans to head over to the indoor bouldering facility later this afternoon to scale some synthetic routes. My wrist feels totally solid, so I'm excited to work on some of the trickier overhangs they've set up.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-26.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"She's doing well! Her schedule at the pediatric clinic is pretty demanding, but she's still managing to squeeze in her clay throwing sessions. We're actually planning to cook together tonight once we're both home.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-26.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"We are making some warm corn tortillas folded around grilled whitefish, shredded cabbage, and a squeeze of lime. It's one of our favorites to whip up on a weeknight.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-26.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Thanks! I'll catch up with you tomorrow and let you know how those overhanging routes went. Have a good evening!\""
+        }
+      ]
+    },
+    {
+      "day": 606,
+      "date": "2027-10-27",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-27.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey there. It's going pretty well! I started the morning on a healthy note. I whipped up a thick, blended fruit puree of strawberries and bananas, poured it into a deep dish, and covered it with a bunch of pumpkin seeds and granola. It was really satisfying.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-27.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did, though it wasn't what I originally planned. I ended up just going for a really long walk through the neighborhood. I was supposed to go for my usual run, but the fitness center where I normally go was completely closed for maintenance today, so I had to improvise on foot.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-27.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Yeah, I headed right over. I kept things incredibly casual with my clothes today. I'm just wearing a plain, collarless short-sleeve top in solid black, paired with some standard blue denim pants. It's very comfortable for sitting at the drafting table.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-27.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"Definitely. I've got some instrumental, texturized electronic soundscapes playing in my headphones. It's very atmospheric, lots of slow synths and absolutely no vocals. It really helps me block out distractions and get into a flow state.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-27.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"I actually brought my camera along on my long walk this morning! The autumn light hitting the brick buildings in Chicago right now is gorgeous, so I managed to capture a few neat street shots before the studio opened.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-27.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Me too. It was a nice way to slow down. Now I'm ready to tackle the rest of these floor plans. I'll catch up with you later!\""
+        }
+      ]
+    },
+    {
+      "day": 608,
+      "date": "2027-10-29",
+      "base_value": "indie rock",
+      "value": "indie rock",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-29.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, it's definitely getting chilly here. Today was a bit of a whirlwind, but I started it off on a high note. I grabbed one of those crescent-shaped, flaky French pastries from the bakery down the street to have with my morning coffee.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-29.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"It definitely did. I plugged in my headphones and put on a playlist of underground, independent guitar bands to keep me focused while drafting some blueprints.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-29.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"She loves it, though she's exhausted. She actually went straight to her pottery class after her shift tonight, so she's having some creative downtime.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-29.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"Actually, tonight was a total exception to that. A client consultation ran incredibly late, so I ended up bypassing the evening meal entirely. I didn't get to eat a single bite of supper.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-29.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"Yeah, my stomach is definitely protesting right now. I'll have to find a big breakfast tomorrow. On the bright side, my brother Kwame called me from Atlanta while I was packing up.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-29.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"He is! He's putting in serious mileage. Speaking of noise, our neighbor has just started blasting that trumpet again. It's making it hard to unwind.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-10-29.json",
+          "line_start": 61,
+          "line_end": 61,
+          "json_pointer": "/turns/13/text",
+          "excerpt": "      \"text\": \"Me too. I think I'm just going to drink a big glass of water, ignore the noise, and head straight to bed. Talk to you tomorrow!\""
+        }
+      ]
+    },
+    {
+      "day": 616,
+      "date": "2027-11-06",
+      "base_value": "jazz records",
+      "value": "jazz records",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-06.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's going pretty well. I actually just got back from a major endurance run on the pavement—spent a couple of hours clocking quite a few miles today to build up my distance.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-06.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Yeah, it feels completely normal now, thankfully. I actually had to head over to the studio early today because we've officially started holding client calls at 7:00 AM.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-06.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Yes, we just kicked it off to accommodate some tight project timelines. It's tough waking up that early, but being at my desk before sunrise does have a quiet kind of peace to it.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-06.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"Definitely. I ended up spinning some of those vintage swing and bebop vinyls from my grandfather's collection while I worked.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-06.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"It really helps me focus. Now that I'm back home, I'm getting things ready for dinner. I think I'm going to cook some fresh fillets of that classic pink-fleshed fish over the hot coals of the barbecue.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-06.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Just some simple lemon, dill, and garlic. Leah is at her pottery class right now, so I'm going to prep everything now so it's ready when she gets home.\""
+        }
+      ]
+    },
+    {
+      "day": 617,
+      "date": "2027-11-07",
+      "base_value": "jazz records",
+      "value": "jazz records",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-07.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been really nice and relaxing. Leah and I actually sat down for a big, lazy late-morning feast together earlier today. It was great to just slow down and catch up.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-07.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Not too many. After we ate, I decided to get some movement in, so I did a long session of mindful flow and deep stretching on my mat in the living room.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-07.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"It's actually feeling completely normal now! No pain or stiffness at all, which is a huge relief. I did have to head into the studio for a bit this afternoon to look over some drawings, though.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-07.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"It was completely empty, which was perfect. The weather here in Chicago is absolutely miserable today, though. Because of the heavy storms, I had to wear my waterproof hooded outerwear and some sturdy denim pants. It was a big departure from my usual plain black short-sleeved shirt and denim combination, but I definitely needed the protection from the rain.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-07.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"I did. I brought in a stack of those classic mid-century horn and piano LPs from my grandfather's vinyl collection and kept them spinning on the turntable while I sketched. It made the whole office feel incredibly warm and focused.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-07.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Yeah, I wrapped up everything on my list. Now I'm back home, just taking it easy while Leah is out at her pottery class. I might jump online for a quick game of chess in a bit.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-07.json",
+          "line_start": 61,
+          "line_end": 61,
+          "json_pointer": "/turns/13/text",
+          "excerpt": "      \"text\": \"Thanks! I appreciate it. Talk to you later.\""
+        }
+      ]
+    },
+    {
+      "day": 618,
+      "date": "2027-11-08",
+      "base_value": "jazz records",
+      "value": "jazz records",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-08.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey there! Not too bad, though it was a bit of a rush this morning. I didn't want a heavy breakfast, so I blended up a thick, icy mix of frozen berries and bananas, poured it into a dish, and topped it with chia seeds and granola to eat with a spoon before heading out.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-08.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I actually did! Before eating, I laced up my sneakers and went for a brisk jog right along the path next to Lake Michigan. The chilly wind coming off the water was intense, but it definitely got my blood pumping.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-08.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"It was mostly drafting and internal reviews, so I didn't need to dress up at all. I just kept it ultra-casual with a plain, pitch-black short-sleeved cotton tee and a pair of dark blue denim pants.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-08.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"I did. I brought a few of those old mid-century brass and piano LPs from my grandfather's collection into the office. I put them on the turntable and let those smooth, improvisational instrumental grooves play while I worked. It was perfect.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-08.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"She is! She actually has a class tomorrow night. Today she's busy at the hospital, but we're planning to cook together when we both get home tonight.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-08.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"We're going to put our culinary class skills to use and whip up some stir-fried flat rice noodles with bean sprouts and crushed peanuts. Since I don't eat meat, we're tossing in some fresh prawns to finish it off.\""
+        }
+      ]
+    },
+    {
+      "day": 620,
+      "date": "2027-11-10",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-10.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yeah, we had one of those early sessions today. It went pretty smoothly, actually. Before I headed out, I grabbed a jar of cold rolled oats that had been soaking in milk in the fridge overnight. It was quick and hit the spot.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-10.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Yes, we're transitioning into the next phases for a couple of clients. To keep myself focused while sketching out some details, I've had some beatless, atmospheric synthesizer soundscapes playing in my headphones. Those textured, wordless electronic tracks really help me lock in.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-10.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"He is! He's really dedicated to it. His updates actually motivated me to get moving today, so I laced up my sneakers and logged several miles out on the pavement this afternoon. It felt great to get my heart rate up.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-10.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"No trouble at all, thankfully. It feels completely back to normal. I'm actually thinking about checking out that new climbing gym across town sometime this weekend to really test it out.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-10.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"She'll probably skip the climbing. She actually has her pottery class this evening, so she's fully focused on her clay projects right now. She's working on a set of bowls this week.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-10.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Definitely. I'm about to dive back into this floor plan now. Talk to you later!\""
+        }
+      ]
+    },
+    {
+      "day": 621,
+      "date": "2027-11-11",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-11.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, pretty busy, but I started the morning on a good, relaxed note. I actually prepped breakfast last night—just had some cold rolled oats that had been soaking in oat milk in a jar in the fridge. Saved me a ton of time.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-11.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I went into the office. I had a few client meetings, though I dressed pretty casually for them. I just threw on a plain dark, ink-colored tee and some dark blue denim trousers. It's basically my daily uniform.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-11.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Definitely. I put my headphones on and queued up some beatless, synthesized soundscapes—lots of textured, spacey instrumental synth tracks that really help me focus without getting distracted by lyrics.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-11.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"I did! I headed over to the indoor facility with the artificial rock walls to tackle a few bouldering routes. It felt great to move around.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-11.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"Yeah, it feels completely strong and fully recovered. No issues at all on the wall today, thankfully. I'm just getting back home now, actually.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-11.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Very low-key tonight. We're just boiling up some wheat noodles to toss with a fresh tomato and basil sauce, maybe a side salad. Easy comfort food.\""
+        }
+      ]
+    },
+    {
+      "day": 627,
+      "date": "2027-11-17",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-17.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, it's pretty packed with design work today. To help me focus while drafting, I've been playing some atmospheric, beatless synthesizer tracks in the background.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-17.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Definitely casual. I'm just wearing an obsidian-colored short-sleeve tee paired with my usual dark denim trousers today.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-17.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"I did! I stepped out during my break and did some outdoor jogging to get my daily cardio session in.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-17.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"It's feeling completely normal, thanks! The fracture healed up perfectly, so no issues at all when I'm active.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-17.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"Leah actually has her pottery class this evening, so I'm cooking for myself. I'm whipping up a spicy, green-tinted Thai curry with coconut broth and cubes of bean curd.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-17.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"She's really enjoying it! She brings home all sorts of interesting bowls and mugs. It's a nice way for her to unwind after long shifts at the hospital.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-17.json",
+          "line_start": 61,
+          "line_end": 61,
+          "json_pointer": "/turns/13/text",
+          "excerpt": "      \"text\": \"Thanks! I appreciate it. Speak to you tomorrow.\""
+        }
+      ]
+    },
+    {
+      "day": 631,
+      "date": "2027-11-21",
+      "base_value": "jazz records",
+      "value": "jazz records",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-21.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a pretty low-key day, which is exactly what I needed. I started the morning off with some cold oats that I’d mixed up in a jar last night and left to soak in the fridge, so breakfast was incredibly easy.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-21.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Actually, I decided to take a complete break from any physical activity today and skipped my usual yoga session. I've just been feeling really run down and exhausted the past couple of days, so I figured my body needed some genuine downtime.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-21.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"She has a shift today, so it's just me. I've been doing some light sketching and administrative stuff for the studio at my desk. To keep me focused, I've been spinning some of those old bebop and classic brass albums from my grandfather's collection on the turntable.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-21.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"Yeah, keeping it simple tonight though. I'm just going to chop up some butternut squash, carrots, and brussels sprouts, toss them in olive oil, and bake them on a sheet pan in the oven until they get caramelized and crispy.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-21.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"I haven't picked up my camera in a couple of weeks, honestly. With work being busy and trying to recover my energy, I've just been sticking to indoor stuff. I did play a few chess games online yesterday, though.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-21.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Thanks! I'm looking forward to just eating, reading a bit, and getting to bed early. Talk to you later!\""
+        }
+      ]
+    },
+    {
+      "day": 635,
+      "date": "2027-11-25",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-25.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It is incredibly stormy and wet out there today. Because of the torrential downpour, I actually had to change up my clothing choice. Usually, I just wear my standard black short-sleeve tee paired with denim pants, but today I had to throw on a waterproof hooded shell over my denim to avoid getting completely soaked on my way in.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-25.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did. I wanted something quick that didn't require any cooking, so I just grabbed the jar of rolled oats and almond milk that I'd left to soak in the fridge overnight. It was cold and ready to go.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-25.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Yes, we are sketching out some structural ideas. To help me focus through the noise of the rain, I've got my headphones on listening to some lyric-free synthesizer soundscapes. The textured, atmospheric electronic beats are exactly what I need to lock in.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-25.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"My wrist feels completely back to normal, luckily! In fact, I made a trip over to the indoor bouldering facility to scale some of the artificial routes they have set up. It felt great to get a solid grip workout in.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-25.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"I actually decided to head over to the new one across town. They have some really interesting overhangs and modern route settings, so it was fun to mix things up.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-25.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"She's doing really well. Her schedule at the hospital is hectic, but she still makes time for pottery. She actually brought home a slightly lopsided clay bowl she made the other day, which we're currently using to hold our keys.\""
+        }
+      ]
+    },
+    {
+      "day": 639,
+      "date": "2027-11-29",
+      "base_value": "jazz records",
+      "value": "jazz records",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-29.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's starting off pretty well. I actually had a great breakfast to fuel up—I toasted a yeast roll with a hole in the center, spread some cream cheese on it, and topped it with some lox. Hits the spot on a chilly morning.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-29.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did! I bundled up and went for a brisk jog right along the shoreline of Lake Michigan. The water was incredibly still, though the wind was definitely biting.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-29.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Honestly, I kept it super simple since I don't have any client meetings today. I'm just wearing a pitch-black, short-sleeved tee and my favorite pair of blue denim trousers. Very low-key.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-29.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"Actually, yes. I have the turntable going in my office. I'm spinning some vintage vinyl LPs from my grandfather's collection—specifically some classic Miles Davis and Duke Ellington albums. It really helps me focus.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-29.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"She is! She actually brought home a small vase last week. It's a bit lopsided, but we love it. Between her shifts at the hospital and pottery, she's keeping busy.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-11-29.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"I actually brought my camera along on my shoreline jog this morning. Caught some gorgeous light hitting the skyline, so I'm hoping to edit those photos later today.\""
+        }
+      ]
+    },
+    {
+      "day": 641,
+      "date": "2027-12-01",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-01.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yeah, we did have a 7 AM call, so it was a bit of a rush getting out the door. Thankfully, I didn't have to spend any time cooking breakfast. I just grabbed those rolled oats I'd left to soak in a jar of milk in the fridge overnight and ate them at my desk.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-01.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"It's been pretty intense with some drafting deadlines. To keep my head down and block out the studio noise, I've had some wordless, textured synthesizer soundscapes playing in my headphones all afternoon. It really helps me zone in.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-01.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Yeah, she's actually getting home a bit earlier from the hospital today. She was telling me her pediatric patients have been keeping her on her toes, but she's still finding energy for her pottery class. She brought home another slightly lopsided mug yesterday!\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-01.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"We are actually cooking together. I'm planning to make a spicy, herbal coconut-milk stew using green chili paste, and I'll throw in some pan-seared soy curd cubes for the protein.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-01.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"It really is. It's nice to actually use those techniques, and it fits perfectly with my pescatarian lifestyle. Leah is looking forward to it too.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-01.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"He's doing really well! He was saying his long runs are getting easier, though he's still adjusting to the southern weather. Anyway, I should probably head out and get started on dinner prep.\""
+        }
+      ]
+    },
+    {
+      "day": 646,
+      "date": "2027-12-06",
+      "base_value": "jazz records",
+      "value": "jazz records",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-06.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey there. It's been pretty busy, but I've been keeping focused by spinning some of those vintage bebop and swing vinyl albums from my grandfather's stash while drawing up some building plans.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-06.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Honestly, the music completely drowned out the trumpet playing today, which was a huge relief. Between that and our early 7 am client calls, it's been a very full day, so I'm looking forward to a relaxing evening.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-06.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Actually, I'm on dinner duty tonight. I decided to recreate that stir-fried rice noodle dish with tamarind sauce, bean sprouts, and prawns that we learned to make in our Thai culinary class.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-06.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"Yeah, our local market had some really fresh seafood, so I got lucky. Leah's going to be thrilled when she gets home from her pottery class to a hot meal.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-06.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"The studio has been demanding, but I did manage to take my camera out over the weekend to capture some of the winter light reflecting off the high-rises downtown.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-06.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Thanks! I'm off to get the wok ready. Talk to you tomorrow!\""
+        }
+      ]
+    },
+    {
+      "day": 650,
+      "date": "2027-12-10",
+      "base_value": "indie rock",
+      "value": "indie rock",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-10.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It is pretty chilly today, but I'm staying warm. I actually had a nice, slow start this morning with a cold oat mixture I prepped in a jar last night. It was nice not having to cook anything right after waking up.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-10.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did, yeah. Since it was so early, I kept things as simple as possible when getting dressed. I just threw on some dark denim pants and a plain black short-sleeved cotton tee.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-10.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Yeah, I've got some tunes playing from some independent, guitar-heavy alternative bands. It's the perfect background noise to keep me energized while working through these floor plans.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-10.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"He sure is! He looks like he's about to present to a corporate board, which is hilarious next to my casual tee. It's a running joke now.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-10.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"We're actually keeping it low-key tonight. Leah has had a busy week at the hospital, so I offered to make dinner. I'm going to whip up some deep-fried battered whitefish with a side of crispy potato wedges.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-10.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Exactly, it's one of my absolute favorite comfort meals to make. It's going to be a relaxing night.\""
+        }
+      ]
+    },
+    {
+      "day": 652,
+      "date": "2027-12-12",
+      "base_value": "jazz records",
+      "value": "jazz records",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-12.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It's been a really nice, slow Sunday so far. I'm actually doing some light sketching for a client project while spinning some of my grandfather's old vinyl LPs—the classic mid-century brass and piano improvisational stuff, like Miles Davis.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-12.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"It really is. The warm sound of those vintage albums is perfect for a cozy afternoon. Speaking of nice surprises, I actually got a package in the mail today from my brother Kwame. He sent me a gorgeous culinary book all about preparing fish, shellfish, and plant-based dishes.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-12.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"I have! The photography is beautiful, and there are so many creative flavor combinations. I actually decided I'm going to cook something inspired by one of its simpler chapters tonight.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-12.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"I'm keeping it pretty simple and comforting. I'm chopping up a big medley of seasonal root produce, squash, and Brussels sprouts, tossing them in olive oil and rosemary, and baking them on a sheet pan in a hot oven until they're all caramelized and tender.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-12.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"Yes, she definitely will. She's actually at her pottery class right now, but she'll be back in time for us to eat together. I think she'll appreciate a warm, hearty meal after working with cold clay all afternoon.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-12.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Fortunately, we've wrapped up those early morning sessions for the year, so my Sundays are much more peaceful now. Just enjoying the music and the warm kitchen.\""
+        }
+      ]
+    },
+    {
+      "day": 657,
+      "date": "2027-12-17",
+      "base_value": "indie rock",
+      "value": "indie rock",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Actually, the studio has been pretty hectic, so no climbing gym for me lately. In fact, today is a complete break from my training. I'm just letting my muscles recover, with absolutely no physical exercise or running.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did! But my morning routine was a bit different today. Usually, I just grab my jar of oats that I let soak overnight, but because I had to meet a prospective client face-to-face first thing, we ended up going to a local greasy spoon. I had a massive plate of scrambled eggs, crispy hash browns, and sourdough toast instead. Definitely a heavy detour from my normal breakfast, but it was a nice treat.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"It did! I spent most of the afternoon drafting some concepts. To keep my focus, I put on a playlist full of lo-fi, underground guitar bands—you know, that classic independent, melodic college-radio sound from the late nineties. It's the perfect background noise for drawing.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"We're staying in, and I'm actually making us dinner tonight. Ever since I got that wonderful cookbook filled with seafood and vegetarian recipes as a gift, I've completely overhauled my evening cooking routine. Tonight, I'm preparing a fresh fillet of salmon, getting it nice and charred on the grill pan.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"Yeah, quite a few! Leah's been loving them too. It has a great section on marinades that really elevates the fish dishes. It's been fun experimenting after a long day of work.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-17.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Oh, they're still practicing, but luckily they seem to stick to the late afternoons now, so it doesn't interrupt our dinner. Well, I should probably go start prepping the grill. Catch you later!\""
+        }
+      ]
+    },
+    {
+      "day": 661,
+      "date": "2027-12-21",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! Yes, it's definitely freezing out there. I stayed cozy inside this morning though. I had prepped some rolled oats in a jar with oat milk and chia seeds in the fridge last night, so I just grabbed that and ate it cold before heading out. Super quick and easy.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"No early calls today, thankfully! I got to dress down quite a bit too. I just threw on a plain, pitch-black short-sleeve tee and my favorite pair of blue denim trousers before walking out the door.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Definitely. I've had some texture-heavy, beatless synthesizer soundscapes looping in my headphones for the last few hours.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"It feels totally back to normal! In fact, I actually took a break midday and headed over to the indoor facility to scale some synthetic bouldering routes. It felt so good to get back on the wall.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"She is doing great, but yes, her pediatric shifts are pretty exhausting. Since she's working late tonight, I'm taking charge of dinner. I'm going to simmer a big pot of spiced, slow-cooked bean and tomato stew with jalapeños and bell peppers, completely meatless.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-21.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"I'm actually just winging it with my own spices this time, but I did flip through that book for some inspiration earlier. I think I'll have a hot bowl waiting for Leah when she gets home, and maybe sneak in a quick game of chess online while I wait.\""
+        }
+      ]
+    },
+    {
+      "day": 662,
+      "date": "2027-12-22",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-22.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Hey! It is pretty freezing today, but I'm managing. I actually had a nice cold start to the morning—I ate that jar of rolled oats and chia seeds I'd left soaking in milk in the fridge overnight. It was surprisingly refreshing despite the chill.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-22.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I did! I bundled up, laced up my sneakers, and went out to log a few miles on foot around the neighborhood. It was brisk, but getting a good jog in always wakes me up.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-22.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"He's doing great, loving the warmer southern weather for his runs. My wrist felt completely fine too, which is always a relief after that fracture earlier this year.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-22.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"We're in deep focus mode today. I've got my headphones on, playing some texturally rich, beatless synthesizer soundscapes to keep me in the zone while I review plans.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-22.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"Mostly solo work today, thankfully. No 7 AM calls this morning! Though I did take a quick break to play a 10-minute game of chess online to clear my head.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-22.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"I did, actually! Found a nice tactical sequence near the end. Leah's also having a relaxing day—she's planning to head to her pottery class later this evening to work on some new mugs.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-22.json",
+          "line_start": 61,
+          "line_end": 61,
+          "json_pointer": "/turns/13/text",
+          "excerpt": "      \"text\": \"Thanks! I'm sure she will. I'm going to get back to these soundscapes and finish up this floor plan. Talk to you later!\""
+        }
+      ]
+    },
+    {
+      "day": 664,
+      "date": "2027-12-24",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-24.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Happy Christmas Eve! It's pretty quiet. I did go into the studio for a bit to clear off my desk, but I kept it very casual. I'm just wearing an ink-colored short-sleeved tee and some comfortable blue denim pants. Before I left the house, I had a great breakfast—a toasted circular roll with cream cheese and cold-smoked pink fish.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-24.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"It's mostly just me today, which is actually really peaceful. I've got some music on to keep me focused while I work—some atmospheric, beatless synthesizer soundscapes playing in the background. It helps me focus without any distracting lyrics.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-24.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"I'm actually taking a complete pass on any physical exercise today. My body needs a break, so I'm making it a total recovery day. My wrist has been feeling great since it healed, but I still want to be careful not to overdo it.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-24.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"She actually has a shift today, which is tough on Christmas Eve, but we're planning to make a nice dinner once she gets home. I'm going to prepare a fresh pink-fleshed fish filet on the indoor grates for us tonight.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-24.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"I'm definitely hoping to bundle up and take some photographs of the city streets if we get some fresh snow. Chicago is always so photogenic during the holidays.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-24.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Thanks! I'm going to finish up here, head home, and put on one of my grandfather's old records. Have a wonderful holiday!\""
+        }
+      ]
+    },
+    {
+      "day": 665,
+      "date": "2027-12-25",
+      "base_value": "ambient electronic",
+      "value": "ambient electronic",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-25.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Thanks! It's a pretty quiet morning here. I actually started things off early by bundling up and heading out for a multi-hour endurance jog covering a massive distance on foot. The wind off the lake was freezing, but it felt great to get those high-digit miles in.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-25.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"Actually, I went the opposite route. I had prepped a cold jar of rolled oats soaked in milk overnight, so I just grabbed that from the fridge and ate it straight away. It's super convenient when I don't want to cook.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-25.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"Leah is actually resting up right now—her schedule as a pediatrician at the hospital has been pretty exhausting lately. I'm taking the opportunity to knock out a bit of studio work at my desk. I'm dressed super casually today, just wearing an ink-dark short-sleeve crewneck and a pair of classic blue denim trousers.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-25.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"It is. To help me zone in, I've got some lyricless, beat-driven synth textures that just drift in the background. It's very repetitive and atmospheric, perfect for working on architectural layouts without getting distracted.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-25.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"Oh, the wrist is completely fine now, totally healed. I actually went to check out that new climbing gym across town recently. The bouldering routes there are really interesting, so I've been enjoying getting back into the flow of it.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-25.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"We actually managed to squeeze in a game last night. She absolutely destroyed me with a brilliant knight maneuver. Even when she's tired, she's a tough opponent to beat!\""
+        }
+      ]
+    },
+    {
+      "day": 667,
+      "date": "2027-12-27",
+      "base_value": "classical",
+      "value": "classical",
+      "user_turns": [
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-27.json",
+          "line_start": 13,
+          "line_end": 13,
+          "json_pointer": "/turns/1/text",
+          "excerpt": "      \"text\": \"Morning! To be honest, I'm starting things off pretty slowly today. I felt completely drained when my alarm went off, so I decided to skip my usual run along the lakefront and just make today a total physical recovery day. For breakfast, I just grabbed a jar of cold, pre-soaked rolled oats that I'd left in the fridge overnight.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-27.json",
+          "line_start": 21,
+          "line_end": 21,
+          "json_pointer": "/turns/3/text",
+          "excerpt": "      \"text\": \"I'm actually heading into the studio shortly, but I'm keeping things incredibly low-key. I didn't even want to think about getting dressed up, so I just threw on a plain dark short-sleeve tee and a pair of basic blue denim trousers.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-27.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer": "/turns/5/text",
+          "excerpt": "      \"text\": \"It's actually pretty quiet, which I'm grateful for. To keep the atmosphere calm while I work on some sketches, I’ve got some instrumental chamber music and old orchestral symphonies playing in the background. It really helps me focus without draining my brain.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-27.json",
+          "line_start": 37,
+          "line_end": 37,
+          "json_pointer": "/turns/7/text",
+          "excerpt": "      \"text\": \"The wrist is completely fine, thankfully! It healed up great, though I haven't been climbing much this past week. I might try to set up a chess game with a friend later this week instead to keep things low-impact.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-27.json",
+          "line_start": 45,
+          "line_end": 45,
+          "json_pointer": "/turns/9/text",
+          "excerpt": "      \"text\": \"She's actually working quite a bit at the clinic this week, but she's still finding time to head to her pottery studio when she can. She's really enjoying making things by hand.\""
+        },
+        {
+          "file": "datasets/v2/u4/sessions/2027-12-27.json",
+          "line_start": 53,
+          "line_end": 53,
+          "json_pointer": "/turns/11/text",
+          "excerpt": "      \"text\": \"Thankfully, those are completely on pause until the new year. I don't think I could have handled a 7 AM call today feeling this tired! Just hoping to power through today in my jeans and t-shirt and get some rest tonight.\""
+        }
+      ]
+    }
+  ],
+  "target_all_turns": [
+    {
+      "speaker": "assistant",
+      "text": "Hello Daniel! Happy Sunday. How has your weekend been going? Did you get up to much today?"
+    },
+    {
+      "speaker": "user",
+      "text": "Hey! It's been a pretty relaxing Sunday. I spent the morning doing some mindful stretching and holding various poses on my mat to work on my flexibility and core. My body definitely needed that gentle flow after a busy week at the studio."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds like a wonderful way to ease into the day. Did you do that at home, or did you head out? And how is your wrist holding up during those weight-bearing poses now?"
+    },
+    {
+      "speaker": "user",
+      "text": "Just did it in our living room here in Chicago. And the wrist actually felt completely fine! Since the cast came off and it fully healed, I've been careful, but today it didn't give me any trouble at all during planks or downward dogs."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That's fantastic news! It must be such a relief to have that strength back, especially for your climbing. Has Leah joined you for any of these sessions, or is she busy with her new pediatrician role?"
+    },
+    {
+      "speaker": "user",
+      "text": "She's actually resting today—her schedule at the hospital has been pretty demanding lately. But she did show me a clay bowl she made in her pottery class yesterday, which was cool to see!"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that's great! How is her pottery coming along? It must be nice for her to have a creative outlet like that outside of the hospital."
+    },
+    {
+      "speaker": "user",
+      "text": "She's really enjoying it. The bowl actually turned out pretty well, even if she thinks it's a bit lopsided. It'll be perfect for holding keys or small things by the door."
+    },
+    {
+      "speaker": "assistant",
+      "text": "There's a special charm to handmade things! Speaking of hobbies, did you get any chance to do some photography or work on your chess game this weekend?"
+    },
+    {
+      "speaker": "user",
+      "text": "I actually played a couple of chess games online earlier, but mostly I've just been taking it easy. I'm actually about to start prepping dinner for Leah and me. I've got a big pot on the stove for a slow-simmered spicy bean stew packed with tomatoes and peppers, but completely free of meat."
+    },
+    {
+      "speaker": "assistant",
+      "text": "Oh, that sounds incredibly cozy and perfect for a chilly December evening in Chicago. Is that a recipe from that seafood and vegetarian cookbook you got as a gift, or one of your own creations?"
+    },
+    {
+      "speaker": "user",
+      "text": "It's actually my own recipe that I've tweaked over the years, though I did glance at the cookbook for some spice inspiration. I love letting it simmer for hours so all the flavors really build up."
+    },
+    {
+      "speaker": "assistant",
+      "text": "That sounds mouthwatering. Nothing beats a hearty stew when it's cold outside. I hope you and Leah have a wonderful evening enjoying that. Do you have a busy week ahead at the architecture studio?"
+    },
+    {
+      "speaker": "user",
+      "text": "Thanks! Yeah, we have some client meetings lined up, but thankfully no more of those super early 7 am calls for now. It should be a nice, normal pace. Have a good evening!"
+    }
+  ],
+  "full_pre_probe_music_date_cues": [
+    {
+      "day": 16,
+      "date": "2026-03-16",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2026-03-16.json",
+        "line_start": 21,
+        "line_end": 21,
+        "json_pointer": "/turns/3/text",
+        "excerpt": "      \"text\": \"It definitely did. We have a lot of drafting to get through this week, so I had to really put my head down. I stayed focused by putting on a curated playlist of independent guitar bands and non-mainstream alternative rock in my headphones.\""
+      }
+    },
+    {
+      "day": 35,
+      "date": "2026-04-04",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2026-04-04.json",
+        "line_start": 17,
+        "line_end": 17,
+        "json_pointer": "/turns/2/text",
+        "excerpt": "      \"text\": \"That sounds like the perfect uniform for a weekend design session. Do you usually put on some music to help you focus when you're working like that?\""
+      }
+    },
+    {
+      "day": 107,
+      "date": "2026-06-15",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2026-06-15.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"Actually, I switched things up today. Instead of my usual wordless background music, I listened to a spoken-word audio show while I worked. A friend of mine had strongly recommended a specific episode about sustainable architecture, so I decided to check it out.\""
+      }
+    },
+    {
+      "day": 217,
+      "date": "2026-10-03",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2026-10-03.json",
+        "line_start": 25,
+        "line_end": 25,
+        "json_pointer": "/turns/4/text",
+        "excerpt": "      \"text\": \"Comfortable clothes are essential for a weekend work session. Did you put on any music to help you focus while you worked on those drafts?\""
+      }
+    },
+    {
+      "day": 226,
+      "date": "2026-10-12",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2026-10-12.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"It actually wasn't half bad. They played some classic hits and a bit of local news, which was a nice change of pace even if it wasn't my typical music.\""
+      }
+    },
+    {
+      "day": 266,
+      "date": "2026-11-21",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2026-11-21.json",
+        "line_start": 41,
+        "line_end": 41,
+        "json_pointer": "/turns/8/text",
+        "excerpt": "      \"text\": \"Oh, those ambient, dusty instrumental beats are perfect for getting into a flow state. Hopefully, they help you power through your tasks! By the way, how is your wrist feeling these days? Completely back to normal after getting the cast off?\""
+      }
+    },
+    {
+      "day": 266,
+      "date": "2026-11-21",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2026-11-21.json",
+        "line_start": 57,
+        "line_end": 57,
+        "json_pointer": "/turns/12/text",
+        "excerpt": "      \"text\": \"Haha, yes, Atlanta traffic is legendary! I'm glad to hear he's enjoying the change of scenery and the warmth, though. Well, I'll let you get back to your instrumental music and your project work. Let me know if you need help organizing anything later!\""
+      }
+    },
+    {
+      "day": 392,
+      "date": "2027-03-27",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-03-27.json",
+        "line_start": 21,
+        "line_end": 21,
+        "json_pointer": "/turns/3/text",
+        "excerpt": "      \"text\": \"I'm organizing some design layouts for a client pitch next week. To keep my brain engaged while I edit, I've got some music playing in the background—mostly just some off-the-beaten-path alternative bands that record for independent labels.\""
+      }
+    },
+    {
+      "day": 410,
+      "date": "2027-04-14",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-04-14.json",
+        "line_start": 17,
+        "line_end": 17,
+        "json_pointer": "/turns/2/text",
+        "excerpt": "      \"text\": \"That sounds like a perfect way to start the workday. Nothing beats some good music and a fresh pastry. What's your style today?\""
+      }
+    },
+    {
+      "day": 419,
+      "date": "2027-04-23",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-04-23.json",
+        "line_start": 17,
+        "line_end": 17,
+        "json_pointer": "/turns/2/text",
+        "excerpt": "      \"text\": \"That sounds like the absolute perfect way to start a Friday morning. Nothing beats a well-made laminated pastry. Are you listening to anything good while you power through your design projects today?\""
+      }
+    },
+    {
+      "day": 428,
+      "date": "2027-05-02",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-05-02.json",
+        "line_start": 57,
+        "line_end": 57,
+        "json_pointer": "/turns/12/text",
+        "excerpt": "      \"text\": \"That sounds like a lovely Saturday walk, and I'm glad you got some shooting in. I'll let you get back to your mockups and your cozy playlist. Enjoy the dinner with Leah tonight, and have a great start to your week!\""
+      }
+    },
+    {
+      "day": 433,
+      "date": "2027-05-07",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-05-07.json",
+        "line_start": 57,
+        "line_end": 57,
+        "json_pointer": "/turns/12/text",
+        "excerpt": "      \"text\": \"Sounds like a perfect plan. Enjoy the music, wrap up those reports, and have a wonderful, relaxing weekend with Leah! Chat soon.\""
+      }
+    },
+    {
+      "day": 447,
+      "date": "2027-05-21",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-05-21.json",
+        "line_start": 33,
+        "line_end": 33,
+        "json_pointer": "/turns/6/text",
+        "excerpt": "      \"text\": \"That sounds like great focus music. There's nothing like some solid tunes to help you power through the end-of-the-week stretch. Do you have any big plans lined up for the weekend?\""
+      }
+    },
+    {
+      "day": 455,
+      "date": "2027-05-29",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-05-29.json",
+        "line_start": 21,
+        "line_end": 21,
+        "json_pointer": "/turns/3/text",
+        "excerpt": "      \"text\": \"Well, even though it's the weekend, I did have to log on for about an hour to finalize some layouts for a client presentation next week. To keep myself focused while I was working, I put on a playlist of underground, self-released guitar bands—lots of jangly chords, fuzzy bass, and lo-fi vocals from the late 90s.\""
+      }
+    },
+    {
+      "day": 522,
+      "date": "2027-08-04",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-08-04.json",
+        "line_start": 17,
+        "line_end": 17,
+        "json_pointer": "/turns/2/text",
+        "excerpt": "      \"text\": \"That sounds like a perfect, comfortable outfit for mid-week. Are you listening to anything while you work on your design projects today?\""
+      }
+    },
+    {
+      "day": 524,
+      "date": "2027-08-06",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-08-06.json",
+        "line_start": 25,
+        "line_end": 25,
+        "json_pointer": "/turns/4/text",
+        "excerpt": "      \"text\": \"Congratulations on getting the sign-off! That's a huge milestone. And a comfortable plaid and denim outfit is perfect for a celebratory, relaxed Friday at the office. Are you listening to anything good while you wrap up the week's tasks?\""
+      }
+    },
+    {
+      "day": 575,
+      "date": "2027-09-26",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-09-26.json",
+        "line_start": 49,
+        "line_end": 49,
+        "json_pointer": "/turns/10/text",
+        "excerpt": "      \"text\": \"Playing some chess sounds like a great way to unwind. Have you been playing many classical games lately, or are you sticking to faster blitz matches?\""
+      }
+    },
+    {
+      "day": 584,
+      "date": "2027-10-05",
+      "speaker": "assistant",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-10-05.json",
+        "line_start": 25,
+        "line_end": 25,
+        "json_pointer": "/turns/4/text",
+        "excerpt": "      \"text\": \"Oh, I love that you're putting those records to good use. There's nothing quite like the warmth of vinyl for a workday soundtrack. Did you have a good start to your morning before diving into the music?\""
+      }
+    },
+    {
+      "day": 606,
+      "date": "2027-10-27",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-10-27.json",
+        "line_start": 37,
+        "line_end": 37,
+        "json_pointer": "/turns/7/text",
+        "excerpt": "      \"text\": \"Definitely. I've got some instrumental, texturized electronic soundscapes playing in my headphones. It's very atmospheric, lots of slow synths and absolutely no vocals. It really helps me block out distractions and get into a flow state.\""
+      }
+    },
+    {
+      "day": 620,
+      "date": "2027-11-10",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-11-10.json",
+        "line_start": 21,
+        "line_end": 21,
+        "json_pointer": "/turns/3/text",
+        "excerpt": "      \"text\": \"Yes, we're transitioning into the next phases for a couple of clients. To keep myself focused while sketching out some details, I've had some beatless, atmospheric synthesizer soundscapes playing in my headphones. Those textured, wordless electronic tracks really help me lock in.\""
+      }
+    },
+    {
+      "day": 621,
+      "date": "2027-11-11",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-11-11.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"Definitely. I put my headphones on and queued up some beatless, synthesized soundscapes—lots of textured, spacey instrumental synth tracks that really help me focus without getting distracted by lyrics.\""
+      }
+    },
+    {
+      "day": 635,
+      "date": "2027-11-25",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-11-25.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"Yes, we are sketching out some structural ideas. To help me focus through the noise of the rain, I've got my headphones on listening to some lyric-free synthesizer soundscapes. The textured, atmospheric electronic beats are exactly what I need to lock in.\""
+      }
+    },
+    {
+      "day": 641,
+      "date": "2027-12-01",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-12-01.json",
+        "line_start": 21,
+        "line_end": 21,
+        "json_pointer": "/turns/3/text",
+        "excerpt": "      \"text\": \"It's been pretty intense with some drafting deadlines. To keep my head down and block out the studio noise, I've had some wordless, textured synthesizer soundscapes playing in my headphones all afternoon. It really helps me zone in.\""
+      }
+    },
+    {
+      "day": 661,
+      "date": "2027-12-21",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-12-21.json",
+        "line_start": 29,
+        "line_end": 29,
+        "json_pointer": "/turns/5/text",
+        "excerpt": "      \"text\": \"Definitely. I've had some texture-heavy, beatless synthesizer soundscapes looping in my headphones for the last few hours.\""
+      }
+    },
+    {
+      "day": 662,
+      "date": "2027-12-22",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-12-22.json",
+        "line_start": 37,
+        "line_end": 37,
+        "json_pointer": "/turns/7/text",
+        "excerpt": "      \"text\": \"We're in deep focus mode today. I've got my headphones on, playing some texturally rich, beatless synthesizer soundscapes to keep me in the zone while I review plans.\""
+      }
+    },
+    {
+      "day": 662,
+      "date": "2027-12-22",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-12-22.json",
+        "line_start": 61,
+        "line_end": 61,
+        "json_pointer": "/turns/13/text",
+        "excerpt": "      \"text\": \"Thanks! I'm sure she will. I'm going to get back to these soundscapes and finish up this floor plan. Talk to you later!\""
+      }
+    },
+    {
+      "day": 664,
+      "date": "2027-12-24",
+      "speaker": "user",
+      "source": {
+        "file": "datasets/v2/u4/sessions/2027-12-24.json",
+        "line_start": 21,
+        "line_end": 21,
+        "json_pointer": "/turns/3/text",
+        "excerpt": "      \"text\": \"It's mostly just me today, which is actually really peaceful. I've got some music on to keep me focused while I work—some atmospheric, beatless synthesizer soundscapes playing in the background. It helps me focus without any distracting lyrics.\""
+      }
+    }
+  ],
+  "manual_review": {
+    "target_observation": "Target session contains no work-music value or transition timing.",
+    "new_rule_timing": "First new ambient observation Dec21 and later classical Dec27 do not name a start date, weekday anchor, or cause.",
+    "counterexample": "Start uncaused ambient/classical rotation on Dec19 instead of Dec20; every one of 22 recorded work-music base values through Dec31 is unchanged, but Dec19 becomes ambient electronic.",
+    "status": "confirmed_answerability_limitation",
+    "limitation": "Not a wrong synthetic reference; the observational prefix does not uniquely distinguish the hidden start."
+  }
+}

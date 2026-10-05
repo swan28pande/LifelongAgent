@@ -1,0 +1,4953 @@
+[
+  {
+    "id": "u1_p202609_0051",
+    "user_id": "u1",
+    "original_id": "u1_q0210",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-09-30",
+    "viewpoint_day": 214,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1328,
+        "pointer": "/probes/6/questions/7/id"
+      },
+      "question": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1333,
+        "pointer": "/probes/6/questions/7/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1334,
+        "pointer": "/probes/6/questions/7/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1335,
+        "pointer": "/probes/6/questions/7/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1336,
+        "pointer": "/probes/6/questions/7/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1339,
+        "pointer": "/probes/6/questions/7/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1345,
+        "pointer": "/probes/6/questions/7/viewpoint_day"
+      }
+    },
+    "question": "What was Leo's morning coffee routine in January 2028?",
+    "observed": {
+      "answer": "alternates week by week: matcha latte, then decaf americano, repeating (7-day blocks starting Mon 2026-09-21)",
+      "accept": [
+        "alternating matcha latte and decaf americano weeks"
+      ],
+      "evidence_days": [
+        205,
+        206,
+        207
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-09-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1333,
+        "pointer": "/probes/6/questions/7/question"
+      },
+      {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 1345,
+        "pointer": "/probes/6/questions/7/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u1_p202706_0111",
+    "user_id": "u1",
+    "original_id": "u1_q0212",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-06-30",
+    "viewpoint_day": 487,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3159,
+        "pointer": "/probes/15/questions/8/id"
+      },
+      "question": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3164,
+        "pointer": "/probes/15/questions/8/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3165,
+        "pointer": "/probes/15/questions/8/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3166,
+        "pointer": "/probes/15/questions/8/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3167,
+        "pointer": "/probes/15/questions/8/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3170,
+        "pointer": "/probes/15/questions/8/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3176,
+        "pointer": "/probes/15/questions/8/viewpoint_day"
+      }
+    },
+    "question": "What was Leo's lunch routine in October 2027?",
+    "observed": {
+      "answer": "a 7-day cycle starting Wed 2027-06-23: meal-prep burrito bowl for 4 days, then ramen for 3 days, repeating",
+      "accept": [
+        "4 days meal-prep burrito bowl, 3 days ramen"
+      ],
+      "evidence_days": [
+        480,
+        481,
+        482
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-06-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3164,
+        "pointer": "/probes/15/questions/8/question"
+      },
+      {
+        "file": "datasets/v2/u1/probing_questions.json",
+        "line": 3176,
+        "pointer": "/probes/15/questions/8/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u2_p202607_0033",
+    "user_id": "u2",
+    "original_id": "u2_q0192",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-07-31",
+    "viewpoint_day": 153,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 820,
+        "pointer": "/probes/4/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 825,
+        "pointer": "/probes/4/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 826,
+        "pointer": "/probes/4/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 827,
+        "pointer": "/probes/4/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 828,
+        "pointer": "/probes/4/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 831,
+        "pointer": "/probes/4/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 837,
+        "pointer": "/probes/4/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Marcus's workout routine in October 2026?",
+    "observed": {
+      "answer": "by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun",
+      "accept": [
+        "tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun"
+      ],
+      "evidence_days": [
+        121,
+        122,
+        123
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-07-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 825,
+        "pointer": "/probes/4/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 837,
+        "pointer": "/probes/4/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u2_p202609_0049",
+    "user_id": "u2",
+    "original_id": "u2_q0362",
+    "type": "event_status",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-09-30",
+    "viewpoint_day": 214,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1291,
+        "pointer": "/probes/6/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1296,
+        "pointer": "/probes/6/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1297,
+        "pointer": "/probes/6/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1298,
+        "pointer": "/probes/6/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1299,
+        "pointer": "/probes/6/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1302,
+        "pointer": "/probes/6/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1306,
+        "pointer": "/probes/6/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What was the status of the family trip to Japan on 2026-12-15?",
+    "observed": {
+      "answer": "planning a family trip to Japan next spring (planned)",
+      "accept": [
+        "planning a family trip to Japan next spring"
+      ],
+      "evidence_days": [
+        200
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-09-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1296,
+        "pointer": "/probes/6/questions/0/question"
+      },
+      {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1306,
+        "pointer": "/probes/6/questions/0/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u2_p202611_0068",
+    "user_id": "u2",
+    "original_id": "u2_q0189",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-11-30",
+    "viewpoint_day": 275,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1826,
+        "pointer": "/probes/8/questions/9/id"
+      },
+      "question": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1831,
+        "pointer": "/probes/8/questions/9/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1832,
+        "pointer": "/probes/8/questions/9/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1833,
+        "pointer": "/probes/8/questions/9/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1834,
+        "pointer": "/probes/8/questions/9/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1837,
+        "pointer": "/probes/8/questions/9/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1843,
+        "pointer": "/probes/8/questions/9/viewpoint_day"
+      }
+    },
+    "question": "What was Marcus's evening TV show routine in January 2027?",
+    "observed": {
+      "answer": "a 7-day cycle starting Fri 2026-11-06: sitcom reruns for 5 days, then nature documentary for 2 days, repeating",
+      "accept": [
+        "5 days sitcom reruns, 2 days nature documentaries"
+      ],
+      "evidence_days": [
+        251,
+        252,
+        253
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-11-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1831,
+        "pointer": "/probes/8/questions/9/question"
+      },
+      {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 1843,
+        "pointer": "/probes/8/questions/9/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u2_p202709_0128",
+    "user_id": "u2",
+    "original_id": "u2_q0190",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-09-30",
+    "viewpoint_day": 579,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3870,
+        "pointer": "/probes/18/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3875,
+        "pointer": "/probes/18/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3876,
+        "pointer": "/probes/18/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3877,
+        "pointer": "/probes/18/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3878,
+        "pointer": "/probes/18/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3881,
+        "pointer": "/probes/18/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3887,
+        "pointer": "/probes/18/questions/2/viewpoint_day"
+      }
+    },
+    "question": "What was Marcus's evening TV show routine in January 2028?",
+    "observed": {
+      "answer": "alternates week by week: sci-fi series, then sitcom reruns, repeating (7-day blocks starting Sat 2027-09-11)",
+      "accept": [
+        "alternating weeks of a sci-fi series and sitcom reruns"
+      ],
+      "evidence_days": [
+        560,
+        561,
+        563
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-09-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3875,
+        "pointer": "/probes/18/questions/2/question"
+      },
+      {
+        "file": "datasets/v2/u2/probing_questions.json",
+        "line": 3887,
+        "pointer": "/probes/18/questions/2/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202603_0001",
+    "user_id": "u3",
+    "original_id": "u3_q0154",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-03-31",
+    "viewpoint_day": 31,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 16,
+        "pointer": "/probes/0/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 21,
+        "pointer": "/probes/0/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 22,
+        "pointer": "/probes/0/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 23,
+        "pointer": "/probes/0/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 24,
+        "pointer": "/probes/0/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 27,
+        "pointer": "/probes/0/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 33,
+        "pointer": "/probes/0/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's commute routine in May 2026?",
+    "observed": {
+      "answer": "by day of week: night bus on Mon/Tue/Wed; rideshare on Thu/Fri; no commute on Sat/Sun",
+      "accept": [
+        "night bus Mon-Wed, rideshare Thu/Fri, no commute on weekends"
+      ],
+      "evidence_days": [
+        1,
+        3,
+        4
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-03-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 21,
+        "pointer": "/probes/0/questions/0/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 33,
+        "pointer": "/probes/0/questions/0/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202603_0002",
+    "user_id": "u3",
+    "original_id": "u3_q0168",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-03-31",
+    "viewpoint_day": 31,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 42,
+        "pointer": "/probes/0/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 47,
+        "pointer": "/probes/0/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 48,
+        "pointer": "/probes/0/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 49,
+        "pointer": "/probes/0/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 50,
+        "pointer": "/probes/0/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 53,
+        "pointer": "/probes/0/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 59,
+        "pointer": "/probes/0/questions/1/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's podcast routine in June 2026?",
+    "observed": {
+      "answer": "alternates week by week: health news podcast, then comedy podcast, repeating (7-day blocks starting Sun 2026-03-01)",
+      "accept": [
+        "alternating weeks of a health news podcast and a comedy podcast"
+      ],
+      "evidence_days": [
+        4,
+        5,
+        7
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-03-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 47,
+        "pointer": "/probes/0/questions/1/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 59,
+        "pointer": "/probes/0/questions/1/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202606_0017",
+    "user_id": "u3",
+    "original_id": "u3_q0160",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-06-30",
+    "viewpoint_day": 122,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 436,
+        "pointer": "/probes/3/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 441,
+        "pointer": "/probes/3/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 442,
+        "pointer": "/probes/3/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 443,
+        "pointer": "/probes/3/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 444,
+        "pointer": "/probes/3/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 447,
+        "pointer": "/probes/3/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 453,
+        "pointer": "/probes/3/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's lunch routine in July 2026?",
+    "observed": {
+      "answer": "by day of week: sourdough sandwich on Mon/Wed/Fri; packed leftovers on Tue/Thu/Sun; brunch out on Sat",
+      "accept": [
+        "sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat"
+      ],
+      "evidence_days": [
+        93,
+        94,
+        95
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-06-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 441,
+        "pointer": "/probes/3/questions/0/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 453,
+        "pointer": "/probes/3/questions/0/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202608_0036",
+    "user_id": "u3",
+    "original_id": "u3_q0165",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-08-31",
+    "viewpoint_day": 184,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 933,
+        "pointer": "/probes/5/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 938,
+        "pointer": "/probes/5/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 939,
+        "pointer": "/probes/5/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 940,
+        "pointer": "/probes/5/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 941,
+        "pointer": "/probes/5/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 944,
+        "pointer": "/probes/5/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 950,
+        "pointer": "/probes/5/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's morning drink routine in September 2026?",
+    "observed": {
+      "answer": "by day of week: cold brew on Mon/Tue/Thu; chai latte on Wed/Fri; hot chocolate on Sat/Sun",
+      "accept": [
+        "cold brew most weekdays, chai Wed/Fri, hot chocolate on weekends"
+      ],
+      "evidence_days": [
+        155,
+        156,
+        157
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-08-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 938,
+        "pointer": "/probes/5/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 950,
+        "pointer": "/probes/5/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202610_0049",
+    "user_id": "u3",
+    "original_id": "u3_q0166",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-10-31",
+    "viewpoint_day": 245,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1363,
+        "pointer": "/probes/7/questions/5/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1368,
+        "pointer": "/probes/7/questions/5/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1369,
+        "pointer": "/probes/7/questions/5/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1370,
+        "pointer": "/probes/7/questions/5/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1371,
+        "pointer": "/probes/7/questions/5/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1374,
+        "pointer": "/probes/7/questions/5/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1380,
+        "pointer": "/probes/7/questions/5/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's morning drink routine in May 2027?",
+    "observed": {
+      "answer": "alternates week by week: drip coffee, then matcha latte, repeating (7-day blocks starting Thu 2026-10-08)",
+      "accept": [
+        "alternating weeks of drip coffee and matcha lattes"
+      ],
+      "evidence_days": [
+        222,
+        226,
+        227
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-10-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1368,
+        "pointer": "/probes/7/questions/5/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 1380,
+        "pointer": "/probes/7/questions/5/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202702_0078",
+    "user_id": "u3",
+    "original_id": "u3_q0161",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-02-28",
+    "viewpoint_day": 365,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2297,
+        "pointer": "/probes/11/questions/5/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2302,
+        "pointer": "/probes/11/questions/5/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2303,
+        "pointer": "/probes/11/questions/5/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2304,
+        "pointer": "/probes/11/questions/5/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2305,
+        "pointer": "/probes/11/questions/5/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2308,
+        "pointer": "/probes/11/questions/5/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2314,
+        "pointer": "/probes/11/questions/5/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's lunch routine in May 2027?",
+    "observed": {
+      "answer": "a 5-day cycle starting Mon 2027-02-15: lunch with Tom for 2 days, then sourdough sandwich for 3 days, repeating",
+      "accept": [
+        "2 days lunch with Tom, 3 days sourdough sandwich"
+      ],
+      "evidence_days": [
+        353,
+        354,
+        357
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-02-28"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2302,
+        "pointer": "/probes/11/questions/5/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2314,
+        "pointer": "/probes/11/questions/5/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202704_0089",
+    "user_id": "u3",
+    "original_id": "u3_q0156",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-04-30",
+    "viewpoint_day": 426,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2704,
+        "pointer": "/probes/13/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2709,
+        "pointer": "/probes/13/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2710,
+        "pointer": "/probes/13/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2711,
+        "pointer": "/probes/13/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2712,
+        "pointer": "/probes/13/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2715,
+        "pointer": "/probes/13/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2721,
+        "pointer": "/probes/13/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's commute routine in August 2027?",
+    "observed": {
+      "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+      "accept": [
+        "driving on weekdays"
+      ],
+      "evidence_days": [
+        401,
+        402,
+        405
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-04-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2709,
+        "pointer": "/probes/13/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 2721,
+        "pointer": "/probes/13/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202707_0111",
+    "user_id": "u3",
+    "original_id": "u3_q0167",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-07-31",
+    "viewpoint_day": 518,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3508,
+        "pointer": "/probes/16/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3513,
+        "pointer": "/probes/16/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3514,
+        "pointer": "/probes/16/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3515,
+        "pointer": "/probes/16/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3516,
+        "pointer": "/probes/16/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3519,
+        "pointer": "/probes/16/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3525,
+        "pointer": "/probes/16/questions/2/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's morning drink routine in October 2027?",
+    "observed": {
+      "answer": "by day of week: drip coffee on Mon/Wed; iced americano on Tue/Thu; matcha latte on Fri; hot chocolate on Sat/Sun",
+      "accept": [
+        "drip coffee Mon/Wed, iced americano Tue/Thu, matcha Fri, hot chocolate weekends"
+      ],
+      "evidence_days": [
+        501,
+        503,
+        504
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-07-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3513,
+        "pointer": "/probes/16/questions/2/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3525,
+        "pointer": "/probes/16/questions/2/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202707_0115",
+    "user_id": "u3",
+    "original_id": "u3_q0162",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-07-31",
+    "viewpoint_day": 518,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3611,
+        "pointer": "/probes/16/questions/6/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3616,
+        "pointer": "/probes/16/questions/6/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3617,
+        "pointer": "/probes/16/questions/6/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3618,
+        "pointer": "/probes/16/questions/6/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3619,
+        "pointer": "/probes/16/questions/6/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3622,
+        "pointer": "/probes/16/questions/6/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3628,
+        "pointer": "/probes/16/questions/6/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's lunch routine in November 2027?",
+    "observed": {
+      "answer": "alternates week by week: homemade burrito bowl, then sourdough sandwich, repeating (7-day blocks starting Sat 2027-06-26)",
+      "accept": [
+        "alternating weeks of homemade burrito bowls and sourdough sandwiches"
+      ],
+      "evidence_days": [
+        483,
+        488,
+        490
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-07-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3616,
+        "pointer": "/probes/16/questions/6/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 3628,
+        "pointer": "/probes/16/questions/6/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202710_0126",
+    "user_id": "u3",
+    "original_id": "u3_q0171",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-10-31",
+    "viewpoint_day": 610,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4114,
+        "pointer": "/probes/19/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4119,
+        "pointer": "/probes/19/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4120,
+        "pointer": "/probes/19/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4121,
+        "pointer": "/probes/19/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4122,
+        "pointer": "/probes/19/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4125,
+        "pointer": "/probes/19/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4131,
+        "pointer": "/probes/19/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's podcast routine in January 2028?",
+    "observed": {
+      "answer": "by day of week: dog training podcast on Mon/Wed; true-crime podcast on Tue/Thu; comedy podcast on Fri/Sat/Sun",
+      "accept": [
+        "dog training podcast Mon/Wed, true crime Tue/Thu, comedy Fri-Sun"
+      ],
+      "evidence_days": [
+        604,
+        605,
+        606
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-10-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4119,
+        "pointer": "/probes/19/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4131,
+        "pointer": "/probes/19/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u3_p202712_0142",
+    "user_id": "u3",
+    "original_id": "u3_q0158",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-12-31",
+    "viewpoint_day": 671,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4631,
+        "pointer": "/probes/21/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4636,
+        "pointer": "/probes/21/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4637,
+        "pointer": "/probes/21/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4638,
+        "pointer": "/probes/21/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4639,
+        "pointer": "/probes/21/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4642,
+        "pointer": "/probes/21/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4648,
+        "pointer": "/probes/21/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Sofia's commute routine in January 2028?",
+    "observed": {
+      "answer": "by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun",
+      "accept": [
+        "driving on weekdays"
+      ],
+      "evidence_days": [
+        668,
+        669,
+        670
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-12-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4636,
+        "pointer": "/probes/21/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u3/probing_questions.json",
+        "line": 4648,
+        "pointer": "/probes/21/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202603_0004",
+    "user_id": "u4",
+    "original_id": "u4_q0119",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-03-31",
+    "viewpoint_day": 31,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 86,
+        "pointer": "/probes/0/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 91,
+        "pointer": "/probes/0/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 92,
+        "pointer": "/probes/0/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 93,
+        "pointer": "/probes/0/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 94,
+        "pointer": "/probes/0/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 97,
+        "pointer": "/probes/0/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 103,
+        "pointer": "/probes/0/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's breakfast routine in April 2026?",
+    "observed": {
+      "answer": "a 2-block rotation of 7-day blocks starting Sun 2026-03-01 - block 1: by day of week: granola on Mon/Wed/Fri; eggs on toast on Tue/Thu; waffles on Sat; bacon and eggs on Sun | block 2: by day of week: oatmeal on Mon/Wed/Fri; eggs on toast on Tue/Thu; waffles on Sat; bacon and eggs on Sun",
+      "accept": [
+        "two-week rotation of granola or oatmeal with eggs, waffles and a weekend fry-up"
+      ],
+      "evidence_days": [
+        1,
+        2,
+        3
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-03-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 91,
+        "pointer": "/probes/0/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 103,
+        "pointer": "/probes/0/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202603_0005",
+    "user_id": "u4",
+    "original_id": "u4_q0130",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-03-31",
+    "viewpoint_day": 31,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 112,
+        "pointer": "/probes/0/questions/4/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 117,
+        "pointer": "/probes/0/questions/4/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 118,
+        "pointer": "/probes/0/questions/4/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 119,
+        "pointer": "/probes/0/questions/4/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 120,
+        "pointer": "/probes/0/questions/4/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 123,
+        "pointer": "/probes/0/questions/4/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 129,
+        "pointer": "/probes/0/questions/4/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's work music routine in October 2026?",
+    "observed": {
+      "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+      "accept": [
+        "alternating weeks of indie rock and lo-fi beats"
+      ],
+      "evidence_days": [
+        1,
+        2,
+        3
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-03-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 117,
+        "pointer": "/probes/0/questions/4/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 129,
+        "pointer": "/probes/0/questions/4/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202604_0008",
+    "user_id": "u4",
+    "original_id": "u4_q0327",
+    "type": "event_status",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-04-30",
+    "viewpoint_day": 61,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 192,
+        "pointer": "/probes/1/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 197,
+        "pointer": "/probes/1/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 198,
+        "pointer": "/probes/1/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 199,
+        "pointer": "/probes/1/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 200,
+        "pointer": "/probes/1/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 203,
+        "pointer": "/probes/1/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 207,
+        "pointer": "/probes/1/questions/1/viewpoint_day"
+      }
+    },
+    "question": "What was the status of the spring 10K on 2026-05-19?",
+    "observed": {
+      "answer": "signed up for a spring 10K (planned)",
+      "accept": [
+        "signed up for a spring 10K"
+      ],
+      "evidence_days": [
+        60
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-04-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 197,
+        "pointer": "/probes/1/questions/1/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 207,
+        "pointer": "/probes/1/questions/1/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_r202607_0173",
+    "user_id": "u4",
+    "original_id": "u4_q0130",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-07-31",
+    "viewpoint_day": 153,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 660,
+        "pointer": "/probes/4/questions/7/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 665,
+        "pointer": "/probes/4/questions/7/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 666,
+        "pointer": "/probes/4/questions/7/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 667,
+        "pointer": "/probes/4/questions/7/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 668,
+        "pointer": "/probes/4/questions/7/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 671,
+        "pointer": "/probes/4/questions/7/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 677,
+        "pointer": "/probes/4/questions/7/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's work music routine in October 2026?",
+    "observed": {
+      "answer": "alternates week by week: indie rock, then lo-fi beats, repeating (7-day blocks starting Sun 2026-03-01)",
+      "accept": [
+        "alternating weeks of indie rock and lo-fi beats"
+      ],
+      "evidence_days": [
+        1,
+        2,
+        3
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-07-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 665,
+        "pointer": "/probes/4/questions/7/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 677,
+        "pointer": "/probes/4/questions/7/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202609_0035",
+    "user_id": "u4",
+    "original_id": "u4_q0330",
+    "type": "event_status",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-09-30",
+    "viewpoint_day": 214,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 963,
+        "pointer": "/probes/6/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 968,
+        "pointer": "/probes/6/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 969,
+        "pointer": "/probes/6/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 970,
+        "pointer": "/probes/6/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 971,
+        "pointer": "/probes/6/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 974,
+        "pointer": "/probes/6/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 978,
+        "pointer": "/probes/6/questions/2/viewpoint_day"
+      }
+    },
+    "question": "What was the status of his wrist fracture on 2026-10-13?",
+    "observed": {
+      "answer": "fractured his wrist climbing (happened)",
+      "accept": [
+        "fractured his wrist climbing"
+      ],
+      "evidence_days": [
+        210
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-09-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 968,
+        "pointer": "/probes/6/questions/2/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 978,
+        "pointer": "/probes/6/questions/2/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202609_0037",
+    "user_id": "u4",
+    "original_id": "u4_q0120",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-09-30",
+    "viewpoint_day": 214,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1012,
+        "pointer": "/probes/6/questions/4/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1017,
+        "pointer": "/probes/6/questions/4/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1018,
+        "pointer": "/probes/6/questions/4/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1019,
+        "pointer": "/probes/6/questions/4/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1020,
+        "pointer": "/probes/6/questions/4/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1023,
+        "pointer": "/probes/6/questions/4/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1029,
+        "pointer": "/probes/6/questions/4/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's breakfast routine in March 2027?",
+    "observed": {
+      "answer": "by day of week: smoothie bowl on Mon/Wed; eggs on toast on Tue/Thu; granola on Fri; brunch with Leah on Sat/Sun",
+      "accept": [
+        "smoothie bowls and eggs on weekdays, weekend brunch with Leah"
+      ],
+      "evidence_days": [
+        183,
+        184,
+        185
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-09-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1017,
+        "pointer": "/probes/6/questions/4/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1029,
+        "pointer": "/probes/6/questions/4/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202611_0042",
+    "user_id": "u4",
+    "original_id": "u4_q0137",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-11-30",
+    "viewpoint_day": 275,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1242,
+        "pointer": "/probes/8/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1247,
+        "pointer": "/probes/8/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1248,
+        "pointer": "/probes/8/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1249,
+        "pointer": "/probes/8/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1250,
+        "pointer": "/probes/8/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1253,
+        "pointer": "/probes/8/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1259,
+        "pointer": "/probes/8/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's work outfit routine in December 2026?",
+    "observed": {
+      "answer": "by day of week: blazer and slacks on Mon/Wed; button-down and chinos on Tue/Thu; sweater and jeans on Fri; hoodie and joggers on Sat/Sun",
+      "accept": [
+        "blazer Mon/Wed, button-down Tue/Thu, sweater Fri, hoodie on weekends"
+      ],
+      "evidence_days": [
+        263,
+        270,
+        272
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-11-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1247,
+        "pointer": "/probes/8/questions/0/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1259,
+        "pointer": "/probes/8/questions/0/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202704_0077",
+    "user_id": "u4",
+    "original_id": "u4_q0138",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-04-30",
+    "viewpoint_day": 426,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2369,
+        "pointer": "/probes/13/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2374,
+        "pointer": "/probes/13/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2375,
+        "pointer": "/probes/13/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2376,
+        "pointer": "/probes/13/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2377,
+        "pointer": "/probes/13/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2380,
+        "pointer": "/probes/13/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2386,
+        "pointer": "/probes/13/questions/1/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's work outfit routine in July 2027?",
+    "observed": {
+      "answer": "alternates week by week: flannel and jeans, then button-down and chinos, repeating (7-day blocks starting Wed 2027-04-14)",
+      "accept": [
+        "alternating weeks of flannel and jeans and button-down and chinos"
+      ],
+      "evidence_days": [
+        410,
+        414,
+        416
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-04-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2374,
+        "pointer": "/probes/13/questions/1/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2386,
+        "pointer": "/probes/13/questions/1/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202705_0087",
+    "user_id": "u4",
+    "original_id": "u4_q0126",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-05-31",
+    "viewpoint_day": 457,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2677,
+        "pointer": "/probes/14/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2682,
+        "pointer": "/probes/14/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2683,
+        "pointer": "/probes/14/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2684,
+        "pointer": "/probes/14/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2685,
+        "pointer": "/probes/14/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2688,
+        "pointer": "/probes/14/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2694,
+        "pointer": "/probes/14/questions/1/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's dinner routine in July 2027?",
+    "observed": {
+      "answer": "by day of week: shrimp pad thai on Mon; fish tacos on Tue; tofu green curry on Wed; pasta on Thu; fish and chips on Fri; grilled salmon on Sat; roast vegetables on Sun",
+      "accept": [
+        "pescatarian week - shrimp pad thai, fish tacos, tofu curry, salmon"
+      ],
+      "evidence_days": [
+        454,
+        455,
+        457
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-05-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2682,
+        "pointer": "/probes/14/questions/1/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2694,
+        "pointer": "/probes/14/questions/1/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202706_0097",
+    "user_id": "u4",
+    "original_id": "u4_q0122",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-06-30",
+    "viewpoint_day": 487,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 2997,
+        "pointer": "/probes/15/questions/4/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3002,
+        "pointer": "/probes/15/questions/4/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3003,
+        "pointer": "/probes/15/questions/4/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3004,
+        "pointer": "/probes/15/questions/4/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3005,
+        "pointer": "/probes/15/questions/4/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3008,
+        "pointer": "/probes/15/questions/4/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3014,
+        "pointer": "/probes/15/questions/4/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's breakfast routine in July 2027?",
+    "observed": {
+      "answer": "by day of week: smoothie bowl on Mon/Wed; smoked salmon bagel on Tue/Thu; bakery croissant on Fri; brunch with Leah on Sat/Sun",
+      "accept": [
+        "smoothie bowls and salmon bagels on weekdays, weekend brunch with Leah"
+      ],
+      "evidence_days": [
+        460,
+        465,
+        468
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-06-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3002,
+        "pointer": "/probes/15/questions/4/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3014,
+        "pointer": "/probes/15/questions/4/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202706_0100",
+    "user_id": "u4",
+    "original_id": "u4_q0357",
+    "type": "duration",
+    "category": "future_completed_duration_in_gold",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-06-30",
+    "viewpoint_day": 487,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3071,
+        "pointer": "/probes/15/questions/7/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3076,
+        "pointer": "/probes/15/questions/7/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3077,
+        "pointer": "/probes/15/questions/7/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3078,
+        "pointer": "/probes/15/questions/7/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3079,
+        "pointer": "/probes/15/questions/7/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3082,
+        "pointer": "/probes/15/questions/7/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3087,
+        "pointer": "/probes/15/questions/7/viewpoint_day"
+      }
+    },
+    "question": "How long did Daniel's work music stay audiobooks?",
+    "observed": {
+      "answer": "18 days (2027-06-14 to 2027-07-01)",
+      "accept": [
+        "18"
+      ],
+      "evidence_days": [
+        472,
+        484
+      ]
+    },
+    "expected": {
+      "status": "routine has not ended by the probe",
+      "elapsed_days": 17,
+      "final_duration": "not established as a completed historical total at the probe",
+      "interval_end_date": "2027-07-01"
+    },
+    "rationale": "The gold asserts a completed total and ending date after the probe, while the question contains no future date. Correct synthetic eventual duration is not an available historical answer at this probe.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1530,
+        "pointer": "/regimes/18/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1533,
+        "pointer": "/regimes/18/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1534,
+        "pointer": "/regimes/18/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1536,
+        "pointer": "/regimes/18/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1548,
+        "pointer": "/regimes/18/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1560,
+        "pointer": "/regimes/19/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1563,
+        "pointer": "/regimes/19/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1564,
+        "pointer": "/regimes/19/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1566,
+        "pointer": "/regimes/19/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1587,
+        "pointer": "/regimes/19/first_mention_day"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 441
+      },
+      {
+        "file": "generator_v2/probing.py",
+        "line": 89
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202707_0101",
+    "user_id": "u4",
+    "original_id": "u4_q0133",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-07-31",
+    "viewpoint_day": 518,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3186,
+        "pointer": "/probes/16/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3191,
+        "pointer": "/probes/16/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3192,
+        "pointer": "/probes/16/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3193,
+        "pointer": "/probes/16/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3194,
+        "pointer": "/probes/16/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3197,
+        "pointer": "/probes/16/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3203,
+        "pointer": "/probes/16/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's work music routine in August 2027?",
+    "observed": {
+      "answer": "a 7-day cycle starting Mon 2026-12-28: jazz records for 3 days, then indie rock for 4 days, repeating",
+      "accept": [
+        "3 days jazz records, 4 days indie rock"
+      ],
+      "evidence_days": [
+        489,
+        490,
+        493
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-07-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3191,
+        "pointer": "/probes/16/questions/0/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3203,
+        "pointer": "/probes/16/questions/0/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202708_0111",
+    "user_id": "u4",
+    "original_id": "u4_q0337",
+    "type": "event_status",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-08-31",
+    "viewpoint_day": 549,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3477,
+        "pointer": "/probes/17/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3482,
+        "pointer": "/probes/17/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3483,
+        "pointer": "/probes/17/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3484,
+        "pointer": "/probes/17/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3485,
+        "pointer": "/probes/17/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3488,
+        "pointer": "/probes/17/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3492,
+        "pointer": "/probes/17/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was the status of the design competition on 2027-09-08?",
+    "observed": {
+      "answer": "started a huge design competition deadline at work (happened)",
+      "accept": [
+        "started a huge design competition deadline at work"
+      ],
+      "evidence_days": [
+        542
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-08-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3482,
+        "pointer": "/probes/17/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3492,
+        "pointer": "/probes/17/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202708_0113",
+    "user_id": "u4",
+    "original_id": "u4_q0127",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-08-31",
+    "viewpoint_day": 549,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3527,
+        "pointer": "/probes/17/questions/5/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3532,
+        "pointer": "/probes/17/questions/5/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3533,
+        "pointer": "/probes/17/questions/5/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3534,
+        "pointer": "/probes/17/questions/5/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3535,
+        "pointer": "/probes/17/questions/5/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3538,
+        "pointer": "/probes/17/questions/5/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3544,
+        "pointer": "/probes/17/questions/5/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's dinner routine around 2027-09-08?",
+    "observed": {
+      "answer": "delivery sushi every day",
+      "accept": [
+        "delivery sushi every night"
+      ],
+      "evidence_days": [
+        542,
+        543,
+        548
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-08-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3532,
+        "pointer": "/probes/17/questions/5/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3544,
+        "pointer": "/probes/17/questions/5/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202710_0129",
+    "user_id": "u4",
+    "original_id": "u4_q0220",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-10-31",
+    "viewpoint_day": 610,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4038,
+        "pointer": "/probes/19/questions/7/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4043,
+        "pointer": "/probes/19/questions/7/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4044,
+        "pointer": "/probes/19/questions/7/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4045,
+        "pointer": "/probes/19/questions/7/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4046,
+        "pointer": "/probes/19/questions/7/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4049,
+        "pointer": "/probes/19/questions/7/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4054,
+        "pointer": "/probes/19/questions/7/viewpoint_day"
+      }
+    },
+    "question": "When did Daniel's work music routine change from the indie rock / jazz records routine to the ambient electronic / indie rock / jazz records routine?",
+    "observed": {
+      "answer": "2027-10-26",
+      "accept": [
+        "2027-10-26"
+      ],
+      "evidence_days": [
+        602,
+        605
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 606,
+      "first_distinguishing_date": "2027-10-27"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1641,
+        "pointer": "/regimes/20/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/20/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1645,
+        "pointer": "/regimes/20/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1647,
+        "pointer": "/regimes/20/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1667,
+        "pointer": "/regimes/20/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u4_p202711_0136",
+    "user_id": "u4",
+    "original_id": "u4_q0123",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-11-30",
+    "viewpoint_day": 640,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4259,
+        "pointer": "/probes/20/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4264,
+        "pointer": "/probes/20/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4265,
+        "pointer": "/probes/20/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4266,
+        "pointer": "/probes/20/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4267,
+        "pointer": "/probes/20/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4270,
+        "pointer": "/probes/20/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4276,
+        "pointer": "/probes/20/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's breakfast routine in January 2028?",
+    "observed": {
+      "answer": "a 5-day cycle starting Wed 2027-11-10: overnight oats for 3 days, then smoked salmon bagel for 2 days, repeating",
+      "accept": [
+        "3 days overnight oats, 2 days smoked salmon bagel"
+      ],
+      "evidence_days": [
+        620,
+        621,
+        622
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-11-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4264,
+        "pointer": "/probes/20/questions/0/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4276,
+        "pointer": "/probes/20/questions/0/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202712_0146",
+    "user_id": "u4",
+    "original_id": "u4_q0135",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-12-31",
+    "viewpoint_day": 671,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4689,
+        "pointer": "/probes/21/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4694,
+        "pointer": "/probes/21/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4695,
+        "pointer": "/probes/21/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4696,
+        "pointer": "/probes/21/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4697,
+        "pointer": "/probes/21/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4700,
+        "pointer": "/probes/21/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4706,
+        "pointer": "/probes/21/questions/2/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's work music routine in January 2028?",
+    "observed": {
+      "answer": "alternates week by week: ambient electronic, then classical, repeating (7-day blocks starting Mon 2027-12-20)",
+      "accept": [
+        "alternating weeks of ambient electronic and classical"
+      ],
+      "evidence_days": [
+        661,
+        662,
+        664
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-12-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4694,
+        "pointer": "/probes/21/questions/2/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4706,
+        "pointer": "/probes/21/questions/2/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202712_0147",
+    "user_id": "u4",
+    "original_id": "u4_q0129",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-12-31",
+    "viewpoint_day": 671,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4715,
+        "pointer": "/probes/21/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4720,
+        "pointer": "/probes/21/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4721,
+        "pointer": "/probes/21/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4722,
+        "pointer": "/probes/21/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4723,
+        "pointer": "/probes/21/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4726,
+        "pointer": "/probes/21/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4732,
+        "pointer": "/probes/21/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's dinner routine in January 2028?",
+    "observed": {
+      "answer": "a 7-day cycle starting Wed 2027-12-15: grilled salmon for 3 days, then veggie chili for 4 days, repeating",
+      "accept": [
+        "3 days grilled salmon, 4 days veggie chili"
+      ],
+      "evidence_days": [
+        657,
+        659,
+        661
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-12-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4720,
+        "pointer": "/probes/21/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4732,
+        "pointer": "/probes/21/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u4_p202801_0154",
+    "user_id": "u4",
+    "original_id": "u4_q0140",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2028-01-31",
+    "viewpoint_day": 702,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5038,
+        "pointer": "/probes/22/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5043,
+        "pointer": "/probes/22/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5044,
+        "pointer": "/probes/22/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5045,
+        "pointer": "/probes/22/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5046,
+        "pointer": "/probes/22/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5049,
+        "pointer": "/probes/22/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5055,
+        "pointer": "/probes/22/questions/1/viewpoint_day"
+      }
+    },
+    "question": "What was Daniel's work outfit routine around 2028-02-08?",
+    "observed": {
+      "answer": "a 7-day cycle starting Wed 2028-01-19: black t-shirt and jeans for 5 days, then sweater and jeans for 2 days, repeating",
+      "accept": [
+        "5 days black t-shirt and jeans, 2 days sweater and jeans"
+      ],
+      "evidence_days": [
+        691,
+        693,
+        696
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2028-01-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5043,
+        "pointer": "/probes/22/questions/1/question"
+      },
+      {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 5055,
+        "pointer": "/probes/22/questions/1/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202603_0001",
+    "user_id": "u5",
+    "original_id": "u5_q0108",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-03-31",
+    "viewpoint_day": 31,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 16,
+        "pointer": "/probes/0/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 21,
+        "pointer": "/probes/0/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 22,
+        "pointer": "/probes/0/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 23,
+        "pointer": "/probes/0/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 24,
+        "pointer": "/probes/0/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 27,
+        "pointer": "/probes/0/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 33,
+        "pointer": "/probes/0/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's work music routine in April 2026?",
+    "observed": {
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): lo-fi beats; on weekends: jazz vinyl",
+      "accept": [
+        "lo-fi beats on workdays, jazz vinyl on weekends"
+      ],
+      "evidence_days": [
+        1,
+        7,
+        18
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-03-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 21,
+        "pointer": "/probes/0/questions/0/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 33,
+        "pointer": "/probes/0/questions/0/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202603_0002",
+    "user_id": "u5",
+    "original_id": "u5_q0087",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-03-31",
+    "viewpoint_day": 31,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 42,
+        "pointer": "/probes/0/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 47,
+        "pointer": "/probes/0/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 48,
+        "pointer": "/probes/0/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 49,
+        "pointer": "/probes/0/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 50,
+        "pointer": "/probes/0/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 53,
+        "pointer": "/probes/0/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 59,
+        "pointer": "/probes/0/questions/1/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's bedtime routine in May 2026?",
+    "observed": {
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): 11:30 pm; on weekends: 1:00 am",
+      "accept": [
+        "11:30 pm on workdays, 1:00 am on weekends"
+      ],
+      "evidence_days": [
+        1,
+        4,
+        7
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-03-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 47,
+        "pointer": "/probes/0/questions/1/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 59,
+        "pointer": "/probes/0/questions/1/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202603_0003",
+    "user_id": "u5",
+    "original_id": "u5_q0102",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-03-31",
+    "viewpoint_day": 31,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 68,
+        "pointer": "/probes/0/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 73,
+        "pointer": "/probes/0/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 74,
+        "pointer": "/probes/0/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 75,
+        "pointer": "/probes/0/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 76,
+        "pointer": "/probes/0/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 79,
+        "pointer": "/probes/0/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 85,
+        "pointer": "/probes/0/questions/2/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's workout routine in April 2026?",
+    "observed": {
+      "answer": "a 2-block rotation of 7-day blocks starting Sun 2026-03-01 - block 1: by day of week: evening run on Mon/Wed; bouldering on Tue/Thu; yoga class on Fri; long run on Sat; rest day on Sun | block 2: by day of week: swim on Mon/Wed; bouldering on Tue/Thu; yoga class on Fri; bike ride on Sat; rest day on Sun",
+      "accept": [
+        "two-week rotation of runs/swims, bouldering and yoga"
+      ],
+      "evidence_days": [
+        1,
+        7,
+        15
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-03-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 73,
+        "pointer": "/probes/0/questions/2/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 85,
+        "pointer": "/probes/0/questions/2/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202606_0014",
+    "user_id": "u5",
+    "original_id": "u5_q0088",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-06-30",
+    "viewpoint_day": 122,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 367,
+        "pointer": "/probes/3/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 372,
+        "pointer": "/probes/3/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 373,
+        "pointer": "/probes/3/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 374,
+        "pointer": "/probes/3/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 375,
+        "pointer": "/probes/3/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 378,
+        "pointer": "/probes/3/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 384,
+        "pointer": "/probes/3/questions/2/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's bedtime routine in July 2026?",
+    "observed": {
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): 10:30 pm; on weekends: 11:30 pm",
+      "accept": [
+        "10:30 pm on workdays, 11:30 pm on weekends"
+      ],
+      "evidence_days": [
+        100,
+        102,
+        107
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-06-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 372,
+        "pointer": "/probes/3/questions/2/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 384,
+        "pointer": "/probes/3/questions/2/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202606_0020",
+    "user_id": "u5",
+    "original_id": "u5_q0109",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-06-30",
+    "viewpoint_day": 122,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 519,
+        "pointer": "/probes/3/questions/8/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 524,
+        "pointer": "/probes/3/questions/8/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 525,
+        "pointer": "/probes/3/questions/8/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 526,
+        "pointer": "/probes/3/questions/8/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 527,
+        "pointer": "/probes/3/questions/8/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 530,
+        "pointer": "/probes/3/questions/8/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 536,
+        "pointer": "/probes/3/questions/8/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's work music routine in August 2026?",
+    "observed": {
+      "answer": "alternates week by week: lo-fi beats, then film scores, repeating (7-day blocks starting Thu 2026-06-18)",
+      "accept": [
+        "alternating weeks of lo-fi beats and film scores"
+      ],
+      "evidence_days": [
+        114,
+        116,
+        118
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-06-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 524,
+        "pointer": "/probes/3/questions/8/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 536,
+        "pointer": "/probes/3/questions/8/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202607_0024",
+    "user_id": "u5",
+    "original_id": "u5_q0115",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-07-31",
+    "viewpoint_day": 153,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 630,
+        "pointer": "/probes/4/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 635,
+        "pointer": "/probes/4/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 636,
+        "pointer": "/probes/4/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 637,
+        "pointer": "/probes/4/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 638,
+        "pointer": "/probes/4/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 641,
+        "pointer": "/probes/4/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 647,
+        "pointer": "/probes/4/questions/1/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's evening reading routine in August 2026?",
+    "observed": {
+      "answer": "library thrillers every day",
+      "accept": [
+        "library thrillers every day"
+      ],
+      "evidence_days": [
+        125,
+        126,
+        130
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-07-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 635,
+        "pointer": "/probes/4/questions/1/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 647,
+        "pointer": "/probes/4/questions/1/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202608_0032",
+    "user_id": "u5",
+    "original_id": "u5_q0331",
+    "type": "duration",
+    "category": "future_completed_duration_in_gold",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-08-31",
+    "viewpoint_day": 184,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 839,
+        "pointer": "/probes/5/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 844,
+        "pointer": "/probes/5/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 845,
+        "pointer": "/probes/5/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 846,
+        "pointer": "/probes/5/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 847,
+        "pointer": "/probes/5/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 850,
+        "pointer": "/probes/5/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 855,
+        "pointer": "/probes/5/questions/3/viewpoint_day"
+      }
+    },
+    "question": "How long did Priya's evening reading stay library thrillers?",
+    "observed": {
+      "answer": "65 days (2026-07-03 to 2026-09-05)",
+      "accept": [
+        "65"
+      ],
+      "evidence_days": [
+        125,
+        180
+      ]
+    },
+    "expected": {
+      "status": "routine has not ended by the probe",
+      "elapsed_days": 60,
+      "final_duration": "not established as a completed historical total at the probe",
+      "interval_end_date": "2026-09-05"
+    },
+    "rationale": "The gold asserts a completed total and ending date after the probe, while the question contains no future date. Correct synthetic eventual duration is not an available historical answer at this probe.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1582,
+        "pointer": "/regimes/28/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1585,
+        "pointer": "/regimes/28/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1586,
+        "pointer": "/regimes/28/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1588,
+        "pointer": "/regimes/28/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1600,
+        "pointer": "/regimes/28/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1623,
+        "pointer": "/regimes/29/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1626,
+        "pointer": "/regimes/29/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1627,
+        "pointer": "/regimes/29/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1629,
+        "pointer": "/regimes/29/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/29/first_mention_day"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 441
+      },
+      {
+        "file": "generator_v2/probing.py",
+        "line": 89
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202608_0038",
+    "user_id": "u5",
+    "original_id": "u5_q0311",
+    "type": "event_status",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-08-31",
+    "viewpoint_day": 184,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 986,
+        "pointer": "/probes/5/questions/9/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 991,
+        "pointer": "/probes/5/questions/9/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 992,
+        "pointer": "/probes/5/questions/9/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 993,
+        "pointer": "/probes/5/questions/9/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 994,
+        "pointer": "/probes/5/questions/9/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 997,
+        "pointer": "/probes/5/questions/9/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1001,
+        "pointer": "/probes/5/questions/9/viewpoint_day"
+      }
+    },
+    "question": "What was the status of her knee injury on 2026-09-13?",
+    "observed": {
+      "answer": "tore a ligament in her knee while bouldering (happened)",
+      "accept": [
+        "tore a ligament in her knee while bouldering"
+      ],
+      "evidence_days": [
+        180
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-08-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 991,
+        "pointer": "/probes/5/questions/9/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1001,
+        "pointer": "/probes/5/questions/9/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202609_0043",
+    "user_id": "u5",
+    "original_id": "u5_q0181",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2026-09-30",
+    "viewpoint_day": 214,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1142,
+        "pointer": "/probes/6/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1147,
+        "pointer": "/probes/6/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1148,
+        "pointer": "/probes/6/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1149,
+        "pointer": "/probes/6/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1150,
+        "pointer": "/probes/6/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1155,
+        "pointer": "/probes/6/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1160,
+        "pointer": "/probes/6/questions/3/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+    "observed": {
+      "answer": "2026-09-06 (first observed 2026-09-08)",
+      "accept": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "evidence_days": [
+        180,
+        192
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 197,
+      "first_distinguishing_date": "2026-09-13"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1623,
+        "pointer": "/regimes/29/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1626,
+        "pointer": "/regimes/29/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1627,
+        "pointer": "/regimes/29/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1629,
+        "pointer": "/regimes/29/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/29/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202611_0055",
+    "user_id": "u5",
+    "original_id": "u5_q0089",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2026-11-30",
+    "viewpoint_day": 275,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1552,
+        "pointer": "/probes/8/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1557,
+        "pointer": "/probes/8/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1558,
+        "pointer": "/probes/8/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1559,
+        "pointer": "/probes/8/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1560,
+        "pointer": "/probes/8/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1563,
+        "pointer": "/probes/8/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1569,
+        "pointer": "/probes/8/questions/0/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's bedtime routine in February 2027?",
+    "observed": {
+      "answer": "11:00 pm every day",
+      "accept": [
+        "11:00 pm every night"
+      ],
+      "evidence_days": [
+        262,
+        263,
+        264
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2026-11-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1557,
+        "pointer": "/probes/8/questions/0/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1569,
+        "pointer": "/probes/8/questions/0/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_r202611_0189",
+    "user_id": "u5",
+    "original_id": "u5_q0181",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2026-11-30",
+    "viewpoint_day": 275,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1680,
+        "pointer": "/probes/8/questions/5/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1685,
+        "pointer": "/probes/8/questions/5/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1686,
+        "pointer": "/probes/8/questions/5/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1687,
+        "pointer": "/probes/8/questions/5/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1688,
+        "pointer": "/probes/8/questions/5/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1693,
+        "pointer": "/probes/8/questions/5/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 1698,
+        "pointer": "/probes/8/questions/5/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's evening reading routine change from library thrillers to the library thrillers / poetry collections routine?",
+    "observed": {
+      "answer": "2026-09-06 (first observed 2026-09-08)",
+      "accept": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "evidence_days": [
+        180,
+        192
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 197,
+      "first_distinguishing_date": "2026-09-13"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1623,
+        "pointer": "/regimes/29/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1626,
+        "pointer": "/regimes/29/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1627,
+        "pointer": "/regimes/29/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1629,
+        "pointer": "/regimes/29/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/29/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202701_0074",
+    "user_id": "u5",
+    "original_id": "u5_q0092",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2142,
+        "pointer": "/probes/10/questions/6/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2147,
+        "pointer": "/probes/10/questions/6/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2148,
+        "pointer": "/probes/10/questions/6/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2149,
+        "pointer": "/probes/10/questions/6/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2150,
+        "pointer": "/probes/10/questions/6/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2153,
+        "pointer": "/probes/10/questions/6/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2159,
+        "pointer": "/probes/10/questions/6/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's commute routine in February 2027?",
+    "observed": {
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): light rail; on weekends: no commute",
+      "accept": [
+        "light rail on workdays"
+      ],
+      "evidence_days": [
+        304,
+        312,
+        316
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-01-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2147,
+        "pointer": "/probes/10/questions/6/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2159,
+        "pointer": "/probes/10/questions/6/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202701_0076",
+    "user_id": "u5",
+    "original_id": "u5_q0262",
+    "type": "fact_current",
+    "category": "gold_answer_mismatch_at_probe",
+    "kind": "reference_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2193,
+        "pointer": "/probes/10/questions/8/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2198,
+        "pointer": "/probes/10/questions/8/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2199,
+        "pointer": "/probes/10/questions/8/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2200,
+        "pointer": "/probes/10/questions/8/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2201,
+        "pointer": "/probes/10/questions/8/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2204,
+        "pointer": "/probes/10/questions/8/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2209,
+        "pointer": "/probes/10/questions/8/viewpoint_day"
+      }
+    },
+    "question": "What are Priya's current hobbies?",
+    "observed": {
+      "answer": "bouldering, trail running",
+      "accept": [
+        "bouldering, trail running"
+      ],
+      "evidence_days": [
+        1,
+        331
+      ]
+    },
+    "expected": {
+      "answer": "bouldering, piano, trail running",
+      "accept": [
+        "bouldering, piano, trail running"
+      ]
+    },
+    "rationale": "Gold was generated for the final world but this relative/current question is asked at an earlier probe. The per-day active facts define the correct list at that viewpoint.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 42526,
+        "pointer": "/days/336/active_facts/hobbies"
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 370
+      },
+      {
+        "file": "generator_v2/probing.py",
+        "line": 145
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202701_0076",
+    "user_id": "u5",
+    "original_id": "u5_q0262",
+    "type": "fact_current",
+    "category": "accepted_answer_mismatch_at_probe",
+    "kind": "reference_error",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2193,
+        "pointer": "/probes/10/questions/8/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2198,
+        "pointer": "/probes/10/questions/8/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2199,
+        "pointer": "/probes/10/questions/8/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2200,
+        "pointer": "/probes/10/questions/8/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2201,
+        "pointer": "/probes/10/questions/8/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2204,
+        "pointer": "/probes/10/questions/8/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2209,
+        "pointer": "/probes/10/questions/8/viewpoint_day"
+      }
+    },
+    "question": "What are Priya's current hobbies?",
+    "observed": [
+      "bouldering, trail running"
+    ],
+    "expected": {
+      "accept": [
+        "bouldering, piano, trail running"
+      ]
+    },
+    "rationale": "The acceptance list encodes the same stale/mismatched reference at this changed viewpoint.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 42526,
+        "pointer": "/days/336/active_facts/hobbies"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202702_0080",
+    "user_id": "u5",
+    "original_id": "u5_q0177",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-02-28",
+    "viewpoint_day": 365,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2432,
+        "pointer": "/probes/11/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2437,
+        "pointer": "/probes/11/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2438,
+        "pointer": "/probes/11/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2439,
+        "pointer": "/probes/11/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2440,
+        "pointer": "/probes/11/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2443,
+        "pointer": "/probes/11/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2448,
+        "pointer": "/probes/11/questions/2/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 351,
+      "first_distinguishing_date": "2027-02-14"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202702_0081",
+    "user_id": "u5",
+    "original_id": "u5_q0111",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-02-28",
+    "viewpoint_day": 365,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2458,
+        "pointer": "/probes/11/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2463,
+        "pointer": "/probes/11/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2464,
+        "pointer": "/probes/11/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2465,
+        "pointer": "/probes/11/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2466,
+        "pointer": "/probes/11/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2469,
+        "pointer": "/probes/11/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2475,
+        "pointer": "/probes/11/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's work music routine in April 2027?",
+    "observed": {
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): synthwave playlists; on weekends: running playlists",
+      "accept": [
+        "synthwave on workdays, running playlists on weekends"
+      ],
+      "evidence_days": [
+        345,
+        351,
+        352
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-02-28"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2463,
+        "pointer": "/probes/11/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2475,
+        "pointer": "/probes/11/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202705_0094",
+    "user_id": "u5",
+    "original_id": "u5_q0359",
+    "type": "distractor_probe",
+    "category": "confounder_change_not_cited",
+    "kind": "evidence_gap",
+    "probe_date": "2027-05-31",
+    "viewpoint_day": 457,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2968,
+        "pointer": "/probes/14/questions/0/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2973,
+        "pointer": "/probes/14/questions/0/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2974,
+        "pointer": "/probes/14/questions/0/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2975,
+        "pointer": "/probes/14/questions/0/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2976,
+        "pointer": "/probes/14/questions/0/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2979,
+        "pointer": "/probes/14/questions/0/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2983,
+        "pointer": "/probes/14/questions/0/viewpoint_day"
+      }
+    },
+    "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
+    "observed": {
+      "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
+      "accept": [
+        "no"
+      ],
+      "evidence_days": [
+        448
+      ]
+    },
+    "expected": {
+      "change_observation_day": 456
+    },
+    "rationale": "Gold's explanation correctly describes a nearby change, but the evidence list contains only the distractor statement. The actual change is available elsewhere in the prefix.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 2806,
+        "pointer": "/statements/47"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1740,
+        "pointer": "/regimes/31/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1743,
+        "pointer": "/regimes/31/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1744,
+        "pointer": "/regimes/31/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1746,
+        "pointer": "/regimes/31/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1758,
+        "pointer": "/regimes/31/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202706_0104",
+    "user_id": "u5",
+    "original_id": "u5_q0116",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-06-30",
+    "viewpoint_day": 487,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3229,
+        "pointer": "/probes/15/questions/4/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3234,
+        "pointer": "/probes/15/questions/4/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3235,
+        "pointer": "/probes/15/questions/4/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3236,
+        "pointer": "/probes/15/questions/4/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3237,
+        "pointer": "/probes/15/questions/4/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3240,
+        "pointer": "/probes/15/questions/4/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3246,
+        "pointer": "/probes/15/questions/4/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's evening reading routine in August 2027?",
+    "observed": {
+      "answer": "audiobooks every day",
+      "accept": [
+        "audiobooks every day"
+      ],
+      "evidence_days": [
+        456,
+        458,
+        459
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-06-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3234,
+        "pointer": "/probes/15/questions/4/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3246,
+        "pointer": "/probes/15/questions/4/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_p202708_0116",
+    "user_id": "u5",
+    "original_id": "u5_q0094",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-08-31",
+    "viewpoint_day": 549,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3661,
+        "pointer": "/probes/17/questions/3/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3666,
+        "pointer": "/probes/17/questions/3/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3667,
+        "pointer": "/probes/17/questions/3/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3668,
+        "pointer": "/probes/17/questions/3/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3669,
+        "pointer": "/probes/17/questions/3/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3672,
+        "pointer": "/probes/17/questions/3/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3678,
+        "pointer": "/probes/17/questions/3/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's commute routine in September 2027?",
+    "observed": {
+      "answer": "by day of week: cycling on Mon/Tue/Thu; work from home on Wed/Fri; no commute on Sat/Sun",
+      "accept": [
+        "cycling Mon/Tue/Thu, home Wed/Fri"
+      ],
+      "evidence_days": [
+        527,
+        529,
+        547
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-08-31"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3666,
+        "pointer": "/probes/17/questions/3/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3678,
+        "pointer": "/probes/17/questions/3/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_r202708_0197",
+    "user_id": "u5",
+    "original_id": "u5_q0177",
+    "type": "change_detection",
+    "category": "change_citations_do_not_observe_change",
+    "kind": "evidence_gap",
+    "probe_date": "2027-08-31",
+    "viewpoint_day": 549,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3842,
+        "pointer": "/probes/17/questions/10/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3847,
+        "pointer": "/probes/17/questions/10/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3848,
+        "pointer": "/probes/17/questions/10/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3849,
+        "pointer": "/probes/17/questions/10/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3850,
+        "pointer": "/probes/17/questions/10/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3853,
+        "pointer": "/probes/17/questions/10/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3858,
+        "pointer": "/probes/17/questions/10/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "first_distinguishing_mention_day": 351,
+      "first_distinguishing_date": "2027-02-14"
+    },
+    "rationale": "The first new-regime mention has the same value the old rule predicts, and the writer is instructed not to announce the change. The cited first mention alone cannot justify 'first observed' as a change boundary. Later prefix observations can support a rule inference; the gold effective start still matches synthetic truth.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "generator_v2/conversation.py",
+        "line": 88
+      },
+      {
+        "file": "generator_v2/qa.py",
+        "line": 256
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202709_0127",
+    "user_id": "u5",
+    "original_id": "u5_q0107",
+    "type": "pattern_at_time",
+    "category": "explicit_future_target",
+    "kind": "temporal_eligibility_error",
+    "probe_date": "2027-09-30",
+    "viewpoint_day": 579,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4004,
+        "pointer": "/probes/18/questions/5/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4009,
+        "pointer": "/probes/18/questions/5/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4010,
+        "pointer": "/probes/18/questions/5/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4011,
+        "pointer": "/probes/18/questions/5/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4012,
+        "pointer": "/probes/18/questions/5/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4015,
+        "pointer": "/probes/18/questions/5/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4021,
+        "pointer": "/probes/18/questions/5/viewpoint_day"
+      }
+    },
+    "question": "What was Priya's workout routine in November 2027?",
+    "observed": {
+      "answer": "split by workday vs weekend - on workdays (Mon-Fri): morning dog walk; on weekends: group hike",
+      "accept": [
+        "dog walks on workdays, group hikes on weekends"
+      ],
+      "evidence_days": [
+        560,
+        565,
+        567
+      ]
+    },
+    "expected": {
+      "latest_target_date": "2027-09-30"
+    },
+    "rationale": "A retrospective target date/month is beyond the available prefix. The rule or plan may already be known, but that does not establish historical status at a future date.",
+    "authoritative_sources": [
+      {
+        "file": "generator_v2/probing.py",
+        "line": 78
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4009,
+        "pointer": "/probes/18/questions/5/question"
+      },
+      {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4021,
+        "pointer": "/probes/18/questions/5/viewpoint_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": false,
+    "inferential_predictability": "Not ruled out by this eligibility check; historical observation and prediction are separate."
+  },
+  {
+    "id": "u5_r202710_0193",
+    "user_id": "u5",
+    "original_id": "u5_q0359",
+    "type": "distractor_probe",
+    "category": "confounder_change_not_cited",
+    "kind": "evidence_gap",
+    "probe_date": "2027-10-31",
+    "viewpoint_day": 610,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4487,
+        "pointer": "/probes/19/questions/13/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4492,
+        "pointer": "/probes/19/questions/13/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4493,
+        "pointer": "/probes/19/questions/13/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4494,
+        "pointer": "/probes/19/questions/13/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4495,
+        "pointer": "/probes/19/questions/13/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4498,
+        "pointer": "/probes/19/questions/13/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 4502,
+        "pointer": "/probes/19/questions/13/viewpoint_day"
+      }
+    },
+    "question": "Around 2027-05-19, her favorite bookstore announced it is closing. Did that lead to any change in Priya's evening reading?",
+    "observed": {
+      "answer": "No - Priya's evening reading did change around then (to audiobooks every day from 2027-05-29), but no link to this was ever stated.",
+      "accept": [
+        "no"
+      ],
+      "evidence_days": [
+        448
+      ]
+    },
+    "expected": {
+      "change_observation_day": 456
+    },
+    "rationale": "Gold's explanation correctly describes a nearby change, but the evidence list contains only the distractor statement. The actual change is available elsewhere in the prefix.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 2806,
+        "pointer": "/statements/47"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1740,
+        "pointer": "/regimes/31/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1743,
+        "pointer": "/regimes/31/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1744,
+        "pointer": "/regimes/31/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1746,
+        "pointer": "/regimes/31/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1758,
+        "pointer": "/regimes/31/first_mention_day"
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  }
+]

@@ -1,0 +1,167 @@
+{
+  "mechanical_non_recall": {
+    "total_probing_rows_enumerated": 1000,
+    "non_recall_rows_checked": 504,
+    "recall_rows_delegated": 496,
+    "by_user": {
+      "u1": 48,
+      "u2": 65,
+      "u3": 96,
+      "u4": 134,
+      "u5": 161
+    },
+    "by_type": {
+      "abstention": 16,
+      "fact_current": 15,
+      "fact_at_time": 128,
+      "event_status": 36,
+      "pattern_at_time": 52,
+      "attribution": 46,
+      "fact_history": 13,
+      "exception_vs_shift": 59,
+      "change_detection": 54,
+      "duration": 33,
+      "distractor_probe": 24,
+      "reversion": 14,
+      "other_person": 14
+    },
+    "gold_matches_synthetic_truth": 502,
+    "gold_mismatch_rows": 2,
+    "metadata_mismatch_rows": 0,
+    "acceptance_mismatch_rows": 2,
+    "issue_record_count": 11,
+    "issue_counts_by_category": {
+      "change_citations_do_not_observe_change": 7,
+      "gold_answer_mismatch_at_probe": 2,
+      "accepted_answer_mismatch_at_probe": 2
+    },
+    "issue_distinct_question_count": 9,
+    "distinct_questions_with_issue_or_observation_limit": 9,
+    "distinct_ids_by_kind": {
+      "evidence_gap": [
+        "u2_p202606_0024",
+        "u4_p202701_0060",
+        "u4_p202710_0126",
+        "u5_p202606_0017",
+        "u5_p202701_0068",
+        "u5_p202702_0078",
+        "u5_r202708_0189"
+      ],
+      "reference_error": [
+        "u5_p202701_0069",
+        "u5_p202701_0073"
+      ]
+    },
+    "uncertainty_counts_by_category": {
+      "duration_completion_not_observed": 3
+    },
+    "observation_limit_counts_by_category": {
+      "non_unique_change_date_rejected_by_grader": 6
+    },
+    "diagnostic_counts_by_category": {
+      "pattern_value_coverage": 52,
+      "duration_closure_not_cited": 31,
+      "uncited_fact_removals": 12
+    },
+    "unknown_abstention_pool_items_excluded": 30,
+    "answerable_abstention_controls_in_probes": 16,
+    "future_dates_in_gold_or_accept": [],
+    "patterns_with_uncited_rule_values": 35,
+    "missing_probe_families": [
+      "pattern_current",
+      "prediction"
+    ],
+    "limitations": [
+      "Truth and temporal eligibility are separate verdicts.",
+      "Evidence gaps do not by themselves prove a wrong reference or an unanswerable full prefix.",
+      "Implicit causation and rule abstraction are legitimate intended inference; a formal identifiability proof was not attempted.",
+      "Pool provenance equality is checked separately from synthetic truth at the probe.",
+      "No network, paid model, or saved-session revalidation is used."
+    ]
+  },
+  "supplemental_issue_counts": {
+    "fact_fallback_citation_does_not_support_value": 1
+  },
+  "baseline_style_and_supplemental_distinct_ids": [
+    "u2_p202606_0024",
+    "u3_p202605_0011",
+    "u4_p202607_0020",
+    "u4_p202701_0060",
+    "u4_p202710_0126",
+    "u5_p202606_0017",
+    "u5_p202609_0041",
+    "u5_p202701_0068",
+    "u5_p202701_0069",
+    "u5_p202701_0073",
+    "u5_p202702_0078",
+    "u5_p202706_0105",
+    "u5_r202708_0189"
+  ],
+  "baseline_style_and_supplemental_distinct_count": 13,
+  "broader_date_boundary_review": {
+    "current_change_questions": 54,
+    "nonexplicit_change_questions_checked": 35,
+    "candidate_question_count": 23,
+    "unique_regimes_with_candidates": 18,
+    "ids": [
+      "u3_p202606_0022",
+      "u3_r202610_0166",
+      "u3_p202712_0144",
+      "u4_p202701_0060",
+      "u4_p202706_0096",
+      "u4_p202707_0102",
+      "u4_r202708_0197",
+      "u4_p202710_0126",
+      "u4_r202710_0179",
+      "u5_p202606_0016",
+      "u5_p202606_0017",
+      "u5_p202608_0028",
+      "u5_p202609_0043",
+      "u5_p202611_0053",
+      "u5_r202611_0159",
+      "u5_p202701_0068",
+      "u5_p202702_0078",
+      "u5_p202704_0087",
+      "u5_p202705_0093",
+      "u5_p202708_0114",
+      "u5_p202708_0117",
+      "u5_r202708_0189",
+      "u5_p202709_0122"
+    ],
+    "manual_review_status": "complete_bounded_review",
+    "review_counts": {
+      "credible_bounded_observability_limit": 20,
+      "contested_condition_link": 2,
+      "contested_decision_wording": 1
+    },
+    "credible_bounded_limit_ids": [
+      "u3_p202606_0022",
+      "u3_r202610_0166",
+      "u3_p202712_0144",
+      "u4_p202701_0060",
+      "u4_p202706_0096",
+      "u4_r202708_0197",
+      "u4_p202710_0126",
+      "u5_p202606_0016",
+      "u5_p202606_0017",
+      "u5_p202608_0028",
+      "u5_p202609_0043",
+      "u5_r202611_0159",
+      "u5_p202701_0068",
+      "u5_p202702_0078",
+      "u5_p202704_0087",
+      "u5_p202705_0093",
+      "u5_p202708_0114",
+      "u5_p202708_0117",
+      "u5_r202708_0189",
+      "u5_p202709_0122"
+    ],
+    "excluded_contested_ids": [
+      "u4_p202707_0102",
+      "u4_r202710_0179",
+      "u5_p202611_0053"
+    ],
+    "scope": "Reviewed witnesses predate or equal the original probe. This broader check is separate from the baseline narrow-first-value criteria and should not be presented as 20 incorrect synthetic gold answers."
+  },
+  "judging_limit": "No live judge call, no agent evaluation, no exhaustive entailment proof. Broader bounded alternatives are not wrong synthetic references."
+}

@@ -1,0 +1,484 @@
+BUILD full_context 2026-03-01
+BUILD full_context 2026-03-04
+BUILD full_context 2026-03-07
+BUILD full_context 2026-03-11
+BUILD full_context 2026-03-13
+BUILD full_context 2026-03-14
+BUILD full_context 2026-03-15
+BUILD full_context 2026-03-18
+BUILD full_context 2026-03-19
+BUILD full_context 2026-03-21
+BUILD full_context 2026-03-25
+BUILD full_context 2026-03-29
+BUILD full_context 2026-03-30
+READY full_context 0.0s
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+Direct use of automatic function calling (AFC) in AsyncModels.generate_content is not recommended. Instead, we recommend to use AFC in AsyncChat.send_message. Similarly, direct use of AFC in AsyncModels.generate_content_stream is not recommended. Instead, we recommend to use AFC in AsyncChat.send_message_stream.
+AUTH_AND_MODELS_OK stb-prj-symb-reg-ai-rfbe gemini-3.5-flash gemini-3.1-pro-preview
+<All keys matched successfully>
+BUILD naive_rag 2026-03-01
+BUILD naive_rag 2026-03-04
+BUILD naive_rag 2026-03-07
+BUILD naive_rag 2026-03-11
+BUILD naive_rag 2026-03-13
+BUILD naive_rag 2026-03-14
+BUILD naive_rag 2026-03-15
+BUILD naive_rag 2026-03-18
+BUILD naive_rag 2026-03-19
+BUILD naive_rag 2026-03-21
+BUILD naive_rag 2026-03-25
+BUILD naive_rag 2026-03-29
+BUILD naive_rag 2026-03-30
+READY naive_rag 0.0s
+BUILD timem 2026-03-01
+BUILD timem 2026-03-04
+BUILD timem 2026-03-07
+BUILD timem 2026-03-11
+BUILD timem 2026-03-13
+BUILD timem 2026-03-14
+BUILD timem 2026-03-15
+BUILD timem 2026-03-18
+BUILD timem 2026-03-19
+BUILD timem 2026-03-21
+BUILD timem 2026-03-25
+BUILD timem 2026-03-29
+BUILD timem 2026-03-30
+2026-10-04 19:38:53,538 - timem.utils.config_manager - INFO - Initializing configuration manager...
+2026-10-04 19:38:53,539 - timem.utils.config_manager - INFO - Reloading configuration...
+2026-10-04 19:38:53,550 - timem.utils.config_manager - INFO - 📚 Loading dataset-specific configuration...
+[19:38:53] INFO: Successfully loaded 3 dataset profiles
+[19:38:53] INFO: Dataset profile manager initialized, current profile: default
+2026-10-04 19:38:53,558 - timem.utils.config_manager - INFO - 📄 prompts.yaml: Global configuration + default dataset override
+2026-10-04 19:38:53,559 - timem.utils.config_manager - INFO - 📄 qa_prompts.yaml: Global configuration + default dataset override
+2026-10-04 19:38:53,559 - timem.utils.config_manager - WARNING - Configuration file not found: /home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/source/config/multi_stage_qa_prompts.yaml
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - 📄 eval_prompt.yaml: Global configuration + default dataset override
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.vector.collection_name = timem_memories
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.vector.url = http://localhost:16333
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.sql.postgres.database = timem_db
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.sql.postgres.host = localhost
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.sql.postgres.port = 15432
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.graph.database = neo4j
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.graph.uri = bolt://localhost:17687
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.cache.host = localhost
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.cache.port = 6379
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - 📊 Current dataset: default
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO -   - Qdrant URL: http://localhost:16333
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO -   - Qdrant Collection: timem_memories
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO -   - PostgreSQL Port: 15432
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO -   - PostgreSQL Database: timem_db
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO -   - Neo4j URI: bolt://localhost:17687
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO -   - Neo4j Database: neo4j
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO -   - Redis Port: 6379
+2026-10-04 19:38:53,560 - timem.utils.config_manager - INFO - ✅ Configuration successfully reloaded
+[19:38:53] INFO: Prompt module initialized successfully, current language: EN
+[WARNING] Unable to check prompt configuration, debug_prompt_keys method not available
+[OK] L2 prompt 'l2_session_summary' available
+[OK] MemoryGenerator initialization complete
+
+[SEARCH] [L3 Memory Generation] Starting L3 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l3_daily_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1725 characters
+[DOC] Prompt template preview: input_variables=['date', 'previous_daily_memories', 'session_summaries'] input_types={} partial_vari...
+[19:38:53] DEBUG: Generated L3 daily content prompt:
+You are the agent's long-term memory builder. Task: Generate precise event records for today to serve as foundation for memory retrieval and character understanding.
+
+Core Positioning:
+L3 memory is the factual layer, accurately recording "who did what and said what when" to provide reliable basis for higher-level pattern recognition and profiling.
+
+Recording Principles:
+- Precision: Preserve specific names of times, people, places, and items
+- Completeness: Record cause-effect of events and decision rationale
+- Authenticity: Prioritize direct quotes
+- Uniqueness: Record details that reveal individual characteristics
+
+Must Include:
+- Time (specific or relative)
+- People (use names from dialogue)
+- Action (specific verb + specific object)
+- Quotes (at least one per event: "XXX said '...'")
+- Details (numbers, locations, item names)
+- Decisions (if any, record options and rationale)
+
+Evidence-first and Less-is-more:
+- State only well-supported facts; if ...[truncated]
+[NOTE] Final prompt length: 2110 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:38:53,827 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-04 19:39:39,276 - google_genai._api_client - INFO - Retrying __main__.Recorder.attach.<locals>.async_request in 1.01 seconds as it raised ServerError: 504 Gateway Timeout. {'message': '{\n  "error": {\n    "code": 504,\n    "message": "Deadline expired before operation could complete.",\n    "status": "DEADLINE_EXCEEDED"\n  }\n}\n', 'status': 'Gateway Timeout'}.
+2026-10-04 19:40:25,428 - google_genai._api_client - INFO - Retrying __main__.Recorder.attach.<locals>.async_request in 2.05 seconds as it raised ServerError: 504 Gateway Timeout. {'message': '{\n  "error": {\n    "code": 504,\n    "message": "Deadline expired before operation could complete.",\n    "status": "DEADLINE_EXCEEDED"\n  }\n}\n', 'status': 'Gateway Timeout'}.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 1453 characters
+[DOC] Generated content preview: Today, Priya, a single backendengineer who lives in Pittsburgh and works at a fintech startup, faced a challenging technical task at her job. She succ...
+[19:40:41] INFO: Successfully generated L3 daily report content, length: 1453 characters
+
+[SEARCH] [L3 Memory Generation] Starting L3 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l3_daily_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1725 characters
+[DOC] Prompt template preview: input_variables=['date', 'previous_daily_memories', 'session_summaries'] input_types={} partial_vari...
+[19:40:41] DEBUG: Generated L3 daily content prompt:
+You are the agent's long-term memory builder. Task: Generate precise event records for today to serve as foundation for memory retrieval and character understanding.
+
+Core Positioning:
+L3 memory is the factual layer, accurately recording "who did what and said what when" to provide reliable basis for higher-level pattern recognition and profiling.
+
+Recording Principles:
+- Precision: Preserve specific names of times, people, places, and items
+- Completeness: Record cause-effect of events and decision rationale
+- Authenticity: Prioritize direct quotes
+- Uniqueness: Record details that reveal individual characteristics
+
+Must Include:
+- Time (specific or relative)
+- People (use names from dialogue)
+- Action (specific verb + specific object)
+- Quotes (at least one per event: "XXX said '...'")
+- Details (numbers, locations, item names)
+- Decisions (if any, record options and rationale)
+
+Evidence-first and Less-is-more:
+- State only well-supported facts; if ...[truncated]
+[NOTE] Final prompt length: 2268 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:40:41,676 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 1255 characters
+[DOC] Generated content preview: Yesterday, Priya spent time practicing her musical skills on her instrument. Priya said, "I worked on a Chopinpiece on the piano," before deciding to ...
+[19:41:09] INFO: Successfully generated L3 daily report content, length: 1255 characters
+
+[SEARCH] [L3 Memory Generation] Starting L3 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l3_daily_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1725 characters
+[DOC] Prompt template preview: input_variables=['date', 'previous_daily_memories', 'session_summaries'] input_types={} partial_vari...
+[19:41:10] DEBUG: Generated L3 daily content prompt:
+You are the agent's long-term memory builder. Task: Generate precise event records for today to serve as foundation for memory retrieval and character understanding.
+
+Core Positioning:
+L3 memory is the factual layer, accurately recording "who did what and said what when" to provide reliable basis for higher-level pattern recognition and profiling.
+
+Recording Principles:
+- Precision: Preserve specific names of times, people, places, and items
+- Completeness: Record cause-effect of events and decision rationale
+- Authenticity: Prioritize direct quotes
+- Uniqueness: Record details that reveal individual characteristics
+
+Must Include:
+- Time (specific or relative)
+- People (use names from dialogue)
+- Action (specific verb + specific object)
+- Quotes (at least one per event: "XXX said '...'")
+- Details (numbers, locations, item names)
+- Decisions (if any, record options and rationale)
+
+Evidence-first and Less-is-more:
+- State only well-supported facts; if ...[truncated]
+[NOTE] Final prompt length: 2087 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:41:10,394 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 1159 characters
+[DOC] Generated content preview: Yesterday evening, Priya dedicated her personal time to practicing a challenging classical piece on the piano. Priya recalledthe session, saying, "Yes...
+[19:41:26] INFO: Successfully generated L3 daily report content, length: 1159 characters
+
+[SEARCH] [L3 Memory Generation] Starting L3 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l3_daily_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1725 characters
+[DOC] Prompt template preview: input_variables=['date', 'previous_daily_memories', 'session_summaries'] input_types={} partial_vari...
+[19:41:26] DEBUG: Generated L3 daily content prompt:
+You are the agent's long-term memory builder. Task: Generate precise event records for today to serve as foundation for memory retrieval and character understanding.
+
+Core Positioning:
+L3 memory is the factual layer, accurately recording "who did what and said what when" to provide reliable basis for higher-level pattern recognition and profiling.
+
+Recording Principles:
+- Precision: Preserve specific names of times, people, places, and items
+- Completeness: Record cause-effect of events and decision rationale
+- Authenticity: Prioritize direct quotes
+- Uniqueness: Record details that reveal individual characteristics
+
+Must Include:
+- Time (specific or relative)
+- People (use names from dialogue)
+- Action (specific verb + specific object)
+- Quotes (at least one per event: "XXX said '...'")
+- Details (numbers, locations, item names)
+- Decisions (if any, record options and rationale)
+
+Evidence-first and Less-is-more:
+- State only well-supported facts; if ...[truncated]
+[NOTE] Final prompt length: 2341 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:41:26,598 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 1246 characters
+[DOC] Generated content preview: Tonight, Priya dealt with the physical and mentalaftermath of a highly demanding work week at her startup located in Pittsburgh. Priya said, "I felt a...
+[19:41:44] INFO: Successfully generated L3 daily report content, length: 1246 characters
+
+[SEARCH] [L3 Memory Generation] Starting L3 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l3_daily_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1725 characters
+[DOC] Prompt template preview: input_variables=['date', 'previous_daily_memories', 'session_summaries'] input_types={} partial_vari...
+[19:41:45] DEBUG: Generated L3 daily content prompt:
+You are the agent's long-term memory builder. Task: Generate precise event records for today to serve as foundation for memory retrieval and character understanding.
+
+Core Positioning:
+L3 memory is the factual layer, accurately recording "who did what and said what when" to provide reliable basis for higher-level pattern recognition and profiling.
+
+Recording Principles:
+- Precision: Preserve specific names of times, people, places, and items
+- Completeness: Record cause-effect of events and decision rationale
+- Authenticity: Prioritize direct quotes
+- Uniqueness: Record details that reveal individual characteristics
+
+Must Include:
+- Time (specific or relative)
+- People (use names from dialogue)
+- Action (specific verb + specific object)
+- Quotes (at least one per event: "XXX said '...'")
+- Details (numbers, locations, item names)
+- Decisions (if any, record options and rationale)
+
+Evidence-first and Less-is-more:
+- State only well-supported facts; if ...[truncated]
+[NOTE] Final prompt length: 2191 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:41:45,111 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-04 19:41:47,810 - asyncio - ERROR - an error occurred during closing of asynchronous generator <async_generator object AsyncModels.generate_content_stream.<locals>.stream_generator at 0x70e336a00210>
+asyncgen: <async_generator object AsyncModels.generate_content_stream.<locals>.stream_generator at 0x70e336a00210>
+Traceback (most recent call last):
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 326, in main
+    build(name)
+    ~~~~~^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 261, in build
+    recorder.call(meta(name, 'finalize', 'preparation'), method.finalize)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 107, in call
+    result = operation()
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 138, in finalize
+    l3 = self._summarize('L3', day, children, date=day)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 126, in _summarize
+    content = self._generate(generate([n['content'] for n in children], **period))
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 250, in bounded_generate
+    return original_generate(coroutine)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 85, in _generate
+    return self._loop.run_until_complete(coroutine)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 712, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 683, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 2004, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/home/cloaked/anaconda3/lib/python3.13/selectors.py", line 452, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-10-04 19:41:47,820 - asyncio - ERROR - an error occurred during closing of asynchronous generator <async_generator object ChatGoogleGenerativeAI._astream at 0x70e336b6e8c0>
+asyncgen: <async_generator object ChatGoogleGenerativeAI._astream at 0x70e336b6e8c0>
+Traceback (most recent call last):
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 326, in main
+    build(name)
+    ~~~~~^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 261, in build
+    recorder.call(meta(name, 'finalize', 'preparation'), method.finalize)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 107, in call
+    result = operation()
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 138, in finalize
+    l3 = self._summarize('L3', day, children, date=day)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 126, in _summarize
+    content = self._generate(generate([n['content'] for n in children], **period))
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 250, in bounded_generate
+    return original_generate(coroutine)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 85, in _generate
+    return self._loop.run_until_complete(coroutine)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 712, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 683, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 2004, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/home/cloaked/anaconda3/lib/python3.13/selectors.py", line 452, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-10-04 19:41:47,821 - asyncio - ERROR - an error occurred during closing of asynchronous generator <async_generator object BaseChatModel.astream at 0x70e336ba6320>
+asyncgen: <async_generator object BaseChatModel.astream at 0x70e336ba6320>
+Traceback (most recent call last):
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 326, in main
+    build(name)
+    ~~~~~^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 261, in build
+    recorder.call(meta(name, 'finalize', 'preparation'), method.finalize)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 107, in call
+    result = operation()
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 138, in finalize
+    l3 = self._summarize('L3', day, children, date=day)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 126, in _summarize
+    content = self._generate(generate([n['content'] for n in children], **period))
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 250, in bounded_generate
+    return original_generate(coroutine)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 85, in _generate
+    return self._loop.run_until_complete(coroutine)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 712, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 683, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 2004, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/home/cloaked/anaconda3/lib/python3.13/selectors.py", line 452, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-10-04 19:41:47,821 - asyncio - ERROR - an error occurred during closing of asynchronous generator <async_generator object _aclassified_stream at 0x70e336999d50>
+asyncgen: <async_generator object _aclassified_stream at 0x70e336999d50>
+Traceback (most recent call last):
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 326, in main
+    build(name)
+    ~~~~~^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 261, in build
+    recorder.call(meta(name, 'finalize', 'preparation'), method.finalize)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 107, in call
+    result = operation()
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 138, in finalize
+    l3 = self._summarize('L3', day, children, date=day)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 126, in _summarize
+    content = self._generate(generate([n['content'] for n in children], **period))
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 250, in bounded_generate
+    return original_generate(coroutine)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 85, in _generate
+    return self._loop.run_until_complete(coroutine)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 712, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 683, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 2004, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/home/cloaked/anaconda3/lib/python3.13/selectors.py", line 452, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-10-04 19:41:47,822 - asyncio - ERROR - an error occurred during closing of asynchronous generator <async_generator object GeminiAdapter.chat_stream at 0x70e336a5f540>
+asyncgen: <async_generator object GeminiAdapter.chat_stream at 0x70e336a5f540>
+Traceback (most recent call last):
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 326, in main
+    build(name)
+    ~~~~~^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 261, in build
+    recorder.call(meta(name, 'finalize', 'preparation'), method.finalize)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 107, in call
+    result = operation()
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 138, in finalize
+    l3 = self._summarize('L3', day, children, date=day)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 126, in _summarize
+    content = self._generate(generate([n['content'] for n in children], **period))
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 250, in bounded_generate
+    return original_generate(coroutine)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 85, in _generate
+    return self._loop.run_until_complete(coroutine)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 712, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 683, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 2004, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/home/cloaked/anaconda3/lib/python3.13/selectors.py", line 452, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+PILOT_FINISHED /home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/u5_march_20261004_c
+Traceback (most recent call last):
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 367, in <module>
+    main()
+    ~~~~^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 326, in main
+    build(name)
+    ~~~~~^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 261, in build
+    recorder.call(meta(name, 'finalize', 'preparation'), method.finalize)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 107, in call
+    result = operation()
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 138, in finalize
+    l3 = self._summarize('L3', day, children, date=day)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 126, in _summarize
+    content = self._generate(generate([n['content'] for n in children], **period))
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 250, in bounded_generate
+    return original_generate(coroutine)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 85, in _generate
+    return self._loop.run_until_complete(coroutine)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 712, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 683, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 2004, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/home/cloaked/anaconda3/lib/python3.13/selectors.py", line 452, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+Exception ignored in: <coroutine object MemoryGenerator.generate_l3_content at 0x70e336bc9460>
+Traceback (most recent call last):
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/source/timem/memory/memory_generator.py", line 986, in generate_l3_content
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/generator.py", line 20, in _retry_with_exponential_backoff
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/source/timem/memory/memory_generator.py", line 926, in _generate_l3
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/source/llm/gemini_adapter.py", line 111, in chat_stream
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 976, in astream
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/langchain_core/callbacks/manager.py", line 244, in wrapped
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/tasks.py", line 407, in create_task
+RuntimeError: no running event loop
+<sys>:0: RuntimeWarning: coroutine 'AsyncCallbackManagerForLLMRun.on_llm_error' was never awaited

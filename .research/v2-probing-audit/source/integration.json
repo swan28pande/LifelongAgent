@@ -1,0 +1,97 @@
+{
+  "loader": {
+    "instances": 5,
+    "loaded_questions": 250,
+    "canonical_monthly_questions": 1000,
+    "monthly_ids_loaded": [],
+    "question_counts_by_user": {
+      "u1": 50,
+      "u2": 50,
+      "u3": 50,
+      "u4": 50,
+      "u5": 50
+    },
+    "asked_on_values": [
+      "2028-02-29"
+    ],
+    "sessions_by_user": {
+      "u1": 730,
+      "u2": 657,
+      "u3": 561,
+      "u4": 437,
+      "u5": 353
+    },
+    "chronological_by_user": {
+      "u1": true,
+      "u2": true,
+      "u3": true,
+      "u4": true,
+      "u5": true
+    },
+    "curated_metadata_mismatches": []
+  },
+  "runner_monthly_cutoff_reproduction": {
+    "tested_ids": [
+      "u1_p202603_0001",
+      "u1_p202603_0002"
+    ],
+    "observations": [
+      {
+        "id": "u1_p202603_0001",
+        "asked_on": "2026-03-31",
+        "seen_session_count": 730,
+        "last_seen_date": "2028-02-28",
+        "future_sessions_seen": 699,
+        "prompt": "(Asked on 2026-03-31) Do you know Leo's living situation?"
+      },
+      {
+        "id": "u1_p202603_0002",
+        "asked_on": "2026-03-31",
+        "seen_session_count": 730,
+        "last_seen_date": "2028-02-28",
+        "future_sessions_seen": 699,
+        "prompt": "(Asked on 2026-03-31) What was Leo's outfit on Monday, 2026-03-16?"
+      }
+    ],
+    "ingestion_sorted": true,
+    "grades": [
+      {
+        "id": "u1_p202603_0001",
+        "judge": false,
+        "why": "Offline stub; no semantic judgment.",
+        "strict": null,
+        "f1": null
+      },
+      {
+        "id": "u1_p202603_0002",
+        "judge": false,
+        "why": "Offline stub; no semantic judgment.",
+        "strict": true,
+        "f1": null
+      }
+    ],
+    "judge_calls": [
+      {
+        "tag": "judge u1_p202603_0001",
+        "prompt": "QUESTION: Do you know Leo's living situation?\nANSWER TYPE: value\nREFERENCE: lives with a roommate named Sam\nACCEPTED: [\"lives with a roommate named Sam\"]\nSYSTEM ANSWER: lives with a roommate named Sam"
+      },
+      {
+        "tag": "judge u1_p202603_0002",
+        "prompt": "QUESTION: What was Leo's outfit on Monday, 2026-03-16?\nANSWER TYPE: value\nREFERENCE: oversized hoodie\nACCEPTED: [\"oversized hoodie\"]\nSYSTEM ANSWER: oversized hoodie"
+      }
+    ],
+    "summary_n": 2,
+    "summary_accuracy": 0.0,
+    "limitation": "Monthly questions manually supplied to the actual runner; the normal loader does not supply them. Stub grades test dispatch and storage only."
+  },
+  "source_locations": {
+    "loader_qa_pairs": "experiments/benchmarks/v2.py:16",
+    "loader_chronology": "experiments/benchmarks/v2.py:17",
+    "loader_metadata": "experiments/benchmarks/v2.py:20",
+    "runner_all_ingest_before_answers": "experiments/core/runner.py:73",
+    "runner_answer": "experiments/core/runner.py:99",
+    "grader_judge": "experiments/core/runner.py:150",
+    "grader_strict": "experiments/core/grading.py:48",
+    "metric_judge": "experiments/core/runner.py:238"
+  }
+}

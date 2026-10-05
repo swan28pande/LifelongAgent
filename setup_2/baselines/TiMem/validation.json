@@ -1,0 +1,136 @@
+{
+  "status": "ready_for_local_run",
+  "verified_utc": "2026-10-05T00:33:13.931227+00:00",
+  "method": "timem",
+  "profile": "hierarchy_dense_top_k",
+  "offline_tests": {
+    "passed": 70,
+    "seconds": 10.82,
+    "log": "setup_2/tmp/timem-local-validation/tests-final.log"
+  },
+  "dependencies": {
+    "installed_packages_compatible": 111,
+    "versions": {
+      "langchain": "1.4.3",
+      "langchain-core": "1.6.6",
+      "langchain-google-genai": "4.4.0",
+      "google-genai": "2.27.0",
+      "qdrant-client": "1.19.1",
+      "sentence-transformers": "5.7.0",
+      "torch": "2.14.1+cpu",
+      "langchain-huggingface": "1.2.2",
+      "aiohttp": "3.14.3"
+    }
+  },
+  "credentials": {
+    "project": "stb-prj-symb-reg-ai-rfbe",
+    "adc_refresh_verified": true
+  },
+  "embedding": {
+    "model": "nomic-ai/nomic-embed-text-v1",
+    "dimensions": 768,
+    "cached_model_verified_without_network": true
+  },
+  "summary_recovery": {
+    "request_timeout_seconds": 120,
+    "attempts_per_summary": 3,
+    "gemini_sdk_attempts": 1,
+    "native_layer_seconds": 180,
+    "permanent_errors_retried": false,
+    "partial_streams_persisted": false,
+    "transport_coverage": [
+      "httpx",
+      "aiohttp",
+      "Google auth network errors"
+    ]
+  },
+  "live_check": {
+    "users": [
+      "u5"
+    ],
+    "through": "2026-03",
+    "sessions": 13,
+    "questions": 6,
+    "correct": 6,
+    "accuracy": 1.0,
+    "layers": {
+      "L1": 13,
+      "L2": 13,
+      "L3": 13,
+      "L4": 6,
+      "L5": 1
+    },
+    "results": "setup_2/baselines/TiMem/results/timem_local_smoke_20261004_v2",
+    "retry_warnings": 0,
+    "model": "gemini-3.5-flash",
+    "judge": "gemini-3.1-pro-preview",
+    "recorded_stage_seconds": 713.019223764004,
+    "stage_seconds": {
+      "ingest": 125.00451093800075,
+      "finalize": 548.3303941200011,
+      "answer": 22.892428130000553,
+      "judge": 16.791890576001606
+    },
+    "usage": {
+      "calls": 52,
+      "input_tokens": 56081,
+      "output_tokens": 119335
+    },
+    "judge_usage": {
+      "calls": 6,
+      "input_tokens": 2162,
+      "output_tokens": 644,
+      "reasoning_tokens": 447
+    },
+    "implementation_hashes": {
+      "setup_2/baselines/TiMem/generator.py": "918ca6da5a99156620514f0531fb1879aa611fbe7ae5607bfebaef35488f3548",
+      "setup_2/baselines/TiMem/method.py": "629db749d27751d0aa463adc5789ecc5553ec949c6a46c272dd25097de47993b",
+      "setup_2/baselines/TiMem/requirements.txt": "f5fd42f87c24b4217be872f426f6b221b4d4964b8ef91e16e578dce8c5c6435b"
+    }
+  },
+  "resume_check": {
+    "exit_code": 0,
+    "completed_user_files_unchanged": true,
+    "new_model_calls": 0,
+    "log": "setup_2/tmp/timem-local-validation/resume.log",
+    "verified_with_live_implementation": true
+  },
+  "protected_files": {
+    "checked": 3652,
+    "changed": []
+  },
+  "input_hashes": {
+    "u5": {
+      "conversations.json": "cd9f98547ae78a4bfd6d15891dc712914b3725647cb57588276764675034a116",
+      "probing_questions.json": "792e4f39052fcbf74fa867660c1126fb4b3d6c20a44c4383ec50c5842a798317"
+    }
+  },
+  "earlier_deadline_check": {
+    "request_seconds": 45,
+    "result": "incomplete: repeated HTTP 504",
+    "results": "setup_2/baselines/TiMem/results/timem_local_smoke_20261004",
+    "longer_deadline_replay": "setup_2/tmp/timem-local-validation/deadline_check.json",
+    "causality": "A successful replay does not isolate timeout from serving variability."
+  },
+  "full_run": {
+    "started": false,
+    "users": 5,
+    "user_workers": 5,
+    "answer_workers_per_user": 1,
+    "judge_concurrency_per_user": 1,
+    "months_sequential_within_user": true,
+    "answer_instances": 11721,
+    "command": "bash setup_2/baselines/TiMem/run_local.sh",
+    "results": "setup_2/baselines/TiMem/results/v2_timem_local"
+  },
+  "final_implementation_hashes": {
+    "setup_2/baselines/TiMem/generator.py": "6888310c9273803c759cc0b991065941e37415e9d1c43725b97933a578669256",
+    "setup_2/baselines/TiMem/method.py": "629db749d27751d0aa463adc5789ecc5553ec949c6a46c272dd25097de47993b",
+    "setup_2/baselines/TiMem/requirements.txt": "de1f5f52519459897ba8558fedc97a92c471b42d75e5c777ffec9f87082d2526"
+  },
+  "post_live_change": {
+    "scope": "Added aiohttp and Google auth transport exception coverage and dependency declaration.",
+    "summary_deadlines_models_prompts_and_normal_execution_unchanged": true,
+    "verified_with_final_offline_suite": true
+  }
+}

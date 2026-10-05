@@ -1,0 +1,13 @@
+{
+  "generator": {
+    "command": "TMPDIR=\"$PWD/tmp/v2-dataset-fixes\" PYTHONDONTWRITEBYTECODE=1 tmp/memory-v3-update-validation/bin/python -m pytest generator_v2/tests --basetemp=\"$PWD/tmp/v2-dataset-fixes/pytest-generator\" -q",
+    "passed": 90,
+    "runtime_seconds": 1.43
+  },
+  "monthly_setup": {
+    "command": "TMPDIR=\"$PWD/setup_2/tmp\" PYTHONDONTWRITEBYTECODE=1 tmp/memory-v3-update-validation/bin/python -m pytest setup_2/tests --basetemp=\"$PWD/setup_2/tmp/v2-dataset-fixes-pytest\" -q",
+    "passed": 21,
+    "runtime_seconds": 1.81
+  },
+  "total_passed": 111
+}

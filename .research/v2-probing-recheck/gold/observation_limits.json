@@ -1,0 +1,903 @@
+[
+  {
+    "id": "u4_p202701_0060",
+    "user_id": "u4",
+    "original_id": "u4_q0198",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1700,
+        "pointer": "/probes/10/questions/2/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1705,
+        "pointer": "/probes/10/questions/2/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1706,
+        "pointer": "/probes/10/questions/2/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1707,
+        "pointer": "/probes/10/questions/2/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1708,
+        "pointer": "/probes/10/questions/2/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1711,
+        "pointer": "/probes/10/questions/2/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 1716,
+        "pointer": "/probes/10/questions/2/viewpoint_day"
+      }
+    },
+    "question": "When did Daniel's workout routine change from the climbing gym / cycling / long ride / rest day / yoga routine to the climbing gym / long run / rest day / running / yoga routine?",
+    "observed": {
+      "answer": "2027-01-28",
+      "accept": [
+        "2027-01-28"
+      ],
+      "evidence_days": [
+        332,
+        334
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 331,
+          "start_date": "2027-01-25",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 1,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 332,
+          "start_date": "2027-01-26",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 2,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 333,
+          "start_date": "2027-01-27",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 3,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 335,
+          "start_date": "2027-01-29",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 5,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 3
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 686,
+        "pointer": "/regimes/9/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 689,
+        "pointer": "/regimes/9/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 690,
+        "pointer": "/regimes/9/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 692,
+        "pointer": "/regimes/9/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 712,
+        "pointer": "/regimes/9/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 624,
+        "pointer": "/regimes/8/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 627,
+        "pointer": "/regimes/8/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 628,
+        "pointer": "/regimes/8/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 630,
+        "pointer": "/regimes/8/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 650,
+        "pointer": "/regimes/8/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u4_p202710_0126",
+    "user_id": "u4",
+    "original_id": "u4_q0207",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2027-10-31",
+    "viewpoint_day": 610,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3984,
+        "pointer": "/probes/19/questions/4/id"
+      },
+      "question": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3989,
+        "pointer": "/probes/19/questions/4/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3990,
+        "pointer": "/probes/19/questions/4/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3991,
+        "pointer": "/probes/19/questions/4/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3992,
+        "pointer": "/probes/19/questions/4/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 3995,
+        "pointer": "/probes/19/questions/4/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u4/probing_questions.json",
+        "line": 4000,
+        "pointer": "/probes/19/questions/4/viewpoint_day"
+      }
+    },
+    "question": "When did Daniel's work music routine change from the indie rock / jazz records routine to the ambient electronic / indie rock / jazz records routine?",
+    "observed": {
+      "answer": "2027-10-26",
+      "accept": [
+        "2027-10-26"
+      ],
+      "evidence_days": [
+        602,
+        605
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 603,
+          "start_date": "2027-10-24",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 3,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 604,
+          "start_date": "2027-10-25",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 4,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 4
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1641,
+        "pointer": "/regimes/20/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1644,
+        "pointer": "/regimes/20/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1645,
+        "pointer": "/regimes/20/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1647,
+        "pointer": "/regimes/20/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1667,
+        "pointer": "/regimes/20/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1560,
+        "pointer": "/regimes/19/id"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1563,
+        "pointer": "/regimes/19/start"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1564,
+        "pointer": "/regimes/19/end"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1566,
+        "pointer": "/regimes/19/rule"
+      },
+      {
+        "file": "datasets/v2/u4/world_state.json",
+        "line": 1587,
+        "pointer": "/regimes/19/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202606_0017",
+    "user_id": "u5",
+    "original_id": "u5_q0168",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2026-06-30",
+    "viewpoint_day": 122,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 444,
+        "pointer": "/probes/3/questions/6/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 449,
+        "pointer": "/probes/3/questions/6/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 450,
+        "pointer": "/probes/3/questions/6/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 451,
+        "pointer": "/probes/3/questions/6/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 452,
+        "pointer": "/probes/3/questions/6/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 459,
+        "pointer": "/probes/3/questions/6/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 464,
+        "pointer": "/probes/3/questions/6/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from the jazz vinyl / lo-fi beats routine to the film scores / lo-fi beats routine?",
+    "observed": {
+      "answer": "2026-06-18 (first observed 2026-06-22)",
+      "accept": [
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-21",
+        "2026-06-22"
+      ],
+      "evidence_days": [
+        107,
+        114
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 117,
+          "start_date": "2026-06-25",
+          "rule_variant": "rotated_weekly_value_order",
+          "cause_lag_days": null,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 118,
+          "start_date": "2026-06-26",
+          "rule_variant": "rotated_weekly_value_order",
+          "cause_lag_days": null,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 4
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1247,
+        "pointer": "/regimes/22/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1250,
+        "pointer": "/regimes/22/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1251,
+        "pointer": "/regimes/22/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1253,
+        "pointer": "/regimes/22/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1268,
+        "pointer": "/regimes/22/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1197,
+        "pointer": "/regimes/21/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1200,
+        "pointer": "/regimes/21/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1201,
+        "pointer": "/regimes/21/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1203,
+        "pointer": "/regimes/21/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1219,
+        "pointer": "/regimes/21/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202701_0068",
+    "user_id": "u5",
+    "original_id": "u5_q0154",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2027-01-31",
+    "viewpoint_day": 337,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2000,
+        "pointer": "/probes/10/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2005,
+        "pointer": "/probes/10/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2006,
+        "pointer": "/probes/10/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2007,
+        "pointer": "/probes/10/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2008,
+        "pointer": "/probes/10/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2013,
+        "pointer": "/probes/10/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2018,
+        "pointer": "/probes/10/questions/1/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's workout routine change from the home HIIT workout / morning dog walk routine to the long trail run / morning dog walk / rest day / trail run routine?",
+    "observed": {
+      "answer": "2027-01-29 (first observed 2027-01-31)",
+      "accept": [
+        "2027-01-29",
+        "2027-01-30",
+        "2027-01-31"
+      ],
+      "evidence_days": [
+        333,
+        337
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 334,
+          "start_date": "2027-01-28",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 4,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 4
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 245,
+        "pointer": "/regimes/5/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 248,
+        "pointer": "/regimes/5/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 249,
+        "pointer": "/regimes/5/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 251,
+        "pointer": "/regimes/5/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 271,
+        "pointer": "/regimes/5/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 202,
+        "pointer": "/regimes/4/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 205,
+        "pointer": "/regimes/4/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 206,
+        "pointer": "/regimes/4/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 208,
+        "pointer": "/regimes/4/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 223,
+        "pointer": "/regimes/4/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_p202702_0078",
+    "user_id": "u5",
+    "original_id": "u5_q0170",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2027-02-28",
+    "viewpoint_day": 365,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2346,
+        "pointer": "/probes/11/questions/1/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2351,
+        "pointer": "/probes/11/questions/1/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2352,
+        "pointer": "/probes/11/questions/1/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2353,
+        "pointer": "/probes/11/questions/1/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2354,
+        "pointer": "/probes/11/questions/1/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2357,
+        "pointer": "/probes/11/questions/1/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 2362,
+        "pointer": "/probes/11/questions/1/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 346,
+          "start_date": "2027-02-09",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 6,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 347,
+          "start_date": "2027-02-10",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 7,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 348,
+          "start_date": "2027-02-11",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 8,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 349,
+          "start_date": "2027-02-12",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 9,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 350,
+          "start_date": "2027-02-13",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 10,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 7
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1296,
+        "pointer": "/regimes/23/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1299,
+        "pointer": "/regimes/23/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1300,
+        "pointer": "/regimes/23/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1302,
+        "pointer": "/regimes/23/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1314,
+        "pointer": "/regimes/23/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  },
+  {
+    "id": "u5_r202708_0189",
+    "user_id": "u5",
+    "original_id": "u5_q0170",
+    "type": "change_detection",
+    "category": "non_unique_change_date_rejected_by_grader",
+    "kind": "observation_limit",
+    "probe_date": "2027-08-31",
+    "viewpoint_day": 549,
+    "source": {
+      "id": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3827,
+        "pointer": "/probes/17/questions/11/id"
+      },
+      "question": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3832,
+        "pointer": "/probes/17/questions/11/question"
+      },
+      "answer": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3833,
+        "pointer": "/probes/17/questions/11/answer"
+      },
+      "answer_type": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3834,
+        "pointer": "/probes/17/questions/11/answer_type"
+      },
+      "accept": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3835,
+        "pointer": "/probes/17/questions/11/accept"
+      },
+      "evidence_days": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3838,
+        "pointer": "/probes/17/questions/11/evidence_days"
+      },
+      "viewpoint_day": {
+        "file": "datasets/v2/u5/probing_questions.json",
+        "line": 3843,
+        "pointer": "/probes/17/questions/11/viewpoint_day"
+      }
+    },
+    "question": "When did Priya's work music routine change from synthwave playlists to the running playlists / synthwave playlists routine?",
+    "observed": {
+      "answer": "2027-02-08",
+      "accept": [
+        "2027-02-08"
+      ],
+      "evidence_days": [
+        344,
+        345
+      ]
+    },
+    "expected": {
+      "conversation_compatible_rejected_starts": [
+        {
+          "start_day": 346,
+          "start_date": "2027-02-09",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 6,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 347,
+          "start_date": "2027-02-10",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 7,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 348,
+          "start_date": "2027-02-11",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 8,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 349,
+          "start_date": "2027-02-12",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 9,
+          "accepted_by_date_exact": false
+        },
+        {
+          "start_day": 350,
+          "start_date": "2027-02-13",
+          "rule_variant": "same_rule",
+          "cause_lag_days": 10,
+          "accepted_by_date_exact": false
+        }
+      ],
+      "observed_choice_count": 29
+    },
+    "rationale": "Alternative boundaries preserve every declared pre-probe choice, including exception base values, but lie outside date_exact acceptance. For weekly reading, rotating the value order while anchoring at the later start preserves the identical observed cycle. This demonstrates an observability/grading limit, not incorrect hidden-world gold; no uniquely inferable boundary is proved.",
+    "authoritative_sources": [
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1354,
+        "pointer": "/regimes/24/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1357,
+        "pointer": "/regimes/24/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1358,
+        "pointer": "/regimes/24/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1360,
+        "pointer": "/regimes/24/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1376,
+        "pointer": "/regimes/24/first_mention_day"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1296,
+        "pointer": "/regimes/23/id"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1299,
+        "pointer": "/regimes/23/start"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1300,
+        "pointer": "/regimes/23/end"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1302,
+        "pointer": "/regimes/23/rule"
+      },
+      {
+        "file": "datasets/v2/u5/world_state.json",
+        "line": 1314,
+        "pointer": "/regimes/23/first_mention_day"
+      },
+      {
+        "file": "generator_v2/DECISIONS.md",
+        "line": 46
+      },
+      {
+        "file": "experiments/core/grading.py",
+        "line": 50
+      }
+    ],
+    "full_prefix_unanswerable": null,
+    "historical_viewpoint_compatible": true,
+    "inferential_predictability": "not assessed"
+  }
+]

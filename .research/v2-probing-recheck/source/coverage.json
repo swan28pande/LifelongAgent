@@ -1,0 +1,5112 @@
+{
+  "totals": {
+    "unknown_abstention_pool_count": 30,
+    "unknown_abstention_probe_count": 0,
+    "answerable_abstention_probe_control_count": 16,
+    "prediction_pool_count": 369,
+    "pattern_current_pool_count": 21,
+    "prediction_probe_count": 0,
+    "pattern_current_probe_count": 0,
+    "unprobed_tail_session_count": 100
+  },
+  "users": [
+    {
+      "user": "u1",
+      "pool_type_counts": {
+        "recall": 204,
+        "pattern_current": 3,
+        "pattern_at_time": 6,
+        "prediction": 102,
+        "change_detection": 3,
+        "attribution": 3,
+        "fact_current": 5,
+        "fact_at_time": 40,
+        "fact_history": 2,
+        "event_status": 5,
+        "duration": 6,
+        "abstention": 11
+      },
+      "probe_type_counts": {
+        "abstention": 5,
+        "recall": 152,
+        "fact_current": 3,
+        "fact_at_time": 31,
+        "event_status": 5,
+        "pattern_at_time": 2,
+        "attribution": 1,
+        "fact_history": 1
+      },
+      "pool_unknown_abstention_count": 6,
+      "probe_unknown_abstention_count": 0,
+      "probe_answerable_abstention_controls_count": 5,
+      "omitted_unknown_pool_items": [
+        {
+          "id": "u1_q0379",
+          "question": "Which languages does Leo speak besides English?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 7029
+          }
+        },
+        {
+          "id": "u1_q0380",
+          "question": "What is Leo's favorite movie?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 7046
+          }
+        },
+        {
+          "id": "u1_q0381",
+          "question": "What is Leo allergic to?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 7063
+          }
+        },
+        {
+          "id": "u1_q0382",
+          "question": "What is Leo's blood type?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 7080
+          }
+        },
+        {
+          "id": "u1_q0383",
+          "question": "What is Leo's shoe size?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 7097
+          }
+        },
+        {
+          "id": "u1_q0384",
+          "question": "What car does Leo drive?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 7114
+          }
+        }
+      ],
+      "selected_abstention_payloads": [
+        {
+          "id": "u1_p202603_0001",
+          "original_id": "u1_q0389",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Does Leo have any hobbies, and if so what?",
+          "answer": "rock climbing, guitar",
+          "answer_type": "value",
+          "accept": [
+            "rock climbing, guitar"
+          ],
+          "evidence_days": [
+            1,
+            2
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 31,
+          "probe_date": "2026-03-31",
+          "probe_month": "2026-03",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "hobbies"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/probing_questions.json",
+            "line": 16
+          }
+        },
+        {
+          "id": "u1_p202603_0006",
+          "original_id": "u1_q0386",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Leo's diet?",
+          "answer": "vegetarian",
+          "answer_type": "value",
+          "accept": [
+            "vegetarian"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 31,
+          "probe_date": "2026-03-31",
+          "probe_month": "2026-03",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "diet"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/probing_questions.json",
+            "line": 130
+          }
+        },
+        {
+          "id": "u1_p202603_0008",
+          "original_id": "u1_q0385",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Leo's living situation?",
+          "answer": "lives with a roommate named Sam",
+          "answer_type": "value",
+          "accept": [
+            "lives with a roommate named Sam"
+          ],
+          "evidence_days": [
+            2
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 31,
+          "probe_date": "2026-03-31",
+          "probe_month": "2026-03",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "living_situation"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/probing_questions.json",
+            "line": 177
+          }
+        },
+        {
+          "id": "u1_r202605_0166",
+          "original_id": "u1_q0386",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Leo's diet?",
+          "answer": "vegetarian",
+          "answer_type": "value",
+          "accept": [
+            "vegetarian"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 92,
+          "probe_date": "2026-05-31",
+          "probe_month": "2026-05",
+          "is_retrospective": true,
+          "tags": [
+            "control",
+            "diet"
+          ],
+          "retrospective_of": "u1_p202603_0006",
+          "original_probe_month": "2026-03",
+          "source": {
+            "file": "datasets/v2/u1/probing_questions.json",
+            "line": 603
+          }
+        },
+        {
+          "id": "u1_r202606_0171",
+          "original_id": "u1_q0385",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Leo's living situation?",
+          "answer": "lives with a roommate named Sam",
+          "answer_type": "value",
+          "accept": [
+            "lives with a roommate named Sam"
+          ],
+          "evidence_days": [
+            2
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 122,
+          "probe_date": "2026-06-30",
+          "probe_month": "2026-06",
+          "is_retrospective": true,
+          "tags": [
+            "control",
+            "living_situation"
+          ],
+          "retrospective_of": "u1_p202603_0008",
+          "original_probe_month": "2026-03",
+          "source": {
+            "file": "datasets/v2/u1/probing_questions.json",
+            "line": 727
+          }
+        }
+      ],
+      "num_probes": 23,
+      "final_probe_date": "2028-01-31",
+      "final_probe_viewpoint_day": 702,
+      "last_dataset_date": "2028-02-28",
+      "unprobed_world_tail_days": 28,
+      "unprobed_tail_session_count": 28,
+      "unprobed_tail_session_dates": [
+        "2028-02-01",
+        "2028-02-02",
+        "2028-02-03",
+        "2028-02-04",
+        "2028-02-05",
+        "2028-02-06",
+        "2028-02-07",
+        "2028-02-08",
+        "2028-02-09",
+        "2028-02-10",
+        "2028-02-11",
+        "2028-02-12",
+        "2028-02-13",
+        "2028-02-14",
+        "2028-02-15",
+        "2028-02-16",
+        "2028-02-17",
+        "2028-02-18",
+        "2028-02-19",
+        "2028-02-20",
+        "2028-02-21",
+        "2028-02-22",
+        "2028-02-23",
+        "2028-02-24",
+        "2028-02-25",
+        "2028-02-26",
+        "2028-02-27",
+        "2028-02-28"
+      ],
+      "selected_evidence_after_final_probe": [],
+      "prediction_pool_count": 102,
+      "pattern_current_pool_count": 3,
+      "prediction_probe_count": 0,
+      "pattern_current_probe_count": 0,
+      "omitted_prediction_pool_targets": [
+        {
+          "id": "u1_q0213",
+          "target_dates": [
+            "2028-04-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3693
+          }
+        },
+        {
+          "id": "u1_q0214",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3714
+          }
+        },
+        {
+          "id": "u1_q0215",
+          "target_dates": [
+            "2028-04-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3735
+          }
+        },
+        {
+          "id": "u1_q0216",
+          "target_dates": [
+            "2028-03-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3756
+          }
+        },
+        {
+          "id": "u1_q0217",
+          "target_dates": [
+            "2028-04-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3777
+          }
+        },
+        {
+          "id": "u1_q0218",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3798
+          }
+        },
+        {
+          "id": "u1_q0219",
+          "target_dates": [
+            "2028-03-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3819
+          }
+        },
+        {
+          "id": "u1_q0220",
+          "target_dates": [
+            "2028-03-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3840
+          }
+        },
+        {
+          "id": "u1_q0221",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3861
+          }
+        },
+        {
+          "id": "u1_q0222",
+          "target_dates": [
+            "2028-04-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3882
+          }
+        },
+        {
+          "id": "u1_q0223",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3903
+          }
+        },
+        {
+          "id": "u1_q0224",
+          "target_dates": [
+            "2028-03-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3924
+          }
+        },
+        {
+          "id": "u1_q0225",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3945
+          }
+        },
+        {
+          "id": "u1_q0226",
+          "target_dates": [
+            "2028-04-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3966
+          }
+        },
+        {
+          "id": "u1_q0227",
+          "target_dates": [
+            "2028-03-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3987
+          }
+        },
+        {
+          "id": "u1_q0228",
+          "target_dates": [
+            "2028-03-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4008
+          }
+        },
+        {
+          "id": "u1_q0229",
+          "target_dates": [
+            "2028-03-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4029
+          }
+        },
+        {
+          "id": "u1_q0230",
+          "target_dates": [
+            "2028-04-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4050
+          }
+        },
+        {
+          "id": "u1_q0231",
+          "target_dates": [
+            "2028-03-24"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4071
+          }
+        },
+        {
+          "id": "u1_q0232",
+          "target_dates": [
+            "2028-03-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4092
+          }
+        },
+        {
+          "id": "u1_q0233",
+          "target_dates": [
+            "2028-03-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4113
+          }
+        },
+        {
+          "id": "u1_q0234",
+          "target_dates": [
+            "2028-04-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4134
+          }
+        },
+        {
+          "id": "u1_q0235",
+          "target_dates": [
+            "2028-03-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4155
+          }
+        },
+        {
+          "id": "u1_q0236",
+          "target_dates": [
+            "2028-04-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4176
+          }
+        },
+        {
+          "id": "u1_q0237",
+          "target_dates": [
+            "2028-04-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4197
+          }
+        },
+        {
+          "id": "u1_q0238",
+          "target_dates": [
+            "2028-03-30"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4218
+          }
+        },
+        {
+          "id": "u1_q0239",
+          "target_dates": [
+            "2028-04-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4239
+          }
+        },
+        {
+          "id": "u1_q0240",
+          "target_dates": [
+            "2028-04-02"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4260
+          }
+        },
+        {
+          "id": "u1_q0241",
+          "target_dates": [
+            "2028-04-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4281
+          }
+        },
+        {
+          "id": "u1_q0242",
+          "target_dates": [
+            "2028-03-21"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4302
+          }
+        },
+        {
+          "id": "u1_q0243",
+          "target_dates": [
+            "2028-03-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4323
+          }
+        },
+        {
+          "id": "u1_q0244",
+          "target_dates": [
+            "2028-04-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4344
+          }
+        },
+        {
+          "id": "u1_q0245",
+          "target_dates": [
+            "2028-04-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4365
+          }
+        },
+        {
+          "id": "u1_q0246",
+          "target_dates": [
+            "2028-04-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4386
+          }
+        },
+        {
+          "id": "u1_q0247",
+          "target_dates": [
+            "2028-04-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4407
+          }
+        },
+        {
+          "id": "u1_q0248",
+          "target_dates": [
+            "2028-03-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4428
+          }
+        },
+        {
+          "id": "u1_q0249",
+          "target_dates": [
+            "2028-03-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4449
+          }
+        },
+        {
+          "id": "u1_q0250",
+          "target_dates": [
+            "2028-03-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4470
+          }
+        },
+        {
+          "id": "u1_q0251",
+          "target_dates": [
+            "2028-03-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4491
+          }
+        },
+        {
+          "id": "u1_q0252",
+          "target_dates": [
+            "2028-04-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4512
+          }
+        },
+        {
+          "id": "u1_q0253",
+          "target_dates": [
+            "2028-03-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4533
+          }
+        },
+        {
+          "id": "u1_q0254",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4554
+          }
+        },
+        {
+          "id": "u1_q0255",
+          "target_dates": [
+            "2028-03-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4575
+          }
+        },
+        {
+          "id": "u1_q0256",
+          "target_dates": [
+            "2028-03-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4596
+          }
+        },
+        {
+          "id": "u1_q0257",
+          "target_dates": [
+            "2028-04-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4617
+          }
+        },
+        {
+          "id": "u1_q0258",
+          "target_dates": [
+            "2028-03-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4638
+          }
+        },
+        {
+          "id": "u1_q0259",
+          "target_dates": [
+            "2028-03-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4659
+          }
+        },
+        {
+          "id": "u1_q0260",
+          "target_dates": [
+            "2028-03-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4680
+          }
+        },
+        {
+          "id": "u1_q0261",
+          "target_dates": [
+            "2028-04-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4701
+          }
+        },
+        {
+          "id": "u1_q0262",
+          "target_dates": [
+            "2028-03-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4722
+          }
+        },
+        {
+          "id": "u1_q0263",
+          "target_dates": [
+            "2028-04-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4743
+          }
+        },
+        {
+          "id": "u1_q0264",
+          "target_dates": [
+            "2028-04-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4764
+          }
+        },
+        {
+          "id": "u1_q0265",
+          "target_dates": [
+            "2028-04-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4785
+          }
+        },
+        {
+          "id": "u1_q0266",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4806
+          }
+        },
+        {
+          "id": "u1_q0267",
+          "target_dates": [
+            "2028-04-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4827
+          }
+        },
+        {
+          "id": "u1_q0268",
+          "target_dates": [
+            "2028-04-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4848
+          }
+        },
+        {
+          "id": "u1_q0269",
+          "target_dates": [
+            "2028-03-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4869
+          }
+        },
+        {
+          "id": "u1_q0270",
+          "target_dates": [
+            "2028-04-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4890
+          }
+        },
+        {
+          "id": "u1_q0271",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4911
+          }
+        },
+        {
+          "id": "u1_q0272",
+          "target_dates": [
+            "2028-04-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4932
+          }
+        },
+        {
+          "id": "u1_q0273",
+          "target_dates": [
+            "2028-03-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4953
+          }
+        },
+        {
+          "id": "u1_q0274",
+          "target_dates": [
+            "2028-03-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4974
+          }
+        },
+        {
+          "id": "u1_q0275",
+          "target_dates": [
+            "2028-04-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 4995
+          }
+        },
+        {
+          "id": "u1_q0276",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5016
+          }
+        },
+        {
+          "id": "u1_q0277",
+          "target_dates": [
+            "2028-04-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5037
+          }
+        },
+        {
+          "id": "u1_q0278",
+          "target_dates": [
+            "2028-03-21"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5058
+          }
+        },
+        {
+          "id": "u1_q0279",
+          "target_dates": [
+            "2028-04-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5079
+          }
+        },
+        {
+          "id": "u1_q0280",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5100
+          }
+        },
+        {
+          "id": "u1_q0281",
+          "target_dates": [
+            "2028-04-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5121
+          }
+        },
+        {
+          "id": "u1_q0282",
+          "target_dates": [
+            "2028-04-21"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5142
+          }
+        },
+        {
+          "id": "u1_q0283",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5163
+          }
+        },
+        {
+          "id": "u1_q0284",
+          "target_dates": [
+            "2028-03-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5184
+          }
+        },
+        {
+          "id": "u1_q0285",
+          "target_dates": [
+            "2028-03-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5205
+          }
+        },
+        {
+          "id": "u1_q0286",
+          "target_dates": [
+            "2028-04-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5226
+          }
+        },
+        {
+          "id": "u1_q0287",
+          "target_dates": [
+            "2028-03-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5247
+          }
+        },
+        {
+          "id": "u1_q0288",
+          "target_dates": [
+            "2028-03-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5268
+          }
+        },
+        {
+          "id": "u1_q0289",
+          "target_dates": [
+            "2028-03-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5289
+          }
+        },
+        {
+          "id": "u1_q0290",
+          "target_dates": [
+            "2028-03-24"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5310
+          }
+        },
+        {
+          "id": "u1_q0291",
+          "target_dates": [
+            "2028-04-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5331
+          }
+        },
+        {
+          "id": "u1_q0292",
+          "target_dates": [
+            "2028-04-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5352
+          }
+        },
+        {
+          "id": "u1_q0293",
+          "target_dates": [
+            "2028-03-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5373
+          }
+        },
+        {
+          "id": "u1_q0294",
+          "target_dates": [
+            "2028-03-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5394
+          }
+        },
+        {
+          "id": "u1_q0295",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5415
+          }
+        },
+        {
+          "id": "u1_q0296",
+          "target_dates": [
+            "2028-04-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5436
+          }
+        },
+        {
+          "id": "u1_q0297",
+          "target_dates": [
+            "2028-04-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5457
+          }
+        },
+        {
+          "id": "u1_q0298",
+          "target_dates": [
+            "2028-04-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5478
+          }
+        },
+        {
+          "id": "u1_q0299",
+          "target_dates": [
+            "2028-03-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5499
+          }
+        },
+        {
+          "id": "u1_q0300",
+          "target_dates": [
+            "2028-03-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5520
+          }
+        },
+        {
+          "id": "u1_q0301",
+          "target_dates": [
+            "2028-04-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5541
+          }
+        },
+        {
+          "id": "u1_q0302",
+          "target_dates": [
+            "2028-03-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5562
+          }
+        },
+        {
+          "id": "u1_q0303",
+          "target_dates": [
+            "2028-03-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5583
+          }
+        },
+        {
+          "id": "u1_q0304",
+          "target_dates": [
+            "2028-04-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5604
+          }
+        },
+        {
+          "id": "u1_q0305",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5625
+          }
+        },
+        {
+          "id": "u1_q0306",
+          "target_dates": [
+            "2028-04-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5646
+          }
+        },
+        {
+          "id": "u1_q0307",
+          "target_dates": [
+            "2028-04-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5667
+          }
+        },
+        {
+          "id": "u1_q0308",
+          "target_dates": [
+            "2028-03-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5688
+          }
+        },
+        {
+          "id": "u1_q0309",
+          "target_dates": [
+            "2028-03-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5709
+          }
+        },
+        {
+          "id": "u1_q0310",
+          "target_dates": [
+            "2028-03-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5730
+          }
+        },
+        {
+          "id": "u1_q0311",
+          "target_dates": [
+            "2028-04-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5751
+          }
+        },
+        {
+          "id": "u1_q0312",
+          "target_dates": [
+            "2028-03-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5772
+          }
+        },
+        {
+          "id": "u1_q0313",
+          "target_dates": [
+            "2028-04-24"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5793
+          }
+        },
+        {
+          "id": "u1_q0314",
+          "target_dates": [
+            "2028-04-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 5814
+          }
+        }
+      ],
+      "omitted_pattern_current_pool_items": [
+        {
+          "id": "u1_q0204",
+          "evidence_days": [
+            205,
+            206,
+            729,
+            730
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3501
+          }
+        },
+        {
+          "id": "u1_q0205",
+          "evidence_days": [
+            320,
+            321,
+            729,
+            730
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3523
+          }
+        },
+        {
+          "id": "u1_q0206",
+          "evidence_days": [
+            480,
+            481,
+            729,
+            730
+          ],
+          "source": {
+            "file": "datasets/v2/u1/qa_pool.json",
+            "line": 3545
+          }
+        }
+      ]
+    },
+    {
+      "user": "u2",
+      "pool_type_counts": {
+        "recall": 181,
+        "pattern_current": 3,
+        "pattern_at_time": 10,
+        "prediction": 93,
+        "change_detection": 7,
+        "attribution": 6,
+        "exception_vs_shift": 10,
+        "reversion": 3,
+        "fact_current": 5,
+        "fact_at_time": 34,
+        "fact_history": 3,
+        "event_status": 7,
+        "duration": 9,
+        "distractor_probe": 2,
+        "abstention": 11
+      },
+      "probe_type_counts": {
+        "recall": 135,
+        "abstention": 3,
+        "fact_current": 2,
+        "exception_vs_shift": 10,
+        "pattern_at_time": 9,
+        "fact_at_time": 19,
+        "change_detection": 4,
+        "duration": 3,
+        "event_status": 8,
+        "fact_history": 3,
+        "distractor_probe": 1,
+        "attribution": 3
+      },
+      "pool_unknown_abstention_count": 6,
+      "probe_unknown_abstention_count": 0,
+      "probe_answerable_abstention_controls_count": 3,
+      "omitted_unknown_pool_items": [
+        {
+          "id": "u2_q0373",
+          "question": "What is Marcus's shoe size?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 7140
+          }
+        },
+        {
+          "id": "u2_q0374",
+          "question": "What phone does Marcus use?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 7157
+          }
+        },
+        {
+          "id": "u2_q0375",
+          "question": "What is Marcus's favorite color?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 7174
+          }
+        },
+        {
+          "id": "u2_q0376",
+          "question": "Where did Marcus grow up?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 7191
+          }
+        },
+        {
+          "id": "u2_q0377",
+          "question": "What is Marcus allergic to?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 7208
+          }
+        },
+        {
+          "id": "u2_q0378",
+          "question": "What is Marcus's favorite movie?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 7225
+          }
+        }
+      ],
+      "selected_abstention_payloads": [
+        {
+          "id": "u2_p202603_0003",
+          "original_id": "u2_q0383",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Marcus's city of residence?",
+          "answer": "Portland, Oregon",
+          "answer_type": "value",
+          "accept": [
+            "Portland, Oregon"
+          ],
+          "evidence_days": [
+            1
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 31,
+          "probe_date": "2026-03-31",
+          "probe_month": "2026-03",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "city"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/probing_questions.json",
+            "line": 60
+          }
+        },
+        {
+          "id": "u2_p202603_0006",
+          "original_id": "u2_q0382",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Marcus's relationship status?",
+          "answer": "married to Grace",
+          "answer_type": "value",
+          "accept": [
+            "married to Grace"
+          ],
+          "evidence_days": [
+            2
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 31,
+          "probe_date": "2026-03-31",
+          "probe_month": "2026-03",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "relationship"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/probing_questions.json",
+            "line": 133
+          }
+        },
+        {
+          "id": "u2_p202701_0082",
+          "original_id": "u2_q0379",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Does Marcus have any pets, and if so what?",
+          "answer": "cat named Olive",
+          "answer_type": "value",
+          "accept": [
+            "cat named Olive"
+          ],
+          "evidence_days": [
+            330
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 337,
+          "probe_date": "2027-01-31",
+          "probe_month": "2027-01",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "pets"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/probing_questions.json",
+            "line": 2314
+          }
+        }
+      ],
+      "num_probes": 23,
+      "final_probe_date": "2028-01-31",
+      "final_probe_viewpoint_day": 702,
+      "last_dataset_date": "2028-02-28",
+      "unprobed_world_tail_days": 28,
+      "unprobed_tail_session_count": 23,
+      "unprobed_tail_session_dates": [
+        "2028-02-01",
+        "2028-02-04",
+        "2028-02-05",
+        "2028-02-06",
+        "2028-02-07",
+        "2028-02-08",
+        "2028-02-09",
+        "2028-02-11",
+        "2028-02-12",
+        "2028-02-13",
+        "2028-02-14",
+        "2028-02-15",
+        "2028-02-16",
+        "2028-02-17",
+        "2028-02-18",
+        "2028-02-20",
+        "2028-02-21",
+        "2028-02-22",
+        "2028-02-23",
+        "2028-02-25",
+        "2028-02-26",
+        "2028-02-27",
+        "2028-02-28"
+      ],
+      "selected_evidence_after_final_probe": [],
+      "prediction_pool_count": 93,
+      "pattern_current_pool_count": 3,
+      "prediction_probe_count": 0,
+      "pattern_current_probe_count": 0,
+      "omitted_prediction_pool_targets": [
+        {
+          "id": "u2_q0194",
+          "target_dates": [
+            "2028-04-02"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3501
+          }
+        },
+        {
+          "id": "u2_q0195",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3522
+          }
+        },
+        {
+          "id": "u2_q0196",
+          "target_dates": [
+            "2028-04-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3543
+          }
+        },
+        {
+          "id": "u2_q0197",
+          "target_dates": [
+            "2028-03-21"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3564
+          }
+        },
+        {
+          "id": "u2_q0198",
+          "target_dates": [
+            "2028-04-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3585
+          }
+        },
+        {
+          "id": "u2_q0199",
+          "target_dates": [
+            "2028-04-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3606
+          }
+        },
+        {
+          "id": "u2_q0200",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3627
+          }
+        },
+        {
+          "id": "u2_q0201",
+          "target_dates": [
+            "2028-04-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3648
+          }
+        },
+        {
+          "id": "u2_q0202",
+          "target_dates": [
+            "2028-03-31"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3669
+          }
+        },
+        {
+          "id": "u2_q0203",
+          "target_dates": [
+            "2028-04-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3690
+          }
+        },
+        {
+          "id": "u2_q0204",
+          "target_dates": [
+            "2028-03-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3711
+          }
+        },
+        {
+          "id": "u2_q0205",
+          "target_dates": [
+            "2028-03-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3732
+          }
+        },
+        {
+          "id": "u2_q0206",
+          "target_dates": [
+            "2028-04-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3753
+          }
+        },
+        {
+          "id": "u2_q0207",
+          "target_dates": [
+            "2028-03-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3774
+          }
+        },
+        {
+          "id": "u2_q0208",
+          "target_dates": [
+            "2028-03-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3795
+          }
+        },
+        {
+          "id": "u2_q0209",
+          "target_dates": [
+            "2028-03-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3816
+          }
+        },
+        {
+          "id": "u2_q0210",
+          "target_dates": [
+            "2028-04-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3837
+          }
+        },
+        {
+          "id": "u2_q0211",
+          "target_dates": [
+            "2028-04-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3858
+          }
+        },
+        {
+          "id": "u2_q0212",
+          "target_dates": [
+            "2028-03-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3879
+          }
+        },
+        {
+          "id": "u2_q0213",
+          "target_dates": [
+            "2028-04-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3900
+          }
+        },
+        {
+          "id": "u2_q0214",
+          "target_dates": [
+            "2028-03-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3921
+          }
+        },
+        {
+          "id": "u2_q0215",
+          "target_dates": [
+            "2028-04-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3942
+          }
+        },
+        {
+          "id": "u2_q0216",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3963
+          }
+        },
+        {
+          "id": "u2_q0217",
+          "target_dates": [
+            "2028-04-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3984
+          }
+        },
+        {
+          "id": "u2_q0218",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4005
+          }
+        },
+        {
+          "id": "u2_q0219",
+          "target_dates": [
+            "2028-03-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4026
+          }
+        },
+        {
+          "id": "u2_q0220",
+          "target_dates": [
+            "2028-04-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4047
+          }
+        },
+        {
+          "id": "u2_q0221",
+          "target_dates": [
+            "2028-03-02"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4068
+          }
+        },
+        {
+          "id": "u2_q0222",
+          "target_dates": [
+            "2028-03-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4089
+          }
+        },
+        {
+          "id": "u2_q0223",
+          "target_dates": [
+            "2028-04-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4110
+          }
+        },
+        {
+          "id": "u2_q0224",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4131
+          }
+        },
+        {
+          "id": "u2_q0225",
+          "target_dates": [
+            "2028-04-21"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4152
+          }
+        },
+        {
+          "id": "u2_q0226",
+          "target_dates": [
+            "2028-03-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4173
+          }
+        },
+        {
+          "id": "u2_q0227",
+          "target_dates": [
+            "2028-03-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4194
+          }
+        },
+        {
+          "id": "u2_q0228",
+          "target_dates": [
+            "2028-03-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4215
+          }
+        },
+        {
+          "id": "u2_q0229",
+          "target_dates": [
+            "2028-03-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4236
+          }
+        },
+        {
+          "id": "u2_q0230",
+          "target_dates": [
+            "2028-04-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4257
+          }
+        },
+        {
+          "id": "u2_q0231",
+          "target_dates": [
+            "2028-04-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4278
+          }
+        },
+        {
+          "id": "u2_q0232",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4299
+          }
+        },
+        {
+          "id": "u2_q0233",
+          "target_dates": [
+            "2028-04-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4320
+          }
+        },
+        {
+          "id": "u2_q0234",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4341
+          }
+        },
+        {
+          "id": "u2_q0235",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4362
+          }
+        },
+        {
+          "id": "u2_q0236",
+          "target_dates": [
+            "2028-03-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4383
+          }
+        },
+        {
+          "id": "u2_q0237",
+          "target_dates": [
+            "2028-04-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4404
+          }
+        },
+        {
+          "id": "u2_q0238",
+          "target_dates": [
+            "2028-03-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4425
+          }
+        },
+        {
+          "id": "u2_q0239",
+          "target_dates": [
+            "2028-03-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4446
+          }
+        },
+        {
+          "id": "u2_q0240",
+          "target_dates": [
+            "2028-04-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4467
+          }
+        },
+        {
+          "id": "u2_q0241",
+          "target_dates": [
+            "2028-04-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4488
+          }
+        },
+        {
+          "id": "u2_q0242",
+          "target_dates": [
+            "2028-03-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4509
+          }
+        },
+        {
+          "id": "u2_q0243",
+          "target_dates": [
+            "2028-03-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4530
+          }
+        },
+        {
+          "id": "u2_q0244",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4551
+          }
+        },
+        {
+          "id": "u2_q0245",
+          "target_dates": [
+            "2028-03-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4572
+          }
+        },
+        {
+          "id": "u2_q0246",
+          "target_dates": [
+            "2028-03-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4593
+          }
+        },
+        {
+          "id": "u2_q0247",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4614
+          }
+        },
+        {
+          "id": "u2_q0248",
+          "target_dates": [
+            "2028-04-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4635
+          }
+        },
+        {
+          "id": "u2_q0249",
+          "target_dates": [
+            "2028-03-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4656
+          }
+        },
+        {
+          "id": "u2_q0250",
+          "target_dates": [
+            "2028-03-31"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4677
+          }
+        },
+        {
+          "id": "u2_q0251",
+          "target_dates": [
+            "2028-03-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4698
+          }
+        },
+        {
+          "id": "u2_q0252",
+          "target_dates": [
+            "2028-03-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4719
+          }
+        },
+        {
+          "id": "u2_q0253",
+          "target_dates": [
+            "2028-04-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4740
+          }
+        },
+        {
+          "id": "u2_q0254",
+          "target_dates": [
+            "2028-03-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4761
+          }
+        },
+        {
+          "id": "u2_q0255",
+          "target_dates": [
+            "2028-03-30"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4782
+          }
+        },
+        {
+          "id": "u2_q0256",
+          "target_dates": [
+            "2028-04-21"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4803
+          }
+        },
+        {
+          "id": "u2_q0257",
+          "target_dates": [
+            "2028-03-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4824
+          }
+        },
+        {
+          "id": "u2_q0258",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4845
+          }
+        },
+        {
+          "id": "u2_q0259",
+          "target_dates": [
+            "2028-04-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4866
+          }
+        },
+        {
+          "id": "u2_q0260",
+          "target_dates": [
+            "2028-03-24"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4887
+          }
+        },
+        {
+          "id": "u2_q0261",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4908
+          }
+        },
+        {
+          "id": "u2_q0262",
+          "target_dates": [
+            "2028-03-02"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4929
+          }
+        },
+        {
+          "id": "u2_q0263",
+          "target_dates": [
+            "2028-03-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4950
+          }
+        },
+        {
+          "id": "u2_q0264",
+          "target_dates": [
+            "2028-04-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4971
+          }
+        },
+        {
+          "id": "u2_q0265",
+          "target_dates": [
+            "2028-03-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 4992
+          }
+        },
+        {
+          "id": "u2_q0266",
+          "target_dates": [
+            "2028-03-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5013
+          }
+        },
+        {
+          "id": "u2_q0267",
+          "target_dates": [
+            "2028-03-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5034
+          }
+        },
+        {
+          "id": "u2_q0268",
+          "target_dates": [
+            "2028-04-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5055
+          }
+        },
+        {
+          "id": "u2_q0269",
+          "target_dates": [
+            "2028-03-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5076
+          }
+        },
+        {
+          "id": "u2_q0270",
+          "target_dates": [
+            "2028-04-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5097
+          }
+        },
+        {
+          "id": "u2_q0271",
+          "target_dates": [
+            "2028-04-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5118
+          }
+        },
+        {
+          "id": "u2_q0272",
+          "target_dates": [
+            "2028-03-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5139
+          }
+        },
+        {
+          "id": "u2_q0273",
+          "target_dates": [
+            "2028-03-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5160
+          }
+        },
+        {
+          "id": "u2_q0274",
+          "target_dates": [
+            "2028-03-30"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5181
+          }
+        },
+        {
+          "id": "u2_q0275",
+          "target_dates": [
+            "2028-04-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5202
+          }
+        },
+        {
+          "id": "u2_q0276",
+          "target_dates": [
+            "2028-03-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5223
+          }
+        },
+        {
+          "id": "u2_q0277",
+          "target_dates": [
+            "2028-03-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5244
+          }
+        },
+        {
+          "id": "u2_q0278",
+          "target_dates": [
+            "2028-03-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5265
+          }
+        },
+        {
+          "id": "u2_q0279",
+          "target_dates": [
+            "2028-03-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5286
+          }
+        },
+        {
+          "id": "u2_q0280",
+          "target_dates": [
+            "2028-03-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5307
+          }
+        },
+        {
+          "id": "u2_q0281",
+          "target_dates": [
+            "2028-04-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5328
+          }
+        },
+        {
+          "id": "u2_q0282",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5349
+          }
+        },
+        {
+          "id": "u2_q0283",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5370
+          }
+        },
+        {
+          "id": "u2_q0284",
+          "target_dates": [
+            "2028-03-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5391
+          }
+        },
+        {
+          "id": "u2_q0285",
+          "target_dates": [
+            "2028-04-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5412
+          }
+        },
+        {
+          "id": "u2_q0286",
+          "target_dates": [
+            "2028-03-21"
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 5433
+          }
+        }
+      ],
+      "omitted_pattern_current_pool_items": [
+        {
+          "id": "u2_q0181",
+          "evidence_days": [
+            600,
+            602,
+            729,
+            730
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3225
+          }
+        },
+        {
+          "id": "u2_q0182",
+          "evidence_days": [
+            452,
+            454,
+            729,
+            730
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3247
+          }
+        },
+        {
+          "id": "u2_q0183",
+          "evidence_days": [
+            560,
+            561,
+            728,
+            729
+          ],
+          "source": {
+            "file": "datasets/v2/u2/qa_pool.json",
+            "line": 3269
+          }
+        }
+      ]
+    },
+    {
+      "user": "u3",
+      "pool_type_counts": {
+        "recall": 143,
+        "pattern_current": 4,
+        "pattern_at_time": 18,
+        "prediction": 76,
+        "change_detection": 14,
+        "attribution": 12,
+        "exception_vs_shift": 20,
+        "reversion": 6,
+        "fact_current": 5,
+        "fact_at_time": 36,
+        "fact_history": 5,
+        "event_status": 8,
+        "duration": 16,
+        "distractor_probe": 6,
+        "abstention": 11
+      },
+      "probe_type_counts": {
+        "recall": 104,
+        "pattern_at_time": 11,
+        "fact_at_time": 21,
+        "duration": 10,
+        "attribution": 10,
+        "change_detection": 13,
+        "event_status": 4,
+        "exception_vs_shift": 18,
+        "distractor_probe": 3,
+        "reversion": 2,
+        "fact_current": 1,
+        "fact_history": 2,
+        "abstention": 1
+      },
+      "pool_unknown_abstention_count": 6,
+      "probe_unknown_abstention_count": 0,
+      "probe_answerable_abstention_controls_count": 1,
+      "omitted_unknown_pool_items": [
+        {
+          "id": "u3_q0369",
+          "question": "Which languages does Sofia speak besides English?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 7255
+          }
+        },
+        {
+          "id": "u3_q0370",
+          "question": "What is Sofia's shoe size?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 7272
+          }
+        },
+        {
+          "id": "u3_q0371",
+          "question": "Where did Sofia grow up?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 7289
+          }
+        },
+        {
+          "id": "u3_q0372",
+          "question": "What car does Sofia drive?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 7306
+          }
+        },
+        {
+          "id": "u3_q0373",
+          "question": "What is Sofia allergic to?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 7323
+          }
+        },
+        {
+          "id": "u3_q0374",
+          "question": "Which university did Sofia attend?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 7340
+          }
+        }
+      ],
+      "selected_abstention_payloads": [
+        {
+          "id": "u3_p202702_0080",
+          "original_id": "u3_q0379",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Sofia's relationship status?",
+          "answer": "engaged to Tom",
+          "answer_type": "value",
+          "accept": [
+            "engaged to Tom"
+          ],
+          "evidence_days": [
+            350
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 365,
+          "probe_date": "2027-02-28",
+          "probe_month": "2027-02",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "relationship"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/probing_questions.json",
+            "line": 2393
+          }
+        }
+      ],
+      "num_probes": 23,
+      "final_probe_date": "2028-01-31",
+      "final_probe_viewpoint_day": 702,
+      "last_dataset_date": "2028-02-28",
+      "unprobed_world_tail_days": 28,
+      "unprobed_tail_session_count": 23,
+      "unprobed_tail_session_dates": [
+        "2028-02-01",
+        "2028-02-02",
+        "2028-02-03",
+        "2028-02-04",
+        "2028-02-05",
+        "2028-02-06",
+        "2028-02-07",
+        "2028-02-08",
+        "2028-02-10",
+        "2028-02-11",
+        "2028-02-13",
+        "2028-02-14",
+        "2028-02-16",
+        "2028-02-17",
+        "2028-02-18",
+        "2028-02-19",
+        "2028-02-20",
+        "2028-02-21",
+        "2028-02-22",
+        "2028-02-23",
+        "2028-02-24",
+        "2028-02-26",
+        "2028-02-27"
+      ],
+      "selected_evidence_after_final_probe": [],
+      "prediction_pool_count": 76,
+      "pattern_current_pool_count": 4,
+      "prediction_probe_count": 0,
+      "pattern_current_probe_count": 0,
+      "omitted_prediction_pool_targets": [
+        {
+          "id": "u3_q0165",
+          "target_dates": [
+            "2028-03-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3118
+          }
+        },
+        {
+          "id": "u3_q0166",
+          "target_dates": [
+            "2028-04-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3139
+          }
+        },
+        {
+          "id": "u3_q0167",
+          "target_dates": [
+            "2028-03-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3160
+          }
+        },
+        {
+          "id": "u3_q0168",
+          "target_dates": [
+            "2028-03-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3181
+          }
+        },
+        {
+          "id": "u3_q0169",
+          "target_dates": [
+            "2028-04-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3202
+          }
+        },
+        {
+          "id": "u3_q0170",
+          "target_dates": [
+            "2028-03-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3223
+          }
+        },
+        {
+          "id": "u3_q0171",
+          "target_dates": [
+            "2028-04-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3244
+          }
+        },
+        {
+          "id": "u3_q0172",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3265
+          }
+        },
+        {
+          "id": "u3_q0173",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3286
+          }
+        },
+        {
+          "id": "u3_q0174",
+          "target_dates": [
+            "2028-04-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3307
+          }
+        },
+        {
+          "id": "u3_q0175",
+          "target_dates": [
+            "2028-03-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3328
+          }
+        },
+        {
+          "id": "u3_q0176",
+          "target_dates": [
+            "2028-04-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3349
+          }
+        },
+        {
+          "id": "u3_q0177",
+          "target_dates": [
+            "2028-04-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3370
+          }
+        },
+        {
+          "id": "u3_q0178",
+          "target_dates": [
+            "2028-04-02"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3391
+          }
+        },
+        {
+          "id": "u3_q0179",
+          "target_dates": [
+            "2028-04-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3412
+          }
+        },
+        {
+          "id": "u3_q0180",
+          "target_dates": [
+            "2028-03-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3433
+          }
+        },
+        {
+          "id": "u3_q0181",
+          "target_dates": [
+            "2028-03-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3454
+          }
+        },
+        {
+          "id": "u3_q0182",
+          "target_dates": [
+            "2028-04-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3475
+          }
+        },
+        {
+          "id": "u3_q0183",
+          "target_dates": [
+            "2028-04-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3496
+          }
+        },
+        {
+          "id": "u3_q0184",
+          "target_dates": [
+            "2028-03-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3517
+          }
+        },
+        {
+          "id": "u3_q0185",
+          "target_dates": [
+            "2028-03-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3538
+          }
+        },
+        {
+          "id": "u3_q0186",
+          "target_dates": [
+            "2028-03-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3559
+          }
+        },
+        {
+          "id": "u3_q0187",
+          "target_dates": [
+            "2028-04-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3580
+          }
+        },
+        {
+          "id": "u3_q0188",
+          "target_dates": [
+            "2028-04-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3601
+          }
+        },
+        {
+          "id": "u3_q0189",
+          "target_dates": [
+            "2028-03-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3622
+          }
+        },
+        {
+          "id": "u3_q0190",
+          "target_dates": [
+            "2028-03-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3643
+          }
+        },
+        {
+          "id": "u3_q0191",
+          "target_dates": [
+            "2028-04-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3664
+          }
+        },
+        {
+          "id": "u3_q0192",
+          "target_dates": [
+            "2028-03-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3685
+          }
+        },
+        {
+          "id": "u3_q0193",
+          "target_dates": [
+            "2028-03-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3706
+          }
+        },
+        {
+          "id": "u3_q0194",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3727
+          }
+        },
+        {
+          "id": "u3_q0195",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3748
+          }
+        },
+        {
+          "id": "u3_q0196",
+          "target_dates": [
+            "2028-03-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3769
+          }
+        },
+        {
+          "id": "u3_q0197",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3790
+          }
+        },
+        {
+          "id": "u3_q0198",
+          "target_dates": [
+            "2028-04-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3811
+          }
+        },
+        {
+          "id": "u3_q0199",
+          "target_dates": [
+            "2028-03-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3832
+          }
+        },
+        {
+          "id": "u3_q0200",
+          "target_dates": [
+            "2028-04-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3853
+          }
+        },
+        {
+          "id": "u3_q0201",
+          "target_dates": [
+            "2028-03-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3874
+          }
+        },
+        {
+          "id": "u3_q0202",
+          "target_dates": [
+            "2028-03-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3895
+          }
+        },
+        {
+          "id": "u3_q0203",
+          "target_dates": [
+            "2028-04-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3916
+          }
+        },
+        {
+          "id": "u3_q0204",
+          "target_dates": [
+            "2028-03-24"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3937
+          }
+        },
+        {
+          "id": "u3_q0205",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3958
+          }
+        },
+        {
+          "id": "u3_q0206",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 3979
+          }
+        },
+        {
+          "id": "u3_q0207",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4000
+          }
+        },
+        {
+          "id": "u3_q0208",
+          "target_dates": [
+            "2028-04-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4021
+          }
+        },
+        {
+          "id": "u3_q0209",
+          "target_dates": [
+            "2028-03-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4042
+          }
+        },
+        {
+          "id": "u3_q0210",
+          "target_dates": [
+            "2028-04-02"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4063
+          }
+        },
+        {
+          "id": "u3_q0211",
+          "target_dates": [
+            "2028-04-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4084
+          }
+        },
+        {
+          "id": "u3_q0212",
+          "target_dates": [
+            "2028-04-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4105
+          }
+        },
+        {
+          "id": "u3_q0213",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4126
+          }
+        },
+        {
+          "id": "u3_q0214",
+          "target_dates": [
+            "2028-03-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4147
+          }
+        },
+        {
+          "id": "u3_q0215",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4168
+          }
+        },
+        {
+          "id": "u3_q0216",
+          "target_dates": [
+            "2028-03-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4189
+          }
+        },
+        {
+          "id": "u3_q0217",
+          "target_dates": [
+            "2028-04-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4210
+          }
+        },
+        {
+          "id": "u3_q0218",
+          "target_dates": [
+            "2028-03-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4231
+          }
+        },
+        {
+          "id": "u3_q0219",
+          "target_dates": [
+            "2028-04-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4252
+          }
+        },
+        {
+          "id": "u3_q0220",
+          "target_dates": [
+            "2028-04-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4273
+          }
+        },
+        {
+          "id": "u3_q0221",
+          "target_dates": [
+            "2028-04-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4294
+          }
+        },
+        {
+          "id": "u3_q0222",
+          "target_dates": [
+            "2028-03-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4315
+          }
+        },
+        {
+          "id": "u3_q0223",
+          "target_dates": [
+            "2028-03-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4336
+          }
+        },
+        {
+          "id": "u3_q0224",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4357
+          }
+        },
+        {
+          "id": "u3_q0225",
+          "target_dates": [
+            "2028-03-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4378
+          }
+        },
+        {
+          "id": "u3_q0226",
+          "target_dates": [
+            "2028-03-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4399
+          }
+        },
+        {
+          "id": "u3_q0227",
+          "target_dates": [
+            "2028-04-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4420
+          }
+        },
+        {
+          "id": "u3_q0228",
+          "target_dates": [
+            "2028-03-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4441
+          }
+        },
+        {
+          "id": "u3_q0229",
+          "target_dates": [
+            "2028-03-31"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4462
+          }
+        },
+        {
+          "id": "u3_q0230",
+          "target_dates": [
+            "2028-04-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4483
+          }
+        },
+        {
+          "id": "u3_q0231",
+          "target_dates": [
+            "2028-03-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4504
+          }
+        },
+        {
+          "id": "u3_q0232",
+          "target_dates": [
+            "2028-03-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4525
+          }
+        },
+        {
+          "id": "u3_q0233",
+          "target_dates": [
+            "2028-03-30"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4546
+          }
+        },
+        {
+          "id": "u3_q0234",
+          "target_dates": [
+            "2028-03-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4567
+          }
+        },
+        {
+          "id": "u3_q0235",
+          "target_dates": [
+            "2028-04-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4588
+          }
+        },
+        {
+          "id": "u3_q0236",
+          "target_dates": [
+            "2028-03-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4609
+          }
+        },
+        {
+          "id": "u3_q0237",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4630
+          }
+        },
+        {
+          "id": "u3_q0238",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4651
+          }
+        },
+        {
+          "id": "u3_q0239",
+          "target_dates": [
+            "2028-03-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4672
+          }
+        },
+        {
+          "id": "u3_q0240",
+          "target_dates": [
+            "2028-04-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 4693
+          }
+        }
+      ],
+      "omitted_pattern_current_pool_items": [
+        {
+          "id": "u3_q0143",
+          "evidence_days": [
+            501,
+            503,
+            728,
+            729
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 2652
+          }
+        },
+        {
+          "id": "u3_q0144",
+          "evidence_days": [
+            483,
+            488,
+            728,
+            729
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 2674
+          }
+        },
+        {
+          "id": "u3_q0145",
+          "evidence_days": [
+            668,
+            669,
+            726,
+            729
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 2696
+          }
+        },
+        {
+          "id": "u3_q0146",
+          "evidence_days": [
+            604,
+            605,
+            726,
+            728
+          ],
+          "source": {
+            "file": "datasets/v2/u3/qa_pool.json",
+            "line": 2718
+          }
+        }
+      ]
+    },
+    {
+      "user": "u4",
+      "pool_type_counts": {
+        "recall": 101,
+        "pattern_current": 5,
+        "pattern_at_time": 28,
+        "prediction": 57,
+        "change_detection": 23,
+        "attribution": 20,
+        "exception_vs_shift": 20,
+        "reversion": 9,
+        "fact_current": 5,
+        "fact_at_time": 40,
+        "fact_history": 5,
+        "event_status": 14,
+        "duration": 20,
+        "distractor_probe": 10,
+        "other_person": 9,
+        "abstention": 11
+      },
+      "probe_type_counts": {
+        "fact_at_time": 25,
+        "other_person": 7,
+        "recall": 66,
+        "distractor_probe": 6,
+        "pattern_at_time": 17,
+        "event_status": 9,
+        "exception_vs_shift": 11,
+        "duration": 9,
+        "attribution": 19,
+        "fact_history": 3,
+        "fact_current": 5,
+        "reversion": 6,
+        "change_detection": 13,
+        "abstention": 4
+      },
+      "pool_unknown_abstention_count": 6,
+      "probe_unknown_abstention_count": 0,
+      "probe_answerable_abstention_controls_count": 4,
+      "omitted_unknown_pool_items": [
+        {
+          "id": "u4_q0366",
+          "question": "What car does Daniel drive?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 7360
+          }
+        },
+        {
+          "id": "u4_q0367",
+          "question": "Which university did Daniel attend?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 7377
+          }
+        },
+        {
+          "id": "u4_q0368",
+          "question": "Which languages does Daniel speak besides English?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 7394
+          }
+        },
+        {
+          "id": "u4_q0369",
+          "question": "What is Daniel's shoe size?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 7411
+          }
+        },
+        {
+          "id": "u4_q0370",
+          "question": "What is Daniel's favorite movie?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 7428
+          }
+        },
+        {
+          "id": "u4_q0371",
+          "question": "What is Daniel's favorite color?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 7445
+          }
+        }
+      ],
+      "selected_abstention_payloads": [
+        {
+          "id": "u4_p202705_0083",
+          "original_id": "u4_q0374",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Daniel's diet?",
+          "answer": "pescatarian",
+          "answer_type": "value",
+          "accept": [
+            "pescatarian"
+          ],
+          "evidence_days": [
+            450
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 457,
+          "probe_date": "2027-05-31",
+          "probe_month": "2027-05",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "diet"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 2411
+          }
+        },
+        {
+          "id": "u4_p202708_0110",
+          "original_id": "u4_q0375",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Does Daniel have any hobbies, and if so what?",
+          "answer": "photography, rock climbing, chess",
+          "answer_type": "value",
+          "accept": [
+            "photography, rock climbing, chess"
+          ],
+          "evidence_days": [
+            1,
+            120,
+            522
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 549,
+          "probe_date": "2027-08-31",
+          "probe_month": "2027-08",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "hobbies"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3299
+          }
+        },
+        {
+          "id": "u4_r202708_0161",
+          "original_id": "u4_q0374",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Daniel's diet?",
+          "answer": "pescatarian",
+          "answer_type": "value",
+          "accept": [
+            "pescatarian"
+          ],
+          "evidence_days": [
+            450
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 549,
+          "probe_date": "2027-08-31",
+          "probe_month": "2027-08",
+          "is_retrospective": true,
+          "tags": [
+            "control",
+            "diet"
+          ],
+          "retrospective_of": "u4_p202705_0083",
+          "original_probe_month": "2027-05",
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 3404
+          }
+        },
+        {
+          "id": "u4_p202710_0131",
+          "original_id": "u4_q0376",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Daniel's job?",
+          "answer": "co-founder of his own architecture studio",
+          "answer_type": "value",
+          "accept": [
+            "co-founder of his own architecture studio"
+          ],
+          "evidence_days": [
+            600
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "job"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/probing_questions.json",
+            "line": 4105
+          }
+        }
+      ],
+      "num_probes": 23,
+      "final_probe_date": "2028-01-31",
+      "final_probe_viewpoint_day": 702,
+      "last_dataset_date": "2028-02-28",
+      "unprobed_world_tail_days": 28,
+      "unprobed_tail_session_count": 12,
+      "unprobed_tail_session_dates": [
+        "2028-02-03",
+        "2028-02-04",
+        "2028-02-05",
+        "2028-02-06",
+        "2028-02-12",
+        "2028-02-13",
+        "2028-02-14",
+        "2028-02-19",
+        "2028-02-22",
+        "2028-02-23",
+        "2028-02-24",
+        "2028-02-27"
+      ],
+      "selected_evidence_after_final_probe": [],
+      "prediction_pool_count": 57,
+      "pattern_current_pool_count": 5,
+      "prediction_probe_count": 0,
+      "pattern_current_probe_count": 0,
+      "omitted_prediction_pool_targets": [
+        {
+          "id": "u4_q0134",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2650
+          }
+        },
+        {
+          "id": "u4_q0135",
+          "target_dates": [
+            "2028-04-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2671
+          }
+        },
+        {
+          "id": "u4_q0136",
+          "target_dates": [
+            "2028-03-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2692
+          }
+        },
+        {
+          "id": "u4_q0137",
+          "target_dates": [
+            "2028-04-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2713
+          }
+        },
+        {
+          "id": "u4_q0138",
+          "target_dates": [
+            "2028-04-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2734
+          }
+        },
+        {
+          "id": "u4_q0139",
+          "target_dates": [
+            "2028-04-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2755
+          }
+        },
+        {
+          "id": "u4_q0140",
+          "target_dates": [
+            "2028-03-31"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2776
+          }
+        },
+        {
+          "id": "u4_q0141",
+          "target_dates": [
+            "2028-04-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2797
+          }
+        },
+        {
+          "id": "u4_q0142",
+          "target_dates": [
+            "2028-03-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2818
+          }
+        },
+        {
+          "id": "u4_q0143",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2839
+          }
+        },
+        {
+          "id": "u4_q0144",
+          "target_dates": [
+            "2028-03-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2860
+          }
+        },
+        {
+          "id": "u4_q0145",
+          "target_dates": [
+            "2028-03-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2881
+          }
+        },
+        {
+          "id": "u4_q0146",
+          "target_dates": [
+            "2028-03-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2902
+          }
+        },
+        {
+          "id": "u4_q0147",
+          "target_dates": [
+            "2028-03-09"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2923
+          }
+        },
+        {
+          "id": "u4_q0148",
+          "target_dates": [
+            "2028-04-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2944
+          }
+        },
+        {
+          "id": "u4_q0149",
+          "target_dates": [
+            "2028-04-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2965
+          }
+        },
+        {
+          "id": "u4_q0150",
+          "target_dates": [
+            "2028-03-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2986
+          }
+        },
+        {
+          "id": "u4_q0151",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3007
+          }
+        },
+        {
+          "id": "u4_q0152",
+          "target_dates": [
+            "2028-04-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3028
+          }
+        },
+        {
+          "id": "u4_q0153",
+          "target_dates": [
+            "2028-04-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3049
+          }
+        },
+        {
+          "id": "u4_q0154",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3070
+          }
+        },
+        {
+          "id": "u4_q0155",
+          "target_dates": [
+            "2028-04-24"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3091
+          }
+        },
+        {
+          "id": "u4_q0156",
+          "target_dates": [
+            "2028-03-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3112
+          }
+        },
+        {
+          "id": "u4_q0157",
+          "target_dates": [
+            "2028-03-30"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3133
+          }
+        },
+        {
+          "id": "u4_q0158",
+          "target_dates": [
+            "2028-04-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3154
+          }
+        },
+        {
+          "id": "u4_q0159",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3175
+          }
+        },
+        {
+          "id": "u4_q0160",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3196
+          }
+        },
+        {
+          "id": "u4_q0161",
+          "target_dates": [
+            "2028-04-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3217
+          }
+        },
+        {
+          "id": "u4_q0162",
+          "target_dates": [
+            "2028-03-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3238
+          }
+        },
+        {
+          "id": "u4_q0163",
+          "target_dates": [
+            "2028-04-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3259
+          }
+        },
+        {
+          "id": "u4_q0164",
+          "target_dates": [
+            "2028-04-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3280
+          }
+        },
+        {
+          "id": "u4_q0165",
+          "target_dates": [
+            "2028-03-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3301
+          }
+        },
+        {
+          "id": "u4_q0166",
+          "target_dates": [
+            "2028-04-14"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3322
+          }
+        },
+        {
+          "id": "u4_q0167",
+          "target_dates": [
+            "2028-04-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3343
+          }
+        },
+        {
+          "id": "u4_q0168",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3364
+          }
+        },
+        {
+          "id": "u4_q0169",
+          "target_dates": [
+            "2028-04-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3385
+          }
+        },
+        {
+          "id": "u4_q0170",
+          "target_dates": [
+            "2028-03-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3406
+          }
+        },
+        {
+          "id": "u4_q0171",
+          "target_dates": [
+            "2028-04-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3427
+          }
+        },
+        {
+          "id": "u4_q0172",
+          "target_dates": [
+            "2028-03-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3448
+          }
+        },
+        {
+          "id": "u4_q0173",
+          "target_dates": [
+            "2028-03-07"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3469
+          }
+        },
+        {
+          "id": "u4_q0174",
+          "target_dates": [
+            "2028-04-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3490
+          }
+        },
+        {
+          "id": "u4_q0175",
+          "target_dates": [
+            "2028-04-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3511
+          }
+        },
+        {
+          "id": "u4_q0176",
+          "target_dates": [
+            "2028-03-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3532
+          }
+        },
+        {
+          "id": "u4_q0177",
+          "target_dates": [
+            "2028-03-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3553
+          }
+        },
+        {
+          "id": "u4_q0178",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3574
+          }
+        },
+        {
+          "id": "u4_q0179",
+          "target_dates": [
+            "2028-04-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3595
+          }
+        },
+        {
+          "id": "u4_q0180",
+          "target_dates": [
+            "2028-04-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3616
+          }
+        },
+        {
+          "id": "u4_q0181",
+          "target_dates": [
+            "2028-03-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3637
+          }
+        },
+        {
+          "id": "u4_q0182",
+          "target_dates": [
+            "2028-03-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3658
+          }
+        },
+        {
+          "id": "u4_q0183",
+          "target_dates": [
+            "2028-04-05"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3679
+          }
+        },
+        {
+          "id": "u4_q0184",
+          "target_dates": [
+            "2028-04-18"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3700
+          }
+        },
+        {
+          "id": "u4_q0185",
+          "target_dates": [
+            "2028-03-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3721
+          }
+        },
+        {
+          "id": "u4_q0186",
+          "target_dates": [
+            "2028-03-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3742
+          }
+        },
+        {
+          "id": "u4_q0187",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3763
+          }
+        },
+        {
+          "id": "u4_q0188",
+          "target_dates": [
+            "2028-03-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3784
+          }
+        },
+        {
+          "id": "u4_q0189",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3805
+          }
+        },
+        {
+          "id": "u4_q0190",
+          "target_dates": [
+            "2028-03-11"
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 3826
+          }
+        }
+      ],
+      "omitted_pattern_current_pool_items": [
+        {
+          "id": "u4_q0101",
+          "evidence_days": [
+            620,
+            621,
+            726,
+            729
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 1952
+          }
+        },
+        {
+          "id": "u4_q0102",
+          "evidence_days": [
+            414,
+            418,
+            724,
+            725
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 1974
+          }
+        },
+        {
+          "id": "u4_q0103",
+          "evidence_days": [
+            691,
+            693,
+            726,
+            729
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 1996
+          }
+        },
+        {
+          "id": "u4_q0104",
+          "evidence_days": [
+            661,
+            662,
+            725,
+            726
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2018
+          }
+        },
+        {
+          "id": "u4_q0105",
+          "evidence_days": [
+            657,
+            659,
+            721,
+            729
+          ],
+          "source": {
+            "file": "datasets/v2/u4/qa_pool.json",
+            "line": 2040
+          }
+        }
+      ]
+    },
+    {
+      "user": "u5",
+      "pool_type_counts": {
+        "recall": 73,
+        "pattern_current": 6,
+        "pattern_at_time": 30,
+        "prediction": 41,
+        "change_detection": 34,
+        "attribution": 30,
+        "exception_vs_shift": 24,
+        "reversion": 12,
+        "fact_current": 6,
+        "fact_at_time": 38,
+        "fact_history": 6,
+        "event_status": 20,
+        "duration": 20,
+        "distractor_probe": 16,
+        "other_person": 12,
+        "abstention": 12
+      },
+      "probe_type_counts": {
+        "fact_at_time": 32,
+        "recall": 39,
+        "pattern_at_time": 13,
+        "other_person": 7,
+        "exception_vs_shift": 20,
+        "change_detection": 24,
+        "event_status": 10,
+        "duration": 11,
+        "distractor_probe": 14,
+        "attribution": 13,
+        "reversion": 6,
+        "fact_current": 4,
+        "abstention": 3,
+        "fact_history": 4
+      },
+      "pool_unknown_abstention_count": 6,
+      "probe_unknown_abstention_count": 0,
+      "probe_answerable_abstention_controls_count": 3,
+      "omitted_unknown_pool_items": [
+        {
+          "id": "u5_q0368",
+          "question": "Where did Priya grow up?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 7509
+          }
+        },
+        {
+          "id": "u5_q0369",
+          "question": "What is Priya's blood type?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 7526
+          }
+        },
+        {
+          "id": "u5_q0370",
+          "question": "What is Priya's favorite color?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 7543
+          }
+        },
+        {
+          "id": "u5_q0371",
+          "question": "Which languages does Priya speak besides English?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 7560
+          }
+        },
+        {
+          "id": "u5_q0372",
+          "question": "What is Priya's favorite movie?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 7577
+          }
+        },
+        {
+          "id": "u5_q0373",
+          "question": "Which university did Priya attend?",
+          "evidence_days": [],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 7594
+          }
+        }
+      ],
+      "selected_abstention_payloads": [
+        {
+          "id": "u5_p202701_0069",
+          "original_id": "u5_q0379",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Does Priya have any hobbies, and if so what?",
+          "answer": "bouldering, trail running",
+          "answer_type": "value",
+          "accept": [
+            "bouldering, trail running"
+          ],
+          "evidence_days": [
+            1,
+            331
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 337,
+          "probe_date": "2027-01-31",
+          "probe_month": "2027-01",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "hobbies"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/probing_questions.json",
+            "line": 2029
+          }
+        },
+        {
+          "id": "u5_p202706_0101",
+          "original_id": "u5_q0376",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Do you know Priya's diet?",
+          "answer": "vegetarian",
+          "answer_type": "value",
+          "accept": [
+            "vegetarian"
+          ],
+          "evidence_days": [
+            476
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 487,
+          "probe_date": "2027-06-30",
+          "probe_month": "2027-06",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "diet"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/probing_questions.json",
+            "line": 3132
+          }
+        },
+        {
+          "id": "u5_p202710_0130",
+          "original_id": "u5_q0378",
+          "type": "abstention",
+          "capability": "abstention",
+          "domain": "abstention",
+          "question": "Does Priya have any pets, and if so what?",
+          "answer": "labrador named Biscuit, cat named Mochi",
+          "answer_type": "value",
+          "accept": [
+            "labrador named Biscuit, cat named Mochi"
+          ],
+          "evidence_days": [
+            97,
+            600
+          ],
+          "grading": "llm_judge",
+          "viewpoint_day": 610,
+          "probe_date": "2027-10-31",
+          "probe_month": "2027-10",
+          "is_retrospective": false,
+          "tags": [
+            "control",
+            "pets"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/probing_questions.json",
+            "line": 4236
+          }
+        }
+      ],
+      "num_probes": 23,
+      "final_probe_date": "2028-01-31",
+      "final_probe_viewpoint_day": 702,
+      "last_dataset_date": "2028-02-28",
+      "unprobed_world_tail_days": 28,
+      "unprobed_tail_session_count": 14,
+      "unprobed_tail_session_dates": [
+        "2028-02-01",
+        "2028-02-03",
+        "2028-02-05",
+        "2028-02-07",
+        "2028-02-08",
+        "2028-02-09",
+        "2028-02-10",
+        "2028-02-12",
+        "2028-02-13",
+        "2028-02-19",
+        "2028-02-20",
+        "2028-02-22",
+        "2028-02-23",
+        "2028-02-25"
+      ],
+      "selected_evidence_after_final_probe": [],
+      "prediction_pool_count": 41,
+      "pattern_current_pool_count": 6,
+      "prediction_probe_count": 0,
+      "pattern_current_probe_count": 0,
+      "omitted_prediction_pool_targets": [
+        {
+          "id": "u5_q0109",
+          "target_dates": [
+            "2028-04-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2207
+          }
+        },
+        {
+          "id": "u5_q0110",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2229
+          }
+        },
+        {
+          "id": "u5_q0111",
+          "target_dates": [
+            "2028-04-28"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2251
+          }
+        },
+        {
+          "id": "u5_q0112",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2273
+          }
+        },
+        {
+          "id": "u5_q0113",
+          "target_dates": [
+            "2028-04-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2295
+          }
+        },
+        {
+          "id": "u5_q0114",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2316
+          }
+        },
+        {
+          "id": "u5_q0115",
+          "target_dates": [
+            "2028-03-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2337
+          }
+        },
+        {
+          "id": "u5_q0116",
+          "target_dates": [
+            "2028-03-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2358
+          }
+        },
+        {
+          "id": "u5_q0117",
+          "target_dates": [
+            "2028-03-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2379
+          }
+        },
+        {
+          "id": "u5_q0118",
+          "target_dates": [
+            "2028-03-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2400
+          }
+        },
+        {
+          "id": "u5_q0119",
+          "target_dates": [
+            "2028-04-15"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2421
+          }
+        },
+        {
+          "id": "u5_q0120",
+          "target_dates": [
+            "2028-03-24"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2442
+          }
+        },
+        {
+          "id": "u5_q0121",
+          "target_dates": [
+            "2028-03-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2463
+          }
+        },
+        {
+          "id": "u5_q0122",
+          "target_dates": [
+            "2028-04-01"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2484
+          }
+        },
+        {
+          "id": "u5_q0123",
+          "target_dates": [
+            "2028-04-25"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2505
+          }
+        },
+        {
+          "id": "u5_q0124",
+          "target_dates": [
+            "2028-04-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2526
+          }
+        },
+        {
+          "id": "u5_q0125",
+          "target_dates": [
+            "2028-03-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2547
+          }
+        },
+        {
+          "id": "u5_q0126",
+          "target_dates": [
+            "2028-03-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2568
+          }
+        },
+        {
+          "id": "u5_q0127",
+          "target_dates": [
+            "2028-04-23"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2589
+          }
+        },
+        {
+          "id": "u5_q0128",
+          "target_dates": [
+            "2028-03-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2610
+          }
+        },
+        {
+          "id": "u5_q0129",
+          "target_dates": [
+            "2028-04-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2631
+          }
+        },
+        {
+          "id": "u5_q0130",
+          "target_dates": [
+            "2028-04-20"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2652
+          }
+        },
+        {
+          "id": "u5_q0131",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2673
+          }
+        },
+        {
+          "id": "u5_q0132",
+          "target_dates": [
+            "2028-03-12"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2694
+          }
+        },
+        {
+          "id": "u5_q0133",
+          "target_dates": [
+            "2028-04-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2715
+          }
+        },
+        {
+          "id": "u5_q0134",
+          "target_dates": [
+            "2028-03-08"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2736
+          }
+        },
+        {
+          "id": "u5_q0135",
+          "target_dates": [
+            "2028-03-24"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2757
+          }
+        },
+        {
+          "id": "u5_q0136",
+          "target_dates": [
+            "2028-03-17"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2778
+          }
+        },
+        {
+          "id": "u5_q0137",
+          "target_dates": [
+            "2028-03-21"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2799
+          }
+        },
+        {
+          "id": "u5_q0138",
+          "target_dates": [
+            "2028-03-03"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2820
+          }
+        },
+        {
+          "id": "u5_q0139",
+          "target_dates": [
+            "2028-03-16"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2841
+          }
+        },
+        {
+          "id": "u5_q0140",
+          "target_dates": [
+            "2028-03-22"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2862
+          }
+        },
+        {
+          "id": "u5_q0141",
+          "target_dates": [
+            "2028-04-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2883
+          }
+        },
+        {
+          "id": "u5_q0142",
+          "target_dates": [
+            "2028-03-26"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2904
+          }
+        },
+        {
+          "id": "u5_q0143",
+          "target_dates": [
+            "2028-03-04"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2925
+          }
+        },
+        {
+          "id": "u5_q0144",
+          "target_dates": [
+            "2028-03-10"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2946
+          }
+        },
+        {
+          "id": "u5_q0145",
+          "target_dates": [
+            "2028-04-27"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2967
+          }
+        },
+        {
+          "id": "u5_q0146",
+          "target_dates": [
+            "2028-03-13"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 2988
+          }
+        },
+        {
+          "id": "u5_q0147",
+          "target_dates": [
+            "2028-04-19"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 3009
+          }
+        },
+        {
+          "id": "u5_q0148",
+          "target_dates": [
+            "2028-04-06"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 3030
+          }
+        },
+        {
+          "id": "u5_q0149",
+          "target_dates": [
+            "2028-02-29"
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 3051
+          }
+        }
+      ],
+      "omitted_pattern_current_pool_items": [
+        {
+          "id": "u5_q0073",
+          "evidence_days": [
+            560,
+            565,
+            725,
+            727
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 1445
+          }
+        },
+        {
+          "id": "u5_q0074",
+          "evidence_days": [
+            641,
+            643,
+            721,
+            724
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 1467
+          }
+        },
+        {
+          "id": "u5_q0075",
+          "evidence_days": [
+            680,
+            681,
+            725,
+            727
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 1489
+          }
+        },
+        {
+          "id": "u5_q0076",
+          "evidence_days": [
+            608,
+            609,
+            721,
+            724
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 1511
+          }
+        },
+        {
+          "id": "u5_q0077",
+          "evidence_days": [
+            592,
+            593,
+            724,
+            727
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 1533
+          }
+        },
+        {
+          "id": "u5_q0078",
+          "evidence_days": [
+            701,
+            705,
+            724,
+            727
+          ],
+          "source": {
+            "file": "datasets/v2/u5/qa_pool.json",
+            "line": 1555
+          }
+        }
+      ]
+    }
+  ]
+}

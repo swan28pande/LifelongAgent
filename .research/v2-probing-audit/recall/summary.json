@@ -1,0 +1,82 @@
+{
+  "scope": "All monthly recall question instances in canonical datasets/v2/u1..u5",
+  "instances": 489,
+  "unique_source_questions": 392,
+  "by_user": {
+    "u1": {
+      "instances": 152,
+      "retrospective_instances": 32,
+      "inferred_instances": 0,
+      "no_session_instances": 0,
+      "exception_instances": 0,
+      "evidence_references": 152,
+      "direct_nonliteral_instances_reviewed": 0
+    },
+    "u2": {
+      "instances": 127,
+      "retrospective_instances": 26,
+      "inferred_instances": 14,
+      "no_session_instances": 4,
+      "exception_instances": 1,
+      "evidence_references": 155,
+      "direct_nonliteral_instances_reviewed": 0
+    },
+    "u3": {
+      "instances": 98,
+      "retrospective_instances": 19,
+      "inferred_instances": 34,
+      "no_session_instances": 20,
+      "exception_instances": 4,
+      "evidence_references": 166,
+      "direct_nonliteral_instances_reviewed": 51
+    },
+    "u4": {
+      "instances": 72,
+      "retrospective_instances": 15,
+      "inferred_instances": 41,
+      "no_session_instances": 22,
+      "exception_instances": 3,
+      "evidence_references": 146,
+      "direct_nonliteral_instances_reviewed": 31
+    },
+    "u5": {
+      "instances": 40,
+      "retrospective_instances": 5,
+      "inferred_instances": 28,
+      "no_session_instances": 14,
+      "exception_instances": 2,
+      "evidence_references": 88,
+      "direct_nonliteral_instances_reviewed": 12
+    }
+  },
+  "check_failure_counts": {
+    "exact_new_regime_start_observed": 2,
+    "target_not_after_viewpoint": 4
+  },
+  "evidence_check_failure_counts": {
+    "same_phase_as_target": 3,
+    "evidence_value_equals_gold": 3
+  },
+  "issue_category_counts": {
+    "unobserved_shift_boundary": 2,
+    "future_target_in_recall": 4,
+    "unobserved_answer_phase": 1
+  },
+  "distinct_flagged_instances": 7,
+  "evidence_references": 707,
+  "unique_evidence_domain_days": 569,
+  "direct_nonliteral_unique_sources_agent_reviewed": 73,
+  "wrong_reference_answer_instances": 0,
+  "wrong_accepted_values_instances": 0,
+  "direct_instances": 372,
+  "inferred_instances": 117,
+  "no_session_instances": 60,
+  "ordinary_same_phase_inference_instances_without_flagged_issue": 110,
+  "limitations": [
+    "Existing saved validator extractions are source evidence, not new independent semantic validation.",
+    "All direct citations without literal gold wording received manual transcript review by audit agent, preserved as excerpts.",
+    "No-session/inferred status alone is not treated as an error; ordinary same-phase inference is accepted.",
+    "Inferred recall assumes stable routine patterns despite one-off exceptions; this audit isolates specific missing phases and shift ambiguities rather than demanding logical certainty for every inference.",
+    "The four future recall targets also belong to the broader previously known future-date category."
+  ]
+}

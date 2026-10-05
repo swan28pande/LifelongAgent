@@ -1,0 +1,749 @@
+{
+  "input_sha256": {
+    "datasets/v2/u2/conversations.json": "939a53a1c5866b27ce379acd8f4d436e034267ccb33c227ef05bf938a6553c7c",
+    "datasets/v2/u3/conversations.json": "f7941cdbf3d585184431402c624029176ea6d6ea407dfa31cde30915a23e0240",
+    "datasets/v2/u4/conversations.json": "82003566fc77e22034e8bcd5b2592a0d6f11a4ea7464c84d43022e64da686255",
+    "datasets/v2/u5/conversations.json": "cd9f98547ae78a4bfd6d15891dc712914b3725647cb57588276764675034a116"
+  },
+  "records": [
+    {
+      "id": "u2_p202603_0001",
+      "check": "empty_fact_transcript_scan",
+      "cutoff": "2026-03-31",
+      "user_turns_in_prefix": 189,
+      "pet_vocabulary_user_turns": 0,
+      "negative_or_first_pet_regex_candidates": [],
+      "pet_mentions_on_adoption_date": [],
+      "limitation": "Lexical screening plus manual review of recorded fact statements; not an exhaustive semantic proof of absence. Empty-set truth is separately established by world state."
+    },
+    {
+      "id": "u2_p202608_0038",
+      "check": "empty_fact_transcript_scan",
+      "cutoff": "2026-08-31",
+      "user_turns_in_prefix": 1074,
+      "pet_vocabulary_user_turns": 0,
+      "negative_or_first_pet_regex_candidates": [],
+      "pet_mentions_on_adoption_date": [],
+      "limitation": "Lexical screening plus manual review of recorded fact statements; not an exhaustive semantic proof of absence. Empty-set truth is separately established by world state."
+    },
+    {
+      "id": "u2_r202702_0188",
+      "check": "empty_fact_transcript_scan",
+      "cutoff": "2027-02-28",
+      "user_turns_in_prefix": 2090,
+      "pet_vocabulary_user_turns": 1,
+      "negative_or_first_pet_regex_candidates": [],
+      "pet_mentions_on_adoption_date": [
+        {
+          "date": "2027-01-24",
+          "text": "We adopted a cat named Olive today! She is officially part of the family now.",
+          "source": {
+            "file": "datasets/v2/u2/conversations.json",
+            "line": 17411,
+            "pointer": "/sessions/2027-01-24/turns/3/text"
+          }
+        }
+      ],
+      "limitation": "Lexical screening plus manual review of recorded fact statements; not an exhaustive semantic proof of absence. Empty-set truth is separately established by world state."
+    },
+    {
+      "id": "u3_p202604_0007",
+      "check": "empty_fact_transcript_scan",
+      "cutoff": "2026-04-30",
+      "user_turns_in_prefix": 304,
+      "pet_vocabulary_user_turns": 0,
+      "negative_or_first_pet_regex_candidates": [],
+      "pet_mentions_on_adoption_date": [],
+      "limitation": "Lexical screening plus manual review of recorded fact statements; not an exhaustive semantic proof of absence. Empty-set truth is separately established by world state."
+    },
+    {
+      "user_id": "u4",
+      "date": "2027-10-26",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2027-10-26",
+          "text": "Hey there! It's going pretty well. I started the morning on a high note with a toasted hole-in-the-middle roll topped with cream cheese and some cold-cured pink fish. Definitely hit the spot. Now I'm just sitting at my desk keeping things low-key in a plain dark, short-sleeved cotton tee and my trusty blue denim trousers.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21191,
+            "pointer": "/sessions/2027-10-26/turns/1/text"
+          }
+        },
+        {
+          "date": "2027-10-26",
+          "text": "We're actually making some headway on a new client proposal. To help me focus while sketching out some layout ideas, I've been spinning some old vinyl of syncopated, horn-heavy improvisational tunes on the turntable. It keeps the atmosphere in the room really relaxed.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21199,
+            "pointer": "/sessions/2027-10-26/turns/3/text"
+          }
+        },
+        {
+          "date": "2027-10-26",
+          "text": "Absolutely, I actually have plans to head over to the indoor bouldering facility later this afternoon to scale some synthetic routes. My wrist feels totally solid, so I'm excited to work on some of the trickier overhangs they've set up.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21207,
+            "pointer": "/sessions/2027-10-26/turns/5/text"
+          }
+        },
+        {
+          "date": "2027-10-26",
+          "text": "She's doing well! Her schedule at the pediatric clinic is pretty demanding, but she's still managing to squeeze in her clay throwing sessions. We're actually planning to cook together tonight once we're both home.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21215,
+            "pointer": "/sessions/2027-10-26/turns/7/text"
+          }
+        },
+        {
+          "date": "2027-10-26",
+          "text": "We are making some warm corn tortillas folded around grilled whitefish, shredded cabbage, and a squeeze of lime. It's one of our favorites to whip up on a weeknight.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21223,
+            "pointer": "/sessions/2027-10-26/turns/9/text"
+          }
+        },
+        {
+          "date": "2027-10-26",
+          "text": "Thanks! I'll catch up with you tomorrow and let you know how those overhanging routes went. Have a good evening!",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21231,
+            "pointer": "/sessions/2027-10-26/turns/11/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u4",
+      "date": "2027-10-27",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2027-10-27",
+          "text": "Hey there. It's going pretty well! I started the morning on a healthy note. I whipped up a thick, blended fruit puree of strawberries and bananas, poured it into a deep dish, and covered it with a bunch of pumpkin seeds and granola. It was really satisfying.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21246,
+            "pointer": "/sessions/2027-10-27/turns/1/text"
+          }
+        },
+        {
+          "date": "2027-10-27",
+          "text": "I did, though it wasn't what I originally planned. I ended up just going for a really long walk through the neighborhood. I was supposed to go for my usual run, but the fitness center where I normally go was completely closed for maintenance today, so I had to improvise on foot.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21254,
+            "pointer": "/sessions/2027-10-27/turns/3/text"
+          }
+        },
+        {
+          "date": "2027-10-27",
+          "text": "Yeah, I headed right over. I kept things incredibly casual with my clothes today. I'm just wearing a plain, collarless short-sleeve top in solid black, paired with some standard blue denim pants. It's very comfortable for sitting at the drafting table.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21262,
+            "pointer": "/sessions/2027-10-27/turns/5/text"
+          }
+        },
+        {
+          "date": "2027-10-27",
+          "text": "Definitely. I've got some instrumental, texturized electronic soundscapes playing in my headphones. It's very atmospheric, lots of slow synths and absolutely no vocals. It really helps me block out distractions and get into a flow state.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21270,
+            "pointer": "/sessions/2027-10-27/turns/7/text"
+          }
+        },
+        {
+          "date": "2027-10-27",
+          "text": "I actually brought my camera along on my long walk this morning! The autumn light hitting the brick buildings in Chicago right now is gorgeous, so I managed to capture a few neat street shots before the studio opened.",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21278,
+            "pointer": "/sessions/2027-10-27/turns/9/text"
+          }
+        },
+        {
+          "date": "2027-10-27",
+          "text": "Me too. It was a nice way to slow down. Now I'm ready to tackle the rest of these floor plans. I'll catch up with you later!",
+          "source": {
+            "file": "datasets/v2/u4/conversations.json",
+            "line": 21286,
+            "pointer": "/sessions/2027-10-27/turns/11/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2026-09-08",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2026-09-08",
+          "text": "Hi! It's okay. My knee is still a bit stiff, but I made sure to complete the set of rehabilitation movements my physical therapist prescribed to help with the recovery. Arjun actually went for a long run today, which made me a bit jealous!",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5132,
+            "pointer": "/sessions/2026-09-08/turns/1/text"
+          }
+        },
+        {
+          "date": "2026-09-08",
+          "text": "Yes, I did. Since driving is still a bit awkward with my leg, I hailed a car through an app on my phone to get there. My coworker Dana actually rode her bicycle to work today to keep up with her triathlon training.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5140,
+            "pointer": "/sessions/2026-09-08/turns/3/text"
+          }
+        },
+        {
+          "date": "2026-09-08",
+          "text": "It's busy, but I'm making progress on some database issues. For dinner tonight, I boiled some penne and tossed it with marinara sauce. Arjun had a craving for seafood, so he actually ordered some fish and chips from a local pub.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5148,
+            "pointer": "/sessions/2026-09-08/turns/5/text"
+          }
+        },
+        {
+          "date": "2026-09-08",
+          "text": "Yes, I'm planning to dive into one of those fast-paced suspense novels I checked out from the Carnegie branch. Meera told me she's currently reading a dense historical biography, which sounds a bit too dry for my taste!",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5156,
+            "pointer": "/sessions/2026-09-08/turns/7/text"
+          }
+        },
+        {
+          "date": "2026-09-08",
+          "text": "Definitely. I want to have the lights turned off and be asleep by half past ten. Arjun is a night owl and plans to stay up watching a movie until midnight, but I really need my rest.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5164,
+            "pointer": "/sessions/2026-09-08/turns/9/text"
+          }
+        },
+        {
+          "date": "2026-09-08",
+          "text": "Thanks! Talk to you tomorrow.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5172,
+            "pointer": "/sessions/2026-09-08/turns/11/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2026-09-12",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2026-09-12",
+          "text": "Hey! Yes, Biscuit and I had a nice morning walk. Honestly, my legs are a bit tired because I did something different today. Instead of my boring physical therapy knee exercises, my coworker Dana, who is training for her triathlon, invited me to join her, so I ended up doing some laps in the local public lanes. She did intensive freestyle drills, but I just stuck to gentle breaststroke to keep my knee safe.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5242,
+            "pointer": "/sessions/2026-09-12/turns/1/text"
+          }
+        },
+        {
+          "date": "2026-09-12",
+          "text": "It feels pretty good, actually! It's much less stiff than usual. Oh, by the way, Arjun and I ended up going to that live retro-futuristic electronic music gig yesterday. It was so much fun to just stand and enjoy the music, even if I couldn't dance on this knee.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5250,
+            "pointer": "/sessions/2026-09-12/turns/3/text"
+          }
+        },
+        {
+          "date": "2026-09-12",
+          "text": "It was amazing. The band had these incredible vintage synthesizer setups and neon lights. Arjun really loved the drum machine solos, and I just loved the high-energy retro vibe.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5258,
+            "pointer": "/sessions/2026-09-12/turns/5/text"
+          }
+        },
+        {
+          "date": "2026-09-12",
+          "text": "I did do a few hours of coding this morning to fix some database issues. To keep my focus, I had some relaxed, wordless instrumental hip-hop tracks playing in the background. Arjun was working on his own project while listening to loud heavy metal, but I definitely needed those chill, repetitive beats to concentrate.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5266,
+            "pointer": "/sessions/2026-09-12/turns/7/text"
+          }
+        },
+        {
+          "date": "2026-09-12",
+          "text": "Absolutely. Now I'm just looking forward to a relaxing evening. I've got some edge-of-your-seat suspense novels that I checked out from the Carnegie branch last week, and I'm planning to dive into those tonight. Arjun is reading a massive historical biography, but I definitely prefer a fast-paced mystery.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5274,
+            "pointer": "/sessions/2026-09-12/turns/9/text"
+          }
+        },
+        {
+          "date": "2026-09-12",
+          "text": "Not too late. I'm aiming to turn off my bedside lamp at exactly half past eleven tonight. My sister Meera told me she's been crashing around nine PM lately since moving to Seattle, but thirty minutes before midnight is usually my sweet spot for a weekend.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5282,
+            "pointer": "/sessions/2026-09-12/turns/11/text"
+          }
+        },
+        {
+          "date": "2026-09-12",
+          "text": "Thanks! I'll do my best to close the book on time. Talk to you tomorrow!",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5290,
+            "pointer": "/sessions/2026-09-12/turns/13/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2026-09-13",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2026-09-13",
+          "text": "Hey! It's actually feeling a bit better. I made sure to spend some time this afternoon doing the specific rehabilitation stretches and targeted movements my physical therapist assigned me to rebuild strength. Arjun went for a long, intense run in the park, but I'm sticking to my low-impact recovery routine for now.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5305,
+            "pointer": "/sessions/2026-09-13/turns/1/text"
+          }
+        },
+        {
+          "date": "2026-09-13",
+          "text": "I have! I'm keeping it simple and just reheating the remains of the vegetarian chili we made a couple of nights ago to clear out the fridge. Arjun decided he wanted something different, so he actually ordered some takeout from the local Thai place.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5313,
+            "pointer": "/sessions/2026-09-13/turns/3/text"
+          }
+        },
+        {
+          "date": "2026-09-13",
+          "text": "Yes, actually! I'm going to spend some quiet time tonight flipping through a couple of modern anthologies of verse and short stanzas that I checked out. My sister Meera mentioned she's currently reading a massive historical biography, but I definitely prefer something shorter and more rhythmic right now.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5321,
+            "pointer": "/sessions/2026-09-13/turns/5/text"
+          }
+        },
+        {
+          "date": "2026-09-13",
+          "text": "Well, normally I try to have the lights turned off by half past eleven, but tonight is going to be an exception. There's a classic suspense film playing on TV late tonight that I've been dying to see, so I won't be heading to bed until around 1:30 in the morning. Arjun is a natural night owl who usually sleeps around 2:00 AM anyway, so he'll probably stay up with me.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5329,
+            "pointer": "/sessions/2026-09-13/turns/7/text"
+          }
+        },
+        {
+          "date": "2026-09-13",
+          "text": "It's an old Hitchcock thriller. I've got Biscuit curled up next to me on the couch already, so we are all set for a cozy night.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5337,
+            "pointer": "/sessions/2026-09-13/turns/9/text"
+          }
+        },
+        {
+          "date": "2026-09-13",
+          "text": "It's been pretty great, actually. That new ramen spot on our street has some fantastic seafood and veggie broths that I've been enjoying, though tonight I'm strictly on fridge-clearing duty. I think I'm going to get my book of poems ready before the movie starts!",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 5345,
+            "pointer": "/sessions/2026-09-13/turns/11/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2027-01-13",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2027-01-13",
+          "text": "Hey! It's going well. It's a bit cold today, but I still bundled up and took our Labrador out for a stroll around the block first thing after waking up to get some fresh air. Arjun decided to do some yoga in the living room instead of coming along.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8643,
+            "pointer": "/sessions/2027-01-13/turns/1/text"
+          }
+        },
+        {
+          "date": "2027-01-13",
+          "text": "Actually, yes! I joined a neighborhood book club in Denver on January 12th, 2027.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8651,
+            "pointer": "/sessions/2027-01-13/turns/3/text"
+          }
+        },
+        {
+          "date": "2027-01-13",
+          "text": "I found a flyer at the local cafe. They had their first meetup yesterday evening, which was just a friendly meet-and-greet, and I'm really glad I went.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8659,
+            "pointer": "/sessions/2027-01-13/turns/5/text"
+          }
+        },
+        {
+          "date": "2027-01-13",
+          "text": "My knee is feeling completely back to normal, but I'm still easing back into bouldering slowly to be safe. I don't want to overdo it.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8667,
+            "pointer": "/sessions/2027-01-13/turns/7/text"
+          }
+        },
+        {
+          "date": "2027-01-13",
+          "text": "Yes, I sat down at the piano for a bit yesterday. It's a nice way to relax after a long day of backend engineering work at the startup.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8675,
+            "pointer": "/sessions/2027-01-13/turns/9/text"
+          }
+        },
+        {
+          "date": "2027-01-13",
+          "text": "We haven't been yet, but I checked their menu online and they do have a couple of pescatarian-friendly broths! We definitely plan to try it soon.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8683,
+            "pointer": "/sessions/2027-01-13/turns/11/text"
+          }
+        },
+        {
+          "date": "2027-01-13",
+          "text": "Thanks! Talk to you later!",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8691,
+            "pointer": "/sessions/2027-01-13/turns/13/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2027-01-22",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2027-01-22",
+          "text": "Hey! Yes, it's been a pretty busy but good week. The weather has been nice here. I actually took the electric train that runs on the tracks through town to get to the office this morning. Arjun drove his car instead because he had some errands to run on his way.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8879,
+            "pointer": "/sessions/2027-01-22/turns/1/text"
+          }
+        },
+        {
+          "date": "2027-01-22",
+          "text": "Yeah, it was really productive. I had to focus on a tricky backend bug, so I put my headphones on and listened to those retro-futuristic 80s electronic beats all afternoon. My sister Meera mentioned she was listening to ambient nature sounds for her data work today.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8887,
+            "pointer": "/sessions/2027-01-22/turns/3/text"
+          }
+        },
+        {
+          "date": "2027-01-22",
+          "text": "I did! It was a very satisfying end to the work week. Now I can fully relax this weekend. I might even spend some time practicing the piano tomorrow.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8895,
+            "pointer": "/sessions/2027-01-22/turns/5/text"
+          }
+        },
+        {
+          "date": "2027-01-22",
+          "text": "Just some classical basics to keep my hands nimble, nothing too complex. For dinner tonight, Arjun and I cooked up one of those boxes with the pre-measured ingredients and a recipe card—we made a great barramundi dish. My coworker Dana said she just got Thai takeout.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8903,
+            "pointer": "/sessions/2027-01-22/turns/7/text"
+          }
+        },
+        {
+          "date": "2027-01-22",
+          "text": "Oh, absolutely. Biscuit was standing right by the counter, hoping a piece of fish would fall. He didn't get any, but he got his usual treats. We're planning to turn in early tonight. I want to have my eyes closed and lights out exactly sixty minutes before midnight. Arjun, on the other hand, wants to stay up until 1 AM playing video games.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8911,
+            "pointer": "/sessions/2027-01-22/turns/9/text"
+          }
+        },
+        {
+          "date": "2027-01-22",
+          "text": "Thanks! Yeah, I'm thinking of hitting the climbing gym on Sunday morning. I've missed being on the wall, so I'm excited to ease back into it. Anyway, I should head off to start winding down. Talk to you tomorrow!",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8919,
+            "pointer": "/sessions/2027-01-22/turns/11/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2027-01-25",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2027-01-25",
+          "text": "Hey! It's been a really busy Monday at the fintech startup. I had to stay online super late to handle a deployment issue, so I completely skipped the high-intensity interval session I usually do in the living room. Arjun got his weightlifting workout in, though.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8938,
+            "pointer": "/sessions/2027-01-25/turns/1/text"
+          }
+        },
+        {
+          "date": "2027-01-25",
+          "text": "We did! My sister Meera texted saying she just ordered delivery in Seattle, but Arjun and I actually cooked a subscription box dinner where all the fresh ingredients are pre-measured and sent to your house.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8946,
+            "pointer": "/sessions/2027-01-25/turns/3/text"
+          }
+        },
+        {
+          "date": "2027-01-25",
+          "text": "It was really nice! Actually, I took up trail running on January 24, 2027.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8954,
+            "pointer": "/sessions/2027-01-25/turns/5/text"
+          }
+        },
+        {
+          "date": "2027-01-25",
+          "text": "It felt great! Since my physical therapist cleared me for normal activity a while ago, I didn't have any issues at all. It was really nice to be out running.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8962,
+            "pointer": "/sessions/2027-01-25/turns/7/text"
+          }
+        },
+        {
+          "date": "2027-01-25",
+          "text": "I think so! I'm hoping to get out there again next weekend if the weather holds up. But for tonight, I'm just looking forward to relaxing with Arjun and Biscuit.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8970,
+            "pointer": "/sessions/2027-01-25/turns/9/text"
+          }
+        },
+        {
+          "date": "2027-01-25",
+          "text": "I definitely will. Thanks! Talk to you tomorrow.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 8978,
+            "pointer": "/sessions/2027-01-25/turns/11/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2027-02-08",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2027-02-08",
+          "text": "Hi! It was pretty productive but busy. Arjun actually rode his electric scooter to his office today, but I chose to take the electric commuter train that runs on the tracks through Denver for my trip in. It was nice not to have to drive.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9343,
+            "pointer": "/sessions/2027-02-08/turns/1/text"
+          }
+        },
+        {
+          "date": "2027-02-08",
+          "text": "I had to put my head down and focus on some complex API work. To help me concentrate, I kept those retro-futuristic, neon-infused electronic instrumental beats looping in my headphones all day. My coworker Dana, on the other hand, was blasting high-energy pop to get through her afternoon slump.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9351,
+            "pointer": "/sessions/2027-02-08/turns/3/text"
+          }
+        },
+        {
+          "date": "2027-02-08",
+          "text": "It's feeling really solid, thanks for asking! Today was a bit unusual because I had a dental cleaning this afternoon. While I was in the waiting room, I ended up picking up a glossy publication filled with short design articles. I got so into it that I'm actually going to spend tonight flipping through this glossy periodical instead of my usual neighborhood book club novel. Arjun is sticking to his heavy historical biography tonight, but I wanted something lighter.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9359,
+            "pointer": "/sessions/2027-02-08/turns/5/text"
+          }
+        },
+        {
+          "date": "2027-02-08",
+          "text": "I did! I spent a couple of hours playing some classical pieces on the piano yesterday while Arjun sat nearby and listened. It was incredibly relaxing. I need to make sure I get a good night's rest tonight, though.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9367,
+            "pointer": "/sessions/2027-02-08/turns/7/text"
+          }
+        },
+        {
+          "date": "2027-02-08",
+          "text": "Yes, I'm aiming to have my eyes closed and lights out precisely an hour before midnight. Arjun usually stays up much later reading, but he's actually turning in at that same time tonight too.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9375,
+            "pointer": "/sessions/2027-02-08/turns/9/text"
+          }
+        },
+        {
+          "date": "2027-02-08",
+          "text": "Yes, we chatted yesterday! She's loving the Pacific Northwest and her new role. I also heard from Dana today—she's super busy with her new beagle, Pepper, who is apparently keeping her on her toes. Anyway, I should probably get to my reading now.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9383,
+            "pointer": "/sessions/2027-02-08/turns/11/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2027-02-14",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2027-02-14",
+          "text": "Hey! Yes, Denver is beautiful today. I actually didn't go for a trail run today; instead, Arjun went for an intense workout session at the local gym, while my active start to the day was just taking Biscuit out for a nice, long stroll around the neighborhood first thing this morning.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9457,
+            "pointer": "/sessions/2027-02-14/turns/1/text"
+          }
+        },
+        {
+          "date": "2027-02-14",
+          "text": "I did have to log on for a couple of hours to review some backend code. To keep my focus, I put on some of those high-tempo track lists I usually use to pace myself during my outdoor jogs. It really helped me power through! Meanwhile, Arjun was working on his own projects while listening to some chill ambient jazz.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9465,
+            "pointer": "/sessions/2027-02-14/turns/3/text"
+          }
+        },
+        {
+          "date": "2027-02-14",
+          "text": "The knee is holding up wonderfully, thanks for asking! I've been doing some light training runs during the week. Speaking of food to fuel all of this, for dinner tonight, we are making one of those pre-measured ingredient recipe boxes that gets delivered to our door. My coworker Dana was telling me she is cooking a massive lasagna from scratch tonight, but I definitely prefer the convenience of the pre-portioned boxes.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9473,
+            "pointer": "/sessions/2027-02-14/turns/5/text"
+          }
+        },
+        {
+          "date": "2027-02-14",
+          "text": "Yes, I'm looking forward to winding down. I plan to spend an hour or so reading the assigned fiction selection for my local neighborhood literary circle. Arjun is actually reading a thick biography of a historical figure, but I'm excited to get through my chapters.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9481,
+            "pointer": "/sessions/2027-02-14/turns/7/text"
+          }
+        },
+        {
+          "date": "2027-02-14",
+          "text": "It's a mystery set in a small coastal town. It's been a great escape, and the characters are really well-developed. I'm hoping to finish it before our next meeting.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9489,
+            "pointer": "/sessions/2027-02-14/turns/9/text"
+          }
+        },
+        {
+          "date": "2027-02-14",
+          "text": "Thanks! I definitely will. Talk to you soon!",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 9497,
+            "pointer": "/sessions/2027-02-14/turns/11/text"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "u5",
+      "date": "2027-04-24",
+      "check": "selected_user_turns_for_manual_semantic_review",
+      "turns": [
+        {
+          "date": "2027-04-24",
+          "text": "Hey there! Yes, Biscuit and I are having a very lazy morning. It's so nice because I didn't have to do any of that tedious traveling back and forth for my job today—not having to make any kind of professional transit has been wonderful. Arjun actually had to travel all the way to his office for a weekend shift, so I've had the place to myself.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 11446,
+            "pointer": "/sessions/2027-04-24/turns/1/text"
+          }
+        },
+        {
+          "date": "2027-04-24",
+          "text": "A bit of both! I've been doing some sorting through our remaining boxes, which actually led to a tough decision. I've officially decided to stop playing the piano. With everything going on since the relocation, I just haven't had the time to seek out and commit to new lessons.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 11454,
+            "pointer": "/sessions/2027-04-24/turns/3/text"
+          }
+        },
+        {
+          "date": "2027-04-24",
+          "text": "Yeah, exactly. Finding a new teacher in a new city and carving out dedicated time for lessons on top of my role at the startup has just been overwhelming. It feels right to let it go for now, even if it's a bit sad.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 11462,
+            "pointer": "/sessions/2027-04-24/turns/5/text"
+          }
+        },
+        {
+          "date": "2027-04-24",
+          "text": "I have! In fact, my plan for this evening is to curl up on the sofa and dive into the fiction selection for my local literary circle. Arjun said he's going to spend his night reading a historical biography he just bought, so we'll both be having a quiet evening of reading.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 11470,
+            "pointer": "/sessions/2027-04-24/turns/7/text"
+          }
+        },
+        {
+          "date": "2027-04-24",
+          "text": "It's a contemporary drama set in the Pacific Northwest. It's really engaging so far! Speaking of the Northwest, my sister Meera told me she joined a literary circle in Seattle, but they're currently reading a sci-fi anthology.",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 11478,
+            "pointer": "/sessions/2027-04-24/turns/9/text"
+          }
+        },
+        {
+          "date": "2027-04-24",
+          "text": "She's absolutely loving it. It's busy, but she's really finding her stride. Anyway, I think I'm going to get back to my book now while the apartment is still quiet!",
+          "source": {
+            "file": "datasets/v2/u5/conversations.json",
+            "line": 11486,
+            "pointer": "/sessions/2027-04-24/turns/11/text"
+          }
+        }
+      ]
+    }
+  ]
+}

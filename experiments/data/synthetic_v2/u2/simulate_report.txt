@@ -88,66 +88,6 @@ QA:
   abstention           3
   highest top-answer shares: 
 
-  20 random QA items:
-  • (abstention/abstention) [control, job]
-    Q: Do you know Marcus's job?
-    A: head of the science department at the same high school
-  • (attribution/workout) [implicit, shift]
-    Q: Why did Marcus's workout routine change around 2026-06-29?
-    A: joined a tennis club
-  • (event_status/events) [at_time, happened]
-    Q: What was the status of his back injury on 2027-05-15?
-    A: strained his lower back lifting boxes (happened)
-  • (exception_vs_shift/evening_show) [exception]
-    Q: On Thursday, 2026-08-27, Marcus's evening TV show was a movie instead of the usual nature documentary. Was that a lasting change?
-    A: No - it was a one-off (family movie night); the usual routine continued.
-  • (attribution/evening_show) [explicit, shift]
-    Q: Why did Marcus's evening TV show routine change around 2026-11-06?
-    A: became head of the science department at the same high school
-  • (pattern_at_time/evening_show) [initial]
-    Q: What was Marcus's evening TV show routine in April 2026?
-    A: alternates week by week: cooking competition show, then nature documentary, repeating (7-day blocks starting Sun 2026-03-01)
-  • (duration/breakfast) [shift]
-    Q: How long did Marcus's breakfast stay the oatmeal / protein smoothie routine?
-    A: 430 days (2026-08-17 to 2027-10-20)
-  • (attribution/workout) [explicit, temporary]
-    Q: Why did Marcus's workout routine change around 2027-05-05?
-    A: strained his lower back lifting boxes
-  • (recall/workout) [inferred]
-    Q: What was Marcus's workout on Tuesday, 2026-04-07?
-    A: gym weights
-  • (attribution/evening_show) [explicit, shift]
-    Q: Why did Marcus's evening TV show routine change around 2027-09-11?
-    A: signed up for a new streaming service
-  • (exception_vs_shift/breakfast) [shift, explicit]
-    Q: On Wednesday, 2026-08-19, Marcus's breakfast was oatmeal instead of the usual yogurt parfait. Was that a lasting change?
-    A: Yes - from 2026-08-17 the routine changed to alternating weeks of oatmeal and protein smoothies.
-  • (fact_history/job) [single]
-    Q: How has Marcus's job changed over time?
-    A: high school chemistry teacher (2026-03-01 to 2026-11-04); head of the science department at the same high school (2026-11-05 to now)
-  • (recall/breakfast) [exception]
-    Q: What was Marcus's breakfast on Monday, 2027-12-27?
-    A: skipped breakfast
-  • (fact_current/relationship)
-    Q: What is Marcus's current relationship status?
-    A: married to Grace
-  • (change_detection/workout) [reversion, explicit]
-    Q: When did Marcus's workout routine change from physical therapy stretches to the gym weights / rest day / run / tennis routine?
-    A: 2027-05-26
-  • (duration/evening_show) [initial]
-    Q: How long did Marcus's evening TV show stay the cooking competition show / nature documentary routine?
-    A: 250 days (2026-03-01 to 2026-11-05)
-  • (prediction/breakfast) [horizon_36d]
-    Q: What will Marcus's breakfast most likely be on Tuesday, 2028-04-04? Explain the reasoning.
-    A: protein smoothie. Reasoning: since 2027-10-21 the routine has been by day of week: eggs and toast on Mon/Wed/Sun; protein smoothie on Tue/Thu; bagel on Fri; pancakes on Sat. 2028-04-04 is a Tuesday, so protein smoothie.
-  • (reversion/workout) [temporary]
-    Q: What did Marcus's workout go back to after the period of physical therapy stretches?
-    A: tennis Tue/Thu/Sat, gym Mon/Fri, run Wed, rest Sun - by day of week: gym weights on Mon/Fri; tennis on Tue/Thu/Sat; run on Wed; rest day on Sun
-  • (fact_current/hobbies) [set]
-    Q: What are Marcus's current hobbies?
-    A: tennis
-  • (fact_history/pets) [multi]
-    Q: How have Marcus's pets changed over time?
-    A: cat named Olive (2027-01-24 to now)
+  0 random QA items:
 
 ✓ all checks passed - wrote datasets/v2/u2/

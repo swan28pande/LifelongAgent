@@ -7,6 +7,7 @@ REPO_DIR = PACKAGE_DIR.parent
 PERSONA_DIR = PACKAGE_DIR / "personas"
 LADDER_PATH = PERSONA_DIR / "difficulty_ladder.yaml"
 OUTPUT_DIR = REPO_DIR / "datasets" / "v2"
+EXPERIMENT_DATA_DIR = REPO_DIR / "experiments" / "data" / "synthetic_v2"
 
 # ── Simulation ──────────────────────────────────────────────────────
 MIN_REGIME_MENTIONS = 5          # every regime must be observed at least this often

@@ -1,0 +1,11 @@
+# Review sources
+
+- Baseline question: [.research/v2-probing-audit/report.md](../../v2-probing-audit/report.md), prior `manifest.json`, `question_coverage.jsonl`, focused gold/recall/source evidence, and preserved original probing blobs at Git `98a2674`.
+- Current scope: [plan.md](../plan.md), [evidence.md](../evidence.md), [sources.md](../sources.md), [report.md](../report.md), `summary.json`, `question_coverage.jsonl`, and current manifest.
+- Canonical inputs: `datasets/v2/u1`–`u5` probing/pool/world/conversation JSON and all 2,738 individual session files. Hobby question locations: u5 probing lines 2034 and 2138; phase location: line 215; diet location: line 3239; Daniel music location: u4 line 4820. World witnesses are the named current regimes/statements and relevant daily states; IDs are not used to match prior samples.
+- Actual source turns: u5 January piano sessions, April 24 piano removal, June 19 vegetarian declaration; u4 December 19 target and December 17/21/22/24/25/27 music observations. The source-indexed gold boundary candidate excerpts contain the cause and start-language witnesses for all reviewed regimes.
+- Non-recall workstream: [report.md](../gold/report.md), `coverage.json`, `issues.json`, `observation_limits.json`, `uncertainties.json`, `supplemental_issues.json`, `broader_boundary_candidates.json`, `broader_boundary_reviews.json`, and `final_summary.json`.
+- Recall workstream: [report.md](../recall/report.md), `issues.json`, `phase_reviews.json`, `new_boundary_transcript_review.json`, and `boundary_candidate_dispositions.json`.
+- Source workstream: [report.md](../source/report.md), `session_coverage.jsonl`, `flag_reviews.json`, `copy_comparison.json`, `pool_provenance.json`, `coverage.json`, and `setup_2_load_check.json`.
+- Mechanisms read/reproduced: `generator_v2/probing.py`, `generator_v2/qa.py`, `generator_v2/DECISIONS.md`, persona difficulty ladder, and `setup_2/loader.py`. Independent counterexample arithmetic uses raw rule structures and a small separate interpreter in [verify.py](verify.py).
+- Fresh machine results: [verification.json](verification.json). Reproduce locally with `PYTHONDONTWRITEBYTECODE=1 python .research/v2-probing-recheck/review/verify.py`; outputs remain in this review folder. No external or model sources were used.

@@ -1,0 +1,66 @@
+[
+  {
+    "question_id": "u5_p202605_0008",
+    "original_id": "u5_q0005",
+    "user_id": "u5",
+    "category": "unobserved_answer_phase",
+    "status": "retained_baseline_issue",
+    "confidence": "confirmed_answerability_limitation",
+    "question": "What was Priya's workout on Saturday, 2026-05-09?",
+    "reference_answer": "bike ride",
+    "cited_values": [
+      "bouldering"
+    ],
+    "record_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line_start": 209,
+      "line_end": 233,
+      "json_pointer": "/probes/2/questions/1"
+    },
+    "question_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line_start": 215,
+      "line_end": 215,
+      "json_pointer": "/probes/2/questions/1/question",
+      "excerpt": "          \"question\": \"What was Priya's workout on Saturday, 2026-05-09?\","
+    },
+    "evidence_source": {
+      "file": "datasets/v2/u5/probing_questions.json",
+      "line_start": 221,
+      "line_end": 223,
+      "json_pointer": "/probes/2/questions/1/evidence_days",
+      "excerpt": "          \"evidence_days\": [\n            68\n          ],"
+    },
+    "evidence_artifact": "phase_reviews.json",
+    "interpretation": "No initial-regime Saturday bike-ride exercise phase is observed. Earlier bouldering citation is a different phase/value; commuting bicycles and coworker cycling do not supply Priya workout value."
+  },
+  {
+    "question_id": "u4_p202712_0152",
+    "original_id": "u4_q0071",
+    "user_id": "u4",
+    "category": "unobserved_shift_boundary",
+    "status": "newly_detected_current_issue",
+    "confidence": "confirmed_answerability_limitation",
+    "question": "What was Daniel's work music on Sunday, 2027-12-19?",
+    "reference_answer": "jazz records",
+    "alternative_answer": "ambient electronic",
+    "hidden_start_date": "2027-12-20",
+    "compatible_alternative_start_date": "2027-12-19",
+    "observed_domain_days_checked": 22,
+    "record_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line_start": 4814,
+      "line_end": 4840,
+      "json_pointer": "/probes/21/questions/9"
+    },
+    "question_source": {
+      "file": "datasets/v2/u4/probing_questions.json",
+      "line_start": 4820,
+      "line_end": 4820,
+      "json_pointer": "/probes/21/questions/9/question",
+      "excerpt": "          \"question\": \"What was Daniel's work music on Sunday, 2027-12-19?\","
+    },
+    "evidence_artifact": "new_boundary_transcript_review.json",
+    "interpretation": "Start uncaused ambient/classical rotation on Dec19 instead of Dec20; every one of 22 recorded work-music base values through Dec31 is unchanged, but Dec19 becomes ambient electronic."
+  }
+]

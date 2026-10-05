@@ -1,0 +1,58 @@
+{
+  "total_probing_rows_enumerated": 1000,
+  "non_recall_rows_checked": 617,
+  "recall_rows_delegated": 383,
+  "by_user": {
+    "u1": 83,
+    "u2": 100,
+    "u3": 125,
+    "u4": 143,
+    "u5": 166
+  },
+  "by_type": {
+    "fact_current": 21,
+    "abstention": 75,
+    "fact_at_time": 131,
+    "event_status": 46,
+    "pattern_at_time": 51,
+    "change_detection": 52,
+    "attribution": 50,
+    "duration": 53,
+    "fact_history": 20,
+    "pattern_current": 12,
+    "exception_vs_shift": 54,
+    "distractor_probe": 25,
+    "reversion": 17,
+    "other_person": 10
+  },
+  "gold_matches_synthetic_truth": 617,
+  "gold_mismatch_rows": 0,
+  "metadata_mismatch_rows": 0,
+  "acceptance_mismatch_rows": 0,
+  "issue_record_count": 0,
+  "issue_counts_by_category": {},
+  "issue_distinct_question_count": 0,
+  "distinct_questions_with_issue_or_observation_limit": 0,
+  "distinct_ids_by_kind": {},
+  "uncertainty_counts_by_category": {},
+  "observation_limit_counts_by_category": {},
+  "diagnostic_counts_by_category": {
+    "pattern_value_coverage": 63
+  },
+  "unknown_abstention_pool_items_excluded": 0,
+  "answerable_abstention_controls_in_probes": 34,
+  "future_dates_in_gold_or_accept": [],
+  "patterns_with_uncited_rule_values": 0,
+  "missing_probe_families": [
+    "prediction"
+  ],
+  "limitations": [
+    "Truth and temporal eligibility are separate verdicts.",
+    "Evidence gaps do not by themselves prove a wrong reference or an unanswerable full prefix.",
+    "Implicit causation and rule abstraction are legitimate intended inference; a formal identifiability proof was not attempted.",
+    "Pool provenance equality is checked separately from synthetic truth at the probe.",
+    "No network, paid model, or saved-session revalidation is used."
+  ],
+  "unknown_abstention_instances_in_probes": 41,
+  "prediction_policy": "Excluded intentionally; monthly questions remain historical by user decision."
+}

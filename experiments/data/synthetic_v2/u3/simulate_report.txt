@@ -118,66 +118,6 @@ QA:
   abstention           3
   highest top-answer shares: 
 
-  20 random QA items:
-  • (recall/lunch) [inferred, no_session, boundary]
-    Q: What was Sofia's lunch on Wednesday, 2026-05-27?
-    A: cafeteria salad
-  • (prediction/lunch) [horizon_30d]
-    Q: What will Sofia's lunch most likely be on Wednesday, 2028-03-29? Explain the reasoning.
-    A: sourdough sandwich. Reasoning: since 2027-06-26 the routine has been alternates week by week: homemade burrito bowl, then sourdough sandwich, repeating (7-day blocks starting Sat 2027-06-26). 2028-03-29 is in 7-day block 40 since the anchor (block index 39 mod 2 = 1), so sourdough sandwich.
-  • (abstention/abstention) [shoe_size]
-    Q: What is Sofia's shoe size?
-    A: Not known - this was never mentioned.
-  • (pattern_at_time/morning_drink) [shift]
-    Q: What was Sofia's morning drink routine in May 2027?
-    A: alternates week by week: drip coffee, then matcha latte, repeating (7-day blocks starting Thu 2026-10-08)
-  • (recall/commute) [exception]
-    Q: What was Sofia's commute on Saturday, 2027-09-25?
-    A: got a ride from Tom
-  • (fact_at_time/relationship)
-    Q: What was Sofia's relationship status on 2026-11-04?
-    A: dating Tom
-  • (fact_history/city) [single]
-    Q: How has Sofia's city of residence changed over time?
-    A: Phoenix, Arizona (2026-03-01 to 2027-06-22); Tucson, Arizona (2027-06-23 to now)
-  • (prediction/commute) [horizon_13d]
-    Q: What will Sofia's commute most likely be on Sunday, 2028-03-12? Explain the reasoning.
-    A: no commute. Reasoning: since 2027-12-28 the routine has been by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun. 2028-03-12 is a Sunday, so no commute.
-  • (duration/lunch) [shift]
-    Q: As of 2028-02-28, how long had Sofia's lunch been the homemade burrito bowl / sourdough sandwich routine?
-    A: 248 days (since 2027-06-26)
-  • (fact_current/job)
-    Q: What is Sofia's current job?
-    A: day-shift nurse at an outpatient clinic
-  • (attribution/commute) [implicit, shift, cross_domain]
-    Q: Why did Sofia's commute routine change around 2026-10-07?
-    A: switched jobs to become a day-shift nurse at an outpatient clinic
-  • (pattern_current/commute) [reversion]
-    Q: What is Sofia's current commute routine?
-    A: by day of week: driving on Mon/Tue/Wed/Thu/Fri; no commute on Sat/Sun (since 2027-12-28)
-  • (attribution/commute) [implicit, temporary]
-    Q: Why did Sofia's commute routine change around 2027-12-01?
-    A: sprained her ankle on a hike
-  • (exception_vs_shift/podcast) [exception]
-    Q: On Saturday, 2027-03-13, Sofia's podcast was an audiobook instead of the usual Italian lessons podcast. Was that a lasting change?
-    A: No - it was a one-off (a friend lent her one); the usual routine continued.
-  • (distractor_probe/lunch) [control, implicit]
-    Q: Around 2026-05-29, started baking sourdough bread. Did that lead to any change in Sofia's lunch?
-    A: Yes - from 2026-06-01 Sofia's lunch changed to sourdough sandwiches Mon/Wed/Fri, leftovers Tue/Thu/Sun, brunch out Sat.
-  • (event_status/events) [happened]
-    Q: What happened with the Italian course?
-    A: signed up for an online Italian course (happened, 2027-01-24)
-  • (fact_history/hobbies) [multi]
-    Q: How have Sofia's hobbies changed over time?
-    A: salsa dancing (2026-03-01 to 2026-12-24); sourdough baking (2026-05-29 to now)
-  • (abstention/abstention) [control, hobbies]
-    Q: Does Sofia have any hobbies, and if so what?
-    A: sourdough baking
-  • (recall/podcast)
-    Q: What was Sofia's podcast on Friday, 2027-08-20?
-    A: Italian lessons podcast
-  • (attribution/morning_drink) [explicit, temporary]
-    Q: Why did Sofia's morning drink routine change around 2026-07-19?
-    A: came down with the flu
+  0 random QA items:
 
 ✓ all checks passed - wrote datasets/v2/u3/

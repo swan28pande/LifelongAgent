@@ -9,7 +9,7 @@ One line per decision where the spec was ambiguous. Phase in brackets.
 - [1] The 60% guard is kept strict. `exception_vs_shift`, `distractor_probe`, `reversion`, `other_person` and `abstention` all include positive or answerable controls, so "no" / "not known" is never the constant answer.
 - [1] Exceptions are placed by the simulator from a per-domain `exception_pool` (explicit `exceptions:` are still honoured). Rate = exceptions / (session days × domains).
 - [1] `do_not_mention` means "the user changes behaviour and gives no reason; do not invent one". There is no hidden-cause visibility.
-- [1] Outputs land in `experiments/data/synthetic_v2/`; regenerate them with `simulate`.
+- [1, repair] Canonical outputs land in `datasets/v2/`. QA/probe/fidelity commands synchronize the generated files into `experiments/data/synthetic_v2/`; API logs are kept separately.
 
 ## Spec and schema
 
@@ -39,13 +39,18 @@ One line per decision where the spec was ambiguous. Phase in brackets.
 
 ## QA
 
-- [1] Every question is asked on day 731. `recall`, `fact_at_time` and `pattern_at_time` refer to an earlier date. `recency_distance_days` = 731 − latest evidence day.
+- [1] Full-pool questions use viewpoint day 731. `recall`, `fact_at_time` and `pattern_at_time` refer to an earlier date. Monthly probes use their original probe date and recompute current references there; evaluation repetitions retain the original record.
 - [1] Recall and prediction fill the total up to 390 (2:1), between minimums of 60/30 and maximums of 220/110. Other types are driven by the structure (one per shift, per temporary, per fact, …), with caps in `config.QA_TARGETS`.
 - [1] Sampling is greedy and weighted: ×3 within ±7 days of a boundary, down-weighting repeated strata (regime × phase) and weekdays, and capping each answer at half of the group.
 - [1] Guard: only groups of ≥ 4 questions; groups where every item is tagged `small_answer_space` (predictions for a constant current regime, asked only twice) are exempt.
-- [1] `change_detection` accepts every date from the effective start to the first observation (tag `bounded`), since the memory cannot know more.
+- [1, repair] `change_detection` cites a choice distinguishing the old and new routines and waits until it is disclosed. Acceptance includes dates compatible with pre-probe choices, permitted cause lags and equivalent weekly rotations. Explicit announcements and condition-ending reversions retain their start-to-disclosure bound. `bounded` denotes date uncertainty, not a uniquely observable hidden start.
 - [1] Fact questions use the entity as `domain`; events use `events`, other people use `other_people`.
 - [1] Multi-valued sets on a date are `fact_at_time` items tagged `set`, not a separate type.
+- [repair] Fact evidence includes relevant set/add/remove disclosures. Historical disclosures may follow the target date, but must precede the probe; no day-1 fallback is allowed. Complete-current lists are recomputed at the probe, including removals.
+- [repair] Unobserved recall phases and unmentioned days within seven days of a transition are excluded. Full pattern references require observations covering their applicable phases and all described values. Completed durations cite the closing transition; ongoing durations explicitly say "as of".
+- [repair] Monthly probes contain 200 questions per user, including all six genuine unknown-answer templates plus answerable controls. Sampling keeps proportional month allocation and explicit family coverage, and includes the final partial month.
+- [repair] On October 3, 2026, the user confirmed that monthly questions remain historical. Predictions stay in the separate end-of-timeline QA pool and are deliberately excluded from monthly probes.
+- [repair] Newly scheduled retrospective records are grounded at their own probe date. They differ from the monthly runner's repetitions, which freeze the earlier question's date, wording and gold.
 
 ## Storylines
 
@@ -60,6 +65,9 @@ One line per decision where the spec was ambiguous. Phase in brackets.
 - [3] The validator picks each topic's value from a closed option list (all values the persona can have), and the comparison with ground truth is exact, in code.
 - [3] "Inventions" are lasting facts only (new people, pets, jobs, history such as "vegetarian for three years"). Everyday details (working from home today, plans for tonight) are allowed; flagging them made retries push conversations towards bland, form-like dialogue.
 - [3] Up to 5 attempts per session; the attempt with the fewest failures is kept and flagged if it still fails. `first_try_failures` is kept for the fidelity report.
+- [repair] Required updates/news/distractors may name an otherwise absent daily topic only to state the required fact. They do not permit a daily-choice report, activity history or discretionary follow-up. This resolves conflicts such as a required climbing injury with an unmentioned workout.
+- [repair] Validation includes the session date and previously disclosed fact-change history. Retrospective updates and distractors give exact dates or unambiguous relative days; tonight's reported dinner/show/bedtime counts as today's choice.
+- [repair] Source corrections retain the previous extraction/failures in `repair_validation`, together with the real validator result's date/model/prompt hash. LFS-placeholder logs retain previously recorded generation usage with explicit provenance; repair-validation usage is logged separately.
 
 ## Curated questions
 

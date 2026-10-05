@@ -1,0 +1,843 @@
+BUILD full_context 2026-03-01
+BUILD full_context 2026-03-04
+BUILD full_context 2026-03-07
+BUILD full_context 2026-03-11
+BUILD full_context 2026-03-13
+BUILD full_context 2026-03-14
+BUILD full_context 2026-03-15
+BUILD full_context 2026-03-18
+BUILD full_context 2026-03-19
+BUILD full_context 2026-03-21
+BUILD full_context 2026-03-25
+BUILD full_context 2026-03-29
+BUILD full_context 2026-03-30
+READY full_context 0.0s
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+Direct use of automatic function calling (AFC) in AsyncModels.generate_content is not recommended. Instead, we recommend to use AFC in AsyncChat.send_message. Similarly, direct use of AFC in AsyncModels.generate_content_stream is not recommended. Instead, we recommend to use AFC in AsyncChat.send_message_stream.
+AUTH_AND_MODELS_OK stb-prj-symb-reg-ai-rfbe gemini-3.5-flash gemini-3.1-pro-preview
+BUILD naive_rag 2026-03-01
+BUILD naive_rag 2026-03-04
+BUILD naive_rag 2026-03-07
+BUILD naive_rag 2026-03-11
+BUILD naive_rag 2026-03-13
+BUILD naive_rag 2026-03-14
+BUILD naive_rag 2026-03-15
+BUILD naive_rag 2026-03-18
+BUILD naive_rag 2026-03-19
+BUILD naive_rag 2026-03-21
+BUILD naive_rag 2026-03-25
+BUILD naive_rag 2026-03-29
+BUILD naive_rag 2026-03-30
+<All keys matched successfully>
+READY naive_rag 19.5s
+2026-10-04 19:24:51,503 - timem.utils.config_manager - INFO - Initializing configuration manager...
+2026-10-04 19:24:51,504 - timem.utils.config_manager - INFO - Reloading configuration...
+2026-10-04 19:24:51,515 - timem.utils.config_manager - INFO - 📚 Loading dataset-specific configuration...
+[19:24:51] INFO: Successfully loaded 3 dataset profiles
+[19:24:51] INFO: Dataset profile manager initialized, current profile: default
+2026-10-04 19:24:51,523 - timem.utils.config_manager - INFO - 📄 prompts.yaml: Global configuration + default dataset override
+2026-10-04 19:24:51,524 - timem.utils.config_manager - INFO - 📄 qa_prompts.yaml: Global configuration + default dataset override
+2026-10-04 19:24:51,524 - timem.utils.config_manager - WARNING - Configuration file not found: /home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/source/config/multi_stage_qa_prompts.yaml
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - 📄 eval_prompt.yaml: Global configuration + default dataset override
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.vector.collection_name = timem_memories
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.vector.url = http://localhost:16333
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.sql.postgres.database = timem_db
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.sql.postgres.host = localhost
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.sql.postgres.port = 15432
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.graph.database = neo4j
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.graph.uri = bolt://localhost:17687
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.cache.host = localhost
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Dataset configuration override: storage.cache.port = 6379
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - 📊 Current dataset: default
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO -   - Qdrant URL: http://localhost:16333
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO -   - Qdrant Collection: timem_memories
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO -   - PostgreSQL Port: 15432
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO -   - PostgreSQL Database: timem_db
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO -   - Neo4j URI: bolt://localhost:17687
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO -   - Neo4j Database: neo4j
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO -   - Redis Port: 6379
+2026-10-04 19:24:51,525 - timem.utils.config_manager - INFO - ✅ Configuration successfully reloaded
+[19:24:51] INFO: Prompt module initialized successfully, current language: EN
+[WARNING] Unable to check prompt configuration, debug_prompt_keys method not available
+[OK] L2 prompt 'l2_session_summary' available
+[OK] MemoryGenerator initialization complete
+[19:24:51] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:24:51] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:24:51,527 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:24:58] INFO: [OK] First token received, starting streaming generation...
+[19:24:58] INFO: [OK] L1 first-time content streaming generation completed, length: 520 characters
+BUILD timem 2026-03-01
+[19:24:58] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:24:58] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:24:58,832 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:25:06] INFO: [OK] First token received, starting streaming generation...
+[19:25:06] INFO: [OK] L1 first-time content streaming generation completed, length: 553 characters
+BUILD timem 2026-03-04
+[19:25:06] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:25:06] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:25:06,487 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:25:13] INFO: [OK] First token received, starting streaming generation...
+[19:25:13] INFO: [OK] L1 first-time content streaming generation completed, length: 637 characters
+BUILD timem 2026-03-07
+[19:25:13] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:25:13] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:25:13,706 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:25:20] INFO: [OK] First token received, starting streaming generation...
+[19:25:21] INFO: [OK] L1 first-time content streaming generation completed, length: 492 characters
+BUILD timem 2026-03-11
+[19:25:21] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:25:21] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:25:21,322 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:25:27] INFO: [OK] First token received, starting streaming generation...
+[19:25:28] INFO: [OK] L1 first-time content streaming generation completed, length: 603 characters
+BUILD timem 2026-03-13
+[19:25:28] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:25:28] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:25:28,392 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:25:34] INFO: [OK] First token received, starting streaming generation...
+[19:25:35] INFO: [OK] L1 first-time content streaming generation completed, length: 585 characters
+BUILD timem 2026-03-14
+[19:25:35] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:25:35] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:25:35,187 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:25:44] INFO: [OK] First token received, starting streaming generation...
+[19:25:45] INFO: [OK] L1 first-time content streaming generation completed, length: 601 characters
+BUILD timem 2026-03-15
+[19:25:45] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:25:45] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:25:45,380 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:25:52] INFO: [OK] First token received, starting streaming generation...
+[19:25:52] INFO: [OK] L1 first-time content streaming generation completed, length: 657 characters
+BUILD timem 2026-03-18
+[19:25:53] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:25:53] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:25:53,147 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:26:01] INFO: [OK] First token received, starting streaming generation...
+[19:26:01] INFO: [OK] L1 first-time content streaming generation completed, length: 625 characters
+BUILD timem 2026-03-19
+[19:26:01] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:26:01] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:26:01,814 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:26:08] INFO: [OK] First token received, starting streaming generation...
+[19:26:09] INFO: [OK] L1 first-time content streaming generation completed, length: 569 characters
+BUILD timem 2026-03-21
+[19:26:09] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:26:09] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:26:09,477 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:26:17] INFO: [OK] First token received, starting streaming generation...
+[19:26:17] INFO: [OK] L1 first-time content streaming generation completed, length: 577 characters
+BUILD timem 2026-03-25
+[19:26:17] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:26:17] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:26:17,931 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:26:27] INFO: [OK] First token received, starting streaming generation...
+[19:26:27] INFO: [OK] L1 first-time content streaming generation completed, length: 592 characters
+BUILD timem 2026-03-29
+[19:26:27] DEBUG: Generated L1 first-time content prompt:
+You are a dialogue memory generator. Your task is to write a fragment memory that captures only the NEW facts from the "Current Conversation" (do not repeat anything already covered in "Historical Memories").
+
+Core principle:
+Convert dialogue from first-person to third-person narration, preserving as much substantive information content from the original as possible, excluding only confirmed non-informative words.
+
+What to preserve:
+- All substantive information: people, events, times, places, causes, results, numbers, specific descriptions
+- Original wording: Keep specific terms used in dialogue for titles, item names, activity descriptions, etc, numbers use Arabic numerals
+- Emotional expressions: Retain explicit emotions and attitudes from original (like "happy", "worried", "likes"), but avoid adding subjective inferences not present in original
+
+What to exclude:
+Only exclude purely functional words: greetings ("hi""bye"), confirmation words (...[truncated]
+[19:26:27] INFO: [STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:26:27,536 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[19:26:35] INFO: [OK] First token received, starting streaming generation...
+[19:26:36] INFO: [OK] L1 first-time content streaming generation completed, length: 456 characters
+BUILD timem 2026-03-30
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:26:36] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2320 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:26:36,339 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 628 characters
+[DOC] Generated content preview: Priya, who lives in Pittsburgh, Pennsylvania, is currently catching up on work today. To help her focus duringthis work session, she is listening to p...
+[19:26:45] INFO: Successfully generated L2 session overall content, length: 628 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:26:45] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2353 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:26:45,185 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 547 characters
+[DOC] Generated content preview: Priyalives in Pittsburgh and works as a backend engineer at a fintech startup. Today, she solved a complex coding issue in absolutequiet instead of li...
+[19:26:53] INFO: Successfully generated L2 session overall content, length: 547 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:26:53] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2437 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:26:53,915 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 705 characters
+[DOC] Generated content preview: Yesterday, Priya worked on a Chopin piece on the piano, andtoday she is taking a break from the instrument. Earlier today, she spent a few hours pound...
+[19:27:02] INFO: Successfully generated L2 session overall content, length: 705 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:27:02] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2292 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:27:02,803 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 524 characters
+[DOC] Generated content preview: Yesterday evening, Priya spent her time practicing a challenging classical piece on the piano. This morning, she usedpedal power to commute to her sta...
+[19:27:10] INFO: Successfully generated L2 session overall content, length: 524 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:27:11] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2403 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:27:11,097 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 778 characters
+[DOC] Generated content preview: After experiencing an intense week with backend deployments at her startup in Pittsburgh, Priya felt absolutely wiped out tonight. Consequently, inste...
+[19:27:19] INFO: Successfully generated L2 session overall content, length: 778 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:27:19] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2385 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:27:19,926 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 628 characters
+[DOC] Generated content preview: Priya spent her Saturday relaxing at home, playing the piano, and doing chores. She felt glad that she didnot have to travel for work like her coworke...
+[19:27:26] INFO: Successfully generated L2 session overall content, length: 628 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:27:26] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2401 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:27:26,809 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 604 characters
+[DOC] Generated content preview: Priya spent a low-key Sunday resting from physical training after a heavyclimbing session earlier this week, while her usual bouldering partner went f...
+[19:27:35] INFO: Successfully generated L2 session overall content, length: 604 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:27:35] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2457 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:27:35,778 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 653 characters
+[DOC] Generated content preview: On Wednesday, Priya worked on database scaling for backend services at her startup, listening to mellow, scratchy instrumentaltracks with repetitive, ...
+[19:27:44] INFO: Successfully generated L2 session overall content, length: 653 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:27:44] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2425 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:27:44,193 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 790 characters
+[DOC] Generated content preview: Priya, a single backend engineer at a fintech startup wholives in Pittsburgh, spent her Thursday engaging in a structured routine of work, physical ac...
+[19:27:52] INFO: Successfully generated L2 session overall content, length: 790 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:27:52] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2369 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:27:52,443 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 575 characters
+[DOC] Generated content preview: This morning, Priya finished backend tasks for a fintech startup while listening to classic syncopated brass and saxon her turntable, and she followed...
+[19:28:00] INFO: Successfully generated L2 session overall content, length: 575 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:28:00] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2377 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:28:00,463 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 578 characters
+[DOC] Generated content preview: This morning, Priya pedaled her way to the office on two wheels and completedcomplex database optimization tasks at her startup while listening to chi...
+[19:28:08] INFO: Successfully generated L2 session overall content, length: 578 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:28:08] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2392 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:28:08,165 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 620 characters
+[DOC] Generated content preview: Priya skipped her climbing gym training today to give her muscles a break and instead walked to her office in Pittsburghto monitor a database migratio...
+[19:28:15] INFO: Successfully generated L2 session overall content, length: 620 characters
+
+[SEARCH] [L2 Memory Generation] Starting L2 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l2_session_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1918 characters
+[DOC] Prompt template preview: input_variables=['fragment_summaries'] input_types={} partial_variables={} template='You are a sessi...
+[19:28:15] DEBUG: Generated L2 session overall content prompt:
+You are a session-level memory generator. Your task is to integrate the fragment memories from this session into a factual session-level summary for downstream daily/weekly aggregation. Aim to maximize fact density without losing essentials and minimize redundancy.
+
+Core principle:
+Integrate into a coherent session summary while preserving all substantive information from fragments. Prioritize detail retention, moderate deduplication to enhance density.
+
+Content requirements:
+- Present in chronological order: who-did-what-when-where-why/so-what, plus key decisions and state changes
+- Strictly base on fragment memories; DO NOT invent facts or "reasonable expansions" beyond fragments
+- Preserve specific information from fragments: numbers, quantifiers, modifiers, relationship terms, parallel specific items, descriptors, using original wording from fragments
+- Deduplication: Remove greetings and repeated confirmations, merge near-duplicates, ke...[truncated]
+[NOTE] Final prompt length: 2256 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:28:15,623 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 460 characters
+[DOC] Generated content preview: Yesterday, Priya practiced a new piano piece, and this morning, she pedaled her way to her startup office ontwo wheels. She spent the afternoon resolv...
+[19:28:22] INFO: Successfully generated L2 session overall content, length: 460 characters
+
+[SEARCH] [L3 Memory Generation] Starting L3 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l3_daily_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1725 characters
+[DOC] Prompt template preview: input_variables=['date', 'previous_daily_memories', 'session_summaries'] input_types={} partial_vari...
+[19:28:23] DEBUG: Generated L3 daily content prompt:
+You are the agent's long-term memory builder. Task: Generate precise event records for today to serve as foundation for memory retrieval and character understanding.
+
+Core Positioning:
+L3 memory is the factual layer, accurately recording "who did what and said what when" to provide reliable basis for higher-level pattern recognition and profiling.
+
+Recording Principles:
+- Precision: Preserve specific names of times, people, places, and items
+- Completeness: Record cause-effect of events and decision rationale
+- Authenticity: Prioritize direct quotes
+- Uniqueness: Record details that reveal individual characteristics
+
+Must Include:
+- Time (specific or relative)
+- People (use names from dialogue)
+- Action (specific verb + specific object)
+- Quotes (at least one per event: "XXX said '...'")
+- Details (numbers, locations, item names)
+- Decisions (if any, record options and rationale)
+
+Evidence-first and Less-is-more:
+- State only well-supported facts; if ...[truncated]
+[NOTE] Final prompt length: 2191 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:28:23,038 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[OK] First token received, starting streaming generation...
+[OK] LLM streaming generation completed, returned content length: 1190 characters
+[DOC] Generated content preview: Today, Priya spenther time catching up on her work at her home in Pittsburgh, Pennsylvania, and she decided to listen to physical LPsof instrumental b...
+[19:28:39] INFO: Successfully generated L3 daily report content, length: 1190 characters
+
+[SEARCH] [L3 Memory Generation] Starting L3 content generation, child content count: 1
+[CHART] Historical content status: No historical content (first-time generation)
+[KEY] Using prompt key name: 'l3_daily_summary'
+[SEARCH] Prompt retrieval result: Success
+[OK] Prompt template retrieved successfully, length: 1725 characters
+[DOC] Prompt template preview: input_variables=['date', 'previous_daily_memories', 'session_summaries'] input_types={} partial_vari...
+[19:28:39] DEBUG: Generated L3 daily content prompt:
+You are the agent's long-term memory builder. Task: Generate precise event records for today to serve as foundation for memory retrieval and character understanding.
+
+Core Positioning:
+L3 memory is the factual layer, accurately recording "who did what and said what when" to provide reliable basis for higher-level pattern recognition and profiling.
+
+Recording Principles:
+- Precision: Preserve specific names of times, people, places, and items
+- Completeness: Record cause-effect of events and decision rationale
+- Authenticity: Prioritize direct quotes
+- Uniqueness: Record details that reveal individual characteristics
+
+Must Include:
+- Time (specific or relative)
+- People (use names from dialogue)
+- Action (specific verb + specific object)
+- Quotes (at least one per event: "XXX said '...'")
+- Details (numbers, locations, item names)
+- Decisions (if any, record options and rationale)
+
+Evidence-first and Less-is-more:
+- State only well-supported facts; if ...[truncated]
+[NOTE] Final prompt length: 2110 characters
+[AI] LLM instance type: GeminiAdapter
+[WAIT] Starting LLM call...
+[STREAM] Using streaming generation to prevent timeout...
+2026-10-04 19:28:39,950 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+PILOT_FINISHED /home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/u5_march_20261004_a
+Traceback (most recent call last):
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/source/timem/memory/memory_generator.py", line 926, in _generate_l3
+    async for chunk in self.llm.chat_stream(messages, metadata=metadata):
+    ...<24 lines>...
+                    raise asyncio.TimeoutError(f"Token interval timeout: {token_interval:.1f}s > {token_interval_timeout}s without receiving new token")
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/source/llm/gemini_adapter.py", line 111, in chat_stream
+    async for chunk in llm.astream(lc_msgs):
+    ...<6 lines>...
+            yield text
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 927, in astream
+    async for chunk in self._astream(
+    ...<23 lines>...
+        yielded = True
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 4328, in _astream
+    async for chunk in _aclassified_stream(stream, request):
+    ...<17 lines>...
+        yield gen
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 387, in _aclassified_stream
+    async for chunk in response:
+        yield chunk
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/google/genai/models.py", line 8717, in stream_generator
+    response = await self._generate_content_stream(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/google/genai/models.py", line 7023, in _generate_content_stream
+    response_stream = await self._api_client.async_request_streamed(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'post', path, request_dict, http_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/google/genai/_api_client.py", line 1820, in async_request_streamed
+    response = await self._async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        http_request=http_request, http_options=http_options, stream=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/google/genai/_api_client.py", line 1735, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/tenacity/asyncio/__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/tenacity/asyncio/__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/tenacity/_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/tenacity/__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/home/cloaked/anaconda3/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/tenacity/asyncio/__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 90, in async_request
+    result = await asynchronous(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/google/genai/_api_client.py", line 1583, in _async_request_once
+    response = await session.request(  # type: ignore[union-attr]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/aiohttp/client.py", line 858, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/aiohttp/client.py", line 836, in _connect_and_send_request
+    await resp.start(conn)
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 558, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/tmp/memory-v3-update-validation/lib/python3.13/site-packages/aiohttp/streams.py", line 705, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 331, in <module>
+    main()
+    ~~~~^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 290, in main
+    build(name)
+    ~~~~~^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 225, in build
+    recorder.call(meta(name, 'finalize', 'preparation'), method.finalize)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/.research/gemini-concurrency-pilot/pilot.py", line 105, in call
+    result = operation()
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 138, in finalize
+    l3 = self._summarize('L3', day, children, date=day)
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 126, in _summarize
+    content = self._generate(generate([n['content'] for n in children], **period))
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/method.py", line 85, in _generate
+    return self._loop.run_until_complete(coroutine)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/source/timem/memory/memory_generator.py", line 986, in generate_l3_content
+    return await self._retry_with_exponential_backoff(_generate_l3, "l3", "L3 daily report content generation")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/projects/LifelongAgent/setup_2/baselines/TiMem/generator.py", line 20, in _retry_with_exponential_backoff
+    return await asyncio.wait_for(operation_func(), timeout=self.layer_timeouts[layer.lower()])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/cloaked/anaconda3/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError

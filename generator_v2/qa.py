@@ -18,6 +18,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from . import config, rules
+from .evidence import Observations
 from .schema import PersonaSpec, QAItem, ResolvedRegime, WorldState
 from .simulator import reference_registry
 
@@ -74,6 +75,7 @@ class QABuilder:
         self.facts = {f.entity: f for f in spec.facts}
         self.stated = {s.id: s for s in world.statements}
         self.registry = reference_registry(spec)
+        self.observations = Observations(spec, world)
         final_city = (world.days[-1].active_facts.get("city") or [None])[0]
         self._ctx = {}
         for day in world.days:
@@ -165,6 +167,11 @@ class QABuilder:
             for day in self.world.days:
                 p = day.preferences[dom]
                 reg = self.regime_at(dom, day.day)
+                if not p.mentioned:
+                    # Unmentioned phases and unobserved transition dates are not
+                    # episodic facts. Never substitute a different phase's value.
+                    if self.near_boundary(dom, day.day) or not self._nearest_mentions(reg, day.day):
+                        continue
                 phase = rules.phase_key(reg.rule, day.day, day.date, reg.anchor, self.ctx(day.day))
                 w = config.BOUNDARY_WEIGHT if self.near_boundary(dom, day.day) else 1.0
                 cands.append((p.value, w, (reg.id, phase), day.weekday, day))
@@ -177,11 +184,6 @@ class QABuilder:
                 else:
                     tags.append("inferred")
                     evidence = self._nearest_mentions(reg, day.day)
-                    # Ensure evidence doesn't come after the question date
-                    before = [d for d in evidence if d <= day.day]
-                    if not before:
-                        continue
-                    evidence = before
                 if p.is_exception:
                     tags.append("exception")
                 if not day.has_session:
@@ -193,10 +195,9 @@ class QABuilder:
 
     def _nearest_mentions(self, reg: ResolvedRegime, day: int, n: int = 3) -> list[int]:
         target = rules.phase_key(reg.rule, day, self.date(day), reg.anchor, self.ctx(day))
-        same = [d for d in reg.mention_days
+        same = [d for d in reg.mention_days if d <= day
                 if rules.phase_key(reg.rule, d, self.date(d), reg.anchor, self.ctx(d)) == target]
-        pool = same or reg.mention_days
-        return sorted(sorted(pool, key=lambda d: abs(d - day))[:n])
+        return sorted(sorted(same, key=lambda d: abs(d - day))[:n])
 
     def prediction(self, k_total: int) -> None:
         # A domain whose current rule is constant has a one-value answer space: ask it
@@ -231,20 +232,26 @@ class QABuilder:
     def patterns(self) -> None:
         for dom, noun in self.noun.items():
             reg = self.regime_at(dom, self.N)
+            evidence = self.observations.pattern_days(reg, self.N)
+            if not evidence:
+                continue
             self.add(Draft("pattern_current", dom, f"What is {self.name}'s current {noun} routine?",
                            f"{self.describe(reg)} (since {self.date(reg.start).isoformat()})",
-                           "free_text", [reg.label], reg.mention_days[:2] + reg.mention_days[-2:],
+                           "free_text", [reg.label], evidence,
                            "llm_judge", [reg.kind]))
         cands = [r for r in self.world.regimes if r.end - r.start + 1 >= 14]
         k = min(config.QA_TARGETS["pattern_at_time"], len(cands))
         picked = sorted(self.rng.sample(cands, k), key=lambda r: (r.domain, r.start))
         for reg in picked:
+            evidence = self.observations.pattern_days(reg, reg.end)
+            if not evidence:
+                continue
             month = self._full_month_inside(reg)
             when = f"in {month.strftime('%B %Y')}" if month else f"around {self.date((reg.start + reg.end) // 2).isoformat()}"
             self.add(Draft("pattern_at_time", reg.domain,
                            f"What was {self.name}'s {self.noun[reg.domain]} routine {when}?",
-                           self.describe(reg), "free_text", [reg.label], reg.mention_days[:3], "llm_judge",
-                           [reg.kind]))
+                           self.describe(reg), "free_text", [reg.label], evidence, "llm_judge",
+                           [reg.kind, f"regime:{reg.id}"]))
 
     def _full_month_inside(self, reg: ResolvedRegime) -> Optional[dt.date]:
         start, end = self.date(reg.start), self.date(reg.end)
@@ -264,15 +271,20 @@ class QABuilder:
             prev = self.previous(reg)
             noun = self.noun[reg.domain]
             first = reg.first_mention_day
-            accept = [self.date(d).isoformat() for d in range(reg.start, first + 1)]
-            tags = [reg.kind, reg.visibility] + (["bounded"] if first > reg.start else [])
+            observed = self.observations.distinguishing_day(reg)
+            dates, evidence = self.observations.change(reg.id, observed or first)
+            if not evidence:
+                continue
+            accept = [self.date(d).isoformat() for d in dates]
+            tags = [reg.kind, reg.visibility, f"regime:{reg.id}"] + (["bounded"] if len(dates) > 1 else [])
             self.add(Draft("change_detection", reg.domain,
                            (f"When did {self.name}'s {noun} routine change from {self.items(prev)} to {self.items(reg)}?"
                             if self.items(prev) != self.items(reg) else
                             f"When did {self.name}'s {noun} routine change for the {self.change_number(reg)} time?"),
                            f"{self.date(reg.start).isoformat()}"
-                           + (f" (first observed {self.date(first).isoformat()})" if first > reg.start else ""),
-                           "date", accept, sorted({prev.mention_days[-1], first}), "date_exact", tags))
+                           + (f" (first distinguishable observation {self.date(observed).isoformat()})"
+                              if observed and observed > reg.start else ""),
+                           "date", accept, evidence, "date_exact", tags))
 
             if reg.kind == "reversion":
                 if reg.revert_reason:
@@ -363,10 +375,11 @@ class QABuilder:
         return sorted(out, key=lambda x: (x[1], x[0]))
 
     def _fact_evidence(self, entity: str, value: str) -> list[int]:
-        days = [s.stated_day for s in self.world.statements
-                if s.entity == entity and s.value == value and s.stated_day
-                and s.kind in ("background_fact", "fact_change")]
-        return sorted(set(days)) or [1]
+        """Real disclosures introducing a value; removals cannot establish it."""
+        return sorted({s.stated_day for s in self.world.statements
+                       if s.entity == entity and s.value == value and s.stated_day
+                       and s.op in ("add", "set")
+                       and s.kind in ("background_fact", "fact_change")})
 
     def _join(self, vals: list[str]) -> str:
         return ", ".join(vals) if vals else "none"
@@ -377,9 +390,8 @@ class QABuilder:
         for f in self.spec.facts:
             vals = last[f.entity]
             noun = f.label
-            ev = sorted({d for v in vals for d in self._fact_evidence(f.entity, v)}) or [1]
-            # Skip facts with "none" answer and no real evidence
-            if not vals and ev == [1]:
+            ev = self.observations.fact_days(f.entity, self.N)
+            if not vals or not ev:
                 continue
             if f.cardinality == "single":
                 v = vals[0]
@@ -396,7 +408,7 @@ class QABuilder:
                 verb = "has" if f.cardinality == "single" else "have"
                 self.add(Draft("fact_history", f.entity, f"How {verb} {self.name}'s {noun} changed over time?",
                                "; ".join(parts), "free_text", [intervals[-1][0]],
-                               sorted({d for v, _, _ in intervals for d in self._fact_evidence(f.entity, v)}),
+                               ev,
                                "llm_judge", [f.cardinality]))
         self._facts_at_time(changing)
 
@@ -409,23 +421,25 @@ class QABuilder:
             change_days[f.entity] |= {c.day for c in f.changes if c.day > 1}
         for i, f in enumerate(entities):
             k = k_total // len(entities) + (1 if i < k_total % len(entities) else 0)
-            intervals = self._intervals(f.entity)
             cands = []
             for day in self.world.days:
                 vals = day.active_facts[f.entity]
+                if not vals and not any(s.entity == f.entity and s.op == "remove"
+                                        and s.effective_day <= day.day for s in self.world.statements):
+                    continue
                 stratum = tuple(vals)
                 w = config.BOUNDARY_WEIGHT if any(abs(day.day - c) <= config.BOUNDARY_WINDOW
                                                   for c in change_days[f.entity]) else 1.0
                 cands.append((self._join(vals), w, stratum, day.weekday, day))
+            if len({c[0] for c in cands}) == 1:
+                k = min(k, 1)
             for answer, _, _, _, day in self.sample(cands, k):
                 vals = day.active_facts[f.entity]
                 tags = ["set"] if f.cardinality == "multi" else []
                 if not vals:
                     tags.append("empty")
-                # Only include evidence up to the question's day
-                ev = sorted({d for v in vals for d in self._fact_evidence(f.entity, v)
-                             if d <= day.day}) or [1]
-                if not vals and ev == [1]:
+                ev = self.observations.fact_days(f.entity, day.day)
+                if not ev:
                     continue
                 if f.cardinality == "single":
                     q = f"What was {self.name}'s {f.label} on {day.date.isoformat()}?"
@@ -464,14 +478,19 @@ class QABuilder:
             noun = self.noun[reg.domain]
             n = reg.end - reg.start + 1
             if reg.end < self.N:
+                successor = self.regime_at(reg.domain, reg.end + 1)
+                closing = self.observations.distinguishing_day(successor)
+                if closing is None:
+                    continue
                 q = f"How long did {self.name}'s {noun} stay {self.items(reg)}?"
                 a = f"{n} days ({self.date(reg.start).isoformat()} to {self.date(reg.end).isoformat()})"
             else:
+                closing = reg.mention_days[-1]
                 q = f"As of {self.date(self.N).isoformat()}, how long had {self.name}'s {noun} been {self.items(reg)}?"
                 a = f"{n} days (since {self.date(reg.start).isoformat()})"
             cands.append(Draft("duration", reg.domain, q, a, "free_text", [str(n)],
-                               sorted({reg.first_mention_day or reg.start, reg.mention_days[-1]}),
-                               "llm_judge", [reg.kind]))
+                               sorted({reg.first_mention_day or reg.start, reg.mention_days[-1], closing}),
+                               "llm_judge", [reg.kind, f"regime:{reg.id}"]))
         for f in self.spec.facts:
             for v, s, e in self._intervals(f.entity):
                 if s == 1 or e == self.N:
@@ -481,7 +500,8 @@ class QABuilder:
                      else f"How long was {self.name}'s {f.label} {v}?")
                 cands.append(Draft("duration", f.entity, q,
                                    f"{n} days ({self.date(s).isoformat()} to {self.date(e).isoformat()})",
-                                   "free_text", [str(n)], self._fact_evidence(f.entity, v), "llm_judge", ["fact"]))
+                                   "free_text", [str(n)], self.observations.fact_days(f.entity, e + 1),
+                                   "llm_judge", ["fact"]))
         k = min(config.QA_TARGETS["duration"], len(cands))
         for d in self.rng.sample(cands, k):
             self.add(d)
@@ -492,14 +512,20 @@ class QABuilder:
         for dis in self.spec.distractors:
             noun = self.noun[dis.domain]
             answer = f"No - nothing about {self.name}'s {noun} changed because of it."
+            evidence = [self.stated_day(dis.id)]
             if dis.confounder:
                 near = [r for r in self.regimes(dis.domain) if abs(r.start - dis.day) <= 10 and r.kind != "initial"]
                 if near:
                     answer = (f"No - {self.name}'s {noun} did change around then (to {near[0].label} from "
                               f"{self.date(near[0].start).isoformat()}), but no link to this was ever stated.")
+                    observed = self.observations.distinguishing_day(near[0])
+                    if observed is None:
+                        continue
+                    previous = self.previous(near[0])
+                    evidence += [previous.mention_days[-1], observed]
             self.add(Draft("distractor_probe", dis.domain,
                            f"Around {self.date(dis.day).isoformat()}, {dis.text}. Did that lead to any change in {self.name}'s {noun}?",
-                           answer, "yes_no", ["no"], [self.stated_day(dis.id)], "llm_judge",
+                           answer, "yes_no", ["no"], sorted(set(evidence)), "llm_judge",
                            ["confounder"] if dis.confounder else []))
             pool = [r for r in caused if r.domain == dis.domain and r.id not in used] or \
                    [r for r in caused if r.id not in used]
@@ -552,8 +578,44 @@ class QABuilder:
                  else f"Do you know {self.name}'s {f.label}?")
             a = self._join(vals)
             self.add(Draft("abstention", "abstention", q, a, "value", [a],
-                           sorted({d for v in vals for d in self._fact_evidence(f.entity, v)}), "llm_judge",
+                           self.observations.fact_days(f.entity, self.N), "llm_judge",
                            ["control", f.entity]))
+
+    def at_viewpoint(self, item: QAItem, day: int) -> QAItem | None:
+        """Ground a new question at its own probe; repetitions do not call this."""
+        cutoff = min(day, self.N)
+        updates = {"viewpoint_day": day}
+        entity = item.domain if item.type == "fact_current" else (
+            next((t for t in item.tags if t in self.facts), None)
+            if item.type == "abstention" and "control" in item.tags else None)
+        if entity:
+            values = self.world.days[cutoff - 1].active_facts[entity]
+            evidence = self.observations.fact_days(entity, cutoff)
+            if not values or not evidence or max(evidence) > cutoff:
+                return None
+            answer = self._join(values)
+            accept = [answer]
+            if self.facts[entity].cardinality == "single" and item.type == "fact_current":
+                accept += [answer.split(",")[0]]
+            updates.update(answer=answer, accept=accept, evidence_days=evidence)
+        elif item.type == "pattern_current":
+            reg = self.regime_at(item.domain, cutoff)
+            evidence = self.observations.pattern_days(reg, cutoff)
+            if not evidence:
+                return None
+            updates.update(answer=f"{self.describe(reg)} (since {self.date(reg.start).isoformat()})",
+                           accept=[reg.label], evidence_days=evidence, tags=[reg.kind])
+        elif item.type == "change_detection":
+            reg_id = next(t.split(":", 1)[1] for t in item.tags if t.startswith("regime:"))
+            dates, evidence = self.observations.change(reg_id, cutoff)
+            if not evidence:
+                return None
+            updates.update(accept=[self.date(d).isoformat() for d in dates], evidence_days=evidence)
+        latest = max(updates.get("evidence_days", item.evidence_days), default=cutoff)
+        if latest > cutoff:
+            return None
+        updates["recency_distance_days"] = day - latest
+        return item.model_copy(update=updates)
 
     # ── assembly ────────────────────────────────────────────────────
     def build(self) -> list[QAItem]:

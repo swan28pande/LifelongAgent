@@ -1,0 +1,2703 @@
+[
+  {
+    "id": "SOURCE-FLAG-001",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 185,
+    "date": "2026-09-01",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2026-09-01.json",
+      "line": 72
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; assistant asks about tennis and user discusses recent court time. Historical/negative discussion still violates the absent-topic rule.",
+    "raw_evidence": [
+      {
+        "turn_number": 5,
+        "speaker": "assistant",
+        "text": "Definitely, safety first in the lab! Have you had any time for tennis lately, or has the back-to-school rush taken over your free time?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2026-09-01.json",
+          "line": 25
+        }
+      },
+      {
+        "turn_number": 6,
+        "speaker": "user",
+        "text": "The schedule is pretty packed right now, so I haven't been out on the courts recently. Grace and I are just trying to unwind in the evenings.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2026-09-01.json",
+          "line": 29
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 17775
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "oatmeal",
+        "base_value": "oatmeal",
+        "regime_id": "breakfast.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "tennis",
+        "base_value": "tennis",
+        "regime_id": "workout.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "cooking competition show",
+        "base_value": "cooking competition show",
+        "regime_id": "evening_show.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [
+      "u2_p202609_0053"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-002",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 195,
+    "date": "2026-09-11",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2026-09-11.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; assistant and user discuss possible tennis this weekend. A future plan still mentions the topic.",
+    "raw_evidence": [
+      {
+        "turn_number": 5,
+        "speaker": "assistant",
+        "text": "That's wonderful to hear. Are you hoping to get some downtime this weekend? Maybe some tennis or time in your woodworking shop?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2026-09-11.json",
+          "line": 25
+        }
+      },
+      {
+        "turn_number": 6,
+        "speaker": "user",
+        "text": "I'd love to get out and play some tennis, but honestly, I might just focus on some woodworking in the garage. The weather in Portland has been nice, but I'm pretty exhausted.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2026-09-11.json",
+          "line": 29
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 18637
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "protein smoothie",
+        "base_value": "protein smoothie",
+        "regime_id": "breakfast.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "gym weights",
+        "base_value": "gym weights",
+        "regime_id": "workout.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "nature documentary",
+        "base_value": "nature documentary",
+        "regime_id": "evening_show.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [
+      "u2_p202609_0051"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-003",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 246,
+    "date": "2026-11-01",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2026-11-01.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; assistant asks about tennis and user says no tennis today.",
+    "raw_evidence": [
+      {
+        "turn_number": 3,
+        "speaker": "assistant",
+        "text": "Oatmeal is the perfect way to warm up on a chilly Portland morning. Have you had any time to get out on the tennis courts or do some woodworking this weekend?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2026-11-01.json",
+          "line": 17
+        }
+      },
+      {
+        "turn_number": 4,
+        "speaker": "user",
+        "text": "No tennis today, but I actually spent a couple of hours out in the garage doing some woodworking. I've been sanding down some birch for a small spice rack I'm making for Grace.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2026-11-01.json",
+          "line": 21
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 22937
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "oatmeal",
+        "base_value": "oatmeal",
+        "regime_id": "breakfast.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "rest day",
+        "base_value": "rest day",
+        "regime_id": "workout.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "nature documentary",
+        "base_value": "nature documentary",
+        "regime_id": "evening_show.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-004",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 512,
+    "date": "2027-07-25",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2027-07-25.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; tennis last Thursday is nevertheless discussed.",
+    "raw_evidence": [
+      {
+        "turn_number": 5,
+        "speaker": "assistant",
+        "text": "That sounds lovely. Have you managed to get out on the tennis courts recently, or are you keeping things low-key?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-07-25.json",
+          "line": 25
+        }
+      },
+      {
+        "turn_number": 6,
+        "speaker": "user",
+        "text": "I'm keeping it pretty low-key today, but I played a couple of sets of tennis last Thursday. My back felt completely fine, so it's great to be fully back in action.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-07-25.json",
+          "line": 29
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 46312
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "oatmeal",
+        "base_value": "oatmeal",
+        "regime_id": "breakfast.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "rest day",
+        "base_value": "rest day",
+        "regime_id": "workout.r2.revert",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "sitcom reruns",
+        "base_value": "sitcom reruns",
+        "regime_id": "evening_show.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-005",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 555,
+    "date": "2027-09-06",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2027-09-06.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; tennis on the weekend is nevertheless discussed.",
+    "raw_evidence": [
+      {
+        "turn_number": 3,
+        "speaker": "assistant",
+        "text": "I'm doing great, thanks for asking! A protein smoothie is a solid way to kick off a busy day. Have you had any time to get out on the tennis courts lately, or has school kept you too busy?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-09-06.json",
+          "line": 17
+        }
+      },
+      {
+        "turn_number": 4,
+        "speaker": "user",
+        "text": "I actually managed to play a couple of sets over the weekend! My back felt completely fine, so it's great to be back on the court without any of that old stiffness.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-09-06.json",
+          "line": 21
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 50019
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "protein smoothie",
+        "base_value": "protein smoothie",
+        "regime_id": "breakfast.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "gym weights",
+        "base_value": "gym weights",
+        "regime_id": "workout.r2.revert",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "sitcom reruns",
+        "base_value": "sitcom reruns",
+        "regime_id": "evening_show.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-006",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 625,
+    "date": "2027-11-15",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2027-11-15.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; Saturday court activity is nevertheless discussed.",
+    "raw_evidence": [
+      {
+        "turn_number": 3,
+        "speaker": "assistant",
+        "text": "That sounds like a great, solid breakfast to kick off the school week. Did you get a chance to play any tennis over the weekend, or was it mostly prep for the classes?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-11-15.json",
+          "line": 17
+        }
+      },
+      {
+        "turn_number": 4,
+        "speaker": "user",
+        "text": "I did manage to get on the court for a bit on Saturday. It was nice to play a few games, though the weather was a bit damp. Mostly, Grace and I just tried to keep things low-key.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-11-15.json",
+          "line": 21
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 56155
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "eggs and toast",
+        "base_value": "eggs and toast",
+        "regime_id": "breakfast.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "gym weights",
+        "base_value": "gym weights",
+        "regime_id": "workout.r2.revert",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "sitcom reruns",
+        "base_value": "sitcom reruns",
+        "regime_id": "evening_show.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [
+      "u2_p202712_0153"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-007",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 641,
+    "date": "2027-12-01",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2027-12-01.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; yesterday's tennis is nevertheless discussed.",
+    "raw_evidence": [
+      {
+        "turn_number": 5,
+        "speaker": "assistant",
+        "text": "I can imagine the pre-break energy is quite high! Have you had any time to get out on the tennis court lately to blow off some steam?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-12-01.json",
+          "line": 25
+        }
+      },
+      {
+        "turn_number": 6,
+        "speaker": "user",
+        "text": "I actually played a couple of sets yesterday afternoon. It was great to get out there and hit some balls, even if my serve was a little rusty.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-12-01.json",
+          "line": 29
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 57527
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "eggs and toast",
+        "base_value": "eggs and toast",
+        "regime_id": "breakfast.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "run",
+        "base_value": "run",
+        "regime_id": "workout.r2.revert",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "sitcom reruns",
+        "base_value": "sitcom reruns",
+        "regime_id": "evening_show.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-008",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 651,
+    "date": "2027-12-11",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'tennis'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2027-12-11.json",
+      "line": 68
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; user explicitly reports today's singles match. The value tennis is correct, but this is an extra observation outside planned mention sampling.",
+    "raw_evidence": [
+      {
+        "turn_number": 7,
+        "speaker": "assistant",
+        "text": "It definitely is. Did you manage to get on the tennis court at all today, or is it a rest day?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-12-11.json",
+          "line": 33
+        }
+      },
+      {
+        "turn_number": 8,
+        "speaker": "user",
+        "text": "I actually did play a singles match this afternoon. My back felt completely fine, which is always a relief after that strain a while back.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-12-11.json",
+          "line": 37
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 58408
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "pancakes",
+        "base_value": "pancakes",
+        "regime_id": "breakfast.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "workout": {
+        "value": "tennis",
+        "base_value": "tennis",
+        "regime_id": "workout.r2.revert",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "sitcom reruns",
+        "base_value": "sitcom reruns",
+        "regime_id": "evening_show.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-009",
+    "scope": "conversation_source_contract",
+    "user": "u2",
+    "day": 671,
+    "date": "2027-12-31",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u2/sessions/2027-12-31.json",
+      "line": 64
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; assistant and user discuss tennis a couple of days ago.",
+    "raw_evidence": [
+      {
+        "turn_number": 7,
+        "speaker": "assistant",
+        "text": "I'm sure Olive is absolutely thrilled to have her favorite human home. Have you been able to get out and play any tennis during the break, or has the Portland winter weather kept you indoors?",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-12-31.json",
+          "line": 33
+        }
+      },
+      {
+        "turn_number": 8,
+        "speaker": "user",
+        "text": "The weather hasn't been great, but I did manage to get on an indoor court for some tennis a couple of days ago. It felt really good to run around, especially since my back is completely fine now.",
+        "source": {
+          "file": "datasets/v2/u2/sessions/2027-12-31.json",
+          "line": 37
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u2/world_state.json",
+      "line": 60145
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "bagel",
+        "base_value": "bagel",
+        "regime_id": "breakfast.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "gym weights",
+        "base_value": "gym weights",
+        "regime_id": "workout.r2.revert",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "evening_show": {
+        "value": "sitcom reruns",
+        "base_value": "sitcom reruns",
+        "regime_id": "evening_show.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-010",
+    "scope": "conversation_source_contract",
+    "user": "u3",
+    "day": 461,
+    "date": "2027-06-04",
+    "failure_index": 0,
+    "recorded_failure": "invention: planning a future trip",
+    "recorded_failure_type": "invention",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u3/sessions/2027-06-04.json",
+      "line": 68
+    },
+    "classification": "confirmed_unmodeled_persistent_detail",
+    "reasoning": "The user refers to 'our future trip'. World statements include an online Italian course, but no trip. A future trip beyond today violates the writer's no-new-trips/plans instruction; it does not contradict the day's correct commute answer.",
+    "raw_evidence": [
+      {
+        "turn_number": 10,
+        "speaker": "user",
+        "text": "Yes, I'm still keeping up with it! I usually do a quick twenty-minute lesson in the evenings. I'm starting to learn how to order food, which is making me very excited for our future trip.",
+        "source": {
+          "file": "datasets/v2/u3/sessions/2027-06-04.json",
+          "line": 45
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u3/world_state.json",
+      "line": 44692
+    },
+    "world_preferences": {
+      "morning_drink": {
+        "value": "drip coffee",
+        "base_value": "drip coffee",
+        "regime_id": "morning_drink.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "lunch": {
+        "value": "sourdough sandwich",
+        "base_value": "sourdough sandwich",
+        "regime_id": "lunch.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "commute": {
+        "value": "driving",
+        "base_value": "driving",
+        "regime_id": "commute.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "podcast": {
+        "value": "Italian lessons podcast",
+        "base_value": "Italian lessons podcast",
+        "regime_id": "podcast.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [
+      "u3_p202706_0105"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-011",
+    "scope": "conversation_source_contract",
+    "user": "u3",
+    "day": 483,
+    "date": "2027-06-26",
+    "failure_index": 0,
+    "recorded_failure": "invention: Previously focused on Phoenix for wedding venues",
+    "recorded_failure_type": "invention",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u3/sessions/2027-06-26.json",
+      "line": 68
+    },
+    "classification": "confirmed_unmodeled_persistent_detail",
+    "reasoning": "'Instead of focusing on Phoenix' adds prior wedding-venue planning history absent from the world. The earlier May 25 transcript also mentions venue browsing/Phoenix, so this is an unmodeled embellishment rather than an internal conversation contradiction. The Tucson move and its Wednesday date are correctly stated.",
+    "raw_evidence": [
+      {
+        "turn_number": 12,
+        "speaker": "user",
+        "text": "We haven't done any deep planning yet, but we'll probably start looking at some local Tucson venues soon instead of focusing on Phoenix. It's actually really exciting to think about!",
+        "source": {
+          "file": "datasets/v2/u3/sessions/2027-06-26.json",
+          "line": 53
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u3/world_state.json",
+      "line": 46671
+    },
+    "world_preferences": {
+      "morning_drink": {
+        "value": "matcha latte",
+        "base_value": "matcha latte",
+        "regime_id": "morning_drink.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "lunch": {
+        "value": "homemade burrito bowl",
+        "base_value": "homemade burrito bowl",
+        "regime_id": "lunch.r3",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "commute": {
+        "value": "no commute",
+        "base_value": "no commute",
+        "regime_id": "commute.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "podcast": {
+        "value": "Italian lessons podcast",
+        "base_value": "Italian lessons podcast",
+        "regime_id": "podcast.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      }
+    },
+    "required_statements": [
+      {
+        "id": "city.tucson",
+        "kind": "fact_change",
+        "text": "moved to Tucson to be closer to her parents",
+        "entity": "city",
+        "op": "set",
+        "value": "Tucson, Arizona",
+        "effective_day": 480,
+        "stated_day": 483,
+        "retrospective": true,
+        "is_cause": true
+      }
+    ],
+    "cited_by_probe_ids": [
+      "u3_p202706_0100",
+      "u3_p202706_0104",
+      "u3_p202706_0108",
+      "u3_p202707_0115",
+      "u3_p202708_0117",
+      "u3_r202708_0176",
+      "u3_r202709_0197",
+      "u3_p202801_0153"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-012",
+    "scope": "conversation_source_contract",
+    "user": "u3",
+    "day": 562,
+    "date": "2027-09-13",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: podcast should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u3/sessions/2027-09-13.json",
+      "line": 60
+    },
+    "classification": "confirmed_required_absent_topic_conflict",
+    "reasoning": "The world requires distractor2, a podcast host's book tour, while podcast.mentioned is false. Literal required content intrinsically raises the supposedly absent topic. The observed topic mention is real; assigning the entire failure to discretionary writer leakage ignores contradictory instructions.",
+    "raw_evidence": [
+      {
+        "turn_number": 7,
+        "speaker": "assistant",
+        "text": "You've got this. Oh, by the way, I saw some news this morning and thought of you—the host of that true-crime audio show you like just announced a book tour! I think they might be stopping in Arizona.",
+        "source": {
+          "file": "datasets/v2/u3/sessions/2027-09-13.json",
+          "line": 33
+        }
+      },
+      {
+        "turn_number": 8,
+        "speaker": "user",
+        "text": "Oh, wow! Really? I'll definitely have to look up the dates. I'd love to see them if they come to Tucson or even Phoenix.",
+        "source": {
+          "file": "datasets/v2/u3/sessions/2027-09-13.json",
+          "line": 37
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u3/world_state.json",
+      "line": 53814
+    },
+    "world_preferences": {
+      "morning_drink": {
+        "value": "drip coffee",
+        "base_value": "drip coffee",
+        "regime_id": "morning_drink.r3",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "lunch": {
+        "value": "sourdough sandwich",
+        "base_value": "sourdough sandwich",
+        "regime_id": "lunch.r3",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "commute": {
+        "value": "driving",
+        "base_value": "driving",
+        "regime_id": "commute.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "podcast": {
+        "value": "Italian lessons podcast",
+        "base_value": "Italian lessons podcast",
+        "regime_id": "podcast.r2",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      }
+    },
+    "required_statements": [
+      {
+        "id": "distractor2",
+        "kind": "distractor",
+        "text": "her favorite podcast host announced a book tour",
+        "entity": null,
+        "op": null,
+        "value": null,
+        "effective_day": 560,
+        "stated_day": 562,
+        "retrospective": true,
+        "is_cause": false
+      }
+    ],
+    "cited_by_probe_ids": [
+      "u3_p202709_0122"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-013",
+    "scope": "conversation_source_contract",
+    "user": "u3",
+    "day": 641,
+    "date": "2027-12-01",
+    "failure_index": 1,
+    "recorded_failure": "invention: Dash gets excited on walks and pulls on the leash",
+    "recorded_failure_type": "invention",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u3/sessions/2027-12-01.json",
+      "line": 60
+    },
+    "classification": "confirmed_unmodeled_persistent_detail",
+    "reasoning": "Dash being excited on walks and needing leash-pulling training adds behavior/backstory not present in the world, which states only adoption of a rescue greyhound named Dash. This violates no-new-details-about-known-pets; the sprain and rideshare still appear.",
+    "raw_evidence": [
+      {
+        "turn_number": 10,
+        "speaker": "user",
+        "text": "Yes, they discussed positive reinforcement techniques for leash pulling. Dash still gets pretty excited on our walks, so Tom and I want to try some of those methods.",
+        "source": {
+          "file": "datasets/v2/u3/sessions/2027-12-01.json",
+          "line": 45
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u3/world_state.json",
+      "line": 61110
+    },
+    "world_preferences": {
+      "morning_drink": {
+        "value": "drip coffee",
+        "base_value": "drip coffee",
+        "regime_id": "morning_drink.r3",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "lunch": {
+        "value": "homemade burrito bowl",
+        "base_value": "homemade burrito bowl",
+        "regime_id": "lunch.r3",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "commute": {
+        "value": "rideshare",
+        "base_value": "rideshare",
+        "regime_id": "commute.r3",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "podcast": {
+        "value": "dog training podcast",
+        "base_value": "dog training podcast",
+        "regime_id": "podcast.r3",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [
+      {
+        "id": "ankle.0",
+        "kind": "event_update",
+        "text": "[her sprained ankle] sprained her ankle on a hike (happened)",
+        "entity": null,
+        "op": null,
+        "value": null,
+        "effective_day": 640,
+        "stated_day": 641,
+        "retrospective": true,
+        "is_cause": true
+      }
+    ],
+    "cited_by_probe_ids": [
+      "u3_p202712_0143",
+      "u3_p202712_0147",
+      "u3_p202712_0150"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-014",
+    "scope": "conversation_source_contract",
+    "user": "u4",
+    "day": 2,
+    "date": "2026-03-02",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u4/sessions/2026-03-02.json",
+      "line": 68
+    },
+    "classification": "confirmed_required_absent_topic_conflict",
+    "reasoning": "Required hobbies.1 explicitly introduces cycling, while workout.mentioned is false. The forced hobby overlaps the absent workout topic; historical cycling is observable but the generator's literal obligations conflict.",
+    "raw_evidence": [
+      {
+        "turn_number": 8,
+        "speaker": "user",
+        "text": "I did! The weather was decent, so I spent a good chunk of yesterday out on my road bike. I've taken up cycling as a hobby, and it's been a great way to get some fresh air.",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-03-02.json",
+          "line": 37
+        }
+      },
+      {
+        "turn_number": 9,
+        "speaker": "assistant",
+        "text": "That's awesome. Cycling is a great way to explore the area. Do you have a favorite route you like to take, or do you mostly ride solo?",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-03-02.json",
+          "line": 41
+        }
+      },
+      {
+        "turn_number": 10,
+        "speaker": "user",
+        "text": "I've been exploring some of the lake trails. I actually went out with Leah, the wonderful woman I'm dating now. She's a big fan of riding too, so it's a fun thing for us to do together.",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-03-02.json",
+          "line": 45
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u4/world_state.json",
+      "line": 2765
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "granola",
+        "base_value": "granola",
+        "regime_id": "breakfast.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "cycling",
+        "base_value": "cycling",
+        "regime_id": "workout.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "outfit": {
+        "value": "hoodie and joggers",
+        "base_value": "button-down and chinos",
+        "regime_id": "outfit.r0",
+        "is_exception": true,
+        "exception_reason": "working from home",
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "music": {
+        "value": "indie rock",
+        "base_value": "indie rock",
+        "regime_id": "music.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "dinner": {
+        "value": "pasta",
+        "base_value": "pasta",
+        "regime_id": "dinner.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [
+      {
+        "id": "job.0",
+        "kind": "background_fact",
+        "text": "job is now junior architect at a design firm",
+        "entity": "job",
+        "op": "set",
+        "value": "junior architect at a design firm",
+        "effective_day": 1,
+        "stated_day": 2,
+        "retrospective": false,
+        "is_cause": false
+      },
+      {
+        "id": "relationship.0",
+        "kind": "background_fact",
+        "text": "relationship status is now dating Leah",
+        "entity": "relationship",
+        "op": "set",
+        "value": "dating Leah",
+        "effective_day": 1,
+        "stated_day": 2,
+        "retrospective": false,
+        "is_cause": false
+      },
+      {
+        "id": "hobbies.1",
+        "kind": "background_fact",
+        "text": "hobbies now include cycling",
+        "entity": "hobbies",
+        "op": "add",
+        "value": "cycling",
+        "effective_day": 1,
+        "stated_day": 2,
+        "retrospective": false,
+        "is_cause": false
+      }
+    ],
+    "cited_by_probe_ids": [
+      "u4_p202603_0001",
+      "u4_p202603_0003",
+      "u4_p202603_0004",
+      "u4_p202603_0005",
+      "u4_p202604_0007",
+      "u4_r202607_0173",
+      "u4_p202701_0057",
+      "u4_p202701_0058",
+      "u4_p202701_0060",
+      "u4_p202701_0062"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-015",
+    "scope": "conversation_source_contract",
+    "user": "u4",
+    "day": 44,
+    "date": "2026-04-13",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u4/sessions/2026-04-13.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; assistant and user discuss yesterday's long bike ride.",
+    "raw_evidence": [
+      {
+        "turn_number": 5,
+        "speaker": "assistant",
+        "text": "It’s great that you were able to find that zone of deep focus when you needed it. Hopefully the schematics turned out well! Did you manage to get a break over the weekend to recharge? Maybe a bike ride around Minneapolis?",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-04-13.json",
+          "line": 25
+        }
+      },
+      {
+        "turn_number": 6,
+        "speaker": "user",
+        "text": "I did, actually! I took my bike out for a long ride around the Chain of Lakes yesterday. The Minneapolis spring weather is finally starting to show up, which was great.",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-04-13.json",
+          "line": 29
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u4/world_state.json",
+      "line": 7171
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "granola",
+        "base_value": "granola",
+        "regime_id": "breakfast.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "workout": {
+        "value": "cycling",
+        "base_value": "cycling",
+        "regime_id": "workout.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "outfit": {
+        "value": "button-down and chinos",
+        "base_value": "button-down and chinos",
+        "regime_id": "outfit.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "music": {
+        "value": "silence",
+        "base_value": "indie rock",
+        "regime_id": "music.r0",
+        "is_exception": true,
+        "exception_reason": "deep focus work",
+        "mentioned": true,
+        "mention_reason": "exception"
+      },
+      "dinner": {
+        "value": "pasta",
+        "base_value": "pasta",
+        "regime_id": "dinner.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-016",
+    "scope": "conversation_source_contract",
+    "user": "u4",
+    "day": 59,
+    "date": "2026-04-28",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u4/sessions/2026-04-28.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; assistant asks about bike activity and user discusses recent cycling.",
+    "raw_evidence": [
+      {
+        "turn_number": 5,
+        "speaker": "assistant",
+        "text": "That sounds like the perfect soundtrack for getting into a creative flow. Have you been able to get out on your bike lately, or has work been keeping you too busy?",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-04-28.json",
+          "line": 25
+        }
+      },
+      {
+        "turn_number": 6,
+        "speaker": "user",
+        "text": "I haven't had much time for cycling this week, unfortunately. But I'm planning to make a nice meal tonight to wind down. I've got some ground meat and fresh cilantro, and I'm planning to assemble some seasoned fillings inside warm, folded corn tortillas.",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-04-28.json",
+          "line": 29
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u4/world_state.json",
+      "line": 8722
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "eggs on toast",
+        "base_value": "eggs on toast",
+        "regime_id": "breakfast.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "gym",
+        "base_value": "gym",
+        "regime_id": "workout.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "outfit": {
+        "value": "button-down and chinos",
+        "base_value": "button-down and chinos",
+        "regime_id": "outfit.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "music": {
+        "value": "indie rock",
+        "base_value": "indie rock",
+        "regime_id": "music.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "dinner": {
+        "value": "tacos",
+        "base_value": "tacos",
+        "regime_id": "dinner.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-017",
+    "scope": "conversation_source_contract",
+    "user": "u4",
+    "day": 111,
+    "date": "2026-06-19",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'cycling'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u4/sessions/2026-06-19.json",
+      "line": 60
+    },
+    "classification": "confirmed_avoidable_absent_topic_mention",
+    "reasoning": "Workout is marked unmentioned; user reports today's bike ride. The saved extractor selects cycling, while the world value is rest day. The pref_leak branch masks that value disagreement because its expected value is not mentioned. A reader could distinguish a leisure ride from the modeled workout, so the strongest independent finding is a real extra cycling observation plus a recorded-extraction/world discrepancy; no probing question directly cites this day.",
+    "raw_evidence": [
+      {
+        "turn_number": 4,
+        "speaker": "user",
+        "text": "They definitely did. I got everything submitted right before five. I even had some energy left to take my bike out for a quick spin around the chain of lakes afterward. Captured a couple of really nice shots of the sunset reflection on the water too.",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-06-19.json",
+          "line": 21
+        }
+      },
+      {
+        "turn_number": 5,
+        "speaker": "assistant",
+        "text": "That sounds like a beautiful evening ride! Minneapolis has some of the best lake views for photography. Are you and Leah doing anything special to celebrate the weekend?",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-06-19.json",
+          "line": 25
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u4/world_state.json",
+      "line": 14204
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "oatmeal",
+        "base_value": "oatmeal",
+        "regime_id": "breakfast.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "workout": {
+        "value": "rest day",
+        "base_value": "rest day",
+        "regime_id": "workout.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "outfit": {
+        "value": "sweater and jeans",
+        "base_value": "sweater and jeans",
+        "regime_id": "outfit.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "music": {
+        "value": "lo-fi beats",
+        "base_value": "lo-fi beats",
+        "regime_id": "music.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "dinner": {
+        "value": "takeout burgers",
+        "base_value": "takeout burgers",
+        "regime_id": "dinner.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [],
+    "cited_by_probe_ids": [],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-018",
+    "scope": "conversation_source_contract",
+    "user": "u4",
+    "day": 210,
+    "date": "2026-09-26",
+    "failure_index": 0,
+    "recorded_failure": "pref_leak: workout should be 'not mentioned', conversation gives 'other'",
+    "recorded_failure_type": "pref_leak",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u4/sessions/2026-09-26.json",
+      "line": 60
+    },
+    "classification": "confirmed_required_absent_topic_conflict",
+    "reasoning": "Required wrist.0 says fractured his wrist climbing, while workout.mentioned is false. Stating the mandated cause overlaps the absent topic. The assistant also independently asks about cycling in turn 1. The fracture content is present and dated today.",
+    "raw_evidence": [
+      {
+        "turn_number": 1,
+        "speaker": "assistant",
+        "text": "Hi Daniel! Happy Saturday. How is your weekend in Minneapolis starting out? Have you been doing any photography or getting out on your bike?",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-09-26.json",
+          "line": 9
+        }
+      },
+      {
+        "turn_number": 2,
+        "speaker": "user",
+        "text": "Hey! Actually, my Saturday took a pretty painful turn. I was scaling a route earlier today and took a bad fall, and I ended up cracking a bone in my arm right above my hand.",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-09-26.json",
+          "line": 13
+        }
+      },
+      {
+        "turn_number": 7,
+        "speaker": "assistant",
+        "text": "I'm glad you two got to enjoy that late-morning meal together before the accident. Did you head straight to climb after that?",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-09-26.json",
+          "line": 33
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u4/world_state.json",
+      "line": 24688
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "brunch with Leah",
+        "base_value": "brunch with Leah",
+        "regime_id": "breakfast.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "long ride",
+        "base_value": "long ride",
+        "regime_id": "workout.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "outfit": {
+        "value": "sweater and jeans",
+        "base_value": "sweater and jeans",
+        "regime_id": "outfit.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "music": {
+        "value": "lo-fi beats",
+        "base_value": "lo-fi beats",
+        "regime_id": "music.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      },
+      "dinner": {
+        "value": "steak",
+        "base_value": "steak",
+        "regime_id": "dinner.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      }
+    },
+    "required_statements": [
+      {
+        "id": "wrist.0",
+        "kind": "event_update",
+        "text": "[his wrist fracture] fractured his wrist climbing (happened)",
+        "entity": null,
+        "op": null,
+        "value": null,
+        "effective_day": 210,
+        "stated_day": 210,
+        "retrospective": false,
+        "is_cause": true
+      }
+    ],
+    "cited_by_probe_ids": [
+      "u4_p202609_0033",
+      "u4_p202609_0034",
+      "u4_p202609_0035"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "SOURCE-FLAG-019",
+    "scope": "conversation_source_contract",
+    "user": "u4",
+    "day": 261,
+    "date": "2026-11-16",
+    "failure_index": 0,
+    "recorded_failure": "invention: Daniel and Leah plan to have a proper celebration for his promotion next weekend.",
+    "recorded_failure_type": "invention",
+    "previously_reported": true,
+    "failure_source": {
+      "file": "datasets/v2/u4/sessions/2026-11-16.json",
+      "line": 68
+    },
+    "classification": "confirmed_unmodeled_persistent_detail",
+    "reasoning": "'We'll probably do a proper celebration next weekend' adds a beyond-today plan absent from world statements. This violates the strict writer instruction; it is a plausible embellishment and does not make the promotion false.",
+    "raw_evidence": [
+      {
+        "turn_number": 6,
+        "speaker": "user",
+        "text": "We just did a quick toast at home, but we'll probably do a proper celebration next weekend. Today was straight to business anyway; I had to be out of the door incredibly early for an on-site inspection, so I actually ended up completely bypassing my morning meal. Usually, I'd have my blended fruit bowl, but there just wasn't time.",
+        "source": {
+          "file": "datasets/v2/u4/sessions/2026-11-16.json",
+          "line": 29
+        }
+      }
+    ],
+    "world_day_source": {
+      "file": "datasets/v2/u4/world_state.json",
+      "line": 30134
+    },
+    "world_preferences": {
+      "breakfast": {
+        "value": "skipped breakfast",
+        "base_value": "smoothie bowl",
+        "regime_id": "breakfast.r1",
+        "is_exception": true,
+        "exception_reason": "an early site visit",
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "workout": {
+        "value": "cycling",
+        "base_value": "cycling",
+        "regime_id": "workout.r2.revert",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "outfit": {
+        "value": "button-down and chinos",
+        "base_value": "button-down and chinos",
+        "regime_id": "outfit.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "music": {
+        "value": "lo-fi beats",
+        "base_value": "lo-fi beats",
+        "regime_id": "music.r0",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": true,
+        "mention_reason": "sampled"
+      },
+      "dinner": {
+        "value": "pad thai",
+        "base_value": "pad thai",
+        "regime_id": "dinner.r1",
+        "is_exception": false,
+        "exception_reason": null,
+        "mentioned": false,
+        "mention_reason": null
+      }
+    },
+    "required_statements": [
+      {
+        "id": "job.project_lead",
+        "kind": "fact_change",
+        "text": "was promoted to project lead at the design firm",
+        "entity": "job",
+        "op": "set",
+        "value": "project lead at the design firm",
+        "effective_day": 260,
+        "stated_day": 261,
+        "retrospective": true,
+        "is_cause": true
+      }
+    ],
+    "cited_by_probe_ids": [
+      "u4_p202611_0049",
+      "u4_p202702_0069",
+      "u4_p202703_0074",
+      "u4_r202705_0191"
+    ],
+    "proved_wrong_gold_probe_ids": [],
+    "limit": "A session citation does not imply the question depends on the defective detail; affected IDs here are citation exposure only."
+  },
+  {
+    "id": "INTEGRATION-001",
+    "scope": "monthly_evaluation_integration",
+    "kind": "monthly_probe_files_not_loaded",
+    "source": "experiments/benchmarks/v2.py:16",
+    "expected": "Load monthly probing files to evaluate the monthly benchmark.",
+    "observed": "Actual loader reads qa_pairs.json: 250 end-of-history curated questions, zero of 1,000 monthly IDs.",
+    "record_ids": [
+      "u1_p202603_0001",
+      "u1_p202603_0002",
+      "u1_p202603_0003",
+      "u1_p202603_0004",
+      "u1_p202603_0005",
+      "u1_p202603_0006",
+      "u1_p202603_0007",
+      "u1_p202603_0008",
+      "u1_p202603_0009",
+      "u1_p202603_0010",
+      "u1_p202603_0011",
+      "u1_p202604_0012",
+      "u1_p202604_0013",
+      "u1_p202604_0014",
+      "u1_p202604_0015",
+      "u1_p202604_0016",
+      "u1_p202604_0017",
+      "u1_p202604_0018",
+      "u1_p202604_0019",
+      "u1_p202605_0020",
+      "u1_p202605_0021",
+      "u1_p202605_0022",
+      "u1_p202605_0023",
+      "u1_p202605_0024",
+      "u1_p202605_0025",
+      "u1_p202605_0026",
+      "u1_p202606_0027",
+      "u1_p202606_0028",
+      "u1_p202606_0029",
+      "u1_p202606_0030",
+      "u1_p202607_0031",
+      "u1_p202607_0032",
+      "u1_p202607_0033",
+      "u1_p202607_0034",
+      "u1_p202607_0035",
+      "u1_p202608_0036",
+      "u1_p202608_0037",
+      "u1_p202608_0038",
+      "u1_p202608_0039",
+      "u1_p202608_0040",
+      "u1_p202608_0041",
+      "u1_p202608_0042",
+      "u1_p202608_0043",
+      "u1_p202609_0044",
+      "u1_p202609_0045",
+      "u1_p202609_0046",
+      "u1_p202609_0047",
+      "u1_p202609_0048",
+      "u1_p202609_0049",
+      "u1_p202609_0050",
+      "u1_p202609_0051",
+      "u1_p202609_0052",
+      "u1_p202609_0053",
+      "u1_p202610_0054",
+      "u1_p202610_0055",
+      "u1_p202610_0056",
+      "u1_p202610_0057",
+      "u1_p202610_0058",
+      "u1_p202610_0059",
+      "u1_p202610_0060",
+      "u1_p202611_0061",
+      "u1_p202611_0062",
+      "u1_p202611_0063",
+      "u1_p202611_0064",
+      "u1_p202611_0065",
+      "u1_p202612_0066",
+      "u1_p202612_0067",
+      "u1_p202612_0068",
+      "u1_p202612_0069",
+      "u1_p202612_0070",
+      "u1_p202612_0071",
+      "u1_p202701_0072",
+      "u1_p202701_0073",
+      "u1_p202701_0074",
+      "u1_p202701_0075",
+      "u1_p202701_0076",
+      "u1_p202701_0077",
+      "u1_p202701_0078",
+      "u1_p202701_0079",
+      "u1_p202701_0080",
+      "u1_p202701_0081",
+      "u1_p202701_0082",
+      "u1_p202701_0083",
+      "u1_p202701_0084",
+      "u1_p202701_0085",
+      "u1_p202702_0086",
+      "u1_p202702_0087",
+      "u1_p202702_0088",
+      "u1_p202702_0089",
+      "u1_p202702_0090",
+      "u1_p202703_0091",
+      "u1_p202703_0092",
+      "u1_p202703_0093",
+      "u1_p202703_0094",
+      "u1_p202703_0095",
+      "u1_p202704_0096",
+      "u1_p202704_0097",
+      "u1_p202704_0098",
+      "u1_p202704_0099",
+      "u1_p202705_0100",
+      "u1_p202705_0101",
+      "u1_p202705_0102",
+      "u1_p202706_0103",
+      "u1_p202706_0104",
+      "u1_p202706_0105",
+      "u1_p202706_0106",
+      "u1_p202706_0107",
+      "u1_p202706_0108",
+      "u1_p202706_0109",
+      "u1_p202706_0110",
+      "u1_p202706_0111",
+      "u1_p202706_0112",
+      "u1_p202706_0113",
+      "u1_p202706_0114",
+      "u1_p202706_0115",
+      "u1_p202706_0116",
+      "u1_p202707_0117",
+      "u1_p202707_0118",
+      "u1_p202707_0119",
+      "u1_p202707_0120",
+      "u1_p202707_0121",
+      "u1_p202707_0122",
+      "u1_p202707_0123",
+      "u1_p202708_0124",
+      "u1_p202708_0125",
+      "u1_p202708_0126",
+      "u1_p202708_0127",
+      "u1_p202708_0128",
+      "u1_p202709_0129",
+      "u1_p202709_0130",
+      "u1_p202709_0131",
+      "u1_p202709_0132",
+      "u1_p202709_0133",
+      "u1_p202709_0134",
+      "u1_p202709_0135",
+      "u1_p202710_0136",
+      "u1_p202710_0137",
+      "u1_p202710_0138",
+      "u1_p202710_0139",
+      "u1_p202710_0140",
+      "u1_p202710_0141",
+      "u1_p202711_0142",
+      "u1_p202711_0143",
+      "u1_p202711_0144",
+      "u1_p202711_0145",
+      "u1_p202711_0146",
+      "u1_p202711_0147",
+      "u1_p202711_0148",
+      "u1_p202712_0149",
+      "u1_p202712_0150",
+      "u1_p202712_0151",
+      "u1_p202801_0152",
+      "u1_p202801_0153",
+      "u1_p202801_0154",
+      "u1_p202801_0155",
+      "u1_p202801_0156",
+      "u1_p202801_0157",
+      "u1_p202801_0158",
+      "u1_r202605_0165",
+      "u1_r202606_0196",
+      "u1_r202608_0168",
+      "u1_r202608_0170",
+      "u1_r202608_0173",
+      "u1_r202609_0172",
+      "u1_r202609_0189",
+      "u1_r202611_0199",
+      "u1_r202612_0177",
+      "u1_r202612_0192",
+      "u1_r202612_0194",
+      "u1_r202701_0159",
+      "u1_r202701_0164",
+      "u1_r202701_0181",
+      "u1_r202701_0183",
+      "u1_r202702_0163",
+      "u1_r202702_0174",
+      "u1_r202702_0195",
+      "u1_r202703_0182",
+      "u1_r202703_0190",
+      "u1_r202704_0186",
+      "u1_r202706_0162",
+      "u1_r202706_0178",
+      "u1_r202706_0180",
+      "u1_r202706_0185",
+      "u1_r202707_0169",
+      "u1_r202707_0179",
+      "u1_r202708_0166",
+      "u1_r202708_0191",
+      "u1_r202709_0175",
+      "u1_r202709_0198",
+      "u1_r202709_0200",
+      "u1_r202710_0188",
+      "u1_r202710_0197",
+      "u1_r202712_0171",
+      "u1_r202801_0160",
+      "u1_r202801_0161",
+      "u1_r202801_0167",
+      "u1_r202801_0176",
+      "u1_r202801_0184",
+      "u1_r202801_0187",
+      "u1_r202801_0193",
+      "u2_p202603_0001",
+      "u2_p202603_0002",
+      "u2_p202603_0003",
+      "u2_p202603_0004",
+      "u2_p202603_0005",
+      "u2_p202603_0006",
+      "u2_p202603_0007",
+      "u2_p202603_0008",
+      "u2_p202604_0009",
+      "u2_p202604_0010",
+      "u2_p202604_0011",
+      "u2_p202604_0012",
+      "u2_p202604_0013",
+      "u2_p202604_0014",
+      "u2_p202605_0015",
+      "u2_p202605_0016",
+      "u2_p202605_0017",
+      "u2_p202605_0018",
+      "u2_p202606_0019",
+      "u2_p202606_0020",
+      "u2_p202606_0021",
+      "u2_p202606_0022",
+      "u2_p202606_0023",
+      "u2_p202606_0024",
+      "u2_p202606_0025",
+      "u2_p202606_0026",
+      "u2_p202606_0027",
+      "u2_p202606_0028",
+      "u2_p202606_0029",
+      "u2_p202607_0030",
+      "u2_p202607_0031",
+      "u2_p202607_0032",
+      "u2_p202607_0033",
+      "u2_p202607_0034",
+      "u2_p202607_0035",
+      "u2_p202607_0036",
+      "u2_p202608_0037",
+      "u2_p202608_0038",
+      "u2_p202608_0039",
+      "u2_p202608_0040",
+      "u2_p202608_0041",
+      "u2_p202608_0042",
+      "u2_p202608_0043",
+      "u2_p202608_0044",
+      "u2_p202608_0045",
+      "u2_p202608_0046",
+      "u2_p202608_0047",
+      "u2_p202608_0048",
+      "u2_p202609_0049",
+      "u2_p202609_0050",
+      "u2_p202609_0051",
+      "u2_p202609_0052",
+      "u2_p202609_0053",
+      "u2_p202610_0054",
+      "u2_p202610_0055",
+      "u2_p202610_0056",
+      "u2_p202610_0057",
+      "u2_p202610_0058",
+      "u2_p202611_0059",
+      "u2_p202611_0060",
+      "u2_p202611_0061",
+      "u2_p202611_0062",
+      "u2_p202611_0063",
+      "u2_p202611_0064",
+      "u2_p202611_0065",
+      "u2_p202611_0066",
+      "u2_p202611_0067",
+      "u2_p202611_0068",
+      "u2_p202611_0069",
+      "u2_p202611_0070",
+      "u2_p202611_0071",
+      "u2_p202612_0072",
+      "u2_p202612_0073",
+      "u2_p202612_0074",
+      "u2_p202612_0075",
+      "u2_p202701_0076",
+      "u2_p202701_0077",
+      "u2_p202701_0078",
+      "u2_p202701_0079",
+      "u2_p202701_0080",
+      "u2_p202701_0081",
+      "u2_p202701_0082",
+      "u2_p202701_0083",
+      "u2_p202701_0084",
+      "u2_p202702_0085",
+      "u2_p202702_0086",
+      "u2_p202702_0087",
+      "u2_p202703_0088",
+      "u2_p202703_0089",
+      "u2_p202703_0090",
+      "u2_p202703_0091",
+      "u2_p202704_0092",
+      "u2_p202704_0093",
+      "u2_p202705_0094",
+      "u2_p202705_0095",
+      "u2_p202705_0096",
+      "u2_p202705_0097",
+      "u2_p202705_0098",
+      "u2_p202705_0099",
+      "u2_p202705_0100",
+      "u2_p202705_0101",
+      "u2_p202705_0102",
+      "u2_p202705_0103",
+      "u2_p202705_0104",
+      "u2_p202705_0105",
+      "u2_p202706_0106",
+      "u2_p202706_0107",
+      "u2_p202706_0108",
+      "u2_p202706_0109",
+      "u2_p202706_0110",
+      "u2_p202707_0111",
+      "u2_p202707_0112",
+      "u2_p202707_0113",
+      "u2_p202707_0114",
+      "u2_p202707_0115",
+      "u2_p202707_0116",
+      "u2_p202707_0117",
+      "u2_p202707_0118",
+      "u2_p202707_0119",
+      "u2_p202708_0120",
+      "u2_p202708_0121",
+      "u2_p202708_0122",
+      "u2_p202708_0123",
+      "u2_p202708_0124",
+      "u2_p202708_0125",
+      "u2_p202709_0126",
+      "u2_p202709_0127",
+      "u2_p202709_0128",
+      "u2_p202709_0129",
+      "u2_p202709_0130",
+      "u2_p202709_0131",
+      "u2_p202709_0132",
+      "u2_p202710_0133",
+      "u2_p202710_0134",
+      "u2_p202710_0135",
+      "u2_p202710_0136",
+      "u2_p202710_0137",
+      "u2_p202710_0138",
+      "u2_p202710_0139",
+      "u2_p202710_0140",
+      "u2_p202710_0141",
+      "u2_p202710_0142",
+      "u2_p202710_0143",
+      "u2_p202711_0144",
+      "u2_p202711_0145",
+      "u2_p202711_0146",
+      "u2_p202711_0147",
+      "u2_p202711_0148",
+      "u2_p202711_0149",
+      "u2_p202711_0150",
+      "u2_p202712_0151",
+      "u2_p202712_0152",
+      "u2_p202712_0153",
+      "u2_p202801_0154",
+      "u2_p202801_0155",
+      "u2_p202801_0156",
+      "u2_p202801_0157",
+      "u2_p202801_0158",
+      "u2_r202606_0194",
+      "u2_r202607_0162",
+      "u2_r202607_0178",
+      "u2_r202608_0181",
+      "u2_r202610_0175",
+      "u2_r202610_0189",
+      "u2_r202610_0190",
+      "u2_r202611_0182",
+      "u2_r202612_0163",
+      "u2_r202612_0167",
+      "u2_r202701_0165",
+      "u2_r202701_0170",
+      "u2_r202701_0183",
+      "u2_r202701_0197",
+      "u2_r202702_0188",
+      "u2_r202703_0179",
+      "u2_r202703_0195",
+      "u2_r202703_0196",
+      "u2_r202703_0200",
+      "u2_r202704_0173",
+      "u2_r202704_0192",
+      "u2_r202705_0171",
+      "u2_r202705_0186",
+      "u2_r202705_0191",
+      "u2_r202707_0174",
+      "u2_r202707_0185",
+      "u2_r202708_0169",
+      "u2_r202708_0199",
+      "u2_r202709_0187",
+      "u2_r202710_0161",
+      "u2_r202710_0180",
+      "u2_r202710_0184",
+      "u2_r202711_0177",
+      "u2_r202711_0193",
+      "u2_r202712_0166",
+      "u2_r202712_0198",
+      "u2_r202801_0159",
+      "u2_r202801_0160",
+      "u2_r202801_0164",
+      "u2_r202801_0168",
+      "u2_r202801_0172",
+      "u2_r202801_0176",
+      "u3_p202603_0001",
+      "u3_p202603_0002",
+      "u3_p202603_0003",
+      "u3_p202604_0004",
+      "u3_p202604_0005",
+      "u3_p202604_0006",
+      "u3_p202604_0007",
+      "u3_p202604_0008",
+      "u3_p202605_0009",
+      "u3_p202605_0010",
+      "u3_p202605_0011",
+      "u3_p202605_0012",
+      "u3_p202605_0013",
+      "u3_p202605_0014",
+      "u3_p202605_0015",
+      "u3_p202605_0016",
+      "u3_p202606_0017",
+      "u3_p202606_0018",
+      "u3_p202606_0019",
+      "u3_p202606_0020",
+      "u3_p202606_0021",
+      "u3_p202606_0022",
+      "u3_p202606_0023",
+      "u3_p202607_0024",
+      "u3_p202607_0025",
+      "u3_p202607_0026",
+      "u3_p202607_0027",
+      "u3_p202607_0028",
+      "u3_p202607_0029",
+      "u3_p202607_0030",
+      "u3_p202607_0031",
+      "u3_p202607_0032",
+      "u3_p202608_0033",
+      "u3_p202608_0034",
+      "u3_p202608_0035",
+      "u3_p202608_0036",
+      "u3_p202608_0037",
+      "u3_p202608_0038",
+      "u3_p202608_0039",
+      "u3_p202608_0040",
+      "u3_p202609_0041",
+      "u3_p202609_0042",
+      "u3_p202609_0043",
+      "u3_p202610_0044",
+      "u3_p202610_0045",
+      "u3_p202610_0046",
+      "u3_p202610_0047",
+      "u3_p202610_0048",
+      "u3_p202610_0049",
+      "u3_p202610_0050",
+      "u3_p202610_0051",
+      "u3_p202610_0052",
+      "u3_p202610_0053",
+      "u3_p202610_0054",
+      "u3_p202610_0055",
+      "u3_p202611_0056",
+      "u3_p202611_0057",
+      "u3_p202611_0058",
+      "u3_p202611_0059",
+      "u3_p202611_0060",
+      "u3_p202611_0061",
+      "u3_p202611_0062",
+      "u3_p202612_0063",
+      "u3_p202612_0064",
+      "u3_p202612_0065",
+      "u3_p202612_0066",
+      "u3_p202612_0067",
+      "u3_p202612_0068",
+      "u3_p202701_0069",
+      "u3_p202701_0070",
+      "u3_p202701_0071",
+      "u3_p202701_0072",
+      "u3_p202702_0073",
+      "u3_p202702_0074",
+      "u3_p202702_0075",
+      "u3_p202702_0076",
+      "u3_p202702_0077",
+      "u3_p202702_0078",
+      "u3_p202702_0079",
+      "u3_p202702_0080",
+      "u3_p202702_0081",
+      "u3_p202702_0082",
+      "u3_p202703_0083",
+      "u3_p202703_0084",
+      "u3_p202703_0085",
+      "u3_p202704_0086",
+      "u3_p202704_0087",
+      "u3_p202704_0088",
+      "u3_p202704_0089",
+      "u3_p202704_0090",
+      "u3_p202704_0091",
+      "u3_p202704_0092",
+      "u3_p202704_0093",
+      "u3_p202705_0094",
+      "u3_p202705_0095",
+      "u3_p202705_0096",
+      "u3_p202705_0097",
+      "u3_p202705_0098",
+      "u3_p202706_0099",
+      "u3_p202706_0100",
+      "u3_p202706_0101",
+      "u3_p202706_0102",
+      "u3_p202706_0103",
+      "u3_p202706_0104",
+      "u3_p202706_0105",
+      "u3_p202706_0106",
+      "u3_p202706_0107",
+      "u3_p202706_0108",
+      "u3_p202707_0109",
+      "u3_p202707_0110",
+      "u3_p202707_0111",
+      "u3_p202707_0112",
+      "u3_p202707_0113",
+      "u3_p202707_0114",
+      "u3_p202707_0115",
+      "u3_p202708_0116",
+      "u3_p202708_0117",
+      "u3_p202708_0118",
+      "u3_p202709_0119",
+      "u3_p202709_0120",
+      "u3_p202709_0121",
+      "u3_p202709_0122",
+      "u3_p202710_0123",
+      "u3_p202710_0124",
+      "u3_p202710_0125",
+      "u3_p202710_0126",
+      "u3_p202710_0127",
+      "u3_p202710_0128",
+      "u3_p202710_0129",
+      "u3_p202710_0130",
+      "u3_p202710_0131",
+      "u3_p202710_0132",
+      "u3_p202710_0133",
+      "u3_p202711_0134",
+      "u3_p202711_0135",
+      "u3_p202711_0136",
+      "u3_p202711_0137",
+      "u3_p202711_0138",
+      "u3_p202712_0139",
+      "u3_p202712_0140",
+      "u3_p202712_0141",
+      "u3_p202712_0142",
+      "u3_p202712_0143",
+      "u3_p202712_0144",
+      "u3_p202712_0145",
+      "u3_p202712_0146",
+      "u3_p202712_0147",
+      "u3_p202712_0148",
+      "u3_p202712_0149",
+      "u3_p202712_0150",
+      "u3_p202801_0151",
+      "u3_p202801_0152",
+      "u3_p202801_0153",
+      "u3_p202801_0154",
+      "u3_p202801_0155",
+      "u3_p202801_0156",
+      "u3_p202801_0157",
+      "u3_p202801_0158",
+      "u3_r202607_0200",
+      "u3_r202608_0165",
+      "u3_r202608_0179",
+      "u3_r202608_0182",
+      "u3_r202609_0193",
+      "u3_r202611_0181",
+      "u3_r202612_0168",
+      "u3_r202612_0174",
+      "u3_r202612_0198",
+      "u3_r202701_0178",
+      "u3_r202701_0180",
+      "u3_r202701_0189",
+      "u3_r202702_0171",
+      "u3_r202702_0175",
+      "u3_r202703_0160",
+      "u3_r202703_0163",
+      "u3_r202704_0159",
+      "u3_r202704_0191",
+      "u3_r202705_0169",
+      "u3_r202705_0170",
+      "u3_r202706_0162",
+      "u3_r202706_0183",
+      "u3_r202706_0190",
+      "u3_r202706_0194",
+      "u3_r202707_0185",
+      "u3_r202707_0187",
+      "u3_r202707_0195",
+      "u3_r202708_0164",
+      "u3_r202708_0176",
+      "u3_r202708_0184",
+      "u3_r202709_0166",
+      "u3_r202709_0197",
+      "u3_r202711_0161",
+      "u3_r202711_0173",
+      "u3_r202711_0177",
+      "u3_r202711_0196",
+      "u3_r202712_0167",
+      "u3_r202712_0172",
+      "u3_r202712_0186",
+      "u3_r202712_0188",
+      "u3_r202801_0192",
+      "u3_r202801_0199",
+      "u4_p202603_0001",
+      "u4_p202603_0002",
+      "u4_p202603_0003",
+      "u4_p202603_0004",
+      "u4_p202603_0005",
+      "u4_p202603_0006",
+      "u4_p202604_0007",
+      "u4_p202604_0008",
+      "u4_p202604_0009",
+      "u4_p202605_0010",
+      "u4_p202605_0011",
+      "u4_p202605_0012",
+      "u4_p202605_0013",
+      "u4_p202606_0014",
+      "u4_p202606_0015",
+      "u4_p202606_0016",
+      "u4_p202606_0017",
+      "u4_p202606_0018",
+      "u4_p202607_0019",
+      "u4_p202607_0020",
+      "u4_p202607_0021",
+      "u4_p202607_0022",
+      "u4_p202607_0023",
+      "u4_p202607_0024",
+      "u4_p202607_0025",
+      "u4_p202608_0026",
+      "u4_p202608_0027",
+      "u4_p202608_0028",
+      "u4_p202608_0029",
+      "u4_p202608_0030",
+      "u4_p202608_0031",
+      "u4_p202608_0032",
+      "u4_p202609_0033",
+      "u4_p202609_0034",
+      "u4_p202609_0035",
+      "u4_p202609_0036",
+      "u4_p202609_0037",
+      "u4_p202609_0038",
+      "u4_p202610_0039",
+      "u4_p202610_0040",
+      "u4_p202610_0041",
+      "u4_p202611_0042",
+      "u4_p202611_0043",
+      "u4_p202611_0044",
+      "u4_p202611_0045",
+      "u4_p202611_0046",
+      "u4_p202611_0047",
+      "u4_p202611_0048",
+      "u4_p202611_0049",
+      "u4_p202612_0050",
+      "u4_p202612_0051",
+      "u4_p202612_0052",
+      "u4_p202612_0053",
+      "u4_p202612_0054",
+      "u4_p202612_0055",
+      "u4_p202612_0056",
+      "u4_p202701_0057",
+      "u4_p202701_0058",
+      "u4_p202701_0059",
+      "u4_p202701_0060",
+      "u4_p202701_0061",
+      "u4_p202701_0062",
+      "u4_p202701_0063",
+      "u4_p202702_0064",
+      "u4_p202702_0065",
+      "u4_p202702_0066",
+      "u4_p202702_0067",
+      "u4_p202702_0068",
+      "u4_p202702_0069",
+      "u4_p202703_0070",
+      "u4_p202703_0071",
+      "u4_p202703_0072",
+      "u4_p202703_0073",
+      "u4_p202703_0074",
+      "u4_p202703_0075",
+      "u4_p202704_0076",
+      "u4_p202704_0077",
+      "u4_p202704_0078",
+      "u4_p202704_0079",
+      "u4_p202704_0080",
+      "u4_p202704_0081",
+      "u4_p202704_0082",
+      "u4_p202704_0083",
+      "u4_p202704_0084",
+      "u4_p202704_0085",
+      "u4_p202705_0086",
+      "u4_p202705_0087",
+      "u4_p202705_0088",
+      "u4_p202705_0089",
+      "u4_p202705_0090",
+      "u4_p202705_0091",
+      "u4_p202705_0092",
+      "u4_p202706_0093",
+      "u4_p202706_0094",
+      "u4_p202706_0095",
+      "u4_p202706_0096",
+      "u4_p202706_0097",
+      "u4_p202706_0098",
+      "u4_p202706_0099",
+      "u4_p202706_0100",
+      "u4_p202707_0101",
+      "u4_p202707_0102",
+      "u4_p202707_0103",
+      "u4_p202707_0104",
+      "u4_p202707_0105",
+      "u4_p202707_0106",
+      "u4_p202707_0107",
+      "u4_p202708_0108",
+      "u4_p202708_0109",
+      "u4_p202708_0110",
+      "u4_p202708_0111",
+      "u4_p202708_0112",
+      "u4_p202708_0113",
+      "u4_p202709_0114",
+      "u4_p202709_0115",
+      "u4_p202709_0116",
+      "u4_p202709_0117",
+      "u4_p202709_0118",
+      "u4_p202709_0119",
+      "u4_p202709_0120",
+      "u4_p202709_0121",
+      "u4_p202710_0122",
+      "u4_p202710_0123",
+      "u4_p202710_0124",
+      "u4_p202710_0125",
+      "u4_p202710_0126",
+      "u4_p202710_0127",
+      "u4_p202710_0128",
+      "u4_p202710_0129",
+      "u4_p202710_0130",
+      "u4_p202710_0131",
+      "u4_p202710_0132",
+      "u4_p202710_0133",
+      "u4_p202710_0134",
+      "u4_p202710_0135",
+      "u4_p202711_0136",
+      "u4_p202711_0137",
+      "u4_p202711_0138",
+      "u4_p202711_0139",
+      "u4_p202711_0140",
+      "u4_p202711_0141",
+      "u4_p202711_0142",
+      "u4_p202711_0143",
+      "u4_p202712_0144",
+      "u4_p202712_0145",
+      "u4_p202712_0146",
+      "u4_p202712_0147",
+      "u4_p202712_0148",
+      "u4_p202712_0149",
+      "u4_p202712_0150",
+      "u4_p202712_0151",
+      "u4_p202712_0152",
+      "u4_p202801_0153",
+      "u4_p202801_0154",
+      "u4_p202801_0155",
+      "u4_p202801_0156",
+      "u4_p202801_0157",
+      "u4_p202801_0158",
+      "u4_r202607_0173",
+      "u4_r202608_0193",
+      "u4_r202610_0177",
+      "u4_r202610_0188",
+      "u4_r202610_0198",
+      "u4_r202611_0194",
+      "u4_r202612_0195",
+      "u4_r202701_0164",
+      "u4_r202701_0181",
+      "u4_r202703_0162",
+      "u4_r202703_0169",
+      "u4_r202703_0184",
+      "u4_r202703_0197",
+      "u4_r202704_0175",
+      "u4_r202705_0191",
+      "u4_r202705_0199",
+      "u4_r202706_0159",
+      "u4_r202706_0160",
+      "u4_r202706_0186",
+      "u4_r202707_0190",
+      "u4_r202708_0167",
+      "u4_r202708_0176",
+      "u4_r202708_0179",
+      "u4_r202708_0200",
+      "u4_r202710_0161",
+      "u4_r202711_0163",
+      "u4_r202711_0166",
+      "u4_r202711_0172",
+      "u4_r202711_0178",
+      "u4_r202711_0183",
+      "u4_r202711_0196",
+      "u4_r202712_0171",
+      "u4_r202712_0180",
+      "u4_r202712_0182",
+      "u4_r202712_0187",
+      "u4_r202712_0192",
+      "u4_r202801_0165",
+      "u4_r202801_0168",
+      "u4_r202801_0170",
+      "u4_r202801_0174",
+      "u4_r202801_0185",
+      "u4_r202801_0189",
+      "u5_p202603_0001",
+      "u5_p202603_0002",
+      "u5_p202603_0003",
+      "u5_p202604_0004",
+      "u5_p202604_0005",
+      "u5_p202604_0006",
+      "u5_p202604_0007",
+      "u5_p202604_0008",
+      "u5_p202604_0009",
+      "u5_p202605_0010",
+      "u5_p202605_0011",
+      "u5_p202606_0012",
+      "u5_p202606_0013",
+      "u5_p202606_0014",
+      "u5_p202606_0015",
+      "u5_p202606_0016",
+      "u5_p202606_0017",
+      "u5_p202606_0018",
+      "u5_p202606_0019",
+      "u5_p202606_0020",
+      "u5_p202606_0021",
+      "u5_p202606_0022",
+      "u5_p202607_0023",
+      "u5_p202607_0024",
+      "u5_p202607_0025",
+      "u5_p202607_0026",
+      "u5_p202607_0027",
+      "u5_p202607_0028",
+      "u5_p202608_0029",
+      "u5_p202608_0030",
+      "u5_p202608_0031",
+      "u5_p202608_0032",
+      "u5_p202608_0033",
+      "u5_p202608_0034",
+      "u5_p202608_0035",
+      "u5_p202608_0036",
+      "u5_p202608_0037",
+      "u5_p202608_0038",
+      "u5_p202608_0039",
+      "u5_p202609_0040",
+      "u5_p202609_0041",
+      "u5_p202609_0042",
+      "u5_p202609_0043",
+      "u5_p202609_0044",
+      "u5_p202609_0045",
+      "u5_p202610_0046",
+      "u5_p202610_0047",
+      "u5_p202610_0048",
+      "u5_p202610_0049",
+      "u5_p202610_0050",
+      "u5_p202610_0051",
+      "u5_p202610_0052",
+      "u5_p202610_0053",
+      "u5_p202610_0054",
+      "u5_p202611_0055",
+      "u5_p202611_0056",
+      "u5_p202611_0057",
+      "u5_p202611_0058",
+      "u5_p202612_0059",
+      "u5_p202612_0060",
+      "u5_p202612_0061",
+      "u5_p202612_0062",
+      "u5_p202612_0063",
+      "u5_p202612_0064",
+      "u5_p202612_0065",
+      "u5_p202612_0066",
+      "u5_p202612_0067",
+      "u5_p202701_0068",
+      "u5_p202701_0069",
+      "u5_p202701_0070",
+      "u5_p202701_0071",
+      "u5_p202701_0072",
+      "u5_p202701_0073",
+      "u5_p202701_0074",
+      "u5_p202701_0075",
+      "u5_p202701_0076",
+      "u5_p202701_0077",
+      "u5_p202702_0078",
+      "u5_p202702_0079",
+      "u5_p202702_0080",
+      "u5_p202702_0081",
+      "u5_p202702_0082",
+      "u5_p202702_0083",
+      "u5_p202703_0084",
+      "u5_p202703_0085",
+      "u5_p202703_0086",
+      "u5_p202703_0087",
+      "u5_p202704_0088",
+      "u5_p202704_0089",
+      "u5_p202704_0090",
+      "u5_p202704_0091",
+      "u5_p202704_0092",
+      "u5_p202704_0093",
+      "u5_p202705_0094",
+      "u5_p202705_0095",
+      "u5_p202705_0096",
+      "u5_p202705_0097",
+      "u5_p202705_0098",
+      "u5_p202705_0099",
+      "u5_p202706_0100",
+      "u5_p202706_0101",
+      "u5_p202706_0102",
+      "u5_p202706_0103",
+      "u5_p202706_0104",
+      "u5_p202706_0105",
+      "u5_p202706_0106",
+      "u5_p202706_0107",
+      "u5_p202707_0108",
+      "u5_p202707_0109",
+      "u5_p202707_0110",
+      "u5_p202707_0111",
+      "u5_p202707_0112",
+      "u5_p202708_0113",
+      "u5_p202708_0114",
+      "u5_p202708_0115",
+      "u5_p202708_0116",
+      "u5_p202708_0117",
+      "u5_p202708_0118",
+      "u5_p202708_0119",
+      "u5_p202708_0120",
+      "u5_p202708_0121",
+      "u5_p202709_0122",
+      "u5_p202709_0123",
+      "u5_p202709_0124",
+      "u5_p202709_0125",
+      "u5_p202709_0126",
+      "u5_p202709_0127",
+      "u5_p202709_0128",
+      "u5_p202709_0129",
+      "u5_p202710_0130",
+      "u5_p202710_0131",
+      "u5_p202710_0132",
+      "u5_p202710_0133",
+      "u5_p202710_0134",
+      "u5_p202710_0135",
+      "u5_p202710_0136",
+      "u5_p202710_0137",
+      "u5_p202710_0138",
+      "u5_p202711_0139",
+      "u5_p202711_0140",
+      "u5_p202711_0141",
+      "u5_p202711_0142",
+      "u5_p202711_0143",
+      "u5_p202712_0144",
+      "u5_p202712_0145",
+      "u5_p202712_0146",
+      "u5_p202712_0147",
+      "u5_p202712_0148",
+      "u5_p202712_0149",
+      "u5_p202712_0150",
+      "u5_p202712_0151",
+      "u5_p202801_0152",
+      "u5_p202801_0153",
+      "u5_p202801_0154",
+      "u5_p202801_0155",
+      "u5_p202801_0156",
+      "u5_p202801_0157",
+      "u5_p202801_0158",
+      "u5_r202608_0192",
+      "u5_r202609_0160",
+      "u5_r202609_0164",
+      "u5_r202610_0167",
+      "u5_r202611_0173",
+      "u5_r202611_0189",
+      "u5_r202611_0191",
+      "u5_r202701_0166",
+      "u5_r202701_0186",
+      "u5_r202701_0195",
+      "u5_r202701_0199",
+      "u5_r202701_0200",
+      "u5_r202702_0196",
+      "u5_r202703_0163",
+      "u5_r202703_0170",
+      "u5_r202703_0176",
+      "u5_r202704_0172",
+      "u5_r202706_0169",
+      "u5_r202706_0182",
+      "u5_r202706_0188",
+      "u5_r202706_0194",
+      "u5_r202708_0165",
+      "u5_r202708_0197",
+      "u5_r202709_0177",
+      "u5_r202709_0184",
+      "u5_r202710_0162",
+      "u5_r202710_0174",
+      "u5_r202710_0183",
+      "u5_r202710_0190",
+      "u5_r202710_0193",
+      "u5_r202710_0198",
+      "u5_r202711_0175",
+      "u5_r202712_0161",
+      "u5_r202712_0168",
+      "u5_r202712_0178",
+      "u5_r202712_0179",
+      "u5_r202712_0181",
+      "u5_r202801_0159",
+      "u5_r202801_0171",
+      "u5_r202801_0180",
+      "u5_r202801_0185",
+      "u5_r202801_0187"
+    ],
+    "question_error_count": null
+  },
+  {
+    "id": "INTEGRATION-002",
+    "scope": "monthly_evaluation_integration",
+    "kind": "no_cutoff_in_runner",
+    "source": "experiments/core/runner.py:73",
+    "observed": "Actual runner ingests all sessions before answering. Manual supply of March 31 monthly probes observes 699 later u1 sessions through February 28, 2028.",
+    "reproduced_ids": [
+      "u1_p202603_0001",
+      "u1_p202603_0002"
+    ],
+    "question_error_count": null,
+    "limit": "Normal loader currently ignores monthly questions; this is an integration blocker and a demonstrated hypothetical leakage path, not evidence a completed monthly result run occurred."
+  }
+]

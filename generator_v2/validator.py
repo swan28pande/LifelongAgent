@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import datetime as dt
 from dataclasses import dataclass, field
 
 from . import config, rules
@@ -18,6 +19,7 @@ class Check:
     statements: dict[str, str]                        # id → text
     causes: dict[str, dict]                           # id → {topic, event, instruction, cause_day}
     known: list[str] = field(default_factory=list)
+    date: str = ""
 
 
 def options_for(spec: PersonaSpec, world: WorldState, domain: str) -> list[str]:
@@ -38,9 +40,10 @@ def statement_text(spec: PersonaSpec, s) -> str:
 
 
 def known_events(world: WorldState, day: DayState) -> list[str]:
-    """Events, news about other people and distractors told in earlier sessions."""
-    return [s.text for s in world.statements
-            if s.kind in ("event_update", "other_person", "distractor")
+    """Previously disclosed updates, including dated fact-change backstory."""
+    return [f"{s.text} (happened on {(world.start_date + dt.timedelta(days=s.effective_day - 1)).isoformat()})"
+            for s in world.statements
+            if s.kind in ("fact_change", "event_update", "other_person", "distractor")
             and s.stated_day is not None and s.stated_day < day.day]
 
 
@@ -60,12 +63,12 @@ def build_check(spec: PersonaSpec, world: WorldState, day: DayState) -> Check:
                            "on_regime_day": reg.first_mention_day == day.day}
     known = [f"{e}: {', '.join(v)}" for e, v in day.known_facts.items() if v]
     known += [f"earlier: {t}" for t in known_events(world, day)]
-    return Check(prefs, statements, causes, known)
+    return Check(prefs, statements, causes, known, day.date.isoformat())
 
 
 def validator_prompt(spec: PersonaSpec, check: Check, turns: list[dict]) -> str:
     nouns = {p.domain: p.noun for p in spec.preferences}
-    lines = [f"USER: {spec.name}", "", "PREFERENCE TOPICS:"]
+    lines = [f"DATE: {check.date}", f"USER: {spec.name}", "", "PREFERENCE TOPICS:"]
     for dom, (_, options) in check.preferences.items():
         lines.append(f"- {dom} ({nouns[dom]}). OPTIONS: " + "; ".join(options))
     lines += ["", "STATEMENTS:"] + [f"- {sid}: {text}" for sid, text in check.statements.items()]
