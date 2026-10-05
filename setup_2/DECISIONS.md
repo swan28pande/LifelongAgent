@@ -46,12 +46,15 @@ apply unchanged. `ours_v4d` remains the default, with summaries and distillation
 4. NaiveRAG appends raw five-turn chunks to a saved FAISS index. Full context
    includes every observed session and fails before evaluation if its configured
    approximate context budget is exceeded, rather than discarding old sessions.
-5. TiMem retains the existing benchmark adapter's hierarchy/dense top-k retrieval
-   profile. It uses native generation/prompts with the common selected model and
-   usage callback, durable local node/vector storage, cached unchanged summaries,
-   and partial weeks split at calendar month edges. Its native complexity-aware
-   retrieval workflow is not represented by this adapter; that distinction must
-   remain visible in metadata and comparisons.
+5. TiMem follows the paper's memory and recall (profile `timem_complexity_aware`):
+   2-turn L1 fragments written with the session's three previous fragments, L2-L5
+   summaries written with the three most recent earlier summaries of their level, and
+   the native complexity-aware recall (native planner; 0.9 dense + 0.1 BM25 L1 ranking;
+   bottom-up parents per the strategy's layers and limits; native memory refiner). It
+   uses the common selected model at temperature 0.0, durable local node/vector storage,
+   cached unchanged summaries, and partial weeks split at calendar month edges. Storage
+   is local (SQLite + in-process Qdrant) rather than the native PostgreSQL/Qdrant services,
+   and answers use the shared answer prompt like the other baselines.
 
 Original agents, datasets, baseline implementations outside `setup_2/`, and shared
 experiment/judge code are unchanged. This extension prepares execution and is

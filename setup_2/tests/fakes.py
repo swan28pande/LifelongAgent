@@ -32,6 +32,15 @@ class Chat(BaseChatModel):
         content = str(messages[-1].content)
         if content.startswith('MOCK GENERATION\n'):
             response = content.split('\n', 1)[1]
+        elif 'query intent analysis expert' in content:
+            # Native TiMem recall planner.
+            response = json.dumps({'complexity': self.control.get('complexity', 1),
+                                   'keywords': self.control.get('keywords', ['live'])})
+        elif 'Return IDs to keep' in content:
+            # Native TiMem memory refiner: keep requested candidates, default all.
+            total = int(re.search(r'Candidate memories \((\d+) total\)', content).group(1))
+            self.control.setdefault('refined', []).append(total)
+            response = json.dumps({'relevant_ids': self.control.get('keep_ids', list(range(1, total + 1)))})
         elif content.startswith('MEMORY CONTEXT:'):
             context, question = content.rsplit('\n\nQUESTION: ', 1)
             city = 'Boston' if '(Asked on 2026-03-' in question else 'Austin'
@@ -98,8 +107,8 @@ class Generator:
         self.control.setdefault('generation', []).append((layer, period))
         return self.llm.invoke([HumanMessage(content='MOCK GENERATION\n' + '\n'.join(contents))]).content
 
-    async def generate_l1_content(self, dialogue):
-        return await self._generate('L1', [dialogue], {})
+    async def generate_l1_content(self, dialogue, previous_content=None):
+        return await self._generate('L1', [dialogue], {'previous_content': previous_content})
 
     async def generate_l2_content(self, contents, **period):
         return await self._generate('L2', contents, period)

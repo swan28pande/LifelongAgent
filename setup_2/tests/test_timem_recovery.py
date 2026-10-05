@@ -122,7 +122,7 @@ def test_interrupted_native_stream_uses_fresh_clients_and_never_saves_partial_te
     method = create('timem', tmp_path / 'store', Instance('u', [], []), 'selected-model', usage)
     try:
         method.ingest(Session('s', '2026-03-31', [Turn('Alice', 'I live in Boston.')]))
-        node = method.nodes['L1', 's']
+        node = method.nodes['L1', 's#0000']
         assert 'Boston' in node['content'] and 'INCOMPLETE' not in node['content']
         assert len(models) == 3 and len({id(m) for m in models}) == 3
         assert control['closed_clients'] == 2

@@ -8,7 +8,7 @@ Repeated questions retain their original probe date, wording, and references.
 
 | Method flag | Implementation | Persistent memory | Retrieval profile |
 | --- | --- | --- | --- |
-| `timem` | [TiMem](TiMem/README.md) | Raw sessions, five-level summaries and cached vectors in SQLite; isolated local Qdrant search | Existing hierarchical dense top-k benchmark adapter |
+| `timem` | [TiMem](TiMem/README.md) | Raw sessions, five-level summaries and cached vectors in SQLite; isolated local Qdrant search | Native complexity-aware recall: planner, 0.9 dense + 0.1 BM25 L1, bottom-up parents, memory refiner |
 | `naive_rag` | [NaiveRAG](NaiveRAG/README.md) | Raw sessions in SQLite and an incremental FAISS index | Five-turn chunks; dense top-10 retrieval |
 | `full_context` | [DirectPrompting](DirectPrompting/README.md) | Raw sessions in SQLite | All observed history directly in the answer prompt |
 
@@ -19,11 +19,11 @@ experiment configuration and interfaces. TiMem's native generation uses that
 same selected backbone and usage callback. Original baseline sources outside
 `setup_2/`, agents and datasets remain unchanged.
 
-TiMem here is the existing project's **hierarchy plus dense retrieval adapter**,
-adapted for safe monthly execution. It uses native TiMem generation and prompts;
-it does not invoke the upstream complexity-aware retrieval workflow. Manifests
-and summaries explicitly identify this profile as `hierarchy_dense_top_k`.
-Interpret comparisons using that method definition.
+TiMem here follows the paper's memory and recall, adapted for safe monthly execution:
+native 2-turn L1 fragments and level summaries with same-level history, and the native
+complexity-aware recall (planner, hybrid L1 ranking, bottom-up parents, memory refiner).
+Each question costs three model calls (planner, refiner, answer). Manifests and
+summaries identify this profile as `timem_complexity_aware`.
 
 ## Install
 

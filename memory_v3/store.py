@@ -7,6 +7,7 @@ Single `memories` table — no hardcoded types. The LLM assigns entities freely.
 
 import os
 import sqlite3
+import threading
 import json
 import numpy as np
 from datetime import datetime
@@ -20,16 +21,22 @@ from langchain_core.documents import Document
 EMBED_MODEL = "nomic-ai/nomic-embed-text-v1"
 
 
+# nomic-embed's remote code mutates shared state per call; concurrent threads corrupt each other's tensors.
+_EMBED_LOCK = threading.Lock()
+
+
 class PrefixedEmbeddings(HuggingFaceEmbeddings):
     """nomic-embed-text-v1 requires task-specific prefixes for best retrieval."""
 
     def embed_documents(self, texts: List[str]) -> List[List[float]]:
-        return super().embed_documents(
-            [f"search_document: {t}" for t in texts]
-        )
+        with _EMBED_LOCK:
+            return super().embed_documents(
+                [f"search_document: {t}" for t in texts]
+            )
 
     def embed_query(self, text: str) -> List[float]:
-        return super().embed_query(f"search_query: {text}")
+        with _EMBED_LOCK:
+            return super().embed_query(f"search_query: {text}")
 
 
 class MemoryStore:

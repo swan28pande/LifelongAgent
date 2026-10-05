@@ -6,11 +6,26 @@ with memory_v4. See the [baseline run guide](../README.md) for commands.
 
 `source/` was copied from the local `baselines/TiMem/` checkout, preserving its
 native generator, prompts, workflows, documentation and [license](source/LICENSE).
-The adapter builds L1 fragment, L2 session, L3 daily, L4 weekly and L5 monthly
-memories with the native generator. It retains the project's existing dense
-top-k retrieval across those levels. The profile `hierarchy_dense_top_k` is
-recorded in manifests and summaries; **the upstream complexity-aware retrieval
-workflow is not part of this adapter**.
+The adapter follows the paper's memory and recall; the profile `timem_complexity_aware`
+is recorded in manifests and summaries.
+
+- **Memory.** Every two turns form an L1 fragment (an odd final turn is its own fragment),
+  written with the session's three previous fragments as context. L2 session, L3 daily,
+  L4 weekly and L5 monthly summaries are written from their children plus the three most
+  recent earlier summaries of the same level, as in the native generation workflow.
+- **Recall.** The native planner labels each question simple/hybrid/complex and extracts
+  keywords. L1 fragments are ranked by 0.9 x normalized dense similarity (top 40) +
+  0.1 x normalized BM25 over all fragments, the top 20 are kept in time order, and parents
+  are collected bottom-up for the strategy's layers and limits
+  (`source/config/datasets/default/retrieval_config.yaml`). The native memory refiner then
+  gates the candidates with its strategy prompt before the shared answer prompt.
+- **Cost.** Each question makes three model calls: planner, refiner and answer.
+
+Storage is local (SQLite plus in-process Qdrant) instead of the native PostgreSQL/Qdrant
+services. The native config manager resolves paths from the working directory, so the
+adapter pins `TIMEM_RETRIEVAL_CONFIG_PATH` to the source's recall configuration; without it
+TiMem silently falls back to built-in strategies with different layers and limits.
+`validation.json` records a check of the earlier dense top-k implementation.
 
 ## Monthly state and recovery
 
@@ -48,10 +63,14 @@ Summary clients are closed after each attempt on the user's persistent event loo
 the answer client is closed at the end of the invocation. Native prompt logs are
 saved in `store/logs/`.
 
-Four small compatibility changes are confined to the copied source:
-lazy LLM adapter imports; optional generator LLM/log-directory injection;
-asynchronous Gemini streaming; and configuration cache invalidation that does
-not import unused providers. Native generation algorithms and prompts are kept.
+Compatibility changes are confined to the copied source: lazy LLM adapter imports;
+optional generator LLM/log-directory injection; asynchronous Gemini streaming;
+configuration cache invalidation that does not import unused providers; streamed chunks
+joined verbatim (stripping each chunk had glued words together) with truncated
+(`MAX_TOKENS`) or empty Gemini output raised instead of saved; and the recall config's
+memory refiner pointed at the Gemini provider and the `memory_refiner_*` prompts that
+exist (the shipped `relevance_analysis_*` names do not, which silently fell back to a
+generic prompt). Native generation algorithms and prompts are kept.
 
 Install this folder's `requirements.txt`, which covers the benchmark adapter's
 minimal dependencies. The larger `source/requirements.txt` remains available

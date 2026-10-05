@@ -30,6 +30,23 @@ def _vertex_project() -> Optional[str]:
         return None
 
 
+def _text(content, strip: bool = True) -> str:
+    if isinstance(content, list):
+        content = "".join(c.get("text", "") if isinstance(c, dict) else str(c) for c in content)
+    content = str(content or "")
+    return content.strip() if strip else content
+
+
+def _finish_reason(message, default: str = "STOP") -> str:
+    return str((getattr(message, "response_metadata", None) or {}).get("finish_reason") or default)
+
+
+def _check_usable(content: str, finish: str) -> None:
+    # Gemini counts thinking against the output limit; a truncated or empty reply must not become memory.
+    if "MAX_TOKENS" in finish.upper() or not content.strip():
+        raise RuntimeError(f"Gemini returned unusable output (finish_reason={finish}, chars={len(content)})")
+
+
 class GeminiAdapter(BaseLLM):
     """Gemini adapter using Vertex AI via langchain_google_genai."""
 
@@ -82,23 +99,19 @@ class GeminiAdapter(BaseLLM):
         llm = self._get_llm()
         lc_msgs = self._to_langchain_messages(messages)
         resp = await asyncio.to_thread(llm.invoke, lc_msgs)
-        content = resp.content
-        if isinstance(content, list):
-            content = " ".join(
-                c.get("text", "") if isinstance(c, dict) else str(c) for c in content
-            ).strip()
+        content = _text(resp.content)
         elapsed = time.time() - start
-        usage = {}
-        if hasattr(resp, "usage_metadata") and resp.usage_metadata:
-            um = resp.usage_metadata
-            usage = {
-                "prompt_tokens": getattr(um, "input_tokens", 0) or 0,
-                "completion_tokens": getattr(um, "output_tokens", 0) or 0,
-                "total_tokens": getattr(um, "total_tokens", 0) or 0,
-            }
+        finish = _finish_reason(resp)
+        _check_usable(content, finish)
+        um = resp.usage_metadata or {}
+        usage = {
+            "prompt_tokens": um.get("input_tokens", 0) or 0,
+            "completion_tokens": um.get("output_tokens", 0) or 0,
+            "total_tokens": um.get("total_tokens", 0) or 0,
+        }
         return ChatResponse(
             content=content,
-            finish_reason="stop",
+            finish_reason=finish.lower(),
             model=self.config.model_name,
             usage=usage,
             response_time=elapsed,
@@ -108,14 +121,15 @@ class GeminiAdapter(BaseLLM):
         llm = self._get_llm()
         lc_msgs = self._to_langchain_messages(messages)
 
+        # Chunks are concatenated verbatim: stripping each one glued words across chunk boundaries.
+        parts, finish = [], "STOP"
         async for chunk in llm.astream(lc_msgs):
-            text = chunk.content
-            if isinstance(text, list):
-                text = " ".join(
-                    c.get("text", "") if isinstance(c, dict) else str(c) for c in text
-                ).strip()
+            finish = _finish_reason(chunk, finish)
+            text = _text(chunk.content, strip=False)
             if text:
+                parts.append(text)
                 yield text
+        _check_usable("".join(parts), finish)
 
     @handle_llm_errors
     async def complete(self, prompt: str, **kwargs) -> str:

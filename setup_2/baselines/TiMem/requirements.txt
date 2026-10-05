@@ -12,3 +12,8 @@ sentence-transformers>=5.0
 transformers>=4.50,<5
 torch>=2.0
 einops>=0.8
+# Import-time dependencies of the native recall planner and memory refiner (timem.workflows).
+aiosqlite>=0.19
+jieba>=0.42
+neo4j>=5.0
+redis>=5.0
