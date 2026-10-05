@@ -1714,6 +1714,19 @@ class MemoryRetrievalTester:
                 }
                 all_tasks.append(task)
         
+        progress_path = os.getenv("TIMEM_RESULTS_JSONL", "logs/timem_locomo_answers.jsonl")
+        os.makedirs(os.path.dirname(progress_path) or ".", exist_ok=True)
+        done = set()
+        if os.path.exists(progress_path):
+            with open(progress_path, encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        r = json.loads(line)
+                        done.add((r["test_info"]["conversation_id"], r["test_info"]["question_index"]))
+        # LoCoMo repeats some question texts, so resume by position within the conversation.
+        all_tasks = [t for t in all_tasks if (t["conv_id"], t["question_index"]) not in done]
+        print(f"⏩ Resuming: {len(done)} answers already saved in {progress_path}, {len(all_tasks)} remaining")
+
         print(f"\n🚀 Start concurrent test execution")
         print(f"📊 Concurrency configuration:")
         print(f"  Max concurrent threads: {self.concurrent_config.max_concurrent_requests} (using 20 API keys)")
@@ -1788,6 +1801,8 @@ class MemoryRetrievalTester:
                             results.append(result)
                             if result['execution']['success']:
                                 batch_successes += 1
+                                with open(progress_path, "a", encoding="utf-8") as f:
+                                    f.write(json.dumps(result, ensure_ascii=False, default=str) + "\n")
                     
                     self.concurrent_stats['successful_batches'] += 1
                     batch_end_time = time.perf_counter()
@@ -2594,7 +2609,7 @@ async def main():
         TEST_CATEGORIES = [1,2,3,4]  # Test categories
         TEST_LIMIT = None # Maximum questions per group, reduced to 2 to quickly verify connection pool fix
         #SELECTED_CONVERSATIONS = ["conv-26"]  # Only test specified conversation, reduce connection pool pressure
-        SELECTED_CONVERSATIONS = None  # Select specific conversation, set to None to test all conversations
+        SELECTED_CONVERSATIONS = os.getenv("TIMEM_CONV_IDS").split(",") if os.getenv("TIMEM_CONV_IDS") else None
         DEBUG_TIMING = False  # Enable timing breakdown debugging
         ENABLE_SMART_RETRY = True  # Enable smart retry mechanism 
         
@@ -2617,9 +2632,9 @@ async def main():
         concurrent_config = ConcurrentConfig(
             max_concurrent_requests=20,  # Set 20 concurrent threads
             batch_delay=0.5,             # 0.5 second delay between batches
-            max_retries=10,              # Maximum 10 retries
+            max_retries=int(os.getenv("TIMEM_MAX_RETRIES", "2")),
             retry_delays=[1.0, 2.0, 3.0, 4.0, 5.0],  # Tiered retry intervals: 1-5 seconds
-            timeout=120.0                # Single request timeout 120 seconds
+            timeout=float(os.getenv("TIMEM_QUESTION_TIMEOUT", "300"))
         )
         
         # Display concurrent config information

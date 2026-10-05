@@ -54,10 +54,12 @@ class GeminiAdapter(BaseLLM):
     def _get_llm(self):
         if self._llm is None:
             from langchain_google_genai import ChatGoogleGenerativeAI
+            # Gemini counts thinking tokens against the output limit, so a small cap truncates answers.
             self._llm = ChatGoogleGenerativeAI(
                 model=self.config.model_name,
                 temperature=self.config.temperature,
-                max_output_tokens=self.config.max_tokens,
+                max_output_tokens=int(os.getenv("TIMEM_MAX_OUTPUT_TOKENS", "8192")),
+                max_retries=6,
                 vertexai=True,
                 project=_vertex_project(),
                 location=os.getenv("GOOGLE_CLOUD_LOCATION", "global"),
@@ -80,6 +82,8 @@ class GeminiAdapter(BaseLLM):
     async def chat(self, messages: List[Message], **kwargs) -> ChatResponse:
         start = time.time()
         llm = self._get_llm()
+        if kwargs.get("temperature") is not None:
+            llm = llm.bind(temperature=kwargs["temperature"])
         lc_msgs = self._to_langchain_messages(messages)
         resp = await asyncio.to_thread(llm.invoke, lc_msgs)
         content = resp.content
@@ -88,38 +92,27 @@ class GeminiAdapter(BaseLLM):
                 c.get("text", "") if isinstance(c, dict) else str(c) for c in content
             ).strip()
         elapsed = time.time() - start
-        usage = {}
-        if hasattr(resp, "usage_metadata") and resp.usage_metadata:
-            um = resp.usage_metadata
-            usage = {
-                "prompt_tokens": getattr(um, "input_tokens", 0) or 0,
-                "completion_tokens": getattr(um, "output_tokens", 0) or 0,
-                "total_tokens": getattr(um, "total_tokens", 0) or 0,
-            }
+        finish = str((resp.response_metadata or {}).get("finish_reason", "STOP"))
+        if "MAX_TOKENS" in finish.upper() or not (content or "").strip():
+            raise RuntimeError(f"Gemini returned unusable output (finish_reason={finish}, chars={len(content or '')})")
+        um = resp.usage_metadata or {}
+        usage = {
+            "prompt_tokens": um.get("input_tokens", 0) or 0,
+            "completion_tokens": um.get("output_tokens", 0) or 0,
+            "total_tokens": um.get("total_tokens", 0) or 0,
+        }
         return ChatResponse(
             content=content,
-            finish_reason="stop",
+            finish_reason=finish.lower(),
             model=self.config.model_name,
             usage=usage,
             response_time=elapsed,
         )
 
     async def chat_stream(self, messages: List[Message], **kwargs) -> AsyncIterator[str]:
-        llm = self._get_llm()
-        lc_msgs = self._to_langchain_messages(messages)
-
-        def _stream():
-            return list(llm.stream(lc_msgs))
-
-        chunks = await asyncio.to_thread(_stream)
-        for chunk in chunks:
-            text = chunk.content
-            if isinstance(text, list):
-                text = " ".join(
-                    c.get("text", "") if isinstance(c, dict) else str(c) for c in text
-                ).strip()
-            if text:
-                yield text
+        # Per-chunk stripping merged words at chunk boundaries and skipped truncation checks.
+        response = await self.chat(messages, **kwargs)
+        yield response.content
 
     @handle_llm_errors
     async def complete(self, prompt: str, **kwargs) -> str:

@@ -416,7 +416,7 @@ async def process_realistic_simulation(
                 print(f"      Session start time: {session_time.strftime('%Y-%m-%d %H:%M:%S')}")
                 
                 # Process all dialogue turns
-                total_possible_turns = len(dialogues) // 2
+                total_possible_turns = (len(dialogues) + 1) // 2  # an odd final message forms its own fragment
                 max_turns = total_possible_turns  # Process all dialogue turns.
                 session_last_turn_timestamp = session_time  # Record the timestamp of the last turn in the current session.
                 is_last_session = (session_idx == len(day_sessions) and current_date == last_date)  # Check if this is the last session.
@@ -427,20 +427,21 @@ async def process_realistic_simulation(
                     dialogue_start_idx = (turn_idx - 1) * 2
                     dialogue_end_idx = dialogue_start_idx + 1
                     
-                    if dialogue_end_idx >= len(dialogues):
+                    if dialogue_start_idx >= len(dialogues):
                         break
                     
                     first_dialogue = dialogues[dialogue_start_idx]
-                    second_dialogue = dialogues[dialogue_end_idx]
                     first_text = first_dialogue.get("text", "")
-                    second_text = second_dialogue.get("text", "")
                     first_speaker = first_dialogue.get("speaker", "")
+                    has_second = dialogue_end_idx < len(dialogues)
+                    second_dialogue = dialogues[dialogue_end_idx] if has_second else {}
+                    second_text = second_dialogue.get("text", "")
                     second_speaker = second_dialogue.get("speaker", "")
                     
                     # 🔧 Change: The dialogue interval has been changed from 2 minutes to 5 seconds.
                     turn_timestamp = session_time + timedelta(seconds=(turn_idx - 1) * 5)
                     session_last_turn_timestamp = turn_timestamp  # Update the timestamp of the last turn in the current session.
-                    content = f"{first_speaker}: {first_text}\n{second_speaker}: {second_text}"
+                    content = f"{first_speaker}: {first_text}\n{second_speaker}: {second_text}" if has_second else f"{first_speaker}: {first_text}"
                     
                     # Call service.generate_memory() to generate L1 memories.
                     try:
@@ -892,6 +893,7 @@ async def test_realistic_system_simulation():
     4. Detailed behavior observation logs.
     5. Parallel processing of 10 user-expert groups.
     """
+    import os  # the function imports os again further down, which makes the name local here
     # ✅ Print current configuration information
     print_current_dataset()
     
@@ -904,6 +906,8 @@ async def test_realistic_system_simulation():
     
     # Test 10 conversations (processing all sessions)
     test_conv_ids = conv_ids[:10]
+    if os.getenv("TIMEM_CONV_IDS"):
+        test_conv_ids = [c for c in test_conv_ids if c in os.getenv("TIMEM_CONV_IDS").split(",")]
     print(f"\n[REALISTIC_SIM] Realistic System Simulation Test (Full Version)")
     print(f"[REALISTIC_SIM] Test scope: {len(test_conv_ids)} conversations: {test_conv_ids}")
     print(f"[REALISTIC_SIM] Full test mode:")
@@ -947,39 +951,41 @@ async def test_realistic_system_simulation():
         from timem.core.global_connection_pool import get_global_pool_manager
         pool_manager = await get_global_pool_manager()
         
-        async with pool_manager.get_managed_session() as session:
-            from sqlalchemy import text
+        if not os.getenv("TIMEM_SKIP_CLEAR"):  # set to keep memories from earlier conversations
+            async with pool_manager.get_managed_session() as session:
+                from sqlalchemy import text
             
-            await session.execute(text("DELETE FROM memory_child_relations"))
-            await session.execute(text("DELETE FROM memory_historical_relations"))
-            await session.execute(text("DELETE FROM l1_fragment_memories"))
-            await session.execute(text("DELETE FROM l2_session_memories"))
-            await session.execute(text("DELETE FROM l3_daily_memories"))
-            await session.execute(text("DELETE FROM l4_weekly_memories"))
-            await session.execute(text("DELETE FROM l5_monthly_memories"))
-            await session.execute(text("DELETE FROM dialogue_originals"))
-            await session.execute(text("DELETE FROM core_memories"))
-            await session.execute(text("DELETE FROM memory_sessions"))
-            await session.execute(text("DELETE FROM characters"))
-            await session.execute(text("DELETE FROM users WHERE username != 'postgres_init_complete'"))
+                await session.execute(text("DELETE FROM memory_child_relations"))
+                await session.execute(text("DELETE FROM memory_historical_relations"))
+                await session.execute(text("DELETE FROM l1_fragment_memories"))
+                await session.execute(text("DELETE FROM l2_session_memories"))
+                await session.execute(text("DELETE FROM l3_daily_memories"))
+                await session.execute(text("DELETE FROM l4_weekly_memories"))
+                await session.execute(text("DELETE FROM l5_monthly_memories"))
+                await session.execute(text("DELETE FROM dialogue_originals"))
+                await session.execute(text("DELETE FROM core_memories"))
+                await session.execute(text("DELETE FROM memory_sessions"))
+                await session.execute(text("DELETE FROM characters"))
+                await session.execute(text("DELETE FROM users WHERE username != 'postgres_init_complete'"))
             
-            await session.commit()
-            print("[REALISTIC_SIM] ✅ PostgreSQL database has been completely cleared.")
+                await session.commit()
+                print("[REALISTIC_SIM] ✅ PostgreSQL database has been completely cleared.")
         
-        # 5. Clear Qdrant.
-        print("[REALISTIC_SIM] Clearing Qdrant vector database...")
-        try:
-            from timem.core.service_registry import get_service, ServiceType
-            storage_manager = await get_service(ServiceType.STORAGE_MANAGER)
+            # 5. Clear Qdrant.
+            print("[REALISTIC_SIM] Clearing Qdrant vector database...")
+            try:
+                from timem.core.service_registry import get_service, ServiceType
+                storage_manager = await get_service(ServiceType.STORAGE_MANAGER)
             
-            vector_adapter = getattr(storage_manager, "vector_adapter", None)
-            if vector_adapter:
-                await vector_adapter.connect()
-                await vector_adapter.clear_all_data()
-                await asyncio.sleep(1.0)
-                print("[REALISTIC_SIM] ✅ Qdrant vector store has been cleared.")
-        except Exception as e:
-            print(f"[REALISTIC_SIM] ⚠️ Qdrant clearing failed: {e}")
+                vector_adapter = getattr(storage_manager, "vector_adapter", None)
+                if vector_adapter:
+                    await vector_adapter.connect()
+                    await vector_adapter.clear_all_data()
+                    await asyncio.sleep(1.0)
+                    print("[REALISTIC_SIM] ✅ Qdrant vector store has been cleared.")
+            except Exception as e:
+                print(f"[REALISTIC_SIM] ⚠️ Qdrant clearing failed: {e}")
+                raise
         
         # 6. Register speakers.
         print("[REALISTIC_SIM] Registering speakers...")

@@ -566,7 +566,13 @@ class MemoryStorageManager:
                 self.logger.error(f"Storage failed: {storage_type}, error: {e}")
                 for result in results:
                     result["storage_results"][storage_type] = {"success": False, "error": str(e)}
-        
+
+        # A memory missing from the vector index can never be retrieved, so fail loudly instead of reporting success.
+        vector_failures = [r["storage_results"]["vector"] for r in results
+                           if "vector" in r.get("storage_results", {}) and not r["storage_results"]["vector"].get("success")]
+        if vector_failures:
+            raise RuntimeError(f"{len(vector_failures)} memories failed to reach the vector store: {vector_failures[0].get('error', '')[:300]}")
+
         return results
     
     async def retrieve_memory(self, memory_id: str, preferred_storage: str = None) -> Optional[Any]:

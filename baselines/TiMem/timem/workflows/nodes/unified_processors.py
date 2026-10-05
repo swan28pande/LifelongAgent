@@ -263,10 +263,7 @@ class L1Processor(BaseMemoryProcessor):
             
         except Exception as e:
             logger.error(f"Error generating L1 content: {e}", exc_info=True)
-            # Return simple fallback content
-            speakers = set(turn["speaker"] for turn in dialogue_turns if turn["speaker"] != "unknown")
-            speakers_str = ", ".join(speakers) if speakers else "Unknown speaker"
-            return f"Dialogue fragment of {speakers_str}: {content[:50]}{'...' if len(content) > 50 else ''}"
+            raise
 
     def _parse_dialogue(self, text: str) -> List[Dict[str, str]]:
         """Parse dialogue text, extract speakers and content"""
@@ -322,9 +319,7 @@ class L1Processor(BaseMemoryProcessor):
                 
         except Exception as e:
             logger.error(f"Error generating L1 content: {e}", exc_info=True)
-            speakers = set(turn["speaker"] for turn in dialogue_turns if turn["speaker"] != "unknown")
-            speakers_str = ", ".join(speakers) if speakers else "Unknown speaker"
-            return f"Dialogue fragment of {speakers_str}: {content[:50]}{'...' if len(content) > 50 else ''}"
+            raise
 
     def _get_timestamp(self, state: MemoryState) -> str:
         """Get timestamp from state"""

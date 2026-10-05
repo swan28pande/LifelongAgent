@@ -65,7 +65,7 @@ llm:
   max_retries: 3
   providers:
     gemini:
-      model: gemini-3.5-flash
+      model: ${TIMEM_GEMINI_MODEL:gemini-3.5-flash}
       max_tokens: 2048
       temperature: 0.7
     claude:
@@ -226,7 +226,7 @@ llm:
       requests_per_minute: 20000
     max_retries: 3
     max_tokens: 2048
-    model: gemini-3.5-flash
+    model: ${TIMEM_GEMINI_MODEL:gemini-3.5-flash}
     provider: gemini
     temperature: 0.7
     test_api_key_1: ${OPENAI_API_KEY:}
@@ -435,7 +435,7 @@ storage:
     retry_count: 3
     timeout: 30
     url: http://localhost:16333
-    vector_size: 2048
+    vector_size: 1024  # Qwen3-Embedding-0.6B output size
 workflows:
   layer_update:
     cascade_enabled: true

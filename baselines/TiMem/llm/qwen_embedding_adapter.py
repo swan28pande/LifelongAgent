@@ -3,6 +3,7 @@ Qwen3 Embedding Local Model Adapter
 Supports using local Qwen3 Embedding model for text vectorization
 """
 import os
+import threading
 import time
 import asyncio
 from typing import List, Dict, Any, Optional
@@ -51,10 +52,17 @@ class Qwen3EmbeddingService(BaseEmbeddingService):
             logger.error(f"Qwen3 Embedding model loading failed: {e}")
             raise
     
+    _encode_lock = threading.Lock()
+
     def _get_embeddings(self, texts, batch_size=32):
         """Get text embedding vectors"""
+        # Concurrent executor threads sharing one tokenizer/model can corrupt each other's tensors.
+        with self._encode_lock:
+            return self._get_embeddings_unlocked(texts, batch_size)
+
+    def _get_embeddings_unlocked(self, texts, batch_size=32):
         all_embeddings = []
-        
+
         for i in range(0, len(texts), batch_size):
             batch_texts = texts[i:i+batch_size]
             inputs = self.tokenizer(batch_texts, padding=True, truncation=True, 

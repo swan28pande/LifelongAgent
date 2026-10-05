@@ -55,7 +55,7 @@ class TiMem(MemoryMethod):
 
         from qdrant_client import QdrantClient
         from qdrant_client.models import Distance, VectorParams
-        self._qdrant = QdrantClient(url=QDRANT_URL, check_compatibility=False)
+        self._qdrant = QdrantClient(url=QDRANT_URL, check_compatibility=False, timeout=60)
         self._collection = f"{COLLECTION}_{self.instance_id}"
 
         if not self._qdrant.collection_exists(self._collection):
