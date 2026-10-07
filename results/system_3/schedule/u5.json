@@ -1,0 +1,903 @@
+{
+ "2026-04-01": {
+  "id": "today:bedtime:2026-04-01",
+  "type": "preference_today",
+  "domain": "bedtime",
+  "question": "What will Priya's bedtime be today (Wednesday, 2026-04-01)?",
+  "answer": "11:30 pm",
+  "accept": [
+   "11:30 pm"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   1,
+   4,
+   30
+  ],
+  "viewpoint_day": 32,
+  "routine": "split by workday vs weekend - on workdays (Mon-Fri): 11:30 pm; on weekends: 1:00 am",
+  "regime_kind": "initial",
+  "regime_start": "2026-03-01"
+ },
+ "2026-04-16": {
+  "id": "today:bedtime:2026-04-16",
+  "type": "preference_today",
+  "domain": "bedtime",
+  "question": "What will Priya's bedtime be today (Thursday, 2026-04-16)?",
+  "answer": "11:30 pm",
+  "accept": [
+   "11:30 pm"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   1,
+   4,
+   46
+  ],
+  "viewpoint_day": 47,
+  "routine": "split by workday vs weekend - on workdays (Mon-Fri): 11:30 pm; on weekends: 1:00 am",
+  "regime_kind": "initial",
+  "regime_start": "2026-03-01"
+ },
+ "2026-04-23": {
+  "id": "today:reading:2026-04-23",
+  "type": "preference_today",
+  "domain": "reading",
+  "question": "What will Priya's evening reading be today (Thursday, 2026-04-23)?",
+  "answer": "sci-fi novel",
+  "accept": [
+   "sci-fi novel"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   4,
+   7,
+   52
+  ],
+  "viewpoint_day": 54,
+  "routine": "a 7-day cycle starting Sun 2026-03-01: sci-fi novel for 5 days, then history nonfiction for 2 days, repeating",
+  "regime_kind": "initial",
+  "regime_start": "2026-03-01"
+ },
+ "2026-06-17": {
+  "id": "today:reading:2026-06-17",
+  "type": "preference_today",
+  "domain": "reading",
+  "question": "What will Priya's evening reading be today (Wednesday, 2026-06-17)?",
+  "answer": "sci-fi novel",
+  "accept": [
+   "sci-fi novel"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   4,
+   7,
+   104
+  ],
+  "viewpoint_day": 109,
+  "routine": "a 7-day cycle starting Sun 2026-03-01: sci-fi novel for 5 days, then history nonfiction for 2 days, repeating",
+  "regime_kind": "initial",
+  "regime_start": "2026-03-01"
+ },
+ "2026-06-19": {
+  "id": "u5_q0330",
+  "type": "duration",
+  "capability": "temporal_arithmetic",
+  "domain": "bedtime",
+  "difficulty_user": 5,
+  "question": "How long did Priya's bedtime stay the 11:30 pm / 1:00 am routine?",
+  "answer": "99 days (2026-03-01 to 2026-06-07)",
+  "answer_type": "free_text",
+  "accept": [
+   "99"
+  ],
+  "evidence_days": [
+   1,
+   98,
+   100
+  ],
+  "recency_distance_days": 631,
+  "grading": "llm_judge",
+  "viewpoint_day": 731,
+  "tags": [
+   "initial",
+   "regime:bedtime.r0"
+  ]
+ },
+ "2026-06-22": {
+  "id": "u5_r202610_0160",
+  "type": "fact_at_time",
+  "capability": "temporal_fact",
+  "domain": "city",
+  "question": "What was Priya's city of residence on 2026-05-04?",
+  "answer": "Pittsburgh, Pennsylvania",
+  "answer_type": "value",
+  "accept": [
+   "Pittsburgh, Pennsylvania",
+   "Pittsburgh"
+  ],
+  "evidence_days": [
+   1
+  ],
+  "grading": "exact",
+  "viewpoint_day": 245,
+  "tags": [],
+  "original_id": "u5_q0273",
+  "probe_date": "2026-10-31",
+  "probe_month": "2026-10",
+  "is_retrospective": true,
+  "retrospective_of": "u5_p202605_0012",
+  "original_probe_month": "2026-05"
+ },
+ "2026-06-26": {
+  "id": "u5_r202610_0158",
+  "type": "exception_vs_shift",
+  "capability": "exception_handling",
+  "domain": "commute",
+  "question": "On Monday, 2026-04-13, Priya's commute was walked instead of the usual cycling. Was that a lasting change?",
+  "answer": "No - it was a one-off (the weather was nice); the usual routine continued.",
+  "answer_type": "yes_no",
+  "accept": [
+   "no"
+  ],
+  "evidence_days": [
+   44,
+   46
+  ],
+  "grading": "llm_judge",
+  "viewpoint_day": 245,
+  "tags": [
+   "exception"
+  ],
+  "original_id": "u5_q0225",
+  "probe_date": "2026-10-31",
+  "probe_month": "2026-10",
+  "is_retrospective": true,
+  "retrospective_of": "u5_p202604_0009",
+  "original_probe_month": "2026-04"
+ },
+ "2026-07-07": {
+  "id": "u5_q0346",
+  "type": "duration",
+  "capability": "temporal_arithmetic",
+  "domain": "reading",
+  "difficulty_user": 5,
+  "question": "How long did Priya's evening reading stay the history nonfiction / sci-fi novel routine?",
+  "answer": "124 days (2026-03-01 to 2026-07-02)",
+  "answer_type": "free_text",
+  "accept": [
+   "124"
+  ],
+  "evidence_days": [
+   4,
+   124,
+   125
+  ],
+  "recency_distance_days": 606,
+  "grading": "llm_judge",
+  "viewpoint_day": 731,
+  "tags": [
+   "initial",
+   "regime:reading.r0"
+  ]
+ },
+ "2026-07-15": {
+  "id": "today:music:2026-07-15",
+  "type": "preference_today",
+  "domain": "music",
+  "question": "What will Priya's work music be today (Wednesday, 2026-07-15)?",
+  "answer": "film scores",
+  "accept": [
+   "film scores"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   114,
+   118,
+   134
+  ],
+  "viewpoint_day": 137,
+  "routine": "alternates week by week: lo-fi beats, then film scores, repeating (7-day blocks starting Thu 2026-06-18)",
+  "regime_kind": "shift",
+  "regime_start": "2026-06-18"
+ },
+ "2026-08-12": {
+  "id": "today:reading:2026-08-12",
+  "type": "preference_today",
+  "domain": "reading",
+  "question": "What will Priya's evening reading be today (Wednesday, 2026-08-12)?",
+  "answer": "library thrillers",
+  "accept": [
+   "library thrillers"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   125,
+   163
+  ],
+  "viewpoint_day": 165,
+  "routine": "library thrillers every day",
+  "regime_kind": "shift",
+  "regime_start": "2026-07-03"
+ },
+ "2026-08-27": {
+  "id": "u5_p202606_0020",
+  "type": "fact_at_time",
+  "capability": "temporal_fact",
+  "domain": "diet",
+  "question": "What was Priya's diet on 2026-06-17?",
+  "answer": "pescatarian",
+  "answer_type": "value",
+  "accept": [
+   "pescatarian",
+   "pescatarian"
+  ],
+  "evidence_days": [
+   1
+  ],
+  "grading": "exact",
+  "viewpoint_day": 122,
+  "tags": [],
+  "original_id": "u5_q0284",
+  "probe_date": "2026-06-30",
+  "probe_month": "2026-06",
+  "is_retrospective": false
+ },
+ "2026-09-15": {
+  "id": "u5_p202603_0001",
+  "type": "abstention",
+  "capability": "abstention",
+  "domain": "abstention",
+  "question": "Where did Priya grow up?",
+  "answer": "Not known - this was never mentioned.",
+  "answer_type": "abstain",
+  "accept": [
+   "not known"
+  ],
+  "evidence_days": [],
+  "grading": "llm_judge",
+  "viewpoint_day": 31,
+  "tags": [
+   "hometown"
+  ],
+  "original_id": "u5_q0377",
+  "probe_date": "2026-03-31",
+  "probe_month": "2026-03",
+  "is_retrospective": false
+ },
+ "2026-10-30": {
+  "id": "u5_q0381",
+  "type": "abstention",
+  "capability": "abstention",
+  "domain": "abstention",
+  "difficulty_user": 5,
+  "question": "What is Priya's favorite movie?",
+  "answer": "Not known - this was never mentioned.",
+  "answer_type": "abstain",
+  "accept": [
+   "not known"
+  ],
+  "evidence_days": [],
+  "recency_distance_days": 1,
+  "grading": "llm_judge",
+  "viewpoint_day": 731,
+  "tags": [
+   "favorite_movie"
+  ]
+ },
+ "2026-11-24": {
+  "id": "today:reading:2026-11-24",
+  "type": "preference_today",
+  "domain": "reading",
+  "question": "What will Priya's evening reading be today (Tuesday, 2026-11-24)?",
+  "answer": "poetry collections",
+  "accept": [
+   "poetry collections"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   192,
+   197,
+   267
+  ],
+  "viewpoint_day": 269,
+  "routine": "alternates week by week: library thrillers, then poetry collections, repeating (7-day blocks starting Sun 2026-09-06)",
+  "regime_kind": "shift",
+  "regime_start": "2026-09-06"
+ },
+ "2026-12-19": {
+  "id": "today:exercise:2026-12-19",
+  "type": "preference_today",
+  "domain": "exercise",
+  "question": "What will Priya's workout be today (Saturday, 2026-12-19)?",
+  "answer": "morning dog walk",
+  "accept": [
+   "morning dog walk"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   262,
+   269,
+   289
+  ],
+  "viewpoint_day": 294,
+  "routine": "alternates week by week: morning dog walk, then home HIIT workout, repeating (7-day blocks starting Tue 2026-11-17)",
+  "regime_kind": "shift",
+  "regime_start": "2026-11-17"
+ },
+ "2026-12-21": {
+  "id": "today:bedtime:2026-12-21",
+  "type": "preference_today",
+  "domain": "bedtime",
+  "question": "What will Priya's bedtime be today (Monday, 2026-12-21)?",
+  "answer": "11:00 pm",
+  "accept": [
+   "11:00 pm"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   262,
+   291
+  ],
+  "viewpoint_day": 296,
+  "routine": "11:00 pm every day",
+  "regime_kind": "shift",
+  "regime_start": "2026-11-15"
+ },
+ "2027-01-05": {
+  "id": "u5_q0241",
+  "type": "exception_vs_shift",
+  "capability": "exception_handling",
+  "domain": "bedtime",
+  "difficulty_user": 5,
+  "question": "On Saturday, 2026-05-30, Priya's bedtime was 1:30 am instead of the usual 1:00 am. Was that a lasting change?",
+  "answer": "No - it was a one-off (stayed up for a late movie); the usual routine continued.",
+  "answer_type": "yes_no",
+  "accept": [
+   "no"
+  ],
+  "evidence_days": [
+   91,
+   93
+  ],
+  "recency_distance_days": 638,
+  "grading": "llm_judge",
+  "viewpoint_day": 731,
+  "tags": [
+   "exception"
+  ]
+ },
+ "2027-01-25": {
+  "id": "today:dinner:2027-01-25",
+  "type": "preference_today",
+  "domain": "dinner",
+  "question": "What will Priya's dinner be today (Monday, 2027-01-25)?",
+  "answer": "meal-kit dinner",
+  "accept": [
+   "meal-kit dinner"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   311,
+   314,
+   328
+  ],
+  "viewpoint_day": 331,
+  "routine": "a 7-day cycle starting Fri 2027-01-01: meal-kit dinner for 4 days, then home-cooked curry for 3 days, repeating",
+  "regime_kind": "shift",
+  "regime_start": "2027-01-01"
+ },
+ "2027-01-27": {
+  "id": "today:music:2027-01-27",
+  "type": "preference_today",
+  "domain": "music",
+  "question": "What will Priya's work music be today (Wednesday, 2027-01-27)?",
+  "answer": "synthwave playlists",
+  "accept": [
+   "synthwave playlists"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   203,
+   332
+  ],
+  "viewpoint_day": 333,
+  "routine": "synthwave playlists every day",
+  "regime_kind": "shift",
+  "regime_start": "2026-09-16"
+ },
+ "2027-03-12": {
+  "id": "today:bedtime:2027-03-12",
+  "type": "preference_today",
+  "domain": "bedtime",
+  "question": "What will Priya's bedtime be today (Friday, 2027-03-12)?",
+  "answer": "11:00 pm",
+  "accept": [
+   "11:00 pm"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   262,
+   376
+  ],
+  "viewpoint_day": 377,
+  "routine": "11:00 pm every day",
+  "regime_kind": "shift",
+  "regime_start": "2026-11-15"
+ },
+ "2027-04-06": {
+  "id": "u5_q0078",
+  "type": "recall",
+  "capability": "episodic_recall",
+  "domain": "bedtime",
+  "difficulty_user": 5,
+  "question": "What was Priya's bedtime on Tuesday, 2026-05-05?",
+  "answer": "11:30 pm",
+  "answer_type": "value",
+  "accept": [
+   "11:30 pm"
+  ],
+  "evidence_days": [
+   47,
+   54,
+   55
+  ],
+  "recency_distance_days": 676,
+  "grading": "exact",
+  "viewpoint_day": 731,
+  "tags": [
+   "inferred",
+   "no_session"
+  ]
+ },
+ "2027-04-09": {
+  "id": "today:music:2027-04-09",
+  "type": "preference_today",
+  "domain": "music",
+  "question": "What will Priya's work music be today (Friday, 2027-04-09)?",
+  "answer": "synthwave playlists",
+  "accept": [
+   "synthwave playlists"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   345,
+   351,
+   402
+  ],
+  "viewpoint_day": 405,
+  "routine": "split by workday vs weekend - on workdays (Mon-Fri): synthwave playlists; on weekends: running playlists",
+  "regime_kind": "shift",
+  "regime_start": "2027-02-08"
+ },
+ "2027-04-11": {
+  "id": "u5_q0073",
+  "type": "recall",
+  "capability": "episodic_recall",
+  "domain": "bedtime",
+  "difficulty_user": 5,
+  "question": "What was Priya's bedtime on Wednesday, 2027-01-20?",
+  "answer": "11:00 pm",
+  "answer_type": "value",
+  "accept": [
+   "11:00 pm"
+  ],
+  "evidence_days": [
+   304,
+   314,
+   315
+  ],
+  "recency_distance_days": 416,
+  "grading": "exact",
+  "viewpoint_day": 731,
+  "tags": [
+   "inferred",
+   "no_session"
+  ]
+ },
+ "2027-05-30": {
+  "id": "today:exercise:2027-05-30",
+  "type": "preference_today",
+  "domain": "exercise",
+  "question": "What will Priya's workout be today (Sunday, 2027-05-30)?",
+  "answer": "morning dog walk",
+  "accept": [
+   "morning dog walk"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   337,
+   360,
+   368,
+   373,
+   384,
+   390,
+   392,
+   444
+  ],
+  "viewpoint_day": 456,
+  "routine": "by day of week: trail run on Mon/Wed; morning dog walk on Tue/Thu/Sun; rest day on Fri; long trail run on Sat",
+  "regime_kind": "shift",
+  "regime_start": "2027-01-29"
+ },
+ "2027-07-05": {
+  "id": "today:commute:2027-07-05",
+  "type": "preference_today",
+  "domain": "commute",
+  "question": "What will Priya's commute be today (Monday, 2027-07-05)?",
+  "answer": "light rail",
+  "accept": [
+   "light rail"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   402,
+   405,
+   407,
+   408,
+   411,
+   420,
+   424,
+   487
+  ],
+  "viewpoint_day": 492,
+  "routine": "by day of week: light rail on Mon/Wed/Fri; work from home on Tue/Thu; no commute on Sat/Sun",
+  "regime_kind": "shift",
+  "regime_start": "2027-04-04"
+ },
+ "2027-07-06": {
+  "id": "today:commute:2027-07-06",
+  "type": "preference_today",
+  "domain": "commute",
+  "question": "What will Priya's commute be today (Tuesday, 2027-07-06)?",
+  "answer": "work from home",
+  "accept": [
+   "work from home"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   402,
+   405,
+   407,
+   408,
+   411,
+   420,
+   424,
+   492
+  ],
+  "viewpoint_day": 493,
+  "routine": "by day of week: light rail on Mon/Wed/Fri; work from home on Tue/Thu; no commute on Sat/Sun",
+  "regime_kind": "shift",
+  "regime_start": "2027-04-04"
+ },
+ "2027-08-04": {
+  "id": "today:commute:2027-08-04",
+  "type": "preference_today",
+  "domain": "commute",
+  "question": "What will Priya's commute be today (Wednesday, 2027-08-04)?",
+  "answer": "light rail",
+  "accept": [
+   "light rail"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   402,
+   405,
+   407,
+   408,
+   411,
+   420,
+   424,
+   520
+  ],
+  "viewpoint_day": 522,
+  "routine": "by day of week: light rail on Mon/Wed/Fri; work from home on Tue/Thu; no commute on Sat/Sun",
+  "regime_kind": "shift",
+  "regime_start": "2027-04-04"
+ },
+ "2027-09-15": {
+  "id": "today:dinner:2027-09-15",
+  "type": "preference_today",
+  "domain": "dinner",
+  "question": "What will Priya's dinner be today (Wednesday, 2027-09-15)?",
+  "answer": "soup and smoothies",
+  "accept": [
+   "soup and smoothies"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   560,
+   563
+  ],
+  "viewpoint_day": 564,
+  "routine": "soup and smoothies every day",
+  "regime_kind": "temporary",
+  "regime_start": "2027-09-07"
+ },
+ "2027-09-19": {
+  "id": "today:reading:2027-09-19",
+  "type": "preference_today",
+  "domain": "reading",
+  "question": "What will Priya's evening reading be today (Sunday, 2027-09-19)?",
+  "answer": "audiobooks",
+  "accept": [
+   "audiobooks"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   456,
+   567
+  ],
+  "viewpoint_day": 568,
+  "routine": "audiobooks every day",
+  "regime_kind": "shift",
+  "regime_start": "2027-05-29"
+ },
+ "2027-09-25": {
+  "id": "today:exercise:2027-09-25",
+  "type": "preference_today",
+  "domain": "exercise",
+  "question": "What will Priya's workout be today (Saturday, 2027-09-25)?",
+  "answer": "group hike",
+  "accept": [
+   "group hike"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   560,
+   565,
+   571
+  ],
+  "viewpoint_day": 574,
+  "routine": "split by workday vs weekend - on workdays (Mon-Fri): morning dog walk; on weekends: group hike",
+  "regime_kind": "shift",
+  "regime_start": "2027-09-11"
+ },
+ "2027-10-08": {
+  "id": "u5_p202608_0032",
+  "type": "duration",
+  "capability": "temporal_arithmetic",
+  "domain": "dinner",
+  "question": "How long did Priya's dinner stay the curry / dinner with friends / fish tacos / leftovers etc. routine?",
+  "answer": "156 days (2026-03-01 to 2026-08-03)",
+  "answer_type": "free_text",
+  "accept": [
+   "156"
+  ],
+  "evidence_days": [
+   1,
+   155,
+   158
+  ],
+  "grading": "llm_judge",
+  "viewpoint_day": 184,
+  "tags": [
+   "initial",
+   "regime:dinner.r0"
+  ],
+  "original_id": "u5_q0340",
+  "probe_date": "2026-08-31",
+  "probe_month": "2026-08",
+  "is_retrospective": false
+ },
+ "2027-10-20": {
+  "id": "today:exercise:2027-10-20",
+  "type": "preference_today",
+  "domain": "exercise",
+  "question": "What will Priya's workout be today (Wednesday, 2027-10-20)?",
+  "answer": "morning dog walk",
+  "accept": [
+   "morning dog walk"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   560,
+   565,
+   586
+  ],
+  "viewpoint_day": 599,
+  "routine": "split by workday vs weekend - on workdays (Mon-Fri): morning dog walk; on weekends: group hike",
+  "regime_kind": "shift",
+  "regime_start": "2027-09-11"
+ },
+ "2027-11-04": {
+  "id": "u5_p202704_0085",
+  "type": "event_status",
+  "capability": "event_tracking",
+  "domain": "events",
+  "question": "What happened with the Denver half marathon?",
+  "answer": "ran the Denver half marathon in 2:05 (happened, 2027-04-14)",
+  "answer_type": "free_text",
+  "accept": [
+   "ran the Denver half marathon in 2:05"
+  ],
+  "evidence_days": [
+   342,
+   411
+  ],
+  "grading": "llm_judge",
+  "viewpoint_day": 426,
+  "tags": [
+   "happened"
+  ],
+  "original_id": "u5_q0316",
+  "probe_date": "2027-04-30",
+  "probe_month": "2027-04",
+  "is_retrospective": false
+ },
+ "2027-11-10": {
+  "id": "u5_q0021",
+  "type": "recall",
+  "capability": "episodic_recall",
+  "domain": "commute",
+  "difficulty_user": 5,
+  "question": "What was Priya's commute on Tuesday, 2027-04-06?",
+  "answer": "work from home",
+  "answer_type": "value",
+  "accept": [
+   "work from home"
+  ],
+  "evidence_days": [
+   402
+  ],
+  "recency_distance_days": 329,
+  "grading": "exact",
+  "viewpoint_day": 731,
+  "tags": [
+   "boundary"
+  ]
+ },
+ "2027-12-01": {
+  "id": "today:exercise:2027-12-01",
+  "type": "preference_today",
+  "domain": "exercise",
+  "question": "What will Priya's workout be today (Wednesday, 2027-12-01)?",
+  "answer": "morning dog walk",
+  "accept": [
+   "morning dog walk"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   560,
+   565,
+   639
+  ],
+  "viewpoint_day": 641,
+  "routine": "split by workday vs weekend - on workdays (Mon-Fri): morning dog walk; on weekends: group hike",
+  "regime_kind": "shift",
+  "regime_start": "2027-09-11"
+ },
+ "2027-12-02": {
+  "id": "u5_p202703_0077",
+  "type": "exception_vs_shift",
+  "capability": "exception_handling",
+  "domain": "reading",
+  "question": "On Wednesday, 2027-03-03, Priya's evening reading was a magazine instead of the usual book club novel. Was that a lasting change?",
+  "answer": "No - it was a one-off (picked one up at the dentist); the usual routine continued.",
+  "answer_type": "yes_no",
+  "accept": [
+   "no"
+  ],
+  "evidence_days": [
+   368,
+   374
+  ],
+  "grading": "llm_judge",
+  "viewpoint_day": 396,
+  "tags": [
+   "exception"
+  ],
+  "original_id": "u5_q0238",
+  "probe_date": "2027-03-31",
+  "probe_month": "2027-03",
+  "is_retrospective": false
+ },
+ "2027-12-22": {
+  "id": "u5_q0042",
+  "type": "recall",
+  "capability": "episodic_recall",
+  "domain": "music",
+  "difficulty_user": 5,
+  "question": "What was Priya's work music on Friday, 2027-10-01?",
+  "answer": "synthwave playlists",
+  "answer_type": "value",
+  "accept": [
+   "synthwave playlists"
+  ],
+  "evidence_days": [
+   569,
+   573,
+   574
+  ],
+  "recency_distance_days": 157,
+  "grading": "exact",
+  "viewpoint_day": 731,
+  "tags": [
+   "inferred",
+   "no_session"
+  ]
+ },
+ "2028-01-21": {
+  "id": "today:dinner:2028-01-21",
+  "type": "preference_today",
+  "domain": "dinner",
+  "question": "What will Priya's dinner be today (Friday, 2028-01-21)?",
+  "answer": "black bean tacos",
+  "accept": [
+   "black bean tacos"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   680,
+   689
+  ],
+  "viewpoint_day": 692,
+  "routine": "alternates week by week: veggie stir-fry, then black bean tacos, repeating (7-day blocks starting Sun 2028-01-09)",
+  "regime_kind": "shift",
+  "regime_start": "2028-01-09"
+ },
+ "2028-01-25": {
+  "id": "today:music:2028-01-25",
+  "type": "preference_today",
+  "domain": "music",
+  "question": "What will Priya's work music be today (Tuesday, 2028-01-25)?",
+  "answer": "vinyl records",
+  "accept": [
+   "vinyl records"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   608,
+   695
+  ],
+  "viewpoint_day": 696,
+  "routine": "vinyl records every day",
+  "regime_kind": "shift",
+  "regime_start": "2027-10-29"
+ },
+ "2028-02-08": {
+  "id": "today:reading:2028-02-08",
+  "type": "preference_today",
+  "domain": "reading",
+  "question": "What will Priya's evening reading be today (Tuesday, 2028-02-08)?",
+  "answer": "book club novel",
+  "accept": [
+   "book club novel"
+  ],
+  "answer_type": "value",
+  "grading": "exact",
+  "evidence_days": [
+   592,
+   599,
+   705
+  ],
+  "viewpoint_day": 710,
+  "routine": "alternates week by week: e-reader fantasy series, then book club novel, repeating (7-day blocks starting Mon 2027-10-11)",
+  "regime_kind": "shift",
+  "regime_start": "2027-10-11"
+ }
+}

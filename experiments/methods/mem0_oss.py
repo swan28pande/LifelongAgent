@@ -1,4 +1,8 @@
-"""Mem0 open-source (ECAI 2025): LLM fact extraction with ADD/UPDATE/DELETE/NOOP over a vector store.
+"""Mem0 open source (mem0ai 2.2.0): additive LLM fact extraction over a vector store.
+
+Mem0 2.x appends newly extracted facts (exact duplicates skipped); unlike the ECAI 2025 paper's
+algorithm it does not UPDATE or DELETE existing memories. Each session's date is passed to the
+extraction prompt as its Observation Date (see _common.mem0_observation_date).
 
 Held equal to the other methods: Gemini on Vertex for extraction and answering, the shared
 embedding model, and the shared answer prompt. The session date goes into each message and
@@ -11,7 +15,7 @@ import os
 from .. import config
 from ..core.method import MemoryMethod
 from ..core.types import Answer, Question, Session, prompt_for
-from ._common import answer_from_context, make_llm
+from ._common import answer_from_context, make_llm, mem0_observation_date, serialize_embedder
 
 
 class Mem0OSS(MemoryMethod):
@@ -39,6 +43,7 @@ class Mem0OSS(MemoryMethod):
             }},
             "history_db_path": str(store_dir / "history.db"),
         })
+        serialize_embedder(self.memory.embedding_model)
         self.llm = make_llm(model, usage)
 
     def ingest(self, session: Session) -> dict:
@@ -50,7 +55,8 @@ class Mem0OSS(MemoryMethod):
             messages.append({"role": role, "content": f"[{session.date}] {name}{t.text}"})
         for attempt in range(3):
             try:
-                result = self.memory.add(messages, user_id=self.user_id, metadata={"date": session.date})
+                with mem0_observation_date(session.date):
+                    result = self.memory.add(messages, user_id=self.user_id, metadata={"date": session.date})
                 return {"added": len(result.get("results", []))}
             except Exception as e:
                 if attempt == 2:

@@ -4,6 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "experiments" / "data"
+V2_DATA_DIR = ROOT / "datasets" / "v2"   # canonical v2 data for every harness
 RESULTS_DIR = ROOT / "results" / "experiments"
 
 # Same backbone, embedder and judge for every method, so differences come from memory design.

@@ -1,0 +1,324 @@
+\documentclass[11pt]{article}
+
+\usepackage[review]{acl}
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\newcommand{\ours}{TemporalMem}
+% Placeholder benchmark name; rename once decided.
+\newcommand{\dataset}{\textsc{LifeLog-2Y}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\title{Preferences Change: Rethinking Memory in Personal AI Agents}
+
+\author{First Author \\
+  Affiliation / Address line 1 \\
+  \texttt{email@domain} \\\And
+  Second Author \\
+  Affiliation / Address line 1 \\
+  \texttt{email@domain} \\}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Personal AI agents must maintain accurate, long-term models of their users to provide relevant and consistent assistance. Existing memory architectures treat user preferences as static facts, storing only the current state and silently overwriting prior values when preferences change. This design fails in real-world settings, where preferences evolve over time. To capture temporal patterns in preferences, we present \textbf{\ours}, a hybrid memory architecture combining a vector store for conversations and hierarchical summaries with a relational store that records every preference state with a timestamp, preserving the full temporal evolution of user behavior. An agentic workflow queries this memory to surface preference shifts and habit patterns. We evaluate \ours{} on LoCoMo and on \dataset, a new two-year synthetic benchmark of daily conversations with ground-truth preference changes, under three protocols: end-of-timeline querying, continual probing, and a live user-simulator setting. \todo{headline result sentence once v2 runs finish.}
+\end{abstract}
+
+\section{Introduction}
+
+As large language models become an integral part of everyday tasks, personal AI agents are increasingly expected to remember user routines and preferences. People have preferences for everything from clothes and food to movies. Even though these preferences may look static over a short time window, they do shift and evolve. For example, a person who prefers espresso for several months might switch to an americano, then shift back again. For a personal assistant to remain relevant, it must go beyond retrieving past conversations and understand how preferences \textit{change over time}.
+
+Current memory systems fall short of this goal. MemoryBank~\citep{zhong2023memorybank} and similar vector-based stores index conversation history but lack mechanisms to identify patterns in preferences. Systems like MemGPT~\citep{packer2024memgpt} maintain curated user facts but overwrite them in place, discarding prior states. Summarization-based approaches~\citep{wang2024recursively} compress history into a fixed-size memory, making earlier preferences irrecoverable as new information accumulates.
+
+The core problem is that these systems treat preference as a single mutable value rather than a time-indexed history. When a user's breakfast preference shifts from toast to smoothies, a well-designed agent should not merely update its preference memory but also store \textit{when} the change occurred and reason about the trajectory.
+
+We address this gap with \textbf{\ours}, a hybrid memory architecture designed to capture temporal changes in preferences. \ours{} extracts preferences from conversations and stores them with timestamps in a structured relational database, from which we construct hierarchical summaries that capture temporal patterns. A vector store indexes these summaries and raw conversations to handle open-ended semantic queries. Together, these components form a lifelong memory system that treats preference evolution as a first-class concern.
+
+\paragraph{Contributions.}
+\begin{itemize}
+    \item A hybrid memory architecture combining a timestamped preference store with a vector index, enabling temporal queries over the full history of user preferences.
+    \item A hierarchical summarization scheme (daily $\rightarrow$ weekly $\rightarrow$ monthly $\rightarrow$ lifetime) that compresses long conversation histories while preserving preference evolution.
+    \item An agentic retrieval workflow that plans targeted queries over the structured preference history to surface behavioral trends and preference drift.
+    \item \dataset, a synthetic two-year conversation benchmark with ground-truth preference changes, together with continual and live-simulation evaluation protocols.
+\end{itemize}
+
+\section{\ours}
+\label{sec:method}
+
+\todo{Port and update the method description from paper.tex to match the evaluated system (memory\_v4: planned retrieval with a 5-call budget, structured decisions; optional distillation at finalize).}
+
+\section{Experimental Setup}
+\label{sec:setup}
+
+\subsection{Benchmarks}
+
+\paragraph{LoCoMo.}
+LoCoMo~\citep{maharana2024locomo} contains 10 very long two-person conversations, each spanning tens of sessions. Following the Mem0 evaluation protocol~\citep{chhikara2025mem0}, we exclude the adversarial category and evaluate on the remaining 1{,}540 questions, split into single-hop (841), multi-hop (282), temporal (321), and commonsense (96) questions.
+
+\paragraph{\dataset.}
+LoCoMo conversations span weeks to months and rarely revisit a preference after it changes. To test whether memory tracks \emph{evolving} preferences, we construct \dataset{}, a synthetic benchmark of five users, each with 730 days (two years) of daily user--assistant conversations generated from a latent world state. The world state specifies, for every day, the user's active preferences in each domain, the facts that hold, ongoing events, and which of these are mentioned in that day's conversation. Preferences follow scheduled regimes (stable runs, weekday routines, temporary exceptions, permanent shifts, and reversions), so every question has a ground-truth answer derived from the world state rather than from the generated text. Users differ in how often they talk to the assistant, from every day to roughly every other day (Table~\ref{tab:dataset}).
+
+From each user's pool of candidate questions, we sample 50 for the end-of-timeline evaluation (250 in total), stratified over 16 question types grouped into four families:
+\textbf{Facts} (current fact, fact at a past time, fact history, recall, attribution, other people),
+\textbf{Change} (change detection, reversion, exception vs.\ shift, duration, event status),
+\textbf{Patterns} (current pattern, pattern at a past time, prediction), and
+\textbf{Robustness} (abstention, distractor probes).
+Each question records the days carrying its evidence; we discard questions whose evidence falls after the date the question is asked, and ``unknown'' answers for which the world state shows the information was never stated.
+
+\begin{table}[t]
+  \centering
+  \small
+  \begin{tabular}{lrrr}
+    \toprule
+    \textbf{User} & \textbf{Days} & \textbf{Sessions} & \textbf{Questions} \\
+    \midrule
+    u1 & 730 & 730 & 50 \\
+    u2 & 730 & 657 & 50 \\
+    u3 & 730 & 561 & 50 \\
+    u4 & 730 & 437 & 50 \\
+    u5 & 730 & 353 & 50 \\
+    \midrule
+    Total & 3{,}650 & 2{,}738 & 250 \\
+    \bottomrule
+  \end{tabular}
+  \caption{\dataset{} statistics. All users start on the same date and span two years; they differ in conversation frequency.}
+  \label{tab:dataset}
+\end{table}
+
+\subsection{Evaluation Protocols}
+
+\paragraph{End-of-timeline.}
+The standard protocol: each method ingests the full conversation history, then answers all questions. Each question carries the date it is asked so that relative expressions (``last month'') can be resolved.
+
+\paragraph{Continual probing.}
+Real assistants are queried while memory is still being built. We interleave ingestion with 23 monthly probes per user (200 questions per user), pausing after the last session before each probe date, answering that month's questions, and resuming. Methods that build state at the end (full context, naive RAG) rebuild it at every probe; persistent methods (Mem0, TiMem, \ours) answer from whatever they have accumulated. This protocol exposes how accuracy evolves as history grows and whether earlier answers degrade after later updates.
+
+\paragraph{Live simulation.}
+Finally, we replace the pre-generated transcripts with a live interaction. An LLM user agent is conditioned on the user's persona and the world state for the current day and holds a three-turn conversation with an assistant backed by the memory method under test. After the first 30 days, on each session day the user asks, with probability 0.15, a question drawn from the question pool whose evidence days all precede the current day, rephrased into natural speech. The assistant answers from memory, and the full conversation (including the probe) is then ingested. Unlike the other two protocols, the memory here stores the assistant's own replies, so errors can propagate.
+
+\subsection{Baselines}
+
+We compare against seven baselines. All of them use the same backbone LLM for memory construction and answering. Full context, naive RAG, Mem0, and TiMem also share our embedder and answer prompt, so differences among them come from memory design alone. For Zep, MemoryOS, and A-Mem we keep each system's official pipeline, including its own embedder and prompts, and change only the backbone.
+\begin{itemize}
+  \item \textbf{Full context}: all sessions are placed in the prompt, dropping the oldest once the input exceeds 900K tokens.
+  \item \textbf{Naive RAG}~\citep{lewis2020rag}: sessions are split into chunks of five turns, embedded, and the top-10 chunks are retrieved and sorted by date.
+  \item \textbf{Mem0}~\citep{chhikara2025mem0}: the open-source release (v2.2.0), which extracts salient memories from each session with an LLM in a single additive pass (no update or delete step), stores them in a FAISS index, and retrieves the top-10.
+  \item \textbf{Zep}~\citep{rasmussen2025zep}: a temporal knowledge graph that stores raw episodes and extracts entities and time-stamped facts. We use Zep Cloud (SDK 3.30.0) and its LoCoMo evaluation code; graph construction runs on Zep's managed models, and answers are generated by our backbone.
+  \item \textbf{MemoryOS}~\citep{kang2025memoryos}: a three-tier memory of short-term dialogue pages, mid-term topic segments, and a long-term user persona, where a heat score based on access, interaction length, and recency decides which segments are evicted or promoted into the persona. We use the official code with \texttt{all-MiniLM-L6-v2} embeddings.
+  \item \textbf{A-Mem}~\citep{xu2025amem}: Zettelkasten-style memory notes with keywords, tags, and links, where new notes can update related older ones. We use the official reproduction code, retrieving the top-10 notes with \texttt{all-MiniLM-L6-v2}.
+  \item \textbf{TiMem}~\citep{li2026timem}: a five-level temporal memory tree (two-turn fragments, sessions, days, weeks, months) with a complexity-aware planner and a memory refiner at query time. On LoCoMo we run the authors' pipeline with our backbone; at 3.5-flash, 2 of the 86 monthly profiles exceeded the output limit and are missing.
+\end{itemize}
+
+\subsection{Implementation Details}
+
+We run every method with two backbones, \texttt{gemini-3.5-flash} and \texttt{gemini-3.8-flash}, used for both memory construction and answering, to check that conclusions do not depend on one model. \todo{state which v2 runs use 3.8-flash once available.} Except where a baseline's official pipeline fixes its own embedder, we use \texttt{nomic-embed-text-v1}~\citep{nussbaum2024nomic} (768 dimensions). Answers from all methods, including the saved answers of Zep, MemoryOS, and A-Mem, are graded by \texttt{gemini-3.1-pro-preview} as an LLM judge with type-specific rules: values and dates must match the reference (paraphrase allowed, hedging between values is wrong); routines must match in structure; durations must fall within about 10\% of the reference; and abstention questions are correct only if the system declines to answer. We report judge accuracy. \todo{report seeds / variance once multiple runs exist.}
+
+\section{Results}
+\label{sec:results}
+
+\subsection{LoCoMo}
+
+\begin{table*}[t]
+  \centering
+  \begin{tabular}{lccccc}
+    \toprule
+    \textbf{Method} & \textbf{Single-hop} & \textbf{Multi-hop} & \textbf{Temporal} & \textbf{Commonsense} & \textbf{Overall} \\
+     & (841) & (282) & (321) & (96) & (1{,}540) \\
+    \midrule
+    \multicolumn{6}{l}{\textit{Backbone: \texttt{gemini-3.5-flash}}} \\
+    Full context & \textbf{87.9} & \textbf{55.7} & \textbf{82.9} & 47.9 & \textbf{78.4} \\
+    Naive RAG    & 78.6 & 35.5 & 71.0 & 38.5 & 66.6 \\
+    Mem0         & 61.5 & 36.9 & 70.1 & 30.2 & 56.8 \\
+    Zep          & \todo{} & & & & \\
+    MemoryOS     & \todo{} & & & & \\
+    A-Mem        & \todo{} & & & & \\
+    TiMem        & 76.6 & 45.0 & 72.6 & 52.1 & 68.4 \\
+    \ours                  & 84.3 & 50.0 & 76.3 & \textbf{59.4} & 74.8 \\
+    \ours{} + distillation & 83.5 & 54.3 & 76.3 & 58.3 & 75.1 \\
+    \midrule
+    \multicolumn{6}{l}{\textit{Backbone: \texttt{gemini-3.8-flash}}} \\
+    Full context & \textbf{89.3} & \textbf{54.6} & \textbf{85.1} & 41.7 & \textbf{79.1} \\
+    Naive RAG    & 78.1 & 37.9 & 71.7 & 32.3 & 66.6 \\
+    Mem0         & 68.2 & 39.4 & 78.2 & 26.0 & 62.4 \\
+    Zep          & \todo{} & & & & \\
+    MemoryOS     & \todo{} & & & & \\
+    A-Mem        & \todo{} & & & & \\
+    TiMem        & 76.1 & 42.9 & 75.7 & \textbf{58.3} & 68.8 \\
+    \ours                  & 85.4 & 49.3 & 76.0 & 50.0 & 74.6 \\
+    \ours{} + distillation & 85.5 & 48.9 & 76.3 & 49.0 & 74.6 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Judge accuracy (\%) on LoCoMo by question category (number of questions in parentheses) for two backbones. Adversarial questions are excluded. Bold marks the best result per backbone among completed runs.}
+  \label{tab:locomo}
+\end{table*}
+
+Table~\ref{tab:locomo} shows results on LoCoMo. \ours{} reaches 74.8\% overall, 8.2 points above naive RAG and 18.0 points above Mem0, and is the best memory-based method in every category. On commonsense questions, which require combining several stated facts with world knowledge, it outperforms full context (59.4\% against 47.9\%); TiMem is the only other method to do so (52.1\%). Full context remains the strongest overall (78.4\%), which is expected on LoCoMo: each conversation fits comfortably in the backbone's context window (about 21K input tokens per question on average), so the model can read the entire history. The gap to full context is concentrated in multi-hop (5.7 points) and temporal (6.6 points) questions. Adding knowledge distillation at finalization raises overall accuracy slightly to 75.1\%, almost entirely through multi-hop questions (+4.3 points, narrowing the gap to full context to 1.4), at the cost of small drops on single-hop ($-0.8$) and commonsense ($-1.1$). This gain does not replicate with \texttt{gemini-3.8-flash}, where both variants reach 74.6\% and distillation changes each category by at most about 1 point, so we do not consider it a reliable improvement.
+
+Mem0 falls 9.8 points below naive RAG. It replaces raw dialogue with LLM-written memories at ingestion time; details that were not judged salient at that point, such as a specific date or a secondary participant, are lost and cannot be recovered at query time. TiMem, which keeps fine-grained two-turn fragments at its lowest level and gates retrieved memories with a query-time refiner, is the strongest baseline apart from full context at 68.4\%, 1.8 points above naive RAG. Its gains over naive RAG come from multi-hop (+9.5) and commonsense (+13.6) questions, where its higher-level summaries combine evidence across sessions, while it trails naive RAG on single-hop questions ($-2.0$). \ours{} remains 6.4 points above TiMem overall and ahead of it in every category.
+
+The stronger backbone does not change this ordering. Moving from \texttt{gemini-3.5-flash} to \texttt{gemini-3.8-flash} leaves naive RAG unchanged (66.6\%) and raises full context by only 0.7 points, while Mem0 gains 5.6 points, mostly on temporal (+8.1) and single-hop (+6.7) questions; it still trails naive RAG by 4.2 points. This suggests that methods answering from raw text gain little from a stronger reader, whereas methods that rewrite memories at ingestion benefit from a stronger writer. On commonsense questions, both full context and naive RAG drop by about 6 points with the newer backbone. TiMem is likewise stable (68.4\% and 68.8\%); it gains on temporal ($+3.1$) and commonsense ($+6.2$) questions and loses slightly on multi-hop ($-2.1$), remaining the strongest baseline after full context. \ours{} is stable across backbones (74.8\% and 74.6\%) and stays 8.0 points above naive RAG, 12.2 above Mem0 and 5.8 above TiMem. It leads TiMem on single-hop, multi-hop and temporal questions, but with this backbone TiMem is the best method on commonsense questions (58.3\%, against 50.0\% for \ours{} and 41.7\% for full context), as \ours{}'s commonsense accuracy falls by 9.4 points. \todo{Zep, MemoryOS and A-Mem on 3.8-flash.}
+
+\subsection{\dataset}
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lcccccc}
+    \toprule
+    \textbf{Method} & \textbf{u1} & \textbf{u2} & \textbf{u3} & \textbf{u4} & \textbf{u5} & \textbf{All} \\
+    \midrule
+    Full context & \textbf{90} & \textbf{72} & \textbf{60} & \textbf{56} & \textbf{68} & \textbf{69.2} \\
+    Naive RAG    & 26 & 24 & 20 & 28 & 24 & 24.4 \\
+    Mem0         & \todo{} & & & & & \\
+    Zep          & \todo{} & & & & & \\
+    MemoryOS     & \todo{} & & & & & \\
+    A-Mem        & \todo{} & & & & & \\
+    TiMem\textsuperscript{\dag} & 22 & 14 & 24 & 28 & 32 & 24.0 \\
+    \midrule
+    \ours                  & \todo{} & & & & & \\
+    \ours{} + dist.        & \todo{} & & & & & \\
+    \bottomrule
+  \end{tabular}
+  \caption{End-of-timeline judge accuracy (\%) on \dataset{} per user (50 questions each), with \texttt{gemini-3.5-flash}. \textsuperscript{\dag}Earlier TiMem reimplementation, not the authors' pipeline used on LoCoMo. \todo{rerun TiMem on \dataset{} with the corrected implementation.}}
+  \label{tab:v2-user}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{3.5pt}
+  \begin{tabular}{lrccccc}
+    \toprule
+    \textbf{Type} & \textbf{n} & \textbf{FC} & \textbf{RAG} & \textbf{TiMem} & \textbf{Mem0} & \textbf{Ours} \\
+    \midrule
+    \multicolumn{7}{l}{\textit{Facts}} \\
+    Fact (current)  & 11 & 72.7 & 36.4 & 63.6 & & \\
+    Fact (at time)  & 22 & 90.9 & 31.8 & 36.4 & & \\
+    Fact history    & 10 & 70.0 & 40.0 & 30.0 & & \\
+    Recall          & 40 & 60.0 & 10.0 & 5.0  & & \\
+    Attribution     & 25 & 84.0 & 28.0 & 32.0 & & \\
+    Other person    & 4  & 100  & 50.0 & 100  & & \\
+    \midrule
+    \multicolumn{7}{l}{\textit{Change}} \\
+    Change detect.  & 19 & 68.4 & 5.3  & 0.0  & & \\
+    Reversion       & 8  & 37.5 & 12.5 & 12.5 & & \\
+    Exception/shift & 12 & 58.3 & 25.0 & 8.3  & & \\
+    Duration        & 11 & 72.7 & 0.0  & 9.1  & & \\
+    Event status    & 11 & 63.6 & 45.5 & 54.5 & & \\
+    \midrule
+    \multicolumn{7}{l}{\textit{Patterns}} \\
+    Pattern (current) & 15 & 33.3 & 0.0 & 0.0  & & \\
+    Pattern (at time) & 16 & 31.3 & 0.0 & 0.0  & & \\
+    Prediction        & 22 & 90.9 & 40.9 & 13.6 & & \\
+    \midrule
+    \multicolumn{7}{l}{\textit{Robustness}} \\
+    Abstention        & 16 & 87.5 & 62.5 & 87.5 & & \\
+    Distractor        & 8  & 87.5 & 50.0 & 25.0 & & \\
+    \bottomrule
+  \end{tabular}
+  \caption{End-of-timeline judge accuracy (\%) on \dataset{} by question type. FC: full context. \todo{fill Mem0 and Ours columns; move this to a full-width table if Zep, MemoryOS and A-Mem are added.}}
+  \label{tab:v2-type}
+\end{table}
+
+Tables~\ref{tab:v2-user} and~\ref{tab:v2-type} show end-of-timeline results on \dataset. The benchmark is substantially harder than LoCoMo for every method evaluated so far. Retrieval- and consolidation-based baselines collapse: naive RAG and TiMem reach only 24.4\% and 24.0\%, a drop of 42.2 and 25.2 points relative to their LoCoMo scores. Full context remains usable at 69.2\%, but at a cost of roughly 260K input tokens per question, more than ten times its cost on LoCoMo; at the scale of a multi-year assistant this cost grows linearly with history.
+
+The per-type breakdown shows where the baselines fail. Questions about \emph{change} and \emph{patterns} require aggregating evidence spread over many days. Naive RAG and TiMem score 0\% on both pattern types and near 0\% on change detection and duration: a top-10 retrieval returns a handful of days, from which neither a routine nor the date of a shift can be reconstructed. Even full context struggles on patterns (31--33\%) and reversions (37.5\%), showing that having every session in the prompt does not by itself let the model infer which preference held on which days. In contrast, all methods do comparatively well on abstention, and TiMem matches full context there (87.5\%), consistent with sparse memories leading the model to decline rather than guess.
+
+\todo{Add Mem0 and \ours{} results and discussion: whether the timestamped preference store recovers change/pattern questions.}
+
+\subsection{Continual Probing}
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{3.5pt}
+  \begin{tabular}{lccccccc}
+    \toprule
+     & \multicolumn{6}{c}{\textbf{Checkpoint}} & \\
+    \cmidrule(lr){2-7}
+    \textbf{Method} & 03/26 & 06/26 & 12/26 & 06/27 & 12/27 & 02/28 & \textbf{Cum.} \\
+     & (41) & (130) & (384) & (630) & (885) & (1{,}000) & (11{,}721) \\
+    \midrule
+    Mem0 & 92.7 & 48.5 & 37.5 & 31.9 & 29.3 & 28.5 & 33.2 \\
+    \midrule
+    \multicolumn{8}{l}{\textit{Reference: full context at the final checkpoint}} \\
+    \quad one prompt per user & & & & & & 76.8 & \\
+    \bottomrule
+  \end{tabular}
+  \caption{Continual probing on \dataset{} (\texttt{gemini-3.5-flash}): judge accuracy (\%) over all questions introduced so far, at selected monthly checkpoints (number of questions in parentheses). Cum.\ pools every answer over the 24 checkpoints. The full-context reference reads the whole two-year history and answers all 200 questions of a user in a single call.}
+  \label{tab:continual}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lrcc}
+    \toprule
+    \textbf{Type} & \textbf{n} & \textbf{FC} & \textbf{Mem0} \\
+    \midrule
+    Fact (current)    & 21  & 95.2 & 57.1 \\
+    Fact (at time)    & 131 & 93.1 & 64.9 \\
+    Fact history      & 20  & 90.0 & 50.0 \\
+    Recall            & 383 & 77.5 & 5.0 \\
+    Attribution       & 50  & 74.0 & 46.0 \\
+    Other person      & 10  & 100  & 70.0 \\
+    Change detect.    & 52  & 65.4 & 5.8 \\
+    Reversion         & 17  & 70.6 & 5.9 \\
+    Exception/shift   & 54  & 96.3 & 40.7 \\
+    Duration          & 53  & 71.7 & 7.5 \\
+    Event status      & 46  & 73.9 & 63.0 \\
+    Pattern (current) & 12  & 0.0  & 0.0 \\
+    Pattern (at time) & 51  & 0.0  & 2.0 \\
+    Abstention        & 75  & 96.0 & 80.0 \\
+    Distractor        & 25  & 88.0 & 36.0 \\
+    \midrule
+    All               & 1{,}000 & 76.8 & 28.5 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Judge accuracy (\%) by question type at the final continual checkpoint (all 200 probe questions per user, five users, \texttt{gemini-3.5-flash}). FC: full context, all questions of a user in one call.}
+  \label{tab:continual-type}
+\end{table}
+
+Table~\ref{tab:continual} shows how accuracy evolves as memory grows. Mem0 answers almost all of the first month's questions (92.7\%), but accuracy falls steadily as history accumulates and earlier questions are re-asked: it drops below 50\% after four months and reaches 28.5\% at the final checkpoint, where all 1{,}000 questions are answered from two years of memory. Because Mem0's extraction is additive, superseded facts are never removed; the store grows to 13{,}289 memories over 2{,}738 sessions, and top-10 retrieval increasingly returns stale or irrelevant entries. The decline is uniform across users (final accuracy 23.5--31.0\%).
+
+Table~\ref{tab:continual-type} compares Mem0 at the final checkpoint with full context on the same questions. The gap is largest where answers depend on details or on change over time: recall of specific conversation content (5.0\% vs.\ 77.5\%), change detection (5.8\% vs.\ 65.4\%), reversions (5.9\% vs.\ 70.6\%), and durations (7.5\% vs.\ 71.7\%). Mem0 is closest to full context on event status (63.0\% vs.\ 73.9\%) and abstention (80.0\% vs.\ 96.0\%). Neither method recovers routines: both score near 0\% on pattern questions, which require inferring a recurring schedule from many days of evidence.
+
+Full context answers all questions in a single call per user (225--324K input tokens of history), which costs about 100 times fewer input tokens than one call per question. This saving comes at some cost in accuracy: answering each question separately on u1 reaches 98.0\% (196/200), against 95.5\% when all of u1's questions share one call. In the single-call setting the model also needed a second call for three of the five users, because its reasoning and answers for 200 questions exceeded the output limit. \todo{Continual results for \ours, TiMem and naive RAG; per-question full context for u2--u5.}
+
+\subsection{Live Simulation}
+
+\todo{Table: probe accuracy per method in the live simulation, by question type and user. Compare against end-of-timeline accuracy to quantify the effect of ingesting the assistant's own replies.}
+
+\section{Related Work}
+
+\paragraph{Long-term memory.}
+Several lines of work address long-term memory in LLM-based agents. MemoryBank~\citep{zhong2023memorybank} stores conversations in a vector database alongside daily event summaries. However, the decay mechanism used to manage memory discards old preference states rather than archiving them, making it impossible to recover what a user preferred at an earlier point in time. MemGPT~\citep{packer2024memgpt} treats the LLM context window as main memory and pages older content to external storage via function calls, while keeping curated user facts in an in-context working memory; these facts are overwritten in place when they change, losing previous states. \citet{wang2024recursively} propose recursive summarization, where each new dialogue chunk is merged with the prior summary; since the memory is capped in size, compression becomes lossy as the conversation grows. Mem0~\citep{chhikara2025mem0} extracts salient facts and resolves them against existing memories with add, update, and delete operations, and TiMem~\citep{li2026timem} consolidates session memories into a temporal hierarchy. A-Mem~\citep{xu2025amem} links atomic notes and lets new notes rewrite related old ones, and MemoryOS~\citep{kang2025memoryos} moves memories between short-, mid-, and long-term tiers by recency and access frequency. These systems rewrite or evict memories as they go, so earlier preference states are not kept as dated records. Zep~\citep{rasmussen2025zep} is closest to our goal: its temporal knowledge graph attaches validity intervals to facts, but it is organized around entities rather than recurring preference patterns.
+
+\paragraph{Preference learning.}
+MR.Rec~\citep{huang2024mrrec} builds a RAG system combining global domain knowledge with user-specific preferences. However, the memory reflects only the user's current preference state and is updated in place, with no history of how preferences evolved. Our architecture addresses this gap by storing every preference extraction with its source date and constructing hierarchical summaries that capture temporal patterns.
+
+\paragraph{Benchmarks.}
+LoCoMo~\citep{maharana2024locomo} evaluates memory over very long two-person conversations. \todo{LongMemEval and other benchmarks; position \dataset{} as the first to target multi-year preference evolution with ground truth from a latent world state.}
+
+\section{Conclusion}
+
+\todo{}
+
+\section*{Limitations}
+
+\dataset{} is synthetic: conversations are generated from a scripted world state, so the distribution of preference changes and the phrasing of conversations may differ from real users. All methods share a single backbone LLM, and the judge is itself an LLM. \todo{seeds, cost.}
+
+\bibliography{custom}
+
+\end{document}

@@ -1,6 +1,6 @@
 # Monthly baseline evaluation
 
-TiMem, NaiveRAG, and DirectPrompting/full context now run through the same
+TiMem, NaiveRAG, Mem0, Zep (self-hosted Graphiti) and DirectPrompting/full context now run through the same
 [monthly runner](../README.md) as memory_v4, using canonical `datasets/v2/`.
 Each user ingests one month, finalizes memory, answers all questions introduced so
 far, and completes the existing LLM judging before receiving the next month.
@@ -11,6 +11,8 @@ Repeated questions retain their original probe date, wording, and references.
 | `timem` | [TiMem](TiMem/README.md) | Raw sessions, five-level summaries and cached vectors in SQLite; isolated local Qdrant search | Native complexity-aware recall: planner, 0.9 dense + 0.1 BM25 L1, bottom-up parents, memory refiner |
 | `naive_rag` | [NaiveRAG](NaiveRAG/README.md) | Raw sessions in SQLite and an incremental FAISS index | Five-turn chunks; dense top-10 retrieval |
 | `full_context` | [DirectPrompting](DirectPrompting/README.md) | Raw sessions in SQLite | All observed history directly in the answer prompt |
+| `mem0` | [Mem0](Mem0/README.md) | Raw sessions in SQLite; Mem0's extracted facts in FAISS plus its history database | Additive LLM fact extraction (Mem0 2.2.0) grounded in the session date; dense top-10 over extracted facts |
+| `zep` | [Zep](Zep/README.md) | Raw sessions in SQLite; Graphiti temporal knowledge graph in embedded Kuzu | One episode per session; entities and facts with validity intervals; 20 facts (hybrid, cross-encoder) + 20 entities (hybrid, RRF) |
 
 The common backbone is `gemini-3.5-flash`, the judge is
 `gemini-3.1-pro-preview`, and retrieval uses the existing prefixed Nomic embedder.
@@ -52,6 +54,7 @@ Run from the repository root. Preview without models, credentials or run writes:
 python -m setup_2.run --method timem --dry-run
 python -m setup_2.run --method naive_rag --dry-run
 python -m setup_2.run --method full_context --dry-run
+python -m setup_2.run --method mem0 --dry-run
 ```
 
 Run all five users, with separate processes for users and sequential months
@@ -61,9 +64,10 @@ within each process:
 python -m setup_2.run --method timem --run v2_monthly --user-workers 5
 python -m setup_2.run --method naive_rag --run v2_monthly --user-workers 5
 python -m setup_2.run --method full_context --run v2_monthly --user-workers 5
+python -m setup_2.run --method mem0 --run v2_monthly --user-workers 5
 ```
 
-These are three independent commands. Run one method at a time for a controlled
+These are independent commands. Run one method at a time for a controlled
 comparison, or give each invocation the resources and quota it needs.
 `--workers` defaults to 8 answer threads per user, `--judge-concurrency` to 16
 judge calls per user, and `--user-workers` to 1. Counts may change on resume.

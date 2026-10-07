@@ -1,5 +1,8 @@
 """Helpers shared by the methods that answer with one LLM call over retrieved text."""
 
+import contextvars
+import threading
+from contextlib import contextmanager
 from functools import lru_cache
 
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -30,6 +33,50 @@ def embeddings():
     """One copy of the shared embedding model per process."""
     from memory_v3.store import PrefixedEmbeddings
     return PrefixedEmbeddings(model_name=config.EMBED_MODEL, model_kwargs={"trust_remote_code": True})
+
+
+_OBSERVATION_DATE = contextvars.ContextVar("mem0_observation_date", default=None)
+
+
+@contextmanager
+def mem0_observation_date(day: str):
+    """Ground Mem0's fact extraction in the session date.
+
+    Mem0 OSS rejects add(timestamp=...), so its prompt's "Observation Date" (the anchor for
+    "yesterday", "last week") silently becomes today's system date. Its prompt builder accepts the
+    date; inject it, as the hosted platform does.
+    """
+    import mem0.memory.main as mem0_main
+
+    if not getattr(mem0_main.generate_additive_extraction_prompt, "_observation_date", False):
+        original = mem0_main.generate_additive_extraction_prompt
+
+        def prompt(*args, **kwargs):
+            if kwargs.get("timestamp") is None and _OBSERVATION_DATE.get() is not None:
+                kwargs["timestamp"] = _OBSERVATION_DATE.get()
+            return original(*args, **kwargs)
+
+        prompt._observation_date = True
+        mem0_main.generate_additive_extraction_prompt = prompt
+    token = _OBSERVATION_DATE.set(day)
+    try:
+        yield
+    finally:
+        _OBSERVATION_DATE.reset(token)
+
+
+_EMBED_LOCK = threading.Lock()
+
+
+def serialize_embedder(embedder) -> None:
+    """Concurrent answer threads sharing one nomic-embed model corrupt each other's tensors."""
+    inner = embedder.embed
+
+    def embed(*args, **kwargs):
+        with _EMBED_LOCK:
+            return inner(*args, **kwargs)
+
+    embedder.embed = embed
 
 
 def make_llm(model: str, usage):

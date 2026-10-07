@@ -1,6 +1,6 @@
 # Monthly cumulative evaluation
 
-This setup evaluates the unchanged `memory_v4` agent and the three
+This setup evaluates the unchanged `memory_v4` agent and the four
 [baseline methods](baselines/README.md) by growing their stores one calendar month
 at a time. The default uses the existing `OursV4D` adapter, agent/provider
 configuration, embedding model, five-tool retrieval loop, and common LLM judge.

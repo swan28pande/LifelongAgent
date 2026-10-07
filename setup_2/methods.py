@@ -8,6 +8,8 @@ METHODS = {
     'timem': ('setup_2.baselines.TiMem.method', 'TiMem', 'timem_complexity_aware'),
     'naive_rag': ('setup_2.baselines.NaiveRAG.method', 'NaiveRAG', 'raw_chunks_dense_top_k'),
     'full_context': ('setup_2.baselines.DirectPrompting.method', 'FullContext', 'complete_observed_history'),
+    'mem0': ('setup_2.baselines.Mem0.method', 'Mem0', 'mem0_extracted_facts_top_k'),
+    'zep': ('setup_2.baselines.Zep.method', 'Zep', 'graphiti_temporal_kg_facts_entities'),
 }
 
 

@@ -55,6 +55,18 @@ apply unchanged. `ours_v4d` remains the default, with summaries and distillation
    cached unchanged summaries, and partial weeks split at calendar month edges. Storage
    is local (SQLite + in-process Qdrant) rather than the native PostgreSQL/Qdrant services,
    and answers use the shared answer prompt like the other baselines.
+6. Mem0 (open-source `mem0ai==2.2.0`) is configured as in `experiments/methods/mem0_oss.py`:
+   the common Gemini model for extraction (32,000-token output limit) and answers, the
+   shared Nomic embedder, FAISS, top-10 search and the shared answer prompt. Sessions are
+   added once, in date order, as they are observed; its state lives in the user's store.
+   Mem0 2.x is additive (no UPDATE/DELETE, unlike the ECAI 2025 paper), and each session's
+   date is supplied as the extraction prompt's Observation Date, which Mem0 OSS cannot accept
+   through add() and otherwise sets to the system date.
+7. Zep runs self-hosted as Graphiti (`graphiti-core==0.30.2`) on embedded Kuzu inside the
+   user's store, since Zep Cloud is not available. One episode per session (dated at the
+   session), the common Gemini model for every Graphiti call (32,768-token limit, no
+   partial-JSON salvage), the shared Nomic embedder, a local BGE cross-encoder, and the Zep
+   LoCoMo retrieval profile (20 facts + 20 entities) with the shared answer prompt.
 
 Original agents, datasets, baseline implementations outside `setup_2/`, and shared
 experiment/judge code are unchanged. This extension prepares execution and is
