@@ -1,0 +1,100 @@
+{
+  "method": "zep",
+  "method_profile": "graphiti_temporal_kg_facts_entities",
+  "month": "2027-10",
+  "cutoff": "2027-10-31",
+  "new_sessions": 17,
+  "new_questions": 13,
+  "n": 163,
+  "accuracy": 0.3987730061349693,
+  "new": {
+    "n": 13,
+    "accuracy": 0.3076923076923077
+  },
+  "repeated": {
+    "n": 150,
+    "accuracy": 0.4066666666666667
+  },
+  "by_category": {
+    "abstention": {
+      "n": 17,
+      "accuracy": 0.7647058823529411
+    },
+    "attribution": {
+      "n": 14,
+      "accuracy": 0.2857142857142857
+    },
+    "change_detection": {
+      "n": 17,
+      "accuracy": 0.0
+    },
+    "distractor_probe": {
+      "n": 11,
+      "accuracy": 0.0
+    },
+    "duration": {
+      "n": 9,
+      "accuracy": 0.1111111111111111
+    },
+    "event_status": {
+      "n": 10,
+      "accuracy": 0.7
+    },
+    "exception_vs_shift": {
+      "n": 14,
+      "accuracy": 0.6428571428571429
+    },
+    "fact_at_time": {
+      "n": 24,
+      "accuracy": 0.7916666666666666
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "fact_history": {
+      "n": 4,
+      "accuracy": 0.25
+    },
+    "other_person": {
+      "n": 6,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 7,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 25,
+      "accuracy": 0.12
+    },
+    "reversion": {
+      "n": 2,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 35.33872501414719,
+    "p50": 34.85410941699229,
+    "p95": 55.552115793994744
+  },
+  "usage": {
+    "ingest_seconds": 1800.600421258001,
+    "calls": 410,
+    "input_tokens": 1274487,
+    "output_tokens": 545510,
+    "finalize_seconds": 1.002253918995848,
+    "answer_seconds": 728.3901564389962,
+    "judge_seconds": 27.269438256000285
+  },
+  "judge_usage": {
+    "calls": 163,
+    "input_tokens": 63842,
+    "output_tokens": 23123,
+    "reasoning_tokens": 17400
+  }
+}

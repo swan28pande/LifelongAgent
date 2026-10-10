@@ -1,0 +1,100 @@
+{
+  "method": "mem0",
+  "method_profile": "mem0_extracted_facts_top_k",
+  "month": "2027-08",
+  "cutoff": "2027-08-31",
+  "new_sessions": 14,
+  "new_questions": 7,
+  "n": 139,
+  "accuracy": 0.3381294964028777,
+  "new": {
+    "n": 7,
+    "accuracy": 0.5714285714285714
+  },
+  "repeated": {
+    "n": 132,
+    "accuracy": 0.32575757575757575
+  },
+  "by_category": {
+    "abstention": {
+      "n": 16,
+      "accuracy": 0.8125
+    },
+    "attribution": {
+      "n": 12,
+      "accuracy": 0.3333333333333333
+    },
+    "change_detection": {
+      "n": 15,
+      "accuracy": 0.0
+    },
+    "distractor_probe": {
+      "n": 9,
+      "accuracy": 0.2222222222222222
+    },
+    "duration": {
+      "n": 9,
+      "accuracy": 0.1111111111111111
+    },
+    "event_status": {
+      "n": 8,
+      "accuracy": 0.5
+    },
+    "exception_vs_shift": {
+      "n": 11,
+      "accuracy": 0.36363636363636365
+    },
+    "fact_at_time": {
+      "n": 21,
+      "accuracy": 0.5238095238095238
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.3333333333333333
+    },
+    "fact_history": {
+      "n": 3,
+      "accuracy": 0.3333333333333333
+    },
+    "other_person": {
+      "n": 6,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 4,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 21,
+      "accuracy": 0.0
+    },
+    "reversion": {
+      "n": 1,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 4.659744277848934,
+    "p50": 3.78309578399967,
+    "p95": 7.896560548000707
+  },
+  "usage": {
+    "ingest_seconds": 227.93646090600032,
+    "calls": 139,
+    "input_tokens": 88484,
+    "output_tokens": 102125,
+    "finalize_seconds": 0.00026536899986240314,
+    "answer_seconds": 84.0642710810007,
+    "judge_seconds": 23.065246187999946
+  },
+  "judge_usage": {
+    "calls": 139,
+    "input_tokens": 54288,
+    "output_tokens": 17527,
+    "reasoning_tokens": 12786
+  }
+}

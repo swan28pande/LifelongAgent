@@ -1,0 +1,104 @@
+{
+  "method": "mem0",
+  "method_profile": "mem0_extracted_facts_top_k",
+  "month": "2028-02",
+  "cutoff": "2028-02-28",
+  "new_sessions": 14,
+  "new_questions": 15,
+  "n": 200,
+  "accuracy": 0.31,
+  "new": {
+    "n": 15,
+    "accuracy": 0.06666666666666667
+  },
+  "repeated": {
+    "n": 185,
+    "accuracy": 0.32972972972972975
+  },
+  "by_category": {
+    "abstention": {
+      "n": 18,
+      "accuracy": 0.7777777777777778
+    },
+    "attribution": {
+      "n": 18,
+      "accuracy": 0.3888888888888889
+    },
+    "change_detection": {
+      "n": 22,
+      "accuracy": 0.0
+    },
+    "distractor_probe": {
+      "n": 12,
+      "accuracy": 0.25
+    },
+    "duration": {
+      "n": 11,
+      "accuracy": 0.09090909090909091
+    },
+    "event_status": {
+      "n": 12,
+      "accuracy": 0.6666666666666666
+    },
+    "exception_vs_shift": {
+      "n": 15,
+      "accuracy": 0.4
+    },
+    "fact_at_time": {
+      "n": 27,
+      "accuracy": 0.4074074074074074
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.3333333333333333
+    },
+    "fact_history": {
+      "n": 4,
+      "accuracy": 0.5
+    },
+    "other_person": {
+      "n": 6,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "pattern_current": {
+      "n": 3,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 34,
+      "accuracy": 0.08823529411764706
+    },
+    "reversion": {
+      "n": 7,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 4.7323211522999555,
+    "p50": 4.055576455999471,
+    "p95": 7.899182854000173
+  },
+  "usage": {
+    "ingest_seconds": 201.26027362300556,
+    "calls": 200,
+    "input_tokens": 127850,
+    "output_tokens": 155831,
+    "finalize_seconds": 0.00020405999930517282,
+    "answer_seconds": 153.16198174300007,
+    "judge_seconds": 38.00620472199989
+  },
+  "judge_usage": {
+    "calls": 200,
+    "input_tokens": 78639,
+    "output_tokens": 26863,
+    "reasoning_tokens": 19920
+  }
+}

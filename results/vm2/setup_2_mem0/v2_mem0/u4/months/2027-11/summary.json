@@ -1,0 +1,100 @@
+{
+  "method": "mem0",
+  "method_profile": "mem0_extracted_facts_top_k",
+  "month": "2027-11",
+  "cutoff": "2027-11-30",
+  "new_sessions": 14,
+  "new_questions": 11,
+  "n": 163,
+  "accuracy": 0.2392638036809816,
+  "new": {
+    "n": 11,
+    "accuracy": 0.18181818181818182
+  },
+  "repeated": {
+    "n": 152,
+    "accuracy": 0.24342105263157895
+  },
+  "by_category": {
+    "abstention": {
+      "n": 13,
+      "accuracy": 0.6923076923076923
+    },
+    "attribution": {
+      "n": 13,
+      "accuracy": 0.3076923076923077
+    },
+    "change_detection": {
+      "n": 9,
+      "accuracy": 0.1111111111111111
+    },
+    "distractor_probe": {
+      "n": 7,
+      "accuracy": 0.2857142857142857
+    },
+    "duration": {
+      "n": 12,
+      "accuracy": 0.08333333333333333
+    },
+    "event_status": {
+      "n": 8,
+      "accuracy": 0.625
+    },
+    "exception_vs_shift": {
+      "n": 10,
+      "accuracy": 0.2
+    },
+    "fact_at_time": {
+      "n": 19,
+      "accuracy": 0.631578947368421
+    },
+    "fact_current": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "fact_history": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "other_person": {
+      "n": 4,
+      "accuracy": 0.5
+    },
+    "pattern_at_time": {
+      "n": 13,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 47,
+      "accuracy": 0.02127659574468085
+    },
+    "reversion": {
+      "n": 4,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 4.71298319974848,
+    "p50": 3.907347354999729,
+    "p95": 10.333375893000266
+  },
+  "usage": {
+    "ingest_seconds": 222.84224240299773,
+    "calls": 163,
+    "input_tokens": 102680,
+    "output_tokens": 123336,
+    "finalize_seconds": 0.00021498999922187068,
+    "answer_seconds": 111.2561488650008,
+    "judge_seconds": 25.753539298999385
+  },
+  "judge_usage": {
+    "calls": 163,
+    "input_tokens": 63054,
+    "output_tokens": 19696,
+    "reasoning_tokens": 14098
+  }
+}

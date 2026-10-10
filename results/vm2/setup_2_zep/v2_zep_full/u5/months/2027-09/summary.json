@@ -1,0 +1,100 @@
+{
+  "method": "zep",
+  "method_profile": "graphiti_temporal_kg_facts_entities",
+  "month": "2027-09",
+  "cutoff": "2027-09-30",
+  "new_sessions": 18,
+  "new_questions": 11,
+  "n": 150,
+  "accuracy": 0.4266666666666667,
+  "new": {
+    "n": 11,
+    "accuracy": 0.2727272727272727
+  },
+  "repeated": {
+    "n": 139,
+    "accuracy": 0.43884892086330934
+  },
+  "by_category": {
+    "abstention": {
+      "n": 16,
+      "accuracy": 0.8125
+    },
+    "attribution": {
+      "n": 13,
+      "accuracy": 0.3076923076923077
+    },
+    "change_detection": {
+      "n": 16,
+      "accuracy": 0.0625
+    },
+    "distractor_probe": {
+      "n": 9,
+      "accuracy": 0.2222222222222222
+    },
+    "duration": {
+      "n": 9,
+      "accuracy": 0.1111111111111111
+    },
+    "event_status": {
+      "n": 9,
+      "accuracy": 0.4444444444444444
+    },
+    "exception_vs_shift": {
+      "n": 12,
+      "accuracy": 0.75
+    },
+    "fact_at_time": {
+      "n": 22,
+      "accuracy": 0.9090909090909091
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "fact_history": {
+      "n": 4,
+      "accuracy": 0.0
+    },
+    "other_person": {
+      "n": 6,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 6,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 23,
+      "accuracy": 0.08695652173913043
+    },
+    "reversion": {
+      "n": 2,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 46.876637517679775,
+    "p50": 48.39419313399412,
+    "p95": 82.51461138900777
+  },
+  "usage": {
+    "ingest_seconds": 1991.7815864360164,
+    "calls": 392,
+    "input_tokens": 1278021,
+    "output_tokens": 512686,
+    "finalize_seconds": 2.9737697139935335,
+    "answer_seconds": 885.7578211729997,
+    "judge_seconds": 26.127806823991705
+  },
+  "judge_usage": {
+    "calls": 150,
+    "input_tokens": 58812,
+    "output_tokens": 20543,
+    "reasoning_tokens": 15261
+  }
+}

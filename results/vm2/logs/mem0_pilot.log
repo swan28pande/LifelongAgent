@@ -1,0 +1,26 @@
+[u5/2026-03] 13 new sessions, 6 cumulative questions
+/home/usr_2008507759/LifelongAgent/memory_v3/store.py:16: DeprecationWarning: `langchain-community` is being sunset and is no longer actively maintained. See https://github.com/langchain-ai/langchain-community/issues/674 for details and migration guidance toward standalone integration packages.
+  from langchain_community.vectorstores import FAISS
+A new version of the following files was downloaded from https://huggingface.co/nomic-ai/nomic-bert-2048:
+- configuration_hf_nomic_bert.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/nomic-ai/nomic-bert-2048:
+- modeling_hf_nomic_bert.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+/home/usr_2008507759/LifelongAgent/venv/lib/python3.13/site-packages/huggingface_hub/file_download.py:1727: DeprecationWarning: hf_xet.download_files() is deprecated. Use XetSession().new_file_download_group().start_download_file() instead.
+  xet_get(
+<All keys matched successfully>
+The 'faiss' vector store does not support keyword search. Hybrid (BM25) scoring will be disabled and search will use semantic similarity only. To enable hybrid search, switch to a store with keyword_search support (e.g. qdrant, elasticsearch, pgvector).
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+Failed to load spaCy lemma model: spaCy is not installed. Install it with: pip install mem0ai[nlp]
+Failed to load spaCy full model: spaCy is not installed. Install it with: pip install mem0ai[nlp]
+Direct use of automatic function calling (AFC) in AsyncModels.generate_content is not recommended. Instead, we recommend to use AFC in AsyncChat.send_message. Similarly, direct use of AFC in AsyncModels.generate_content_stream is not recommended. Instead, we recommend to use AFC in AsyncChat.send_message_stream.
+/home/usr_2008507759/LifelongAgent/venv/lib/python3.13/site-packages/google/genai/_api_client.py:1032: DeprecationWarning: Inheritance class AiohttpClientSession from ClientSession is discouraged
+  class AiohttpClientSession(aiohttp.ClientSession):  # type: ignore[misc]
+{
+  "results": "/home/usr_2008507759/LifelongAgent/setup_2/baselines/Mem0/results/v2_mem0_pilot",
+  "method": "mem0",
+  "complete": true,
+  "answer_instances": 6,
+  "accuracy": 1.0
+}

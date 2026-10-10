@@ -1,0 +1,100 @@
+{
+  "method": "mem0",
+  "method_profile": "mem0_extracted_facts_top_k",
+  "month": "2027-07",
+  "cutoff": "2027-07-31",
+  "new_sessions": 16,
+  "new_questions": 8,
+  "n": 127,
+  "accuracy": 0.2440944881889764,
+  "new": {
+    "n": 8,
+    "accuracy": 0.25
+  },
+  "repeated": {
+    "n": 119,
+    "accuracy": 0.24369747899159663
+  },
+  "by_category": {
+    "abstention": {
+      "n": 11,
+      "accuracy": 0.8181818181818182
+    },
+    "attribution": {
+      "n": 12,
+      "accuracy": 0.3333333333333333
+    },
+    "change_detection": {
+      "n": 7,
+      "accuracy": 0.14285714285714285
+    },
+    "distractor_probe": {
+      "n": 6,
+      "accuracy": 0.3333333333333333
+    },
+    "duration": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "event_status": {
+      "n": 5,
+      "accuracy": 0.6
+    },
+    "exception_vs_shift": {
+      "n": 9,
+      "accuracy": 0.1111111111111111
+    },
+    "fact_at_time": {
+      "n": 14,
+      "accuracy": 0.42857142857142855
+    },
+    "fact_current": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "fact_history": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "other_person": {
+      "n": 4,
+      "accuracy": 0.75
+    },
+    "pattern_at_time": {
+      "n": 10,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 36,
+      "accuracy": 0.027777777777777776
+    },
+    "reversion": {
+      "n": 3,
+      "accuracy": 0.3333333333333333
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 4.515822883976384,
+    "p50": 3.9652183380003407,
+    "p95": 6.702257031000045
+  },
+  "usage": {
+    "ingest_seconds": 243.17925648100118,
+    "calls": 127,
+    "input_tokens": 80028,
+    "output_tokens": 96735,
+    "finalize_seconds": 0.0001876010001069517,
+    "answer_seconds": 72.64182013699974,
+    "judge_seconds": 19.939515026000663
+  },
+  "judge_usage": {
+    "calls": 127,
+    "input_tokens": 49075,
+    "output_tokens": 15099,
+    "reasoning_tokens": 10774
+  }
+}

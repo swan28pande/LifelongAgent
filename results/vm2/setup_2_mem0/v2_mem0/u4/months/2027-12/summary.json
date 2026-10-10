@@ -1,0 +1,100 @@
+{
+  "method": "mem0",
+  "method_profile": "mem0_extracted_facts_top_k",
+  "month": "2027-12",
+  "cutoff": "2027-12-31",
+  "new_sessions": 20,
+  "new_questions": 13,
+  "n": 176,
+  "accuracy": 0.23863636363636365,
+  "new": {
+    "n": 13,
+    "accuracy": 0.23076923076923078
+  },
+  "repeated": {
+    "n": 163,
+    "accuracy": 0.2392638036809816
+  },
+  "by_category": {
+    "abstention": {
+      "n": 14,
+      "accuracy": 0.7142857142857143
+    },
+    "attribution": {
+      "n": 15,
+      "accuracy": 0.3333333333333333
+    },
+    "change_detection": {
+      "n": 11,
+      "accuracy": 0.09090909090909091
+    },
+    "distractor_probe": {
+      "n": 7,
+      "accuracy": 0.42857142857142855
+    },
+    "duration": {
+      "n": 13,
+      "accuracy": 0.0
+    },
+    "event_status": {
+      "n": 8,
+      "accuracy": 0.625
+    },
+    "exception_vs_shift": {
+      "n": 11,
+      "accuracy": 0.18181818181818182
+    },
+    "fact_at_time": {
+      "n": 22,
+      "accuracy": 0.5909090909090909
+    },
+    "fact_current": {
+      "n": 2,
+      "accuracy": 0.5
+    },
+    "fact_history": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "other_person": {
+      "n": 4,
+      "accuracy": 0.25
+    },
+    "pattern_at_time": {
+      "n": 15,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 48,
+      "accuracy": 0.020833333333333332
+    },
+    "reversion": {
+      "n": 4,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 4.2108255368523055,
+    "p50": 3.8422811100008403,
+    "p95": 7.8152386599995225
+  },
+  "usage": {
+    "ingest_seconds": 290.1507691060033,
+    "calls": 176,
+    "input_tokens": 111321,
+    "output_tokens": 132307,
+    "finalize_seconds": 0.00020480999955907464,
+    "answer_seconds": 94.7530233159996,
+    "judge_seconds": 28.180290266000156
+  },
+  "judge_usage": {
+    "calls": 176,
+    "input_tokens": 68123,
+    "output_tokens": 21312,
+    "reasoning_tokens": 15302
+  }
+}

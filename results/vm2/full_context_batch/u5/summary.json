@@ -1,0 +1,105 @@
+{
+  "method": "full_context",
+  "method_profile": "complete_observed_history",
+  "month": "2028-02",
+  "cutoff": "2028-02-28",
+  "new_sessions": 353,
+  "new_questions": 15,
+  "n": 200,
+  "accuracy": 0.65,
+  "new": {
+    "n": 15,
+    "accuracy": 0.6
+  },
+  "repeated": {
+    "n": 185,
+    "accuracy": 0.654054054054054
+  },
+  "by_category": {
+    "abstention": {
+      "n": 18,
+      "accuracy": 0.8888888888888888
+    },
+    "attribution": {
+      "n": 18,
+      "accuracy": 0.6666666666666666
+    },
+    "change_detection": {
+      "n": 22,
+      "accuracy": 0.5454545454545454
+    },
+    "distractor_probe": {
+      "n": 12,
+      "accuracy": 0.8333333333333334
+    },
+    "duration": {
+      "n": 11,
+      "accuracy": 0.5454545454545454
+    },
+    "event_status": {
+      "n": 12,
+      "accuracy": 0.8333333333333334
+    },
+    "exception_vs_shift": {
+      "n": 15,
+      "accuracy": 1.0
+    },
+    "fact_at_time": {
+      "n": 27,
+      "accuracy": 0.8888888888888888
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "fact_history": {
+      "n": 4,
+      "accuracy": 0.75
+    },
+    "other_person": {
+      "n": 6,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "pattern_current": {
+      "n": 3,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 34,
+      "accuracy": 0.2647058823529412
+    },
+    "reversion": {
+      "n": 7,
+      "accuracy": 0.7142857142857143
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 1.9504644733999885,
+    "p50": 1.9504644733999885,
+    "p95": 1.9504644733999885
+  },
+  "usage": {
+    "calls": 2,
+    "input_tokens": 430498,
+    "output_tokens": 108192,
+    "answer_seconds": 390.0928946799977
+  },
+  "judge_usage": {
+    "calls": 200,
+    "input_tokens": 78503,
+    "output_tokens": 30155,
+    "reasoning_tokens": 22969
+  },
+  "protocol": "end_of_timeline_single_call_all_questions",
+  "context_tokens_est": 225690,
+  "answer_calls": 2,
+  "answer_seconds": 390.0928946799977
+}

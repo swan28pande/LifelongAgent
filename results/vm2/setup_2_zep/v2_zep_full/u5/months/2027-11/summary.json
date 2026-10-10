@@ -1,0 +1,100 @@
+{
+  "method": "zep",
+  "method_profile": "graphiti_temporal_kg_facts_entities",
+  "month": "2027-11",
+  "cutoff": "2027-11-30",
+  "new_sessions": 19,
+  "new_questions": 7,
+  "n": 170,
+  "accuracy": 0.38235294117647056,
+  "new": {
+    "n": 7,
+    "accuracy": 0.2857142857142857
+  },
+  "repeated": {
+    "n": 163,
+    "accuracy": 0.38650306748466257
+  },
+  "by_category": {
+    "abstention": {
+      "n": 17,
+      "accuracy": 0.7058823529411765
+    },
+    "attribution": {
+      "n": 15,
+      "accuracy": 0.26666666666666666
+    },
+    "change_detection": {
+      "n": 18,
+      "accuracy": 0.0
+    },
+    "distractor_probe": {
+      "n": 11,
+      "accuracy": 0.0
+    },
+    "duration": {
+      "n": 10,
+      "accuracy": 0.1
+    },
+    "event_status": {
+      "n": 11,
+      "accuracy": 0.6363636363636364
+    },
+    "exception_vs_shift": {
+      "n": 14,
+      "accuracy": 0.7142857142857143
+    },
+    "fact_at_time": {
+      "n": 25,
+      "accuracy": 0.72
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "fact_history": {
+      "n": 4,
+      "accuracy": 0.25
+    },
+    "other_person": {
+      "n": 6,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 7,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 27,
+      "accuracy": 0.14814814814814814
+    },
+    "reversion": {
+      "n": 2,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 40.263961156247085,
+    "p50": 41.029055836988846,
+    "p95": 56.646142238998436
+  },
+  "usage": {
+    "ingest_seconds": 1702.8998561190092,
+    "calls": 445,
+    "input_tokens": 1417632,
+    "output_tokens": 630600,
+    "finalize_seconds": 0.947012693999568,
+    "answer_seconds": 877.1868984309986,
+    "judge_seconds": 30.50388719199691
+  },
+  "judge_usage": {
+    "calls": 170,
+    "input_tokens": 66763,
+    "output_tokens": 23846,
+    "reasoning_tokens": 17791
+  }
+}

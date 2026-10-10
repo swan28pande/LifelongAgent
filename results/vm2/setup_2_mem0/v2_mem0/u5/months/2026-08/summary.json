@@ -1,0 +1,84 @@
+{
+  "method": "mem0",
+  "method_profile": "mem0_extracted_facts_top_k",
+  "month": "2026-08",
+  "cutoff": "2026-08-31",
+  "new_sessions": 16,
+  "new_questions": 11,
+  "n": 40,
+  "accuracy": 0.475,
+  "new": {
+    "n": 11,
+    "accuracy": 0.45454545454545453
+  },
+  "repeated": {
+    "n": 29,
+    "accuracy": 0.4827586206896552
+  },
+  "by_category": {
+    "abstention": {
+      "n": 8,
+      "accuracy": 1.0
+    },
+    "attribution": {
+      "n": 4,
+      "accuracy": 0.25
+    },
+    "change_detection": {
+      "n": 4,
+      "accuracy": 0.0
+    },
+    "distractor_probe": {
+      "n": 2,
+      "accuracy": 0.5
+    },
+    "duration": {
+      "n": 4,
+      "accuracy": 0.25
+    },
+    "exception_vs_shift": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "fact_at_time": {
+      "n": 6,
+      "accuracy": 0.6666666666666666
+    },
+    "other_person": {
+      "n": 2,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 6,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 4.0403818522500385,
+    "p50": 3.5723932410001,
+    "p95": 8.684156299999813
+  },
+  "usage": {
+    "ingest_seconds": 245.99900758500007,
+    "calls": 40,
+    "input_tokens": 25443,
+    "output_tokens": 27383,
+    "finalize_seconds": 0.00031248699997377116,
+    "answer_seconds": 21.473838547000014,
+    "judge_seconds": 8.083212794999781
+  },
+  "judge_usage": {
+    "calls": 40,
+    "input_tokens": 15561,
+    "output_tokens": 4628,
+    "reasoning_tokens": 3295
+  }
+}

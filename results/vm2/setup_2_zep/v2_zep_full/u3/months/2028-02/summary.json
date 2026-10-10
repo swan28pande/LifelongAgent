@@ -1,0 +1,100 @@
+{
+  "method": "zep",
+  "method_profile": "graphiti_temporal_kg_facts_entities",
+  "month": "2028-02",
+  "cutoff": "2028-02-28",
+  "new_sessions": 23,
+  "new_questions": 15,
+  "n": 200,
+  "accuracy": 0.315,
+  "new": {
+    "n": 15,
+    "accuracy": 0.13333333333333333
+  },
+  "repeated": {
+    "n": 185,
+    "accuracy": 0.32972972972972975
+  },
+  "by_category": {
+    "abstention": {
+      "n": 15,
+      "accuracy": 0.9333333333333333
+    },
+    "attribution": {
+      "n": 8,
+      "accuracy": 0.25
+    },
+    "change_detection": {
+      "n": 10,
+      "accuracy": 0.1
+    },
+    "distractor_probe": {
+      "n": 4,
+      "accuracy": 0.25
+    },
+    "duration": {
+      "n": 11,
+      "accuracy": 0.0
+    },
+    "event_status": {
+      "n": 8,
+      "accuracy": 0.5
+    },
+    "exception_vs_shift": {
+      "n": 17,
+      "accuracy": 0.5882352941176471
+    },
+    "fact_at_time": {
+      "n": 24,
+      "accuracy": 0.7083333333333334
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "fact_history": {
+      "n": 7,
+      "accuracy": 0.5714285714285714
+    },
+    "pattern_at_time": {
+      "n": 13,
+      "accuracy": 0.0
+    },
+    "pattern_current": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 75,
+      "accuracy": 0.09333333333333334
+    },
+    "reversion": {
+      "n": 3,
+      "accuracy": 0.3333333333333333
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 40.644417876550435,
+    "p50": 41.64426653899136,
+    "p95": 67.42291468700569
+  },
+  "usage": {
+    "ingest_seconds": 1610.1372675569874,
+    "calls": 464,
+    "input_tokens": 1578009,
+    "output_tokens": 591336,
+    "finalize_seconds": 0.8536774500098545,
+    "answer_seconds": 1038.2307972990093,
+    "judge_seconds": 33.69128534299671
+  },
+  "judge_usage": {
+    "calls": 200,
+    "input_tokens": 76751,
+    "output_tokens": 25856,
+    "reasoning_tokens": 18954
+  }
+}

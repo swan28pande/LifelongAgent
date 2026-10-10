@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "protocol": "monthly_cumulative_original_probe_date",
+  "method": "zep",
+  "method_profile": "graphiti_temporal_kg_facts_entities",
+  "model": "gemini-3.5-flash",
+  "judge_model": "gemini-3.1-pro-preview",
+  "inputs": {
+    "u1": {
+      "conversations.json": "09bdf11976fc6bb0ea9eb9d2fe4d3750abae36e65b978b6c8c5feddc6bea4f29",
+      "probing_questions.json": "53466226a9d2bb7b0868b556d930a6075f2ca58532c17f164a3e2e73c88fb728"
+    },
+    "u2": {
+      "conversations.json": "8940427573333033cc0a74d4e2f436fdb44801767e6874a9900a3debbaf99e03",
+      "probing_questions.json": "45b9782e1e1bc501f104f23fb8b790ffdbfdd141bb6c62b20b1301dbb56002ec"
+    },
+    "u3": {
+      "conversations.json": "0a4a0778b1438952cd725990612584a51cc987c3057ab4f6c849845055e99727",
+      "probing_questions.json": "695e20b21bffe9a2dbc4a854c7e640e9b662ff0a97648f339a1153d6edade63e"
+    },
+    "u4": {
+      "conversations.json": "678e9f3f113950a170eaa13557c852de803e7d40c86058875ae8baa4ddfcdd6a",
+      "probing_questions.json": "693ed5a75ec198e86e22a84bccb032d250066c796b534b2489b376f199fd1cb9"
+    },
+    "u5": {
+      "conversations.json": "cd9f98547ae78a4bfd6d15891dc712914b3725647cb57588276764675034a116",
+      "probing_questions.json": "792e4f39052fcbf74fa867660c1126fb4b3d6c20a44c4383ec50c5842a798317"
+    }
+  },
+  "implementation_hashes": {
+    "experiments/config.py": "b2e53aa3ccd0b3a0f990db6d8c193a0180bd5947851f116c1c8f07c9fd980641",
+    "experiments/core/grading.py": "c88a2a15ad36225ebb3eec916d7116f7de90c7a08f9778d6c139e8f4990f775f",
+    "experiments/core/method.py": "c8021d042ea5521a4d712eac2e65c2d63b3eac8f5d308f256ef6ee122b926ed0",
+    "experiments/core/types.py": "50f552e37c0377a01bd5e7a3b47d66fb0e7d08529914503349706a7ca04ed8f5",
+    "generator_v2/llm.py": "4f5cf071255bed05ff6870bc6f8051a8f51c574b13e5f7c8414b37455c83ebb1",
+    "setup_2/__init__.py": "13629c7af2701ee7e5e451989f2851e93ebe16225d1b58235c15ab6eeab671bc",
+    "setup_2/baselines/Zep/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup_2/baselines/Zep/method.py": "b221f86b493f5c46153af7b4c3a2ba09195073d01e9a5a8f321a93065c718f27",
+    "setup_2/baselines/Zep/requirements.txt": "f173f4ca586d16d41efbaa2cdf19442eea3b1481ec146936e1aea675cbf4ce3a",
+    "setup_2/baselines/_common.py": "55ab0f34637263b9707bd7690ef1acf83f7fc0c9d345491a7846630bbdcdbb8f",
+    "setup_2/baselines/requirements.txt": "2d59efc6c4bc2ce8753b634aa3cc06da44c265daa8a9c9024323878e109a7c07",
+    "setup_2/baselines/store.py": "ff1c80573fd6687e7b1dc2ad5d36479b8a50c14e9bc9e52ac15d1e22bdb512ba",
+    "setup_2/loader.py": "f5cfa3acaef1126b3d0782f0f26ddd5dba25da63d6114854ea401694918bc6b7",
+    "setup_2/methods.py": "e195e382a8077a28d8ac178b20be0d4ad8ef523b0d3326025f2a39952aeae814",
+    "setup_2/run.py": "c2ba20b76078cf20b289511889b7496f53dac96894fc1f57c01c0698b605b9c0",
+    "setup_2/runner.py": "3a63f2211cf15a8f20c5b08a9b21b7fae90aaf94f4f3b89fb1f0d3d1525f52e4"
+  }
+}

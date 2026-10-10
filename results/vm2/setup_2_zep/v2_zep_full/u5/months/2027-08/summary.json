@@ -1,0 +1,100 @@
+{
+  "method": "zep",
+  "method_profile": "graphiti_temporal_kg_facts_entities",
+  "month": "2027-08",
+  "cutoff": "2027-08-31",
+  "new_sessions": 14,
+  "new_questions": 7,
+  "n": 139,
+  "accuracy": 0.4460431654676259,
+  "new": {
+    "n": 7,
+    "accuracy": 0.7142857142857143
+  },
+  "repeated": {
+    "n": 132,
+    "accuracy": 0.4318181818181818
+  },
+  "by_category": {
+    "abstention": {
+      "n": 16,
+      "accuracy": 0.8125
+    },
+    "attribution": {
+      "n": 12,
+      "accuracy": 0.3333333333333333
+    },
+    "change_detection": {
+      "n": 15,
+      "accuracy": 0.06666666666666667
+    },
+    "distractor_probe": {
+      "n": 9,
+      "accuracy": 0.1111111111111111
+    },
+    "duration": {
+      "n": 9,
+      "accuracy": 0.1111111111111111
+    },
+    "event_status": {
+      "n": 8,
+      "accuracy": 0.75
+    },
+    "exception_vs_shift": {
+      "n": 11,
+      "accuracy": 0.7272727272727273
+    },
+    "fact_at_time": {
+      "n": 21,
+      "accuracy": 0.8571428571428571
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "fact_history": {
+      "n": 3,
+      "accuracy": 0.0
+    },
+    "other_person": {
+      "n": 6,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 4,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 21,
+      "accuracy": 0.09523809523809523
+    },
+    "reversion": {
+      "n": 1,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 68.17872005366203,
+    "p50": 71.44672565099609,
+    "p95": 102.86005399099668
+  },
+  "usage": {
+    "ingest_seconds": 1749.9621200809925,
+    "calls": 334,
+    "input_tokens": 1056971,
+    "output_tokens": 441599,
+    "finalize_seconds": 0.7225033959985012,
+    "answer_seconds": 1190.1287758870021,
+    "judge_seconds": 25.052985769987572
+  },
+  "judge_usage": {
+    "calls": 139,
+    "input_tokens": 54314,
+    "output_tokens": 18603,
+    "reasoning_tokens": 13797
+  }
+}

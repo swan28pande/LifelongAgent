@@ -1,0 +1,100 @@
+{
+  "method": "mem0",
+  "method_profile": "mem0_extracted_facts_top_k",
+  "month": "2027-09",
+  "cutoff": "2027-09-30",
+  "new_sessions": 18,
+  "new_questions": 11,
+  "n": 150,
+  "accuracy": 0.32,
+  "new": {
+    "n": 11,
+    "accuracy": 0.18181818181818182
+  },
+  "repeated": {
+    "n": 139,
+    "accuracy": 0.33093525179856115
+  },
+  "by_category": {
+    "abstention": {
+      "n": 16,
+      "accuracy": 0.875
+    },
+    "attribution": {
+      "n": 13,
+      "accuracy": 0.3076923076923077
+    },
+    "change_detection": {
+      "n": 16,
+      "accuracy": 0.0
+    },
+    "distractor_probe": {
+      "n": 9,
+      "accuracy": 0.2222222222222222
+    },
+    "duration": {
+      "n": 9,
+      "accuracy": 0.1111111111111111
+    },
+    "event_status": {
+      "n": 9,
+      "accuracy": 0.5555555555555556
+    },
+    "exception_vs_shift": {
+      "n": 12,
+      "accuracy": 0.3333333333333333
+    },
+    "fact_at_time": {
+      "n": 22,
+      "accuracy": 0.45454545454545453
+    },
+    "fact_current": {
+      "n": 3,
+      "accuracy": 0.3333333333333333
+    },
+    "fact_history": {
+      "n": 4,
+      "accuracy": 0.25
+    },
+    "other_person": {
+      "n": 6,
+      "accuracy": 1.0
+    },
+    "pattern_at_time": {
+      "n": 6,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 23,
+      "accuracy": 0.0
+    },
+    "reversion": {
+      "n": 2,
+      "accuracy": 0.0
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 4.506154245006668,
+    "p50": 4.0669940970001335,
+    "p95": 7.737179103999551
+  },
+  "usage": {
+    "ingest_seconds": 342.8073803990019,
+    "calls": 150,
+    "input_tokens": 95390,
+    "output_tokens": 112940,
+    "finalize_seconds": 0.00025008000011439435,
+    "answer_seconds": 86.23923507999916,
+    "judge_seconds": 27.008589023999775
+  },
+  "judge_usage": {
+    "calls": 150,
+    "input_tokens": 58692,
+    "output_tokens": 19971,
+    "reasoning_tokens": 14767
+  }
+}

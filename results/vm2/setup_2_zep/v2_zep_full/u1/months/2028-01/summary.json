@@ -1,0 +1,84 @@
+{
+  "method": "zep",
+  "method_profile": "graphiti_temporal_kg_facts_entities",
+  "month": "2028-01",
+  "cutoff": "2028-01-31",
+  "new_sessions": 31,
+  "new_questions": 8,
+  "n": 187,
+  "accuracy": 0.3422459893048128,
+  "new": {
+    "n": 8,
+    "accuracy": 0.375
+  },
+  "repeated": {
+    "n": 179,
+    "accuracy": 0.3407821229050279
+  },
+  "by_category": {
+    "abstention": {
+      "n": 14,
+      "accuracy": 0.7142857142857143
+    },
+    "attribution": {
+      "n": 3,
+      "accuracy": 0.3333333333333333
+    },
+    "change_detection": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "duration": {
+      "n": 3,
+      "accuracy": 0.3333333333333333
+    },
+    "event_status": {
+      "n": 8,
+      "accuracy": 0.5
+    },
+    "fact_at_time": {
+      "n": 32,
+      "accuracy": 0.9375
+    },
+    "fact_current": {
+      "n": 5,
+      "accuracy": 0.6
+    },
+    "fact_history": {
+      "n": 4,
+      "accuracy": 0.5
+    },
+    "pattern_at_time": {
+      "n": 3,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 112,
+      "accuracy": 0.09821428571428571
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 20.591221317843587,
+    "p50": 20.639003468008013,
+    "p95": 25.368871274025878
+  },
+  "usage": {
+    "ingest_seconds": 2567.62029836289,
+    "calls": 465,
+    "input_tokens": 1404771,
+    "output_tokens": 547904,
+    "finalize_seconds": 0.6799994249886367,
+    "answer_seconds": 485.484394900006,
+    "judge_seconds": 29.242316535004647
+  },
+  "judge_usage": {
+    "calls": 187,
+    "input_tokens": 70023,
+    "output_tokens": 20640,
+    "reasoning_tokens": 14280
+  }
+}

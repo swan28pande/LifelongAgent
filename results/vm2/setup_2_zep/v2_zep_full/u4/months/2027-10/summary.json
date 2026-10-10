@@ -1,0 +1,100 @@
+{
+  "method": "zep",
+  "method_profile": "graphiti_temporal_kg_facts_entities",
+  "month": "2027-10",
+  "cutoff": "2027-10-31",
+  "new_sessions": 24,
+  "new_questions": 13,
+  "n": 152,
+  "accuracy": 0.29605263157894735,
+  "new": {
+    "n": 13,
+    "accuracy": 0.23076923076923078
+  },
+  "repeated": {
+    "n": 139,
+    "accuracy": 0.302158273381295
+  },
+  "by_category": {
+    "abstention": {
+      "n": 13,
+      "accuracy": 0.9230769230769231
+    },
+    "attribution": {
+      "n": 13,
+      "accuracy": 0.38461538461538464
+    },
+    "change_detection": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "distractor_probe": {
+      "n": 7,
+      "accuracy": 0.42857142857142855
+    },
+    "duration": {
+      "n": 10,
+      "accuracy": 0.1
+    },
+    "event_status": {
+      "n": 7,
+      "accuracy": 0.42857142857142855
+    },
+    "exception_vs_shift": {
+      "n": 9,
+      "accuracy": 0.3333333333333333
+    },
+    "fact_at_time": {
+      "n": 18,
+      "accuracy": 0.5555555555555556
+    },
+    "fact_current": {
+      "n": 2,
+      "accuracy": 0.5
+    },
+    "fact_history": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "other_person": {
+      "n": 4,
+      "accuracy": 0.75
+    },
+    "pattern_at_time": {
+      "n": 12,
+      "accuracy": 0.0
+    },
+    "recall": {
+      "n": 43,
+      "accuracy": 0.06976744186046512
+    },
+    "reversion": {
+      "n": 4,
+      "accuracy": 0.25
+    }
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {}
+  },
+  "latency": {
+    "mean": 47.35613719136209,
+    "p50": 47.9564355580078,
+    "p95": 67.76036498500616
+  },
+  "usage": {
+    "ingest_seconds": 1931.6032531699748,
+    "calls": 501,
+    "input_tokens": 1598425,
+    "output_tokens": 696511,
+    "finalize_seconds": 0.715905990000465,
+    "answer_seconds": 935.4335447670019,
+    "judge_seconds": 25.981726344994968
+  },
+  "judge_usage": {
+    "calls": 152,
+    "input_tokens": 59159,
+    "output_tokens": 19771,
+    "reasoning_tokens": 14450
+  }
+}
